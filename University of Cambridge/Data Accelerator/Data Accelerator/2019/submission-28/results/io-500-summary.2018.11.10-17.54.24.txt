@@ -1,0 +1,302 @@
+++ set -euo pipefail
+++ export LC_NUMERIC=C
+++ LC_NUMERIC=C
+++ main
+++ check_variables
+++ local 'important_vars=io500_workdir io500_ior_easy_params io500_ior_easy_size io500_mdtest_hard_files_per_proc io500_ior_hard_writes_per_proc io500_find_cmd io500_ior_cmd io500_mdtest_cmd io500_mpirun'
+++ for V in '$important_vars'
+++ '[' -z /dac/fs1 -o /dac/fs1 = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z '-t -B -a POSIX -t 1m -b 20g -F' -o '-t -B -a POSIX -t 1m -b 20g -F' = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z 20 -o 20 = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z 6000 -o 6000 = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z 18000 -o 18000 = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/pfind -o /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/pfind = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -o /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -o /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z mpirun -o mpirun = xxx ']'
+++ return 0
+++ output_description
+++ extra_description
+++ io500_info_system_name=Peta4
+++ io500_info_institute_name=UoC-RCS
+++ io500_info_storage_age_in_months=xxx
+++ io500_info_storage_install_date=xxx
+++ io500_info_filesystem=xxx
+++ io500_info_filesystem_version=xxx
+++ io500_info_filesystem_vendor=xxx
+++ io500_info_num_client_nodes=xxx
+++ io500_info_procs_per_node=xxx
+++ io500_info_num_metadata_server_nodes=xxx
+++ io500_info_num_data_server_nodes=xxx
+++ io500_info_num_data_storage_devices=xxx
+++ io500_info_num_metadata_storage_devices=xxx
+++ io500_info_data_storage_type=xxx
+++ io500_info_metadata_storage_type=xxx
+++ io500_info_storage_network=xxx
+++ io500_info_storage_interface=xxx
+++ io500_info_whatever=WhateverElseYouThinkRelevant
++++ uname -n
+++ echo 'System: ' cpu-e-5
+System:  cpu-e-5
++++ df /dac/fs1
++++ tail -1
+++ echo 'filesystem_utilization=10.47.18.1@o2ib1:/fs1 297036940032 61754608640 220269385724  22% /dac/fs1'
+filesystem_utilization=10.47.18.1@o2ib1:/fs1 297036940032 61754608640 220269385724  22% /dac/fs1
+++ echo date=2018.11.10-17.54.24
+date=2018.11.10-17.54.24
+++ set -o posix
+++ set
+++ grep '^io500'
+++ sort
+io500_cleanup_workdir=/dac/fs1
+io500_find_cmd_args='-s 0 -r /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/pfind_results'
+io500_find_cmd=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=xxx
+io500_info_filesystem_vendor=xxx
+io500_info_filesystem_version=xxx
+io500_info_filesystem=xxx
+io500_info_institute_name=UoC-RCS
+io500_info_metadata_storage_type=xxx
+io500_info_num_client_nodes=xxx
+io500_info_num_data_server_nodes=xxx
+io500_info_num_data_storage_devices=xxx
+io500_info_num_metadata_server_nodes=xxx
+io500_info_num_metadata_storage_devices=xxx
+io500_info_procs_per_node=xxx
+io500_info_storage_age_in_months=xxx
+io500_info_storage_install_date=xxx
+io500_info_storage_interface=xxx
+io500_info_storage_network=xxx
+io500_info_system_name=Peta4
+io500_info_whatever=WhateverElseYouThinkRelevant
+io500_ior_cmd=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior
+io500_ior_easy_params='-t -B -a POSIX -t 1m -b 20g -F'
+io500_ior_easy_size=20
+io500_ior_hard_other_options='-a POSIX'
+io500_ior_hard_writes_per_proc=18000
+io500_mdreal_cmd=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest
+io500_mdtest_easy_files_per_proc=6000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=6000
+io500_mdtest_hard_other_options=
+io500_mpiargs=
+io500_mpirun=mpirun
+io500_result_dir=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=0
+io500_workdir=/dac/fs1
+++ core_setup
+++ echo 'Running the IO500 Benchmark now'
+Running the IO500 Benchmark now
+++ echo '[Creating] directories'
+[Creating] directories
+++ pushd .
+++ cd /dac/fs1
+++ mkdir -p ior_easy mdt_easy mdt_hard ior_hard mdreal /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv
+++ popd
+++ timestamp_file=/dac/fs1/timestampfile
+++ summary_file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/result_summary.txt
+++ iops1=0
+++ iops2=0
+++ iops3=0
+++ iops4=0
+++ iops5=0
+++ iops6=0
+++ iops7=0
+++ iops8=0
+++ bw1=0
+++ bw2=0
+++ bw3=0
+++ bw4=0
+++ mdt_hard_fsize=3901
+++ io500_invalid=
+++ ior_easy write
+++ phase=ior_easy_write
+++ '[' True '!=' True ']'
+++ params_ior_easy='-C -Q 1 -g -G 27 -k -e -t -B -a POSIX -t 1m -b 20g -F -o /dac/fs1/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1/ior_easy/stonewall'
+++ result_file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt
+++ [[ write == \w\r\i\t\e ]]
+++ startphase
+++ echo ''
+
+++ echo '[Starting] ior_easy_write'
+[Starting] ior_easy_write
++++ date +%s.%N
+++ start=1541872464.237628064
+++ myrun '/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t -B -a POSIX -t 1m -b 20g -F -o /dac/fs1/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 ' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt
+++ command='mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t -B -a POSIX -t 1m -b 20g -F -o /dac/fs1/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 '
+++ echo '[Exec] mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t -B -a POSIX -t 1m -b 20g -F -o /dac/fs1/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 '
+[Exec] mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t -B -a POSIX -t 1m -b 20g -F -o /dac/fs1/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 
+++ mpirun /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t -B -a POSIX -t 1m -b 20g -F -o /dac/fs1/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0
+++ echo '[Results] in /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt.'
+[Results] in /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt.
+++ endphase_check write io500_ior_easy_size
+++ r=0
+++ local op=write
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1541872926.741476822
+++++ bc
+++++ echo '1541872926.741476822 - 1541872464.237628064'
++++ printf %.4f 462.503848758
+++ duration=462.5038
+++ [[ write == \w\r\i\t\e ]]
++++ printf %.0f 462.5038
+++ [[ 463 -lt 300 ]]
+++ invalid=
++++ get_ior_bw /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt write
++++ file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt
++++ operation=write
++++ grep '^write' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt
++++ head -1
++++ awk '{print $2/1024}'
+++ bw1=144.935
++++ get_ior_time /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt write
++++ file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt
++++ operation=write
++++ head -1
++++ grep '^write' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_easy_write.txt
++++ awk '{print $8}'
+++ dur=406.25
+++ print_bw 1 144.935 406.25 ''
+++ tee -a /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/result_summary.txt
+++ printf '[RESULT] BW   phase 1 %25s %20.3f GB/s : time %6.2f seconds\n' ior_easy_write 144.935 406.25
+[RESULT] BW   phase 1            ior_easy_write              144.935 GB/s : time 406.25 seconds
+++ mdt_easy write
+++ phase=mdtest_easy_write
+++ '[' True '!=' True ']'
+++ params_md_easy='-F -d /dac/fs1/mdt_easy -n 6000 -u -L -x /dac/fs1/mdt_easy-stonewall'
+++ result_file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_easy_write.txt
+++ [[ write == \w\r\i\t\e ]]
+++ startphase
+++ echo ''
+
+++ echo '[Starting] mdtest_easy_write'
+[Starting] mdtest_easy_write
++++ date +%s.%N
+++ start=1541872926.766069169
+++ myrun '/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1/mdt_easy -n 6000 -u -L -x /dac/fs1/mdt_easy-stonewall -W 0' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_easy_write.txt
+++ command='mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1/mdt_easy -n 6000 -u -L -x /dac/fs1/mdt_easy-stonewall -W 0'
+++ echo '[Exec] mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1/mdt_easy -n 6000 -u -L -x /dac/fs1/mdt_easy-stonewall -W 0'
+[Exec] mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1/mdt_easy -n 6000 -u -L -x /dac/fs1/mdt_easy-stonewall -W 0
+++ mpirun /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1/mdt_easy -n 6000 -u -L -x /dac/fs1/mdt_easy-stonewall -W 0
+++ echo '[Results] in /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_easy_write.txt.'
+[Results] in /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_easy_write.txt.
+++ endphase_check write io500_mdtest_easy_files_per_proc
+++ r=0
+++ local op=write
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1541873699.551603807
+++++ bc
+++++ echo '1541873699.551603807 - 1541872926.766069169'
++++ printf %.4f 772.785534638
+++ duration=772.7855
+++ [[ write == \w\r\i\t\e ]]
++++ printf %.0f 772.7855
+++ [[ 773 -lt 300 ]]
+++ invalid=
++++ get_mdt_iops /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_easy_write.txt creation
++++ file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_easy_write.txt
++++ op=creation
++++ grep '^ *File creation' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_easy_write.txt
++++ awk '{print $4/1000}'
+++ iops1=22.9609
+++ print_iops 1 22.9609 772.7855 ''
+++ printf '[RESULT] IOPS phase 1 %25s %20.3f kiops : time %6.2f seconds\n' mdtest_easy_write 22.9609 772.7855
+++ tee -a /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/result_summary.txt
+[RESULT] IOPS phase 1         mdtest_easy_write               22.961 kiops : time 772.79 seconds
+++ touch /dac/fs1/timestampfile
+++ ior_hard write
+++ phase=ior_hard_write
+++ '[' True '!=' True ']'
+++ params_ior_hard='-C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 18000 -a POSIX -o /dac/fs1/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1/ior_hard/stonewall'
+++ result_file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt
+++ [[ write == \w\r\i\t\e ]]
+++ startphase
+++ echo ''
+
+++ echo '[Starting] ior_hard_write'
+[Starting] ior_hard_write
++++ date +%s.%N
+++ start=1541873699.575239454
+++ myrun '/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 18000 -a POSIX -o /dac/fs1/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt
+++ command='mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 18000 -a POSIX -o /dac/fs1/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0'
+++ echo '[Exec] mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 18000 -a POSIX -o /dac/fs1/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0'
+[Exec] mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 18000 -a POSIX -o /dac/fs1/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+++ mpirun /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 18000 -a POSIX -o /dac/fs1/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+++ echo '[Results] in /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt.'
+[Results] in /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt.
+++ endphase_check write io500_ior_hard_writes_per_proc
+++ r=0
+++ local op=write
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1541874253.055235746
+++++ echo '1541874253.055235746 - 1541873699.575239454'
+++++ bc
++++ printf %.4f 553.479996292
+++ duration=553.4800
+++ [[ write == \w\r\i\t\e ]]
++++ printf %.0f 553.4800
+++ [[ 553 -lt 300 ]]
+++ invalid=
++++ get_ior_bw /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt write
++++ file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt
++++ operation=write
++++ grep '^write' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt
++++ head -1
++++ awk '{print $2/1024}'
+++ bw2=4.28711
++++ get_ior_time /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt write
++++ file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt
++++ operation=write
++++ grep '^write' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/ior_hard_write.txt
++++ head -1
++++ awk '{print $8}'
+++ dur=541.16
+++ print_bw 2 4.28711 541.16 ''
+++ printf '[RESULT] BW   phase 2 %25s %20.3f GB/s : time %6.2f seconds\n' ior_hard_write 4.28711 541.16
+++ tee -a /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/result_summary.txt
+[RESULT] BW   phase 2            ior_hard_write                4.287 GB/s : time 541.16 seconds
+++ mdt_hard write
+++ phase=mdtest_hard_write
+++ '[' True '!=' True ']'
+++ params_md_hard='-t -F -w 3901 -e 3901 -d /dac/fs1/mdt_hard -n 6000 -x /dac/fs1/mdt_hard-stonewall '
+++ result_file=/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_hard_write.txt
+++ [[ write == \w\r\i\t\e ]]
+++ startphase mdtest_hard_write
+++ echo ''
+
+++ echo '[Starting] mdtest_hard_write'
+[Starting] mdtest_hard_write
++++ date +%s.%N
+++ start=1541874253.080161724
+++ myrun '/rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1/mdt_hard -n 6000 -x /dac/fs1/mdt_hard-stonewall  -W 0' /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/results.24n-8nv/mdtest_hard_write.txt
+++ command='mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1/mdt_hard -n 6000 -x /dac/fs1/mdt_hard-stonewall  -W 0'
+++ echo '[Exec] mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1/mdt_hard -n 6000 -x /dac/fs1/mdt_hard-stonewall  -W 0'
+[Exec] mpirun  /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1/mdt_hard -n 6000 -x /dac/fs1/mdt_hard-stonewall  -W 0
+++ mpirun /rds/project/hpc/rds-hpc-support/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1/mdt_hard -n 6000 -x /dac/fs1/mdt_hard-stonewall -W 0

@@ -1,0 +1,32 @@
+-- started at 11/12/2019 15:43:54 --
+
+mdtest-3.3.0+dev was launched with 260 total task(s) on 26 node(s)
+Command line used: /scratch2/leh015/io500-sc19/bin/mdtest '-T' '-F' '-P' '-d' '/scratch2/leh015/io500-sc19/datafiles/io500.2019.11.12-15.05.40/mdt_easy' '-n' '900000' '-u' '-L' '-x' '/scratch2/leh015/io500-sc19/datafiles/io500.2019.11.12-15.05.40/mdt_easy-stonewall' '-N' '1'
+Path: /scratch2/leh015/io500-sc19/datafiles/io500.2019.11.12-15.05.40
+FS: 838.1 TiB   Used FS: 10.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 11111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2128 Shifting ranks by 10 for each phase.
+260 tasks, 234000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :     882768.143     882767.547     882767.892          0.141
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :        106.989        106.989        106.989          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/12/2019 15:45:41 --
+

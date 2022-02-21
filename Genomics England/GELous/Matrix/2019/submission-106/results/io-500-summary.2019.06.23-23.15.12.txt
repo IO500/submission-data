@@ -1,0 +1,136 @@
+System:  hpc-test-grid-lsfedico-009
+filesystem_utilization=io500          107374182400 93798633996 13575548404  88% /mnt/test-fs/io-500-dev/datafiles
+date=2019.06.23-23.15.12
+io500_cleanup_workdir=False
+io500_find_cmd_args='-q 200000 -r /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/pfind_results'
+io500_find_cmd=/mnt/test-fs/io-500-dev/bin/pfind_oversubscribe.sh
+io500_find_mpi=False
+io500_info_data_storage_type=SSD
+io500_info_filesystem=Matrix
+io500_info_filesystem_vendor=WekaIO
+io500_info_filesystem_version=3.4.0
+io500_info_institute_name='Genomics England'
+io500_info_metadata_storage_type=SSD
+io500_info_num_client_nodes=10
+io500_info_num_data_server_nodes=24
+io500_info_num_data_storage_devices=240
+io500_info_num_metadata_server_nodes=0
+io500_info_num_metadata_storage_devices=0
+io500_info_procs_per_node=140
+io500_info_storage_age_in_months=1
+io500_info_storage_install_date=04/19
+io500_info_storage_interface=NVMe
+io500_info_storage_network=Ethernet
+io500_info_system_name=GELous
+io500_info_whatever='Metadata is striped over all nodes, so there are no metadata nodes.  Metadata is stored with file data. Filesystem mounted in default mode. No cpu binding'
+io500_ior_cmd=/mnt/test-fs/io-500-dev/bin/ior
+io500_ior_easy_params='-a POSIX -t 256k -b 2700m -F'
+io500_ior_easy_size=2700
+io500_ior_hard_other_options='-B -a POSIX'
+io500_ior_hard_writes_per_proc=55000
+io500_mdreal_cmd=/mnt/test-fs/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/mnt/test-fs/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=10000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=7500
+io500_mdtest_hard_other_options=
+io500_mpiargs='--hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp '
+io500_mpirun=mpirun
+io500_result_dir=/mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=0
+io500_workdir=/mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/ior -w -a POSIX -t 256k -b 2700m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               10.044 GB/s : time 367.52 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/mdtest -C -F -d /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_easy -n 10000 -u -L -x /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_easy-stonewall -W 0
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               27.432 kiops : time 516.99 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/ior -w -s 55000 -B -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                9.489 GB/s : time 355.24 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_hard -n 7500 -x /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_hard-stonewall  -W 0
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                4.538 kiops : time 2319.64 seconds
+
+[Starting] find
+[EXEC] /mnt/test-fs/io-500-dev/bin/pfind_oversubscribe.sh /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12 -newer /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/timestampfile -size 3901c -name *01* -q 200000 -r /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/pfind_results
+[FIND] MATCHED 370805/24511403 in 214.8514 seconds
+[RESULT] IOPS phase 3                      find              114.080 kiops : time 214.85 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/ior -r -R -a POSIX -t 256k -b 2700m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_easy/stonewall
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               30.981 GB/s : time 119.15 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/mdtest -T -F -d /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_easy -n 10000 -u -L -x /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_easy-stonewall
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat             3380.210 kiops : time   9.52 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/ior -r -R -s 55000 -B -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_hard/stonewall
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read               17.959 GB/s : time 187.70 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_hard -n 7500 -x /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_hard-stonewall 
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat              205.906 kiops : time  58.24 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/mdtest -r -F -d /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_easy -n 10000 -u -L -x /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_easy-stonewall
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               28.871 kiops : time 493.16 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_hard -n 7500 -x /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_hard-stonewall 
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read             1097.680 kiops : time  14.79 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun --hostfile /mnt/test-fs/io-500-dev/hfile --oversubscribe --map-by node --use-hwthread-cpus -n 1400 --allow-run-as-root --mca pml ob1 --mca btl self,tcp  /mnt/test-fs/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_hard -n 7500 -x /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/mdt_hard-stonewall 
+[Results] in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                4.323 kiops : time 2436.37 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12
+[Summary] Results files in /mnt/test-fs/io-500-dev/results/2019.06.23-23.15.12
+[Summary] Data files in /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12
+[RESULT] BW   phase 1            ior_easy_write               10.044 GB/s : time 367.52 seconds
+[RESULT] BW   phase 2            ior_hard_write                9.489 GB/s : time 355.24 seconds
+[RESULT] BW   phase 3             ior_easy_read               30.981 GB/s : time 119.15 seconds
+[RESULT] BW   phase 4             ior_hard_read               17.959 GB/s : time 187.70 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               27.432 kiops : time 516.99 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                4.538 kiops : time 2319.64 seconds
+[RESULT] IOPS phase 3                      find              114.080 kiops : time 214.85 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat             3380.210 kiops : time   9.52 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              205.906 kiops : time  58.24 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               28.871 kiops : time 493.16 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read             1097.680 kiops : time  14.79 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                4.323 kiops : time 2436.37 seconds
+[SCORE] Bandwidth 15.1749 GB/s : IOPS 77.8849 kiops : TOTAL 34.3787

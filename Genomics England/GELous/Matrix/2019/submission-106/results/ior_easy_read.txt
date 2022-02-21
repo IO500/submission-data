@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jun 24 00:18:21 2019
+Command line        : /mnt/test-fs/io-500-dev/bin/ior -r -R -a POSIX -t 256k -b 2700m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_easy/stonewall
+Machine             : Linux hpc-test-grid-lsfedico-009
+TestID              : 0
+StartTime           : Mon Jun 24 00:18:21 2019
+Path                : /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_easy
+FS                  : 125.0 TiB   Used FS: 75.5%   Inodes: 8000.0 Mi   Used Inodes: 1.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/test-fs/io-500-dev/datafiles/io500.2019.06.23-23.15.12/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 1400
+clients per node    : 140
+repetitions         : 1
+xfersize            : 262144 bytes
+blocksize           : 2.64 GiB
+aggregate filesize  : 3.60 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      31724      2764800    256.00     0.452384   118.63     0.228792   119.15     0   
+Max Read:  31723.69 MiB/sec (33264.70 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        31723.69   31723.69   31723.69       0.00  126894.75  126894.75  126894.75       0.00  119.15387     0   1400 140    1   1     1        1         0    0      1 2831155200   262144 3780000.0 POSIX      0
+Finished            : Mon Jun 24 00:20:22 2019

@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct 31 19:21:49 2021
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746812278 -k -e -o /bpfs/mnt/bpfs1/2021.10.31-19.21.04/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/work/io500_commit/2021.10.31-19.21.04/ior-easy.stonewall -t 2m -b 992000000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/work/io500_commit/2021.10.31-19.21.04/ior-easy-write.csv
+Machine             : Linux yq01-inf-hic-k8s-a100-aa24-0430.yq01.baidu.com
+TestID              : 0
+StartTime           : Sun Oct 31 19:21:49 2021
+Path                : /bpfs/mnt/bpfs1/2021.10.31-19.21.04/ior-easy/ior_file_easy.00000000
+FS                  : 7614.7 TiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /bpfs/mnt/bpfs1/2021.10.31-19.21.04/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 800
+clients per node    : 80
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 946.04 TiB
+aggregate filesize  : 756835.94 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 15450 max: 48030 -- min data: 30.2 GiB mean data: 56.9 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 832149913600000000
+WARNING: Stat() of aggregate file size      = 80580968448000
+WARNING: Using actual aggregate bytes moved = 80580968448000
+WARNING: Maybe caused by deadlineForStonewalling
+write     93540      46787      0.000001    1015808000000 2048.00    0.278955   821.26     0.012630   821.55     0   

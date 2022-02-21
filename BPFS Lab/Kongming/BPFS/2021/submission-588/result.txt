@@ -1,0 +1,111 @@
+[run]
+version         = 
+config-hash     = 63754B20
+result-dir      = /home/work/io500_commit/2021.10.31-19.21.04
+mode            = standard
+; START 2021-10-31 19:21:41
+
+
+[ior-easy-write]
+t_start         = 2021-10-31 19:21:49
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746812278 -k -e -o /bpfs/mnt/bpfs1/2021.10.31-19.21.04/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/work/io500_commit/2021.10.31-19.21.04/ior-easy.stonewall -t 2m -b 992000000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/work/io500_commit/2021.10.31-19.21.04/ior-easy-write.csv
+throughput-stonewall = 151.79
+score           = 91.347802
+t_delta         = 848.9195
+t_end           = 2021-10-31 19:35:58
+
+[mdtest-easy-write]
+t_start         = 2021-10-31 19:35:58
+exe             = ./mdtest --dataPacketType=timestamp -n 200000000 -u -L -F -P -G 1632990072 -N 1 -d /bpfs/mnt/bpfs1/2021.10.31-19.21.04/mdtest-easy -x /home/work/io500_commit/2021.10.31-19.21.04/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/work/io500_commit/2021.10.31-19.21.04/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 7222.768110
+score           = 7050.545698
+t_delta         = 319.9229
+t_end           = 2021-10-31 19:41:18
+
+[timestamp]
+t_start         = 2021-10-31 19:41:18
+t_delta         = 0.0000
+t_end           = 2021-10-31 19:41:18
+
+[ior-hard-write]
+t_start         = 2021-10-31 19:41:18
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746822966 -k -e -o /bpfs/mnt/bpfs1/2021.10.31-19.21.04/ior-hard/file -O stoneWallingStatusFile=/home/work/io500_commit/2021.10.31-19.21.04/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/work/io500_commit/2021.10.31-19.21.04/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 137.37
+score           = 106.138701
+t_delta         = 448.3719
+t_end           = 2021-10-31 19:48:46
+
+[mdtest-hard-write]
+t_start         = 2021-10-31 19:48:46
+exe             = ./mdtest --dataPacketType=timestamp -n 200000000 -t -w 3901 -e 3901 -P -G=1633000760 -N 1 -F -d /bpfs/mnt/bpfs1/2021.10.31-19.21.04/mdtest-hard -x /home/work/io500_commit/2021.10.31-19.21.04/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/work/io500_commit/2021.10.31-19.21.04/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 3641.133153
+score           = 3485.201281
+t_delta         = 348.8941
+t_end           = 2021-10-31 19:54:35
+
+[find]
+t_start         = 2021-10-31 19:54:35
+exe             =  ./bpfs_pfind  /bpfs/mnt/bpfs1/2021.10.31-19.21.04 -newer /home/work/io500_commit/2021.10.31-19.21.04/timestampfile -size 3901c -name "*01*"
+nproc           = 1
+last-output     = "MATCHED 65823681/3457306404"
+total-files     = 3457306404
+found           = 65823681
+score           = 119131.006275
+t_delta         = 29.0212
+t_end           = 2021-10-31 19:55:04
+
+[ior-easy-read]
+t_start         = 2021-10-31 19:55:04
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746812278 -k -e -o /bpfs/mnt/bpfs1/2021.10.31-19.21.04/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/work/io500_commit/2021.10.31-19.21.04/ior-easy.stonewall -t 2m -b 992000000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/work/io500_commit/2021.10.31-19.21.04/ior-easy-read.csv
+score           = 75.765181
+t_delta         = 990.8257
+t_end           = 2021-10-31 20:11:35
+
+[mdtest-easy-stat]
+t_start         = 2021-10-31 20:11:35
+exe             = ./mdtest --dataPacketType=timestamp -n 200000000 -u -L -F -P -G 1632990072 -N 1 -d /bpfs/mnt/bpfs1/2021.10.31-19.21.04/mdtest-easy -x /home/work/io500_commit/2021.10.31-19.21.04/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/work/io500_commit/2021.10.31-19.21.04/mdtest-easy-stat.csv -a POSIX
+score           = 11081.175055
+t_delta         = 203.9945
+t_end           = 2021-10-31 20:14:59
+
+[ior-hard-read]
+t_start         = 2021-10-31 20:14:59
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746822966 -k -e -o /bpfs/mnt/bpfs1/2021.10.31-19.21.04/ior-hard/file -O stoneWallingStatusFile=/home/work/io500_commit/2021.10.31-19.21.04/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/work/io500_commit/2021.10.31-19.21.04/ior-hard-read.csv
+score           = 116.881653
+t_delta         = 407.0895
+t_end           = 2021-10-31 20:21:46
+
+[mdtest-hard-stat]
+t_start         = 2021-10-31 20:21:46
+exe             = ./mdtest --dataPacketType=timestamp -n 200000000 -t -w 3901 -e 3901 -P -G=1633000760 -N 1 -F -d /bpfs/mnt/bpfs1/2021.10.31-19.21.04/mdtest-hard -x /home/work/io500_commit/2021.10.31-19.21.04/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/work/io500_commit/2021.10.31-19.21.04/mdtest-hard-stat.csv -a POSIX
+score           = 10336.178181
+t_delta         = 118.5155
+t_end           = 2021-10-31 20:23:45
+
+[mdtest-easy-delete]
+t_start         = 2021-10-31 20:23:45
+exe             = ./mdtest --dataPacketType=timestamp -n 200000000 -u -L -F -P -G 1632990072 -N 1 -d /bpfs/mnt/bpfs1/2021.10.31-19.21.04/mdtest-easy -x /home/work/io500_commit/2021.10.31-19.21.04/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/work/io500_commit/2021.10.31-19.21.04/mdtest-easy-delete.csv -a POSIX
+score           = 7893.367693
+t_delta         = 290.1247
+t_end           = 2021-10-31 20:28:35
+
+[mdtest-hard-read]
+t_start         = 2021-10-31 20:28:35
+exe             = ./mdtest --dataPacketType=timestamp -n 200000000 -t -w 3901 -e 3901 -P -G=1633000760 -N 1 -F -d /bpfs/mnt/bpfs1/2021.10.31-19.21.04/mdtest-hard -x /home/work/io500_commit/2021.10.31-19.21.04/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/work/io500_commit/2021.10.31-19.21.04/mdtest-hard-read.csv -a POSIX
+score           = 4086.084567
+t_delta         = 297.7593
+t_end           = 2021-10-31 20:33:33
+
+[mdtest-hard-delete]
+t_start         = 2021-10-31 20:33:33
+exe             = ./mdtest --dataPacketType=timestamp -n 200000000 -t -w 3901 -e 3901 -P -G=1633000760 -N 1 -F -d /bpfs/mnt/bpfs1/2021.10.31-19.21.04/mdtest-hard -x /home/work/io500_commit/2021.10.31-19.21.04/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/work/io500_commit/2021.10.31-19.21.04/mdtest-hard-delete.csv -a POSIX
+score           = 8042.844092
+t_delta         = 154.3105
+t_end           = 2021-10-31 20:36:07
+
+[SCORE]
+MD              = 9827.093046
+BW              = 96.260247
+SCORE           = 972.603929
+hash            = 464F0810
+; END 2021-10-31 20:36:13

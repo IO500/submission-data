@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Jul  9 12:55:45 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o ./out//2020.07.09-12.23.20-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=./out//2020.07.09-12.23.20-app/ior-easy/stonewall -t 1m -b 3600000m -F -r -R -a POSIX
+Machine             : Linux inst-052fy-united-hermit
+TestID              : 0
+StartTime           : Thu Jul  9 12:55:45 2020
+Path                : /mnt/beeond/io500-app/out/2020.07.09-12.23.20-app/ior-easy
+FS                  : 58.2 TiB   Used FS: 44.7%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./out//2020.07.09-12.23.20-app/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 3.43 TiB
+aggregate filesize  : 549.32 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 603979776000000.
+WARNING: Stat() of aggregate file size      = 12689615093760.
+WARNING: Using actual aggregate bytes moved = 12689615093760.
+read      29768      29773      0.000113    3686400000 1024.00    0.008738   406.47     0.061920   406.54     0   
+Max Read:  29767.66 MiB/sec (31213.65 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        29767.66   29767.66   29767.66       0.00   29767.66   29767.66   29767.66       0.00  406.54052         NA            NA     0    160  16    1   1     1        1         0    0      1 3774873600000  1048576 12101760.0 POSIX      0
+Finished            : Thu Jul  9 13:02:32 2020

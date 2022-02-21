@@ -1,0 +1,84 @@
+-- started at 11/08/2018 14:52:07 --
+
+mdtest-1.9.3 was launched with 64 total task(s) on 16 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06/mdt_hard" "-n" "125000" "-x" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06/mdt_hard-stonewall" "-W" "300"
+Path: /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06
+FS: 144.2 TiB   Used FS: 12.1%   Inodes: 290.9 Mi   Used Inodes: 2.6%
+
+64 tasks, 8000000 files
+stonewall rank 16: 75685 of 76731 
+stonewall rank 48: 75611 of 76731 
+Continue stonewall hit min: 71226 max: 76731 avg: 73717.0 
+stonewall rank 0: 76005 of 76731 
+stonewall rank 32: 75753 of 76731 
+stonewall rank 36: 75892 of 76731 
+stonewall rank 52: 73018 of 76731 
+stonewall rank 8: 74487 of 76731 
+stonewall rank 4: 75833 of 76731 
+stonewall rank 20: 72986 of 76731 
+stonewall rank 56: 74017 of 76731 
+stonewall rank 60: 72815 of 76731 
+stonewall rank 28: 72693 of 76731 
+stonewall rank 24: 74093 of 76731 
+stonewall rank 44: 72803 of 76731 
+stonewall rank 40: 74330 of 76731 
+stonewall rank 12: 72773 of 76731 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      25188.896      25188.896      25188.896          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        880.597        880.597        880.597          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 14:57:24 --
+stonewall rank 34: 75411 of 76731 
+stonewall rank 18: 75109 of 76731 
+stonewall rank 50: 74928 of 76731 
+stonewall rank 2: 75439 of 76731 
+stonewall rank 54: 71784 of 76731 
+stonewall rank 42: 74902 of 76731 
+stonewall rank 38: 71893 of 76731 
+stonewall rank 22: 71911 of 76731 
+stonewall rank 26: 75328 of 76731 
+stonewall rank 6: 71870 of 76731 
+stonewall rank 10: 74894 of 76731 
+stonewall rank 46: 71618 of 76731 
+stonewall rank 58: 75288 of 76731 
+stonewall rank 14: 71481 of 76731 
+stonewall rank 30: 71329 of 76731 
+stonewall rank 62: 71293 of 76731 
+stonewall rank 17: 73587 of 76731 
+stonewall rank 1: 73619 of 76731 
+stonewall rank 49: 73495 of 76731 
+stonewall rank 33: 73485 of 76731 
+stonewall rank 9: 71400 of 76731 
+stonewall rank 21: 75195 of 76731 
+stonewall rank 57: 71261 of 76731 
+stonewall rank 37: 75037 of 76731 
+stonewall rank 41: 71269 of 76731 
+stonewall rank 53: 75240 of 76731 
+stonewall rank 25: 71226 of 76731 
+stonewall rank 5: 75156 of 76731 
+stonewall rank 13: 74810 of 76731 
+stonewall rank 45: 74843 of 76731 
+stonewall rank 29: 73861 of 76731 
+stonewall rank 61: 73856 of 76731 
+stonewall rank 19: 76336 of 76731 
+stonewall rank 51: 76367 of 76731 
+stonewall rank 3: 76619 of 76731 
+stonewall rank 43: 72383 of 76731 
+stonewall rank 55: 72186 of 76731 
+stonewall rank 11: 72452 of 76731 
+stonewall rank 23: 72068 of 76731 
+stonewall rank 59: 72437 of 76731 
+stonewall rank 39: 72165 of 76731 
+stonewall rank 7: 72202 of 76731 
+stonewall rank 27: 72378 of 76731 
+stonewall rank 63: 73149 of 76731 
+stonewall rank 47: 73358 of 76731 
+stonewall rank 31: 73131 of 76731 
+stonewall rank 15: 73314 of 76731 

@@ -1,0 +1,84 @@
+-- started at 11/08/2018 14:28:19 --
+
+mdtest-1.9.3 was launched with 64 total task(s) on 16 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-F" "-d" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06/mdt_easy" "-n" "320000" "-u" "-L" "-x" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06/mdt_easy-stonewall" "-W" "300"
+Path: /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06
+FS: 144.2 TiB   Used FS: 12.1%   Inodes: 290.3 Mi   Used Inodes: 0.0%
+
+64 tasks, 20480000 files
+stonewall rank 32: 110007 of 122648 
+Continue stonewall hit min: 89951 max: 122648 avg: 104278.6 
+stonewall rank 0: 110448 of 122648 
+stonewall rank 16: 109202 of 122648 
+stonewall rank 48: 109202 of 122648 
+stonewall rank 20: 94081 of 122648 
+stonewall rank 56: 118174 of 122648 
+stonewall rank 36: 103487 of 122648 
+stonewall rank 24: 118778 of 122648 
+stonewall rank 52: 94340 of 122648 
+stonewall rank 40: 122350 of 122648 
+stonewall rank 4: 103913 of 122648 
+stonewall rank 60: 90216 of 122648 
+stonewall rank 12: 90164 of 122648 
+stonewall rank 28: 89951 of 122648 
+stonewall rank 44: 90812 of 122648 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      53046.466      53046.466      53046.466          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :         96.446         96.446         96.446          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 14:34:45 --
+stonewall rank 18: 119028 of 122648 
+stonewall rank 2: 121061 of 122648 
+stonewall rank 50: 119192 of 122648 
+stonewall rank 34: 120755 of 122648 
+stonewall rank 54: 91388 of 122648 
+stonewall rank 6: 92967 of 122648 
+stonewall rank 38: 93111 of 122648 
+stonewall rank 22: 91026 of 122648 
+stonewall rank 58: 111201 of 122648 
+stonewall rank 42: 112754 of 122648 
+stonewall rank 26: 111047 of 122648 
+stonewall rank 10: 112912 of 122648 
+stonewall rank 46: 91883 of 122648 
+stonewall rank 30: 92143 of 122648 
+stonewall rank 62: 92292 of 122648 
+stonewall rank 14: 92391 of 122648 
+stonewall rank 33: 97192 of 122648 
+stonewall rank 1: 97770 of 122648 
+stonewall rank 17: 96749 of 122648 
+stonewall rank 49: 96673 of 122648 
+stonewall rank 41: 91023 of 122648 
+stonewall rank 57: 90272 of 122648 
+stonewall rank 9: 91514 of 122648 
+stonewall rank 25: 90300 of 122648 
+stonewall rank 21: 112337 of 122648 
+stonewall rank 37: 112824 of 122648 
+stonewall rank 53: 112062 of 122648 
+stonewall rank 5: 113251 of 122648 
+stonewall rank 13: 113007 of 122648 
+stonewall rank 45: 113052 of 122648 
+stonewall rank 29: 109713 of 122648 
+stonewall rank 61: 109390 of 122648 
+stonewall rank 3: 108307 of 122648 
+stonewall rank 35: 108527 of 122648 
+stonewall rank 19: 108556 of 122648 
+stonewall rank 51: 108705 of 122648 
+stonewall rank 23: 95078 of 122648 
+stonewall rank 43: 96714 of 122648 
+stonewall rank 7: 98345 of 122648 
+stonewall rank 11: 96912 of 122648 
+stonewall rank 55: 95560 of 122648 
+stonewall rank 59: 96227 of 122648 
+stonewall rank 39: 97835 of 122648 
+stonewall rank 27: 96187 of 122648 
+stonewall rank 47: 120736 of 122648 
+stonewall rank 31: 117720 of 122648 
+stonewall rank 63: 117440 of 122648 
+stonewall rank 15: 120930 of 122648 

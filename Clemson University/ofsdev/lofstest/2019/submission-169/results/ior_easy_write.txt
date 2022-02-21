@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 14:22:09 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 4m -b 76800m -F -a MPIIO -o /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux pvfs017-ib0.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Nov  8 14:22:09 2018
+Path                : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06/ior_easy
+FS                  : 144.2 TiB   Used FS: 8.8%   Inodes: 287.4 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-14.22.06/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 64
+clients per node    : 4
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 75 GiB
+aggregate filesize  : 4.69 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 11848 max: 19200 -- min data: 46.3 GiB mean data: 67.3 GiB time: 302.9s
+write     13361      78643200   4096       0.005825   367.79     0.078086   367.87     0   
+Max Write: 13361.22 MiB/sec (14010.26 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       13361.22   13361.22   13361.22       0.00    3340.31    3340.31    3340.31       0.00  367.87058     0     64   4    1   1     1        1         0    0      1 80530636800  4194304 4915200.0 MPIIO      0
+Finished            : Thu Nov  8 14:28:17 2018

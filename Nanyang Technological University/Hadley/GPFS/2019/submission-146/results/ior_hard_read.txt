@@ -1,0 +1,77 @@
+[1569568040.462221] [ca-0136:123827:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.462221] [ca-0136:123826:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.461610] [ca-0138:123018:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 1700.00
+[1569568040.461612] [ca-0138:123019:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 1700.00
+[1569568040.461610] [ca-0138:123017:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 1700.00
+[1569568040.463181] [ca-0136:123828:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.461611] [ca-0138:123016:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 1700.00
+[1569568040.463191] [ca-0136:123825:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.464030] [ca-0134:124706:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.464031] [ca-0134:124708:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.464030] [ca-0134:124709:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.464031] [ca-0134:124707:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.465399] [ca-0133:128862:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.465400] [ca-0133:128860:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.465400] [ca-0133:128859:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.465399] [ca-0133:128861:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.465667] [ca-0139:121134:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.465667] [ca-0139:121133:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.467886] [ca-0139:121135:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.467886] [ca-0139:121136:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.468470] [ca-0141:123713:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.468471] [ca-0141:123712:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.468470] [ca-0141:123711:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.468470] [ca-0141:123714:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.468832] [ca-0142:121817:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.468831] [ca-0142:121818:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.468831] [ca-0142:121816:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.468831] [ca-0142:121815:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.473611] [ca-0135:123921:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.473612] [ca-0135:123922:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.473612] [ca-0135:123920:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.473612] [ca-0135:123923:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.474692] [ca-0137:125751:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.474692] [ca-0137:125754:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.474692] [ca-0137:125752:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.474692] [ca-0137:125753:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.476561] [ca-0140:121577:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.476561] [ca-0140:121579:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.476561] [ca-0140:121578:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568040.476561] [ca-0140:121580:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Sep 27 15:07:20 2019
+Command line        : /gpfs1/ddn/io500/io-500-dev/bin/ior -r -R -s 200000 -a MPIIO -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_hard/stonewall
+Machine             : Linux ca-0133
+TestID              : 0
+StartTime           : Fri Sep 27 15:07:20 2019
+Path                : /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_hard
+FS                  : 1150.5 TiB   Used FS: 10.8%   Inodes: 128.0 Mi   Used Inodes: 17.5%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 200000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 40
+clients per node    : 4
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 350.24 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+read      3468.03    45.91      45.91      0.291671   103.12     0.006846   103.41     0   
+Max Read:  3468.03 MiB/sec (3636.50 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         3468.03    3468.03    3468.03       0.00   77359.11   77359.11   77359.11       0.00  103.41381         NA            NA     0     40   4    1   0     1        1         0    0 200000    47008    47008  358642.6 MPIIO      0
+Finished            : Fri Sep 27 15:09:04 2019

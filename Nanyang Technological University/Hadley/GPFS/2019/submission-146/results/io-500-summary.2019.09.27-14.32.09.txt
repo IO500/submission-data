@@ -1,0 +1,125 @@
+System:  ca-0133
+filesystem_utilization=gpfs1          1235339968512 123007946752 1112332021760  10% /gpfs1
+date=2019.09.27-14.32.09
+io500_clean_cache=False
+io500_clean_cache_cmd=drop_cache
+io500_cleanup_workdir=False
+io500_find_cmd=/gpfs1/ddn/io500/io-500-dev/bin/mmfind.sh
+io500_find_cmd_args=
+io500_find_mpi=False
+io500_info_system_name=xxx
+io500_ior_cmd=/gpfs1/ddn/io500/io-500-dev/bin/ior
+io500_ior_easy_params='-a MPIIO -t 1024k -s 250000 -F'
+io500_ior_easy_size=9920000
+io500_ior_hard_api=MPIIO
+io500_ior_hard_api_specific_options=
+io500_ior_hard_writes_per_proc=200000
+io500_mdreal_cmd=/gpfs1/ddn/io500/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/gpfs1/ddn/io500/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=450000
+io500_mdtest_easy_params='-a POSIX -u -L'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=75000
+io500_mpiargs='-np 40 -N 4 --allow-run-as-root -hostfile hostfile'
+io500_mpirun=mpirun
+io500_result_dir=/gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/ior -w -a MPIIO -t 1024k -s 250000 -F -i 1 -C -Q 1 -g -G 27 -k -e -o /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_easy/ior_file_easy -O stoneWallingStatusFile=/gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               29.934 GB/s : time 326.25 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/mdtest -C -F -P -d /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_easy -n 450000 -a POSIX -u -L -x /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_easy-stonewall -N 1 -W 300
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               39.577 kiops : time 348.85 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/ior -w -s 200000 -a MPIIO  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                0.824 GB/s : time 425.26 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/mdtest -C -t -F -P -w 3901 -e 3901 -d /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_hard -n 75000 -x /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                9.179 kiops : time 326.84 seconds
+
+[Starting] find
+[EXEC] /gpfs1/ddn/io500/io-500-dev/bin/mmfind.sh /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09 -newer /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/timestampfile -size 3901c -name "*01*" 
+matches is MATCHED 87280/16806246, exact_match is 87280
+[FIND] MATCHED 87280/16806246 in 187.3756 seconds
+[RESULT] IOPS phase 3                      find               89.690 kiops : time 187.38 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/ior -r -R -a MPIIO -t 1024k -s 250000 -F -i 1 -C -Q 1 -g -G 27 -k -e -o /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_easy/ior_file_easy -O stoneWallingStatusFile=/gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_easy/stonewall
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               37.234 GB/s : time 262.27 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/mdtest -T -F -P -d /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_easy -n 450000 -a POSIX -u -L -x /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_easy-stonewall -N 1
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat               61.871 kiops : time 223.14 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/ior -r -R -s 200000 -a MPIIO  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/ior_hard/stonewall
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                3.387 GB/s : time 103.41 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_hard -n 75000 -x /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               14.405 kiops : time 208.27 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/mdtest -r -F -P -d /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_easy -n 450000 -a POSIX -u -L -x /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_easy-stonewall -N 1
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               31.985 kiops : time 431.64 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_hard -n 75000 -x /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read               13.826 kiops : time 216.98 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun -np 40 -N 4 --allow-run-as-root -hostfile hostfile /gpfs1/ddn/io500/io-500-dev/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_hard -n 75000 -x /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                4.653 kiops : time 647.71 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09
+[Summary] Results files in /gpfs1/ddn/io500/io-500-dev/results/2019.09.27-14.32.09
+[Summary] Data files in /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09
+[RESULT] BW   phase 1            ior_easy_write               29.934 GB/s : time 326.25 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.824 GB/s : time 425.26 seconds
+[RESULT] BW   phase 3             ior_easy_read               37.234 GB/s : time 262.27 seconds
+[RESULT] BW   phase 4             ior_hard_read                3.387 GB/s : time 103.41 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               39.577 kiops : time 348.85 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                9.179 kiops : time 326.84 seconds
+[RESULT] IOPS phase 3                      find               89.690 kiops : time 187.38 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               61.871 kiops : time 223.14 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               14.405 kiops : time 208.27 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               31.985 kiops : time 431.64 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               13.826 kiops : time 216.98 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                4.653 kiops : time 647.71 seconds
+[SCORE] Bandwidth 7.46704 GB/s : IOPS 22.2352 kiops : TOTAL 12.8853

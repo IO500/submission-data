@@ -1,0 +1,72 @@
+[1569568355.363689] [ca-0142:123063:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.363689] [ca-0142:123065:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.363689] [ca-0142:123064:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.363689] [ca-0142:123066:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.364429] [ca-0135:125169:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.364430] [ca-0135:125172:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.364429] [ca-0135:125170:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.364430] [ca-0135:125171:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.365877] [ca-0141:124930:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.365877] [ca-0141:124929:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.365877] [ca-0141:124931:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.365878] [ca-0141:124928:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367203] [ca-0134:125957:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367324] [ca-0134:125954:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367338] [ca-0134:125956:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367342] [ca-0134:125955:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367989] [ca-0140:122828:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367442] [ca-0138:124268:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367442] [ca-0138:124269:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367442] [ca-0138:124267:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.367442] [ca-0138:124270:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.369154] [ca-0140:122826:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.369155] [ca-0140:122829:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.369160] [ca-0140:122827:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.373665] [ca-0137:126965:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.373665] [ca-0137:126967:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.373665] [ca-0137:126966:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.373665] [ca-0137:126964:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.375932] [ca-0133:130017:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.375932] [ca-0133:130018:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.376047] [ca-0136:125071:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.376047] [ca-0136:125073:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.376047] [ca-0136:125072:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.376047] [ca-0136:125074:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.376650] [ca-0133:130019:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.376650] [ca-0133:130020:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.379318] [ca-0139:122351:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.379318] [ca-0139:122350:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.379318] [ca-0139:122349:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+[1569568355.379318] [ca-0139:122348:0]            sys.c:935  UCX  WARN  Conflicting CPU frequencies detected, using: 2200.00
+-- started at 09/27/2019 15:12:35 --
+
+mdtest-3.3.0+dev was launched with 40 total task(s) on 10 node(s)
+Command line used: /gpfs1/ddn/io500/io-500-dev/bin/mdtest '-r' '-F' '-P' '-d' '/gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_easy' '-n' '450000' '-a' 'POSIX' '-u' '-L' '-x' '/gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09/mdt_easy-stonewall' '-N' '1'
+Path: /gpfs1/ddn/io500/io-500-dev/datafiles/io500.2019.09.27-14.32.09
+FS: 1150.5 TiB   Used FS: 10.8%   Inodes: 128.0 Mi   Used Inodes: 17.5%
+
+Nodemap: 1111000000000000000000000000000000000000
+V-0: Rank   0 Line  2128 Shifting ranks by 4 for each phase.
+40 tasks, 18000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :      31985.106      31985.089      31985.098          0.004
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          2.697          2.697          2.697          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        431.645        431.645        431.645          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.371          0.371          0.371          0.000
+-- finished at 09/27/2019 15:19:47 --
+

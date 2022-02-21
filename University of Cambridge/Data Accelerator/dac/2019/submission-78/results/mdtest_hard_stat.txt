@@ -1,0 +1,695 @@
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+[0] MPI startup(): libfabric version: 1.8.0a1-impi
+
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+MPI startup(): Imported environment partly inaccesible. Map=0 Info=0
+[0] MPI startup(): libfabric provider: psm2
+
+[0] MPI startup(): Rank    Pid      Node name   Pin cpu
+[0] MPI startup(): 0       36713    cpu-e-829   0
+[0] MPI startup(): 1       36714    cpu-e-829   1
+[0] MPI startup(): 2       36715    cpu-e-829   2
+[0] MPI startup(): 3       36716    cpu-e-829   3
+[0] MPI startup(): 4       36717    cpu-e-829   4
+[0] MPI startup(): 5       36718    cpu-e-829   5
+[0] MPI startup(): 6       36719    cpu-e-829   6
+[0] MPI startup(): 7       36720    cpu-e-829   7
+[0] MPI startup(): 8       36721    cpu-e-829   8
+[0] MPI startup(): 9       36722    cpu-e-829   9
+[0] MPI startup(): 10      36723    cpu-e-829   10
+[0] MPI startup(): 11      36724    cpu-e-829   11
+[0] MPI startup(): 12      36725    cpu-e-829   12
+[0] MPI startup(): 13      36726    cpu-e-829   13
+[0] MPI startup(): 14      36727    cpu-e-829   14
+[0] MPI startup(): 15      36728    cpu-e-829   15
+[0] MPI startup(): 16      36729    cpu-e-829   16
+[0] MPI startup(): 17      36730    cpu-e-829   17
+[0] MPI startup(): 18      36731    cpu-e-829   18
+[0] MPI startup(): 19      36732    cpu-e-829   19
+[0] MPI startup(): 20      36733    cpu-e-829   20
+[0] MPI startup(): 21      36734    cpu-e-829   21
+[0] MPI startup(): 22      36735    cpu-e-829   22
+[0] MPI startup(): 23      36736    cpu-e-829   23
+[0] MPI startup(): 24      36737    cpu-e-829   24
+[0] MPI startup(): 25      36738    cpu-e-829   25
+[0] MPI startup(): 26      36739    cpu-e-829   26
+[0] MPI startup(): 27      36740    cpu-e-829   27
+[0] MPI startup(): 28      36741    cpu-e-829   28
+[0] MPI startup(): 29      36742    cpu-e-829   29
+[0] MPI startup(): 30      36743    cpu-e-829   30
+[0] MPI startup(): 31      36744    cpu-e-829   31
+[0] MPI startup(): 32      35942    cpu-e-830   0
+[0] MPI startup(): 33      35943    cpu-e-830   1
+[0] MPI startup(): 34      35944    cpu-e-830   2
+[0] MPI startup(): 35      35945    cpu-e-830   3
+[0] MPI startup(): 36      35946    cpu-e-830   4
+[0] MPI startup(): 37      35947    cpu-e-830   5
+[0] MPI startup(): 38      35948    cpu-e-830   6
+[0] MPI startup(): 39      35949    cpu-e-830   7
+[0] MPI startup(): 40      35950    cpu-e-830   8
+[0] MPI startup(): 41      35951    cpu-e-830   9
+[0] MPI startup(): 42      35952    cpu-e-830   10
+[0] MPI startup(): 43      35953    cpu-e-830   11
+[0] MPI startup(): 44      35954    cpu-e-830   12
+[0] MPI startup(): 45      35955    cpu-e-830   13
+[0] MPI startup(): 46      35956    cpu-e-830   14
+[0] MPI startup(): 47      35957    cpu-e-830   15
+[0] MPI startup(): 48      35958    cpu-e-830   16
+[0] MPI startup(): 49      35959    cpu-e-830   17
+[0] MPI startup(): 50      35960    cpu-e-830   18
+[0] MPI startup(): 51      35961    cpu-e-830   19
+[0] MPI startup(): 52      35962    cpu-e-830   20
+[0] MPI startup(): 53      35963    cpu-e-830   21
+[0] MPI startup(): 54      35964    cpu-e-830   22
+[0] MPI startup(): 55      35965    cpu-e-830   23
+[0] MPI startup(): 56      35966    cpu-e-830   24
+[0] MPI startup(): 57      35967    cpu-e-830   25
+[0] MPI startup(): 58      35968    cpu-e-830   26
+[0] MPI startup(): 59      35969    cpu-e-830   27
+[0] MPI startup(): 60      35970    cpu-e-830   28
+[0] MPI startup(): 61      35971    cpu-e-830   29
+[0] MPI startup(): 62      35972    cpu-e-830   30
+[0] MPI startup(): 63      35973    cpu-e-830   31
+[0] MPI startup(): 64      35591    cpu-e-893   0
+[0] MPI startup(): 65      35592    cpu-e-893   1
+[0] MPI startup(): 66      35593    cpu-e-893   2
+[0] MPI startup(): 67      35594    cpu-e-893   3
+[0] MPI startup(): 68      35595    cpu-e-893   4
+[0] MPI startup(): 69      35596    cpu-e-893   5
+[0] MPI startup(): 70      35597    cpu-e-893   6
+[0] MPI startup(): 71      35598    cpu-e-893   7
+[0] MPI startup(): 72      35599    cpu-e-893   8
+[0] MPI startup(): 73      35600    cpu-e-893   9
+[0] MPI startup(): 74      35601    cpu-e-893   10
+[0] MPI startup(): 75      35602    cpu-e-893   11
+[0] MPI startup(): 76      35603    cpu-e-893   12
+[0] MPI startup(): 77      35604    cpu-e-893   13
+[0] MPI startup(): 78      35605    cpu-e-893   14
+[0] MPI startup(): 79      35606    cpu-e-893   15
+[0] MPI startup(): 80      35607    cpu-e-893   16
+[0] MPI startup(): 81      35608    cpu-e-893   17
+[0] MPI startup(): 82      35609    cpu-e-893   18
+[0] MPI startup(): 83      35610    cpu-e-893   19
+[0] MPI startup(): 84      35611    cpu-e-893   20
+[0] MPI startup(): 85      35612    cpu-e-893   21
+[0] MPI startup(): 86      35613    cpu-e-893   22
+[0] MPI startup(): 87      35614    cpu-e-893   23
+[0] MPI startup(): 88      35615    cpu-e-893   24
+[0] MPI startup(): 89      35616    cpu-e-893   25
+[0] MPI startup(): 90      35617    cpu-e-893   26
+[0] MPI startup(): 91      35618    cpu-e-893   27
+[0] MPI startup(): 92      35619    cpu-e-893   28
+[0] MPI startup(): 93      35620    cpu-e-893   29
+[0] MPI startup(): 94      35621    cpu-e-893   30
+[0] MPI startup(): 95      35622    cpu-e-893   31
+[0] MPI startup(): 96      35585    cpu-e-894   0
+[0] MPI startup(): 97      35586    cpu-e-894   1
+[0] MPI startup(): 98      35587    cpu-e-894   2
+[0] MPI startup(): 99      35588    cpu-e-894   3
+[0] MPI startup(): 100     35589    cpu-e-894   4
+[0] MPI startup(): 101     35590    cpu-e-894   5
+[0] MPI startup(): 102     35591    cpu-e-894   6
+[0] MPI startup(): 103     35592    cpu-e-894   7
+[0] MPI startup(): 104     35593    cpu-e-894   8
+[0] MPI startup(): 105     35594    cpu-e-894   9
+[0] MPI startup(): 106     35595    cpu-e-894   10
+[0] MPI startup(): 107     35596    cpu-e-894   11
+[0] MPI startup(): 108     35597    cpu-e-894   12
+[0] MPI startup(): 109     35598    cpu-e-894   13
+[0] MPI startup(): 110     35599    cpu-e-894   14
+[0] MPI startup(): 111     35600    cpu-e-894   15
+[0] MPI startup(): 112     35601    cpu-e-894   16
+[0] MPI startup(): 113     35602    cpu-e-894   17
+[0] MPI startup(): 114     35603    cpu-e-894   18
+[0] MPI startup(): 115     35604    cpu-e-894   19
+[0] MPI startup(): 116     35605    cpu-e-894   20
+[0] MPI startup(): 117     35606    cpu-e-894   21
+[0] MPI startup(): 118     35607    cpu-e-894   22
+[0] MPI startup(): 119     35608    cpu-e-894   23
+[0] MPI startup(): 120     35609    cpu-e-894   24
+[0] MPI startup(): 121     35610    cpu-e-894   25
+[0] MPI startup(): 122     35611    cpu-e-894   26
+[0] MPI startup(): 123     35612    cpu-e-894   27
+[0] MPI startup(): 124     35613    cpu-e-894   28
+[0] MPI startup(): 125     35614    cpu-e-894   29
+[0] MPI startup(): 126     35615    cpu-e-894   30
+[0] MPI startup(): 127     35616    cpu-e-894   31
+[0] MPI startup(): 128     35709    cpu-e-957   0
+[0] MPI startup(): 129     35710    cpu-e-957   1
+[0] MPI startup(): 130     35711    cpu-e-957   2
+[0] MPI startup(): 131     35712    cpu-e-957   3
+[0] MPI startup(): 132     35713    cpu-e-957   4
+[0] MPI startup(): 133     35714    cpu-e-957   5
+[0] MPI startup(): 134     35715    cpu-e-957   6
+[0] MPI startup(): 135     35716    cpu-e-957   7
+[0] MPI startup(): 136     35717    cpu-e-957   8
+[0] MPI startup(): 137     35718    cpu-e-957   9
+[0] MPI startup(): 138     35719    cpu-e-957   10
+[0] MPI startup(): 139     35720    cpu-e-957   11
+[0] MPI startup(): 140     35721    cpu-e-957   12
+[0] MPI startup(): 141     35722    cpu-e-957   13
+[0] MPI startup(): 142     35723    cpu-e-957   14
+[0] MPI startup(): 143     35724    cpu-e-957   15
+[0] MPI startup(): 144     35725    cpu-e-957   16
+[0] MPI startup(): 145     35726    cpu-e-957   17
+[0] MPI startup(): 146     35727    cpu-e-957   18
+[0] MPI startup(): 147     35728    cpu-e-957   19
+[0] MPI startup(): 148     35729    cpu-e-957   20
+[0] MPI startup(): 149     35730    cpu-e-957   21
+[0] MPI startup(): 150     35731    cpu-e-957   22
+[0] MPI startup(): 151     35732    cpu-e-957   23
+[0] MPI startup(): 152     35733    cpu-e-957   24
+[0] MPI startup(): 153     35734    cpu-e-957   25
+[0] MPI startup(): 154     35735    cpu-e-957   26
+[0] MPI startup(): 155     35736    cpu-e-957   27
+[0] MPI startup(): 156     35737    cpu-e-957   28
+[0] MPI startup(): 157     35738    cpu-e-957   29
+[0] MPI startup(): 158     35739    cpu-e-957   30
+[0] MPI startup(): 159     35740    cpu-e-957   31
+[0] MPI startup(): 160     35664    cpu-e-958   0
+[0] MPI startup(): 161     35665    cpu-e-958   1
+[0] MPI startup(): 162     35666    cpu-e-958   2
+[0] MPI startup(): 163     35667    cpu-e-958   3
+[0] MPI startup(): 164     35668    cpu-e-958   4
+[0] MPI startup(): 165     35669    cpu-e-958   5
+[0] MPI startup(): 166     35670    cpu-e-958   6
+[0] MPI startup(): 167     35671    cpu-e-958   7
+[0] MPI startup(): 168     35672    cpu-e-958   8
+[0] MPI startup(): 169     35673    cpu-e-958   9
+[0] MPI startup(): 170     35674    cpu-e-958   10
+[0] MPI startup(): 171     35675    cpu-e-958   11
+[0] MPI startup(): 172     35676    cpu-e-958   12
+[0] MPI startup(): 173     35677    cpu-e-958   13
+[0] MPI startup(): 174     35678    cpu-e-958   14
+[0] MPI startup(): 175     35679    cpu-e-958   15
+[0] MPI startup(): 176     35680    cpu-e-958   16
+[0] MPI startup(): 177     35681    cpu-e-958   17
+[0] MPI startup(): 178     35682    cpu-e-958   18
+[0] MPI startup(): 179     35683    cpu-e-958   19
+[0] MPI startup(): 180     35684    cpu-e-958   20
+[0] MPI startup(): 181     35685    cpu-e-958   21
+[0] MPI startup(): 182     35686    cpu-e-958   22
+[0] MPI startup(): 183     35687    cpu-e-958   23
+[0] MPI startup(): 184     35688    cpu-e-958   24
+[0] MPI startup(): 185     35689    cpu-e-958   25
+[0] MPI startup(): 186     35690    cpu-e-958   26
+[0] MPI startup(): 187     35691    cpu-e-958   27
+[0] MPI startup(): 188     35692    cpu-e-958   28
+[0] MPI startup(): 189     35693    cpu-e-958   29
+[0] MPI startup(): 190     35694    cpu-e-958   30
+[0] MPI startup(): 191     35695    cpu-e-958   31
+[0] MPI startup(): 192     35918    cpu-e-1021  0
+[0] MPI startup(): 193     35919    cpu-e-1021  1
+[0] MPI startup(): 194     35920    cpu-e-1021  2
+[0] MPI startup(): 195     35921    cpu-e-1021  3
+[0] MPI startup(): 196     35922    cpu-e-1021  4
+[0] MPI startup(): 197     35923    cpu-e-1021  5
+[0] MPI startup(): 198     35924    cpu-e-1021  6
+[0] MPI startup(): 199     35925    cpu-e-1021  7
+[0] MPI startup(): 200     35926    cpu-e-1021  8
+[0] MPI startup(): 201     35927    cpu-e-1021  9
+[0] MPI startup(): 202     35928    cpu-e-1021  10
+[0] MPI startup(): 203     35929    cpu-e-1021  11
+[0] MPI startup(): 204     35930    cpu-e-1021  12
+[0] MPI startup(): 205     35931    cpu-e-1021  13
+[0] MPI startup(): 206     35932    cpu-e-1021  14
+[0] MPI startup(): 207     35933    cpu-e-1021  15
+[0] MPI startup(): 208     35934    cpu-e-1021  16
+[0] MPI startup(): 209     35935    cpu-e-1021  17
+[0] MPI startup(): 210     35936    cpu-e-1021  18
+[0] MPI startup(): 211     35937    cpu-e-1021  19
+[0] MPI startup(): 212     35938    cpu-e-1021  20
+[0] MPI startup(): 213     35939    cpu-e-1021  21
+[0] MPI startup(): 214     35940    cpu-e-1021  22
+[0] MPI startup(): 215     35941    cpu-e-1021  23
+[0] MPI startup(): 216     35942    cpu-e-1021  24
+[0] MPI startup(): 217     35943    cpu-e-1021  25
+[0] MPI startup(): 218     35944    cpu-e-1021  26
+[0] MPI startup(): 219     35945    cpu-e-1021  27
+[0] MPI startup(): 220     35946    cpu-e-1021  28
+[0] MPI startup(): 221     35947    cpu-e-1021  29
+[0] MPI startup(): 222     35948    cpu-e-1021  30
+[0] MPI startup(): 223     35949    cpu-e-1021  31
+[0] MPI startup(): 224     35689    cpu-e-1022  0
+[0] MPI startup(): 225     35690    cpu-e-1022  1
+[0] MPI startup(): 226     35691    cpu-e-1022  2
+[0] MPI startup(): 227     35692    cpu-e-1022  3
+[0] MPI startup(): 228     35693    cpu-e-1022  4
+[0] MPI startup(): 229     35694    cpu-e-1022  5
+[0] MPI startup(): 230     35695    cpu-e-1022  6
+[0] MPI startup(): 231     35696    cpu-e-1022  7
+[0] MPI startup(): 232     35697    cpu-e-1022  8
+[0] MPI startup(): 233     35698    cpu-e-1022  9
+[0] MPI startup(): 234     35699    cpu-e-1022  10
+[0] MPI startup(): 235     35700    cpu-e-1022  11
+[0] MPI startup(): 236     35701    cpu-e-1022  12
+[0] MPI startup(): 237     35702    cpu-e-1022  13
+[0] MPI startup(): 238     35703    cpu-e-1022  14
+[0] MPI startup(): 239     35704    cpu-e-1022  15
+[0] MPI startup(): 240     35705    cpu-e-1022  16
+[0] MPI startup(): 241     35706    cpu-e-1022  17
+[0] MPI startup(): 242     35707    cpu-e-1022  18
+[0] MPI startup(): 243     35708    cpu-e-1022  19
+[0] MPI startup(): 244     35709    cpu-e-1022  20
+[0] MPI startup(): 245     35710    cpu-e-1022  21
+[0] MPI startup(): 246     35711    cpu-e-1022  22
+[0] MPI startup(): 247     35712    cpu-e-1022  23
+[0] MPI startup(): 248     35713    cpu-e-1022  24
+[0] MPI startup(): 249     35714    cpu-e-1022  25
+[0] MPI startup(): 250     35715    cpu-e-1022  26
+[0] MPI startup(): 251     35716    cpu-e-1022  27
+[0] MPI startup(): 252     35717    cpu-e-1022  28
+[0] MPI startup(): 253     35718    cpu-e-1022  29
+[0] MPI startup(): 254     35719    cpu-e-1022  30
+[0] MPI startup(): 255     35720    cpu-e-1022  31
+[0] MPI startup(): 256     35718    cpu-e-1149  0
+[0] MPI startup(): 257     35719    cpu-e-1149  1
+[0] MPI startup(): 258     35720    cpu-e-1149  2
+[0] MPI startup(): 259     35721    cpu-e-1149  3
+[0] MPI startup(): 260     35722    cpu-e-1149  4
+[0] MPI startup(): 261     35723    cpu-e-1149  5
+[0] MPI startup(): 262     35724    cpu-e-1149  6
+[0] MPI startup(): 263     35725    cpu-e-1149  7
+[0] MPI startup(): 264     35726    cpu-e-1149  8
+[0] MPI startup(): 265     35727    cpu-e-1149  9
+[0] MPI startup(): 266     35728    cpu-e-1149  10
+[0] MPI startup(): 267     35729    cpu-e-1149  11
+[0] MPI startup(): 268     35730    cpu-e-1149  12
+[0] MPI startup(): 269     35731    cpu-e-1149  13
+[0] MPI startup(): 270     35732    cpu-e-1149  14
+[0] MPI startup(): 271     35733    cpu-e-1149  15
+[0] MPI startup(): 272     35734    cpu-e-1149  16
+[0] MPI startup(): 273     35735    cpu-e-1149  17
+[0] MPI startup(): 274     35736    cpu-e-1149  18
+[0] MPI startup(): 275     35737    cpu-e-1149  19
+[0] MPI startup(): 276     35738    cpu-e-1149  20
+[0] MPI startup(): 277     35739    cpu-e-1149  21
+[0] MPI startup(): 278     35740    cpu-e-1149  22
+[0] MPI startup(): 279     35741    cpu-e-1149  23
+[0] MPI startup(): 280     35742    cpu-e-1149  24
+[0] MPI startup(): 281     35743    cpu-e-1149  25
+[0] MPI startup(): 282     35744    cpu-e-1149  26
+[0] MPI startup(): 283     35745    cpu-e-1149  27
+[0] MPI startup(): 284     35746    cpu-e-1149  28
+[0] MPI startup(): 285     35747    cpu-e-1149  29
+[0] MPI startup(): 286     35748    cpu-e-1149  30
+[0] MPI startup(): 287     35749    cpu-e-1149  31
+[0] MPI startup(): 288     35777    cpu-e-1150  0
+[0] MPI startup(): 289     35778    cpu-e-1150  1
+[0] MPI startup(): 290     35779    cpu-e-1150  2
+[0] MPI startup(): 291     35780    cpu-e-1150  3
+[0] MPI startup(): 292     35781    cpu-e-1150  4
+[0] MPI startup(): 293     35782    cpu-e-1150  5
+[0] MPI startup(): 294     35783    cpu-e-1150  6
+[0] MPI startup(): 295     35784    cpu-e-1150  7
+[0] MPI startup(): 296     35785    cpu-e-1150  8
+[0] MPI startup(): 297     35786    cpu-e-1150  9
+[0] MPI startup(): 298     35787    cpu-e-1150  10
+[0] MPI startup(): 299     35788    cpu-e-1150  11
+[0] MPI startup(): 300     35789    cpu-e-1150  12
+[0] MPI startup(): 301     35790    cpu-e-1150  13
+[0] MPI startup(): 302     35791    cpu-e-1150  14
+[0] MPI startup(): 303     35792    cpu-e-1150  15
+[0] MPI startup(): 304     35793    cpu-e-1150  16
+[0] MPI startup(): 305     35794    cpu-e-1150  17
+[0] MPI startup(): 306     35795    cpu-e-1150  18
+[0] MPI startup(): 307     35796    cpu-e-1150  19
+[0] MPI startup(): 308     35797    cpu-e-1150  20
+[0] MPI startup(): 309     35798    cpu-e-1150  21
+[0] MPI startup(): 310     35799    cpu-e-1150  22
+[0] MPI startup(): 311     35800    cpu-e-1150  23
+[0] MPI startup(): 312     35801    cpu-e-1150  24
+[0] MPI startup(): 313     35802    cpu-e-1150  25
+[0] MPI startup(): 314     35803    cpu-e-1150  26
+[0] MPI startup(): 315     35804    cpu-e-1150  27
+[0] MPI startup(): 316     35805    cpu-e-1150  28
+[0] MPI startup(): 317     35806    cpu-e-1150  29
+[0] MPI startup(): 318     35807    cpu-e-1150  30
+[0] MPI startup(): 319     35808    cpu-e-1150  31
+[0] MPI startup(): I_MPI_CC=icc
+[0] MPI startup(): I_MPI_CXX=icpc
+[0] MPI startup(): I_MPI_FC=ifort
+[0] MPI startup(): I_MPI_F90=ifort
+[0] MPI startup(): I_MPI_F77=ifort
+[0] MPI startup(): I_MPI_ROOT=/usr/local/Cluster-Apps/intel/2019.3//compilers_and_libraries_2019.3.192/linux/mpi
+[0] MPI startup(): I_MPI_HYDRA_RMK=slurm
+[0] MPI startup(): I_MPI_JOB_RESPECT_PROCESS_PLACEMENT=off
+[0] MPI startup(): I_MPI_PIN_DOMAIN=omp:compact
+[0] MPI startup(): I_MPI_PIN_ORDER=scatter
+[0] MPI startup(): I_MPI_FABRICS=shm:ofi
+[0] MPI startup(): I_MPI_DEBUG=10
+[0] MPI startup(): I_MPI_TMI_PROVIDER variable has been removed from the product, its value is ignored
+
+[0] MPI startup(): I_MPI_TMI_PROVIDER environment variable is not supported.
+[0] MPI startup(): Similar variables:
+	 I_MPI_OFI_PROVIDER
+[0] MPI startup(): To check the list of supported variables, use the impi_info utility or refer to https://software.intel.com/en-us/mpi-library/documentation/get-started.
+-- started at 11/08/2019 00:45:21 --
+
+mdtest-3.3.0+dev was launched with 320 total task(s) on 10 node(s)
+Command line used: /home/wjt27/io-500-sc19/bin/mdtest '-T' '-t' '-F' '-P' '-w' '3901' '-e' '3901' '-d' '/dac/fs1/mjr208/job16760824-2019-11-07-2352/mdt_hard' '-n' '950000' '-x' '/dac/fs1/mjr208/job16760824-2019-11-07-2352/mdt_hard-stonewall' '-a' 'POSIX' '-N' '1'
+Path: /dac/fs1/mjr208/job16760824-2019-11-07-2352
+FS: 405.5 TiB   Used FS: 26.5%   Inodes: 1820.8 Mi   Used Inodes: 10.5%
+
+Nodemap: 11111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2137 Shifting ranks by 32 for each phase.
+320 tasks, 304000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :      65400.242      65397.334      65397.606          0.190
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :        144.481        144.474        144.480          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/08/2019 00:47:47 --
+

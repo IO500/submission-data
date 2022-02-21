@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct 31 23:07:24 2021
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746803962 -k -e -o /dfs/u2/2021.10.31-23.07.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/dfs/results/2021.10.31-23.07.20/ior-easy.stonewall -t 1m -b 9920000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=5df96c37-908d-4b22-a91b-bb59f913e8c2 --dfs.cont=34728d0c-3bdd-49b3-8b1a-0ec1837ecb59 --dfs.prefix=/dfs --dfs.oclass=SX --dfs.dir_oclass=S1 -O saveRankPerformanceDetailsCSV=/dfs/results/2021.10.31-23.07.20/ior-easy-write.csv
+Machine             : Linux idn12
+TestID              : 0
+StartTime           : Sun Oct 31 23:07:27 2021
+Path                : /dfs/u2/2021.10.31-23.07.20/ior-easy/ior_file_easy
+FS                  : 90.9 TiB   Used FS: 2.3%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /dfs/u2/2021.10.31-23.07.20/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 560
+clients per node    : 56
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 5297.85 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 64077 max: 67188 -- min data: 62.6 GiB mean data: 64.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 5825049395200000
+WARNING: Stat() of aggregate file size      = 5814717973004288
+WARNING: Using actual aggregate bytes moved = 39452965601280
+WARNING: Maybe caused by deadlineForStonewalling
+write     122430     122431     0.000031    10158080000 1024.00    0.002334   307.32     0.001882   307.32     0   

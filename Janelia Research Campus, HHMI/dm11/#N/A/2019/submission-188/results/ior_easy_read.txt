@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Nov  9 22:09:14 2019
+Command line        : /io500/io500-sc19/bin/ior -r -R -u -t 1024k -b 9920000m -F --posix.odirect -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /io500/io500-sc19/datafiles/io500.2019.11.09-21.41.19/ior_easy/ior_file_easy -O stoneWallingStatusFile=/io500/io500-sc19/datafiles/io500.2019.11.09-21.41.19/ior_easy/stonewall
+Machine             : Linux e11u05.int.janelia.org
+TestID              : 0
+StartTime           : Sat Nov  9 22:09:14 2019
+Path                : /io500/io500-sc19/datafiles/io500.2019.11.09-21.41.19/ior_easy/0
+FS                  : 3623.2 TiB   Used FS: 81.5%   Inodes: 1312662.2 Mi   Used Inodes: 62.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /io500/io500-sc19/datafiles/io500.2019.11.09-21.41.19/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 760
+clients per node    : 76
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 7189.94 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 7905424179200000.
+WARNING: Stat() of aggregate file size      = 8383365120.
+WARNING: Using actual aggregate bytes moved = 6371357491200.
+read      13711      13712      0.000045    10158080000 1024.00    0.008245   443.14     0.000938   443.15     0   
+Max Read:  13711.30 MiB/sec (14377.34 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        13711.30   13711.30   13711.30       0.00   13711.30   13711.30   13711.30       0.00  443.15286         NA            NA     0    760  76    1   2     1        1         0    0      1 10401873920000  1048576 6076200.0 POSIX      0
+Finished            : Sat Nov  9 22:16:38 2019

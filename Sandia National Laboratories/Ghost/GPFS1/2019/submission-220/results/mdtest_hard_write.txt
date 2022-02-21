@@ -1,0 +1,22 @@
+-- started at 11/10/2018 14:34:33 --
+
+mdtest-1.9.3 was launched with 2 total task(s) on 1 node(s)
+Command line used: /gpfs1/gflofst/ghost/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/gpfs1/gflofst/ghost/io-500-dev/datafiles/io500.2018.11.10-13.58.08/mdt_hard" "-n" "280000" "-x" "/gpfs1/gflofst/ghost/io-500-dev/datafiles/io500.2018.11.10-13.58.08/mdt_hard-stonewall" "-W" "300"
+Path: /gpfs1/gflofst/ghost/io-500-dev/datafiles/io500.2018.11.10-13.58.08
+FS: 4649.4 TiB   Used FS: 81.8%   Inodes: 975.0 Mi   Used Inodes: 79.8%
+
+2 tasks, 560000 files
+stonewall rank 1: 234212 of 234655 
+Continue stonewall hit min: 234212 max: 234655 avg: 234433.5 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :       1864.775       1864.775       1864.775          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :       6094.287       6094.287       6094.287          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/10/2018 14:39:33 --

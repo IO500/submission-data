@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sat Nov 10 14:40:16 2018
+Command line        : /gpfs1/gflofst/ghost/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 17000m -F -o /gpfs1/gflofst/ghost/io-500-dev/datafiles/io500.2018.11.10-13.58.08/ior_easy/ior_file_easy -O stoneWallingStatusFile=/gpfs1/gflofst/ghost/io-500-dev/datafiles/io500.2018.11.10-13.58.08/ior_easy/stonewall
+Machine             : Linux gho472
+TestID              : 0
+StartTime           : Sat Nov 10 14:40:16 2018
+Path                : /gpfs1/gflofst/ghost/io-500-dev/datafiles/io500.2018.11.10-13.58.08/ior_easy
+FS                  : 4649.4 TiB   Used FS: 81.8%   Inodes: 975.0 Mi   Used Inodes: 79.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs1/gflofst/ghost/io-500-dev/datafiles/io500.2018.11.10-13.58.08/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 2
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 16.60 GiB
+aggregate filesize  : 33.20 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      112.21     17408000   2048.00    0.003056   303.01     0.000507   303.01     0   
+Max Read:  112.21 MiB/sec (117.66 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read          112.21     112.21     112.21       0.00      56.10      56.10      56.10       0.00  303.01067     0      2   2    1   1     1        1         0    0      1 17825792000  2097152   34000.0 POSIX      0
+Finished            : Sat Nov 10 14:45:19 2018

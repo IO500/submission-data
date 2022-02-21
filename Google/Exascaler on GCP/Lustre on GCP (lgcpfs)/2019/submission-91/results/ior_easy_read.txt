@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 11 16:57:20 2018
+Command line        : /scratch/io-500-dev-master/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 60000m -F -o /lustre/gcp/io500/datafiles/io500.2018.11.11-16.28.26/ior_easy/ior_file_easy -O stoneWallingStatusFile=/lustre/gcp/io500/datafiles/io500.2018.11.11-16.28.26/ior_easy/stonewall
+Machine             : Linux lgcp-client0
+TestID              : 0
+StartTime           : Sun Nov 11 16:57:20 2018
+Path                : /lustre/gcp/io500/datafiles/io500.2018.11.11-16.28.26/ior_easy
+FS                  : 144.4 TiB   Used FS: 39.3%   Inodes: 2400.0 Mi   Used Inodes: 1.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/gcp/io500/datafiles/io500.2018.11.11-16.28.26/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 960
+clients per node    : 8
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 58.59 GiB
+aggregate filesize  : 54.93 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      39181      61440000   2048.00    0.032451   1470.06    0.016843   1470.11    0   
+Max Read:  39180.80 MiB/sec (41084.05 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        39180.80   39180.80   39180.80       0.00   19590.40   19590.40   19590.40       0.00 1470.10763     0    960   8    1   1     1        1         0    0      1 62914560000  2097152 57600000.0 POSIX      0
+Finished            : Sun Nov 11 17:21:50 2018

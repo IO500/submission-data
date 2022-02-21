@@ -1,0 +1,36 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 24 00:36:51 2021
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/ior-easy.stonewall -t 1048576 -b 9920000m -F -r -R -a CHFS --chfs.chunk_size=1048576
+Machine             : Linux gnode01
+TestID              : 0
+StartTime           : Mon May 24 00:36:51 2021
+Path                : /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-easy/ior_file_easy.00000000
+FS                  : 43.3 TiB   Used FS: 395.3%   Inodes: -134202007.2 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : CHFS
+apiVersion          : 1.0.0
+test filename       : /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 2270.51 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 2496449740800000
+WARNING: Stat() of aggregate file size      = 23740683386880
+WARNING: Using actual aggregate bytes moved = 23740683386880
+read      73561      73574      0.000031    10158080000 1024.00    0.053849   307.73     0.001816   307.78     0   

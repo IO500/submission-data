@@ -1,0 +1,40 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 24 00:16:31 2021
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-hard/file -O stoneWallingStatusFile=/work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a CHFS --chfs.chunk_size=47008
+Machine             : Linux gnode01
+TestID              : 0
+StartTime           : Mon May 24 00:16:32 2021
+Path                : /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-hard/file
+FS                  : 43.3 TiB   Used FS: 395.3%   Inodes: -134202007.2 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : CHFS
+apiVersion          : 1.0.0
+test filename       : /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 102.61 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 347460 max: 358904 -- min data: 15.2 GiB mean data: 15.5 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 112819200000000
+WARNING: Stat() of aggregate file size      = 4049126215680
+WARNING: Using actual aggregate bytes moved = 4049126215680
+WARNING: Maybe caused by deadlineForStonewalling
+write     12436      277861     305.80      45.91      45.91      0.512516   310.00     0.000718   310.51     0   

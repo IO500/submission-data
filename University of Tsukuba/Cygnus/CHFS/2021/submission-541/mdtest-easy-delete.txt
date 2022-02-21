@@ -1,0 +1,32 @@
+-- started at 05/24/2021 00:53:35 --
+
+mdtest-3.4.0+dev was launched with 240 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '3000000' '-u' '-L' '-F' '-P' '-N' '1' '-d' '/tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-easy' '-x' '/work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-easy.stonewall' '-r' '-a' 'CHFS' '--chfs.chunk_size=1'
+Path: /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20
+FS: 0.0 GiB   Used FS: -nan%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2216 Shifting ranks by 1 for each phase.
+240 tasks, 720000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :     656241.835     656182.121     656205.788         25.324
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.859          0.859          0.859          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        835.676        835.600        835.646          0.032
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          1.165          1.165          1.165          0.000
+-- finished at 05/24/2021 01:07:45 --
+

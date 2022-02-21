@@ -1,0 +1,108 @@
+version         = io500-sc20_v3-2-g26a6fed616ff
+config-hash     = 3595B519
+result-dir      = /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20
+; START 2021-05-24 00:05:24
+
+
+[ior-easy-write]
+t_start         = 2021-05-24 00:05:24
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/ior-easy.stonewall -t 1048576 -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a CHFS --chfs.chunk_size=1048576
+throughput-stonewall = 16820.71
+score           = 71.693064
+t_delta         = 319.8163
+t_end           = 2021-05-24 00:10:44
+
+[mdtest-easy-write]
+t_start         = 2021-05-24 00:10:44
+exe             = ./mdtest -n 3000000 -u -L -F -P -N 1 -d /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-easy -x /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-easy.stonewall -C -Y -W 300 -a CHFS --chfs.chunk_size=1
+rate-stonewall  = 1701.966389
+score           = 1582.615900
+t_delta         = 347.3781
+t_end           = 2021-05-24 00:16:31
+
+[timestamp]
+t_start         = 2021-05-24 00:16:31
+t_delta         = 0.0003
+t_end           = 2021-05-24 00:16:31
+
+[ior-hard-write]
+t_start         = 2021-05-24 00:16:31
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-hard/file -O stoneWallingStatusFile=/work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a CHFS --chfs.chunk_size=47008
+throughput-stonewall = 2868.56
+score           = 12.144590
+t_delta         = 311.6980
+t_end           = 2021-05-24 00:21:43
+
+[mdtest-hard-write]
+t_start         = 2021-05-24 00:21:43
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-hard -x /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-hard.stonewall -C -Y -W 300 -a CHFS --chfs.chunk_size=3902
+rate-stonewall  = 263.594203
+score           = 258.633235
+t_delta         = 311.6567
+t_end           = 2021-05-24 00:26:55
+
+[find]
+t_start         = 2021-05-24 00:26:55
+exe             = ./pfind /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20 -newer /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 10
+found           = 3739140
+total-files     = 628742881
+score           = 1056.268758
+t_delta         = 596.0691
+t_end           = 2021-05-24 00:36:51
+
+[ior-easy-read]
+t_start         = 2021-05-24 00:36:51
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/ior-easy.stonewall -t 1048576 -b 9920000m -F -r -R -a CHFS --chfs.chunk_size=1048576
+score           = 71.836846
+t_delta         = 308.7992
+t_end           = 2021-05-24 00:42:00
+
+[mdtest-easy-stat]
+t_start         = 2021-05-24 00:42:00
+exe             = ./mdtest -n 3000000 -u -L -F -P -N 1 -d /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-easy -x /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-easy.stonewall -T -a CHFS --chfs.chunk_size=1
+score           = 1955.423375
+t_delta         = 281.3829
+t_end           = 2021-05-24 00:46:41
+
+[ior-hard-read]
+t_start         = 2021-05-24 00:46:41
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/ior-hard/file -O stoneWallingStatusFile=/work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a CHFS --chfs.chunk_size=47008
+score           = 13.628314
+t_delta         = 277.8493
+t_end           = 2021-05-24 00:51:19
+
+[mdtest-hard-stat]
+t_start         = 2021-05-24 00:51:19
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-hard -x /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-hard.stonewall -T -a CHFS --chfs.chunk_size=3902
+score           = 602.414994
+t_delta         = 134.3402
+t_end           = 2021-05-24 00:53:34
+
+[mdtest-easy-delete]
+t_start         = 2021-05-24 00:53:34
+exe             = ./mdtest -n 3000000 -u -L -F -P -N 1 -d /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-easy -x /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-easy.stonewall -r -a CHFS --chfs.chunk_size=1
+score           = 656.241600
+t_delta         = 852.7919
+t_end           = 2021-05-24 01:07:46
+
+[mdtest-hard-read]
+t_start         = 2021-05-24 01:07:46
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-hard -x /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-hard.stonewall -E -X -a CHFS --chfs.chunk_size=3902
+score           = 841.245156
+t_delta         = 98.9519
+t_end           = 2021-05-24 01:09:25
+
+[mdtest-hard-delete]
+t_start         = 2021-05-24 01:09:26
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-hard -x /work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-hard.stonewall -r -a CHFS --chfs.chunk_size=3902
+score           = 279.392210
+t_delta         = 292.8581
+t_end           = 2021-05-24 01:14:18
+
+[SCORE]
+MD              = 727.606276
+BW              = 30.385217
+SCORE           = 148.689189 
+hash            = 4B6A7D35
+; END 2021-05-24 01:56:27

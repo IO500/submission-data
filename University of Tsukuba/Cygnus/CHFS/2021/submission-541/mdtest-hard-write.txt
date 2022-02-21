@@ -1,0 +1,36 @@
+-- started at 05/24/2021 00:21:44 --
+
+mdtest-3.4.0+dev was launched with 240 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-N' '1' '-F' '-d' '/tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20/mdtest-hard' '-x' '/work/NBB/tatebe/io500-sc20/results/2021.05.24-00.05.20/mdtest-hard.stonewall' '-C' '-Y' '-W' '300' '-a' 'CHFS' '--chfs.chunk_size=3902'
+Path: /tmp/gfarm-tatebe/datafiles/2021.05.24-00.05.20
+FS: 0.0 GiB   Used FS: -nan%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2216 Shifting ranks by 1 for each phase.
+240 tasks, 240000000 files
+Continue stonewall hit min: 322343 max: 334946 avg: 329504.5 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :     258633.311     258632.684     258633.146          0.152
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA     263594.203             NA
+   Tree creation             :         75.593         75.593         75.593          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :        310.815        310.815        310.815          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA        300.011             NA
+   Tree creation             :          0.013          0.013          0.013          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 05/24/2021 00:26:55 --
+

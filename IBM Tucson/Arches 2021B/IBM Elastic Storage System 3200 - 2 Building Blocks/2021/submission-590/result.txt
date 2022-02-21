@@ -1,0 +1,110 @@
+[run]
+version         = 
+config-hash     = 77AC266B
+result-dir      = /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20
+mode            = standard
+; START 2021-10-25 09:53:21
+
+
+[ior-easy-write]
+t_start         = 2021-10-25 09:53:21
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746796794 -k -e -o /gpfs/fs1/2021.10.25-09.53.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/ior-easy.stonewall -t 8m -b 99200000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/ior-easy-write.csv
+throughput-stonewall = 107.29
+score           = 106.350048
+t_delta         = 318.1922
+t_end           = 2021-10-25 09:58:39
+
+[mdtest-easy-write]
+t_start         = 2021-10-25 09:58:39
+exe             = ./mdtest --dataPacketType=timestamp -n 100000000 -u -L -F -P -G 1632974588 -N 1 -d /gpfs/fs1/2021.10.25-09.53.20/mdtest-easy -x /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 218.473418
+score           = 195.624633
+t_delta         = 363.8677
+t_end           = 2021-10-25 10:04:43
+
+[timestamp]
+t_start         = 2021-10-25 10:04:43
+t_delta         = 0.0419
+t_end           = 2021-10-25 10:04:43
+
+[ior-hard-write]
+t_start         = 2021-10-25 10:04:43
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746807482 -k -e -o /gpfs/fs1/2021.10.25-09.53.20/ior-hard/file -O stoneWallingStatusFile=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/ior-hard.stonewall -t 47008 -b 47008 -s 1000000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 5.68
+score           = 4.338218
+t_delta         = 843.9570
+t_end           = 2021-10-25 10:18:47
+
+[mdtest-hard-write]
+t_start         = 2021-10-25 10:18:47
+exe             = ./mdtest --dataPacketType=timestamp -n 100000000 -t -w 3901 -e 3901 -P -G=1632985276 -N 1 -F -d /gpfs/fs1/2021.10.25-09.53.20/mdtest-hard -x /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 22.308144
+score           = 22.303113
+t_delta         = 355.5917
+t_end           = 2021-10-25 10:24:43
+
+[find]
+t_start         = 2021-10-25 10:24:43
+exe             = ./pfind /gpfs/fs1/2021.10.25-09.53.20 -newer /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 200
+found           = 254547
+total-files     = 78358001
+score           = 1185.217512
+t_delta         = 66.3560
+t_end           = 2021-10-25 10:25:49
+
+[ior-easy-read]
+t_start         = 2021-10-25 10:25:49
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746796794 -k -e -o /gpfs/fs1/2021.10.25-09.53.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/ior-easy.stonewall -t 8m -b 99200000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/ior-easy-read.csv
+score           = 88.066995
+t_delta         = 383.5029
+t_end           = 2021-10-25 10:32:12
+
+[mdtest-easy-stat]
+t_start         = 2021-10-25 10:32:12
+exe             = ./mdtest --dataPacketType=timestamp -n 100000000 -u -L -F -P -G 1632974588 -N 1 -d /gpfs/fs1/2021.10.25-09.53.20/mdtest-easy -x /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-easy-stat.csv -a POSIX
+score           = 272.152271
+t_delta         = 260.7599
+t_end           = 2021-10-25 10:36:33
+
+[ior-hard-read]
+t_start         = 2021-10-25 10:36:33
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746807482 -k -e -o /gpfs/fs1/2021.10.25-09.53.20/ior-hard/file -O stoneWallingStatusFile=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/ior-hard.stonewall -t 47008 -b 47008 -s 1000000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/ior-hard-read.csv
+score           = 29.254735
+t_delta         = 125.7749
+t_end           = 2021-10-25 10:38:39
+
+[mdtest-hard-stat]
+t_start         = 2021-10-25 10:38:39
+exe             = ./mdtest --dataPacketType=timestamp -n 100000000 -t -w 3901 -e 3901 -P -G=1632985276 -N 1 -F -d /gpfs/fs1/2021.10.25-09.53.20/mdtest-hard -x /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-hard-stat.csv -a POSIX
+score           = 266.883487
+t_delta         = 31.3059
+t_end           = 2021-10-25 10:39:10
+
+[mdtest-easy-delete]
+t_start         = 2021-10-25 10:39:10
+exe             = ./mdtest --dataPacketType=timestamp -n 100000000 -u -L -F -P -G 1632974588 -N 1 -d /gpfs/fs1/2021.10.25-09.53.20/mdtest-easy -x /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-easy-delete.csv -a POSIX
+score           = 113.436856
+t_delta         = 626.7879
+t_end           = 2021-10-25 10:49:37
+
+[mdtest-hard-read]
+t_start         = 2021-10-25 10:49:37
+exe             = ./mdtest --dataPacketType=timestamp -n 100000000 -t -w 3901 -e 3901 -P -G=1632985276 -N 1 -F -d /gpfs/fs1/2021.10.25-09.53.20/mdtest-hard -x /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-hard-read.csv -a POSIX
+score           = 205.366311
+t_delta         = 40.1479
+t_end           = 2021-10-25 10:50:17
+
+[mdtest-hard-delete]
+t_start         = 2021-10-25 10:50:17
+exe             = ./mdtest --dataPacketType=timestamp -n 100000000 -t -w 3901 -e 3901 -P -G=1632985276 -N 1 -F -d /gpfs/fs1/2021.10.25-09.53.20/mdtest-hard -x /nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/nshare/jay/io500/official/ibm_submission_oct2021/2021.10.25-09.53.20/mdtest-hard-delete.csv -a POSIX
+score           = 20.507810
+t_delta         = 387.4521
+t_end           = 2021-10-25 10:56:45
+
+[SCORE]
+MD              = 143.463171
+BW              = 33.019051
+SCORE           = 68.825996
+hash            = AB501C29
+; END 2021-10-25 10:56:45

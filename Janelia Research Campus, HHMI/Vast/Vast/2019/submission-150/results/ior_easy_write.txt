@@ -1,0 +1,44 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov 11 06:21:32 2019
+Command line        : /io500/io500-sc19/bin/ior -w -t 1024k -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /io500/io500-sc19/datafiles/io500.2019.11.11-06.21.28/ior_easy/ior_file_easy -O stoneWallingStatusFile=/io500/io500-sc19/datafiles/io500.2019.11.11-06.21.28/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux e10u01.int.janelia.org
+TestID              : 0
+StartTime           : Mon Nov 11 06:21:32 2019
+Path                : /io500/io500-sc19/datafiles/io500.2019.11.11-06.21.28/ior_easy
+FS                  : 3091.4 TiB   Used FS: 49.5%   Inodes: 8270.0 Mi   Used Inodes: 12.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /io500/io500-sc19/datafiles/io500.2019.11.11-06.21.28/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 2816
+clients per node    : 32
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 26640.62 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+stonewalling pairs accessed min: 4978 max: 7493 -- min data: 4.9 GiB mean data: 6.4 GiB time: 300.5s
+WARNING: Expected aggregate file size       = 29291676958720000.
+WARNING: Stat() of aggregate file size      = 22125255589888.
+WARNING: Using actual aggregate bytes moved = 22125255589888.
+WARNING: maybe caused by deadlineForStonewalling
+write     12648      10158080000 1024.00    1.63       1666.55    0.059573   1668.24    0   
+Max Write: 12648.23 MiB/sec (13262.64 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       12648.23   12648.23   12648.23       0.00   12648.23   12648.23   12648.23       0.00 1668.23974     300.50      61157.42     0   2816  32    1   1     1        1         0    0      1 10401873920000  1048576 21100288.0 POSIX      0
+Finished            : Mon Nov 11 06:49:20 2019

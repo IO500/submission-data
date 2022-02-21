@@ -1,0 +1,136 @@
+System:  sdv42
+filesystem_utilization=e8Scratch      133322244096 7609774080 125712470016   6% /gpfs/e8Scratch
+date=2018.11.09-08.59.58
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 300 -r /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/pfind_results'
+io500_find_cmd=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=SSD/NvMe
+io500_info_filesystem=GPFS
+io500_info_filesystem_vendor=E8
+io500_info_filesystem_version=4.2.3-8
+io500_info_institute_name=QMUL
+io500_info_metadata_storage_type=SSD/NVMe
+io500_info_num_client_nodes=10
+io500_info_num_data_server_nodes=3
+io500_info_num_data_storage_devices=1
+io500_info_num_metadata_server_nodes=3
+io500_info_num_metadata_storage_devices=1
+io500_info_procs_per_node=24
+io500_info_storage_age_in_months=1
+io500_info_storage_install_date=11/2018
+io500_info_storage_interface=NvMe/Infiband
+io500_info_storage_network=ethernet
+io500_info_system_name=Apocrita
+io500_info_whatever='GPFS on a E8 D24'
+io500_ior_cmd=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/ior
+io500_ior_easy_params='-t 2048k -b 15000m -F'
+io500_ior_easy_size=15000
+io500_ior_hard_other_options=
+io500_ior_hard_writes_per_proc=40000
+io500_mdreal_cmd=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/mdtest
+io500_mdtest_easy_files_per_proc=25000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=10000
+io500_mdtest_hard_other_options=
+io500_mpiargs='-np 240'
+io500_mpirun=mpirun
+io500_result_dir=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=True
+io500_stonewall_timer=300
+io500_workdir=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 15000m -F -o /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/ior_easy/ior_file_easy -O stoneWallingStatusFile=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write                8.859 GB/s : time 396.82 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/mdtest -C -F -d /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_easy -n 25000 -u -L -x /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_easy-stonewall -W 300
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               19.421 kiops : time 315.15 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 40000  -o /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/ior_hard/IOR_file -O stoneWallingStatusFile=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                1.261 GB/s : time 333.21 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/mdtest -C -t -F -w 3901 -e 3901 -d /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_hard -n 10000 -x /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_hard-stonewall  -W 300
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                6.000 kiops : time 405.27 seconds
+
+[Starting] find
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/pfind /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58 -newer /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/timestampfile -size 3901c -name *01* -s 300 -r /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/pfind_results
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/find.txt.
+[FIND] MATCHED 0/7153206 in 16.5734 seconds
+[RESULT] IOPS phase 3                      find              431.600 kiops : time  16.57 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 15000m -F -o /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/ior_easy/ior_file_easy -O stoneWallingStatusFile=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/ior_easy/stonewall
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read                8.755 GB/s : time 401.54 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/mdtest -T -F -d /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_easy -n 25000 -u -L -x /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_easy-stonewall
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat               67.238 kiops : time  75.64 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 40000  -o /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/ior_hard/IOR_file -O stoneWallingStatusFile=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/ior_hard/stonewall
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                3.556 GB/s : time 118.20 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/mdtest -T -t -F -w 3901 -e 3901 -d /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_hard -n 10000 -x /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_hard-stonewall 
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat                8.788 kiops : time 275.81 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/mdtest -r -F -d /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_easy -n 25000 -u -L -x /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_easy-stonewall
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               50.478 kiops : time 100.92 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/mdtest -E -t -F -w 3901 -e 3901 -d /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_hard -n 10000 -x /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_hard-stonewall 
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read                8.376 kiops : time 287.87 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun -np 240 /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/mdtest -r -t -F -w 3901 -e 3901 -d /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_hard -n 10000 -x /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58/mdt_hard-stonewall 
+[Results] in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                4.709 kiops : time 511.74 seconds
+Running mdreal
+
+[Leaving] datafiles in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58
+[Summary] Results files in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/results/e8.2018.11.09-08.59.58
+[Summary] Data files in /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.e8/io500.2018.11.09-08.59.58
+[RESULT] BW   phase 1            ior_easy_write                8.859 GB/s : time 396.82 seconds
+[RESULT] BW   phase 2            ior_hard_write                1.261 GB/s : time 333.21 seconds
+[RESULT] BW   phase 3             ior_easy_read                8.755 GB/s : time 401.54 seconds
+[RESULT] BW   phase 4             ior_hard_read                3.556 GB/s : time 118.20 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               19.421 kiops : time 315.15 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                6.000 kiops : time 405.27 seconds
+[RESULT] IOPS phase 3                      find              431.600 kiops : time  16.57 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               67.238 kiops : time  75.64 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat                8.788 kiops : time 275.81 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               50.478 kiops : time 100.92 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read                8.376 kiops : time 287.87 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                4.709 kiops : time 511.74 seconds
+[SCORE] Bandwidth 4.31865 GB/s : IOPS 22.2083 kiops : TOTAL 9.79336

@@ -1,0 +1,40 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Oct  3 22:46:33 2019
+Command line        : /gpfs/fs1/io-500-dev-master/bin/ior -w -s 95000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /gpfs/fs1/io-500-dev-master/datafiles/io500.2019.10.03-22.20.19/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs/fs1/io-500-dev-master/datafiles/io500.2019.10.03-22.20.19/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux ss-compute-1
+TestID              : 0
+StartTime           : Thu Oct  3 22:46:33 2019
+Path                : /gpfs/fs1/io-500-dev-master/datafiles/io500.2019.10.03-22.20.19/ior_hard
+FS                  : 189.1 TiB   Used FS: 22.7%   Inodes: 581.7 Mi   Used Inodes: 23.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/fs1/io-500-dev-master/datafiles/io500.2019.10.03-22.20.19/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 95000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 480
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.95 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+stonewalling pairs accessed min: 35695 max: 95000 -- min data: 1.6 GiB mean data: 2.4 GiB time: 300.6s
+write     3693       45.91      45.91      0.034381   553.38     0.094786   553.51     0   
+Max Write: 3693.26 MiB/sec (3872.67 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        3693.26    3693.26    3693.26       0.00   82383.17   82383.17   82383.17       0.00  553.51111     300.57       3990.28     0    480  16    1   0     1        1         0    0  95000    47008    47008 2044262.8 POSIX      0
+Finished            : Thu Oct  3 22:55:47 2019

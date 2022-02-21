@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct 30 10:30:23 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o /work/n02/n02/kunkel/data//2020.10.30-10.30.19/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.10.30-10.30.19/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX
+Machine             : Linux nid001904
+TestID              : 0
+StartTime           : Fri Oct 30 10:30:23 2020
+Path                : /work/n02/n02/kunkel/data//2020.10.30-10.30.19/ior-easy/ior_file_easy.00000000
+FS                  : 3336.2 TiB   Used FS: 1.1%   Inodes: 3364.6 Mi   Used Inodes: 1.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/n02/n02/kunkel/data//2020.10.30-10.30.19/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 756.84 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 35905 max: 138019 -- min data: 70.1 GiB mean data: 170.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 832149913600000
+WARNING: Stat() of aggregate file size      = 23155745751040
+WARNING: Using actual aggregate bytes moved = 23155745751040
+WARNING: Maybe caused by deadlineForStonewalling
+write     33856      16928      0.000090    10158080000 2048.00    0.002626   652.27     0.001096   652.27     0   

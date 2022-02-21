@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Oct 22 12:04:53 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/datafiles/2020.10.22-11.54.15/ior-hard/file -O stoneWallingStatusFile=./results/2020.10.22-11.54.15/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX
+Machine             : Linux arm
+TestID              : 0
+StartTime           : Thu Oct 22 12:04:53 2020
+Path                : /tmp/datafiles/2020.10.22-11.54.15/ior-hard/file
+FS                  : 392.8 GiB   Used FS: 30.2%   Inodes: 25.0 Mi   Used Inodes: 54.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/datafiles/2020.10.22-11.54.15/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1
+tasks               : 16
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 6.84 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 166506 max: 170411 -- min data: 7.3 GiB mean data: 7.4 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 7521280000000
+WARNING: Stat() of aggregate file size      = 128170884608
+WARNING: Using actual aggregate bytes moved = 128170884608
+WARNING: Maybe caused by deadlineForStonewalling
+write     370.07     8255       330.29      45.91      45.91      0.000102   330.29     0.000489   330.29     0   

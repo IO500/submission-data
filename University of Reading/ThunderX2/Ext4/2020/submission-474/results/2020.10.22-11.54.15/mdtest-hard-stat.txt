@@ -1,0 +1,32 @@
+-- started at 10/22/2020 12:27:10 --
+
+mdtest-3.4.0+dev was launched with 16 total task(s) on 1 node(s)
+Command line used: ./mdtest '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-N' '1' '-F' '-d' '/tmp/datafiles/2020.10.22-11.54.15/mdtest-hard' '-x' './results/2020.10.22-11.54.15/mdtest-hard.stonewall' '-T' '-a' 'POSIX'
+Path: /tmp/datafiles/2020.10.22-11.54.15
+FS: 392.8 GiB   Used FS: 66.6%   Inodes: 25.0 Mi   Used Inodes: 78.1%
+
+Nodemap: 1111111111111111
+V-0: Rank   0 Line  2216 Shifting ranks by 1 for each phase.
+16 tasks, 16000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :     409024.181     409023.989     409024.099          0.078
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :         14.908         14.908         14.908          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 10/22/2020 12:27:25 --
+

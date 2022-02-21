@@ -1,0 +1,107 @@
+version         = io500-sc20_v3
+config-hash     = 29E686E7
+result-dir      = ./results/2020.10.22-11.54.15
+; START 2020-10-22 11:54:15
+
+
+[ior-easy-write]
+t_start         = 2020-10-22 11:54:15
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/datafiles/2020.10.22-11.54.15/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.10.22-11.54.15/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX
+throughput-stonewall = 5.64
+score           = 0.355843
+t_delta         = 331.7712
+t_end           = 2020-10-22 11:59:46
+
+[mdtest-easy-write]
+t_start         = 2020-10-22 11:59:46
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /tmp/datafiles/2020.10.22-11.54.15/mdtest-easy -x ./results/2020.10.22-11.54.15/mdtest-easy.stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 47.493454
+score           = 46.925093
+t_delta         = 306.6742
+t_end           = 2020-10-22 12:04:53
+
+[timestamp]
+t_start         = 2020-10-22 12:04:53
+t_delta         = 0.0145
+t_end           = 2020-10-22 12:04:53
+
+[ior-hard-write]
+t_start         = 2020-10-22 12:04:53
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/datafiles/2020.10.22-11.54.15/ior-hard/file -O stoneWallingStatusFile=./results/2020.10.22-11.54.15/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX
+throughput-stonewall = 5.74
+score           = 0.361401
+t_delta         = 330.3497
+t_end           = 2020-10-22 12:10:23
+
+[mdtest-hard-write]
+t_start         = 2020-10-22 12:10:23
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/datafiles/2020.10.22-11.54.15/mdtest-hard -x ./results/2020.10.22-11.54.15/mdtest-hard.stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 20.107292
+score           = 17.424419
+t_delta         = 350.0334
+t_end           = 2020-10-22 12:16:13
+
+[find]
+t_start         = 2020-10-22 12:16:13
+exe             = ./pfind /tmp/datafiles/2020.10.22-11.54.15 -newer ./results/2020.10.22-11.54.15/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 18659
+total-files     = 20485937
+score           = 2800.573635
+t_delta         = 7.3541
+t_end           = 2020-10-22 12:16:21
+
+[ior-easy-read]
+t_start         = 2020-10-22 12:16:21
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/datafiles/2020.10.22-11.54.15/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.10.22-11.54.15/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX
+score           = 0.411325
+t_delta         = 286.9964
+t_end           = 2020-10-22 12:21:08
+
+[mdtest-easy-stat]
+t_start         = 2020-10-22 12:21:08
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /tmp/datafiles/2020.10.22-11.54.15/mdtest-easy -x ./results/2020.10.22-11.54.15/mdtest-easy.stonewall -T -a POSIX
+score           = 468.706946
+t_delta         = 30.7438
+t_end           = 2020-10-22 12:21:39
+
+[ior-hard-read]
+t_start         = 2020-10-22 12:21:39
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/datafiles/2020.10.22-11.54.15/ior-hard/file -O stoneWallingStatusFile=./results/2020.10.22-11.54.15/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a POSIX
+score           = 0.360712
+t_delta         = 331.0892
+t_end           = 2020-10-22 12:27:10
+
+[mdtest-hard-stat]
+t_start         = 2020-10-22 12:27:10
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/datafiles/2020.10.22-11.54.15/mdtest-hard -x ./results/2020.10.22-11.54.15/mdtest-hard.stonewall -T -a POSIX
+score           = 409.024097
+t_delta         = 15.0916
+t_end           = 2020-10-22 12:27:25
+
+[mdtest-easy-delete]
+t_start         = 2020-10-22 12:27:25
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /tmp/datafiles/2020.10.22-11.54.15/mdtest-easy -x ./results/2020.10.22-11.54.15/mdtest-easy.stonewall -r -a POSIX
+score           = 33.706393
+t_delta         = 444.6508
+t_end           = 2020-10-22 12:34:49
+
+[mdtest-hard-read]
+t_start         = 2020-10-22 12:34:49
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/datafiles/2020.10.22-11.54.15/mdtest-hard -x ./results/2020.10.22-11.54.15/mdtest-hard.stonewall -E -X -a POSIX
+score           = 33.657691
+t_delta         = 181.2253
+t_end           = 2020-10-22 12:37:51
+
+[mdtest-hard-delete]
+t_start         = 2020-10-22 12:37:51
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/datafiles/2020.10.22-11.54.15/mdtest-hard -x ./results/2020.10.22-11.54.15/mdtest-hard.stonewall -r -a POSIX
+score           = 28.637841
+t_delta         = 218.7118
+t_end           = 2020-10-22 12:41:29
+
+[SCORE]
+MD              = 104.538123
+BW              = 0.371662
+SCORE           = 6.233207 
+hash            = 5E250653
+; END 2020-10-22 12:41:38

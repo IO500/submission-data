@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jul 13 07:46:27 2020
+Command line        : /work/BMLab/Lustre/io500_isc20/io500-app/bin/ior -w -a POSIX -t 16m --posix.odirect -b 78000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /ai400/datafiles/2020.07.13-07.46.20-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/ai400/datafiles/2020.07.13-07.46.20-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux ec01
+TestID              : 0
+StartTime           : Mon Jul 13 07:46:27 2020
+Path                : /ai400/datafiles/2020.07.13-07.46.20-scr/ior_easy
+FS                  : 47.4 TiB   Used FS: 0.0%   Inodes: 384.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ai400/datafiles/2020.07.13-07.46.20-scr/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 76.17 GiB
+aggregate filesize  : 11.90 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4223 max: 4875 -- min data: 66.0 GiB mean data: 71.1 GiB time: 300.1s
+write     38458      2403.72    0.065876    79872000   16384      0.008881   324.50     0.001336   324.51     0   
+Max Write: 38458.30 MiB/sec (40326.45 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       38458.30   38458.30   38458.30       0.00    2403.64    2403.64    2403.64       0.00  324.50734     300.06      38844.96     0    160  16    1   1     1        1         0    0      1 81788928000 16777216 12480000.0 POSIX      0
+Finished            : Mon Jul 13 07:51:51 2020

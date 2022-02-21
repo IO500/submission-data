@@ -1,0 +1,148 @@
+-- started at 11/08/2018 15:41:15 --
+
+mdtest-1.9.3 was launched with 128 total task(s) on 16 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-F" "-d" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45/mdt_easy" "-n" "160000" "-u" "-L" "-x" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45/mdt_easy-stonewall" "-W" "300"
+Path: /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45
+FS: 144.2 TiB   Used FS: 15.4%   Inodes: 288.0 Mi   Used Inodes: 0.0%
+
+128 tasks, 20480000 files
+stonewall rank 80: 51287 of 69657 
+stonewall rank 48: 51462 of 69657 
+Continue stonewall hit min: 35991 max: 69657 avg: 50748.2 
+stonewall rank 0: 51732 of 69657 
+stonewall rank 32: 51932 of 69657 
+stonewall rank 16: 51335 of 69657 
+stonewall rank 112: 51376 of 69657 
+stonewall rank 96: 51567 of 69657 
+stonewall rank 64: 51749 of 69657 
+stonewall rank 40: 69485 of 69657 
+stonewall rank 120: 68203 of 69657 
+stonewall rank 56: 68221 of 69657 
+stonewall rank 88: 68024 of 69657 
+stonewall rank 24: 68148 of 69657 
+stonewall rank 72: 69549 of 69657 
+stonewall rank 104: 69493 of 69657 
+stonewall rank 36: 46980 of 69657 
+stonewall rank 4: 46678 of 69657 
+stonewall rank 100: 46723 of 69657 
+stonewall rank 68: 46864 of 69657 
+stonewall rank 52: 42550 of 69657 
+stonewall rank 116: 42461 of 69657 
+stonewall rank 20: 42494 of 69657 
+stonewall rank 84: 42260 of 69657 
+stonewall rank 76: 36175 of 69657 
+stonewall rank 12: 36082 of 69657 
+stonewall rank 124: 36039 of 69657 
+stonewall rank 60: 36104 of 69657 
+stonewall rank 108: 36147 of 69657 
+stonewall rank 92: 36098 of 69657 
+stonewall rank 44: 36066 of 69657 
+stonewall rank 28: 35991 of 69657 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      45558.875      45558.875      45558.875          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        104.308        104.308        104.308          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 15:48:45 --
+stonewall rank 2: 68501 of 69657 
+stonewall rank 114: 68544 of 69657 
+stonewall rank 66: 68410 of 69657 
+stonewall rank 82: 68693 of 69657 
+stonewall rank 50: 68661 of 69657 
+stonewall rank 18: 68494 of 69657 
+stonewall rank 34: 68110 of 69657 
+stonewall rank 98: 68221 of 69657 
+stonewall rank 42: 51493 of 69657 
+stonewall rank 102: 41899 of 69657 
+stonewall rank 6: 41935 of 69657 
+stonewall rank 54: 41841 of 69657 
+stonewall rank 22: 41713 of 69657 
+stonewall rank 90: 51026 of 69657 
+stonewall rank 86: 41735 of 69657 
+stonewall rank 122: 51204 of 69657 
+stonewall rank 38: 42019 of 69657 
+stonewall rank 106: 51530 of 69657 
+stonewall rank 118: 41660 of 69657 
+stonewall rank 10: 51355 of 69657 
+stonewall rank 70: 42160 of 69657 
+stonewall rank 26: 51012 of 69657 
+stonewall rank 78: 42349 of 69657 
+stonewall rank 74: 51456 of 69657 
+stonewall rank 58: 51196 of 69657 
+stonewall rank 62: 42090 of 69657 
+stonewall rank 126: 41701 of 69657 
+stonewall rank 46: 42369 of 69657 
+stonewall rank 30: 41729 of 69657 
+stonewall rank 14: 42350 of 69657 
+stonewall rank 94: 41805 of 69657 
+stonewall rank 110: 42418 of 69657 
+stonewall rank 113: 49829 of 69657 
+stonewall rank 81: 49965 of 69657 
+stonewall rank 17: 50052 of 69657 
+stonewall rank 1: 50090 of 69657 
+stonewall rank 49: 49871 of 69657 
+stonewall rank 33: 50181 of 69657 
+stonewall rank 97: 50425 of 69657 
+stonewall rank 65: 50123 of 69657 
+stonewall rank 25: 42039 of 69657 
+stonewall rank 57: 42095 of 69657 
+stonewall rank 53: 51102 of 69657 
+stonewall rank 89: 41914 of 69657 
+stonewall rank 41: 42265 of 69657 
+stonewall rank 117: 51252 of 69657 
+stonewall rank 121: 42347 of 69657 
+stonewall rank 101: 51603 of 69657 
+stonewall rank 105: 42210 of 69657 
+stonewall rank 37: 51499 of 69657 
+stonewall rank 9: 42255 of 69657 
+stonewall rank 21: 51285 of 69657 
+stonewall rank 73: 42011 of 69657 
+stonewall rank 5: 51653 of 69657 
+stonewall rank 69: 51512 of 69657 
+stonewall rank 85: 51143 of 69657 
+stonewall rank 13: 51291 of 69657 
+stonewall rank 61: 49952 of 69657 
+stonewall rank 109: 51261 of 69657 
+stonewall rank 77: 51376 of 69657 
+stonewall rank 45: 51294 of 69657 
+stonewall rank 93: 49864 of 69657 
+stonewall rank 125: 49979 of 69657 
+stonewall rank 29: 50032 of 69657 
+stonewall rank 35: 43756 of 69657 
+stonewall rank 67: 43824 of 69657 
+stonewall rank 51: 43965 of 69657 
+stonewall rank 99: 43647 of 69657 
+stonewall rank 19: 43736 of 69657 
+stonewall rank 115: 43715 of 69657 
+stonewall rank 3: 43722 of 69657 
+stonewall rank 83: 43856 of 69657 
+stonewall rank 75: 50593 of 69657 
+stonewall rank 123: 49819 of 69657 
+stonewall rank 91: 49920 of 69657 
+stonewall rank 43: 50420 of 69657 
+stonewall rank 11: 50722 of 69657 
+stonewall rank 59: 49919 of 69657 
+stonewall rank 27: 49954 of 69657 
+stonewall rank 107: 50634 of 69657 
+stonewall rank 7: 50574 of 69657 
+stonewall rank 31: 67898 of 69657 
+stonewall rank 55: 50312 of 69657 
+stonewall rank 71: 50595 of 69657 
+stonewall rank 103: 50670 of 69657 
+stonewall rank 39: 50827 of 69657 
+stonewall rank 87: 50315 of 69657 
+stonewall rank 119: 50371 of 69657 
+stonewall rank 23: 50474 of 69657 
+stonewall rank 111: 68916 of 69657 
+stonewall rank 63: 67947 of 69657 
+stonewall rank 127: 67925 of 69657 
+stonewall rank 95: 67824 of 69657 
+stonewall rank 79: 68909 of 69657 
+stonewall rank 47: 68903 of 69657 
+stonewall rank 15: 68724 of 69657 

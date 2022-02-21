@@ -1,0 +1,148 @@
+-- started at 11/08/2018 16:05:22 --
+
+mdtest-1.9.3 was launched with 128 total task(s) on 16 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45/mdt_hard" "-n" "62500" "-x" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45/mdt_hard-stonewall" "-W" "300"
+Path: /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45
+FS: 144.2 TiB   Used FS: 15.5%   Inodes: 290.9 Mi   Used Inodes: 2.9%
+
+128 tasks, 8000000 files
+stonewall rank 120: 36380 of 37186 
+Continue stonewall hit min: 34433 max: 37186 avg: 35842.4 
+stonewall rank 0: 36679 of 37186 
+stonewall rank 32: 36542 of 37186 
+stonewall rank 96: 36605 of 37186 
+stonewall rank 48: 36627 of 37186 
+stonewall rank 16: 36436 of 37186 
+stonewall rank 80: 36406 of 37186 
+stonewall rank 64: 36900 of 37186 
+stonewall rank 112: 36548 of 37186 
+stonewall rank 12: 35102 of 37186 
+stonewall rank 56: 36467 of 37186 
+stonewall rank 44: 35081 of 37186 
+stonewall rank 72: 36596 of 37186 
+stonewall rank 4: 36650 of 37186 
+stonewall rank 24: 36556 of 37186 
+stonewall rank 36: 36415 of 37186 
+stonewall rank 68: 36438 of 37186 
+stonewall rank 104: 36383 of 37186 
+stonewall rank 84: 35799 of 37186 
+stonewall rank 88: 36396 of 37186 
+stonewall rank 8: 36270 of 37186 
+stonewall rank 116: 35958 of 37186 
+stonewall rank 40: 36531 of 37186 
+stonewall rank 20: 35777 of 37186 
+stonewall rank 52: 35840 of 37186 
+stonewall rank 100: 36482 of 37186 
+stonewall rank 28: 35272 of 37186 
+stonewall rank 60: 35179 of 37186 
+stonewall rank 76: 35003 of 37186 
+stonewall rank 92: 35294 of 37186 
+stonewall rank 124: 35285 of 37186 
+stonewall rank 108: 35059 of 37186 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      25430.040      25430.040      25430.040          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :       1437.122       1437.122       1437.122          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 16:10:36 --
+stonewall rank 82: 36693 of 37186 
+stonewall rank 18: 36727 of 37186 
+stonewall rank 2: 36616 of 37186 
+stonewall rank 66: 36524 of 37186 
+stonewall rank 114: 36601 of 37186 
+stonewall rank 34: 36640 of 37186 
+stonewall rank 50: 36653 of 37186 
+stonewall rank 98: 36666 of 37186 
+stonewall rank 42: 36496 of 37186 
+stonewall rank 106: 36214 of 37186 
+stonewall rank 90: 36276 of 37186 
+stonewall rank 94: 34911 of 37186 
+stonewall rank 26: 36248 of 37186 
+stonewall rank 10: 36468 of 37186 
+stonewall rank 6: 35177 of 37186 
+stonewall rank 122: 36227 of 37186 
+stonewall rank 102: 35198 of 37186 
+stonewall rank 74: 36267 of 37186 
+stonewall rank 70: 35271 of 37186 
+stonewall rank 58: 36253 of 37186 
+stonewall rank 38: 35175 of 37186 
+stonewall rank 118: 34907 of 37186 
+stonewall rank 22: 35195 of 37186 
+stonewall rank 86: 34916 of 37186 
+stonewall rank 54: 35258 of 37186 
+stonewall rank 126: 34756 of 37186 
+stonewall rank 46: 34874 of 37186 
+stonewall rank 110: 34883 of 37186 
+stonewall rank 78: 34819 of 37186 
+stonewall rank 14: 34782 of 37186 
+stonewall rank 30: 34910 of 37186 
+stonewall rank 62: 34811 of 37186 
+stonewall rank 81: 35173 of 37186 
+stonewall rank 49: 35291 of 37186 
+stonewall rank 33: 35203 of 37186 
+stonewall rank 1: 35232 of 37186 
+stonewall rank 97: 35103 of 37186 
+stonewall rank 17: 35319 of 37186 
+stonewall rank 65: 35083 of 37186 
+stonewall rank 113: 35326 of 37186 
+stonewall rank 25: 34694 of 37186 
+stonewall rank 37: 37077 of 37186 
+stonewall rank 9: 34553 of 37186 
+stonewall rank 5: 37107 of 37186 
+stonewall rank 89: 34554 of 37186 
+stonewall rank 85: 36972 of 37186 
+stonewall rank 41: 34733 of 37186 
+stonewall rank 117: 36986 of 37186 
+stonewall rank 73: 34633 of 37186 
+stonewall rank 69: 37174 of 37186 
+stonewall rank 57: 34574 of 37186 
+stonewall rank 53: 37080 of 37186 
+stonewall rank 105: 34553 of 37186 
+stonewall rank 121: 34676 of 37186 
+stonewall rank 21: 37054 of 37186 
+stonewall rank 125: 37009 of 37186 
+stonewall rank 29: 36833 of 37186 
+stonewall rank 109: 36870 of 37186 
+stonewall rank 13: 36924 of 37186 
+stonewall rank 61: 37043 of 37186 
+stonewall rank 77: 36805 of 37186 
+stonewall rank 45: 36774 of 37186 
+stonewall rank 93: 36891 of 37186 
+stonewall rank 3: 37174 of 37186 
+stonewall rank 99: 36994 of 37186 
+stonewall rank 83: 36992 of 37186 
+stonewall rank 115: 37082 of 37186 
+stonewall rank 51: 36959 of 37186 
+stonewall rank 19: 37087 of 37186 
+stonewall rank 35: 37176 of 37186 
+stonewall rank 67: 37128 of 37186 
+stonewall rank 107: 34609 of 37186 
+stonewall rank 91: 34675 of 37186 
+stonewall rank 79: 35991 of 37186 
+stonewall rank 59: 34664 of 37186 
+stonewall rank 63: 35911 of 37186 
+stonewall rank 43: 34433 of 37186 
+stonewall rank 111: 35882 of 37186 
+stonewall rank 75: 34594 of 37186 
+stonewall rank 11: 34516 of 37186 
+stonewall rank 23: 34633 of 37186 
+stonewall rank 27: 34791 of 37186 
+stonewall rank 103: 34854 of 37186 
+stonewall rank 123: 34755 of 37186 
+stonewall rank 39: 34887 of 37186 
+stonewall rank 7: 34829 of 37186 
+stonewall rank 119: 34686 of 37186 
+stonewall rank 87: 34551 of 37186 
+stonewall rank 55: 34719 of 37186 
+stonewall rank 95: 35962 of 37186 
+stonewall rank 71: 34949 of 37186 
+stonewall rank 31: 35866 of 37186 
+stonewall rank 127: 35885 of 37186 
+stonewall rank 47: 35865 of 37186 
+stonewall rank 15: 35880 of 37186 

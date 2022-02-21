@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 16:15:31 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 4m -b 38400m -F -a MPIIO -o /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45/ior_easy/stonewall
+Machine             : Linux pvfs017-ib0.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Nov  8 16:15:31 2018
+Path                : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45/ior_easy
+FS                  : 144.2 TiB   Used FS: 15.5%   Inodes: 290.9 Mi   Used Inodes: 4.5%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-15.34.45/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 128
+clients per node    : 8
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 37.50 GiB
+aggregate filesize  : 4.69 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      7247       39321600   4096       0.008766   678.24     0.056545   678.26     0   
+Max Read:  7246.83 MiB/sec (7598.85 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         7246.83    7246.83    7246.83       0.00    1811.71    1811.71    1811.71       0.00  678.25532     0    128   8    1   1     1        1         0    0      1 40265318400  4194304 4915200.0 MPIIO      0
+Finished            : Thu Nov  8 16:26:49 2018

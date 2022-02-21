@@ -1,0 +1,40 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov  3 21:50:41 2019
+Command line        : /io500/io500-sc19/bin/ior -r -R -s 1900000 -a POSIX --posix.odirect -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /io500/io500-sc19/datafiles/io500.2019.11.03-20.41.01/ior_hard/IOR_file -O stoneWallingStatusFile=/io500/io500-sc19/datafiles/io500.2019.11.03-20.41.01/ior_hard/stonewall
+Machine             : Linux e11u05.int.janelia.org
+TestID              : 0
+StartTime           : Sun Nov  3 21:50:41 2019
+Path                : /io500/io500-sc19/datafiles/io500.2019.11.03-20.41.01/ior_hard
+FS                  : 100.0 TiB   Used FS: 41.4%   Inodes: 858.3 Mi   Used Inodes: 24.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /io500/io500-sc19/datafiles/io500.2019.11.03-20.41.01/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1900000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 760
+clients per node    : 76
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 61.74 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+WARNING: Expected aggregate file size       = 67879552000000.
+WARNING: Stat() of aggregate file size      = 5154594548480.
+WARNING: Using actual aggregate bytes moved = 5154594548480.
+read      25792      45.91      45.91      0.004801   190.59     0.001465   190.60     0   
+Max Read:  25791.80 MiB/sec (27044.66 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        25791.80   25791.80   25791.80       0.00  575320.34  575320.34  575320.34       0.00  190.59566         NA            NA     0    760  76    1   0     1        1         0    0 1900000    47008    47008 4915804.5 POSIX      0
+Finished            : Sun Nov  3 21:53:52 2019

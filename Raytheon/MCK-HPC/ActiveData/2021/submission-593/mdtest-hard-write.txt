@@ -1,0 +1,33 @@
+-- started at 10/20/2021 13:58:55 --
+
+mdtest-3.4.0+dev was launched with 360 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=1631665872' '-N' '1' '-F' '-d' './datafiles/2021.10.20-13.33.58/mdtest-hard' '-x' './results/2021.10.20-13.33.58/mdtest-hard.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=./results/2021.10.20-13.33.58/mdtest-hard-write.csv' '-a' 'POSIX'
+Path                : ./datafiles/2021.10.20-13.33.58/mdtest-hard
+FS                  : 210.8 TiB   Used FS: 21.7%   Inodes: 4854.3 Mi   Used Inodes: 18.7%
+Nodemap: 111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2469 Shifting ranks by 36 for each phase.
+360 tasks, 360000000 files
+Continue stonewall hit min: 13624 max: 13788 avg: 13709.1 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation               13302.151      13302.151      13302.151          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                 869.646        869.646        869.646          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 373.149        373.149        373.149          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.001          0.001          0.001          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 10/20/2021 14:05:09 --
+

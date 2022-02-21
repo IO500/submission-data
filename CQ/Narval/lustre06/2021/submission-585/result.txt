@@ -1,0 +1,110 @@
+[run]
+version         = io500-sc21
+config-hash     = 53BE4095
+result-dir      = ./results/2021.10.20-18.11.15
+mode            = standard
+; START 2021-10-20 18:11:23
+
+
+[ior-easy-write]
+t_start         = 2021-10-20 18:11:23
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 745497211 -k -e -o /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.10.20-18.11.15/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.20-18.11.15/ior-easy-write.csv
+throughput-stonewall = 154.18
+score           = 126.999381
+t_delta         = 962.2495
+t_end           = 2021-10-20 18:27:25
+
+[mdtest-easy-write]
+t_start         = 2021-10-20 18:27:27
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1631675005 -N 1 -d /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/mdtest-easy -x ./results/2021.10.20-18.11.15/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2021.10.20-18.11.15/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 79.573420
+score           = 79.439712
+t_delta         = 316.8966
+t_end           = 2021-10-20 18:32:44
+
+[timestamp]
+t_start         = 2021-10-20 18:32:44
+t_delta         = 0.0004
+t_end           = 2021-10-20 18:32:44
+
+[ior-hard-write]
+t_start         = 2021-10-20 18:32:44
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=745507899 -k -e -o /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/ior-hard/file -O stoneWallingStatusFile=./results/2021.10.20-18.11.15/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.20-18.11.15/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 6.57
+score           = 5.576552
+t_delta         = 1569.4564
+t_end           = 2021-10-20 18:58:53
+
+[mdtest-hard-write]
+t_start         = 2021-10-20 18:58:53
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1631685693 -N 1 -F -d /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/mdtest-hard -x ./results/2021.10.20-18.11.15/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2021.10.20-18.11.15/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 48.426744
+score           = 48.307481
+t_delta         = 319.9488
+t_end           = 2021-10-20 19:04:13
+
+[find]
+t_start         = 2021-10-20 19:04:13
+exe             = ./pfind /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15 -newer ./results/2021.10.20-18.11.15/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 640
+found           = 574224
+total-files     = 40480001
+score           = 955.916368
+t_delta         = 42.3676
+t_end           = 2021-10-20 19:04:56
+
+[ior-easy-read]
+t_start         = 2021-10-20 19:04:56
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 745497211 -k -e -o /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.10.20-18.11.15/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.20-18.11.15/ior-easy-read.csv
+score           = 183.195197
+t_delta         = 664.4435
+t_end           = 2021-10-20 19:16:00
+
+[mdtest-easy-stat]
+t_start         = 2021-10-20 19:16:00
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1631675005 -N 1 -d /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/mdtest-easy -x ./results/2021.10.20-18.11.15/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2021.10.20-18.11.15/mdtest-easy-stat.csv -a POSIX
+score           = 262.985987
+t_delta         = 96.5337
+t_end           = 2021-10-20 19:17:37
+
+[ior-hard-read]
+t_start         = 2021-10-20 19:17:37
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=745507899 -k -e -o /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/ior-hard/file -O stoneWallingStatusFile=./results/2021.10.20-18.11.15/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.20-18.11.15/ior-hard-read.csv
+score           = 8.854035
+t_delta         = 988.4755
+t_end           = 2021-10-20 19:34:05
+
+[mdtest-hard-stat]
+t_start         = 2021-10-20 19:34:05
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1631685693 -N 1 -F -d /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/mdtest-hard -x ./results/2021.10.20-18.11.15/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2021.10.20-18.11.15/mdtest-hard-stat.csv -a POSIX
+score           = 258.354255
+t_delta         = 60.7497
+t_end           = 2021-10-20 19:35:06
+
+[mdtest-easy-delete]
+t_start         = 2021-10-20 19:35:06
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1631675005 -N 1 -d /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/mdtest-easy -x ./results/2021.10.20-18.11.15/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2021.10.20-18.11.15/mdtest-easy-delete.csv -a POSIX
+score           = 90.021943
+t_delta         = 279.8327
+t_end           = 2021-10-20 19:39:46
+
+[mdtest-hard-read]
+t_start         = 2021-10-20 19:39:46
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1631685693 -N 1 -F -d /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/mdtest-hard -x ./results/2021.10.20-18.11.15/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2021.10.20-18.11.15/mdtest-hard-read.csv -a POSIX
+score           = 109.990988
+t_delta         = 141.0355
+t_end           = 2021-10-20 19:42:07
+
+[mdtest-hard-delete]
+t_start         = 2021-10-20 19:42:07
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1631685693 -N 1 -F -d /lustre06/cq_staff/tmp/bench/2021.10.20-18.11.15/mdtest-hard -x ./results/2021.10.20-18.11.15/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2021.10.20-18.11.15/mdtest-hard-delete.csv -a POSIX
+score           = 69.006651
+t_delta         = 224.9742
+t_end           = 2021-10-20 19:45:52
+
+[SCORE]
+MD              = 142.528619
+BW              = 32.738265
+SCORE           = 68.309148
+hash            = B89069EB
+; END 2021-10-20 19:45:52

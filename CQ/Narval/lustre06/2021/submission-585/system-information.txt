@@ -1,0 +1,21 @@
+{"DATA":{"type":"Site","att":{"abbreviation":"CQ","institution":"Calcul
+Quebec","location":"Quebec","webpage":"https://calculquebec.ca/","nationality":"CAN","energy
+costs per
+kWh":["0.06","$"]},"childs":[{"type":"IO500","att":{"include_in_io500_ranked_list":"","include_in_10node_ranked_list":""},"childs":[{"type":"information","att":{"id":"New
+submission; we will assign this value","list_id":"New submission; we will
+assign this
+value","submission_date":"today"},"childs":[]},{"type":"IOR","att":{},"childs":[]},{"type":"MDTest","att":{},"childs":[]},{"type":"find","att":{},"childs":[]}]},{"type":"Supercomputer","att":{"name":"Narval","integrator":"Dell","installation
+date":"2021-10-01","total nodes":"0","total
+cores":"0"},"childs":[{"type":"Nodes","att":{"name":"nc","vendor":"Dell","count":"1109","distribution":"Rocky
+8","Cooling":""},"childs":[{"type":"Processor","att":{"sockets":"2","architecture":"","vendor":"","microarchitecture":""},"childs":[]},{"type":"Interconnect","att":{"type":"Infiniband","speed":"100
+GBit","features":"RDMA","vendor":"Mellanox"},"childs":[]},{"type":"Memory","att":{"type":"DDR4","net
+capacity":["256","GB"],"protection":""},"childs":[]}]},{"type":"Nodes","att":{"name":"nl","vendor":"Dell","count":"33","distribution":"Rocky
+8","Cooling":""},"childs":[{"type":"Processor","att":{"sockets":"2","architecture":"","vendor":"","microarchitecture":""},"childs":[]},{"type":"Memory","att":{"type":"DDR4","net
+capacity":["2","TB"],"protection":""},"childs":[]}]},{"type":"Nodes","att":{"name":"ng","vendor":"Dell","count":"158","distribution":"Rocky
+8","Cooling":""},"childs":[{"type":"Processor","att":{"sockets":"2","architecture":"","vendor":"","microarchitecture":""},"childs":[]},{"type":"Accelerator","att":{"type":"GPU","count":"4","vendor":"Nvidia","bus":""},"childs":[]},{"type":"Memory","att":{"type":"DDR4","net
+capacity":["512","GB"],"protection":""},"childs":[]}]}]},{"type":"StorageSystem","att":{"name":"lustre06","usage":"production","vendor":"Dell","type":"file
+system","software":"Lustre","version":"2.14.0","installation
+date":"2021-10-01","net
+capacity":["20","PiB"]},"childs":[{"type":"Lustre","att":{"version":"2.14.0","backend":"ZFS","features":"DNE1;DNE2"},"childs":[{"type":"OSS","att":{"name":"lustre06-oss","vendor":"Dell","count":"22","distribution":"","Cooling":""},"childs":[{"type":"Processor","att":{"sockets":"2","architecture":"","vendor":"","microarchitecture":""},"childs":[]},{"type":"Memory","att":{"type":"","net
+capacity":["196","GB"],"protection":""},"childs":[]}]},{"type":"MDS","att":{"name":"lustre06-mds","vendor":"Dell","count":"4","distribution":"","Cooling":""},"childs":[{"type":"Processor","att":{"sockets":"2","architecture":"","vendor":"","microarchitecture":""},"childs":[]},{"type":"Memory","att":{"type":"","net
+capacity":["196","GB"],"protection":""},"childs":[]}]}]}]}]},"GRAPH":{"Network":{"pos":{"Nodes:nc":[0,-0.4375],"Nodes:nl":[0,-0.4375],"Nodes:ng":[0,-0.4375]},"edges":[]},"Building":{"pos":{"Supercomputer:Narval":[0,-0.4375],"StorageSystem:lustre06":[0,-0.4375]},"edges":[]}}}

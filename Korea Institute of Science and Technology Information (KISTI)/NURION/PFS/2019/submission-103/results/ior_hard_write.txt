@@ -1,0 +1,38 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 15 05:53:23 2018
+Command line        : /home01/ddnadm/acceptance/bin/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 1500 -a MPIIO -o /scratch/ddnadm/io500_test/datafil/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch/ddnadm/io500_test/datafil/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+Machine             : Linux node0025
+TestID              : 0
+StartTime           : Mon Oct 15 05:53:23 2018
+Path                : /scratch/ddnadm/io500_test/datafil/ior_hard
+FS                  : 18679.1 TiB   Used FS: 10.0%   Inodes: 3993.6 Mi   Used Inodes: 1.6%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /scratch/ddnadm/io500_test/datafil/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1500
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 4096
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 268.98 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1500 max: 1500 -- min data: 0.1 GiB mean data: 0.1 GiB time: 368.8s
+write     744.46     45.91      45.91      1.13       368.84     0.015969   369.98     0   
+Max Write: 744.46 MiB/sec (780.63 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         744.46     744.46     744.46       0.00   16606.23   16606.23   16606.23       0.00  369.98160     0   4096   2    1   0     1        1         0    0   1500    47008    47008  275437.5 MPIIO      0
+Finished            : Mon Oct 15 05:59:34 2018

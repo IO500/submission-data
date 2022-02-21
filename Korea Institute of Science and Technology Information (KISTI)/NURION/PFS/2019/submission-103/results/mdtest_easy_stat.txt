@@ -1,0 +1,21 @@
+-- started at 10/15/2018 06:12:49 --
+
+mdtest-1.9.3 was launched with 4096 total task(s) on 2048 node(s)
+Command line used: /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest "-T" "-F" "-d" "/scratch/ddnadm/io500_test/datafil/mdt_easy" "-n" "3300" "-u" "-L" "-x" "/scratch/ddnadm/io500_test/datafil/mdt_easy-stonewall"
+Path: /scratch/ddnadm/io500_test/datafil
+FS: 18679.1 TiB   Used FS: 10.0%   Inodes: 3993.6 Mi   Used Inodes: 1.9%
+
+4096 tasks, 13516800 files
+WARNING: could not read stonewall status file
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :     248516.774     248516.774     248516.774          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 10/15/2018 06:13:43 --

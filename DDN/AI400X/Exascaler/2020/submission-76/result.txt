@@ -1,0 +1,107 @@
+version         = io500-isc20_v4-2-g20efd247106c
+config-hash     = 650D0B6E
+result-dir      = ./results/2020.07.13-07.46.20-app
+; START 2020-07-13 08:35:33
+
+
+[ior-easy-write]
+t_start         = 2020-07-13 08:35:33
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /ai400/datafiles/2020.07.13-07.46.20-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/ai400/datafiles/2020.07.13-07.46.20-app/ior-easy/stonewall -t 16m -b 78000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect
+throughput-stonewall = 5420.86
+score           = 36.721661
+t_delta         = 331.9086
+t_end           = 2020-07-13 08:41:04
+
+[mdtest-easy-write]
+t_start         = 2020-07-13 08:41:04
+exe             = ./mdtest -n 350000 -u -L -F -P -N 1 -d /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-easy -x /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 165.387235
+score           = 150.395911
+t_delta         = 372.6528
+t_end           = 2020-07-13 08:47:17
+
+[timestamp]
+t_start         = 2020-07-13 08:47:17
+t_delta         = 0.0043
+t_end           = 2020-07-13 08:47:17
+
+[ior-hard-write]
+t_start         = 2020-07-13 08:47:17
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /ai400/datafiles/2020.07.13-07.46.20-app/ior-hard/file -O stoneWallingStatusFile=/ai400/datafiles/2020.07.13-07.46.20-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 150000 -w -D 300 -a POSIX
+throughput-stonewall = 314.32
+score           = 2.567642
+t_delta         = 409.2944
+t_end           = 2020-07-13 08:54:06
+
+[mdtest-hard-write]
+t_start         = 2020-07-13 08:54:06
+exe             = ./mdtest -n 190000 -t -w 3901 -e 3901 -P -N 1 -F -d /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-hard -x /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 92.926290
+score           = 87.249946
+t_delta         = 348.8653
+t_end           = 2020-07-13 08:59:55
+
+[find]
+t_start         = 2020-07-13 08:59:55
+exe             = ./pfind /ai400/datafiles/2020.07.13-07.46.20-app -newer /ai400/datafiles/2020.07.13-07.46.20-app/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 1231609
+total-files     = 86400166
+score           = 1747.945166
+t_delta         = 49.4333
+t_end           = 2020-07-13 09:00:45
+
+[ior-easy-read]
+t_start         = 2020-07-13 09:00:45
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /ai400/datafiles/2020.07.13-07.46.20-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/ai400/datafiles/2020.07.13-07.46.20-app/ior-easy/stonewall -t 16m -b 78000m -F -r -R -a POSIX --posix.odirect
+score           = 45.502510
+t_delta         = 267.8895
+t_end           = 2020-07-13 09:05:13
+
+[mdtest-easy-stat]
+t_start         = 2020-07-13 09:05:13
+exe             = ./mdtest -n 350000 -u -L -F -P -N 1 -d /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-easy -x /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-easy-stonewall -T -a POSIX
+score           = 451.928703
+t_delta         = 123.9182
+t_end           = 2020-07-13 09:07:17
+
+[ior-hard-read]
+t_start         = 2020-07-13 09:07:17
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /ai400/datafiles/2020.07.13-07.46.20-app/ior-hard/file -O stoneWallingStatusFile=/ai400/datafiles/2020.07.13-07.46.20-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 150000 -r -R -a POSIX
+score           = 23.344818
+t_delta         = 45.0999
+t_end           = 2020-07-13 09:08:02
+
+[mdtest-hard-stat]
+t_start         = 2020-07-13 09:08:02
+exe             = ./mdtest -n 190000 -t -w 3901 -e 3901 -P -N 1 -F -d /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-hard -x /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-hard-stonewall -T -a POSIX
+score           = 457.296293
+t_delta         = 66.5060
+t_end           = 2020-07-13 09:09:08
+
+[mdtest-easy-delete]
+t_start         = 2020-07-13 09:09:08
+exe             = ./mdtest -n 350000 -u -L -F -P -N 1 -d /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-easy -x /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-easy-stonewall -r -a POSIX
+score           = 140.698782
+t_delta         = 398.2803
+t_end           = 2020-07-13 09:15:46
+
+[mdtest-hard-read]
+t_start         = 2020-07-13 09:15:46
+exe             = ./mdtest -n 190000 -t -w 3901 -e 3901 -P -N 1 -F -d /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-hard -x /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-hard-stonewall -E -X -a POSIX
+score           = 155.174152
+t_delta         = 195.9149
+t_end           = 2020-07-13 09:19:02
+
+[mdtest-hard-delete]
+t_start         = 2020-07-13 09:19:02
+exe             = ./mdtest -n 190000 -t -w 3901 -e 3901 -P -N 1 -F -d /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-hard -x /ai400/datafiles/2020.07.13-07.46.20-app/mdtest-hard-stonewall -r -a POSIX
+score           = 73.091411
+t_delta         = 417.3655
+t_end           = 2020-07-13 09:26:00
+
+[SCORE]
+MD              = 229.005854
+BW              = 17.789784
+SCORE           = 63.827616 
+hash            = 7F913063
+; END 2020-07-13 09:26:00

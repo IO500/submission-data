@@ -1,0 +1,36 @@
+-- started at 07/13/2020 08:41:04 --
+
+mdtest-3.3.0+dev was launched with 160 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '350000' '-u' '-L' '-F' '-P' '-N' '1' '-d' '/ai400/datafiles/2020.07.13-07.46.20-app/mdtest-easy' '-x' '/ai400/datafiles/2020.07.13-07.46.20-app/mdtest-easy-stonewall' '-C' '-Y' '-W' '300' '-a' 'POSIX'
+Path: /ai400/datafiles/2020.07.13-07.46.20-app
+FS: 47.4 TiB   Used FS: 52.3%   Inodes: 384.0 Mi   Used Inodes: 0.0%
+
+Nodemap: 1111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 16 for each phase.
+160 tasks, 56000000 files
+Continue stonewall hit min: 291269 max: 350000 avg: 309809.6 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :     150395.944     150395.898     150395.917          0.012
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA     165387.235             NA
+   Tree creation             :          3.563          3.563          3.563          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :        372.351        372.350        372.351          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA        299.718             NA
+   Tree creation             :          0.281          0.281          0.281          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 07/13/2020 08:47:17 --
+

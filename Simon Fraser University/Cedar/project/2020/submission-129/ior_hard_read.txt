@@ -1,0 +1,38 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Mar 22 22:09:49 2020
+Command line        : /home/liu/project/io500/io-500-dev-master/bin/ior -r -R -s 18432 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /home/liu/project/io500/io-500-dev-master/datafiles/io500.2020.03.22-21.26.02/ior_hard/IOR_file -O stoneWallingStatusFile=/home/liu/project/io500/io-500-dev-master/datafiles/io500.2020.03.22-21.26.02/ior_hard/stonewall
+Machine             : Linux cdr2.int.cedar.computecanada.ca
+TestID              : 0
+StartTime           : Sun Mar 22 22:09:49 2020
+Path                : /project/6001493/io500/io-500-dev-master/datafiles/io500.2020.03.22-21.26.02/ior_hard
+FS                  : 12510.2 TiB   Used FS: 71.5%   Inodes: 1760.0 Mi   Used Inodes: 37.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /home/liu/project/io500/io-500-dev-master/datafiles/io500.2020.03.22-21.26.02/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 18432
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 288
+tasks               : 288
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 232.40 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      5379       120131     44.18       45.91      45.91      0.042956   44.19      0.014756   44.25      0   
+Max Read:  5378.54 MiB/sec (5639.80 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         5378.54    5378.54    5378.54       0.00  119975.42  119975.42  119975.42       0.00   44.24586         NA            NA     0    288   1    1   0     1        1         0    0  18432    47008    47008  237978.0 POSIX      0
+Finished            : Sun Mar 22 22:10:33 2020

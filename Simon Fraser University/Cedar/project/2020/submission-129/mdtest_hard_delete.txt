@@ -1,0 +1,32 @@
+-- started at 03/22/2020 22:20:30 --
+
+mdtest-3.3.0+dev was launched with 288 total task(s) on 288 node(s)
+Command line used: /home/liu/project/io500/io-500-dev-master/bin/mdtest '-r' '-t' '-F' '-P' '-w' '3901' '-e' '3901' '-d' '/home/liu/project/io500/io-500-dev-master/datafiles/io500.2020.03.22-21.26.02/mdt_hard' '-n' '64000' '-x' '/home/liu/project/io500/io-500-dev-master/datafiles/io500.2020.03.22-21.26.02/mdt_hard-stonewall' '-a' 'POSIX' '-N' '1'
+Path: /project/6001493/io500/io-500-dev-master/datafiles/io500.2020.03.22-21.26.02
+FS: 12510.2 TiB   Used FS: 71.5%   Inodes: 1760.0 Mi   Used Inodes: 36.6%
+
+Nodemap: 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2137 Shifting ranks by 1 for each phase.
+288 tasks, 18432000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :      29415.483      29413.502      29414.657          0.465
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          5.326          5.326          5.326          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        191.775        191.762        191.767          0.003
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.188          0.188          0.188          0.000
+-- finished at 03/22/2020 22:23:42 --
+

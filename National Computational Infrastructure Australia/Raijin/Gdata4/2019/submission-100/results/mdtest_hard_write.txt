@@ -1,0 +1,20 @@
+-- started at 06/07/2019 10:15:39 --
+
+mdtest-1.9.3 was launched with 180 total task(s) on 10 node(s)
+Command line used: /g/data4/io500/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/g/data4/io500/datafiles/mdt_hard" "-n" "92256" "-x" "/g/data4/io500/datafiles/mdt_hard-stonewall" "-W" "0"
+Path: /g/data4/io500/datafiles
+FS: 15260.4 TiB   Used FS: 32.0%   Inodes: 4750.9 Mi   Used Inodes: 1.8%
+
+180 tasks, 16606080 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      42371.480      42371.417      42371.444          0.019
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        859.754        859.754        859.754          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 06/07/2019 10:22:11 --

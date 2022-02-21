@@ -1,0 +1,38 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jun  7 09:57:19 2019
+Command line        : /g/data4/io500/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 131072m -F -E -o /g/data4/io500/datafiles/ior_easy/ior_file_easy -O stoneWallingStatusFile=/g/data4/io500/datafiles/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0
+Machine             : Linux g4-lnet01
+TestID              : 0
+StartTime           : Fri Jun  7 09:57:19 2019
+Path                : /g/data4/io500/datafiles/ior_easy
+FS                  : 15260.4 TiB   Used FS: 31.8%   Inodes: 4750.9 Mi   Used Inodes: 0.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /g/data4/io500/datafiles/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 180
+clients per node    : 18
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 128 GiB
+aggregate filesize  : 22.50 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 65536 max: 65536 -- min data: 128.0 GiB mean data: 128.0 GiB time: 368.5s
+write     63952      134217728  2048.00    0.003494   368.91     0.001652   368.92     0   
+Max Write: 63952.19 MiB/sec (67058.73 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       63952.19   63952.19   63952.19       0.00   31976.09   31976.09   31976.09       0.00  368.91560     0    180  18    1   1     1        1         0    0      1 137438953472  2097152 23592960.0 POSIX      0
+Finished            : Fri Jun  7 10:03:28 2019

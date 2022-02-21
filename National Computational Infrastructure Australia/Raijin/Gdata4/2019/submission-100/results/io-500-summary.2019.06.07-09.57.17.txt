@@ -1,0 +1,137 @@
+System:  g4-lnet01
+filesystem_utilization=10.141.1.41@o2ib4:10.141.1.42@o2ib4:/gdata4 16385738775840 5210751616528 10348777619492  34% /g/data4
+date=2019.06.07-09.57.17
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 0 -r /g/data4/io500/io-500-dev/results/pfind_results'
+io500_find_cmd=/g/data4/io500/io-500-dev/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=HDD
+io500_info_filesystem=Lustre
+io500_info_filesystem_vendor='Fujitsu / NetAPP'
+io500_info_filesystem_version=2.10.7
+io500_info_institute_name='NCI Australia'
+io500_info_metadata_storage_type=SSD
+io500_info_num_client_nodes=10
+io500_info_num_data_server_nodes=12
+io500_info_num_data_storage_devices=1800
+io500_info_num_metadata_server_nodes=2
+io500_info_num_metadata_storage_devices=24
+io500_info_procs_per_node=18
+io500_info_storage_age_in_months=0
+io500_info_storage_install_date=03/19
+io500_info_storage_interface='SAS / iSER'
+io500_info_storage_network=InfiniBand
+io500_info_system_name=/g/data4
+io500_info_whatever='OSTs on NetAPP E5670, MDTs on NetAPP EF570'
+io500_ior_cmd=/g/data4/io500/io-500-dev/bin/ior
+io500_ior_easy_params='-t 2048k -b 131072m -F -E'
+io500_ior_easy_size=131072
+io500_ior_hard_other_options=-E
+io500_ior_hard_writes_per_proc=180224
+io500_mdreal_cmd=/g/data4/io500/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/g/data4/io500/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=262144
+io500_mdtest_easy_params='-u -L -d /g/data4/io500/datafiles/mdt_easy/mdt0@/g/data4/io500/datafiles/mdt_easy/mdt1'
+io500_mdtest_hard_files_per_proc=92256
+io500_mdtest_hard_other_options=
+io500_mpiargs='--allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh'
+io500_mpirun=mpirun
+io500_result_dir=/g/data4/io500/io-500-dev/results
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=0
+io500_workdir=/g/data4/io500/datafiles
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 131072m -F -E -o /g/data4/io500/datafiles/ior_easy/ior_file_easy -O stoneWallingStatusFile=/g/data4/io500/datafiles/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 
+[Results] in /g/data4/io500/io-500-dev/results/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               62.453 GB/s : time 368.92 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/mdtest -C -F -d /g/data4/io500/datafiles/mdt_easy -n 262144 -u -L -d /g/data4/io500/datafiles/mdt_easy/mdt0@/g/data4/io500/datafiles/mdt_easy/mdt1 -x /g/data4/io500/datafiles/mdt_easy-stonewall -W 0
+[Results] in /g/data4/io500/io-500-dev/results/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write              136.096 kiops : time 347.83 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 180224 -E -o /g/data4/io500/datafiles/ior_hard/IOR_file -O stoneWallingStatusFile=/g/data4/io500/datafiles/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+[Results] in /g/data4/io500/io-500-dev/results/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                3.741 GB/s : time 379.65 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /g/data4/io500/datafiles/mdt_hard -n 92256 -x /g/data4/io500/datafiles/mdt_hard-stonewall  -W 0
+[Results] in /g/data4/io500/io-500-dev/results/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write               42.372 kiops : time 393.10 seconds
+
+[Starting] find
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/pfind /g/data4/io500/datafiles -newer /g/data4/io500/datafiles/timestampfile -size 3901c -name *01* -s 0 -r /g/data4/io500/io-500-dev/results/pfind_results
+[Results] in /g/data4/io500/io-500-dev/results/find.txt.
+[FIND] MATCHED 581467/63792364 in 67.5367 seconds
+[RESULT] IOPS phase 3                      find              944.550 kiops : time  67.54 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 131072m -F -E -o /g/data4/io500/datafiles/ior_easy/ior_file_easy -O stoneWallingStatusFile=/g/data4/io500/datafiles/ior_easy/stonewall
+[Results] in /g/data4/io500/io-500-dev/results/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              103.689 GB/s : time 222.20 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/mdtest -T -F -d /g/data4/io500/datafiles/mdt_easy -n 262144 -u -L -d /g/data4/io500/datafiles/mdt_easy/mdt0@/g/data4/io500/datafiles/mdt_easy/mdt1 -x /g/data4/io500/datafiles/mdt_easy-stonewall
+[Results] in /g/data4/io500/io-500-dev/results/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              433.134 kiops : time 110.18 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 180224 -E -o /g/data4/io500/datafiles/ior_hard/IOR_file -O stoneWallingStatusFile=/g/data4/io500/datafiles/ior_hard/stonewall
+[Results] in /g/data4/io500/io-500-dev/results/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                1.116 GB/s : time 1272.52 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /g/data4/io500/datafiles/mdt_hard -n 92256 -x /g/data4/io500/datafiles/mdt_hard-stonewall 
+[Results] in /g/data4/io500/io-500-dev/results/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               93.455 kiops : time 178.71 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/mdtest -r -F -d /g/data4/io500/datafiles/mdt_easy -n 262144 -u -L -d /g/data4/io500/datafiles/mdt_easy/mdt0@/g/data4/io500/datafiles/mdt_easy/mdt1 -x /g/data4/io500/datafiles/mdt_easy-stonewall
+[Results] in /g/data4/io500/io-500-dev/results/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               55.780 kiops : time 849.27 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /g/data4/io500/datafiles/mdt_hard -n 92256 -x /g/data4/io500/datafiles/mdt_hard-stonewall 
+[Results] in /g/data4/io500/io-500-dev/results/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read               58.433 kiops : time 285.26 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun --allow-run-as-root -hostfile hosts.10 -map-by ppr:9:socket -rank-by slot -bind-to core -np 180 /g/data4/io500/io-500-dev/set-hca.sh /g/data4/io500/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /g/data4/io500/datafiles/mdt_hard -n 92256 -x /g/data4/io500/datafiles/mdt_hard-stonewall 
+[Results] in /g/data4/io500/io-500-dev/results/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete               30.646 kiops : time 543.55 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /g/data4/io500/datafiles
+[Summary] Results files in /g/data4/io500/io-500-dev/results
+[Summary] Data files in /g/data4/io500/datafiles
+[RESULT] BW   phase 1            ior_easy_write               62.453 GB/s : time 368.92 seconds
+[RESULT] BW   phase 2            ior_hard_write                3.741 GB/s : time 379.65 seconds
+[RESULT] BW   phase 3             ior_easy_read              103.689 GB/s : time 222.20 seconds
+[RESULT] BW   phase 4             ior_hard_read                1.116 GB/s : time 1272.52 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write              136.096 kiops : time 347.83 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write               42.372 kiops : time 393.10 seconds
+[RESULT] IOPS phase 3                      find              944.550 kiops : time  67.54 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              433.134 kiops : time 110.18 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               93.455 kiops : time 178.71 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               55.780 kiops : time 849.27 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               58.433 kiops : time 285.26 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete               30.646 kiops : time 543.55 seconds
+[SCORE] Bandwidth 12.8232 GB/s : IOPS 110.372 kiops : TOTAL 37.6208

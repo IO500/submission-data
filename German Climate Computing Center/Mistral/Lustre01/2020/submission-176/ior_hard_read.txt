@@ -1,0 +1,38 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue May 19 13:53:09 2020
+Command line        : /home/dkrz/k202079/work/io500-app-final/bin/ior -r -R -s 8500 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/lustre01/work/k20200/k202079/io500-data//2020.05.19-12.12.45-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/lustre01/work/k20200/k202079/io500-data//2020.05.19-12.12.45-scr/ior_hard/stonewall
+Machine             : Linux m11404
+TestID              : 0
+StartTime           : Tue May 19 13:53:09 2020
+Path                : /mnt/lustre01/work/k20200/k202079/io500-data/2020.05.19-12.12.45-scr/ior_hard
+FS                  : 20835.6 TiB   Used FS: 79.2%   Inodes: 5974.4 Mi   Used Inodes: 8.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/lustre01/work/k20200/k202079/io500-data//2020.05.19-12.12.45-scr/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 8500
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 120
+clients per node    : 12
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 44.66 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      948.34     21247      47.98       45.91      45.91      0.019128   48.01      0.129157   48.22      0   
+Max Read:  948.34 MiB/sec (994.41 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read          948.34     948.34     948.34       0.00   21154.01   21154.01   21154.01       0.00   48.21780         NA            NA     0    120  12    1   0     1        1         0    0   8500    47008    47008   45726.9 POSIX      0
+Finished            : Tue May 19 13:53:57 2020

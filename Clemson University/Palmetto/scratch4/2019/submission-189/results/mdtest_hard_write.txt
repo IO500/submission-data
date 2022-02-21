@@ -1,0 +1,148 @@
+-- started at 10/25/2018 00:46:17 --
+
+mdtest-1.9.3 was launched with 128 total task(s) on 32 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard" "-n" "18750" "-x" "/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard-stonewall" "-W" "300"
+Path: /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53
+FS: 174.6 TiB   Used FS: 27.8%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+128 tasks, 2400000 files
+stonewall rank 21: 12484 of 12574 
+stonewall rank 95: 12435 of 12574 
+stonewall rank 58: 12434 of 12574 
+stonewall rank 89: 11006 of 12574 
+stonewall rank 77: 11284 of 12574 
+stonewall rank 37: 11302 of 12574 
+stonewall rank 1: 11321 of 12574 
+stonewall rank 7: 11192 of 12574 
+stonewall rank 69: 12466 of 12574 
+stonewall rank 40: 11304 of 12574 
+stonewall rank 111: 11303 of 12574 
+stonewall rank 106: 12484 of 12574 
+stonewall rank 15: 10868 of 12574 
+stonewall rank 38: 11364 of 12574 
+stonewall rank 44: 11326 of 12574 
+stonewall rank 32: 12478 of 12574 
+stonewall rank 114: 11347 of 12574 
+stonewall rank 45: 11346 of 12574 
+stonewall rank 75: 11312 of 12574 
+stonewall rank 81: 11360 of 12574 
+stonewall rank 126: 10954 of 12574 
+stonewall rank 3: 11337 of 12574 
+stonewall rank 119: 11345 of 12574 
+stonewall rank 85: 11297 of 12574 
+stonewall rank 17: 12349 of 12574 
+stonewall rank 41: 11226 of 12574 
+stonewall rank 118: 11352 of 12574 
+stonewall rank 93: 12321 of 12574 
+stonewall rank 53: 10729 of 12574 
+stonewall rank 52: 11005 of 12574 
+stonewall rank 9: 11280 of 12574 
+stonewall rank 25: 12500 of 12574 
+stonewall rank 11: 11354 of 12574 
+stonewall rank 61: 12457 of 12574 
+stonewall rank 79: 11277 of 12574 
+stonewall rank 127: 10776 of 12574 
+stonewall rank 19: 12364 of 12574 
+stonewall rank 46: 11322 of 12574 
+stonewall rank 74: 11330 of 12574 
+stonewall rank 24: 12424 of 12574 
+stonewall rank 122: 11315 of 12574 
+stonewall rank 116: 11310 of 12574 
+stonewall rank 39: 11306 of 12574 
+stonewall rank 36: 12492 of 12574 
+stonewall rank 71: 12425 of 12574 
+stonewall rank 78: 11387 of 12574 
+stonewall rank 73: 12441 of 12574 
+stonewall rank 113: 11284 of 12574 
+stonewall rank 110: 12490 of 12574 
+stonewall rank 83: 11381 of 12574 
+stonewall rank 82: 11231 of 12574 
+stonewall rank 48: 11317 of 12574 
+stonewall rank 5: 11354 of 12574 
+stonewall rank 33: 12508 of 12574 
+stonewall rank 108: 12484 of 12574 
+stonewall rank 56: 12346 of 12574 
+stonewall rank 62: 12314 of 12574 
+stonewall rank 28: 12484 of 12574 
+stonewall rank 112: 11336 of 12574 
+stonewall rank 65: 12422 of 12574 
+stonewall rank 70: 12433 of 12574 
+stonewall rank 102: 12448 of 12574 
+stonewall rank 54: 12366 of 12574 
+stonewall rank 121: 11348 of 12574 
+stonewall rank 120: 11307 of 12574 
+stonewall rank 8: 11356 of 12574 
+stonewall rank 42: 11350 of 12574 
+stonewall rank 115: 11318 of 12574 
+stonewall rank 34: 12438 of 12574 
+stonewall rank 107: 12497 of 12574 
+stonewall rank 91: 12383 of 12574 
+stonewall rank 76: 11324 of 12574 
+stonewall rank 63: 12449 of 12574 
+stonewall rank 99: 12433 of 12574 
+stonewall rank 59: 12426 of 12574 
+stonewall rank 4: 11308 of 12574 
+stonewall rank 26: 12471 of 12574 
+stonewall rank 117: 11298 of 12574 
+stonewall rank 13: 11313 of 12574 
+stonewall rank 57: 12293 of 12574 
+stonewall rank 100: 12519 of 12574 
+stonewall rank 90: 10753 of 12574 
+stonewall rank 50: 11286 of 12574 
+Continue stonewall hit min: 10720 max: 12574 avg: 11812.5 
+stonewall rank 0: 11355 of 12574 
+stonewall rank 47: 11262 of 12574 
+stonewall rank 22: 12484 of 12574 
+stonewall rank 49: 11354 of 12574 
+stonewall rank 87: 11323 of 12574 
+stonewall rank 16: 10720 of 12574 
+stonewall rank 55: 12293 of 12574 
+stonewall rank 124: 11344 of 12574 
+stonewall rank 94: 12361 of 12574 
+stonewall rank 30: 12482 of 12574 
+stonewall rank 2: 11296 of 12574 
+stonewall rank 67: 12405 of 12574 
+stonewall rank 123: 11310 of 12574 
+stonewall rank 96: 12534 of 12574 
+stonewall rank 43: 11342 of 12574 
+stonewall rank 29: 12489 of 12574 
+stonewall rank 104: 12448 of 12574 
+stonewall rank 12: 11289 of 12574 
+stonewall rank 10: 11331 of 12574 
+stonewall rank 109: 12441 of 12574 
+stonewall rank 86: 11316 of 12574 
+stonewall rank 84: 11283 of 12574 
+stonewall rank 103: 12476 of 12574 
+stonewall rank 92: 12361 of 12574 
+stonewall rank 20: 12290 of 12574 
+stonewall rank 35: 12481 of 12574 
+stonewall rank 66: 12440 of 12574 
+stonewall rank 125: 11460 of 12574 
+stonewall rank 72: 12424 of 12574 
+stonewall rank 6: 11283 of 12574 
+stonewall rank 18: 12273 of 12574 
+stonewall rank 14: 11360 of 12574 
+stonewall rank 51: 11292 of 12574 
+stonewall rank 27: 12508 of 12574 
+stonewall rank 23: 12462 of 12574 
+stonewall rank 101: 12472 of 12574 
+stonewall rank 80: 11337 of 12574 
+stonewall rank 31: 12455 of 12574 
+stonewall rank 97: 12349 of 12574 
+stonewall rank 88: 11305 of 12574 
+stonewall rank 60: 12471 of 12574 
+stonewall rank 105: 12433 of 12574 
+stonewall rank 68: 12411 of 12574 
+stonewall rank 64: 12456 of 12574 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :       7435.257       7435.257       7435.257          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        178.396        178.396        178.396          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 10/25/2018 00:51:40 --

@@ -1,0 +1,137 @@
+System:  pvfs017-ib0.ofsdev.clemson.edu
+filesystem_utilization=beegfs_nodev   187472793600 49846948352 137625845248  27% /scratch4
+date=2018.10.24-23.58.53
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 10000 -r /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/pfind_results'
+io500_find_cmd=/home/jburto2/io-500-dev/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=HDD
+io500_info_filesysem=BeeGFS
+io500_info_filesystem_version=7.1
+io500_info_institute_name='Clemson University'
+io500_info_metadata_storage_type=SSD
+io500_info_num_client_nodes=128
+io500_info_num_data_server_nodes=6
+io500_info_num_data_storage_devices=60
+io500_info_num_metadata_server_nodes=6
+io500_info_num_metadata_storage_devices=12
+io500_info_procs_per_node=1
+io500_info_storage_age_in_months=0
+io500_info_storage_install_date=10/18
+io500_info_storage_interface=SATA
+io500_info_storage_network=infiniband
+io500_info_system_name='Palmetto scratch4'
+io500_info_whatever=infiniband
+io500_ior_cmd=/home/jburto2/io-500-dev/bin/ior
+io500_ior_easy_params='-t 4m -b 15360m -F -a POSIX'
+io500_ior_easy_size=15360
+io500_ior_hard_other_options=' -a POSIX'
+io500_ior_hard_writes_per_proc=275000
+io500_mdreal_cmd=/home/jburto2/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/home/jburto2/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=800000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_files_per_proc=18750
+io500_mdtest_hard_files_per_proc=18750
+io500_mdtest_hard_other_options=
+io500_mpiargs='-np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi'
+io500_mpi_prefix=/usr/lib64/openmpi
+io500_mpirun=/usr/lib64/openmpi/bin/mpirun
+io500_result_dir=/home/jburto2/io-500-dev/results/2018.10.24-23.58.53
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=True
+io500_stonewall_timer=300
+io500_workdir=/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 4m -b 15360m -F -a POSIX -o /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write                3.030 GB/s : time 615.24 seconds
+
+[Starting] mdtest_easy_write
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/mdtest -C -F -d /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_easy -n 800000 -u -L -x /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_easy-stonewall -W 300
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               86.981 kiops : time 1180.41 seconds
+
+[Starting] ior_hard_write
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 275000  -a POSIX -o /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                0.281 GB/s : time 1038.99 seconds
+
+[Starting] mdtest_hard_write
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard -n 18750 -x /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard-stonewall  -W 300
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                7.435 kiops : time 325.70 seconds
+
+[Starting] find
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/pfind /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53 -newer /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/timestampfile -size 3901c -name *01* -s 10000 -r /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/pfind_results
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/find.txt.
+[FIND] MATCHED 56262/37572742 in 112.0193 seconds
+[RESULT] IOPS phase 3                      find              335.410 kiops : time 112.02 seconds
+
+[Starting] ior_easy_read
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 4m -b 15360m -F -a POSIX -o /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/ior_easy/stonewall
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read                3.118 GB/s : time 597.84 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/mdtest -T -F -d /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_easy -n 800000 -u -L -x /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_easy-stonewall
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              408.518 kiops : time  90.87 seconds
+
+[Starting] ior_hard_read
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 275000  -a POSIX -o /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/ior_hard/stonewall
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                0.910 GB/s : time 320.75 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard -n 18750 -x /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard-stonewall 
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               68.238 kiops : time  29.08 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/mdtest -r -F -d /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_easy -n 800000 -u -L -x /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_easy-stonewall
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               13.942 kiops : time 2599.44 seconds
+
+[Starting] mdtest_hard_read
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard -n 18750 -x /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard-stonewall 
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read               14.005 kiops : time 117.66 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] /usr/lib64/openmpi/bin/mpirun -np 128 --mca btl_tcp_if_exclude ib0 --mca btl ^openib --map-by node --machinefile /home/jburto2/hpccnodelistmpi --prefix /usr/lib64/openmpi /home/jburto2/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard -n 18750 -x /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_hard-stonewall 
+[Results] in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                3.421 kiops : time 475.33 seconds
+Running mdreal
+
+[Leaving] datafiles in /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53
+[Summary] Results files in /home/jburto2/io-500-dev/results/2018.10.24-23.58.53
+[Summary] Data files in /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53
+[RESULT] BW   phase 1            ior_easy_write                3.030 GB/s : time 615.24 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.281 GB/s : time 1038.99 seconds
+[RESULT] BW   phase 3             ior_easy_read                3.118 GB/s : time 597.84 seconds
+[RESULT] BW   phase 4             ior_hard_read                0.910 GB/s : time 320.75 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               86.981 kiops : time 1180.41 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                7.435 kiops : time 325.70 seconds
+[RESULT] IOPS phase 3                      find              335.410 kiops : time 112.02 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              408.518 kiops : time  90.87 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               68.238 kiops : time  29.08 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               13.942 kiops : time 2599.44 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               14.005 kiops : time 117.66 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                3.421 kiops : time 475.33 seconds
+[SCORE] Bandwidth 1.24692 GB/s : IOPS 37.6513 kiops : TOTAL 6.85187

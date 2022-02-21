@@ -1,0 +1,148 @@
+-- started at 10/25/2018 00:09:15 --
+
+mdtest-1.9.3 was launched with 128 total task(s) on 32 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-F" "-d" "/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_easy" "-n" "800000" "-u" "-L" "-x" "/scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53/mdt_easy-stonewall" "-W" "300"
+Path: /scratch4/jburto2/io500/datafiles/io500.2018.10.24-23.58.53
+FS: 174.6 TiB   Used FS: 27.6%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+128 tasks, 102400000 files
+stonewall rank 95: 101292 of 280962 
+stonewall rank 21: 253562 of 280962 
+stonewall rank 58: 101389 of 280962 
+stonewall rank 111: 206451 of 280962 
+stonewall rank 7: 150334 of 280962 
+stonewall rank 77: 150258 of 280962 
+stonewall rank 15: 143364 of 280962 
+stonewall rank 69: 153933 of 280962 
+stonewall rank 1: 202534 of 280962 
+stonewall rank 39: 99897 of 280962 
+stonewall rank 106: 84071 of 280962 
+stonewall rank 81: 137405 of 280962 
+stonewall rank 3: 194977 of 280962 
+stonewall rank 38: 207976 of 280962 
+stonewall rank 52: 101699 of 280962 
+stonewall rank 118: 123735 of 280962 
+stonewall rank 37: 268703 of 280962 
+stonewall rank 40: 109253 of 280962 
+stonewall rank 32: 177992 of 280962 
+stonewall rank 75: 84083 of 280962 
+stonewall rank 44: 141074 of 280962 
+stonewall rank 74: 154964 of 280962 
+stonewall rank 36: 83889 of 280962 
+stonewall rank 89: 83689 of 280962 
+stonewall rank 61: 182699 of 280962 
+stonewall rank 71: 116368 of 280962 
+stonewall rank 33: 143234 of 280962 
+stonewall rank 11: 150508 of 280962 
+stonewall rank 113: 143833 of 280962 
+stonewall rank 126: 100254 of 280962 
+stonewall rank 98: 196038 of 280962 
+stonewall rank 34: 218437 of 280962 
+stonewall rank 73: 140934 of 280962 
+stonewall rank 127: 83803 of 280962 
+stonewall rank 24: 194284 of 280962 
+stonewall rank 9: 119037 of 280962 
+stonewall rank 85: 124581 of 280962 
+stonewall rank 119: 123803 of 280962 
+stonewall rank 19: 143222 of 280962 
+stonewall rank 46: 118638 of 280962 
+stonewall rank 41: 152712 of 280962 
+stonewall rank 110: 155094 of 280962 
+stonewall rank 42: 258534 of 280962 
+stonewall rank 53: 94838 of 280962 
+stonewall rank 122: 194567 of 280962 
+stonewall rank 107: 141312 of 280962 
+stonewall rank 93: 96632 of 280962 
+stonewall rank 112: 208016 of 280962 
+stonewall rank 65: 138958 of 280962 
+stonewall rank 45: 161376 of 280962 
+stonewall rank 102: 246653 of 280962 
+stonewall rank 79: 107307 of 280962 
+stonewall rank 28: 144196 of 280962 
+stonewall rank 108: 101354 of 280962 
+stonewall rank 48: 124064 of 280962 
+stonewall rank 55: 102995 of 280962 
+stonewall rank 56: 117042 of 280962 
+stonewall rank 83: 117327 of 280962 
+stonewall rank 115: 155051 of 280962 
+stonewall rank 5: 123204 of 280962 
+stonewall rank 90: 87474 of 280962 
+stonewall rank 17: 213448 of 280962 
+stonewall rank 70: 142693 of 280962 
+stonewall rank 63: 144182 of 280962 
+stonewall rank 82: 126170 of 280962 
+stonewall rank 87: 126282 of 280962 
+stonewall rank 2: 186387 of 280962 
+stonewall rank 78: 148653 of 280962 
+stonewall rank 54: 83353 of 280962 
+stonewall rank 99: 156607 of 280962 
+stonewall rank 100: 216527 of 280962 
+stonewall rank 76: 145081 of 280962 
+stonewall rank 59: 116491 of 280962 
+stonewall rank 4: 201200 of 280962 
+stonewall rank 91: 85565 of 280962 
+Continue stonewall hit min: 83314 max: 280962 avg: 148253.4 
+stonewall rank 0: 245446 of 280962 
+stonewall rank 26: 100241 of 280962 
+stonewall rank 25: 133998 of 280962 
+stonewall rank 116: 258585 of 280962 
+stonewall rank 43: 198699 of 280962 
+stonewall rank 123: 203893 of 280962 
+stonewall rank 120: 83667 of 280962 
+stonewall rank 8: 159974 of 280962 
+stonewall rank 13: 127025 of 280962 
+stonewall rank 47: 126680 of 280962 
+stonewall rank 22: 170604 of 280962 
+stonewall rank 49: 203972 of 280962 
+stonewall rank 50: 156079 of 280962 
+stonewall rank 16: 124310 of 280962 
+stonewall rank 67: 116284 of 280962 
+stonewall rank 62: 164762 of 280962 
+stonewall rank 124: 152438 of 280962 
+stonewall rank 18: 83493 of 280962 
+stonewall rank 30: 115005 of 280962 
+stonewall rank 57: 84326 of 280962 
+stonewall rank 104: 183884 of 280962 
+stonewall rank 96: 168809 of 280962 
+stonewall rank 117: 104564 of 280962 
+stonewall rank 86: 150607 of 280962 
+stonewall rank 94: 172695 of 280962 
+stonewall rank 12: 189464 of 280962 
+stonewall rank 20: 85713 of 280962 
+stonewall rank 121: 203635 of 280962 
+stonewall rank 103: 150540 of 280962 
+stonewall rank 35: 205012 of 280962 
+stonewall rank 29: 83808 of 280962 
+stonewall rank 6: 105368 of 280962 
+stonewall rank 66: 139983 of 280962 
+stonewall rank 10: 101271 of 280962 
+stonewall rank 92: 151996 of 280962 
+stonewall rank 109: 205174 of 280962 
+stonewall rank 84: 83595 of 280962 
+stonewall rank 72: 152764 of 280962 
+stonewall rank 51: 151006 of 280962 
+stonewall rank 31: 83736 of 280962 
+stonewall rank 101: 147106 of 280962 
+stonewall rank 125: 155824 of 280962 
+stonewall rank 27: 188372 of 280962 
+stonewall rank 14: 189758 of 280962 
+stonewall rank 105: 156140 of 280962 
+stonewall rank 80: 124398 of 280962 
+stonewall rank 68: 219926 of 280962 
+stonewall rank 23: 83314 of 280962 
+stonewall rank 88: 223230 of 280962 
+stonewall rank 97: 83543 of 280962 
+stonewall rank 60: 184950 of 280962 
+stonewall rank 64: 118264 of 280962 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      86981.522      86981.522      86981.522          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          4.228          4.228          4.228          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 10/25/2018 00:28:53 --

@@ -1,0 +1,21 @@
+-- started at 05/24/2019 20:22:11 --
+
+mdtest-1.9.3 was launched with 180 total task(s) on 15 node(s)
+Command line used: /g/data4/io500/io-500-dev/bin/mdtest "-T" "-F" "-d" "/g/data4/io500/datafiles/mdt_easy" "-n" "262144" "-u" "-L" "-d" "/g/data4/io500/datafiles/mdt_easy/mdt0@/g/data4/io500/datafiles/mdt_easy/mdt1" "-x" "/g/data4/io500/datafiles/mdt_easy-stonewall"
+Path: /g/data4/io500/datafiles/mdt_easy
+FS: 15260.4 TiB   Used FS: 32.0%   Inodes: 4750.9 Mi   Used Inodes: 2.2%
+
+180 tasks, 47185920 files
+WARNING: could not read stonewall status file
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :     445664.239     445662.733     445663.812          0.390
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 05/24/2019 20:23:57 --

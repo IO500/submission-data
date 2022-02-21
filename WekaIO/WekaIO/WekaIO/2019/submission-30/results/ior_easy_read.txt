@@ -1,0 +1,38 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov 12 02:49:19 2019
+Command line        : /mnt/weka/io-500-dev/bin/ior -r -R --posix.odirect -u -t 1024k -b 11000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/weka/io-500-dev/datafiles/io500.2019.11.11-23.00.25/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/weka/io-500-dev/datafiles/io500.2019.11.11-23.00.25/ior_easy/stonewall
+Machine             : Linux client104
+TestID              : 0
+StartTime           : Tue Nov 12 02:49:19 2019
+Path                : /mnt/weka/io-500-dev/datafiles/io500.2019.11.11-23.00.25/ior_easy/0
+FS                  : 400.0 TiB   Used FS: 27.8%   Inodes: 13135.3 Mi   Used Inodes: 5.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/weka/io-500-dev/datafiles/io500.2019.11.11-23.00.25/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 109
+tasks               : 2616
+clients per node    : 24
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 10.74 GiB
+aggregate filesize  : 27.44 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      87596      94819      0.025146    11264000   1024.00    27.84      303.48     30.92      328.51     0   
+Max Read:  87596.28 MiB/sec (91851.36 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        87596.28   87596.28   87596.28       0.00   87596.28   87596.28   87596.28       0.00  328.50710         NA            NA     0   2616  24    1   1     1        1         0    0      1 11534336000  1048576 28776000.0 POSIX      0
+Finished            : Tue Nov 12 02:55:49 2019

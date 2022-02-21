@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  9 03:25:27 2018
+Command line        : /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 6000 -o /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.09-03.12.50/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.09-03.12.50/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux f25n01
+TestID              : 0
+StartTime           : Fri Nov  9 03:25:27 2018
+Path                : /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.09-03.12.50/ior_hard
+FS                  : 225668.2 TiB   Used FS: 5.7%   Inodes: 30000.0 Mi   Used Inodes: 15.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.09-03.12.50/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 6000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 1008
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 264.78 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 339 max: 6000 -- min data: 0.0 GiB mean data: 0.1 GiB time: 300.5s
+write     585.91     45.91      45.91      0.158839   462.58     0.017306   462.76     0   
+Max Write: 585.91 MiB/sec (614.37 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         585.91     585.91     585.91       0.00   13069.53   13069.53   13069.53       0.00  462.75568     0   1008   2    1   0     1        1         0    0   6000    47008    47008  271133.8 POSIX      0
+Finished            : Fri Nov  9 03:33:10 2018

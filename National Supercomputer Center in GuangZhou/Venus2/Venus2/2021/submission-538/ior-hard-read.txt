@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jun 11 18:58:21 2021
+Command line        : ./ior -C -Q 1 -g -G=778276362 -k -e -o /mnt/kapok/2021.06.11-18.18.54/ior-hard/file -O stoneWallingStatusFile=/root/io500-isc21/io500/results/2021.06.11-18.18.54/ior-hard.stonewall -t 47008 -b 47008 -s 1500000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/root/io500-isc21/io500/results/2021.06.11-18.18.54/ior-hard-read.csv
+Machine             : Linux cn30
+TestID              : 0
+StartTime           : Fri Jun 11 18:58:21 2021
+Path                : /mnt/kapok/2021.06.11-18.18.54/ior-hard/file
+FS                  : 349.1 TiB   Used FS: 54.3%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/kapok/2021.06.11-18.18.54/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 1500000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 480
+clients per node    : 48
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 30.78 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      89538      1998438    360.27      45.91      45.91      0.169521   360.28     0.044995   360.49     0   

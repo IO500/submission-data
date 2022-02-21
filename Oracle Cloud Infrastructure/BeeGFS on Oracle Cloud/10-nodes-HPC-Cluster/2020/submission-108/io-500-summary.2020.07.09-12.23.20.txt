@@ -1,0 +1,125 @@
+System:  inst-052fy-united-hermit
+filesystem_utilization=beegfs_ondemand 62491351040 18516495360 43974855680  30% /mnt/beeond
+date=2020.07.09-12.23.20
+io500_clean_cache=False
+io500_clean_cache_cmd=drop_cache
+io500_cleanup_workdir=
+io500_find_cmd=/mnt/beeond/io500-app/bin/pfind
+io500_find_cmd_args='-N -q 15000'
+io500_find_mpi=True
+io500_ini=config-test3.ini
+io500_ior_cmd=/mnt/beeond/io500-app/bin/ior
+io500_ior_easy_params=' -a POSIX -t 1m -b 3600000m -F'
+io500_ior_easy_size=3600000
+io500_ior_hard_api=POSIX
+io500_ior_hard_api_specific_options=
+io500_ior_hard_writes_per_proc=40000000
+io500_mdreal_cmd=/mnt/beeond/io500-app/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/mnt/beeond/io500-app/bin/mdtest
+io500_mdtest_easy_files_per_proc=50000000
+io500_mdtest_easy_params='-u -L -a POSIX'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=20000000
+io500_mpiargs='--allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn'
+io500_mpirun=mpiexec
+io500_result_dir=./results//2020.07.09-12.23.20-scr
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=./out//2020.07.09-12.23.20-scr
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/ior -w  -a POSIX -t 1m -b 3600000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o ./out//2020.07.09-12.23.20-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=./out//2020.07.09-12.23.20-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in ./results//2020.07.09-12.23.20-scr/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               26.058 GiB/s : time 483.26 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/mdtest -Y -C -F -P -d ./out//2020.07.09-12.23.20-scr/mdt_easy -n 50000000 -u -L -a POSIX -x ./out//2020.07.09-12.23.20-scr/mdt_easy-stonewall -N 1 -W 300
+[Results] in ./results//2020.07.09-12.23.20-scr/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write              163.197 kiops : time 573.77 seconds
+
+[Starting] ior_hard_write
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/ior -w -s 40000000 -a POSIX  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o ./out//2020.07.09-12.23.20-scr/ior_hard/IOR_file -O stoneWallingStatusFile=./out//2020.07.09-12.23.20-scr/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in ./results//2020.07.09-12.23.20-scr/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                2.999 GiB/s : time 467.53 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/mdtest -Y -C -t -F -P -w 3901 -e 3901 -d ./out//2020.07.09-12.23.20-scr/mdt_hard -n 20000000 -x ./out//2020.07.09-12.23.20-scr/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in ./results//2020.07.09-12.23.20-scr/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                3.021 kiops : time 366.14 seconds
+
+[Starting] find
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/pfind ./out//2020.07.09-12.23.20-scr -newer ./out//2020.07.09-12.23.20-scr/timestampfile -size 3901c -name "*01*" -N -q 15000
+[Results] in ./results//2020.07.09-12.23.20-scr/find.txt.
+[FIND] MATCHED 27424/94743046 in 95.9908 seconds
+[RESULT] IOPS phase 3                      find              987.000 kiops : time  95.99 seconds
+
+[Starting] ior_easy_read
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/ior -r -R  -a POSIX -t 1m -b 3600000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o ./out//2020.07.09-12.23.20-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=./out//2020.07.09-12.23.20-scr/ior_easy/stonewall
+[Results] in ./results//2020.07.09-12.23.20-scr/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               27.221 GiB/s : time 462.62 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/mdtest -T -F -P -d ./out//2020.07.09-12.23.20-scr/mdt_easy -n 50000000 -u -L -a POSIX -x ./out//2020.07.09-12.23.20-scr/mdt_easy-stonewall -N 1
+[Results] in ./results//2020.07.09-12.23.20-scr/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              720.732 kiops : time 129.92 seconds
+
+[Starting] ior_hard_read
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/ior -r -R -s 40000000 -a POSIX  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o ./out//2020.07.09-12.23.20-scr/ior_hard/IOR_file -O stoneWallingStatusFile=./out//2020.07.09-12.23.20-scr/ior_hard/stonewall
+[Results] in ./results//2020.07.09-12.23.20-scr/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read               18.177 GiB/s : time  77.12 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d ./out//2020.07.09-12.23.20-scr/mdt_hard -n 20000000 -x ./out//2020.07.09-12.23.20-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results//2020.07.09-12.23.20-scr/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               61.228 kiops : time  18.07 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/mdtest -r -F -P -d ./out//2020.07.09-12.23.20-scr/mdt_easy -n 50000000 -u -L -a POSIX -x ./out//2020.07.09-12.23.20-scr/mdt_easy-stonewall -N 1
+[Results] in ./results//2020.07.09-12.23.20-scr/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              327.700 kiops : time 285.74 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d ./out//2020.07.09-12.23.20-scr/mdt_hard -n 20000000 -x ./out//2020.07.09-12.23.20-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results//2020.07.09-12.23.20-scr/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read               17.660 kiops : time  62.63 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpiexec --allow-run-as-root -mca btl self -x UCX_TLS=rc,self,sm -x HCOLL_ENABLE_MCAST_ALL=0 -mca coll_hcoll_enable 0 -x UCX_IB_TRAFFIC_CLASS=105 -x UCX_IB_GID_INDEX=3 -n 160 -npernode 16 --hostfile /mnt/beeond/hostsfile.cn /mnt/beeond/io500-app/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d ./out//2020.07.09-12.23.20-scr/mdt_hard -n 20000000 -x ./out//2020.07.09-12.23.20-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results//2020.07.09-12.23.20-scr/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                9.613 kiops : time 118.22 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in ./out//2020.07.09-12.23.20-scr
+[Summary] Results files in ./results//2020.07.09-12.23.20-scr
+[Summary] Data files in ./out//2020.07.09-12.23.20-scr
+[RESULT] BW   phase 1            ior_easy_write               26.058 GiB/s : time 483.26 seconds
+[RESULT] BW   phase 2            ior_hard_write                2.999 GiB/s : time 467.53 seconds
+[RESULT] BW   phase 3             ior_easy_read               27.221 GiB/s : time 462.62 seconds
+[RESULT] BW   phase 4             ior_hard_read               18.177 GiB/s : time  77.12 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write              163.197 kiops : time 573.77 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                3.021 kiops : time 366.14 seconds
+[RESULT] IOPS phase 3                      find              987.000 kiops : time  95.99 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              720.732 kiops : time 129.92 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               61.228 kiops : time  18.07 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              327.700 kiops : time 285.74 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               17.660 kiops : time  62.63 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                9.613 kiops : time 118.22 seconds
+[SCORE] Bandwidth 14.0228 GiB/s : IOPS 76.6742 kiops : TOTAL 32.79

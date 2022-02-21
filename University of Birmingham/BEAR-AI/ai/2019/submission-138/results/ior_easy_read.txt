@@ -1,0 +1,40 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 21:12:58 2019
+Command line        : /ai/io500-test/2019-11/ppc64le/bin/ior -r -R -t 2048k -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /ai/io500-test/2019-11/ppc64le/datafiles/io500.2019.11.10-20.31.07/ior_easy/ior_file_easy -O stoneWallingStatusFile=/ai/io500-test/2019-11/ppc64le/datafiles/io500.2019.11.10-20.31.07/ior_easy/stonewall
+Machine             : Linux bear-pg0305u03a.bear.cluster
+TestID              : 0
+StartTime           : Sun Nov 10 21:12:58 2019
+Path                : /ai/io500-test/2019-11/ppc64le/datafiles/io500.2019.11.10-20.31.07/ior_easy
+FS                  : 109.5 TiB   Used FS: 7.6%   Inodes: 147.7 Mi   Used Inodes: 30.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ai/io500-test/2019-11/ppc64le/datafiles/io500.2019.11.10-20.31.07/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 756.84 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+WARNING: Expected aggregate file size       = 832149913600000.
+WARNING: Stat() of aggregate file size      = 3258974208000.
+WARNING: Using actual aggregate bytes moved = 3258974208000.
+read      25483      10158080000 2048.00    0.005080   121.96     0.000289   121.96     0   
+Max Read:  25483.23 MiB/sec (26721.10 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        25483.23   25483.23   25483.23       0.00   12741.61   12741.61   12741.61       0.00  121.96257         NA            NA     0     80   8    1   1     1        1         0    0      1 10401873920000  2097152 3108000.0 POSIX      0
+Finished            : Sun Nov 10 21:15:00 2019

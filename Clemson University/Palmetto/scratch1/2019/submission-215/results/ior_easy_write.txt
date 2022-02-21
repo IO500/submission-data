@@ -1,0 +1,191 @@
+[node1113.palmetto.clemson.edu:23716] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0145.palmetto.clemson.edu:59147] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1812.palmetto.clemson.edu:58868] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1832.palmetto.clemson.edu:41463] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0175.palmetto.clemson.edu:67422] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1881.palmetto.clemson.edu:65006] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0046.palmetto.clemson.edu:97886] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1806.palmetto.clemson.edu:13970] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1189.palmetto.clemson.edu:24059] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1808.palmetto.clemson.edu:22189] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1810.palmetto.clemson.edu:07624] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1813.palmetto.clemson.edu:106127] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1868.palmetto.clemson.edu:34542] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1872.palmetto.clemson.edu:61575] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1869.palmetto.clemson.edu:14093] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1816.palmetto.clemson.edu:25544] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1815.palmetto.clemson.edu:66672] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1871.palmetto.clemson.edu:68931] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1870.palmetto.clemson.edu:99446] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0200.palmetto.clemson.edu:45338] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1811.palmetto.clemson.edu:13677] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1819.palmetto.clemson.edu:86994] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0139.palmetto.clemson.edu:31024] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1873.palmetto.clemson.edu:12544] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0653.palmetto.clemson.edu:105058] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0121.palmetto.clemson.edu:12580] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1805.palmetto.clemson.edu:82180] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1883.palmetto.clemson.edu:03812] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1820.palmetto.clemson.edu:89922] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1814.palmetto.clemson.edu:79240] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1882.palmetto.clemson.edu:62842] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1818.palmetto.clemson.edu:120588] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1880.palmetto.clemson.edu:122712] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1831.palmetto.clemson.edu:74278] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1875.palmetto.clemson.edu:118533] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1830.palmetto.clemson.edu:32778] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1878.palmetto.clemson.edu:21523] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1825.palmetto.clemson.edu:106328] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1821.palmetto.clemson.edu:19263] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1829.palmetto.clemson.edu:95307] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1826.palmetto.clemson.edu:29068] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1874.palmetto.clemson.edu:100856] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1877.palmetto.clemson.edu:117280] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1822.palmetto.clemson.edu:51535] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1823.palmetto.clemson.edu:01166] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1824.palmetto.clemson.edu:56874] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1876.palmetto.clemson.edu:27418] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1827.palmetto.clemson.edu:46798] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Oct 18 17:05:36 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2m -b 43690m -F -a MPIIO -o /scratch1/jburto2/io500/datafiles/io500.2018.10.18-17.05.34/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch1/jburto2/io500/datafiles/io500.2018.10.18-17.05.34/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux node0046.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Oct 18 17:05:36 2018
+Path                : /scratch1/jburto2/io500/datafiles/io500.2018.10.18-17.05.34/ior_easy
+FS                  : 232.8 TiB   Used FS: 15.2%   Inodes: 4398046511104.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /scratch1/jburto2/io500/datafiles/io500.2018.10.18-17.05.34/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 48
+clients per node    : 1
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 42.67 GiB
+aggregate filesize  : 2.00 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+[E 17:10:38.201272] job_time_mgr_expire: job time out: cancelling bmi operation, job_id: 267.
+[E 17:10:38.461566] job_time_mgr_expire: job time out: cancelling bmi operation, job_id: 217.
+[E 17:10:38.461618] job_time_mgr_expire: job time out: cancelling bmi operation, job_id: 219.
+[E 17:10:38.466425] job_time_mgr_expire: job time out: cancelling bmi operation, job_id: 219.
+[E 17:10:38.466477] job_time_mgr_expire: job time out: cancelling bmi operation, job_id: 221.
+[E 17:10:47.079810] job_time_mgr_expire: job time out: cancelling bmi operation, job_id: 8205.
+[E 17:13:32.189444] job_time_mgr_expire: job time out: cancelling bmi operation, job_id: 164153.
+stonewalling pairs accessed min: 5 max: 21845 -- min data: 0.0 GiB mean data: 27.8 GiB time: 604.8s
+write     2401.34    44738560   2048.00    1.14       872.17     0.001066   873.31     0   
+Max Write: 2401.34 MiB/sec (2517.99 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        2401.34    2401.34    2401.34       0.00    1200.67    1200.67    1200.67       0.00  873.31211     0     48   1    1   1     1        1         0    0      1 45812285440  2097152 2097120.0 MPIIO      0
+Finished            : Thu Oct 18 17:20:12 2018

@@ -1,0 +1,32 @@
+-- started at 11/12/2019 17:01:22 --
+
+mdtest-3.3.0+dev was launched with 96 total task(s) on 96 node(s)
+Command line used: /opt/cluster/benchs/io-500-dev-io500-sc19/bin/mdtest '-T' '-F' '-P' '-d' '/work/ADM/hpc/io500/io500.2019.11.12-16.28.31/mdt_easy' '-n' '800000' '-u' '-L' '-x' '/work/ADM/hpc/io500/io500.2019.11.12-16.28.31/mdt_easy-stonewall' '-N' '1'
+Path: /work/ADM/hpc/io500/io500.2019.11.12-16.28.31
+FS: 6350.2 TiB   Used FS: 66.1%   Inodes: 1797.4 Mi   Used Inodes: 46.2%
+
+Nodemap: 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2137 Shifting ranks by 1 for each phase.
+96 tasks, 76800000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :     275042.182     275040.200     275040.841          0.296
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :        169.180        169.178        169.179          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/12/2019 17:04:11 --
+

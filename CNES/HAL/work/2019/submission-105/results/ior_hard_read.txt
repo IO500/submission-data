@@ -1,0 +1,38 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov 12 17:04:13 2019
+Command line        : /opt/cluster/benchs/io-500-dev-io500-sc19/bin/ior -r -R -s 8000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /work/ADM/hpc/io500/io500.2019.11.12-16.28.31/ior_hard/IOR_file -O stoneWallingStatusFile=/work/ADM/hpc/io500/io500.2019.11.12-16.28.31/ior_hard/stonewall
+Machine             : Linux node301.sis.cnes.fr
+TestID              : 0
+StartTime           : Tue Nov 12 17:04:13 2019
+Path                : /work/ADM/hpc/io500/io500.2019.11.12-16.28.31/ior_hard
+FS                  : 6350.2 TiB   Used FS: 66.1%   Inodes: 1797.4 Mi   Used Inodes: 46.2%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/ADM/hpc/io500/io500.2019.11.12-16.28.31/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 8000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 96
+tasks               : 96
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 33.62 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      22845      511193     1.49        45.91      45.91      0.015788   1.50       0.014348   1.51       0   
+Max Read:  22845.48 MiB/sec (23955.23 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        22845.48   22845.48   22845.48       0.00  509598.94  509598.94  509598.94       0.00    1.50707         NA            NA     0     96   1    1   0     1        1         0    0   8000    47008    47008   34429.7 POSIX      0
+Finished            : Tue Nov 12 17:04:14 2019

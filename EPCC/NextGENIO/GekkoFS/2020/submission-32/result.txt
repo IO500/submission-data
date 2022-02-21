@@ -1,0 +1,108 @@
+version         = io500-isc20_v4
+config-hash     = 718463FF
+result-dir      = ./results_run/2020.07.14-08.49.39-app
+; START 2020-07-14 09:47:11
+
+
+[ior-easy-write]
+t_start         = 2020-07-14 09:47:11
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/r/io500-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/tmp/r/io500-app/ior-easy/stonewall -t 512kb -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX
+throughput-stonewall = 16366.57
+score           = 63.304909
+t_delta         = 347.3351
+t_end           = 2020-07-14 09:52:58
+
+[mdtest-easy-write]
+t_start         = 2020-07-14 09:52:58
+exe             = ./mdtest -n 5000000 -u -L -F -P -N 1 -d /tmp/r/io500-app/mdtest-easy -x /tmp/r/io500-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 1991.923910
+score           = 1897.665897
+t_delta         = 341.3040
+t_end           = 2020-07-14 09:58:40
+
+[timestamp]
+t_start         = 2020-07-14 09:58:40
+t_delta         = 0.0007
+t_end           = 2020-07-14 09:58:40
+
+[ior-hard-write]
+t_start         = 2020-07-14 09:58:40
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/r/io500-app/ior-hard/file -O stoneWallingStatusFile=/tmp/r/io500-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX
+throughput-stonewall = 920.72
+score           = 3.309857
+t_delta         = 302.0674
+t_end           = 2020-07-14 10:03:42
+
+[mdtest-hard-write]
+t_start         = 2020-07-14 10:03:42
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/r/io500-app/mdtest-hard -x /tmp/r/io500-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 165.433722
+score           = 143.741881
+t_delta         = 400.7230
+t_end           = 2020-07-14 10:10:22
+
+[find]
+t_start         = 2020-07-14 10:10:22
+exe             =  ./bin/pfind.sh  /tmp/r/io500-app -newer /tmp/r/io500-app/timestampfile -size 3901c -name "*01*"
+last-output     = "MATCHED 2152470/668574766"
+total-files     = 668574766
+found           = 2152470
+score           = 3146.101878
+t_delta         = 212.5118
+t_end           = 2020-07-14 10:13:55
+
+[ior-easy-read]
+t_start         = 2020-07-14 10:13:55
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/r/io500-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/tmp/r/io500-app/ior-easy/stonewall -t 512kb -b 9920000m -F -r -R -a POSIX
+score           = 71.968346
+t_delta         = 305.4883
+t_end           = 2020-07-14 10:19:00
+
+[mdtest-easy-stat]
+t_start         = 2020-07-14 10:19:00
+exe             = ./mdtest -n 5000000 -u -L -F -P -N 1 -d /tmp/r/io500-app/mdtest-easy -x /tmp/r/io500-app/mdtest-easy-stonewall -T -a POSIX
+score           = 1940.823287
+t_delta         = 318.0524
+t_end           = 2020-07-14 10:24:18
+
+[ior-hard-read]
+t_start         = 2020-07-14 10:24:18
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/r/io500-app/ior-hard/file -O stoneWallingStatusFile=/tmp/r/io500-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a POSIX
+score           = 25.546225
+t_delta         = 39.1432
+t_end           = 2020-07-14 10:24:58
+
+[mdtest-hard-stat]
+t_start         = 2020-07-14 10:24:58
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/r/io500-app/mdtest-hard -x /tmp/r/io500-app/mdtest-hard-stonewall -T -a POSIX
+score           = 1730.111400
+t_delta         = 29.6790
+t_end           = 2020-07-14 10:25:27
+
+[mdtest-easy-delete]
+t_start         = 2020-07-14 10:25:27
+exe             = ./mdtest -n 5000000 -u -L -F -P -N 1 -d /tmp/r/io500-app/mdtest-easy -x /tmp/r/io500-app/mdtest-easy-stonewall -r -a POSIX
+score           = 999.767769
+t_delta         = 636.7071
+t_end           = 2020-07-14 10:36:04
+
+[mdtest-hard-read]
+t_start         = 2020-07-14 10:36:04
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/r/io500-app/mdtest-hard -x /tmp/r/io500-app/mdtest-hard-stonewall -E -X -a POSIX
+score           = 544.193603
+t_delta         = 94.3239
+t_end           = 2020-07-14 10:37:38
+
+[mdtest-hard-delete]
+t_start         = 2020-07-14 10:37:38
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/r/io500-app/mdtest-hard -x /tmp/r/io500-app/mdtest-hard-stonewall -r -a POSIX
+score           = 279.775122
+t_delta         = 184.5591
+t_end           = 2020-07-14 10:40:43
+
+[SCORE]
+MD              = 902.115609
+BW              = 24.913154
+SCORE           = 149.915127 
+hash            = DA34C8F1
+; END 2020-07-14 10:42:31

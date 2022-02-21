@@ -1,0 +1,42 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jul 14 10:24:18 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/r/io500-app/ior-hard/file -O stoneWallingStatusFile=/tmp/r/io500-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a POSIX
+Machine             : Linux nextgenio-cn01
+TestID              : 0
+StartTime           : Tue Jul 14 10:24:18 2020
+Path                : /tmp/r/io500-app/ior-hard
+FS                  : 50.8 TiB   Used FS: 50.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/r/io500-app/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 280
+clients per node    : 28
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 119.71 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 81541 max: 81541 -- min data: 3.6 GiB mean data: 3.6 GiB time: 39.0s
+WARNING: Expected aggregate file size       = 131622400000000.
+WARNING: Stat() of aggregate file size      = 1073262211840.
+WARNING: Using actual aggregate bytes moved = 1073262211840.
+read      26159      583617     39.09       45.91      45.91      0.012379   39.12      0.008168   39.13      0   
+Max Read:  26159.33 MiB/sec (27430.05 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        26159.33   26159.33   26159.33       0.00  583518.77  583518.77  583518.77       0.00   39.12724      39.05      26212.03     0    280  28    1   0     1        1         0    0 10000000    47008    47008 1023542.6 POSIX      0
+Finished            : Tue Jul 14 10:24:58 2020

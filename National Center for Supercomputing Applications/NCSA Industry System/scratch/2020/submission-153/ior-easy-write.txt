@@ -1,0 +1,50 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Jul  2 12:34:46 2020
+Command line        : ./ior -v -C -Q 1 -g -G 271 -k -e -o /magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-easy/stonewall -t 4m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX
+Machine             : Linux mg005
+Start time skew across all tasks: 31.58 sec
+TestID              : 0
+StartTime           : Thu Jul  2 12:34:46 2020
+Path                : /magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-easy
+FS                  : 3659.2 TiB   Used FS: 44.5%   Inodes: 266.5 Mi   Used Inodes: 13.7%
+Participating tasks: 96
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 8
+tasks               : 96
+clients per node    : 12
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 908.20 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Thu Jul  2 12:34:46 2020
+0: stonewalling pairs accessed: 5766
+stonewalling pairs accessed min: 5610 max: 17327 -- min data: 21.9 GiB mean data: 38.7 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 998579896320000.
+WARNING: Stat() of aggregate file size      = 6976771719168.
+WARNING: Using actual aggregate bytes moved = 6976771719168.
+WARNING: maybe caused by deadlineForStonewalling
+write     9601       2400.57    0.000279    10158080000 4096       0.120127   692.92     0.001550   693.04     0   
+Max Write: 9600.59 MiB/sec (10066.95 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        9600.59    9600.59    9600.59       0.00    2400.15    2400.15    2400.15       0.00  693.03725     300.19      12677.48     0     96  12    1   1     1        1         0    0      1 10401873920000  4194304 6653568.0 POSIX      0
+Finished            : Thu Jul  2 12:46:19 2020

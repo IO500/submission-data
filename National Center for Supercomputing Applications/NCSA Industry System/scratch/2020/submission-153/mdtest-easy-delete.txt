@@ -1,0 +1,32 @@
+-- started at 07/02/2020 13:28:08 --
+
+mdtest-3.3.0+dev was launched with 96 total task(s) on 8 node(s)
+Command line used: ./mdtest '-n' '1000000' '-u' '-L' '-F' '-P' '-N' '1' '-d' '/magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-easy' '-x' '/magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-easy-stonewall' '-r' '-a' 'POSIX'
+Path: /magnus/io500/datafiles/2020.07.02-12.32.35-app
+FS: 3659.2 TiB   Used FS: 44.7%   Inodes: 266.5 Mi   Used Inodes: 30.7%
+
+Nodemap: 111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 12 for each phase.
+96 tasks, 96000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :      58882.519      58882.503      58882.511          0.004
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.429          0.429          0.429          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        787.196        787.196        787.196          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          2.329          2.329          2.329          0.000
+-- finished at 07/02/2020 13:41:17 --
+

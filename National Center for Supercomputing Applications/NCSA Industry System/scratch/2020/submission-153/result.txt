@@ -1,0 +1,108 @@
+version         = io500-isc20_v4-1-g18c6d03b40b0
+config-hash     = FD3D34E1
+result-dir      = ./results/2020.07.02-12.32.35-app
+; START 2020-07-02 12:34:46
+
+
+[ior-easy-write]
+t_start         = 2020-07-02 12:34:46
+exe             = ./ior -v -C -Q 1 -g -G 271 -k -e -o /magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-easy/stonewall -t 4m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX
+throughput-stonewall = 514.81
+score           = 9.375578
+t_delta         = 693.1188
+t_end           = 2020-07-02 12:46:19
+
+[mdtest-easy-write]
+t_start         = 2020-07-02 12:46:19
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-easy -x /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 120.614383
+score           = 81.877707
+t_delta         = 567.2596
+t_end           = 2020-07-02 12:55:46
+
+[timestamp]
+t_start         = 2020-07-02 12:55:46
+t_delta         = 0.0007
+t_end           = 2020-07-02 12:55:46
+
+[ior-hard-write]
+t_start         = 2020-07-02 12:55:46
+exe             = ./ior -v -C -Q 1 -g -G 27 -k -e -o /magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-hard/file -O stoneWallingStatusFile=/magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX
+throughput-stonewall = 73.91
+score           = 0.770520
+t_delta         = 300.5216
+t_end           = 2020-07-02 13:00:47
+
+[mdtest-hard-write]
+t_start         = 2020-07-02 13:00:47
+exe             = ./mdtest -n 600000 -t -w 3901 -e 3901 -P -N 1 -F -d /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-hard -x /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 8.709706
+score           = 8.360328
+t_delta         = 399.3945
+t_end           = 2020-07-02 13:07:26
+
+[find]
+t_start         = 2020-07-02 13:07:26
+exe             = ./pfind /magnus/io500/datafiles/2020.07.02-12.32.35-app -newer /magnus/io500/datafiles/2020.07.02-12.32.35-app/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 96
+found           = 94464
+total-files     = 49686918
+score           = 1130.609562
+t_delta         = 44.1302
+t_end           = 2020-07-02 13:08:10
+
+[ior-easy-read]
+t_start         = 2020-07-02 13:08:10
+exe             = ./ior -v -C -Q 1 -g -G 271 -k -e -o /magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-easy/stonewall -t 4m -b 9920000m -F -r -R -a POSIX
+score           = 10.076579
+t_delta         = 644.8307
+t_end           = 2020-07-02 13:18:55
+
+[mdtest-easy-stat]
+t_start         = 2020-07-02 13:18:55
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-easy -x /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-easy-stonewall -T -a POSIX
+score           = 222.295014
+t_delta         = 208.5195
+t_end           = 2020-07-02 13:22:24
+
+[ior-hard-read]
+t_start         = 2020-07-02 13:22:24
+exe             = ./ior -v -C -Q 1 -g -G 27 -k -e -o /magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-hard/file -O stoneWallingStatusFile=/magnus/io500/datafiles/2020.07.02-12.32.35-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a POSIX
+score           = 1.153979
+t_delta         = 200.6580
+t_end           = 2020-07-02 13:25:44
+
+[mdtest-hard-stat]
+t_start         = 2020-07-02 13:25:44
+exe             = ./mdtest -n 600000 -t -w 3901 -e 3901 -P -N 1 -F -d /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-hard -x /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-hard-stonewall -T -a POSIX
+score           = 23.261785
+t_delta         = 143.3606
+t_end           = 2020-07-02 13:28:08
+
+[mdtest-easy-delete]
+t_start         = 2020-07-02 13:28:08
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-easy -x /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-easy-stonewall -r -a POSIX
+score           = 58.882503
+t_delta         = 789.5532
+t_end           = 2020-07-02 13:41:17
+
+[mdtest-hard-read]
+t_start         = 2020-07-02 13:41:17
+exe             = ./mdtest -n 600000 -t -w 3901 -e 3901 -P -N 1 -F -d /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-hard -x /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-hard-stonewall -E -X -a POSIX
+score           = 21.407310
+t_delta         = 155.7833
+t_end           = 2020-07-02 13:43:53
+
+[mdtest-hard-delete]
+t_start         = 2020-07-02 13:43:53
+exe             = ./mdtest -n 600000 -t -w 3901 -e 3901 -P -N 1 -F -d /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-hard -x /magnus/io500/datafiles/2020.07.02-12.32.35-app/mdtest-hard-stonewall -r -a POSIX
+score           = 8.439440
+t_delta         = 395.3641
+t_end           = 2020-07-02 13:50:28
+
+[SCORE]
+MD              = 50.540793
+BW              = 3.027423
+SCORE           = 12.369656 
+hash            = AC4C1A3B
+; END 2020-07-02 13:50:29

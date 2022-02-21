@@ -1,0 +1,107 @@
+version         = io500-isc20_v4-4-g5f3675422b54
+config-hash     = 93A3A972
+result-dir      = /tmp/io500-results/all_240_m35k/2020.10.17-19.02.11-app
+; START 2020-10-17 19:47:41
+
+
+[ior-easy-write]
+t_start         = 2020-10-17 19:47:41
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/ior-easy/stonewall -t 8m -b 299968m -F -w -D 300 -O stoneWallingWearOut=1 -a MPIIO
+throughput-stonewall = 17123.00
+score           = 77.927521
+t_delta         = 346.0424
+t_end           = 2020-10-17 19:53:27
+
+[mdtest-easy-write]
+t_start         = 2020-10-17 19:53:27
+exe             = ./mdtest -n 35000 -u -L -F -P -N 1 -d /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-easy -x /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 4.730757
+score           = 4.461971
+t_delta         = 407.6110
+t_end           = 2020-10-17 20:00:15
+
+[timestamp]
+t_start         = 2020-10-17 20:00:15
+t_delta         = 1.1151
+t_end           = 2020-10-17 20:00:16
+
+[ior-hard-write]
+t_start         = 2020-10-17 20:00:16
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/ior-hard/file -O stoneWallingStatusFile=/var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a MPIIO
+throughput-stonewall = 676.12
+score           = 2.852289
+t_delta         = 308.6370
+t_end           = 2020-10-17 20:05:24
+
+[mdtest-hard-write]
+t_start         = 2020-10-17 20:05:25
+exe             = ./mdtest -n 35000 -t -w 3901 -e 3901 -P -N 1 -F -d /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-hard -x /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 2.283033
+score           = 2.220931
+t_delta         = 340.9704
+t_end           = 2020-10-17 20:11:06
+
+[find]
+t_start         = 2020-10-17 20:11:06
+exe             = ./pfind /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app -newer /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 17596
+total-files     = 2461446
+score           = 163.496717
+t_delta         = 15.1029
+t_end           = 2020-10-17 20:11:21
+
+[ior-easy-read]
+t_start         = 2020-10-17 20:11:21
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/ior-easy/stonewall -t 8m -b 299968m -F -r -R -a MPIIO
+score           = 46.405265
+t_delta         = 579.5138
+t_end           = 2020-10-17 20:21:00
+
+[mdtest-easy-stat]
+t_start         = 2020-10-17 20:21:00
+exe             = ./mdtest -n 35000 -u -L -F -P -N 1 -d /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-easy -x /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-easy-stonewall -T -a POSIX
+score           = 38.379075
+t_delta         = 46.1526
+t_end           = 2020-10-17 20:21:46
+
+[ior-hard-read]
+t_start         = 2020-10-17 20:21:46
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/ior-hard/file -O stoneWallingStatusFile=/var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a MPIIO
+score           = 2.247659
+t_delta         = 391.8735
+t_end           = 2020-10-17 20:28:18
+
+[mdtest-hard-stat]
+t_start         = 2020-10-17 20:28:18
+exe             = ./mdtest -n 35000 -t -w 3901 -e 3901 -P -N 1 -F -d /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-hard -x /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-hard-stonewall -T -a POSIX
+score           = 8.354663
+t_delta         = 85.9155
+t_end           = 2020-10-17 20:29:44
+
+[mdtest-easy-delete]
+t_start         = 2020-10-17 20:29:44
+exe             = ./mdtest -n 35000 -u -L -F -P -N 1 -d /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-easy -x /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-easy-stonewall -r -a POSIX
+score           = 9.594175
+t_delta         = 184.7221
+t_end           = 2020-10-17 20:32:49
+
+[mdtest-hard-read]
+t_start         = 2020-10-17 20:32:49
+exe             = ./mdtest -n 35000 -t -w 3901 -e 3901 -P -N 1 -F -d /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-hard -x /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-hard-stonewall -E -X -a POSIX
+score           = 4.867108
+t_delta         = 146.8201
+t_end           = 2020-10-17 20:35:16
+
+[mdtest-hard-delete]
+t_start         = 2020-10-17 20:35:16
+exe             = ./mdtest -n 35000 -t -w 3901 -e 3901 -P -N 1 -F -d /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-hard -x /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-hard-stonewall -r -a POSIX
+score           = 5.755092
+t_delta         = 127.6174
+t_end           = 2020-10-17 20:37:23
+
+[SCORE]
+MD              = 10.425950
+BW              = 12.339442
+SCORE           = 11.342416 
+hash            = 54C98E5C
+; END 2020-10-17 20:37:37

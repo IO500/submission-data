@@ -1,0 +1,32 @@
+-- started at 10/17/2020 20:29:45 --
+
+mdtest-3.3.0+dev was launched with 240 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '35000' '-u' '-L' '-F' '-P' '-N' '1' '-d' '/var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-easy' '-x' '/var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app/mdtest-easy-stonewall' '-r' '-a' 'POSIX'
+Path: /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-19.02.11-app
+FS: 931.3 TiB   Used FS: 6.0%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+
+Nodemap: 100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 1 for each phase.
+240 tasks, 8400000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :       9594.347       9593.842       9594.166          0.053
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          2.087          2.087          2.087          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        182.317        182.307        182.311          0.001
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.479          0.479          0.479          0.000
+-- finished at 10/17/2020 20:32:49 --
+

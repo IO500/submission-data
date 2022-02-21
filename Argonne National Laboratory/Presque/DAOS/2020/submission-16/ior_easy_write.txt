@@ -1,0 +1,435 @@
+[0] Pool uuid = a04776a5-bd54-4bf9-ae46-c989b9407c8d, SVCL = 1
+
+[0] DFS Container namespace uuid = b0599c58-2822-45b2-9e09-23a335940082
+
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jul 10 10:28:24 2020
+Command line        : /home/kalfizah/io500-new/bin/ior -w -a DFS --dfs.pool=a04776a5-bd54-4bf9-ae46-c989b9407c8d --dfs.cont=b0599c58-2822-45b2-9e09-23a335940082 --dfs.svcl=1 --dfs.prefix=/tmp/dfuse/ -t 256k -v -b 256gm -i 1 -C -Q 1 -g -G 27 -k -e -o /tmp/dfuse/datafiles/2020.07.10-10.28.13-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/tmp/dfuse/datafiles/2020.07.10-10.28.13-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux daos08.ftm.alcf.anl.gov
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Fri Jul 10 10:28:24 2020
+Participating tasks: 380
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /tmp/dfuse/datafiles/2020.07.10-10.28.13-scr/ior_easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 380
+clients per node    : 38
+repetitions         : 1
+xfersize            : 262144 bytes
+blocksize           : 256 GiB
+aggregate filesize  : 95 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Fri Jul 10 10:28:29 2020
+141: stonewalling pairs accessed: 440003
+211: stonewalling pairs accessed: 437569
+341: stonewalling pairs accessed: 438824
+91: stonewalling pairs accessed: 438345
+131: stonewalling pairs accessed: 438870
+231: stonewalling pairs accessed: 439649
+351: stonewalling pairs accessed: 436964
+61: stonewalling pairs accessed: 437655
+101: stonewalling pairs accessed: 439928
+81: stonewalling pairs accessed: 440242
+311: stonewalling pairs accessed: 437492
+371: stonewalling pairs accessed: 437985
+221: stonewalling pairs accessed: 436473
+98: stonewalling pairs accessed: 439614
+271: stonewalling pairs accessed: 438831
+218: stonewalling pairs accessed: 440020
+9: stonewalling pairs accessed: 438587
+67: stonewalling pairs accessed: 440430
+41: stonewalling pairs accessed: 438657
+228: stonewalling pairs accessed: 439195
+69: stonewalling pairs accessed: 436862
+77: stonewalling pairs accessed: 439113
+171: stonewalling pairs accessed: 436534
+298: stonewalling pairs accessed: 438401
+129: stonewalling pairs accessed: 440259
+287: stonewalling pairs accessed: 435842
+301: stonewalling pairs accessed: 439529
+18: stonewalling pairs accessed: 439127
+149: stonewalling pairs accessed: 436361
+26: stonewalling pairs accessed: 437725
+31: stonewalling pairs accessed: 437084
+128: stonewalling pairs accessed: 438476
+249: stonewalling pairs accessed: 440009
+37: stonewalling pairs accessed: 438788
+214: stonewalling pairs accessed: 440502
+356: stonewalling pairs accessed: 438620
+60: stonewalling pairs accessed: 439779
+191: stonewalling pairs accessed: 438065
+148: stonewalling pairs accessed: 437727
+19: stonewalling pairs accessed: 438858
+57: stonewalling pairs accessed: 437579
+284: stonewalling pairs accessed: 436927
+286: stonewalling pairs accessed: 439596
+80: stonewalling pairs accessed: 439984
+71: stonewalling pairs accessed: 437663
+168: stonewalling pairs accessed: 436448
+79: stonewalling pairs accessed: 438892
+87: stonewalling pairs accessed: 436988
+15: stonewalling pairs accessed: 438675
+344: stonewalling pairs accessed: 440248
+316: stonewalling pairs accessed: 438926
+170: stonewalling pairs accessed: 437789
+181: stonewalling pairs accessed: 438470
+78: stonewalling pairs accessed: 439317
+99: stonewalling pairs accessed: 437810
+153: stonewalling pairs accessed: 439718
+177: stonewalling pairs accessed: 440141
+55: stonewalling pairs accessed: 436413
+124: stonewalling pairs accessed: 439473
+56: stonewalling pairs accessed: 439857
+180: stonewalling pairs accessed: 438358
+361: stonewalling pairs accessed: 440754
+28: stonewalling pairs accessed: 438625
+109: stonewalling pairs accessed: 439388
+13: stonewalling pairs accessed: 439419
+277: stonewalling pairs accessed: 438367
+12: stonewalling pairs accessed: 439625
+95: stonewalling pairs accessed: 438242
+264: stonewalling pairs accessed: 438505
+200: stonewalling pairs accessed: 440399
+1: stonewalling pairs accessed: 440331
+208: stonewalling pairs accessed: 437890
+119: stonewalling pairs accessed: 437309
+33: stonewalling pairs accessed: 438915
+307: stonewalling pairs accessed: 439089
+102: stonewalling pairs accessed: 436500
+105: stonewalling pairs accessed: 441316
+334: stonewalling pairs accessed: 439499
+96: stonewalling pairs accessed: 439806
+240: stonewalling pairs accessed: 440163
+11: stonewalling pairs accessed: 438334
+278: stonewalling pairs accessed: 439329
+159: stonewalling pairs accessed: 438929
+173: stonewalling pairs accessed: 439833
+257: stonewalling pairs accessed: 436755
+132: stonewalling pairs accessed: 437745
+205: stonewalling pairs accessed: 438356
+364: stonewalling pairs accessed: 439352
+106: stonewalling pairs accessed: 436560
+270: stonewalling pairs accessed: 437771
+21: stonewalling pairs accessed: 436789
+188: stonewalling pairs accessed: 437741
+199: stonewalling pairs accessed: 438904
+263: stonewalling pairs accessed: 439052
+377: stonewalling pairs accessed: 438634
+362: stonewalling pairs accessed: 440228
+215: stonewalling pairs accessed: 437884
+74: stonewalling pairs accessed: 437744
+166: stonewalling pairs accessed: 436775
+350: stonewalling pairs accessed: 437583
+111: stonewalling pairs accessed: 439932
+318: stonewalling pairs accessed: 438608
+229: stonewalling pairs accessed: 439096
+293: stonewalling pairs accessed: 441665
+7: stonewalling pairs accessed: 440587
+2: stonewalling pairs accessed: 439062
+285: stonewalling pairs accessed: 440702
+204: stonewalling pairs accessed: 439503
+206: stonewalling pairs accessed: 437013
+0: stonewalling pairs accessed: 438474
+151: stonewalling pairs accessed: 434656
+378: stonewalling pairs accessed: 437703
+259: stonewalling pairs accessed: 438141
+363: stonewalling pairs accessed: 437879
+197: stonewalling pairs accessed: 438318
+52: stonewalling pairs accessed: 439502
+355: stonewalling pairs accessed: 439171
+254: stonewalling pairs accessed: 437460
+266: stonewalling pairs accessed: 434874
+20: stonewalling pairs accessed: 439400
+161: stonewalling pairs accessed: 439142
+8: stonewalling pairs accessed: 438012
+269: stonewalling pairs accessed: 437823
+83: stonewalling pairs accessed: 437437
+347: stonewalling pairs accessed: 439030
+62: stonewalling pairs accessed: 439841
+85: stonewalling pairs accessed: 438772
+34: stonewalling pairs accessed: 438650
+376: stonewalling pairs accessed: 438560
+40: stonewalling pairs accessed: 436525
+291: stonewalling pairs accessed: 438211
+138: stonewalling pairs accessed: 440124
+319: stonewalling pairs accessed: 439424
+193: stonewalling pairs accessed: 438550
+137: stonewalling pairs accessed: 437627
+92: stonewalling pairs accessed: 436004
+115: stonewalling pairs accessed: 437853
+54: stonewalling pairs accessed: 438952
+36: stonewalling pairs accessed: 438928
+110: stonewalling pairs accessed: 436384
+121: stonewalling pairs accessed: 441386
+158: stonewalling pairs accessed: 437026
+349: stonewalling pairs accessed: 438311
+233: stonewalling pairs accessed: 438516
+147: stonewalling pairs accessed: 436949
+122: stonewalling pairs accessed: 441164
+265: stonewalling pairs accessed: 438205
+224: stonewalling pairs accessed: 434395
+86: stonewalling pairs accessed: 439940
+120: stonewalling pairs accessed: 437138
+201: stonewalling pairs accessed: 439334
+258: stonewalling pairs accessed: 436931
+289: stonewalling pairs accessed: 441016
+93: stonewalling pairs accessed: 436376
+97: stonewalling pairs accessed: 437829
+192: stonewalling pairs accessed: 439936
+295: stonewalling pairs accessed: 435951
+304: stonewalling pairs accessed: 437778
+116: stonewalling pairs accessed: 436693
+160: stonewalling pairs accessed: 437299
+251: stonewalling pairs accessed: 436788
+268: stonewalling pairs accessed: 439506
+279: stonewalling pairs accessed: 438056
+343: stonewalling pairs accessed: 438324
+117: stonewalling pairs accessed: 439044
+212: stonewalling pairs accessed: 440366
+325: stonewalling pairs accessed: 438210
+24: stonewalling pairs accessed: 437701
+136: stonewalling pairs accessed: 437107
+220: stonewalling pairs accessed: 437810
+241: stonewalling pairs accessed: 438401
+288: stonewalling pairs accessed: 438606
+299: stonewalling pairs accessed: 438939
+63: stonewalling pairs accessed: 438971
+297: stonewalling pairs accessed: 438471
+302: stonewalling pairs accessed: 439206
+275: stonewalling pairs accessed: 439534
+174: stonewalling pairs accessed: 438326
+156: stonewalling pairs accessed: 441809
+310: stonewalling pairs accessed: 439007
+261: stonewalling pairs accessed: 437252
+368: stonewalling pairs accessed: 439023
+369: stonewalling pairs accessed: 436934
+353: stonewalling pairs accessed: 438837
+27: stonewalling pairs accessed: 439255
+322: stonewalling pairs accessed: 439851
+135: stonewalling pairs accessed: 439296
+194: stonewalling pairs accessed: 438877
+306: stonewalling pairs accessed: 439494
+360: stonewalling pairs accessed: 440174
+281: stonewalling pairs accessed: 439298
+58: stonewalling pairs accessed: 440605
+219: stonewalling pairs accessed: 439106
+373: stonewalling pairs accessed: 438587
+167: stonewalling pairs accessed: 438875
+82: stonewalling pairs accessed: 438031
+165: stonewalling pairs accessed: 439865
+294: stonewalling pairs accessed: 436095
+366: stonewalling pairs accessed: 437465
+90: stonewalling pairs accessed: 439280
+321: stonewalling pairs accessed: 438730
+238: stonewalling pairs accessed: 437329
+139: stonewalling pairs accessed: 440435
+23: stonewalling pairs accessed: 438565
+317: stonewalling pairs accessed: 439331
+182: stonewalling pairs accessed: 438991
+35: stonewalling pairs accessed: 437647
+154: stonewalling pairs accessed: 438496
+146: stonewalling pairs accessed: 436989
+300: stonewalling pairs accessed: 438481
+51: stonewalling pairs accessed: 436264
+248: stonewalling pairs accessed: 438054
+359: stonewalling pairs accessed: 439842
+43: stonewalling pairs accessed: 439996
+17: stonewalling pairs accessed: 438567
+202: stonewalling pairs accessed: 438560
+75: stonewalling pairs accessed: 437610
+184: stonewalling pairs accessed: 436786
+216: stonewalling pairs accessed: 438529
+50: stonewalling pairs accessed: 438009
+331: stonewalling pairs accessed: 439658
+328: stonewalling pairs accessed: 437597
+59: stonewalling pairs accessed: 437117
+53: stonewalling pairs accessed: 440991
+267: stonewalling pairs accessed: 436667
+252: stonewalling pairs accessed: 439294
+175: stonewalling pairs accessed: 437541
+244: stonewalling pairs accessed: 438336
+256: stonewalling pairs accessed: 438748
+330: stonewalling pairs accessed: 438889
+108: stonewalling pairs accessed: 438997
+169: stonewalling pairs accessed: 439148
+283: stonewalling pairs accessed: 436489
+337: stonewalling pairs accessed: 436459
+312: stonewalling pairs accessed: 439308
+195: stonewalling pairs accessed: 438533
+324: stonewalling pairs accessed: 438273
+16: stonewalling pairs accessed: 439360
+150: stonewalling pairs accessed: 437074
+358: stonewalling pairs accessed: 437394
+179: stonewalling pairs accessed: 437515
+123: stonewalling pairs accessed: 439986
+357: stonewalling pairs accessed: 439815
+162: stonewalling pairs accessed: 439282
+225: stonewalling pairs accessed: 437089
+4: stonewalling pairs accessed: 438360
+46: stonewalling pairs accessed: 438330
+340: stonewalling pairs accessed: 438298
+178: stonewalling pairs accessed: 437275
+329: stonewalling pairs accessed: 437897
+163: stonewalling pairs accessed: 437097
+207: stonewalling pairs accessed: 435518
+42: stonewalling pairs accessed: 436615
+25: stonewalling pairs accessed: 440180
+44: stonewalling pairs accessed: 436411
+326: stonewalling pairs accessed: 435691
+280: stonewalling pairs accessed: 440370
+48: stonewalling pairs accessed: 437973
+49: stonewalling pairs accessed: 436862
+213: stonewalling pairs accessed: 440993
+157: stonewalling pairs accessed: 438636
+72: stonewalling pairs accessed: 438954
+65: stonewalling pairs accessed: 439381
+94: stonewalling pairs accessed: 438891
+346: stonewalling pairs accessed: 438132
+10: stonewalling pairs accessed: 442037
+338: stonewalling pairs accessed: 439474
+189: stonewalling pairs accessed: 437465
+243: stonewalling pairs accessed: 439080
+247: stonewalling pairs accessed: 438502
+32: stonewalling pairs accessed: 436138
+315: stonewalling pairs accessed: 437497
+114: stonewalling pairs accessed: 436900
+176: stonewalling pairs accessed: 440217
+30: stonewalling pairs accessed: 436376
+88: stonewalling pairs accessed: 439780
+29: stonewalling pairs accessed: 435548
+273: stonewalling pairs accessed: 440875
+217: stonewalling pairs accessed: 440158
+112: stonewalling pairs accessed: 440045
+375: stonewalling pairs accessed: 437041
+314: stonewalling pairs accessed: 438172
+226: stonewalling pairs accessed: 436552
+70: stonewalling pairs accessed: 437572
+308: stonewalling pairs accessed: 437989
+209: stonewalling pairs accessed: 439058
+3: stonewalling pairs accessed: 438572
+237: stonewalling pairs accessed: 438559
+292: stonewalling pairs accessed: 441369
+145: stonewalling pairs accessed: 441035
+274: stonewalling pairs accessed: 440699
+76: stonewalling pairs accessed: 440062
+100: stonewalling pairs accessed: 439001
+348: stonewalling pairs accessed: 441968
+379: stonewalling pairs accessed: 437691
+73: stonewalling pairs accessed: 438515
+367: stonewalling pairs accessed: 438374
+342: stonewalling pairs accessed: 437524
+235: stonewalling pairs accessed: 438867
+144: stonewalling pairs accessed: 436347
+336: stonewalling pairs accessed: 439937
+130: stonewalling pairs accessed: 437393
+118: stonewalling pairs accessed: 438808
+39: stonewalling pairs accessed: 438913
+313: stonewalling pairs accessed: 438412
+227: stonewalling pairs accessed: 437622
+352: stonewalling pairs accessed: 437951
+125: stonewalling pairs accessed: 441114
+374: stonewalling pairs accessed: 436306
+66: stonewalling pairs accessed: 438700
+140: stonewalling pairs accessed: 439642
+89: stonewalling pairs accessed: 439312
+333: stonewalling pairs accessed: 439488
+47: stonewalling pairs accessed: 439263
+142: stonewalling pairs accessed: 439779
+335: stonewalling pairs accessed: 437827
+104: stonewalling pairs accessed: 437528
+126: stonewalling pairs accessed: 436049
+190: stonewalling pairs accessed: 439290
+38: stonewalling pairs accessed: 438126
+223: stonewalling pairs accessed: 438863
+107: stonewalling pairs accessed: 436485
+282: stonewalling pairs accessed: 438251
+155: stonewalling pairs accessed: 437807
+234: stonewalling pairs accessed: 435430
+186: stonewalling pairs accessed: 436442
+210: stonewalling pairs accessed: 440793
+103: stonewalling pairs accessed: 437118
+127: stonewalling pairs accessed: 439375
+172: stonewalling pairs accessed: 436463
+255: stonewalling pairs accessed: 438598
+14: stonewalling pairs accessed: 436689
+276: stonewalling pairs accessed: 437977
+230: stonewalling pairs accessed: 440760
+253: stonewalling pairs accessed: 438183
+222: stonewalling pairs accessed: 440004
+365: stonewalling pairs accessed: 441315
+134: stonewalling pairs accessed: 440012
+246: stonewalling pairs accessed: 438966
+250: stonewalling pairs accessed: 437687
+303: stonewalling pairs accessed: 436544
+242: stonewalling pairs accessed: 441262
+245: stonewalling pairs accessed: 439081
+64: stonewalling pairs accessed: 438199
+296: stonewalling pairs accessed: 438183
+290: stonewalling pairs accessed: 439543
+198: stonewalling pairs accessed: 435113
+133: stonewalling pairs accessed: 439510
+22: stonewalling pairs accessed: 436832
+345: stonewalling pairs accessed: 440983
+164: stonewalling pairs accessed: 440169
+196: stonewalling pairs accessed: 437623
+320: stonewalling pairs accessed: 436917
+143: stonewalling pairs accessed: 435646
+232: stonewalling pairs accessed: 437734
+185: stonewalling pairs accessed: 440344
+236: stonewalling pairs accessed: 437037
+370: stonewalling pairs accessed: 438592
+203: stonewalling pairs accessed: 438974
+262: stonewalling pairs accessed: 439397
+6: stonewalling pairs accessed: 437020
+260: stonewalling pairs accessed: 438454
+113: stonewalling pairs accessed: 439686
+332: stonewalling pairs accessed: 437195
+339: stonewalling pairs accessed: 437012
+323: stonewalling pairs accessed: 438329
+152: stonewalling pairs accessed: 440687
+84: stonewalling pairs accessed: 439826
+272: stonewalling pairs accessed: 437669
+239: stonewalling pairs accessed: 438661
+187: stonewalling pairs accessed: 437956
+45: stonewalling pairs accessed: 440449
+309: stonewalling pairs accessed: 437529
+5: stonewalling pairs accessed: 440252
+305: stonewalling pairs accessed: 440316
+372: stonewalling pairs accessed: 438749
+68: stonewalling pairs accessed: 439289
+327: stonewalling pairs accessed: 436718
+183: stonewalling pairs accessed: 437400
+354: stonewalling pairs accessed: 435951
+stonewalling pairs accessed min: 434395 max: 442037 -- min data: 106.1 GiB mean data: 107.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 104453604638720.
+WARNING: Stat() of aggregate file size      = 104294604079104.
+WARNING: Using actual aggregate bytes moved = 44033391984640.
+WARNING: maybe caused by deadlineForStonewalling
+write     136479     554219     0.000288    268435456  256.00     4.61       303.08     0.000837   307.69     0   
+Max Write: 136479.06 MiB/sec (143108.66 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write      136479.06  136479.06  136479.06       0.00  545916.23  545916.23  545916.23       0.00  307.69201     300.00     138857.10     0    380  38    1   0     1        1         0    0      1 274877906944   262144 41993516.0 DFS      0
+Finished            : Fri Jul 10 10:33:33 2020
+[0] Disconnecting from DAOS POOL
+
+[0] Finalizing DAOS..
+

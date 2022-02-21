@@ -1,0 +1,116 @@
+[node0139.palmetto.clemson.edu:12165] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0046.palmetto.clemson.edu:81401] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1868.palmetto.clemson.edu:15208] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0200.palmetto.clemson.edu:35522] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0175.palmetto.clemson.edu:57452] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1821.palmetto.clemson.edu:09436] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1878.palmetto.clemson.edu:02264] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1870.palmetto.clemson.edu:79873] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1823.palmetto.clemson.edu:104181] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1882.palmetto.clemson.edu:43929] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1113.palmetto.clemson.edu:04609] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1822.palmetto.clemson.edu:32244] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1872.palmetto.clemson.edu:42470] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1811.palmetto.clemson.edu:114995] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1881.palmetto.clemson.edu:45838] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1805.palmetto.clemson.edu:72957] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1189.palmetto.clemson.edu:05319] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1814.palmetto.clemson.edu:59843] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1812.palmetto.clemson.edu:40016] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1869.palmetto.clemson.edu:116990] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0121.palmetto.clemson.edu:114998] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1875.palmetto.clemson.edu:99741] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1873.palmetto.clemson.edu:115809] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1825.palmetto.clemson.edu:86937] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1810.palmetto.clemson.edu:111087] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1883.palmetto.clemson.edu:117134] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1806.palmetto.clemson.edu:117537] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1880.palmetto.clemson.edu:103320] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0145.palmetto.clemson.edu:50202] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1826.palmetto.clemson.edu:19184] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1824.palmetto.clemson.edu:36968] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1808.palmetto.clemson.edu:02919] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1827.palmetto.clemson.edu:27145] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1831.palmetto.clemson.edu:64141] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1874.palmetto.clemson.edu:81319] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1829.palmetto.clemson.edu:76081] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1813.palmetto.clemson.edu:96049] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1871.palmetto.clemson.edu:50398] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1815.palmetto.clemson.edu:47335] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0653.palmetto.clemson.edu:86380] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1819.palmetto.clemson.edu:67955] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1818.palmetto.clemson.edu:101070] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1816.palmetto.clemson.edu:05930] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1832.palmetto.clemson.edu:22882] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1877.palmetto.clemson.edu:98198] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1830.palmetto.clemson.edu:13745] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1876.palmetto.clemson.edu:07702] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1820.palmetto.clemson.edu:70811] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+-- started at 10/22/2018 15:11:28 --
+
+mdtest-1.9.3 was launched with 48 total task(s) on 48 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-F" "-d" "/scratch1b/jburto2/io500/datafiles/io500.2018.10.22-15.05.46/mdt_easy" "-n" "800000" "-u" "-L" "-x" "/scratch1b/jburto2/io500/datafiles/io500.2018.10.22-15.05.46/mdt_easy-stonewall" "-W" "300"
+Path: /scratch1b/jburto2/io500/datafiles/io500.2018.10.22-15.05.46
+FS: 232.8 TiB   Used FS: 19.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+48 tasks, 38400000 files
+stonewall rank 2: 365899 of 426296 
+stonewall rank 1: 367920 of 426296 
+Continue stonewall hit min: 345019 max: 426296 avg: 369700.9 
+stonewall rank 0: 363924 of 426296 
+stonewall rank 6: 364395 of 426296 
+stonewall rank 33: 384923 of 426296 
+stonewall rank 4: 353476 of 426296 
+stonewall rank 8: 352472 of 426296 
+stonewall rank 10: 383260 of 426296 
+stonewall rank 3: 348641 of 426296 
+stonewall rank 32: 364769 of 426296 
+stonewall rank 12: 377759 of 426296 
+stonewall rank 16: 372395 of 426296 
+stonewall rank 34: 362693 of 426296 
+stonewall rank 5: 380880 of 426296 
+stonewall rank 28: 359145 of 426296 
+stonewall rank 24: 351281 of 426296 
+stonewall rank 14: 355972 of 426296 
+stonewall rank 7: 374958 of 426296 
+stonewall rank 20: 380476 of 426296 
+stonewall rank 40: 377826 of 426296 
+stonewall rank 9: 381592 of 426296 
+stonewall rank 36: 358481 of 426296 
+stonewall rank 13: 350032 of 426296 
+stonewall rank 11: 387028 of 426296 
+stonewall rank 44: 379229 of 426296 
+stonewall rank 18: 379020 of 426296 
+stonewall rank 17: 378190 of 426296 
+stonewall rank 22: 378744 of 426296 
+stonewall rank 37: 376400 of 426296 
+stonewall rank 38: 388604 of 426296 
+stonewall rank 35: 362143 of 426296 
+stonewall rank 26: 365122 of 426296 
+stonewall rank 21: 362761 of 426296 
+stonewall rank 30: 345019 of 426296 
+stonewall rank 15: 378908 of 426296 
+stonewall rank 42: 382297 of 426296 
+stonewall rank 25: 379974 of 426296 
+stonewall rank 46: 355382 of 426296 
+stonewall rank 29: 353319 of 426296 
+stonewall rank 45: 381085 of 426296 
+stonewall rank 41: 347841 of 426296 
+stonewall rank 23: 367509 of 426296 
+stonewall rank 39: 352936 of 426296 
+stonewall rank 43: 347606 of 426296 
+stonewall rank 19: 373442 of 426296 
+stonewall rank 27: 381777 of 426296 
+stonewall rank 31: 381842 of 426296 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :     103110.190     103110.190     103110.190          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          7.210          7.210          7.210          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 10/22/2018 15:17:40 --

@@ -1,0 +1,370 @@
+[loadgen1:4531][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen1:4533][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen1:4535][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen1:4532][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen1:4534][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen1:4536][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen1:4530][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen1:04531] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen1:04533] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen1:04535] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen1:04534] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen1:04532] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen1:04536] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen1:04530] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen10:9125][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen10:9121][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10182][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen7:9366][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen10:9123][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10180][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen7:9362][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen5:10248][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10179][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen7:9363][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen5:10246][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen8:8977][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen9:9214][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10183][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen7:9361][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen5:10244][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen8:8975][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen9:9213][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen10:9122][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen4:10460][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen6:9159][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen11:8876][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10178][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen7:9367][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen5:10250][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen8:8979][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen9:9211][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen10:9124][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen4:10456][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen6:9163][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen11:8878][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10181][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen7:9365][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen5:10247][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen8:8974][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen9:9217][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen10:9120][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen4:10462][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen6:9162][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen11:8874][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10177][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen7:9364][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen5:10245][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen8:8980][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen9:9216][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen10:9126][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen4:10458][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen6:9164][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen11:8877][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10179] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen7:09366] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen5:10249][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen8:8978][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen9:9215][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen10:09125] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10459][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen6:9160][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen11:8875][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10177] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen7:09363] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen5:10244] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen8:8976][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen9:9212][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen10:09121] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10457][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen6:9161][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen11:8879][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10182] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen7:09361] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen5:10246] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen8:08977] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen9:09216] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen10:09123] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10461][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen6:9158][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen11:8873][coll_ml_mca.c:239:set_hcoll_device] COLL-ML You must specify a valid HCA device by setting:
+-x HCOLL_MAIN_IB=<dev_name:port> or -x MXM_RDMA_PORTS=<dev_name:port>.
+If no device was specified for HCOLL (or the calling library), automatic device detection will be run.
+In case of unfounded HCA device please contact your system administrator.
+[loadgen2:10178] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen7:09362] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen5:10248] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen8:08975] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen9:09212] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen10:09120] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10462] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen6:09159] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen11:08874] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen2:10180] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen7:09364] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen5:10250] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen8:08979] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen9:09211] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen10:09122] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10458] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen6:09164] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen11:08876] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen2:10183] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen7:09367] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen5:10245] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen8:08974] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen9:09215] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen10:09124] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10459] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen6:09160] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen11:08879] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen2:10181] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen7:09365] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen5:10247] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen8:08978] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen9:09213] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen10:09126] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10457] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen6:09162] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen11:08875] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen5:10249] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen8:08980] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen9:09217] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10460] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen6:09163] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen11:08877] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen8:08976] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen9:09214] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10461] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen6:09158] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen11:08873] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen4:10456] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen6:09161] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+[loadgen11:08878] Error: coll_hcoll_module.c:301 - mca_coll_hcoll_comm_query() Hcol library init failed
+-- started at 05/29/2019 07:49:21 --
+
+mdtest-1.9.3 was launched with 70 total task(s) on 10 node(s)
+Command line used: /mnt/cephfs/io-500-dev/bin/mdtest "-T" "-F" "-d" "/mnt/cephfs/datafiles/io500.2019.05.29-06.49.36/mdt_easy" "-n" "60000" "-u" "-L" "-x" "/mnt/cephfs/datafiles/io500.2019.05.29-06.49.36/mdt_easy-stonewall"
+Path: /mnt/cephfs/datafiles/io500.2019.05.29-06.49.36
+FS: 48.3 TiB   Used FS: 6.6%   Inodes: 8.0 Mi   Used Inodes: 100.0%
+
+70 tasks, 4200000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :      36685.023      36682.322      36683.988          0.695
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 05/29/2019 07:51:16 --

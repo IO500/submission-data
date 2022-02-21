@@ -1,0 +1,25 @@
+IO500 version io500-sc21 (extended)
+[RESULT]       ior-easy-write        3.261078 GiB/s : time 616.367 seconds
+[RESULT]      ior-rnd4K-write        0.266235 GiB/s : time 1377.404 seconds
+[RESULT]    mdtest-easy-write       52.889747 kIOPS : time 520.299 seconds
+[RESULT]     ior-rnd1MB-write        3.126215 GiB/s : time 1134.083 seconds
+[      ]   mdworkbench-create       52.929486 kIOPS : time 60.525 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.002 seconds
+[RESULT]            find-easy      943.351165 kIOPS : time 29.115 seconds
+[RESULT]       ior-hard-write        0.348750 GiB/s : time 1027.660 seconds
+[RESULT]    mdtest-hard-write       11.789431 kIOPS : time 322.019 seconds
+[RESULT]                 find      597.201043 kIOPS : time 57.647 seconds
+[RESULT]       ior-rnd4K-read        0.814371 GiB/s : time 450.306 seconds
+[RESULT]      ior-rnd1MB-read        6.661937 GiB/s : time 532.189 seconds
+[RESULT]            find-hard       63.300354 kIOPS : time 59.790 seconds
+[RESULT]    mdworkbench-bench      112.565760 kIOPS : time 232.559 seconds
+[RESULT]        ior-easy-read        8.852841 GiB/s : time 226.967 seconds
+[RESULT]     mdtest-easy-stat      309.023172 kIOPS : time 89.885 seconds
+[RESULT]        ior-hard-read        4.762372 GiB/s : time 75.272 seconds
+[RESULT]     mdtest-hard-stat       76.652839 kIOPS : time 50.387 seconds
+[      ]   mdworkbench-delete       68.198034 kIOPS : time 48.015 seconds
+[RESULT]   mdtest-easy-delete       58.292741 kIOPS : time 486.268 seconds
+[RESULT]     mdtest-hard-read       25.880817 kIOPS : time 147.242 seconds
+[RESULT]   mdtest-hard-delete       12.372046 kIOPS : time 310.499 seconds
+[SCORE ] Bandwidth 2.631452 GiB/s : IOPS 59.850429 kiops : TOTAL 12.549643
+[SCOREX] Bandwidth 1.958556 GiB/s : IOPS 81.864024 kiops : TOTAL 12.662357

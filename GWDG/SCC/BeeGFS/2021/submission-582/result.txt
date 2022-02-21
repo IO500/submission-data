@@ -1,0 +1,198 @@
+[run]
+version         = io500-sc21
+config-hash     = 6B10B5F4
+result-dir      = ./results/2021.10.24-18.15.48
+mode            = extended
+; START 2021-10-24 18:15:50
+
+
+[ior-easy-write]
+t_start         = 2021-10-24 18:15:50
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746546058 -k -e -o /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-easy-write.csv
+throughput-stonewall = 3.68
+score           = 3.261078
+t_delta         = 616.3666
+t_end           = 2021-10-24 18:26:06
+
+[ior-rnd4K-write]
+t_start         = 2021-10-24 18:26:06
+exe             = ./ior --dataPacketType=timestamp -Q=1 -g -G=-165566190 -z --random-offset-seed=123 -e -o=/scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-rnd4K/file -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-rnd4K.stonewall -k -t=4096 -b=1073741824 -s=10000000 -w -D 300 -a POSIX -O stoneWallingWearOut=1 -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-rnd4K-write.csv
+throughput-stonewall = 0.36
+score           = 0.266235
+t_delta         = 1377.4042
+t_end           = 2021-10-24 18:49:04
+
+[mdtest-easy-write]
+t_start         = 2021-10-24 18:49:04
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1632723852 -N 1 -d /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-easy -x ./results/2021.10.24-18.15.48/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2021.10.24-18.15.48/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 68.909961
+score           = 52.889747
+t_delta         = 520.2985
+t_end           = 2021-10-24 18:57:44
+
+[ior-rnd1MB-write]
+t_start         = 2021-10-24 18:57:44
+exe             = ./ior --dataPacketType=timestamp -Q=1 -g -G=1836937197 -z --random-offset-seed=11 -e -o=/scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-rnd1MB/file -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-rnd1MB.stonewall -k -t=1048576 -b=1073741824 -s=10000000 -w -D 300 -a POSIX -O stoneWallingWearOut=1 -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-rnd1MB-write.csv
+throughput-stonewall = 3.11
+score           = 3.126215
+t_delta         = 1134.0833
+t_end           = 2021-10-24 19:16:38
+
+[mdworkbench-create]
+t_start         = 2021-10-24 19:16:38
+filesPerProc    = 3966
+precreatePerSet = 3966
+exe             = ./md-workbench --dataPacketType=timestamp --process-reports -a POSIX -o=/scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2021.10.24-18.15.48/mdworkbench.status -D=10 -G=-676215982 -P=3966 -I=3966 -1
+maxOpTime       = 6.613149
+score           = 52.929486
+t_delta         = 60.5246
+t_end           = 2021-10-24 19:17:39
+
+[timestamp]
+t_start         = 2021-10-24 19:17:39
+t_delta         = 0.0015
+t_end           = 2021-10-24 19:17:39
+
+[find-easy]
+t_start         = 2021-10-24 19:17:39
+exe             = ./pfind /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-easy/ -name *01* -C -q 10000
+nproc           = 80
+found           = 1053440
+total-files     = 27462000
+score           = 943.351165
+t_delta         = 29.1153
+t_end           = 2021-10-24 19:18:08
+
+[ior-hard-write]
+t_start         = 2021-10-24 19:18:08
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746556746 -k -e -o /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-hard/file -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.27
+score           = 0.348750
+t_delta         = 1027.6603
+t_end           = 2021-10-24 19:35:15
+
+[mdtest-hard-write]
+t_start         = 2021-10-24 19:35:15
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1632734540 -N 1 -F -d /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-hard -x ./results/2021.10.24-18.15.48/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2021.10.24-18.15.48/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 12.076045
+score           = 11.789431
+t_delta         = 322.0195
+t_end           = 2021-10-24 19:40:37
+
+[find]
+t_start         = 2021-10-24 19:40:37
+exe             = ./pfind /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48 -newer ./results/2021.10.24-18.15.48/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 80
+found           = 162320
+total-files     = 34419203
+score           = 597.201043
+t_delta         = 57.6465
+t_end           = 2021-10-24 19:41:35
+
+[ior-rnd4K-read]
+t_start         = 2021-10-24 19:41:35
+exe             = ./ior --dataPacketType=timestamp -Q=1 -g -G=-165566190 -z --random-offset-seed=123 -e -o=/scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-rnd4K/file -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-rnd4K.stonewall -k -t=4096 -b=1073741824 -s=10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-rnd4K-read.csv
+score           = 0.814371
+t_delta         = 450.3055
+t_end           = 2021-10-24 19:49:05
+
+[ior-rnd1MB-read]
+t_start         = 2021-10-24 19:49:05
+exe             = ./ior --dataPacketType=timestamp -Q=1 -g -G=1836937197 -z --random-offset-seed=11 -e -o=/scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-rnd1MB/file -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-rnd1MB.stonewall -k -t=1048576 -b=1073741824 -s=10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-rnd1MB-read.csv
+score           = 6.661937
+t_delta         = 532.1891
+t_end           = 2021-10-24 19:57:58
+
+[find-hard]
+t_start         = 2021-10-24 19:57:58
+exe             = ./pfind /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-hard/ -newer ./results/2021.10.24-18.15.48/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 80
+found           = 107120
+total-files     = 3784320
+score           = 63.300354
+t_delta         = 59.7903
+t_end           = 2021-10-24 19:58:57
+
+[mdworkbench-bench]
+t_start         = 2021-10-24 19:58:57
+filesPerProc    = 3966
+precreatePerSet = 3966
+exe             = ./md-workbench --dataPacketType=timestamp --process-reports -a POSIX -o=/scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2021.10.24-18.15.48/mdworkbench.status -D=10 -G=-676215982 -P=3966 -I=3966 -2 -R=2 -X
+maxOpTime       = 0.357571
+scoreIteration0 = 112.515927
+maxOpTime0      = 0.407098
+score           = 112.565760
+t_delta         = 232.5593
+t_end           = 2021-10-24 20:02:50
+
+[ior-easy-read]
+t_start         = 2021-10-24 20:02:50
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746546058 -k -e -o /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-easy-read.csv
+score           = 8.852841
+t_delta         = 226.9672
+t_end           = 2021-10-24 20:06:37
+
+[mdtest-easy-stat]
+t_start         = 2021-10-24 20:06:37
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1632723852 -N 1 -d /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-easy -x ./results/2021.10.24-18.15.48/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2021.10.24-18.15.48/mdtest-easy-stat.csv -a POSIX
+score           = 309.023172
+t_delta         = 89.8853
+t_end           = 2021-10-24 20:08:07
+
+[ior-hard-read]
+t_start         = 2021-10-24 20:08:07
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746556746 -k -e -o /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-hard/file -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-hard-read.csv
+score           = 4.762372
+t_delta         = 75.2723
+t_end           = 2021-10-24 20:09:22
+
+[mdtest-hard-stat]
+t_start         = 2021-10-24 20:09:22
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1632734540 -N 1 -F -d /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-hard -x ./results/2021.10.24-18.15.48/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2021.10.24-18.15.48/mdtest-hard-stat.csv -a POSIX
+score           = 76.652839
+t_delta         = 50.3869
+t_end           = 2021-10-24 20:10:12
+
+[mdworkbench-delete]
+t_start         = 2021-10-24 20:10:12
+filesPerProc    = 3966
+precreatePerSet = 3966
+exe             = ./md-workbench --dataPacketType=timestamp --process-reports -a POSIX -o=/scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2021.10.24-18.15.48/mdworkbench.status -D=10 -G=-676215982 -P=3966 -I=3966 -3
+maxOpTime       = 0.376556
+score           = 68.198034
+t_delta         = 48.0155
+t_end           = 2021-10-24 20:11:00
+
+[mdtest-easy-delete]
+t_start         = 2021-10-24 20:11:00
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1632723852 -N 1 -d /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-easy -x ./results/2021.10.24-18.15.48/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2021.10.24-18.15.48/mdtest-easy-delete.csv -a POSIX
+score           = 58.292741
+t_delta         = 486.2678
+t_end           = 2021-10-24 20:19:07
+
+[mdtest-hard-read]
+t_start         = 2021-10-24 20:19:07
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1632734540 -N 1 -F -d /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-hard -x ./results/2021.10.24-18.15.48/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2021.10.24-18.15.48/mdtest-hard-read.csv -a POSIX
+score           = 25.880817
+t_delta         = 147.2420
+t_end           = 2021-10-24 20:21:34
+
+[mdtest-hard-delete]
+t_start         = 2021-10-24 20:21:34
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1632734540 -N 1 -F -d /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/mdtest-hard -x ./results/2021.10.24-18.15.48/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2021.10.24-18.15.48/mdtest-hard-delete.csv -a POSIX
+score           = 12.372046
+t_delta         = 310.4986
+t_end           = 2021-10-24 20:26:44
+
+[SCORE]
+MD              = 59.850429
+BW              = 2.631452
+SCORE           = 12.549643
+hash            = D9B2B24E
+
+[SCOREX]
+MD              = 81.864024
+BW              = 1.958556
+SCORE           = 12.662357
+hash            = 5640BB11
+; END 2021-10-24 20:26:45

@@ -1,0 +1,38 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct 24 18:57:44 2021
+Command line        : ./ior --dataPacketType=timestamp -Q=1 -g -G=1836937197 -z --random-offset-seed=11 -e -o=/scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-rnd1MB/file -O stoneWallingStatusFile=./results/2021.10.24-18.15.48/ior-rnd1MB.stonewall -k -t=1048576 -b=1073741824 -s=10000000 -w -D 300 -a POSIX -O stoneWallingWearOut=1 -O saveRankPerformanceDetailsCSV=./results/2021.10.24-18.15.48/ior-rnd1MB-write.csv
+Machine             : Linux amp049
+TestID              : 0
+StartTime           : Sun Oct 24 18:57:44 2021
+Path                : /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-rnd1MB/file
+FS                  : 2091.2 TiB   Used FS: 15.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch1/fast/jkunkel1/io500/2021.10.24-18.15.48/ior-rnd1MB/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : no tasks offsets
+nodes               : 10
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 1 GiB
+aggregate filesize  : 781250 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1947 max: 45379 -- min data: 1.9 GiB mean data: 11.7 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 858993459200000000
+WARNING: Stat() of aggregate file size      = 4123157069824
+WARNING: Using actual aggregate bytes moved = 3806666424320
+WARNING: Maybe caused by deadlineForStonewalling
+write     3201.24    3201.26    1.04        1048576    1024.00    0.005129   1134.03    0.002295   1134.03    0   

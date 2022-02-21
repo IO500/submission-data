@@ -1,0 +1,20 @@
+-- started at 10/15/2018 10:40:04 --
+
+mdtest-1.9.3 was launched with 2 total task(s) on 1 node(s)
+Command line used: /ddn/benchmark/io-500-dev/bin/mdtest "-T" "-F" "-d" "/ddn/benchmark/io-500-dev/datafiles/io500.2018.10.15-10.00.59/mdt_easy" "-n" "25000000" "-u" "-L" "-x" "/ddn/benchmark/io-500-dev/datafiles/io500.2018.10.15-10.00.59/mdt_easy-stonewall"
+Path: /ddn/benchmark/io-500-dev/datafiles/io500.2018.10.15-10.00.59
+FS: 697.5 TiB   Used FS: 20.6%   Inodes: 133.0 Mi   Used Inodes: 3.0%
+
+2 tasks, 50000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :       3337.001       3337.001       3337.001          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 10/15/2018 10:47:05 --

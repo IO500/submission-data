@@ -1,0 +1,43 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jul  6 21:43:56 2020
+Command line        : /opt/software/rsc/io500-2020-spring/io500-app/bin/ior -r -R -s 110000 -a MPIIO --posix.odirect -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /lustre/stor1/io500/2020.07.06-20.43.13-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/lustre/stor1/io500/2020.07.06-20.43.13-scr/ior_hard/stonewall
+Machine             : Linux n02p001.gvr.local
+Start time skew across all tasks: 132605.10 sec
+TestID              : 0
+StartTime           : Mon Jul  6 21:43:56 2020
+Path                : /lustre/stor1/io500/2020.07.06-20.43.13-scr/ior_hard
+FS                  : 259.3 TiB   Used FS: 28.0%   Inodes: 1204.8 Mi   Used Inodes: 16.0%
+Participating tasks: 800
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /lustre/stor1/io500/2020.07.06-20.43.13-scr/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 110000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 50
+tasks               : 800
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 3.76 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing read performance test: Mon Jul  6 21:44:56 2020
+
+read      11451      308850     284.23      45.91      45.91      59.06      284.93     0.836845   344.51     0   
+Max Read:  11451.14 MiB/sec (12007.39 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        11451.14   11451.14   11451.14       0.00  255432.95  255432.95  255432.95       0.00  344.51311         NA            NA     0    800  16    1   0     1        1         0    0 110000    47008    47008 3945068.2 MPIIO      0
+Finished            : Mon Jul  6 21:49:50 2020

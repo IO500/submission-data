@@ -1,0 +1,14 @@
+IO500 version io500-isc20-38
+[RESULT]       ior-easy-write       96.779205 GiB/s  : time 372.559 seconds
+[RESULT]    mdtest-easy-write     4835.237478 kIOPS : time 321.197 seconds
+[RESULT]       ior-hard-write       82.725127 GiB/s  : time 384.123 seconds
+[RESULT]    mdtest-hard-write     2323.149744 kIOPS : time 319.740 seconds
+[RESULT]                 find     2646.562830 kIOPS : time 322.668 seconds
+[RESULT]        ior-easy-read       70.653964 GiB/s  : time 508.045 seconds
+[RESULT]     mdtest-easy-stat     4653.560522 kIOPS : time 330.711 seconds
+[RESULT]        ior-hard-read       67.034327 GiB/s  : time 472.720 seconds
+[RESULT]     mdtest-hard-stat     3971.627163 kIOPS : time 189.336 seconds
+[RESULT]   mdtest-easy-delete     2787.233994 kIOPS : time 557.349 seconds
+[RESULT]     mdtest-hard-read     3206.315125 kIOPS : time 233.668 seconds
+[RESULT]   mdtest-hard-delete     2710.679267 kIOPS : time 1797.298 seconds
+[SCORE] Bandwidth 78.471747 GB/s : IOPS 3277.355885 kiops : TOTAL 507.129018

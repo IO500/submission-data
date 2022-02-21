@@ -1,0 +1,46 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jul 10 17:29:02 2020
+Command line        : /scratch/prjssisd/andrercsd/teste-parallel-io/io-500/2020/io500-app.intel.2018/bin/ior -r -R -a POSIX -t 4m -v -b 992000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o ./posix+striping+4mb_tx_easy/datafiles/2020.07.10-16.18.50-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=./posix+striping+4mb_tx_easy/datafiles/2020.07.10-16.18.50-scr/ior_easy/stonewall
+Machine             : Linux sdumont5000
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Fri Jul 10 17:29:02 2020
+Path                : /scratch/prjssisd/andrercsd/teste-parallel-io/io-500/2020/io500-app.intel.2018/posix+striping+4mb_tx_easy/datafiles/2020.07.10-16.18.50-scr/ior_easy
+FS                  : 1680.3 TiB   Used FS: 46.2%   Inodes: 1737.3 Mi   Used Inodes: 51.9%
+Participating tasks: 240
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./posix+striping+4mb_tx_easy/datafiles/2020.07.10-16.18.50-scr/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 968.75 GiB
+aggregate filesize  : 227.05 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing read performance test: Fri Jul 10 17:29:02 2020
+
+WARNING: Expected aggregate file size       = 249644974080000.
+WARNING: Stat() of aggregate file size      = 41060558438400.
+WARNING: Using actual aggregate bytes moved = 41060558438400.
+read      14898      3725       0.010598    1015808000 4096       0.017396   2628.36    0.011767   2628.39    0   
+Max Read:  14898.26 MiB/sec (15621.95 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        14898.26   14898.26   14898.26       0.00    3724.56    3724.56    3724.56       0.00 2628.38797         NA            NA     0    240  24    1   1     1        1         0    0      1 1040187392000  4194304 39158400.0 POSIX      0
+Finished            : Fri Jul 10 18:12:50 2020

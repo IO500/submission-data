@@ -1,0 +1,32 @@
+-- started at 07/10/2020 18:13:09 --
+
+mdtest-3.3.0+dev was launched with 240 total task(s) on 10 node(s)
+Command line used: /scratch/prjssisd/andrercsd/teste-parallel-io/io-500/2020/io500-app.intel.2018/bin/mdtest '-T' '-F' '-P' '-d' './posix+striping+4mb_tx_easy/datafiles/2020.07.10-16.18.50-scr/mdt_easy' '-n' '10000' '-u' '-L' '-a' 'POSIX' '-x' './posix+striping+4mb_tx_easy/datafiles/2020.07.10-16.18.50-scr/mdt_easy-stonewall' '-N' '1'
+Path: /scratch/prjssisd/andrercsd/teste-parallel-io/io-500/2020/io500-app.intel.2018/posix+striping+4mb_tx_easy/datafiles/2020.07.10-16.18.50-scr
+FS: 1680.3 TiB   Used FS: 46.2%   Inodes: 1737.3 Mi   Used Inodes: 51.9%
+
+Nodemap: 111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 24 for each phase.
+240 tasks, 2400000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :      13586.551      13586.316      13586.437          0.061
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          5.193          5.193          5.193          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 07/10/2020 18:13:14 --
+

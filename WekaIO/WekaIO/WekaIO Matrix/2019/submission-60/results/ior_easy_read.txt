@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov 13 20:27:51 2018
+Command line        : /mnt/weka/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -a POSIX -B -t 1024k -b 13238m -F -o /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_easy/stonewall
+Machine             : Linux client1
+TestID              : 0
+StartTime           : Tue Nov 13 20:27:51 2018
+Path                : /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_easy
+FS                  : 461.0 TiB   Used FS: 73.4%   Inodes: 5802.5 Mi   Used Inodes: 10.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 950
+clients per node    : 56
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 12.93 GiB
+aggregate filesize  : 11.99 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      185272     13555712   1024.00    0.052606   67.82      0.006404   67.88      0   
+Max Read:  185271.63 MiB/sec (194271.38 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       185271.63  185271.63  185271.63       0.00  185271.63  185271.63  185271.63       0.00   67.87925     0    950  56    1   1     1        1         0    0      1 13881049088  1048576 12576100.0 POSIX      0
+Finished            : Tue Nov 13 20:28:59 2018

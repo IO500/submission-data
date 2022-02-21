@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov 13 20:02:42 2018
+Command line        : /mnt/weka/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -a POSIX -B -t 1024k -b 13238m -F -o /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux client1
+TestID              : 0
+StartTime           : Tue Nov 13 20:02:42 2018
+Path                : /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_easy
+FS                  : 461.0 TiB   Used FS: 70.4%   Inodes: 5802.5 Mi   Used Inodes: 9.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 950
+clients per node    : 56
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 12.93 GiB
+aggregate filesize  : 11.99 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 9593 max: 13238 -- min data: 9.4 GiB mean data: 12.7 GiB time: 300.1s
+write     38598      13555712   1024.00    0.449778   325.27     0.064681   325.82     0   
+Max Write: 38598.19 MiB/sec (40473.14 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       38598.19   38598.19   38598.19       0.00   38598.19   38598.19   38598.19       0.00  325.82095     0    950  56    1   1     1        1         0    0      1 13881049088  1048576 12576100.0 POSIX      0
+Finished            : Tue Nov 13 20:08:08 2018

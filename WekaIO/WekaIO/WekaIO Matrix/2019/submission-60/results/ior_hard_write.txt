@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov 13 20:15:35 2018
+Command line        : /mnt/weka/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 45915 -B -a POSIX -o /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux client1
+TestID              : 0
+StartTime           : Tue Nov 13 20:15:35 2018
+Path                : /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_hard
+FS                  : 461.0 TiB   Used FS: 73.0%   Inodes: 5802.5 Mi   Used Inodes: 10.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/weka/io-500-dev/datafiles/io500.2018.11.13-20.02.39/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 45915
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 950
+clients per node    : 56
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.86 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 34495 max: 45915 -- min data: 1.5 GiB mean data: 1.5 GiB time: 300.1s
+write     5439       45.91      45.91      0.068147   359.46     0.016455   359.55     0   
+Max Write: 5438.66 MiB/sec (5702.85 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        5438.66    5438.66    5438.66       0.00  121316.64  121316.64  121316.64       0.00  359.54878     0    950  56    1   0     1        1         0    0  45915    47008    47008 1955465.0 POSIX      0
+Finished            : Tue Nov 13 20:21:35 2018

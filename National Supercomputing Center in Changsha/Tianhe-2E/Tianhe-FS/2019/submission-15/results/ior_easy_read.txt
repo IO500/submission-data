@@ -1,0 +1,37 @@
+yhrun: job 59571 queued and waiting for resources
+yhrun: job 59571 has been allocated resources
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 18:17:35 2019
+Command line        : /vol7/io500_20190930/bin/ior -r -R -a=POSIX --posix.odirect -t 1m -C -b 40g -F -i 1 -C -Q 1 -g -G 27 -k -e -o /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy/ior_file_easy -O stoneWallingStatusFile=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy/stonewall
+Machine             : Linux cn1
+TestID              : 0
+StartTime           : Sun Nov 10 18:17:35 2019
+Path                : /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy
+FS                  : 824.1 TiB   Used FS: 51.6%   Inodes: 7452.5 Mi   Used Inodes: 11.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+tasks               : 5280
+clients per node    : 11
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 40 GiB
+aggregate filesize  : 206.25 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+read      628252     41943040   1024.00    0.091296   344.08     0.089893   344.24     0   
+Max Read:  628251.97 MiB/sec (658769.93 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       628251.97  628251.97  628251.97       0.00  628251.97  628251.97  628251.97       0.00  344.23895         NA            NA     0   5280  11    1   1     2        1         0    0      1 42949672960  1048576 216268800.0 POSIX      0
+Finished            : Sun Nov 10 18:23:19 2019

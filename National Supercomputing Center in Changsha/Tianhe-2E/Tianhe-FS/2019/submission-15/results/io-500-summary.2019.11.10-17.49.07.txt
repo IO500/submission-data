@@ -1,0 +1,146 @@
+System:  ln0
+filesystem_utilization=89.72.58.5@o2ib:/YZFS 884922550512 227905731824 612310969596  28% /vol7
+date=2019.11.10-17.49.07
+io500_clean_cache=False
+io500_clean_cache_cmd=drop_cache
+io500_cleanup_workdir=False
+io500_find_cmd='yhrun -N 200 -n 400 /vol7/io500_20190930/bin/pfind'
+io500_find_cmd_args='-N -P -s 300 -r /vol7/io500_20190930/results/2019.11.10-17.49.07/pfind_results >/vol7/io500_20190930/results/2019.11.10-17.49.07/find.txt 2>&1'
+io500_find_mpi=False
+io500_info_data_storage_type=SSD
+io500_info_filesystem=Lustre
+io500_info_filesystem_vendor='National University of Defense Technology'
+io500_info_filesystem_version=2.12.2
+io500_info_institute_name='National Supercomputing Center in Changsha'
+io500_info_metadata_storage_type=SSD
+io500_info_num_client_nodes=480
+io500_info_num_data_server_nodes=52
+io500_info_num_data_storage_devices=572
+io500_info_num_metadata_server_nodes=40
+io500_info_num_metadata_storage_devices=40
+io500_info_procs_per_node=11
+io500_info_storage_age_in_months=3
+io500_info_storage_install_date=08/2019
+io500_info_storage_interface=NVMe
+io500_info_storage_network=omnipath
+io500_info_system_name=Tianhe-2E
+io500_ior_cmd=/vol7/io500_20190930/bin/ior
+io500_ior_easy_dir=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy
+io500_ior_easy_params='-a=POSIX --posix.odirect -t 1m -C -b 40g -F'
+io500_ior_easy_size=40
+io500_ior_hard_api=MPIIO
+io500_ior_hard_api_specific_options='-U /vol7/io500_20190930/mpio -H'
+io500_ior_hard_dir=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_hard
+io500_ior_hard_writes_per_proc=52800
+io500_mdreal_cmd=/vol7/io500_20190930/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdt_easy_dir=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_easy
+io500_mdt_hard_dir=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard
+io500_mdtest_cmd=/vol7/io500_20190930/bin/mdtest
+io500_mdtest_easy_files_per_proc=67000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=38888
+io500_mpiargs='-w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11'
+io500_mpirun=yhrun
+io500_result_dir=/vol7/io500_20190930/results/2019.11.10-17.49.07
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/ior -w -a=POSIX --posix.odirect -t 1m -C -b 40g -F -i 1 -C -Q 1 -g -G 27 -k -e -o /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy/ior_file_easy -O stoneWallingStatusFile=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write              608.644 GB/s : time 347.00 seconds
+
+[Starting] mdtest_easy_write
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/mdtest -C -F -P -d /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_easy -n 67000 -u -L -x /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_easy-stonewall -N 1 -W 300
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write             1099.180 kiops : time 321.87 seconds
+
+[Starting] ior_hard_write
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/ior -w -s 52800 -a MPIIO -U /vol7/io500_20190930/mpio -H -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_hard/IOR_file -O stoneWallingStatusFile=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write               31.874 GB/s : time 382.91 seconds
+
+[Starting] mdtest_hard_write
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/mdtest -C -t -F -P -w 3901 -e 3901 -d /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard -n 38888 -x /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write              554.066 kiops : time 315.47 seconds
+
+[Starting] find
+[EXEC] yhrun -N 200 -n 400 /vol7/io500_20190930/bin/pfind /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07 -newer /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/timestampfile -size 3901c -name "*01*" -N -P -s 300 -r /vol7/io500_20190930/results/2019.11.10-17.49.07/pfind_results >/vol7/io500_20190930/results/2019.11.10-17.49.07/find.txt 2>&1
+yhrun: job 59570 queued and waiting for resources
+yhrun: job 59570 has been allocated resources
+[FIND] MATCHED 6162959/486253520 in 303.3273 seconds
+[RESULT] IOPS phase 3                      find             1603.060 kiops : time 303.33 seconds
+
+[Starting] ior_easy_read
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/ior -r -R -a=POSIX --posix.odirect -t 1m -C -b 40g -F -i 1 -C -Q 1 -g -G 27 -k -e -o /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy/ior_file_easy -O stoneWallingStatusFile=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_easy/stonewall
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              613.527 GB/s : time 344.24 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/mdtest -T -F -P -d /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_easy -n 67000 -u -L -x /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_easy-stonewall -N 1
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat             2416.400 kiops : time 146.41 seconds
+
+[Starting] ior_hard_read
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/ior -r -R -s 52800 -a MPIIO -U /vol7/io500_20190930/mpio -H -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_hard/IOR_file -O stoneWallingStatusFile=/vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/ior_hard/stonewall
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read              161.639 GB/s : time  75.51 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard -n 38888 -x /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat             2419.150 kiops : time  72.25 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/mdtest -r -F -P -d /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_easy -n 67000 -u -L -x /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_easy-stonewall -N 1
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              961.620 kiops : time 367.90 seconds
+
+[Starting] mdtest_hard_read
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard -n 38888 -x /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              779.212 kiops : time 224.36 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] yhrun -w cn[1-165,167-181,183-212,214-233,235-239,241-258,260-295,297-303,305-347,349-359,361,363-426,428-430,432-436,438-476,478-495] --ntasks-per-node 11 /vol7/io500_20190930/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard -n 38888 -x /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /vol7/io500_20190930/results/2019.11.10-17.49.07/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete              203.501 kiops : time 865.04 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07
+[Summary] Results files in /vol7/io500_20190930/results/2019.11.10-17.49.07
+[Summary] Data files in /vol7/io500_20190930/datafiles/io500.2019.11.10-17.49.07
+[RESULT] BW   phase 1            ior_easy_write              608.644 GB/s : time 347.00 seconds
+[RESULT] BW   phase 2            ior_hard_write               31.874 GB/s : time 382.91 seconds
+[RESULT] BW   phase 3             ior_easy_read              613.527 GB/s : time 344.24 seconds
+[RESULT] BW   phase 4             ior_hard_read              161.639 GB/s : time  75.51 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write             1099.180 kiops : time 321.87 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write              554.066 kiops : time 315.47 seconds
+[RESULT] IOPS phase 3                      find             1603.060 kiops : time 303.33 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat             2416.400 kiops : time 146.41 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat             2419.150 kiops : time  72.25 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              961.620 kiops : time 367.90 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              779.212 kiops : time 224.36 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete              203.501 kiops : time 865.04 seconds
+[SCORE] Bandwidth 209.433 GB/s : IOPS 982.776 kiops : TOTAL 453.68

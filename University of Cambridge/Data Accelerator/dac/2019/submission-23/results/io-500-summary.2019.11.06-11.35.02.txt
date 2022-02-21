@@ -1,0 +1,148 @@
+System:  cpu-e-830
+filesystem_utilization=10.47.18.1@o2ib1:/fs1 435404909568 21699668 413377309228   1% /dac/fs1
+date=2019.11.06-11.35.02
+io500_clean_cache=False
+io500_clean_cache_cmd=drop_cache
+io500_cleanup_workdir=False
+io500_find_cmd='srun --mpi=pmi2 --ntasks-per-node 1 --ntasks 128 /home/mjr208/projects/benchmarking/io-500-sc19/bin/pfind'
+io500_find_cmd_args='-N -P -r /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/pfind_results'
+io500_find_mpi=False
+io500_info_data_storage_type=SSD
+io500_info_filesystem=Lustre
+io500_info_filesystem_vendor='Dell EMC'
+io500_info_filesystem_version='2.13 (tip of master branch as of running)'
+io500_info_institute_name='University of Cambridge RCS'
+io500_info_metadata_storage_type=SSD
+io500_info_num_client_nodes=32
+io500_info_num_data_server_nodes=24
+io500_info_num_data_storage_devices=288
+io500_info_num_metadata_server_nodes=24
+io500_info_num_metadata_storage_devices=24
+io500_info_procs_per_node=32
+io500_info_storage_age_in_months=18
+io500_info_storage_install_date=05/18
+io500_info_storage_interface=NVMe
+io500_info_storage_network=omnipath
+io500_info_system_name=Cambridge-DAC
+io500_info_whatever='More details on the architecture were presented at LAD'\''19: https://www.eofs.eu/_media/events/lad19/03_matt_raso-barnett-io500-cambridge.pdf'
+io500_ior_cmd=/home/mjr208/projects/benchmarking/io-500-sc19/bin/ior
+io500_ior_easy=/dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_easy
+io500_ior_easy_params='-a=POSIX --posix.odirect -t 16m -b 9920000m -F'
+io500_ior_easy_size=9920000
+io500_ior_hard=/dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_hard
+io500_ior_hard_api=MPIIO
+io500_ior_hard_api_specific_options=
+io500_ior_hard_writes_per_proc=1900000
+io500_mdreal_cmd=/home/mjr208/projects/benchmarking/io-500-sc19/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdt_easy=/dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_easy
+io500_mdt_hard=/dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard
+io500_mdtest_cmd=/home/mjr208/projects/benchmarking/io-500-sc19/bin/mdtest
+io500_mdtest_easy_files_per_proc=900000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=950000
+io500_mpiargs=--mpi=pmi2
+io500_mpirun=srun
+io500_result_dir=/home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/dac/fs1/mjr208/job-direct-2019-11-06-1135
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/ior -w -a=POSIX --posix.odirect -t 16m -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write              341.239 GB/s : time 431.24 seconds
+
+[Starting] mdtest_easy_write
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/mdtest -C -F -P -d /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_easy -n 900000 -u -L -x /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_easy-stonewall -N 1 -W 300
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write             1679.630 kiops : time 471.72 seconds
+
+[Starting] ior_hard_write
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/ior -w -s 1900000 -a MPIIO  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write               14.140 GB/s : time 494.35 seconds
+
+[Starting] mdtest_hard_write
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/mdtest -C -t -F -P -w 3901 -e 3901 -d /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard -n 950000 -x /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write              274.069 kiops : time 317.73 seconds
+
+[Starting] find
+[EXEC] srun --mpi=pmi2 --ntasks-per-node 1 --ntasks 128 /home/mjr208/projects/benchmarking/io-500-sc19/bin/pfind /dac/fs1/mjr208/job-direct-2019-11-06-1135 -newer /dac/fs1/mjr208/job-direct-2019-11-06-1135/timestampfile -size 3901c -name "*01*" -N -P -r /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/pfind_results
+srun: error: SLURMD_DEBUG=verbose invalid. ignoring...
+srun: job 16734371 queued and waiting for resources
+srun: job 16734371 has been allocated resources
+[FIND] MATCHED 4192660/883226498 in 311.0810 seconds
+[RESULT] IOPS phase 3                      find             2839.210 kiops : time 311.08 seconds
+
+[Starting] ior_easy_read
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/ior -r -R -a=POSIX --posix.odirect -t 16m -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_easy/stonewall
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              383.011 GB/s : time 384.21 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/mdtest -T -F -P -d /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_easy -n 900000 -u -L -x /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_easy-stonewall -N 1
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              402.082 kiops : time 1970.54 seconds
+
+[Starting] ior_hard_read
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/ior -r -R -s 1900000 -a MPIIO  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1/mjr208/job-direct-2019-11-06-1135/ior_hard/stonewall
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read              160.553 GB/s : time  43.02 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard -n 950000 -x /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               35.926 kiops : time 2423.90 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/mdtest -r -F -P -d /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_easy -n 900000 -u -L -x /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_easy-stonewall -N 1
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              715.500 kiops : time 1107.36 seconds
+
+[Starting] mdtest_hard_read
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard -n 950000 -x /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              466.835 kiops : time 186.54 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] srun --mpi=pmi2 /home/mjr208/projects/benchmarking/io-500-sc19/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard -n 950000 -x /dac/fs1/mjr208/job-direct-2019-11-06-1135/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete              106.296 kiops : time 828.65 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /dac/fs1/mjr208/job-direct-2019-11-06-1135
+[Summary] Results files in /home/mjr208/projects/benchmarking/dac/io-500-sc19/runs/job-direct-2019-11-06-1135
+[Summary] Data files in /dac/fs1/mjr208/job-direct-2019-11-06-1135
+[RESULT] BW   phase 1            ior_easy_write              341.239 GB/s : time 431.24 seconds
+[RESULT] BW   phase 2            ior_hard_write               14.140 GB/s : time 494.35 seconds
+[RESULT] BW   phase 3             ior_easy_read              383.011 GB/s : time 384.21 seconds
+[RESULT] BW   phase 4             ior_hard_read              160.553 GB/s : time  43.02 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write             1679.630 kiops : time 471.72 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write              274.069 kiops : time 317.73 seconds
+[RESULT] IOPS phase 3                      find             2839.210 kiops : time 311.08 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              402.082 kiops : time 1970.54 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               35.926 kiops : time 2423.90 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              715.500 kiops : time 1107.36 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              466.835 kiops : time 186.54 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete              106.296 kiops : time 828.65 seconds
+[SCORE] Bandwidth 131.245 GB/s : IOPS 401.13 kiops : TOTAL 229.448

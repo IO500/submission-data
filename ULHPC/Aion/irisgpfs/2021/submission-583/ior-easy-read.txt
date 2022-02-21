@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Sep 28 17:32:11 2021
+Command line        : ./ior -C -Q 1 -g -G 831476534 -k -e -o /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-easy.stonewall -t 16m -b 48g -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-easy-read.csv
+Machine             : Linux aion-0001
+TestID              : 0
+StartTime           : Tue Sep 28 17:32:11 2021
+Path                : /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-easy/ior_file_easy.00000000
+FS                  : 3092.9 TiB   Used FS: 29.2%   Inodes: 6439.0 Mi   Used Inodes: 4.8%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 64
+tasks               : 128
+clients per node    : 2
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 48 GiB
+aggregate filesize  : 6 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      21134      1320.93    0.096901    50331648   16384      0.021304   297.68     0.003754   297.70     0   

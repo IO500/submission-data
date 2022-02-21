@@ -1,0 +1,348 @@
+#!/bin/bash -l
+# Time-stamp: <Tue 2021-09-28 16:58 svarrette>
+############################################################################
+# IO500 Slurm launcher -- Adapted from default io500.sh provided on
+#             https://github.com/IO500/io500
+############################################################################
+#
+#SBATCH -J IO500
+#SBATCH --dependency singleton
+###SBATCH --mail-type=FAIL          # Mail events (NONE, BEGIN, END, FAIL, ALL)
+###SBATCH --mail-user=hpc-team@uni.lu
+#SBATCH --time=0-5:00:00
+#SBATCH --partition=batch
+#SBATCH --qos urgent
+###SBATCH --exclusive
+#__________________________
+#SBATCH -N 1
+#SBATCH --ntasks-per-node 2
+#SBATCH --ntasks-per-socket=1
+#SBATCH -c 1
+#__________________________
+#SBATCH -o logs/%x-%j.out
+mkdir -p logs
+
+### Local variables
+CMD_PREFIX=
+### Guess the run directory
+# - either the script directory upon interactive jobs
+# - OR the submission directory upon passive/batch jobs
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+if [ -n "${SLURM_SUBMIT_DIR}" ]; then
+    [[ "${SCRIPT_DIR}" == *"slurmd"* ]] && TOP_DIR=${SLURM_SUBMIT_DIR} || TOP_DIR=$(realpath -es "${SCRIPT_DIR}/..")
+else
+    TOP_DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && git rev-parse --show-toplevel)"
+fi
+RUNDIR=${TOP_DIR}/runs
+
+# MPI Suite
+SUITE=openmpi
+
+### IO500
+VERSION=isc21
+SRCDIR=${TOP_DIR}/src/io500-${VERSION}
+IO500=${SRCDIR}/io500
+
+
+# Params - below values optimized for 64 nodes / 128 clients
+ior_easy_transferSize=16m
+ior_easy_blockSize=48g     # Block size; must be a multiple of transferSize.
+#                            DDN suggests 48g for 64 nodes/128 clients in our case - means 96g on 32 nodes/64 clients to write the same amount of data.
+# Jan: the bs is load for a singe process
+ior_hard_segmentCount=7500 # Number of segments
+
+mdtest_easy_n=240000       # Files per proc
+mdtest_hard_n=48000
+
+# The directory where the IO500 runs
+DATADIR=/work/projects/hpcbenchs/IO500/datafiles
+
+
+### Toolbox function
+function print_error_and_exit() { echo "***ERROR*** $*"; exit 1; }
+function usage(){
+    cat <<EOF
+NAME
+  $(basename $0) -- Slurm launcher for IO500, adapted from the default
+  io500.sh script provided on https://github.com/IO500/io500
+
+USAGE
+  $0 -h
+  [sbatch] $0 [-n] [<path/to/>io500.ini]
+
+  If no io500.ini file is provided, one will be generated and adapted to
+  match the defined datadir and resultdir
+
+  Default resultdir: runs/[<prefix>]/N<\${SLURM_NNODES}>-\${SLURM_NTASKS}clients.<mpi-suite>
+
+OPTIONS
+  -h --help Print help and exit
+  -n --noop --dry-run   Dry run mode (not fully implemented)
+  -d --datadir DIR      Set DIR as IO500 datadir
+                        Default: ${DATADIR}
+  --prefix NAME         Use NAME as predix for the resultdir under ${RUNDIR}
+                        Ex: $0 --prefix \$(date +%F)
+  -i --intel            assumes an Intel-MPI compiled io500 thus use the corresponding
+                        module (toolchain/intel) accordingly
+
+  You can also alter the default ini parameters (defaults set by DDN to optimize a
+  run on 64 nodes / 128 clients)
+
+  [mdtest-easy]
+  -men --md-easy-n --mdtest-easy-n N  Files per proc (Default: ${mdtest_easy_n})
+  [mdtest-hard]
+  -mhn --md-hard-n --mdtest-hard-n N  Files per proc (Default: ${mdtest_hard_n})
+  [ior-easy]
+  -t --ior-easy-transferSize N    Transfer size (Default: ${ior_easy_transferSize})
+  -b --ior-easy-blockSize    N    Block size; must be a multiple of transferSize
+                                  the bs is the load for a singe process.
+       Default: ${ior_easy_blockSize} suggested for 64 nodes/128 clients.
+                you **MUST** double it if you run on half nodes (32 nodes / 64 clients)
+  [ior-hard]
+  -s  --ior-hard-s --ior-hard-segmentCount     Number of segments (Default: ${ior_hard_segmentCount}
+
+EXAMPLES:
+  sbatch -N 64 --reservation=clustermaintenance ./scripts/launcher-IO500.sh --prefix IO500-isc21_\$(date +%F)
+
+EOF
+}
+function run_io500() {
+    local logfile=$1
+    [ -z "${logfile}" ] && print_error_and_exit "logfile parameter not passed"
+### General SLURM Parameters
+    tee -a ${logfile} <<EOF
+### Starting timestamp (s): $(date +%s)
+# IO500 ${IO500} run with ${SUITE} MPI @ $(date) by:
+#      ${CMD}
+#
+# Data directory:   ${DATADIR}
+# Result directory: ${RESULTDIR}
+# IO500 ini file:   ${io500_ini}
+#
+# SLURM_JOBID          = $SLURM_JOBID
+# SLURM_JOB_NODELIST   = $SLURM_JOB_NODELIST
+# SLURM_NNODES         = $SLURM_NNODES
+# SLURM_CPUS_PER_TASK  = $SLURM_CPUS_PER_TASK
+# SLURM_NTASKS         = $SLURM_NTASKS
+# Submission directory = $SLURM_SUBMIT_DIR
+EOF
+    ### run IO500
+    srun sync |& tee -a ${logfile}
+
+    cd ${SRCDIR}
+    echo "   command performed in $(pwd)"
+    ${CMD} |& tee -a ${logfile}
+    cd -
+
+    tee -a ${logfile} <<EOF
+### Ending timestamp (s): $(date +%s)
+EOF
+}
+
+
+# Check for options
+while [ $# -ge 1 ]; do
+    case $1 in
+        -h | --help) usage; exit 0;;
+        -n | --noop | --dry-run) CMD_PREFIX=echo;;
+        -b | --ior-easy-b* | --ior-easy-blockSize)    shift; ior_easy_blockSize=$1;;
+        -d | --datadir) shift; DATADIR=$1;;
+        -i | --intel) SUITE=intel;;
+        -men | --md-easy-n | --mdtest-easy-n)         shift; mdtest_easy_n=$1;;
+        -mhn | --md-hard-n | --mdtest-hard-n)         shift; mdtest_hard_n=$1;;
+        -s | --ior-hard-s* | --ior-hard-segmentCount) shift; ior_hard_segmentCount=$1;;
+        -t | --ior-easy-t* | --ior-easy-transferSize) shift; ior_easy_transferSize=$1;;
+        --prefix) shift; PREFIX=$1;
+                  if [ -n "${PREFIX}" ]; then
+                      RUNDIR=${RUNDIR}/${PREFIX}
+                  fi
+                  ;;
+        *) io500_ini=$1;;
+    esac
+    shift
+done
+
+# Safeguards
+[ ! -d "${SRCDIR}" ] && print_error_and_exit "Unable to find the source directory '${SRCDIR}'"
+[ ! -x "${IO500}"  ] && print_error_and_exit "Unable to find the executable io500 binary '${IO500}'"
+
+# The result directory
+RESULTDIR=${RUNDIR}/N${SLURM_NNODES:-1}-${SLURM_NTASKS:-1}clients.${SUITE}
+
+# [eventually] create the data and result directories directory
+for d in $DATADIR $RESULTDIR; do
+    if [ ! -d "${d}" ]; then
+        echo "=> creating '${d}'"
+        ${CMD_PREFIX} mkdir -p ${d}
+    fi
+done
+
+# Adapt module to MPI suit used to compile the IO500 benchmark
+case ${SUITE} in
+    openmpi)  MODULE=mpi/OpenMPI;;
+    intel)    MODULE=toolchain/intel;;
+    *)  print_error_and_exit "Unsupported MPI suit '${MODE}'";;
+esac
+
+module purge || print_error_and_exit "Unable to find the module command"
+module load ${MODULE}
+module list
+
+if [ ! -n "${io500_ini}" ]; then
+    io500_ini="${RESULTDIR}/config-${SLURM_JOBID}.ini"
+    echo "=> generating ini file ${io500_ini}"
+    ${IO500} --list > ${io500_ini}
+    echo "   ... adapting datadir to ${DATADIR}"
+    sed -i "s|^datadir = .*|datadir = ${DATADIR}|" ${io500_ini}
+    echo "   ... adapting resultdir to ${RESULTDIR}"
+    sed -i "s|^resultdir = .*|resultdir = ${RESULTDIR}|" ${io500_ini}
+    # ior-easy
+    echo "   [ior-easy] set transferSize = ${ior_easy_transferSize}"
+    sed -i "/^\[ior-easy\]$/,/^\[/ s/^transferSize = .*/transferSize = ${ior_easy_transferSize}/" ${io500_ini}
+    echo "   [ior-easy] set blockSize = ${ior_easy_blockSize}"
+    sed -i "/^\[ior-easy\]$/,/^\[/ s/^blockSize = .*/blockSize = ${ior_easy_blockSize}/" ${io500_ini}
+    # mdtest-easy
+    echo "   [mdtest-easy] set n = ${mdtest_easy_n}"
+    sed -i "/^\[mdtest-easy\]$/,/^\[/ s/^n = .*/n = ${mdtest_easy_n}/" ${io500_ini}
+    # ior-hard
+    echo "   [ior-hard] set segmentCount = ${ior_hard_segmentCount}"
+    sed -i "/^\[ior-hard\]$/,/^\[/ s/^segmentCount = .*/segmentCount = ${ior_hard_segmentCount}/" ${io500_ini}
+    # mdtest-hard
+    echo "   [mdtest-hard] set n = ${mdtest_hard_n}"
+    sed -i "/^\[mdtest-hard\]$/,/^\[/ s/^n = .*/n = ${mdtest_hard_n}/" ${io500_ini}
+    # disabled benchs
+    for section in ior-rnd mdworkbench mdworkbench-create find-easy find-hard mdworkbench-bench mdworkbench-delete; do
+        echo "   ... disabling [${section}]"
+        sed -i "/^\[${section}\]$/,/^\[/ s/^run = .*/run = FALSE/" ${io500_ini}
+    done
+fi
+
+
+
+################################################################################
+### BELOW THIS LINE: -- Adapted from default io500.sh
+### See latest version: https://github.com/IO500/io500/blob/main/io500.sh
+################################################################################
+
+# INSTRUCTIONS:
+#
+# The only parts of the script that may need to be modified are:
+#  - setup() to configure the binary locations and MPI parameters
+# Please visit https://vi4io.org/io500-info-creator/ to help generate the
+# "system-information.txt" file, by pasting the output of the info-creator.
+# This file contains details of your system hardware for your submission.
+
+# This script takes its parameters from the same .ini file as io500 binary.
+#io500_ini="$1"          # You can set the ini file here
+io500_mpirun="srun"
+io500_mpiargs="-m block -n ${SLURM_NTASKS}"
+
+function setup(){
+    local workdir="$1"
+    local resultdir="$2"
+    mkdir -p $workdir $resultdir
+
+    # Example commands to create output directories for Lustre.  Creating
+    # top-level directories is allowed, but not the whole directory tree.
+    #if (( $(lfs df $workdir | grep -c MDT) > 1 )); then
+    #  lfs setdirstripe -D -c -1 $workdir
+    #fi
+    #lfs setstripe -c 1 $workdir
+    #mkdir $workdir/ior-easy $workdir/ior-hard
+    #mkdir $workdir/mdtest-easy $workdir/mdtest-hard
+    #local osts=$(lfs df $workdir | grep -c OST)
+    # Try overstriping for ior-hard to improve scaling, or use wide striping
+    #lfs setstripe -C $((osts * 4)) $workdir/ior-hard ||
+    #  lfs setstripe -c -1 $workdir/ior-hard
+    # Try to use DoM if available, otherwise use default for small files
+    #lfs setstripe -E 64k -L mdt $workdir/mdtest-easy || true #DoM?
+    #lfs setstripe -E 64k -L mdt $workdir/mdtest-hard || true #DoM?
+    #lfs setstripe -E 64k -L mdt $workdir/mdtest-rnd
+}
+
+# *****  YOU SHOULD NOT EDIT ANYTHING BELOW THIS LINE  *****
+set -eo pipefail  # better error handling
+
+if [[ -z "$io500_ini" ]]; then
+    echo "error: ini file must be specified.  usage: $0 <config.ini>"
+    exit 1
+fi
+if [[ ! -s "$io500_ini" ]]; then
+    echo "error: ini file '$io500_ini' not found or empty"
+    exit 2
+fi
+
+function get_ini_section_param() {
+    local section="$1"
+    local param="$2"
+    local inside=false
+
+    while read LINE; do
+        LINE=$(sed -e 's/ *#.*//' -e '1s/ *= */=/' <<<$LINE)
+        $inside && [[ "$LINE" =~ "[.*]" ]] && inside=false && break
+        [[ -n "$section" && "$LINE" =~ "[$section]" ]] && inside=true && continue
+        ! $inside && continue
+        #echo $LINE | awk -F = "/^$param/ { print \$2 }"
+        if [[ $(echo $LINE | grep "^$param *=" ) != "" ]] ; then
+            # echo "$section : $param : $inside : $LINE" >> parsed.txt # debugging
+            echo $LINE | sed -e "s/[^=]*=[ \t]*\(.*\)/\1/"
+            return
+        fi
+    done < $io500_ini
+    echo ""
+}
+
+function get_ini_global_param() {
+    local param="$1"
+    local default="$2"
+    local val
+
+    val=$(get_ini_section_param global $param |
+              sed -e 's/[Ff][Aa][Ll][Ss][Ee]/False/' -e 's/[Tt][Rr][Uu][Ee]/True/')
+
+    echo "${val:-$default}"
+}
+
+function run_benchmarks {
+    # $io500_mpirun $io500_mpiargs $PWD/io500 $io500_ini --timestamp $timestamp
+    CMD="$io500_mpirun $io500_mpiargs ${IO500} $io500_ini --timestamp $timestamp"
+    logfile="${RESULTDIR}/slurm-io500.$(date +%Y-%m-%d_%Hh%Mm%S).log"
+    run_io500 "${logfile}"
+}
+
+create_tarball() {
+    local sourcedir=$(dirname $io500_resultdir)
+    local fname=$(basename ${io500_resultdir})
+    local tarball=$sourcedir/io500-$HOSTNAME-$fname.tgz
+
+    cp -v $0 $io500_ini $io500_resultdir
+    tar czf $tarball -C $sourcedir $fname
+    echo "Created result tarball $tarball"
+}
+
+function main {
+    # These commands extract the 'datadir' and 'resultdir' from .ini file
+    timestamp=$(date +%Y.%m.%d-%H.%M.%S)           # create a uniquifier
+    [ $(get_ini_global_param timestamp-datadir True) != "False" ] &&
+        ts="$timestamp" || ts="io500"
+    # working directory where the test files will be created
+    export io500_workdir=$(get_ini_global_param datadir $PWD/datafiles)/$ts
+    [ $(get_ini_global_param timestamp-resultdir True) != "False" ] &&
+        ts="$timestamp" || ts="io500"
+    # the directory where the output results will be kept
+    export io500_resultdir=$(get_ini_global_param resultdir $PWD/results)/$ts
+
+    setup $io500_workdir $io500_resultdir
+    run_benchmarks
+
+    if [[ ! -s "system-information.txt" ]]; then
+        echo "Warning: please create a 'system-information.txt' description by"
+        echo "copying the information from https://vi4io.org/io500-info-creator/"
+    else
+        cp "system-information.txt" $io500_resultdir
+    fi
+
+    create_tarball
+}
+
+main

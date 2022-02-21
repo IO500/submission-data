@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Sep 28 17:40:30 2021
+Command line        : ./ior -C -Q 1 -g -G=831487222 -k -e -o /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-hard/file -O stoneWallingStatusFile=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-hard.stonewall -t 47008 -b 47008 -s 7500 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-hard-read.csv
+Machine             : Linux aion-0001
+TestID              : 0
+StartTime           : Tue Sep 28 17:40:30 2021
+Path                : /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-hard/file
+FS                  : 3092.9 TiB   Used FS: 29.2%   Inodes: 6439.0 Mi   Used Inodes: 4.8%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 7500
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 64
+tasks               : 128
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 42.03 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      261.62     5837       164.48      45.91      45.91      0.006185   164.48     0.019163   164.50     0   

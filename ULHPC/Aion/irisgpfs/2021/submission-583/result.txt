@@ -1,0 +1,109 @@
+version         = io500-isc21
+config-hash     = 5435B5C0
+result-dir      = /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10
+mode            = standard
+; START 2021-09-28 17:08:13
+
+
+[ior-easy-write]
+t_start         = 2021-09-28 17:08:13
+exe             = ./ior -C -Q 1 -g -G 831476534 -k -e -o /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-easy.stonewall -t 16m -b 48g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-easy-write.csv
+throughput-stonewall = 17.62
+score           = 17.501989
+t_delta         = 351.4841
+t_end           = 2021-09-28 17:14:05
+
+[mdtest-easy-write]
+t_start         = 2021-09-28 17:14:05
+exe             = ./mdtest -n 240000 -u -L -F -P -G 1717654328 -N 1 -d /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/mdtest-easy -x /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 60.136721
+score           = 59.368146
+t_delta         = 361.7031
+t_end           = 2021-09-28 17:20:07
+
+[timestamp]
+t_start         = 2021-09-28 17:20:07
+t_delta         = 0.0005
+t_end           = 2021-09-28 17:20:07
+
+[ior-hard-write]
+t_start         = 2021-09-28 17:20:07
+exe             = ./ior -C -Q 1 -g -G=831487222 -k -e -o /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-hard/file -O stoneWallingStatusFile=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-hard.stonewall -t 47008 -b 47008 -s 7500 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.11
+score           = 0.113342
+t_delta         = 370.8205
+t_end           = 2021-09-28 17:26:17
+
+[mdtest-hard-write]
+t_start         = 2021-09-28 17:26:17
+exe             = ./mdtest -n 48000 -t -w 3901 -e 3901 -P -G=1717665016 -N 1 -F -d /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/mdtest-hard -x /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 18.597246
+score           = 18.152144
+t_delta         = 324.1753
+t_end           = 2021-09-28 17:31:42
+
+[find]
+t_start         = 2021-09-28 17:31:42
+exe             = ./pfind /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10 -newer /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 128
+found           = 211706
+total-files     = 27289217
+score           = 925.457452
+t_delta         = 29.4885
+t_end           = 2021-09-28 17:32:11
+
+[ior-easy-read]
+t_start         = 2021-09-28 17:32:11
+exe             = ./ior -C -Q 1 -g -G 831476534 -k -e -o /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-easy.stonewall -t 16m -b 48g -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-easy-read.csv
+score           = 20.638251
+t_delta         = 297.7087
+t_end           = 2021-09-28 17:37:09
+
+[mdtest-easy-stat]
+t_start         = 2021-09-28 17:37:09
+exe             = ./mdtest -n 240000 -u -L -F -P -G 1717654328 -N 1 -d /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/mdtest-easy -x /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-easy-stat.csv -a POSIX
+score           = 106.298117
+t_delta         = 201.4004
+t_end           = 2021-09-28 17:40:30
+
+[ior-hard-read]
+t_start         = 2021-09-28 17:40:30
+exe             = ./ior -C -Q 1 -g -G=831487222 -k -e -o /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/ior-hard/file -O stoneWallingStatusFile=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-hard.stonewall -t 47008 -b 47008 -s 7500 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/ior-hard-read.csv
+score           = 0.255489
+t_delta         = 164.5995
+t_end           = 2021-09-28 17:43:15
+
+[mdtest-hard-stat]
+t_start         = 2021-09-28 17:43:15
+exe             = ./mdtest -n 48000 -t -w 3901 -e 3901 -P -G=1717665016 -N 1 -F -d /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/mdtest-hard -x /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-hard-stat.csv -a POSIX
+score           = 105.259659
+t_delta         = 55.9673
+t_end           = 2021-09-28 17:44:11
+
+[mdtest-easy-delete]
+t_start         = 2021-09-28 17:44:11
+exe             = ./mdtest -n 240000 -u -L -F -P -G 1717654328 -N 1 -d /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/mdtest-easy -x /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-easy-delete.csv -a POSIX
+score           = 46.333091
+t_delta         = 463.4695
+t_end           = 2021-09-28 17:51:54
+
+[mdtest-hard-read]
+t_start         = 2021-09-28 17:51:54
+exe             = ./mdtest -n 48000 -t -w 3901 -e 3901 -P -G=1717665016 -N 1 -F -d /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/mdtest-hard -x /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-hard-read.csv -a POSIX
+score           = 77.709539
+t_delta         = 75.7522
+t_end           = 2021-09-28 17:53:10
+
+[mdtest-hard-delete]
+t_start         = 2021-09-28 17:53:10
+exe             = ./mdtest -n 48000 -t -w 3901 -e 3901 -P -G=1717665016 -N 1 -F -d /work/projects/hpcbenchs/IO500/datafiles/2021.09.28-17.08.10/mdtest-hard -x /mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/mnt/irisgpfs/users/svarrette/git/gitlab.uni.lu/svarrette/devel/benchmarks/IO500/runs/IO500-isc21_2021-09-28/N64-128clients.openmpi/2021.09.28-17.08.10/mdtest-hard-delete.csv -a POSIX
+score           = 17.138451
+t_delta         = 351.2020
+t_end           = 2021-09-28 17:59:01
+
+[SCORE]
+MD              = 71.572357
+BW              = 1.798376
+SCORE           = 11.345219
+hash            = AAD891D6
+; END 2021-09-28 17:59:02

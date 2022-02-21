@@ -1,0 +1,33 @@
+-- started at 06/29/2020 06:37:53 --
+
+mdtest-3.3.0+dev was launched with 420 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '10000000' '-t' '-w' '3901' '-e' '3901' '-P' '-N' '1' '-F' '-d' '/mnt/dfuse/datafiles/2020.06.29-04.46.44-app/mdtest-hard' '-x' '/mnt/dfuse/datafiles/2020.06.29-04.46.44-app/mdtest-hard-stonewall' '-C' '-Y' '-W' '300' '-a' 'DFS' '--dfs.pool=9ae1db5f-54fa-4822-81cd-2faaaeacc442' '--dfs.cont=9f8cf146-1aec-46d8-8789-5a0746355be1' '--dfs.svcl=1' '--dfs.oclass=S1' '--dfs.prefix=/mnt/dfuse/'
+Nodemap: 100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 1 for each phase.
+420 tasks, 4200000000 files
+Continue stonewall hit min: 1653715 max: 1805493 avg: 1764976.5 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :    2326173.175    2326172.240    2326172.832          0.242
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA    2467629.985             NA
+   Tree creation             :        507.321        507.321        507.321          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :        325.989        325.989        325.989          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA        300.406             NA
+   Tree creation             :          0.002          0.002          0.002          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 06/29/2020 06:43:19 --
+

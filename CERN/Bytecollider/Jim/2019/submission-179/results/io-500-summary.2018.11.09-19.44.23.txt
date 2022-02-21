@@ -1,0 +1,133 @@
+System:  hpc-be001.cern.ch
+filesystem_utilization=137.138.32.34:/volumes/_nogroup/355f485c-6319-4ffe-acd6-94a07f2a14b4 91382415360 6779117568 84603297792   8% /bescratch
+date=2018.11.09-19.44.23
+io500_cleanup_workdir=False
+io500_find_cmd_args=' -r /bescratch/user/pllopiss/results/2018.11.09-19.44.23/pfind_results'
+io500_find_cmd=/hpcscratch/user/pllopiss/src/io-500-dev/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=SSD
+io500_info_filesysem=CephFS
+io500_info_filesystem_version=12
+io500_info_institute_name=CERN
+io500_info_metadata_storage_type=HDD
+io500_info_num_client_nodes=142
+io500_info_num_data_server_nodes=142
+io500_info_num_data_storage_devices=426
+io500_info_num_metadata_server_nodes=3
+io500_info_num_metadata_storage_devices=xxx
+io500_info_procs_per_node=20
+io500_info_storage_age_in_months=3
+io500_info_storage_install_date=10/17
+io500_info_storage_interface=SATA
+io500_info_storage_network=ethernet
+io500_info_system_name=CERN-CEPH-BE
+io500_info_whatever=ByteCollider
+io500_ior_cmd=/hpcscratch/user/pllopiss/src/io-500-dev/bin/ior
+io500_ior_easy_params='-t 16m -b 16m -F -s 1860'
+io500_ior_hard_writes_per_proc=89984
+io500_mdreal_cmd=/hpcscratch/user/pllopiss/src/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/hpcscratch/user/pllopiss/src/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=33800
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=24960
+io500_mpiargs='-N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139]'
+io500_mpirun=srun
+io500_result_dir=/bescratch/user/pllopiss/results/2018.11.09-19.44.23
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_workdir=/bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 16m -b 16m -F -s 1860 -o /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/ior_easy/ior_file_easy
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write                4.936 GB/s : time 376.88 seconds
+
+[Starting] mdtest_easy_write
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/mdtest -C -F -d /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/mdt_easy -n 33800 -u -L
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write                4.561 kiops : time 536.33 seconds
+
+[Starting] ior_hard_write
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 89984 -o /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/ior_hard/IOR_file
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                0.810 GB/s : time 311.37 seconds
+
+[Starting] mdtest_hard_write
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/mdt_hard -n 24960
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/mdtest_hard_write.txt.
+[Warning] This cannot be official score. The runtime of 270.6512 seconds is below 5 minutes
+[RESULT] IOPS phase 2         mdtest_hard_write                5.952 kiops : time 270.65 seconds
+
+[Starting] find
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/pfind /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23 -newer /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/timestampfile -size 3901c -name "*10*"  -r /bescratch/user/pllopiss/results/2018.11.09-19.44.23/pfind_results
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/find.txt.
+[FIND] MATCHED 136911/3760706 in 40.5535 seconds
+[RESULT] IOPS phase 3                      find               92.730 kiops : time  40.55 seconds
+
+[Starting] ior_easy_read
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 16m -b 16m -F -s 1860 -o /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/ior_easy/ior_file_easy
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read                7.409 GB/s : time 251.03 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/mdtest -T -F -d /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/mdt_easy -n 33800 -u -L
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat               28.173 kiops : time  79.09 seconds
+
+[Starting] ior_hard_read
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 89984 -o /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/ior_hard/IOR_file
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                2.237 GB/s : time 112.70 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/mdt_hard -n 24960
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               28.525 kiops : time  58.36 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/mdtest -r -F -d /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/mdt_easy -n 33800 -u -L
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete                4.503 kiops : time 482.90 seconds
+
+[Starting] mdtest_hard_read
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/mdt_hard -n 24960
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read               13.924 kiops : time 118.89 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] srun -N 64 -p be-short -t 1-0 --reservation pllopiss_1 -w hpc-be[001-002,006-008,011-014,016-017,019-023,025-026,030-032,035,040-042,045,047,049,051,053-056,059,064,067,072,080,085,087-088,094-096,099,102-104,106-108,112-113,116,120,123-124,126,128-129,134-136,139] /hpcscratch/user/pllopiss/src/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23/mdt_hard -n 24960
+[Results] in /bescratch/user/pllopiss/results/2018.11.09-19.44.23/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                5.146 kiops : time 313.18 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23
+[Summary] Results files in /bescratch/user/pllopiss/results/2018.11.09-19.44.23
+[Summary] Data files in /bescratch/user/pllopiss/datafiles/io500.2018.11.09-19.44.23
+[RESULT] BW   phase 1            ior_easy_write                4.936 GB/s : time 376.88 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.810 GB/s : time 311.37 seconds
+[RESULT] BW   phase 3             ior_easy_read                7.409 GB/s : time 251.03 seconds
+[RESULT] BW   phase 4             ior_hard_read                2.237 GB/s : time 112.70 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write                4.561 kiops : time 536.33 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                5.952 kiops : time 270.65 seconds
+[RESULT] IOPS phase 3                      find               92.730 kiops : time  40.55 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               28.173 kiops : time  79.09 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               28.525 kiops : time  58.36 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete                4.503 kiops : time 482.90 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               13.924 kiops : time 118.89 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                5.146 kiops : time 313.18 seconds
+[SCORE] Bandwidth 2.85287 GB/s : IOPS 12.6425 kiops : TOTAL 36.06740

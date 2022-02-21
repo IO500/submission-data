@@ -1,0 +1,38 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 25 08:33:00 2021
+Command line        : ./ior --dataPacketType=incompressible -Q=1 -g -G=-165320066 -z --random-offset-seed=123 -e -o=./datadir/2021.10.25-08.27.10/ior-rnd4K/file -O stoneWallingStatusFile=./results/2021.10.25-08.27.10/ior-rnd4K.stonewall -k -t=4096 -b=1073741824 -s=10000000 -w -D 300 -a POSIX --posix.odirect -O stoneWallingWearOut=1 -O saveRankPerformanceDetailsCSV=./results/2021.10.25-08.27.10/ior-rnd4K-write.csv
+Machine             : Linux e10u21.int.janelia.org
+TestID              : 0
+StartTime           : Mon Oct 25 08:33:00 2021
+Path                : ./datadir/2021.10.25-08.27.10/ior-rnd4K/file
+FS                  : 100.0 TiB   Used FS: 22.3%   Inodes: 14364.4 Mi   Used Inodes: 23.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datadir/2021.10.25-08.27.10/ior-rnd4K/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : no tasks offsets
+nodes               : 70
+tasks               : 2520
+clients per node    : 36
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 1 GiB
+aggregate filesize  : 7832159 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2700 max: 8761 -- min data: 0.0 GiB mean data: 0.0 GiB time: 311.4s
+WARNING: Expected aggregate file size       = 8611549891090448384
+WARNING: Stat() of aggregate file size      = 2705829367808
+WARNING: Using actual aggregate bytes moved = 90430341120
+WARNING: Maybe caused by deadlineForStonewalling
+write     159.83     40925      0.001866    1048576    4.00       0.107681   539.47     0.008803   539.58     0   

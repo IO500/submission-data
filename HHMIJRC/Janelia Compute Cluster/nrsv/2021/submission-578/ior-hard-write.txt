@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 25 09:04:46 2021
+Command line        : ./ior --dataPacketType=incompressible -C -Q 1 -g -G=746802870 -k -e -o ./datadir/2021.10.25-08.27.10/ior-hard/file -O stoneWallingStatusFile=./results/2021.10.25-08.27.10/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2021.10.25-08.27.10/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux e10u21.int.janelia.org
+TestID              : 0
+StartTime           : Mon Oct 25 09:04:46 2021
+Path                : ./datadir/2021.10.25-08.27.10/ior-hard/file
+FS                  : 100.0 TiB   Used FS: 29.2%   Inodes: 14364.4 Mi   Used Inodes: 23.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datadir/2021.10.25-08.27.10/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 70
+tasks               : 2520
+clients per node    : 36
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1077.39 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3117 max: 6107 -- min data: 0.1 GiB mean data: 0.2 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 1184601600000000
+WARNING: Stat() of aggregate file size      = 723436197120
+WARNING: Using actual aggregate bytes moved = 723436197120
+WARNING: Maybe caused by deadlineForStonewalling
+write     1910.97    42645      338.99      45.91      45.91      0.148116   360.88     0.008619   361.03     0   

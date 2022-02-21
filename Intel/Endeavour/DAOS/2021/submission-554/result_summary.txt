@@ -1,0 +1,15 @@
+IO500 version io500-isc21_v1-6-g739a1de1dda9 (standard)
+[RESULT]       ior-easy-write      538.829306 GiB/s : time 347.604 seconds
+[RESULT]    mdtest-easy-write    13347.627998 kIOPS : time 307.578 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.003 seconds
+[RESULT]       ior-hard-write      389.251396 GiB/s : time 309.471 seconds
+[RESULT]    mdtest-hard-write     6278.339486 kIOPS : time 306.556 seconds
+[RESULT]                 find     5734.732097 kIOPS : time 634.447 seconds
+[RESULT]        ior-easy-read      586.050057 GiB/s : time 320.617 seconds
+[RESULT]     mdtest-easy-stat    12962.256055 kIOPS : time 317.314 seconds
+[RESULT]        ior-hard-read      205.708472 GiB/s : time 586.109 seconds
+[RESULT]     mdtest-hard-stat    12320.820539 kIOPS : time 156.808 seconds
+[RESULT]   mdtest-easy-delete     7556.862360 kIOPS : time 1514.418 seconds
+[RESULT]     mdtest-hard-read    10042.811819 kIOPS : time 192.391 seconds
+[RESULT]   mdtest-hard-delete     5489.515231 kIOPS : time 3609.891 seconds
+[SCORE ] Bandwidth 398.765034 GiB/s : IOPS 8671.647896 kiops : TOTAL 1859.556390

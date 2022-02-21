@@ -1,0 +1,109 @@
+version         = io500-isc21_v1-6-g739a1de1dda9
+config-hash     = 672DE121
+result-dir      = /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25
+mode            = standard
+; START 2021-05-31 18:02:08
+
+
+[ior-easy-write]
+t_start         = 2021-05-31 18:02:08
+exe             = ./ior -C -Q 1 -g -G 763584895 -k -e -o /datafiles/2021.05.31-18.01.25/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-easy.stonewall -t 4m -b 1000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-easy-write.csv
+throughput-stonewall = 536.12
+score           = 538.829306
+t_delta         = 347.6036
+t_end           = 2021-05-31 18:07:55
+
+[mdtest-easy-write]
+t_start         = 2021-05-31 18:07:55
+exe             = ./mdtest -n 10000000 -u -L -F -P -G 1649762689 -N 1 -d /datafiles/2021.05.31-18.01.25/mdtest-easy -x /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-easy-write.csv -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 13528.328117
+score           = 13347.627998
+t_delta         = 307.5775
+t_end           = 2021-05-31 18:13:03
+
+[timestamp]
+t_start         = 2021-05-31 18:13:03
+t_delta         = 0.0031
+t_end           = 2021-05-31 18:13:03
+
+[ior-hard-write]
+t_start         = 2021-05-31 18:13:03
+exe             = ./ior -C -Q 1 -g -G=763595583 -k -e -o /datafiles/2021.05.31-18.01.25/ior-hard/file -O stoneWallingStatusFile=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.chunk_size=470080 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 395.13
+score           = 389.251396
+t_delta         = 309.4710
+t_end           = 2021-05-31 18:18:12
+
+[mdtest-hard-write]
+t_start         = 2021-05-31 18:18:12
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -G=1649773377 -N 1 -F -d /datafiles/2021.05.31-18.01.25/mdtest-hard -x /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-hard-write.csv -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 6350.875271
+score           = 6278.339486
+t_delta         = 306.5564
+t_end           = 2021-05-31 18:23:19
+
+[find]
+t_start         = 2021-05-31 18:23:19
+exe             = ./pfind /datafiles/2021.05.31-18.01.25 -newer /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1440
+found           = 24696519
+total-files     = 3584169277
+score           = 5734.732097
+t_delta         = 634.4475
+t_end           = 2021-05-31 18:33:53
+
+[ior-easy-read]
+t_start         = 2021-05-31 18:33:53
+exe             = ./ior -C -Q 1 -g -G 763584895 -k -e -o /datafiles/2021.05.31-18.01.25/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-easy.stonewall -t 4m -b 1000000m -r -R -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-easy-read.csv
+score           = 586.050057
+t_delta         = 320.6169
+t_end           = 2021-05-31 18:39:14
+
+[mdtest-easy-stat]
+t_start         = 2021-05-31 18:39:14
+exe             = ./mdtest -n 10000000 -u -L -F -P -G 1649762689 -N 1 -d /datafiles/2021.05.31-18.01.25/mdtest-easy -x /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-easy-stat.csv -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 12962.256055
+t_delta         = 317.3142
+t_end           = 2021-05-31 18:44:31
+
+[ior-hard-read]
+t_start         = 2021-05-31 18:44:31
+exe             = ./ior -C -Q 1 -g -G=763595583 -k -e -o /datafiles/2021.05.31-18.01.25/ior-hard/file -O stoneWallingStatusFile=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.chunk_size=470080 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-hard-read.csv
+score           = 205.708472
+t_delta         = 586.1092
+t_end           = 2021-05-31 18:54:17
+
+[mdtest-hard-stat]
+t_start         = 2021-05-31 18:54:17
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -G=1649773377 -N 1 -F -d /datafiles/2021.05.31-18.01.25/mdtest-hard -x /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-hard-stat.csv -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 12320.820539
+t_delta         = 156.8078
+t_end           = 2021-05-31 18:56:54
+
+[mdtest-easy-delete]
+t_start         = 2021-05-31 18:56:54
+exe             = ./mdtest -n 10000000 -u -L -F -P -G 1649762689 -N 1 -d /datafiles/2021.05.31-18.01.25/mdtest-easy -x /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-easy-delete.csv -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 7556.862360
+t_delta         = 1514.4178
+t_end           = 2021-05-31 19:22:09
+
+[mdtest-hard-read]
+t_start         = 2021-05-31 19:22:09
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -G=1649773377 -N 1 -F -d /datafiles/2021.05.31-18.01.25/mdtest-hard -x /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-hard-read.csv -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 10042.811819
+t_delta         = 192.3911
+t_end           = 2021-05-31 19:25:21
+
+[mdtest-hard-delete]
+t_start         = 2021-05-31 19:25:21
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -G=1649773377 -N 1 -F -d /datafiles/2021.05.31-18.01.25/mdtest-hard -x /home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/mdtest-hard-delete.csv -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 5489.515231
+t_delta         = 3609.8915
+t_end           = 2021-05-31 20:25:31
+
+[SCORE]
+MD              = 8671.647896
+BW              = 398.765034
+SCORE           = 1859.556390
+hash            = 89585A51
+; END 2021-05-31 20:25:31

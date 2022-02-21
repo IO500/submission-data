@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 31 18:33:54 2021
+Command line        : ./ior -C -Q 1 -g -G 763584895 -k -e -o /datafiles/2021.05.31-18.01.25/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-easy.stonewall -t 4m -b 1000000m -r -R -a DFS --dfs.pool=3921f5d5-98f3-476c-93ad-717919ed5d96 --dfs.cont=3180f858-73e1-400f-96fd-aca7205c82b1 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/jlombard/work/io500/isc21/io500-v2/results/2021.05.31-18.01.25/ior-easy-read.csv
+Machine             : Linux eia501
+TestID              : 0
+StartTime           : Mon May 31 18:33:54 2021
+Path                : /datafiles/2021.05.31-18.01.25/ior-easy/ior_file_easy
+FS                  : 859.5 TiB   Used FS: 39.5%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2021.05.31-18.01.25/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1440
+clients per node    : 144
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 976.56 GiB
+aggregate filesize  : 1373.29 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 1509949440000000
+WARNING: Stat() of aggregate file size      = 1509040479797248
+WARNING: Using actual aggregate bytes moved = 201046748037120
+read      600115     150084     0.001277    1024000000 4096       0.083830   319.38     0.027586   319.49     0   

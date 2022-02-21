@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 12:15:58 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 128000 -a MPIIO -o /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux pvfs017-ib0.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Nov  8 12:15:58 2018
+Path                : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_hard
+FS                  : 144.2 TiB   Used FS: 5.5%   Inodes: 290.9 Mi   Used Inodes: 1.2%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 128000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 16
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 89.66 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 67512 max: 128000 -- min data: 3.0 GiB mean data: 4.4 GiB time: 300.1s
+write     195.76     45.91      45.91      0.015481   468.99     0.029046   469.01     0   
+Max Write: 195.76 MiB/sec (205.27 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         195.76     195.76     195.76       0.00    4366.67    4366.67    4366.67       0.00  469.00751     0     16   1    1   0     1        1         0    0 128000    47008    47008   91812.5 MPIIO      0
+Finished            : Thu Nov  8 12:23:47 2018

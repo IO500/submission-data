@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 12:30:00 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 4m -b 307200m -F -a MPIIO -o /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_easy/stonewall
+Machine             : Linux pvfs017-ib0.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Nov  8 12:30:00 2018
+Path                : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_easy
+FS                  : 144.2 TiB   Used FS: 5.6%   Inodes: 290.9 Mi   Used Inodes: 2.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 16
+clients per node    : 1
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 300 GiB
+aggregate filesize  : 4.69 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 5153960755200.
+WARNING: Stat() of aggregate file size      = 4267855314944.
+WARNING: Using actual aggregate bytes moved = 4267855314944.
+read      10183      314572800  4096       0.010436   399.70     0.027063   399.72     0   
+Max Read:  10182.57 MiB/sec (10677.19 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        10182.57   10182.57   10182.57       0.00    2545.64    2545.64    2545.64       0.00  399.71696     0     16   1    1   1     1        1         0    0      1 322122547200  4194304 4070144.0 MPIIO      0
+Finished            : Thu Nov  8 12:36:40 2018

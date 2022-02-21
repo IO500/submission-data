@@ -1,0 +1,44 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 12:02:36 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 4m -b 307200m -F -a MPIIO -o /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux pvfs017-ib0.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Nov  8 12:02:36 2018
+Path                : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_easy
+FS                  : 144.2 TiB   Used FS: 2.9%   Inodes: 290.9 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-12.02.34/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 16
+clients per node    : 1
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 300 GiB
+aggregate filesize  : 4.69 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 52811 max: 63596 -- min data: 206.3 GiB mean data: 230.7 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 5153960755200.
+WARNING: Stat() of aggregate file size      = 4267855314944.
+WARNING: Using actual aggregate bytes moved = 4267855314944.
+WARNING: maybe caused by deadlineForStonewalling
+write     11084      314572800  4096       0.002418   367.17     0.039572   367.21     0   
+Max Write: 11083.95 MiB/sec (11622.36 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       11083.95   11083.95   11083.95       0.00    2770.99    2770.99    2770.99       0.00  367.21064     0     16   1    1   1     1        1         0    0      1 322122547200  4194304 4070144.0 MPIIO      0
+Finished            : Thu Nov  8 12:08:43 2018

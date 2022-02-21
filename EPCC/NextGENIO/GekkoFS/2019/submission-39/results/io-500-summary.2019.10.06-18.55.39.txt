@@ -1,0 +1,146 @@
+io500_info_submitter="Ramon Nou"
+io500_info_10nodechallenge="true"
+io500_info_institution="BSC"
+io500_info_system="NextGenIO Prototype"
+io500_info_storage_install_date="2019-01-01"
+io500_info_storage_refresh_date="2019-01-01"
+io500_info_storage_vendor="NextGenIO (BSC & JGU)"
+io500_info_filesystem_name="GekkoFS"
+io500_info_filesystem_type="Adhoc Filesystem"
+io500_info_filesystem_version="0.6dev"
+io500_info_client_nodes="10"
+io500_info_client_procs_per_node="24"
+io500_info_client_operating_system="CentOS"
+io500_info_md_nodes="33"
+io500_info_md_storage_devices="2"
+io500_info_md_storage_type="NVMe"
+io500_info_md_volatile_memory_capacity="2TB"
+io500_info_md_network="Omnipath"
+io500_info_ds_nodes="33"
+io500_info_ds_storage_devices="2"
+io500_info_ds_storage_type="3DXPNVMeSSD"
+io500_info_ds_volatile_memory_capacity="2"
+io500_info_ds_network="Omnipath"
+System:  nextgenio-cn01
+filesystem_utilization=tmpfs           97528024 3967916  93560108   5% /
+date=2019.10.06-18.55.39
+io500_clean_cache=False
+io500_clean_cache_cmd=drop_cache
+io500_cleanup_workdir=False
+io500_find_cmd=/home/nx01/nx01/rnou/io-500-dev/bin/pfind.sh
+io500_find_cmd_args=
+io500_find_mpi=False
+io500_ior_cmd=/home/nx01/nx01/rnou/io-500-dev/bin/ior
+io500_ior_easy_params='-t 2048k -b 9920000m -F'
+io500_ior_easy_size=9920000
+io500_ior_hard_api=POSIX
+io500_ior_hard_api_specific_options=
+io500_ior_hard_writes_per_proc=1900000
+io500_mdreal_cmd=/home/nx01/nx01/rnou/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/home/nx01/nx01/rnou/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=9000000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=950000
+io500_mpiargs='--nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so'
+io500_mpirun=srun
+io500_result_dir=/home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/tmp/r/datafiles/io500.2019.10.06-18.55.39
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/ior -w -t 2048k -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_easy/ior_file_easy -O stoneWallingStatusFile=/tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               67.815 GB/s : time 390.00 seconds
+
+[Starting] mdtest_easy_write
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/mdtest -C -F -P -d /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_easy -n 9000000 -u -L -x /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_easy-stonewall -N 1 -W 300
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write             1733.370 kiops : time 326.37 seconds
+
+[Starting] ior_hard_write
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/ior -w -s 1900000 -a POSIX  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/IOR_file -O stoneWallingStatusFile=/tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                3.490 GB/s : time 304.18 seconds
+
+[Starting] mdtest_hard_write
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/mdtest -C -t -F -P -w 3901 -e 3901 -d /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_hard -n 950000 -x /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write              194.587 kiops : time 322.83 seconds
+
+[Starting] find
+[EXEC] /home/nx01/nx01/rnou/io-500-dev/bin/pfind.sh /tmp/r/datafiles/io500.2019.10.06-18.55.39 -newer /tmp/r/datafiles/io500.2019.10.06-18.55.39/timestampfile -size 3901c -name "*01*" 
+[FIND] MATCHED 628526645/628526645 in 1033.7016 seconds
+[RESULT] IOPS phase 3                      find              608.030 kiops : time 1033.70 seconds
+
+[Starting] ior_easy_read
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/ior -r -R -t 2048k -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_easy/ior_file_easy -O stoneWallingStatusFile=/tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_easy/stonewall
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               38.386 GB/s : time 689.01 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/mdtest -T -F -P -d /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_easy -n 9000000 -u -L -x /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_easy-stonewall -N 1
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat             1718.610 kiops : time 329.21 seconds
+
+[Starting] ior_hard_read
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/ior -r -R -s 1900000 -a POSIX  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/IOR_file -O stoneWallingStatusFile=/tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/stonewall
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read               23.385 GB/s : time  45.39 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_hard -n 950000 -x /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat             1625.070 kiops : time  38.66 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/mdtest -r -F -P -d /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_easy -n 9000000 -u -L -x /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_easy-stonewall -N 1
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              891.281 kiops : time 634.72 seconds
+
+[Starting] mdtest_hard_read
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_hard -n 950000 -x /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              496.412 kiops : time 126.55 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] srun --nvram-options=1LM:2980 -N 10 -n 240 --export=ALL,LD_PRELOAD=/home/nx01/shared/GekkoFS-BSC/0.6dev/lib64/libgkfs_intercept.so /home/nx01/nx01/rnou/io-500-dev/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_hard -n 950000 -x /tmp/r/datafiles/io500.2019.10.06-18.55.39/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete              313.648 kiops : time 204.44 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /tmp/r/datafiles/io500.2019.10.06-18.55.39
+[Summary] Results files in /home/nx01/nx01/rnou/io-500-dev/results/2019.10.06-18.55.39
+[Summary] Data files in /tmp/r/datafiles/io500.2019.10.06-18.55.39
+[RESULT] BW   phase 1            ior_easy_write               67.815 GB/s : time 390.00 seconds
+[RESULT] BW   phase 2            ior_hard_write                3.490 GB/s : time 304.18 seconds
+[RESULT] BW   phase 3             ior_easy_read               38.386 GB/s : time 689.01 seconds
+[RESULT] BW   phase 4             ior_hard_read               23.385 GB/s : time  45.39 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write             1733.370 kiops : time 326.37 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write              194.587 kiops : time 322.83 seconds
+[RESULT] IOPS phase 3                      find              608.030 kiops : time 1033.70 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat             1718.610 kiops : time 329.21 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat             1625.070 kiops : time  38.66 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              891.281 kiops : time 634.72 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              496.412 kiops : time 126.55 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete              313.648 kiops : time 204.44 seconds
+[SCORE] Bandwidth 21.4686 GB/s : IOPS 728.677 kiops : TOTAL 125.075

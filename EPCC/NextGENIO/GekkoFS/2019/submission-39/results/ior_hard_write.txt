@@ -1,0 +1,284 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct  6 19:07:45 2019
+Command line        : /home/nx01/nx01/rnou/io-500-dev/bin/ior -w -s 1900000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/IOR_file -O stoneWallingStatusFile=/tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux nextgenio-cn01
+TestID              : 0
+StartTime           : Sun Oct  6 19:07:45 2019
+Path                : /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard
+FS                  : 59.9 TiB   Used FS: 48.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1900000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 19.50 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+stonewalling pairs accessed min: 98172 max: 101026 -- min data: 4.3 GiB mean data: 4.4 GiB time: 300.0s
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+ior WARNING: fsync() failed, errno 9, Bad file descriptor 
+WARNING: Expected aggregate file size       = 21435648000000.
+WARNING: Stat() of aggregate file size      = 1139767249920.
+WARNING: Using actual aggregate bytes moved = 1139767249920.
+WARNING: maybe caused by deadlineForStonewalling
+write     3573.42    45.91      45.91      0.017904   304.16     0.002541   304.18     0   
+Max Write: 3573.42 MiB/sec (3747.00 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        3573.42    3573.42    3573.42       0.00   79709.94   79709.94   79709.94       0.00  304.18089     300.01       3585.93     0    240  24    1   0     1        1         0    0 1900000    47008    47008 1086966.8 POSIX      0
+Finished            : Sun Oct  6 19:12:49 2019

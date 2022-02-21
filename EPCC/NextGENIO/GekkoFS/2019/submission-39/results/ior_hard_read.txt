@@ -1,0 +1,40 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct  6 19:52:37 2019
+Command line        : /home/nx01/nx01/rnou/io-500-dev/bin/ior -r -R -s 1900000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/IOR_file -O stoneWallingStatusFile=/tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/stonewall
+Machine             : Linux nextgenio-cn01
+TestID              : 0
+StartTime           : Sun Oct  6 19:52:37 2019
+Path                : /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard
+FS                  : 59.9 TiB   Used FS: 50.8%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/r/datafiles/io500.2019.10.06-18.55.39/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1900000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 19.50 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+WARNING: Expected aggregate file size       = 21435648000000.
+WARNING: Stat() of aggregate file size      = 1139767249920.
+WARNING: Using actual aggregate bytes moved = 1139767249920.
+read      23946      45.91      45.91      0.221855   45.17      0.000386   45.39      0   
+Max Read:  23946.36 MiB/sec (25109.57 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        23946.36   23946.36   23946.36       0.00  534155.33  534155.33  534155.33       0.00   45.39174         NA            NA     0    240  24    1   0     1        1         0    0 1900000    47008    47008 1086966.8 POSIX      0
+Finished            : Sun Oct  6 19:53:22 2019

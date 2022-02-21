@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jul 10 18:26:30 2020
+Command line        : /root/io500-app/bin/ior -r -R -s 420000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/llfs//2020.07.10-17.14.40-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/llfs//2020.07.10-17.14.40-scr/ior_hard/stonewall
+Machine             : Linux cn16609-gn0
+TestID              : 0
+StartTime           : Fri Jul 10 18:26:30 2020
+Path                : /mnt/llfs/2020.07.10-17.14.40-scr/ior_hard
+FS                  : 51.1 TiB   Used FS: 54.8%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/llfs//2020.07.10-17.14.40-scr/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 420000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 260
+clients per node    : 26
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 4.67 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 5133273600000.
+WARNING: Stat() of aggregate file size      = 3048736745600.
+WARNING: Using actual aggregate bytes moved = 3048736745600.
+read      34182      765429     84.70       45.91      45.91      0.276866   84.73      0.040972   85.06      0   
+Max Read:  34181.66 MiB/sec (35842.07 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        34181.66   34181.66   34181.66       0.00  762467.37  762467.37  762467.37       0.00   85.06030         NA            NA     0    260  26    1   0     1        1         0    0 420000    47008    47008 2907502.0 POSIX      0
+Finished            : Fri Jul 10 18:27:55 2020

@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Jun 10 20:58:40 2021
+Command line        : ./ior -C -Q 1 -g -G 777988158 -k -e -o /mnt/kapok/2021.06.10-20.58.30/ior-easy/ior_file_easy -O stoneWallingStatusFile=/root/io500-isc21/io500/results/2021.06.10-20.58.30/ior-easy.stonewall -t 4m -b 204800m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/root/io500-isc21/io500/results/2021.06.10-20.58.30/ior-easy-write.csv
+Machine             : Linux cn30
+TestID              : 0
+StartTime           : Thu Jun 10 20:58:40 2021
+Path                : /mnt/kapok/2021.06.10-20.58.30/ior-easy/ior_file_easy.00000000
+FS                  : 349.1 TiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/kapok/2021.06.10-20.58.30/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 18
+tasks               : 720
+clients per node    : 40
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 200 GiB
+aggregate filesize  : 140.62 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 11853 max: 12621 -- min data: 46.3 GiB mean data: 47.8 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 154618822656000
+WARNING: Stat() of aggregate file size      = 38114143764480
+WARNING: Using actual aggregate bytes moved = 38114143764480
+WARNING: Maybe caused by deadlineForStonewalling
+write     99128      29253      0.006039    209715200  4096       37.35      310.63     18.70      366.68     0   

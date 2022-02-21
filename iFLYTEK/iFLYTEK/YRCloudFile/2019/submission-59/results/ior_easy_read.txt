@@ -1,0 +1,37 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Nov  2 02:33:09 2019
+Command line        : /root/io-500-dev/bin/ior -r -R -t 2048k -b 66000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/ior_easy/stonewall
+Machine             : Linux node1.yr
+TestID              : 0
+StartTime           : Sat Nov  2 02:33:09 2019
+Path                : /mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/ior_easy
+FS                  : 46.9 TiB   Used FS: 36.7%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 64.45 GiB
+aggregate filesize  : 12.59 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+read      11225      67584000   2048.00    0.041322   1069.22    106.72     1175.98    0   
+Max Read:  11224.73 MiB/sec (11769.98 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        11224.73   11224.73   11224.73       0.00    5612.36    5612.36    5612.36       0.00 1175.97516         NA            NA     0    200  20    1   1     1        1         0    0      1 69206016000  2097152 13200000.0 POSIX      0
+Finished            : Sat Nov  2 02:52:46 2019

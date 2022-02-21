@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Nov  2 02:15:22 2019
+Command line        : /root/io-500-dev/bin/ior -w -s 500000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+Machine             : Linux node1.yr
+TestID              : 0
+StartTime           : Sat Nov  2 02:15:22 2019
+Path                : /mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/ior_hard
+FS                  : 46.9 TiB   Used FS: 36.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 500000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 4.28 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+stonewalling pairs accessed min: 500000 max: 500000 -- min data: 21.9 GiB mean data: 21.9 GiB time: 707.3s
+WARNING: Expected aggregate file size       = 4700800000000.
+WARNING: Stat() of aggregate file size      = 4794816000000.
+WARNING: Using actual aggregate bytes moved = 4700800000000.
+write     6337       45.91      45.91      0.089739   707.34     0.011254   707.44     0   
+Max Write: 6337.00 MiB/sec (6644.83 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        6337.00    6337.00    6337.00       0.00  141355.22  141355.22  141355.22       0.00  707.43760     707.32       6338.05     0    200  20    1   0     1        1         0    0 500000    47008    47008 4483032.0 POSIX      0
+Finished            : Sat Nov  2 02:27:09 2019

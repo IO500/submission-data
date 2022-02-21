@@ -1,0 +1,33 @@
+-- started at 11/02/2019 03:11:16 --
+
+mdtest-3.3.0+dev was launched with 200 total task(s) on 10 node(s)
+Command line used: /root/io-500-dev/bin/mdtest '-r' '-t' '-F' '-P' '-w' '3901' '-e' '3901' '-d' '/mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/mdt_hard' '-n' '280000' '-x' '/mnt/yrfs/datafiles/io500.2019.11.02-02.03.42/mdt_hard-stonewall' '-a' 'POSIX' '-N' '1'
+Path: /mnt/yrfs/datafiles/io500.2019.11.02-02.03.42
+FS: 46.9 TiB   Used FS: 36.7%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 11111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2128 Shifting ranks by 20 for each phase.
+200 tasks, 56000000 files
+WARNING: could not read stonewall status file
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :     258903.322     258901.712     258902.784          0.467
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.049          0.049          0.049          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        216.298        216.297        216.297          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :         20.370         20.370         20.370          0.000
+-- finished at 11/02/2019 03:15:18 --
+

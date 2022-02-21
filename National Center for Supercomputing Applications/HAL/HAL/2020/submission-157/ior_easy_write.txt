@@ -1,0 +1,149 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Jun 27 09:56:10 2020
+Command line        : /home/malone12/benchmark/io500-app/bin/ior -w -a POSIX -t 4m -v -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux hal01
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Sat Jun 27 09:56:10 2020
+Path                : /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_easy
+FS                  : 223.2 TiB   Used FS: 52.0%   Inodes: 194.5 Mi   Used Inodes: 81.4%
+Participating tasks: 100
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 100
+clients per node    : 10
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 946.04 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Sat Jun 27 09:56:11 2020
+23: stonewalling pairs accessed: 11120
+30: stonewalling pairs accessed: 10654
+31: stonewalling pairs accessed: 10931
+32: stonewalling pairs accessed: 10945
+34: stonewalling pairs accessed: 10905
+39: stonewalling pairs accessed: 10842
+35: stonewalling pairs accessed: 10958
+36: stonewalling pairs accessed: 10839
+77: stonewalling pairs accessed: 10996
+22: stonewalling pairs accessed: 11650
+38: stonewalling pairs accessed: 10882
+90: stonewalling pairs accessed: 11807
+37: stonewalling pairs accessed: 10900
+65: stonewalling pairs accessed: 10751
+11: stonewalling pairs accessed: 11846
+17: stonewalling pairs accessed: 11937
+71: stonewalling pairs accessed: 11060
+19: stonewalling pairs accessed: 12002
+47: stonewalling pairs accessed: 12509
+12: stonewalling pairs accessed: 12164
+14: stonewalling pairs accessed: 12043
+16: stonewalling pairs accessed: 12020
+48: stonewalling pairs accessed: 12256
+41: stonewalling pairs accessed: 12413
+45: stonewalling pairs accessed: 12278
+15: stonewalling pairs accessed: 12078
+83: stonewalling pairs accessed: 12250
+78: stonewalling pairs accessed: 10919
+75: stonewalling pairs accessed: 10724
+40: stonewalling pairs accessed: 12500
+46: stonewalling pairs accessed: 12963
+79: stonewalling pairs accessed: 11324
+42: stonewalling pairs accessed: 12261
+28: stonewalling pairs accessed: 11387
+18: stonewalling pairs accessed: 11993
+64: stonewalling pairs accessed: 10952
+74: stonewalling pairs accessed: 10984
+66: stonewalling pairs accessed: 10836
+67: stonewalling pairs accessed: 10949
+69: stonewalling pairs accessed: 10696
+60: stonewalling pairs accessed: 11145
+62: stonewalling pairs accessed: 10631
+61: stonewalling pairs accessed: 10854
+76: stonewalling pairs accessed: 10783
+13: stonewalling pairs accessed: 12278
+20: stonewalling pairs accessed: 11302
+98: stonewalling pairs accessed: 12073
+81: stonewalling pairs accessed: 12343
+57: stonewalling pairs accessed: 9854
+63: stonewalling pairs accessed: 10719
+53: stonewalling pairs accessed: 10416
+54: stonewalling pairs accessed: 10744
+58: stonewalling pairs accessed: 10353
+59: stonewalling pairs accessed: 10128
+51: stonewalling pairs accessed: 9884
+55: stonewalling pairs accessed: 10308
+50: stonewalling pairs accessed: 9852
+85: stonewalling pairs accessed: 12184
+5: stonewalling pairs accessed: 14251
+49: stonewalling pairs accessed: 12279
+33: stonewalling pairs accessed: 10945
+10: stonewalling pairs accessed: 11920
+26: stonewalling pairs accessed: 11454
+91: stonewalling pairs accessed: 11905
+68: stonewalling pairs accessed: 10928
+87: stonewalling pairs accessed: 12252
+56: stonewalling pairs accessed: 9887
+73: stonewalling pairs accessed: 10709
+43: stonewalling pairs accessed: 12889
+24: stonewalling pairs accessed: 11388
+94: stonewalling pairs accessed: 11888
+80: stonewalling pairs accessed: 12121
+52: stonewalling pairs accessed: 10129
+44: stonewalling pairs accessed: 12256
+27: stonewalling pairs accessed: 11489
+96: stonewalling pairs accessed: 11901
+82: stonewalling pairs accessed: 12115
+29: stonewalling pairs accessed: 11429
+97: stonewalling pairs accessed: 11733
+89: stonewalling pairs accessed: 12193
+84: stonewalling pairs accessed: 12166
+21: stonewalling pairs accessed: 11431
+92: stonewalling pairs accessed: 11860
+25: stonewalling pairs accessed: 11401
+95: stonewalling pairs accessed: 11852
+86: stonewalling pairs accessed: 12259
+88: stonewalling pairs accessed: 12269
+93: stonewalling pairs accessed: 11712
+99: stonewalling pairs accessed: 11892
+0: stonewalling pairs accessed: 13954
+2: stonewalling pairs accessed: 14106
+8: stonewalling pairs accessed: 14090
+3: stonewalling pairs accessed: 13923
+9: stonewalling pairs accessed: 14254
+1: stonewalling pairs accessed: 14201
+6: stonewalling pairs accessed: 14156
+7: stonewalling pairs accessed: 13845
+4: stonewalling pairs accessed: 14256
+70: stonewalling pairs accessed: 11015
+stonewalling pairs accessed min: 9852 max: 14256 -- min data: 38.5 GiB mean data: 45.7 GiB time: 301.3s
+72: stonewalling pairs accessed: 10975
+WARNING: Expected aggregate file size       = 1040187392000000.
+WARNING: Stat() of aggregate file size      = 5979399782400.
+WARNING: Using actual aggregate bytes moved = 5979399782400.
+WARNING: maybe caused by deadlineForStonewalling
+write     15217      3806       0.000123    10158080000 4096       0.192096   374.54     0.013982   374.75     0   
+Max Write: 15216.67 MiB/sec (15955.84 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       15216.67   15216.67   15216.67       0.00    3804.17    3804.17    3804.17       0.00  374.74690     301.29      15520.55     0    100  10    1   1     1        1         0    0      1 10401873920000  4194304 5702400.0 POSIX      0
+Finished            : Sat Jun 27 10:02:25 2020

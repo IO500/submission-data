@@ -1,0 +1,125 @@
+System:  hal01
+filesystem_utilization=hal            239712862208 124833207296 114879654912  53% /gpfs/hal
+date=2020.06.27-06.53.38
+io500_clean_cache=False
+io500_clean_cache_cmd='sudo -n bash -c "echo 3 > /proc/sys/vm/drop_caches"'
+io500_cleanup_workdir=
+io500_find_cmd=/home/malone12/benchmark/io500-app/bin/pfind
+io500_find_cmd_args=
+io500_find_mpi=True
+io500_ini=config-full.ini
+io500_ior_cmd=/home/malone12/benchmark/io500-app/bin/ior
+io500_ior_easy_params=' -a POSIX -t 4m -v -b 9920000m -F'
+io500_ior_easy_size=9920000
+io500_ior_hard_api=POSIX
+io500_ior_hard_api_specific_options=' -v'
+io500_ior_hard_writes_per_proc=10000000
+io500_mdreal_cmd=/home/malone12/benchmark/io500-app/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/home/malone12/benchmark/io500-app/bin/mdtest
+io500_mdtest_easy_files_per_proc=2300000
+io500_mdtest_easy_params='-u -L -a POSIX'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=60000
+io500_mpiargs='-np 100'
+io500_mpirun=mpiexec
+io500_result_dir=./results/2020.06.27-06.53.38-scr
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/ior -w  -a POSIX -t 4m -v -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in ./results/2020.06.27-06.53.38-scr/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               14.860 GiB/s : time 374.54 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/mdtest -C -F -P -Y -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_easy -n 2300000 -u -L -a POSIX -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_easy-stonewall -N 1 -W 300
+[Results] in ./results/2020.06.27-06.53.38-scr/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               71.463 kiops : time 378.96 seconds
+
+[Starting] ior_hard_write
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/ior -w -s 10000000 -a POSIX  -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in ./results/2020.06.27-06.53.38-scr/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                0.432 GiB/s : time 454.33 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/mdtest -C -t -F -Y -P -w 3901 -e 3901 -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_hard -n 60000 -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in ./results/2020.06.27-06.53.38-scr/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                2.389 kiops : time 1248.76 seconds
+
+[Starting] find
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/pfind /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr -newer /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/timestampfile -size 3901c -name "*01*" 
+[Results] in ./results/2020.06.27-06.53.38-scr/find.txt.
+[FIND] MATCHED 78600/30064706 in 23.1244 seconds
+[RESULT] IOPS phase 3                      find             1300.120 kiops : time  23.12 seconds
+
+[Starting] ior_easy_read
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/ior -r -R  -a POSIX -t 4m -v -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_easy/stonewall
+[Results] in ./results/2020.06.27-06.53.38-scr/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               12.737 GiB/s : time 437.17 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/mdtest -T -F -P -Y -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_easy -n 2300000 -u -L -a POSIX -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_easy-stonewall -N 1
+[Results] in ./results/2020.06.27-06.53.38-scr/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              105.832 kiops : time 255.89 seconds
+
+[Starting] ior_hard_read
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/ior -r -R -s 10000000 -a POSIX  -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/ior_hard/stonewall
+[Results] in ./results/2020.06.27-06.53.38-scr/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                2.095 GiB/s : time  93.77 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/mdtest -T -t -F -Y -P -w 3901 -e 3901 -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_hard -n 60000 -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.06.27-06.53.38-scr/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat              104.914 kiops : time  28.43 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/mdtest -r -F -P -Y -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_easy -n 2300000 -u -L -a POSIX -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_easy-stonewall -N 1
+[Results] in ./results/2020.06.27-06.53.38-scr/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               33.258 kiops : time 814.28 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/mdtest -X -E -t -F -Y -P -w 3901 -e 3901 -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_hard -n 60000 -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.06.27-06.53.38-scr/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read               65.372 kiops : time  45.63 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpiexec -np 100 /home/malone12/benchmark/io500-app/bin/mdtest -r -t -F -Y -P -w 3901 -e 3901 -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_hard -n 60000 -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.06.27-06.53.38-scr/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                0.457 kiops : time 6532.34 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr
+[Summary] Results files in ./results/2020.06.27-06.53.38-scr
+[Summary] Data files in /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr
+[RESULT] BW   phase 1            ior_easy_write               14.860 GiB/s : time 374.54 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.432 GiB/s : time 454.33 seconds
+[RESULT] BW   phase 3             ior_easy_read               12.737 GiB/s : time 437.17 seconds
+[RESULT] BW   phase 4             ior_hard_read                2.095 GiB/s : time  93.77 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               71.463 kiops : time 378.96 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                2.389 kiops : time 1248.76 seconds
+[RESULT] IOPS phase 3                      find             1300.120 kiops : time  23.12 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              105.832 kiops : time 255.89 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              104.914 kiops : time  28.43 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               33.258 kiops : time 814.28 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               65.372 kiops : time  45.63 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                0.457 kiops : time 6532.34 seconds
+[SCORE] Bandwidth 3.61864 GiB/s : IOPS 35.369 kiops : TOTAL 11.3132

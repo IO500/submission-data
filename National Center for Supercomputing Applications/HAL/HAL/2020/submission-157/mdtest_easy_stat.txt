@@ -1,0 +1,32 @@
+-- started at 06/27/2020 10:45:17 --
+
+mdtest-3.3.0+dev was launched with 100 total task(s) on 10 node(s)
+Command line used: /home/malone12/benchmark/io500-app/bin/mdtest '-T' '-F' '-P' '-Y' '-d' '/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_easy' '-n' '2300000' '-u' '-L' '-a' 'POSIX' '-x' '/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr/mdt_easy-stonewall' '-N' '1'
+Path: /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-scr
+FS: 223.2 TiB   Used FS: 52.1%   Inodes: 194.5 Mi   Used Inodes: 95.9%
+
+Nodemap: 1111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 10 for each phase.
+100 tasks, 230000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :     105832.252     105832.147     105832.220          0.034
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :        255.890        255.890        255.890          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 06/27/2020 10:49:33 --
+

@@ -1,0 +1,60 @@
+-- started at 11/08/2018 17:30:25 --
+
+mdtest-1.9.3 was launched with 40 total task(s) on 10 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-17.00.53/mdt_hard" "-n" "200000" "-x" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-17.00.53/mdt_hard-stonewall" "-W" "300"
+Path: /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-17.00.53
+FS: 144.2 TiB   Used FS: 19.1%   Inodes: 290.9 Mi   Used Inodes: 2.0%
+
+40 tasks, 8000000 files
+stonewall rank 30: 119182 of 125500 
+stonewall rank 20: 117429 of 125500 
+Continue stonewall hit min: 117429 max: 125500 avg: 121680.1 
+stonewall rank 0: 117765 of 125500 
+stonewall rank 10: 119223 of 125500 
+stonewall rank 38: 121514 of 125500 
+stonewall rank 24: 125315 of 125500 
+stonewall rank 28: 120951 of 125500 
+stonewall rank 8: 121000 of 125500 
+stonewall rank 14: 124737 of 125500 
+stonewall rank 18: 121661 of 125500 
+stonewall rank 34: 124924 of 125500 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      25062.887      25062.887      25062.887          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        906.364        906.364        906.364          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 17:35:45 --
+stonewall rank 16: 120761 of 125500 
+stonewall rank 32: 122005 of 125500 
+stonewall rank 12: 121969 of 125500 
+stonewall rank 22: 122528 of 125500 
+stonewall rank 2: 122412 of 125500 
+stonewall rank 6: 121857 of 125500 
+stonewall rank 36: 120761 of 125500 
+stonewall rank 26: 121830 of 125500 
+stonewall rank 1: 118289 of 125500 
+stonewall rank 21: 118358 of 125500 
+stonewall rank 11: 118990 of 125500 
+stonewall rank 31: 118931 of 125500 
+stonewall rank 19: 123026 of 125500 
+stonewall rank 5: 122046 of 125500 
+stonewall rank 29: 122594 of 125500 
+stonewall rank 25: 122188 of 125500 
+stonewall rank 35: 121327 of 125500 
+stonewall rank 15: 121523 of 125500 
+stonewall rank 9: 122737 of 125500 
+stonewall rank 39: 122894 of 125500 
+stonewall rank 3: 122222 of 125500 
+stonewall rank 33: 121856 of 125500 
+stonewall rank 13: 121777 of 125500 
+stonewall rank 23: 122216 of 125500 
+stonewall rank 27: 123547 of 125500 
+stonewall rank 7: 123631 of 125500 
+stonewall rank 17: 122956 of 125500 
+stonewall rank 37: 122772 of 125500 

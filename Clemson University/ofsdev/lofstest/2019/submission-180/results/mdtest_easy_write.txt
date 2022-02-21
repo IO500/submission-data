@@ -1,0 +1,60 @@
+-- started at 11/08/2018 17:07:59 --
+
+mdtest-1.9.3 was launched with 40 total task(s) on 10 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-F" "-d" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-17.00.53/mdt_easy" "-n" "500000" "-u" "-L" "-x" "/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-17.00.53/mdt_easy-stonewall" "-W" "300"
+Path: /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-17.00.53
+FS: 144.2 TiB   Used FS: 19.0%   Inodes: 290.9 Mi   Used Inodes: 0.0%
+
+40 tasks, 20000000 files
+stonewall rank 30: 133284 of 149680 
+stonewall rank 10: 133083 of 149680 
+Continue stonewall hit min: 133083 max: 149680 avg: 141974.5 
+stonewall rank 0: 133597 of 149680 
+stonewall rank 20: 133311 of 149680 
+stonewall rank 4: 145258 of 149680 
+stonewall rank 14: 141364 of 149680 
+stonewall rank 24: 143575 of 149680 
+stonewall rank 34: 141265 of 149680 
+stonewall rank 8: 145647 of 149680 
+stonewall rank 38: 146323 of 149680 
+stonewall rank 18: 146409 of 149680 
+stonewall rank 28: 145085 of 149680 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      60905.863      60905.863      60905.863          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        103.702        103.702        103.702          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 17:13:28 --
+stonewall rank 22: 141303 of 149680 
+stonewall rank 32: 140035 of 149680 
+stonewall rank 12: 139913 of 149680 
+stonewall rank 2: 142149 of 149680 
+stonewall rank 36: 148029 of 149680 
+stonewall rank 16: 148370 of 149680 
+stonewall rank 26: 149146 of 149680 
+stonewall rank 31: 144561 of 149680 
+stonewall rank 1: 142987 of 149680 
+stonewall rank 11: 144348 of 149680 
+stonewall rank 21: 142721 of 149680 
+stonewall rank 35: 147554 of 149680 
+stonewall rank 15: 147382 of 149680 
+stonewall rank 5: 148212 of 149680 
+stonewall rank 25: 148556 of 149680 
+stonewall rank 19: 139965 of 149680 
+stonewall rank 9: 139416 of 149680 
+stonewall rank 39: 139990 of 149680 
+stonewall rank 29: 139422 of 149680 
+stonewall rank 13: 135632 of 149680 
+stonewall rank 23: 137826 of 149680 
+stonewall rank 3: 137598 of 149680 
+stonewall rank 33: 135789 of 149680 
+stonewall rank 17: 139347 of 149680 
+stonewall rank 37: 139264 of 149680 
+stonewall rank 27: 140713 of 149680 
+stonewall rank 7: 140870 of 149680 

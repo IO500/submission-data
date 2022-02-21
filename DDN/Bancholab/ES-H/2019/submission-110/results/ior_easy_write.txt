@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 16:37:51 2018
+Command line        : /work/BMLab/2018/io500/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 55000m -F -o /scratch0/io500.out/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch0/io500.out/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux c01
+TestID              : 0
+StartTime           : Thu Nov  8 16:37:51 2018
+Path                : /scratch0/io500.out/ior_easy
+FS                  : 79.0 TiB   Used FS: 0.0%   Inodes: 640.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch0/io500.out/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 53.71 GiB
+aggregate filesize  : 12.59 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 18818 max: 27500 -- min data: 36.8 GiB mean data: 51.6 GiB time: 300.0s
+write     38441      56320000   2048.00    0.149619   343.31     0.144904   343.38     0   
+Max Write: 38440.89 MiB/sec (40308.19 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       38440.89   38440.89   38440.89       0.00   19220.44   19220.44   19220.44       0.00  343.38438     0    240  24    1   1     1        1         0    0      1 57671680000  2097152 13200000.0 POSIX      0
+Finished            : Thu Nov  8 16:43:34 2018

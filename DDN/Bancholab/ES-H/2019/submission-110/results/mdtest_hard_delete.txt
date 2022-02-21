@@ -1,0 +1,20 @@
+-- started at 11/08/2018 17:19:06 --
+
+mdtest-1.9.3 was launched with 240 total task(s) on 10 node(s)
+Command line used: /work/BMLab/2018/io500/io-500-dev/bin/mdtest "-r" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/scratch0/io500.out/mdt_hard" "-n" "40000" "-x" "/scratch0/io500.out/mdt_hard-stonewall"
+Path: /scratch0/io500.out
+FS: 79.0 TiB   Used FS: 16.1%   Inodes: 640.0 Mi   Used Inodes: 1.2%
+
+240 tasks, 9600000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :      58841.682      58841.682      58841.682          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          8.436          8.436          8.436          0.000
+
+-- finished at 11/08/2018 17:21:28 --

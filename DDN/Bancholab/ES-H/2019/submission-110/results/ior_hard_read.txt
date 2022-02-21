@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 17:09:10 2018
+Command line        : /work/BMLab/2018/io500/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 7500 -o /scratch0/io500.out/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch0/io500.out/ior_hard/stonewall
+Machine             : Linux c01
+TestID              : 0
+StartTime           : Thu Nov  8 17:09:10 2018
+Path                : /scratch0/io500.out/ior_hard
+FS                  : 79.0 TiB   Used FS: 16.1%   Inodes: 640.0 Mi   Used Inodes: 10.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch0/io500.out/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 7500
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 78.80 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      4738       45.91      45.91      0.136728   16.92      0.139272   17.03      0   
+Max Read:  4738.28 MiB/sec (4968.45 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         4738.28    4738.28    4738.28       0.00  105693.66  105693.66  105693.66       0.00   17.03035     0    240  24    1   0     1        1         0    0   7500    47008    47008   80694.6 POSIX      0
+Finished            : Thu Nov  8 17:09:27 2018

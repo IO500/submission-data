@@ -1,0 +1,117 @@
+-- started at 11/08/2018 16:43:35 --
+
+mdtest-1.9.3 was launched with 240 total task(s) on 10 node(s)
+Command line used: /work/BMLab/2018/io500/io-500-dev/bin/mdtest "-C" "-F" "-d" "/scratch0/io500.out/mdt_easy" "-n" "270000" "-u" "-L" "-x" "/scratch0/io500.out/mdt_easy-stonewall" "-W" "300"
+Path: /scratch0/io500.out
+FS: 79.0 TiB   Used FS: 15.9%   Inodes: 640.0 Mi   Used Inodes: 0.0%
+
+240 tasks, 64800000 files
+stonewall rank 50: 241374 of 270000 
+stonewall rank 122: 249949 of 270000 
+stonewall rank 170: 224063 of 270000 
+stonewall rank 75: 252102 of 270000 
+stonewall rank 51: 236692 of 270000 
+stonewall rank 123: 236295 of 270000 
+stonewall rank 171: 232896 of 270000 
+stonewall rank 82: 238685 of 270000 
+stonewall rank 58: 225319 of 270000 
+stonewall rank 130: 230872 of 270000 
+stonewall rank 178: 227195 of 270000 
+stonewall rank 83: 232301 of 270000 
+stonewall rank 59: 220265 of 270000 
+stonewall rank 131: 247315 of 270000 
+stonewall rank 179: 233030 of 270000 
+stonewall rank 90: 247282 of 270000 
+stonewall rank 66: 226172 of 270000 
+stonewall rank 138: 256969 of 270000 
+stonewall rank 186: 240554 of 270000 
+stonewall rank 91: 231903 of 270000 
+stonewall rank 67: 237575 of 270000 
+stonewall rank 139: 240066 of 270000 
+stonewall rank 187: 228748 of 270000 
+stonewall rank 49: 233905 of 270000 
+stonewall rank 73: 233437 of 270000 
+stonewall rank 53: 230706 of 270000 
+stonewall rank 121: 246082 of 270000 
+stonewall rank 169: 229023 of 270000 
+stonewall rank 77: 240586 of 270000 
+stonewall rank 57: 217720 of 270000 
+stonewall rank 125: 237638 of 270000 
+stonewall rank 173: 236329 of 270000 
+stonewall rank 81: 239566 of 270000 
+stonewall rank 61: 236797 of 270000 
+stonewall rank 129: 245019 of 270000 
+stonewall rank 177: 236115 of 270000 
+stonewall rank 85: 243787 of 270000 
+stonewall rank 65: 223261 of 270000 
+stonewall rank 133: 243340 of 270000 
+stonewall rank 181: 224738 of 270000 
+stonewall rank 89: 226125 of 270000 
+stonewall rank 69: 241793 of 270000 
+stonewall rank 137: 237312 of 270000 
+stonewall rank 185: 226612 of 270000 
+stonewall rank 93: 239165 of 270000 
+stonewall rank 141: 235088 of 270000 
+stonewall rank 189: 241280 of 270000 
+stonewall rank 175: 237624 of 270000 
+stonewall rank 55: 245346 of 270000 
+stonewall rank 142: 246247 of 270000 
+stonewall rank 79: 238944 of 270000 
+stonewall rank 183: 232365 of 270000 
+stonewall rank 143: 242261 of 270000 
+stonewall rank 62: 232044 of 270000 
+stonewall rank 120: 252789 of 270000 
+stonewall rank 191: 238779 of 270000 
+stonewall rank 63: 230078 of 270000 
+stonewall rank 124: 260014 of 270000 
+stonewall rank 168: 243365 of 270000 
+stonewall rank 87: 241730 of 270000 
+stonewall rank 71: 232890 of 270000 
+stonewall rank 126: 243190 of 270000 
+stonewall rank 172: 231028 of 270000 
+stonewall rank 94: 233550 of 270000 
+stonewall rank 52: 232527 of 270000 
+stonewall rank 127: 256968 of 270000 
+stonewall rank 174: 237876 of 270000 
+stonewall rank 95: 243919 of 270000 
+stonewall rank 54: 233062 of 270000 
+stonewall rank 132: 244873 of 270000 
+stonewall rank 176: 232490 of 270000 
+stonewall rank 74: 242306 of 270000 
+stonewall rank 56: 231103 of 270000 
+stonewall rank 134: 252661 of 270000 
+stonewall rank 180: 223667 of 270000 
+stonewall rank 78: 244144 of 270000 
+stonewall rank 60: 229405 of 270000 
+stonewall rank 135: 227873 of 270000 
+stonewall rank 182: 239554 of 270000 
+stonewall rank 80: 239692 of 270000 
+stonewall rank 68: 232628 of 270000 
+stonewall rank 136: 246114 of 270000 
+stonewall rank 184: 232101 of 270000 
+stonewall rank 84: 225508 of 270000 
+stonewall rank 70: 228021 of 270000 
+stonewall rank 140: 231134 of 270000 
+stonewall rank 188: 241515 of 270000 
+stonewall rank 86: 240377 of 270000 
+stonewall rank 48: 229391 of 270000 
+stonewall rank 128: 242927 of 270000 
+stonewall rank 190: 233128 of 270000 
+stonewall rank 88: 235162 of 270000 
+stonewall rank 64: 226861 of 270000 
+stonewall rank 92: 243298 of 270000 
+stonewall rank 72: 224878 of 270000 
+stonewall rank 76: 229449 of 270000 
+Continue stonewall hit min: 217720 max: 270000 avg: 256666.3 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :     199684.535     199684.535     199684.535          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :         17.681         17.681         17.681          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 16:49:00 --

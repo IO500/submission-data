@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 16:49:01 2018
+Command line        : /work/BMLab/2018/io500/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 7500 -o /scratch0/io500.out/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch0/io500.out/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux c01
+TestID              : 0
+StartTime           : Thu Nov  8 16:49:01 2018
+Path                : /scratch0/io500.out/ior_hard
+FS                  : 79.0 TiB   Used FS: 15.9%   Inodes: 640.0 Mi   Used Inodes: 9.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch0/io500.out/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 7500
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 78.80 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 7500 max: 7500 -- min data: 0.3 GiB mean data: 0.3 GiB time: 299.9s
+write     268.80     45.91      45.91      0.173708   300.16     0.126608   300.21     0   
+Max Write: 268.80 MiB/sec (281.85 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         268.80     268.80     268.80       0.00    5995.84    5995.84    5995.84       0.00  300.20790     0    240  24    1   0     1        1         0    0   7500    47008    47008   80694.6 POSIX      0
+Finished            : Thu Nov  8 16:54:01 2018

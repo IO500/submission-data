@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue May 19 12:26:10 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /mnt/lustre01/work/k20200/k202079/io500-data//2020.05.19-12.12.45-app/ior-hard/file -O stoneWallingStatusFile=/mnt/lustre01/work/k20200/k202079/io500-data//2020.05.19-12.12.45-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 8500 -w -D 300 -a POSIX
+Machine             : Linux m11404
+TestID              : 0
+StartTime           : Tue May 19 12:26:10 2020
+Path                : /mnt/lustre01/work/k20200/k202079/io500-data/2020.05.19-12.12.45-app/ior-hard
+FS                  : 20835.6 TiB   Used FS: 79.6%   Inodes: 5974.4 Mi   Used Inodes: 8.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/lustre01/work/k20200/k202079/io500-data//2020.05.19-12.12.45-app/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 8500
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 120
+clients per node    : 12
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 44.66 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 6097 max: 8500 -- min data: 0.3 GiB mean data: 0.4 GiB time: 300.3s
+write     113.92     2541.37    300.47      45.91      45.91      0.025299   401.36     0.000735   401.38     0   
+Max Write: 113.92 MiB/sec (119.46 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         113.92     113.92     113.92       0.00    2541.21    2541.21    2541.21       0.00  401.38333     300.33        150.82     0    120  12    1   0     1        1         0    0   8500    47008    47008   45726.9 POSIX      0
+Finished            : Tue May 19 12:32:52 2020

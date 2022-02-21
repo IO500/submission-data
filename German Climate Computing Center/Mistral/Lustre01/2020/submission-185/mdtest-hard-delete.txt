@@ -1,0 +1,32 @@
+-- started at 05/19/2020 13:09:09 --
+
+mdtest-3.3.0+dev was launched with 120 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-N' '1' '-F' '-d' '/mnt/lustre01/work/k20200/k202079/io500-data//2020.05.19-12.12.45-app/mdtest-hard' '-x' '/mnt/lustre01/work/k20200/k202079/io500-data//2020.05.19-12.12.45-app/mdtest-hard-stonewall' '-r' '-a' 'POSIX'
+Path: /mnt/lustre01/work/k20200/k202079/io500-data/2020.05.19-12.12.45-app
+FS: 20835.6 TiB   Used FS: 79.3%   Inodes: 5974.4 Mi   Used Inodes: 8.3%
+
+Nodemap: 111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 12 for each phase.
+120 tasks, 120000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :       8049.258       8049.000       8049.231          0.077
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          1.430          1.430          1.430          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        373.224        373.212        373.213          0.004
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.699          0.699          0.699          0.000
+-- finished at 05/19/2020 13:15:23 --
+

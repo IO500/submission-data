@@ -1,0 +1,37 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Oct 31 23:18:58 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-hard/file -O stoneWallingStatusFile=/work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a MPIIO
+Machine             : Linux gnode08
+TestID              : 0
+StartTime           : Sat Oct 31 23:18:58 2020
+Path                : /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-hard/file
+FS                  : 27.8 TiB   Used FS: 57.5%   Inodes: 15.4 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 20
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 8.55 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4479707 max: 4479707 -- min data: 196.1 GiB mean data: 196.1 GiB time: 5879.4s
+WARNING: inconsistent file size by different tasks.
+WARNING: Expected aggregate file size       = 9401600000000
+WARNING: Stat() of aggregate file size      = 4211640439968
+WARNING: Using actual aggregate bytes moved = 4211641333120
+read      676.17     15238      5880        45.91      45.91      55.07      5880       5.42       5940       0   

@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Oct 31 22:40:52 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/ior-easy.stonewall -t 1m -b 600000m -F -w -D 300 -O stoneWallingWearOut=1 -a Gfarm
+Machine             : Linux gnode08
+TestID              : 0
+StartTime           : Sat Oct 31 22:40:52 2020
+Path                : /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-easy/ior_file_easy.00000000
+FS                  : 27.8 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: 50.0%
+
+Options: 
+api                 : Gfarm
+apiVersion          : 2.7.17
+test filename       : /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 20
+clients per node    : 2
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 585.94 GiB
+aggregate filesize  : 11.44 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 391267 max: 488577 -- min data: 382.1 GiB mean data: 432.3 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 12582912000000
+WARNING: Stat() of aggregate file size      = 10246202327040
+WARNING: Using actual aggregate bytes moved = 10246202327040
+WARNING: Maybe caused by deadlineForStonewalling
+write     26598      26599      0.000591    614400000  1024.00    0.000778   367.37     0.005025   367.37     0   

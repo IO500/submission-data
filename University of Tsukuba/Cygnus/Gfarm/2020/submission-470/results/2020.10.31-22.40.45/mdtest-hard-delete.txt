@@ -1,0 +1,32 @@
+-- started at 11/01/2020 01:15:58 --
+
+mdtest-3.4.0+dev was launched with 20 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '260000' '-t' '-w' '3901' '-e' '3901' '-P' '-N' '1' '-F' '-d' '/tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/mdtest-hard' '-x' '/work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/mdtest-hard.stonewall' '-r' '-a' 'Gfarm'
+Path: /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45
+FS: 27.8 GiB   Used FS: 57.5%   Inodes: 9.9 Mi   Used Inodes: 50.0%
+
+Nodemap: 10000000001000000000
+V-0: Rank   0 Line  2216 Shifting ranks by 1 for each phase.
+20 tasks, 5200000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :      15908.956      15908.944      15908.949          0.004
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :       3134.756       3134.756       3134.756          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        326.860        326.860        326.860          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/01/2020 01:21:25 --
+

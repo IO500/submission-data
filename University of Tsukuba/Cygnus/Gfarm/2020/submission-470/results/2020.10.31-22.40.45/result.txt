@@ -1,0 +1,106 @@
+version         = io500-sc20_v3-5-gee79fd4bcd36
+config-hash     = 584608B2
+result-dir      = /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45
+; START 2020-10-31 22:40:52
+
+
+[ior-easy-write]
+t_start         = 2020-10-31 22:40:52
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/ior-easy.stonewall -t 1m -b 600000m -F -w -D 300 -O stoneWallingWearOut=1 -a Gfarm
+throughput-stonewall = 470.67
+score           = 25.974926
+t_delta         = 367.4814
+t_end           = 2020-10-31 22:46:59
+
+[mdtest-easy-write]
+t_start         = 2020-10-31 22:46:59
+exe             = ./mdtest -n 600000 -u -L -F -P -N 1 -d /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/mdtest-easy -x /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/mdtest-easy.stonewall -C -Y -W 300 -a Gfarm
+rate-stonewall  = 30.430188
+score           = 30.085873
+t_delta         = 364.7815
+t_end           = 2020-10-31 22:53:04
+
+[timestamp]
+t_start         = 2020-10-31 22:53:04
+t_delta         = 0.0072
+t_end           = 2020-10-31 22:53:04
+
+[ior-hard-write]
+t_start         = 2020-10-31 22:53:04
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-hard/file -O stoneWallingStatusFile=/work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a MPIIO
+throughput-stonewall = 219.41
+score           = 11.558757
+t_delta         = 401.0785
+t_end           = 2020-10-31 22:59:45
+
+[mdtest-hard-write]
+t_start         = 2020-10-31 22:59:45
+exe             = ./mdtest -n 260000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/mdtest-hard -x /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/mdtest-hard.stonewall -C -Y -W 300 -a Gfarm
+rate-stonewall  = 13.423690
+score           = 13.190808
+t_delta         = 394.8013
+t_end           = 2020-10-31 23:06:20
+
+[find]
+t_start         = 2020-10-31 23:06:20
+exe             = ./pfind /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45 -newer /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 192480
+total-files     = 16114420
+score           = 352.423767
+t_delta         = 45.8006
+t_end           = 2020-10-31 23:07:06
+
+[ior-easy-read]
+t_start         = 2020-10-31 23:07:06
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/ior-easy.stonewall -t 1m -b 600000m -F -r -R -a Gfarm
+score           = 21.742418
+t_delta         = 440.8893
+t_end           = 2020-10-31 23:14:27
+
+[mdtest-easy-stat]
+t_start         = 2020-10-31 23:14:27
+exe             = ./mdtest -n 600000 -u -L -F -P -N 1 -d /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/mdtest-easy -x /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/mdtest-easy.stonewall -T -a Gfarm
+score           = 40.636410
+t_delta         = 270.9705
+t_end           = 2020-10-31 23:18:58
+
+[ior-hard-read]
+t_start         = 2020-10-31 23:18:58
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/ior-hard/file -O stoneWallingStatusFile=/work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a MPIIO
+score           = 0.660321
+t_delta         = 6000.2903
+t_end           = 2020-11-01 00:58:58
+
+[mdtest-hard-stat]
+t_start         = 2020-11-01 00:58:58
+exe             = ./mdtest -n 260000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/mdtest-hard -x /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/mdtest-hard.stonewall -T -a Gfarm
+score           = 39.234431
+t_delta         = 132.6768
+t_end           = 2020-11-01 01:01:11
+
+[mdtest-easy-delete]
+t_start         = 2020-11-01 01:01:11
+exe             = ./mdtest -n 600000 -u -L -F -P -N 1 -d /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/mdtest-easy -x /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/mdtest-easy.stonewall -r -a Gfarm
+score           = 19.305836
+t_delta         = 566.0639
+t_end           = 2020-11-01 01:10:37
+
+[mdtest-hard-read]
+t_start         = 2020-11-01 01:10:37
+exe             = ./mdtest -n 260000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/mdtest-hard -x /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/mdtest-hard.stonewall -E -X -a Gfarm
+score           = 16.399593
+t_delta         = 319.0832
+t_end           = 2020-11-01 01:15:56
+
+[mdtest-hard-delete]
+t_start         = 2020-11-01 01:15:56
+exe             = ./mdtest -n 260000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/gfarm-sugiharak/datafiles/2020.10.31-22.40.45/mdtest-hard -x /work/NBB/sugiharak/io500-sc20/results/2020.10.31-22.40.45/mdtest-hard.stonewall -r -a Gfarm
+score           = 15.908947
+t_delta         = 330.1939
+t_end           = 2020-11-01 01:21:26
+
+[SCORE]
+MD              = 32.085265
+BW              = 8.102743
+SCORE           = 16.123854 
+hash            = F00CAB33

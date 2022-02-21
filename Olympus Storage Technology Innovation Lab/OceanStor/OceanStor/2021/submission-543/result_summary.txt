@@ -1,0 +1,15 @@
+IO500 version io500-isc21_v2-3-g6008fefbe2df (standard)
+[RESULT]       ior-easy-write       91.692831 GiB/s : time 462.545 seconds
+[RESULT]    mdtest-easy-write      649.375424 kIOPS : time 307.703 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.000 seconds
+[RESULT]       ior-hard-write       44.052149 GiB/s : time 334.282 seconds
+[RESULT]    mdtest-hard-write      147.006598 kIOPS : time 307.819 seconds
+[RESULT]                 find    12087.636526 kIOPS : time 20.264 seconds
+[RESULT]        ior-easy-read      117.693402 GiB/s : time 349.220 seconds
+[RESULT]     mdtest-easy-stat     1627.183495 kIOPS : time 123.191 seconds
+[RESULT]        ior-hard-read       49.042359 GiB/s : time 299.688 seconds
+[RESULT]     mdtest-hard-stat      752.040071 kIOPS : time 60.259 seconds
+[RESULT]   mdtest-easy-delete      693.617778 kIOPS : time 288.092 seconds
+[RESULT]     mdtest-hard-read      327.059339 kIOPS : time 138.414 seconds
+[RESULT]   mdtest-hard-delete      174.192330 kIOPS : time 259.794 seconds
+[SCORE ] Bandwidth 69.487468 GiB/s : IOPS 697.153517 kiops : TOTAL 220.098689

@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jun 11 16:11:42 2021
+Command line        : ./ior -C -Q 1 -g -G=778265094 -k -e -o /home/dpc_root/fs1/2021.06.11-15.58.50/ior-hard/file -O stoneWallingStatusFile=./results/2021.06.11-15.58.50/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.06.11-15.58.50/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux host10
+TestID              : 0
+StartTime           : Fri Jun 11 16:11:42 2021
+Path                : /home/dpc_root/fs1/2021.06.11-15.58.50/ior-hard/file
+FS                  : 472.4 TiB   Used FS: 8.5%   Inodes: 476837.2 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /home/dpc_root/fs1/2021.06.11-15.58.50/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 960
+clients per node    : 96
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 410.43 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 304658 max: 351233 -- min data: 13.3 GiB mean data: 14.6 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 451276800000000
+WARNING: Stat() of aggregate file size      = 15850330288416
+WARNING: Using actual aggregate bytes moved = 15850330429440
+WARNING: Maybe caused by deadlineForStonewalling
+write     45109      1009497    323.41      45.91      45.91      1.65       334.01     1.42       335.10     0   

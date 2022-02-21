@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jul  6 19:56:08 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o ./out//2020.07.06-17.56.35-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=./out//2020.07.06-17.56.35-app/ior-easy/stonewall -t 1m -b 200000m -F -r -R -a POSIX
+Machine             : Linux inst-0ne1g-guided-louse
+TestID              : 0
+StartTime           : Mon Jul  6 19:56:08 2020
+Path                : /mnt/beeond/io500-app/out/2020.07.06-17.56.35-app/ior-easy
+FS                  : 989.4 TiB   Used FS: 41.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./out//2020.07.06-17.56.35-app/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 170
+tasks               : 2040
+clients per node    : 12
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 195.31 GiB
+aggregate filesize  : 389.10 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 427819008000000.
+WARNING: Stat() of aggregate file size      = 217995175526400.
+WARNING: Using actual aggregate bytes moved = 217995175526400.
+read      485326     485827     0.002140    204800000  1024.00    0.180552   427.92     0.262658   428.36     0   
+Max Read:  485325.83 MiB/sec (508901.02 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       485325.83  485325.83  485325.83       0.00  485325.83  485325.83  485325.83       0.00  428.36459         NA            NA     0   2040  12    1   1     1        1         0    0      1 209715200000  1048576 207896400.0 POSIX      0
+Finished            : Mon Jul  6 20:03:17 2020

@@ -1,0 +1,31 @@
+IOR-3.1.0: MPI Coordinated Test of Parallel I/O
+
+ior WARNING: fsync() only available in POSIX/MMAP.  Using value of 0.
+Began: Sat May 12 16:47:27 2018
+Command line used: /home/dkrz/k202079/work/io-500/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 25g -F -a MPIIO -o /mnt/lustre02/ior-test/io500/datafiles//ior_easy/ior_file_easy
+Machine: Linux m20036
+
+Test 0 started: Sat May 12 16:47:27 2018
+Summary:
+	api                = MPIIO (version=2, subversion=1)
+	test filename      = /mnt/lustre02/ior-test/io500/datafiles//ior_easy/ior_file_easy
+	access             = file-per-process
+	ordering in a file = sequential offsets
+	ordering inter file= constant task offsets = 1
+	clients            = 1200 (12 per node)
+	repetitions        = 1
+	xfersize           = 2 MiB
+	blocksize          = 25 GiB
+	aggregate filesize = 30000 GiB
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+write     90594      26214400   2048.00    0.197124   338.82     0.190098   339.09     0   
+
+Max Write: 90594.31 MiB/sec (94995.02 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt blksiz xsize aggsize API RefNum
+write       90594.31   90594.31   90594.31       0.00   45297.16   45297.16   45297.16       0.00  339.09414 0 1200 12 1 1 1 1 0 0 1 26843545600 2097152 32212254720000 MPIIO 0
+
+Finished: Sat May 12 16:53:09 2018

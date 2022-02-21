@@ -1,0 +1,758 @@
+++ set -euo pipefail
+++ export LC_NUMERIC=C
+++ LC_NUMERIC=C
+++ main
+++ check_variables
+++ local 'important_vars=io500_workdir io500_ior_easy_params io500_ior_easy_size io500_mdtest_hard_files_per_proc io500_ior_hard_writes_per_proc io500_find_cmd io500_ior_cmd io500_mdtest_cmd io500_mpirun'
+++ for V in '$important_vars'
+++ '[' -z /dac/fs1001 -o /dac/fs1001 = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z '-i2 -B -a POSIX -t 1m -b 8g -F' -o '-i2 -B -a POSIX -t 1m -b 8g -F' = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z 8 -o 8 = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z 2000 -o 2000 = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z 10000 -o 10000 = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z /home/ajk203/io-500-dev-2/bin/pfind -o /home/ajk203/io-500-dev-2/bin/pfind = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z /home/ajk203/io-500-dev-2/bin/ior -o /home/ajk203/io-500-dev-2/bin/ior = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z /home/ajk203/io-500-dev-2/bin/mdtest -o /home/ajk203/io-500-dev-2/bin/mdtest = xxx ']'
+++ for V in '$important_vars'
+++ '[' -z mpirun -o mpirun = xxx ']'
+++ return 0
+++ output_description
+++ extra_description
+++ io500_info_system_name=Cumulus
+++ io500_info_institute_name=UoC-RCS
+++ io500_info_storage_age_in_months=4
+++ io500_info_storage_install_date='07/2018'
+++ io500_info_filesystem='DAC-BeeGFS'
+++ io500_info_filesystem_version='7.1'
+++ io500_info_filesystem_vendor=xxx
+++ io500_info_num_client_nodes=184
+++ io500_info_procs_per_node=32
+++ io500_info_num_metadata_server_nodes=8
+++ io500_info_num_data_server_nodes=36
+++ io500_info_num_data_storage_devices=180
+++ io500_info_num_metadata_storage_devices=8
+++ io500_info_data_storage_type=Intel SSD P4600
+++ io500_info_metadata_storage_type=Intel SSD P4600
+++ io500_info_storage_network=omnipath
+++ io500_info_storage_interface=NVMe
+++ io500_info_whatever='Data Accelerator system for commodity per job ephemeral file systems (BurstBuffer)'
++++ uname -n
+++ echo 'System: ' cpu-e-1
+System:  cpu-e-1
++++ df /dac/fs1001
++++ tail -1
+++ echo 'filesystem_utilization=beegfs_nodev   290060828160 52097117696 237963710464  18% /dac/fs1001'
+filesystem_utilization=beegfs_nodev   290060828160 52097117696 237963710464  18% /dac/fs1001
+++ echo date=2018.10.24-16.25.48
+date=2018.10.24-16.25.48
+++ set -o posix
+++ sort
+++ set
+++ grep '^io500'
+io500_cleanup_workdir=/dac/fs1001
+io500_find_cmd_args='-s 0 -r /home/ajk203/io-500-dev-2/results.18n-10nv/pfind_results'
+io500_find_cmd=/home/ajk203/io-500-dev-2/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=xxx
+io500_info_filesystem_vendor=xxx
+io500_info_filesystem_version=xxx
+io500_info_filesystem=xxx
+io500_info_institute_name=UoC-RCS
+io500_info_metadata_storage_type=xxx
+io500_info_num_client_nodes=xxx
+io500_info_num_data_server_nodes=xxx
+io500_info_num_data_storage_devices=xxx
+io500_info_num_metadata_server_nodes=xxx
+io500_info_num_metadata_storage_devices=xxx
+io500_info_procs_per_node=xxx
+io500_info_storage_age_in_months=xxx
+io500_info_storage_install_date=xxx
+io500_info_storage_interface=xxx
+io500_info_storage_network=xxx
+io500_info_system_name=Peta4
+io500_info_whatever=WhateverElseYouThinkRelevant
+io500_ior_cmd=/home/ajk203/io-500-dev-2/bin/ior
+io500_ior_easy_params='-i2 -B -a POSIX -t 1m -b 8g -F'
+io500_ior_easy_size=8
+io500_ior_hard_other_options=-i1
+io500_ior_hard_writes_per_proc=10000
+io500_mdreal_cmd=/home/ajk203/io-500-dev-2/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/home/ajk203/io-500-dev-2/bin/mdtest
+io500_mdtest_easy_files_per_proc=25000
+io500_mdtest_easy_params='-i1 -u -L -b 8'
+io500_mdtest_hard_files_per_proc=2000
+io500_mdtest_hard_other_options=
+io500_mpiargs=
+io500_mpirun=mpirun
+io500_result_dir=/home/ajk203/io-500-dev-2/results.18n-10nv
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=0
+io500_workdir=/dac/fs1001
+++ core_setup
+++ echo 'Running the IO500 Benchmark now'
+Running the IO500 Benchmark now
+++ echo '[Creating] directories'
+[Creating] directories
+++ pushd .
+++ cd /dac/fs1001
+++ mkdir -p ior_easy mdt_easy mdt_hard ior_hard mdreal /home/ajk203/io-500-dev-2/results.18n-10nv
+++ popd
+++ timestamp_file=/dac/fs1001/timestampfile
+++ summary_file=/home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+++ iops1=0
+++ iops2=0
+++ iops3=0
+++ iops4=0
+++ iops5=0
+++ iops6=0
+++ iops7=0
+++ iops8=0
+++ bw1=0
+++ bw2=0
+++ bw3=0
+++ bw4=0
+++ mdt_hard_fsize=3901
+++ io500_invalid=
+++ ior_easy write
+++ phase=ior_easy_write
+++ '[' True '!=' True ']'
+++ params_ior_easy='-C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall'
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt
+++ [[ write == \w\r\i\t\e ]]
+++ startphase
+++ echo ''
+
+++ echo '[Starting] ior_easy_write'
+[Starting] ior_easy_write
++++ date +%s.%N
+++ start=1540394749.045908020
+++ myrun '/home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 ' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 '
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 '
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0
+++ mpirun /home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt.
+++ endphase_check write io500_ior_easy_size
+++ r=0
+++ local op=write
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540395535.920677805
+++++ echo '1540395535.920677805 - 1540394749.045908020'
+++++ bc
++++ printf %.4f 786.874769785
+++ duration=786.8748
+++ [[ write == \w\r\i\t\e ]]
++++ printf %.0f 786.8748
+++ [[ 787 -lt 300 ]]
+++ invalid=
++++ get_ior_bw /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt write
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt
++++ operation=write
++++ grep '^write' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt
++++ head -1
++++ awk '{print $2/1024}'
+++ bw1=214.564
++++ get_ior_time /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt write
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt
++++ operation=write
++++ grep '^write' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_write.txt
++++ head -1
++++ awk '{print $8}'
+++ dur=219.53
+++ print_bw 1 214.564 219.53 ''
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+++ printf '[RESULT] BW   phase 1 %25s %20.3f GB/s : time %6.2f seconds\n' ior_easy_write 214.564 219.53
+[RESULT] BW   phase 1            ior_easy_write              214.564 GB/s : time 219.53 seconds
+++ mdt_easy write
+++ phase=mdtest_easy_write
+++ '[' True '!=' True ']'
+++ params_md_easy='-F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall'
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_write.txt
+++ [[ write == \w\r\i\t\e ]]
+++ startphase
+++ echo ''
+
+++ echo '[Starting] mdtest_easy_write'
+[Starting] mdtest_easy_write
++++ date +%s.%N
+++ start=1540395536.261260852
+++ myrun '/home/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall -W 0' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_write.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall -W 0'
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall -W 0'
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall -W 0
+++ mpirun /home/ajk203/io-500-dev-2/bin/mdtest -C -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall -W 0
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_write.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_write.txt.
+++ endphase_check write io500_mdtest_easy_files_per_proc
+++ r=0
+++ local op=write
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540396333.660101153
+++++ echo '1540396333.660101153 - 1540395536.261260852'
+++++ bc
++++ printf %.4f 797.398840301
+++ duration=797.3988
+++ [[ write == \w\r\i\t\e ]]
++++ printf %.0f 797.3988
+++ [[ 797 -lt 300 ]]
+++ invalid=
++++ get_mdt_iops /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_write.txt creation
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_write.txt
++++ op=creation
++++ awk '{print $4/1000}'
++++ grep '^ *File creation' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_write.txt
+++ iops1=221.527
+++ print_iops 1 221.527 797.3988 ''
+++ printf '[RESULT] IOPS phase 1 %25s %20.3f kiops : time %6.2f seconds\n' mdtest_easy_write 221.527 797.3988
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+[RESULT] IOPS phase 1         mdtest_easy_write              221.527 kiops : time 797.40 seconds
+++ touch /dac/fs1001/timestampfile
+++ ior_hard write
+++ phase=ior_hard_write
+++ '[' True '!=' True ']'
+++ params_ior_hard='-C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall'
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt
+++ [[ write == \w\r\i\t\e ]]
+++ startphase
+++ echo ''
+
+++ echo '[Starting] ior_hard_write'
+[Starting] ior_hard_write
++++ date +%s.%N
+++ start=1540396333.681569704
+++ myrun '/home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0'
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0'
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+++ mpirun /home/ajk203/io-500-dev-2/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt.
+++ endphase_check write io500_ior_hard_writes_per_proc
+++ r=0
+++ local op=write
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540396832.621724841
+++++ bc
+++++ echo '1540396832.621724841 - 1540396333.681569704'
++++ printf %.4f 498.940155137
+++ duration=498.9402
+++ [[ write == \w\r\i\t\e ]]
++++ printf %.0f 498.9402
+++ [[ 499 -lt 300 ]]
+++ invalid=
++++ get_ior_bw /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt write
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt
++++ operation=write
++++ grep '^write' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt
++++ head -1
++++ awk '{print $2/1024}'
+++ bw2=6.99707
++++ get_ior_time /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt write
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt
++++ operation=write
++++ grep '^write' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_write.txt
++++ head -1
++++ awk '{print $8}'
+++ dur=368.39
+++ print_bw 2 6.99707 368.39 ''
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+++ printf '[RESULT] BW   phase 2 %25s %20.3f GB/s : time %6.2f seconds\n' ior_hard_write 6.99707 368.39
+[RESULT] BW   phase 2            ior_hard_write                6.997 GB/s : time 368.39 seconds
+++ mdt_hard write
+++ phase=mdtest_hard_write
+++ '[' True '!=' True ']'
+++ params_md_hard='-t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_write.txt
+++ [[ write == \w\r\i\t\e ]]
+++ startphase mdtest_hard_write
+++ echo ''
+
+++ echo '[Starting] mdtest_hard_write'
+[Starting] mdtest_hard_write
++++ date +%s.%N
+++ start=1540396832.642115983
+++ myrun '/home/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall  -W 0' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_write.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall  -W 0'
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall  -W 0'
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall  -W 0
+++ mpirun /home/ajk203/io-500-dev-2/bin/mdtest -C -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall -W 0
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_write.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_write.txt.
+++ endphase_check write io500_mdtest_hard_files_per_proc
+++ r=0
+++ local op=write
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540398094.349309058
+++++ echo '1540398094.349309058 - 1540396832.642115983'
+++++ bc
++++ printf %.4f 1261.707193075
+++ duration=1261.7072
+++ [[ write == \w\r\i\t\e ]]
++++ printf %.0f 1261.7072
+++ [[ 1262 -lt 300 ]]
+++ invalid=
++++ get_mdt_iops /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_write.txt creation
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_write.txt
++++ op=creation
++++ awk '{print $4/1000}'
++++ grep '^ *File creation' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_write.txt
+++ iops2=10.4711
+++ print_iops 2 10.4711 1261.7072 ''
+++ printf '[RESULT] IOPS phase 2 %25s %20.3f kiops : time %6.2f seconds\n' mdtest_hard_write 10.4711 1261.7072
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+[RESULT] IOPS phase 2         mdtest_hard_write               10.471 kiops : time 1261.71 seconds
+++ myfind
+++ phase=find
+++ '[' True '!=' True ']'
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/find.txt
+++ command='/home/ajk203/io-500-dev-2/bin/pfind /dac/fs1001 -newer /dac/fs1001/timestampfile -size 3901c -name *01* -s 0 -r /home/ajk203/io-500-dev-2/results.18n-10nv/pfind_results'
+++ startphase find
+++ echo ''
+
+++ echo '[Starting] find'
+[Starting] find
++++ date +%s.%N
+++ start=1540398094.364742858
+++ '[' True '!=' True ']'
+++ myrun '/home/ajk203/io-500-dev-2/bin/pfind /dac/fs1001 -newer /dac/fs1001/timestampfile -size 3901c -name *01* -s 0 -r /home/ajk203/io-500-dev-2/results.18n-10nv/pfind_results' /home/ajk203/io-500-dev-2/results.18n-10nv/find.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/pfind /dac/fs1001 -newer /dac/fs1001/timestampfile -size 3901c -name *01* -s 0 -r /home/ajk203/io-500-dev-2/results.18n-10nv/pfind_results'
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/pfind /dac/fs1001 -newer /dac/fs1001/timestampfile -size 3901c -name *01* -s 0 -r /home/ajk203/io-500-dev-2/results.18n-10nv/pfind_results'
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/pfind /dac/fs1001 -newer /dac/fs1001/timestampfile -size 3901c -name *01* -s 0 -r /home/ajk203/io-500-dev-2/results.18n-10nv/pfind_results
+++ mpirun /home/ajk203/io-500-dev-2/bin/pfind /dac/fs1001 -newer /dac/fs1001/timestampfile -size 3901c -name '*01*' -s 0 -r /home/ajk203/io-500-dev-2/results.18n-10nv/pfind_results
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/find.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/find.txt.
++++ grep MATCHED /home/ajk203/io-500-dev-2/results.18n-10nv/find.txt
++++ tail -1
+++ matches='MATCHED 383620/158981892'
+++ endphase_check find
+++ r=0
+++ local op=find
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540398349.857857470
+++++ echo '1540398349.857857470 - 1540398094.364742858'
+++++ bc
++++ printf %.4f 255.493114612
+++ duration=255.4931
+++ [[ find == \w\r\i\t\e ]]
+++ invalid=
++++ echo MATCHED 383620/158981892
++++ cut -d / -f 2
+++ totalfiles=158981892
++++ bc
++++ echo 'scale = 2; (158981892 / 255.4931)/1000'
+++ iops3=622.25
+++ echo '[FIND] MATCHED 383620/158981892 in 255.4931 seconds'
+[FIND] MATCHED 383620/158981892 in 255.4931 seconds
+++ print_iops 3 622.25 255.4931 ''
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+++ printf '[RESULT] IOPS phase 3 %25s %20.3f kiops : time %6.2f seconds\n' find 622.25 255.4931
+[RESULT] IOPS phase 3                      find              622.250 kiops : time 255.49 seconds
+++ ior_easy read
+++ phase=ior_easy_read
+++ '[' True '!=' True ']'
+++ params_ior_easy='-C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall'
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt
+++ [[ read == \w\r\i\t\e ]]
+++ '[' True '!=' True ']'
+++ startphase
+++ echo ''
+
+++ echo '[Starting] ior_easy_read'
+[Starting] ior_easy_read
++++ date +%s.%N
+++ start=1540398349.881475527
+++ myrun '/home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall'
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall'
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall
+++ mpirun /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt.
+++ endphase_check read
+++ r=0
+++ local op=read
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540398599.850393080
+++++ echo '1540398599.850393080 - 1540398349.881475527'
+++++ bc
++++ printf %.4f 249.968917553
+++ duration=249.9689
+++ [[ read == \w\r\i\t\e ]]
+++ invalid=
++++ get_ior_bw /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt read
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt
++++ operation=read
++++ grep '^read' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt
++++ head -1
++++ awk '{print $2/1024}'
+++ bw3=403.012
++++ get_ior_time /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt read
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt
++++ operation=read
++++ grep '^read' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_easy_read.txt
++++ head -1
++++ awk '{print $8}'
+++ dur=116.88
+++ print_bw 3 403.012 116.88 ''
+++ printf '[RESULT] BW   phase 3 %25s %20.3f GB/s : time %6.2f seconds\n' ior_easy_read 403.012 116.88
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+[RESULT] BW   phase 3             ior_easy_read              403.012 GB/s : time 116.88 seconds
+++ mdt_easy stat
+++ phase=mdtest_easy_stat
+++ '[' True '!=' True ']'
+++ params_md_easy='-F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall'
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_stat.txt
+++ [[ stat == \w\r\i\t\e ]]
+++ [[ stat == \s\t\a\t ]]
+++ '[' True '!=' True ']'
+++ startphase
+++ echo ''
+
+++ echo '[Starting] mdtest_easy_stat'
+[Starting] mdtest_easy_stat
++++ date +%s.%N
+++ start=1540398599.868973804
+++ myrun '/home/ajk203/io-500-dev-2/bin/mdtest -T -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_stat.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -T -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall'
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -T -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall'
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -T -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall
+++ mpirun /home/ajk203/io-500-dev-2/bin/mdtest -T -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_stat.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_stat.txt.
+++ endphase_check stat
+++ r=0
+++ local op=stat
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540398917.945621301
+++++ echo '1540398917.945621301 - 1540398599.868973804'
+++++ bc
++++ printf %.4f 318.076647497
+++ duration=318.0766
+++ [[ stat == \w\r\i\t\e ]]
+++ invalid=
++++ get_mdt_iops /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_stat.txt stat
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_stat.txt
++++ op=stat
++++ grep '^ *File stat' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_stat.txt
++++ awk '{print $4/1000}'
+++ iops4=823.403
+++ print_iops 4 823.403 318.0766 ''
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+++ printf '[RESULT] IOPS phase 4 %25s %20.3f kiops : time %6.2f seconds\n' mdtest_easy_stat 823.403 318.0766
+[RESULT] IOPS phase 4          mdtest_easy_stat              823.403 kiops : time 318.08 seconds
+++ ior_hard read
+++ phase=ior_hard_read
+++ '[' True '!=' True ']'
+++ params_ior_hard='-C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall'
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt
+++ [[ read == \w\r\i\t\e ]]
+++ '[' True '!=' True ']'
+++ startphase
+++ echo ''
+
+++ echo '[Starting] ior_hard_read'
+[Starting] ior_hard_read
++++ date +%s.%N
+++ start=1540398917.961803241
+++ myrun '/home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall'
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall'
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall
+++ mpirun /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt.
+++ endphase_check read
+++ r=0
+++ local op=read
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540399078.302798730
+++++ bc
+++++ echo '1540399078.302798730 - 1540398917.961803241'
++++ printf %.4f 160.340995489
+++ duration=160.3410
+++ [[ read == \w\r\i\t\e ]]
+++ invalid=
++++ get_ior_bw /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt read
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt
++++ operation=read
++++ grep '^read' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt
++++ head -1
++++ awk '{print $2/1024}'
+++ bw4=27.8613
++++ get_ior_time /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt read
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt
++++ operation=read
++++ head -1
++++ grep '^read' /home/ajk203/io-500-dev-2/results.18n-10nv/ior_hard_read.txt
++++ awk '{print $8}'
+++ dur=92.52
+++ print_bw 4 27.8613 92.52 ''
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+++ printf '[RESULT] BW   phase 4 %25s %20.3f GB/s : time %6.2f seconds\n' ior_hard_read 27.8613 92.52
+[RESULT] BW   phase 4             ior_hard_read               27.861 GB/s : time  92.52 seconds
+++ mdt_hard stat
+++ phase=mdtest_hard_stat
+++ '[' True '!=' True ']'
+++ params_md_hard='-t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_stat.txt
+++ [[ stat == \w\r\i\t\e ]]
+++ [[ stat == \s\t\a\t ]]
+++ '[' True '!=' True ']'
+++ startphase
+++ echo ''
+
+++ echo '[Starting] mdtest_hard_stat'
+[Starting] mdtest_hard_stat
++++ date +%s.%N
+++ start=1540399078.319873830
+++ myrun '/home/ajk203/io-500-dev-2/bin/mdtest -T -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall ' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_stat.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -T -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -T -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -T -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall
+++ mpirun /home/ajk203/io-500-dev-2/bin/mdtest -T -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_stat.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_stat.txt.
+++ endphase_check stat
+++ r=0
+++ local op=stat
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540399351.183576377
+++++ echo '1540399351.183576377 - 1540399078.319873830'
+++++ bc
++++ printf %.4f 272.863702547
+++ duration=272.8637
+++ [[ stat == \w\r\i\t\e ]]
+++ invalid=
++++ get_mdt_iops /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_stat.txt stat
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_stat.txt
++++ op=stat
++++ grep '^ *File stat' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_stat.txt
++++ awk '{print $4/1000}'
+++ iops5=80.2038
+++ print_iops 5 80.2038 272.8637 ''
+++ printf '[RESULT] IOPS phase 5 %25s %20.3f kiops : time %6.2f seconds\n' mdtest_hard_stat 80.2038 272.8637
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+[RESULT] IOPS phase 5          mdtest_hard_stat               80.204 kiops : time 272.86 seconds
+++ mdt_easy delete
+++ phase=mdtest_easy_delete
+++ '[' True '!=' True ']'
+++ params_md_easy='-F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall'
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_delete.txt
+++ [[ delete == \w\r\i\t\e ]]
+++ [[ delete == \s\t\a\t ]]
+++ '[' True '!=' True ']'
+++ startphase
+++ echo ''
+
+++ echo '[Starting] mdtest_easy_delete'
+[Starting] mdtest_easy_delete
++++ date +%s.%N
+++ start=1540399351.196793996
+++ myrun '/home/ajk203/io-500-dev-2/bin/mdtest -r -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_delete.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -r -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall'
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -r -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall'
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -r -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall
+++ mpirun /home/ajk203/io-500-dev-2/bin/mdtest -r -F -d /dac/fs1001/mdt_easy -n 25000 -i1 -u -L -b 8 -x /dac/fs1001/mdt_easy-stonewall
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_delete.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_delete.txt.
+++ endphase_check delete
+++ r=0
+++ local op=delete
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540400053.340637790
+++++ bc
+++++ echo '1540400053.340637790 - 1540399351.196793996'
++++ printf %.4f 702.143843794
+++ duration=702.1438
+++ [[ delete == \w\r\i\t\e ]]
+++ invalid=
++++ get_mdt_iops /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_delete.txt removal
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_delete.txt
++++ op=removal
++++ grep '^ *File removal' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_easy_delete.txt
++++ awk '{print $4/1000}'
+++ iops6=221.394
+++ print_iops 6 221.394 702.1438 ''
+++ printf '[RESULT] IOPS phase 6 %25s %20.3f kiops : time %6.2f seconds\n' mdtest_easy_delete 221.394 702.1438
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+[RESULT] IOPS phase 6        mdtest_easy_delete              221.394 kiops : time 702.14 seconds
+++ mdt_hard read
+++ phase=mdtest_hard_read
+++ '[' True '!=' True ']'
+++ params_md_hard='-t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_read.txt
+++ [[ read == \w\r\i\t\e ]]
+++ [[ read == \s\t\a\t ]]
+++ [[ read == \r\e\a\d ]]
+++ '[' True '!=' True ']'
+++ startphase
+++ echo ''
+
+++ echo '[Starting] mdtest_hard_read'
+[Starting] mdtest_hard_read
++++ date +%s.%N
+++ start=1540400053.356058428
+++ myrun '/home/ajk203/io-500-dev-2/bin/mdtest -E -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall ' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_read.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -E -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -E -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -E -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall
+++ mpirun /home/ajk203/io-500-dev-2/bin/mdtest -E -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_read.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_read.txt.
+++ endphase_check read
+++ r=0
+++ local op=read
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540400670.366740569
+++++ echo '1540400670.366740569 - 1540400053.356058428'
+++++ bc
++++ printf %.4f 617.010682141
+++ duration=617.0107
+++ [[ read == \w\r\i\t\e ]]
+++ invalid=
++++ get_mdt_iops /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_read.txt read
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_read.txt
++++ op=read
++++ grep '^ *File read' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_read.txt
++++ awk '{print $4/1000}'
+++ iops7=24.2403
+++ print_iops 7 24.2403 617.0107 ''
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+++ printf '[RESULT] IOPS phase 7 %25s %20.3f kiops : time %6.2f seconds\n' mdtest_hard_read 24.2403 617.0107
+[RESULT] IOPS phase 7          mdtest_hard_read               24.240 kiops : time 617.01 seconds
+++ mdt_hard delete
+++ phase=mdtest_hard_delete
+++ '[' True '!=' True ']'
+++ params_md_hard='-t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+++ result_file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_delete.txt
+++ [[ delete == \w\r\i\t\e ]]
+++ [[ delete == \s\t\a\t ]]
+++ [[ delete == \r\e\a\d ]]
+++ '[' True '!=' True ']'
+++ startphase
+++ echo ''
+
+++ echo '[Starting] mdtest_hard_delete'
+[Starting] mdtest_hard_delete
++++ date +%s.%N
+++ start=1540400670.389622613
+++ myrun '/home/ajk203/io-500-dev-2/bin/mdtest -r -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall ' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_delete.txt
+++ command='mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -r -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+++ echo '[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -r -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall '
+[Exec] mpirun  /home/ajk203/io-500-dev-2/bin/mdtest -r -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall
+++ mpirun /home/ajk203/io-500-dev-2/bin/mdtest -r -t -F -w 3901 -e 3901 -d /dac/fs1001/mdt_hard -n 2000 -x /dac/fs1001/mdt_hard-stonewall
+++ echo '[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_delete.txt.'
+[Results] in /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_delete.txt.
+++ endphase_check delete
+++ r=0
+++ local op=delete
+++ [[ 0 != \0 ]]
++++ date +%s.%N
+++ end=1540401753.626241339
+++++ bc
+++++ echo '1540401753.626241339 - 1540400670.389622613'
++++ printf %.4f 1083.236618726
+++ duration=1083.2366
+++ [[ delete == \w\r\i\t\e ]]
+++ invalid=
++++ get_mdt_iops /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_delete.txt removal
++++ file=/home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_delete.txt
++++ op=removal
++++ awk '{print $4/1000}'
++++ grep '^ *File removal' /home/ajk203/io-500-dev-2/results.18n-10nv/mdtest_hard_delete.txt
+++ iops8=12.5081
+++ print_iops 8 12.5081 1083.2366 ''
+++ printf '[RESULT] IOPS phase 8 %25s %20.3f kiops : time %6.2f seconds\n' mdtest_hard_delete 12.5081 1083.2366
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+[RESULT] IOPS phase 8        mdtest_hard_delete               12.508 kiops : time 1083.24 seconds
+++ mdreal
+++ phase=mdreal
+++ '[' False '!=' True ']'
+++ printf '\n[Skipping] mdreal\n'
+
+[Skipping] mdreal
+++ return 0
+++ cleanup
+++ '[' /dac/fs1001 '!=' True ']'
+++ printf '\n[Leaving] datafiles in /dac/fs1001\n'
+
+[Leaving] datafiles in /dac/fs1001
+++ return 0
+++ output_score
+++ echo '[Summary] Results files in /home/ajk203/io-500-dev-2/results.18n-10nv'
+[Summary] Results files in /home/ajk203/io-500-dev-2/results.18n-10nv
+++ '[' /dac/fs1001 '!=' True ']'
+++ echo '[Summary] Data files in /dac/fs1001'
+[Summary] Data files in /dac/fs1001
+++ cat /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+++ grep BW
+[RESULT] BW   phase 1            ior_easy_write              214.564 GB/s : time 219.53 seconds
+[RESULT] BW   phase 2            ior_hard_write                6.997 GB/s : time 368.39 seconds
+[RESULT] BW   phase 3             ior_easy_read              403.012 GB/s : time 116.88 seconds
+[RESULT] BW   phase 4             ior_hard_read               27.861 GB/s : time  92.52 seconds
+++ grep IOPS
+++ cat /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+[RESULT] IOPS phase 1         mdtest_easy_write              221.527 kiops : time 797.40 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write               10.471 kiops : time 1261.71 seconds
+[RESULT] IOPS phase 3                      find              622.250 kiops : time 255.49 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              823.403 kiops : time 318.08 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               80.204 kiops : time 272.86 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              221.394 kiops : time 702.14 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               24.240 kiops : time 617.01 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete               12.508 kiops : time 1083.24 seconds
++++ echo 214.564 6.99707 403.012 27.8613
++++ awk '{print ($1*$2*$3*$4)^(1/4)}'
+++ bw_score=64.0764
++++ echo 221.527 10.4711 622.25 823.403 80.2038 221.394 24.2403 12.5081
++++ awk '{print ($1*$2*$3*$4*$5*$6*$7*$8)^(1/8)}'
+++ md_score=94.5716
++++ awk '{print ($1*$2)^(1/2)}'
++++ echo 64.0764 94.5716
+++ tot_score=77.8448
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' True '!=' True ']'
+++ '[' -n '' ']'
+++ echo '[SCORE] Bandwidth 64.0764 GB/s : IOPS 94.5716 kiops : TOTAL 77.8448'
+++ tee -a /home/ajk203/io-500-dev-2/results.18n-10nv/result_summary.txt
+[SCORE] Bandwidth 64.0764 GB/s : IOPS 94.5716 kiops : TOTAL 77.8448

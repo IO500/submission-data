@@ -1,0 +1,38 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Oct 24 17:26:03 2018
+Command line        : /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -i2 -B -a POSIX -t 1m -b 8g -F -o /dac/fs1001/ior_easy/ior_file_easy -O stoneWallingStatusFile=/dac/fs1001/ior_easy/stonewall
+Machine             : Linux cpu-e-1
+TestID              : 0
+StartTime           : Wed Oct 24 17:26:03 2018
+Path                : /dac/fs1001/ior_easy
+FS                  : 270.1 TiB   Used FS: 18.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /dac/fs1001/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 5888
+clients per node    : 32
+repetitions         : 2
+xfersize            : 1 MiB
+blocksize           : 8 GiB
+aggregate filesize  : 46 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      412684     8388608    1024.00    0.152808   116.62     0.110663   116.88     0   
+read      411929     8388608    1024.00    0.132364   116.85     0.112586   117.09     1   
+Max Read:  412683.97 MiB/sec (432730.51 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       412683.97  411929.11  412306.54     377.43  412683.97  411929.11  412306.54     377.43  116.98707     0   5888  32    2   1     1        1         0    0      1 8589934592  1048576 48234496.0 POSIX      0
+Finished            : Wed Oct 24 17:29:57 2018

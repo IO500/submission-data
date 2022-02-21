@@ -1,0 +1,20 @@
+-- started at 10/24/2018 16:41:05 --
+
+mdtest-1.9.3 was launched with 5888 total task(s) on 184 node(s)
+Command line used: /home/ajk203/io-500-dev-2/bin/mdtest "-C" "-F" "-d" "/dac/fs1001/mdt_easy" "-n" "25000" "-i1" "-u" "-L" "-b" "8" "-x" "/dac/fs1001/mdt_easy-stonewall" "-W" "0"
+Path: /dac/fs1001
+FS: 270.1 TiB   Used FS: 18.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+5888 tasks, 147200000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :     221527.480     221527.480     221527.480          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          3.015          3.015          3.015          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 10/24/2018 16:52:09 --

@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Oct 24 17:36:22 2018
+Command line        : /home/ajk203/io-500-dev-2/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 10000 -i1 -o /dac/fs1001/ior_hard/IOR_file -O stoneWallingStatusFile=/dac/fs1001/ior_hard/stonewall
+Machine             : Linux cpu-e-1
+TestID              : 0
+StartTime           : Wed Oct 24 17:36:22 2018
+Path                : /dac/fs1001/ior_hard
+FS                  : 270.1 TiB   Used FS: 18.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /dac/fs1001/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 10000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 5888
+clients per node    : 32
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 2.52 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      28530      45.91      45.91      0.727596   91.67      0.124579   92.52      0   
+Max Read:  28529.92 MiB/sec (29915.79 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        28529.92   28529.92   28529.92       0.00  636397.87  636397.87  636397.87       0.00   92.52074     0   5888  32    1   0     1        1         0    0  10000    47008    47008 2639609.5 POSIX      0
+Finished            : Wed Oct 24 17:37:55 2018

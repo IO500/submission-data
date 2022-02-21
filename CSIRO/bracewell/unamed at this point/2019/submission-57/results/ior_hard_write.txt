@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------
+WARNING: There are more than one active ports on host 'bms04', but the
+default subnet GID prefix was detected on more than one of these
+ports.  If these ports are connected to different physical IB
+networks, this configuration will fail in Open MPI.  This version of
+Open MPI requires that every physically separate IB subnet that is
+used between connected MPI processes must have different subnet ID
+values.
+
+Please see this FAQ entry for more details:
+
+  http://www.open-mpi.org/faq/?category=openfabrics#ofa-default-subnet-gid
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_default_gid_prefix to 0.
+--------------------------------------------------------------------------
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri May 17 20:50:54 2019
+Command line        : /scratch1/leh015/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 150000 -o /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.17-20.39.18/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch1/leh015/io-500-dev/datafiles/io500.2019.05.17-20.39.18/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+Machine             : Linux bss017
+TestID              : 0
+StartTime           : Fri May 17 20:50:54 2019
+Path                : /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.17-20.39.18/ior_hard
+FS                  : 1117.6 TiB   Used FS: 14.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.17-20.39.18/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 150000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 260
+clients per node    : 10
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.67 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+[bss017:92075] 179 more processes have sent help message help-mpi-btl-openib.txt / default subnet prefix
+[bss017:92075] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+stonewalling pairs accessed min: 150000 max: 150000 -- min data: 6.6 GiB mean data: 6.6 GiB time: 342.3s
+write     4839       45.91      45.91      0.340348   360.86     0.104357   361.31     0   
+Max Write: 4839.06 MiB/sec (5074.12 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        4839.06    4839.06    4839.06       0.00  107941.58  107941.58  107941.58       0.00  361.30656     0    260  10    1   0     1        1         0    0 150000    47008    47008 1748382.6 POSIX      0
+Finished            : Fri May 17 20:56:55 2019

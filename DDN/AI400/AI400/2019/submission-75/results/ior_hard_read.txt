@@ -1,0 +1,38 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  7 13:06:50 2019
+Command line        : /work/BMLab/Lustre/io500_sc19/io-500-dev/bin/ior -r -R -s 125000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /ai400/datafiles/io500.2019.11.07-21.33.51/ior_hard/IOR_file -O stoneWallingStatusFile=/ai400/datafiles/io500.2019.11.07-21.33.51/ior_hard/stonewall
+Machine             : Linux c01-c0
+TestID              : 0
+StartTime           : Thu Nov  7 13:06:50 2019
+Path                : /ai400/datafiles/io500.2019.11.07-21.33.51/ior_hard
+FS                  : 28.7 TiB   Used FS: 81.5%   Inodes: 253.4 Mi   Used Inodes: 28.2%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ai400/datafiles/io500.2019.11.07-21.33.51/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 125000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 40
+tasks               : 240
+clients per node    : 6
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.28 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      43203      964606     30.96       45.91      45.91      0.147062   31.10      0.144752   31.13      0   
+Max Read:  43203.28 MiB/sec (45301.92 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        43203.28   43203.28   43203.28       0.00  963706.70  963706.70  963706.70       0.00   31.12980         NA            NA     0    240   6    1   0     1        1         0    0 125000    47008    47008 1344909.6 POSIX      0
+Finished            : Thu Nov  7 13:07:21 2019

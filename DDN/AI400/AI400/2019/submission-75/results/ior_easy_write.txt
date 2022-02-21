@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  7 12:33:59 2019
+Command line        : /work/BMLab/Lustre/io500_sc19/io-500-dev/bin/ior -w -t 2048k -b 44000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /ai400/datafiles/io500.2019.11.07-21.33.51/ior_easy/ior_file_easy -O stoneWallingStatusFile=/ai400/datafiles/io500.2019.11.07-21.33.51/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux c01-c0
+TestID              : 0
+StartTime           : Thu Nov  7 12:33:59 2019
+Path                : /ai400/datafiles/io500.2019.11.07-21.33.51/ior_easy
+FS                  : 28.7 TiB   Used FS: 41.9%   Inodes: 232.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ai400/datafiles/io500.2019.11.07-21.33.51/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 40
+tasks               : 240
+clients per node    : 6
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 42.97 GiB
+aggregate filesize  : 10.07 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 8361 max: 22000 -- min data: 16.3 GiB mean data: 37.7 GiB time: 300.2s
+write     29305      14658      0.013646    45056000   2048.00    0.207726   360.21     0.209735   360.35     0   
+Max Write: 29304.88 MiB/sec (30728.40 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       29304.88   29304.88   29304.88       0.00   14652.44   14652.44   14652.44       0.00  360.34950     300.18      30863.16     0    240   6    1   1     1        1         0    0      1 46137344000  2097152 10560000.0 POSIX      0
+Finished            : Thu Nov  7 12:39:59 2019

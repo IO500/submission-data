@@ -1,0 +1,40 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct 29 17:26:34 2021
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=747863355 -k -e -o /home/dpc_root/fs660/2021.10.29-17.15.21/ior-hard/file -O stoneWallingStatusFile=./results/2021.10.29-17.15.21/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.29-17.15.21/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux host10
+TestID              : 0
+StartTime           : Fri Oct 29 17:26:34 2021
+Path                : /home/dpc_root/fs660/2021.10.29-17.15.21/ior-hard/file
+FS                  : 471.0 TiB   Used FS: 28.7%   Inodes: 476837.2 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /home/dpc_root/fs660/2021.10.29-17.15.21/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1720
+clients per node    : 172
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 735.36 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1105275 max: 1256932 -- min data: 48.4 GiB mean data: 51.5 GiB time: 300.4s
+WARNING: inconsistent file size by different tasks.
+WARNING: Expected aggregate file size       = 808537600000000
+WARNING: Stat() of aggregate file size      = 0
+WARNING: Using actual aggregate bytes moved = 101627678264320
+WARNING: Maybe caused by deadlineForStonewalling
+write     288911     6472409    315.42      45.91      45.91      1.27       334.02     0.186001   335.47     0   

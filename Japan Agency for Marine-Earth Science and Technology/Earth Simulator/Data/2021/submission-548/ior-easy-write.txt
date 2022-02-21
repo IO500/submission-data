@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue May 25 21:17:38 2021
+Command line        : ./ior -C -Q 1 -g -G 763573251 -k -e -o /S/work00/G8110/z8362/4MDT/datafiles/2021.05.25-21.17.35/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.05.25-21.17.35/ior-easy.stonewall -t 16m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect=1 -O saveRankPerformanceDetailsCSV=./results/2021.05.25-21.17.35/ior-easy-write.csv
+Machine             : Linux vn027
+TestID              : 0
+StartTime           : Tue May 25 21:17:38 2021
+Path                : /S/work00/G8110/z8362/4MDT/datafiles/2021.05.25-21.17.35/ior-easy/ior_file_easy.00000000
+FS                  : 1250.0 TiB   Used FS: 25.5%   Inodes: 10699.8 Mi   Used Inodes: 1.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /S/work00/G8110/z8362/4MDT/datafiles/2021.05.25-21.17.35/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 3027.34 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 14836 max: 17047 -- min data: 231.8 GiB mean data: 253.0 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 3328599654400000
+WARNING: Stat() of aggregate file size      = 91520384368640
+WARNING: Using actual aggregate bytes moved = 91520384368640
+WARNING: Maybe caused by deadlineForStonewalling
+write     260580     16287      0.000515    10158080000 16384      0.008926   334.94     0.000815   334.95     0   

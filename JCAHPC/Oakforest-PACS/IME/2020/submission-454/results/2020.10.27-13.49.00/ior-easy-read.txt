@@ -1,0 +1,36 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Oct 27 14:21:39 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o /cache/xg17i000/x10007/io500-sc20/datafiles/2020.10.27-13.49.00/ior-easy/ior_file_easy -O stoneWallingStatusFile=/work/xg17i000/x10007/io500-sc20/results/2020.10.27-13.49.00/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a IME
+Machine             : Linux c0049.ofp
+TestID              : 0
+StartTime           : Tue Oct 27 14:21:39 2020
+Path                : /cache/xg17i000/x10007/io500-sc20/datafiles/2020.10.27-13.49.00/ior-easy/ior_file_easy.00000000
+FS                  : 23597.0 TiB   Used FS: 45.9%   Inodes: 12312.0 Mi   Used Inodes: 24.2%
+
+Options: 
+api                 : IME
+apiVersion          : 1.3.2.1 (132037)
+test filename       : /cache/xg17i000/x10007/io500-sc20/datafiles/2020.10.27-13.49.00/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2048
+tasks               : 4096
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 38750 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 42606075576320000
+WARNING: Stat() of aggregate file size      = 448609334067200
+WARNING: Using actual aggregate bytes moved = 448609334067200
+read      1267126    633756     0.000068    10158080000 2048.00    0.145269   337.53     0.091967   337.64     0   

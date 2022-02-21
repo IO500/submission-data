@@ -1,0 +1,149 @@
+io500_info_submitter="Janelia Scientific Computing Systems"
+io500_info_institution="Janelia Research Campus, Howard Hughes Medical Institute"
+io500_info_system="Vast"
+io500_info_storage_install_date="1/2019"
+io500_info_storage_refresh_date="8/2019"
+io500_info_storage_vendor="Vast Data"
+io500_info_filesystem_type="Scale-out NAS"
+io500_info_filesystem_version="2.0.6"
+io500_info_client_nodes="10"
+io500_info_client_procs_per_node="62
+io500_info_client_operating_system="Scientific-Linux"
+io500_info_client_operating_system_version="7.6"
+io500_info_client_kernel_version="3.10.0-957.10.1.el7.x86_64"
+io500_info_md_nodes="24"
+io500_info_md_storage_devices="3"
+io500_info_md_storage_type="3DXPNVMeSSD"
+io500_info_md_storage_interface="NVMeoF"
+io500_info_md_network="50GbE"
+io500_info_ds_nodes="68"
+io500_info_ds_storage_devices="220"
+io500_info_ds_storage_type="NVMe-SSD"
+io500_info_ds_storage_interface="NVMe"
+io500_info_ds_network="Ethernet"
+io500_info_whatever="Metadata server == Vast cnode Data server == Vast dbox 3DXP listed in Metadata Server are actually in dboxes (12 per dbox) nfsordma v3"
+io500_info_comment="SC19 config (N=1)"
+System:  h10u16.int.janelia.org
+filesystem_utilization=10.36.122.130:/nobackup/testing 3312604676096 1698118337536 1614486338560  52% /io500
+date=2019.11.18-15.37.18
+io500_clean_cache=False
+io500_clean_cache_cmd=drop_cache
+io500_cleanup_workdir=False
+io500_find_cmd=/io500/io500-sc19/bin/pfind
+io500_find_cmd_args=-N
+io500_find_mpi=True
+io500_ior_cmd=/io500/io500-sc19/bin/ior
+io500_ior_easy_params='-t 1024k -b 9920000m -F'
+io500_ior_easy_size=9920000
+io500_ior_hard_api=POSIX
+io500_ior_hard_api_specific_options=--posix.odirect
+io500_ior_hard_writes_per_proc=1900000
+io500_mdreal_cmd=/io500/io500-sc19/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/io500/io500-sc19/bin/mdtest
+io500_mdtest_easy_files_per_proc=900000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=950000
+io500_mpiargs='-np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh'
+io500_mpirun=mpirun
+io500_result_dir=/io500/io500-sc19/results/2019.11.18-15.37.18
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/ior -w -t 1024k -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/ior_easy/ior_file_easy -O stoneWallingStatusFile=/io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write                8.405 GB/s : time 600.21 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/mdtest -C -F -P -d /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_easy -n 900000 -u -L -x /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_easy-stonewall -N 1 -W 300
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               22.621 kiops : time 387.42 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/ior -w -s 1900000 -a POSIX --posix.odirect -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/ior_hard/IOR_file -O stoneWallingStatusFile=/io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                1.753 GB/s : time 347.51 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/mdtest -C -t -F -P -w 3901 -e 3901 -d /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_hard -n 950000 -x /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                0.639 kiops : time 345.53 seconds
+
+[Starting] find
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/pfind /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18 -newer /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/timestampfile -size 3901c -name "*01*" -N
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/find.txt.
+[FIND] MATCHED 3978/8928510 in 286.6989 seconds
+[RESULT] IOPS phase 3                      find               31.140 kiops : time 286.70 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/ior -r -R -t 1024k -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/ior_easy/ior_file_easy -O stoneWallingStatusFile=/io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/ior_easy/stonewall
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               19.659 GB/s : time 256.61 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/mdtest -T -F -P -d /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_easy -n 900000 -u -L -x /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_easy-stonewall -N 1
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              110.870 kiops : time  79.04 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/ior -r -R -s 1900000 -a POSIX --posix.odirect -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/ior_hard/IOR_file -O stoneWallingStatusFile=/io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/ior_hard/stonewall
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                4.368 GB/s : time 139.46 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_hard -n 950000 -x /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat                9.304 kiops : time  23.72 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/mdtest -r -F -P -d /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_easy -n 900000 -u -L -x /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_easy-stonewall -N 1
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               21.930 kiops : time 399.62 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_hard -n 950000 -x /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read                4.894 kiops : time  45.10 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun -np 620 -ppn 62 -f /io500/io500-sc19/site-configs/hhmi/hostfile-10-h10 --bootstrap ssh /io500/io500-sc19/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_hard -n 950000 -x /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in /io500/io500-sc19/results/2019.11.18-15.37.18/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                0.759 kiops : time 291.64 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18
+[Summary] Results files in /io500/io500-sc19/results/2019.11.18-15.37.18
+[Summary] Data files in /io500/io500-sc19/datafiles/io500.2019.11.18-15.37.18
+[RESULT] BW   phase 1            ior_easy_write                8.405 GB/s : time 600.21 seconds
+[RESULT] BW   phase 2            ior_hard_write                1.753 GB/s : time 347.51 seconds
+[RESULT] BW   phase 3             ior_easy_read               19.659 GB/s : time 256.61 seconds
+[RESULT] BW   phase 4             ior_hard_read                4.368 GB/s : time 139.46 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               22.621 kiops : time 387.42 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                0.639 kiops : time 345.53 seconds
+[RESULT] IOPS phase 3                      find               31.140 kiops : time 286.70 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              110.870 kiops : time  79.04 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat                9.304 kiops : time  23.72 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               21.930 kiops : time 399.62 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read                4.894 kiops : time  45.10 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                0.759 kiops : time 291.64 seconds
+[SCORE] Bandwidth 5.96429 GB/s : IOPS 8.85483 kiops : TOTAL 7.26724

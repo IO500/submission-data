@@ -1,0 +1,40 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  8 00:03:42 2019
+Command line        : /mnt/nfs/io-500-dev/bin/ior -w -t 1024k -b 112400m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/beegfs/datafiles/io500.2019.11.08-00.03.41/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/beegfs/datafiles/io500.2019.11.08-00.03.41/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux cu01
+TestID              : 0
+StartTime           : Fri Nov  8 00:03:42 2019
+Path                : /mnt/beegfs/datafiles/io500.2019.11.08-00.03.41/ior_easy
+FS                  : 349.1 TiB   Used FS: 0.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/beegfs/datafiles/io500.2019.11.08-00.03.41/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 300
+clients per node    : 30
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 109.77 GiB
+aggregate filesize  : 32.16 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+stonewalling pairs accessed min: 112400 max: 112400 -- min data: 109.8 GiB mean data: 109.8 GiB time: 294.5s
+write     107622     115097600  1024.00    0.042770   294.53     18.75      313.32     0   
+Max Write: 107622.13 MiB/sec (112849.99 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write      107622.13  107622.13  107622.13       0.00  107622.13  107622.13  107622.13       0.00  313.31845     294.53     114488.27     0    300  30    1   1     1        1         0    0      1 117859942400  1048576 33720000.0 POSIX      0
+Finished            : Fri Nov  8 00:09:33 2019

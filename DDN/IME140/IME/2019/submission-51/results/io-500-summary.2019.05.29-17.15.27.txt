@@ -1,0 +1,137 @@
+System:  c212
+filesystem_utilization=imefs          6442450944 2016396800 4426054144  32% /bfs
+date=2019.05.29-17.15.27
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 300 -r /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/pfind_results'
+io500_find_cmd=/work/oehmes/io-500-dev/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=SSD
+io500_info_filesystem=GPFS
+io500_info_filesystem_vendor=IBM
+io500_info_filesystem_version=5.0.3
+io500_info_institute_name='DDN Colorado'
+io500_info_metadata_storage_type=SSD
+io500_info_num_client_nodes=10
+io500_info_num_data_server_nodes=2
+io500_info_num_data_storage_devices=48
+io500_info_num_metadata_server_nodes=2
+io500_info_num_metadata_storage_devices=0
+io500_info_procs_per_node=1
+io500_info_storage_age_in_months=1
+io500_info_storage_install_date=05/2019
+io500_info_storage_interface=NVMe
+io500_info_storage_network=infiniband
+io500_info_system_name='DDN 400NV'
+io500_info_whatever='score was limited by capacity of the system, i had to throttle the nodes to not exceed capacity before the 300 sec timeout'
+io500_ior_cmd=/work/oehmes/io-500-dev/bin/ior
+io500_ior_easy_params='-a IME -H -t 256k -b 256k -s 3600000 '
+io500_ior_easy_size=600000
+io500_ior_hard_other_options='-a IME -H '
+io500_ior_hard_writes_per_proc=4150000
+io500_mdreal_cmd=/work/oehmes/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/work/oehmes/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=500000
+io500_mdtest_easy_params='-a IME -H -u '
+io500_mdtest_hard_files_per_proc=200000
+io500_mdtest_hard_other_options='-a IME -H '
+io500_mpiargs='-n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15  '
+io500_mpirun=/opt/ddn/mvapich/bin/mpirun
+io500_result_dir=/work/oehmes/io-500-dev/results/2019.05.29-17.15.27
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/bfs/datafiles/io500.2019.05.29-17.15.27
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/ior -w -a IME -H -t 256k -b 256k -s 3600000  -i 1 -C -Q 1 -g -G 27 -k -e -o /bfs/datafiles/io500.2019.05.29-17.15.27/ior_easy/ior_file_easy -O stoneWallingStatusFile=/bfs/datafiles/io500.2019.05.29-17.15.27/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               90.192 GB/s : time 306.63 seconds
+
+[Starting] mdtest_easy_write
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/mdtest -C -F -d /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_easy -n 500000 -a IME -H -u  -x /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_easy-stonewall -W 300
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               81.180 kiops : time 355.14 seconds
+
+[Starting] ior_hard_write
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/ior -w -s 4150000 -a IME -H  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /bfs/datafiles/io500.2019.05.29-17.15.27/ior_hard/IOR_file -O stoneWallingStatusFile=/bfs/datafiles/io500.2019.05.29-17.15.27/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write               90.169 GB/s : time 309.58 seconds
+
+[Starting] mdtest_hard_write
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_hard -n 200000 -x /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_hard-stonewall -a IME -H  -W 300
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write               13.289 kiops : time 383.85 seconds
+
+[Starting] find
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/pfind /bfs/datafiles/io500.2019.05.29-17.15.27 -newer /bfs/datafiles/io500.2019.05.29-17.15.27/timestampfile -size 3901c -name "*01*" -s 300 -r /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/pfind_results
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/find.txt.
+[FIND] MATCHED 0/27150859 in 308.1164 seconds
+[RESULT] IOPS phase 3                      find               88.110 kiops : time 308.12 seconds
+
+[Starting] ior_easy_read
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/ior -r -R -a IME -H -t 256k -b 256k -s 3600000  -i 1 -C -Q 1 -g -G 27 -k -e -o /bfs/datafiles/io500.2019.05.29-17.15.27/ior_easy/ior_file_easy -O stoneWallingStatusFile=/bfs/datafiles/io500.2019.05.29-17.15.27/ior_easy/stonewall
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               88.911 GB/s : time 311.05 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/mdtest -T -F -d /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_easy -n 500000 -a IME -H -u  -x /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_easy-stonewall
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              779.603 kiops : time  47.11 seconds
+
+[Starting] ior_hard_read
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/ior -r -R -s 4150000 -a IME -H  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /bfs/datafiles/io500.2019.05.29-17.15.27/ior_hard/IOR_file -O stoneWallingStatusFile=/bfs/datafiles/io500.2019.05.29-17.15.27/ior_hard/stonewall
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read               48.330 GB/s : time 577.58 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_hard -n 200000 -x /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_hard-stonewall -a IME -H 
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat              788.488 kiops : time  17.80 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/mdtest -r -F -d /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_easy -n 500000 -a IME -H -u  -x /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_easy-stonewall
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               92.825 kiops : time 332.19 seconds
+
+[Starting] mdtest_hard_read
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_hard -n 200000 -x /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_hard-stonewall -a IME -H 
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              404.065 kiops : time  23.61 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] /opt/ddn/mvapich/bin/mpirun -n 160 -ppn 16 -v -machinefile 10-ime-nodes.lst -genv MV2_NUM_HCAS 1 -genv IM_CLIENT_CFG_FILE /work/oehmes/io-500-dev/ime.conf -genv MV2_CPU_MAPPING 0:1:2:3:4:5:6:7:8:9:10:11:12:13:14:15   /work/oehmes/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_hard -n 200000 -x /bfs/datafiles/io500.2019.05.29-17.15.27/mdt_hard-stonewall -a IME -H 
+[Results] in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete               16.715 kiops : time 316.49 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /bfs/datafiles/io500.2019.05.29-17.15.27
+[Summary] Results files in /work/oehmes/io-500-dev/results/2019.05.29-17.15.27
+[Summary] Data files in /bfs/datafiles/io500.2019.05.29-17.15.27
+[RESULT] BW   phase 1            ior_easy_write               90.192 GB/s : time 306.63 seconds
+[RESULT] BW   phase 2            ior_hard_write               90.169 GB/s : time 309.58 seconds
+[RESULT] BW   phase 3             ior_easy_read               88.911 GB/s : time 311.05 seconds
+[RESULT] BW   phase 4             ior_hard_read               48.330 GB/s : time 577.58 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               81.180 kiops : time 355.14 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write               13.289 kiops : time 383.85 seconds
+[RESULT] IOPS phase 3                      find               88.110 kiops : time 308.12 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              779.603 kiops : time  47.11 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              788.488 kiops : time  17.80 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               92.825 kiops : time 332.19 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              404.065 kiops : time  23.61 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete               16.715 kiops : time 316.49 seconds
+[SCORE] Bandwidth 76.8865 GB/s : IOPS 117.62 kiops : TOTAL 95.0967

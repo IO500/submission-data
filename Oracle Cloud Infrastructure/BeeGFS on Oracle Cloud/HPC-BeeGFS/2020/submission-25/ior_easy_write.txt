@@ -1,0 +1,88 @@
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.69' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.133' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.78' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.142' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.137' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.132' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.73' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.68' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.71' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.135' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.72' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.79' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.143' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.138' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.74' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.134' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.83' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.75' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.139' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.136' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.76' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.140' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.141' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.77' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.85' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.149' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.70' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.147' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.144' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.80' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.150' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.86' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.146' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.82' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.84' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.148' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.87' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.81' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.145' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.151' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.67' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.131' to the list of known hosts.
+Warning: Permanently added the ECDSA host key for IP address '192.168.168.130' to the list of known hosts.
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jul  6 17:57:01 2020
+Command line        : /mnt/beeond/io500-app/bin/ior -w -a POSIX -t 1m -b 200000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o ./out//2020.07.06-17.56.35-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=./out//2020.07.06-17.56.35-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux inst-0ne1g-guided-louse
+TestID              : 0
+StartTime           : Mon Jul  6 17:57:01 2020
+Path                : /mnt/beeond/io500-app/out/2020.07.06-17.56.35-scr/ior_easy
+FS                  : 989.4 TiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./out//2020.07.06-17.56.35-scr/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 170
+tasks               : 2040
+clients per node    : 12
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 195.31 GiB
+aggregate filesize  : 389.10 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 60752 max: 99136 -- min data: 59.3 GiB mean data: 84.1 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 427819008000000.
+WARNING: Stat() of aggregate file size      = 212061325885440.
+WARNING: Using actual aggregate bytes moved = 212061325885440.
+WARNING: maybe caused by deadlineForStonewalling
+write     341867     441276     0.002149    204800000  1024.00    132.84     458.30     0.454498   591.57     0   
+Max Write: 341867.05 MiB/sec (358473.58 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write      341867.05  341867.05  341867.05       0.00  341867.05  341867.05  341867.05       0.00  591.56752     300.10     585732.46     0   2040  12    1   1     1        1         0    0      1 209715200000  1048576 202237440.0 POSIX      0
+Finished            : Mon Jul  6 18:10:23 2020

@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 11 21:32:17 2018
+Command line        : /scratch/io-500-dev-master/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 60000m -F -o /lustre/gcp/io500/datafiles/io500.2018.11.11-21.32.04/ior_easy/ior_file_easy -O stoneWallingStatusFile=/lustre/gcp/io500/datafiles/io500.2018.11.11-21.32.04/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux lgcp-client1
+TestID              : 0
+StartTime           : Sun Nov 11 21:32:17 2018
+Path                : /lustre/gcp/io500/datafiles/io500.2018.11.11-21.32.04/ior_easy
+FS                  : 140.0 TiB   Used FS: 0.0%   Inodes: 2400.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/gcp/io500/datafiles/io500.2018.11.11-21.32.04/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 80
+clients per node    : 10
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 58.59 GiB
+aggregate filesize  : 4.58 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 16674 max: 30000 -- min data: 32.6 GiB mean data: 55.0 GiB time: 300.1s
+write     14314      61440000   2048.00    0.012369   335.32     0.003614   335.34     0   
+Max Write: 14314.03 MiB/sec (15009.35 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       14314.03   14314.03   14314.03       0.00    7157.01    7157.01    7157.01       0.00  335.33540     0     80  10    1   1     1        1         0    0      1 62914560000  2097152 4800000.0 POSIX      0
+Finished            : Sun Nov 11 21:37:52 2018

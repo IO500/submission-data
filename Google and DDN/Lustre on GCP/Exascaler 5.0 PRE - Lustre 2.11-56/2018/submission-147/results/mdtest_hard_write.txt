@@ -1,0 +1,74 @@
+-- started at 11/11/2018 21:49:26 --
+
+mdtest-1.9.3 was launched with 80 total task(s) on 8 node(s)
+Command line used: /scratch/io-500-dev-master/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/lustre/gcp/io500/datafiles/io500.2018.11.11-21.32.04/mdt_hard" "-n" "50000" "-x" "/lustre/gcp/io500/datafiles/io500.2018.11.11-21.32.04/mdt_hard-stonewall" "-W" "300"
+Path: /lustre/gcp/io500/datafiles/io500.2018.11.11-21.32.04
+FS: 140.0 TiB   Used FS: 3.5%   Inodes: 2400.0 Mi   Used Inodes: 0.7%
+
+80 tasks, 4000000 files
+stonewall rank 4: 49226 of 50000 
+stonewall rank 10: 42729 of 50000 
+stonewall rank 5: 49299 of 50000 
+stonewall rank 20: 45667 of 50000 
+stonewall rank 11: 42586 of 50000 
+stonewall rank 39: 44343 of 50000 
+stonewall rank 6: 49334 of 50000 
+stonewall rank 21: 45634 of 50000 
+stonewall rank 13: 42664 of 50000 
+stonewall rank 30: 44434 of 50000 
+stonewall rank 7: 49283 of 50000 
+stonewall rank 22: 45577 of 50000 
+stonewall rank 31: 44406 of 50000 
+stonewall rank 9: 49295 of 50000 
+stonewall rank 23: 45676 of 50000 
+stonewall rank 37: 44379 of 50000 
+stonewall rank 25: 45653 of 50000 
+stonewall rank 38: 44258 of 50000 
+stonewall rank 14: 42606 of 50000 
+stonewall rank 15: 42522 of 50000 
+stonewall rank 71: 44475 of 50000 
+stonewall rank 12: 42592 of 50000 
+stonewall rank 47: 49907 of 50000 
+stonewall rank 70: 44478 of 50000 
+stonewall rank 18: 42707 of 50000 
+stonewall rank 8: 49265 of 50000 
+stonewall rank 19: 42683 of 50000 
+stonewall rank 1: 49344 of 50000 
+stonewall rank 17: 42607 of 50000 
+stonewall rank 2: 49366 of 50000 
+stonewall rank 3: 49127 of 50000 
+stonewall rank 33: 44345 of 50000 
+stonewall rank 34: 44443 of 50000 
+stonewall rank 36: 44326 of 50000 
+stonewall rank 35: 44433 of 50000 
+stonewall rank 26: 45622 of 50000 
+stonewall rank 27: 45565 of 50000 
+stonewall rank 16: 42649 of 50000 
+stonewall rank 28: 45695 of 50000 
+stonewall rank 29: 45609 of 50000 
+stonewall rank 24: 45735 of 50000 
+stonewall rank 79: 44296 of 50000 
+stonewall rank 77: 44647 of 50000 
+stonewall rank 41: 49982 of 50000 
+stonewall rank 73: 44486 of 50000 
+stonewall rank 74: 44653 of 50000 
+stonewall rank 75: 44587 of 50000 
+stonewall rank 44: 49956 of 50000 
+stonewall rank 76: 44524 of 50000 
+stonewall rank 78: 44586 of 50000 
+stonewall rank 32: 44297 of 50000 
+stonewall rank 72: 44510 of 50000 
+Continue stonewall hit min: 42522 max: 50000 avg: 47054.3 
+stonewall rank 0: 49277 of 50000 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      11381.748      11381.748      11381.748          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          6.239          6.239          6.239          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/11/2018 21:55:18 --

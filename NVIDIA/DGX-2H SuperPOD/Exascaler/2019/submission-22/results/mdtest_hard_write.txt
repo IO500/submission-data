@@ -1,0 +1,36 @@
+-- started at 11/11/2019 20:00:02 --
+
+mdtest-3.3.0+dev was launched with 400 total task(s) on 10 node(s)
+Command line used: /home/lcapps/io-500-dev.l2+mount/bin/mdtest '-C' '-t' '-F' '-P' '-w' '3901' '-e' '3901' '-d' '/home/lcapps/io-500-dev.l2+mount/datafiles/mdt_hard' '-n' '375000' '-x' '/home/lcapps/io-500-dev.l2+mount/datafiles/mdt_hard-stonewall' '-a' 'POSIX' '-N' '1' '-W' '300'
+Path: /home/lcapps/io-500-dev.l2+mount/datafiles
+FS: 308.8 TiB   Used FS: 29.0%   Inodes: 1151.9 Mi   Used Inodes: 21.7%
+
+Nodemap: 1111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2128 Shifting ranks by 40 for each phase.
+400 tasks, 150000000 files
+Continue stonewall hit min: 320512 max: 374711 avg: 348198.4 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :     446267.824     446122.626     446201.835         28.091
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA     466898.149             NA
+   Tree creation             :          0.679          0.679          0.679          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :        335.971        335.862        335.912          0.021
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA        298.308             NA
+   Tree creation             :          1.473          1.473          1.473          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/11/2019 20:05:40 --
+

@@ -1,0 +1,37 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov 11 20:14:10 2019
+Command line        : /home/lcapps/io-500-dev.l2+mount/bin/ior -r -R -t 16m --posix.odirect -a POSIX -b 225008m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /home/lcapps/io-500-dev.l2+mount/datafiles/ior_easy/ior_file_easy -O stoneWallingStatusFile=/home/lcapps/io-500-dev.l2+mount/datafiles/ior_easy/stonewall
+Machine             : Linux circe-n010
+TestID              : 0
+StartTime           : Mon Nov 11 20:14:10 2019
+Path                : /home/lcapps/io-500-dev.l2+mount/datafiles/ior_easy
+FS                  : 308.8 TiB   Used FS: 29.1%   Inodes: 1151.9 Mi   Used Inodes: 34.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /home/lcapps/io-500-dev.l2+mount/datafiles/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 400
+clients per node    : 40
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 219.73 GiB
+aggregate filesize  : 85.83 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+read      293035     230408192  16384      0.082855   306.84     0.077480   307.14     0   
+Max Read:  293035.37 MiB/sec (307269.85 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       293035.37  293035.37  293035.37       0.00   18314.71   18314.71   18314.71       0.00  307.14108         NA            NA     0    400  40    1   1     1        1         0    0      1 235937988608 16777216 90003200.0 POSIX      0
+Finished            : Mon Nov 11 20:19:17 2019

@@ -1,0 +1,32 @@
+-- started at 11/11/2019 20:22:35 --
+
+mdtest-3.3.0+dev was launched with 400 total task(s) on 10 node(s)
+Command line used: /home/lcapps/io-500-dev.l2+mount/bin/mdtest '-T' '-t' '-F' '-P' '-w' '3901' '-e' '3901' '-d' '/home/lcapps/io-500-dev.l2+mount/datafiles/mdt_hard' '-n' '375000' '-x' '/home/lcapps/io-500-dev.l2+mount/datafiles/mdt_hard-stonewall' '-a' 'POSIX' '-N' '1'
+Path: /home/lcapps/io-500-dev.l2+mount/datafiles
+FS: 308.8 TiB   Used FS: 29.1%   Inodes: 1151.9 Mi   Used Inodes: 34.1%
+
+Nodemap: 1111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2128 Shifting ranks by 40 for each phase.
+400 tasks, 150000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :     881028.362     880258.625     880631.871        168.725
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :        170.273        170.124        170.201          0.033
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/11/2019 20:25:26 --
+

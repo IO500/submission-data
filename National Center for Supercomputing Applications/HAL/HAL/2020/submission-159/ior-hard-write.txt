@@ -1,0 +1,50 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Jun 27 07:06:23 2020
+Command line        : ./ior -v -C -Q 1 -g -G 27 -k -e -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-hard/file -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX
+Machine             : Linux hal01
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Sat Jun 27 07:06:23 2020
+Path                : /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-hard
+FS                  : 223.2 TiB   Used FS: 52.1%   Inodes: 194.5 Mi   Used Inodes: 94.5%
+Participating tasks: 100
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 100
+clients per node    : 10
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 42.75 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Sat Jun 27 07:06:24 2020
+0: stonewalling pairs accessed: 38692
+stonewalling pairs accessed min: 23456 max: 38731 -- min data: 1.0 GiB mean data: 1.2 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 47008000000000.
+WARNING: Stat() of aggregate file size      = 182066684800.
+WARNING: Using actual aggregate bytes moved = 182066684800.
+WARNING: maybe caused by deadlineForStonewalling
+write     491.27     10960      300.39      45.91      45.91      0.048423   353.37     0.015324   353.43     0   
+Max Write: 491.27 MiB/sec (515.14 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         491.27     491.27     491.27       0.00   10958.51   10958.51   10958.51       0.00  353.43318     300.06        420.29     0    100  10    1   0     1        1         0    0 10000000    47008    47008  173632.3 POSIX      0
+Finished            : Sat Jun 27 07:12:17 2020

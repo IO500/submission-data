@@ -1,0 +1,130 @@
+version         = io500-isc20-5-gc155836d31c1
+config-hash     = 4000A0DA
+result-dir      = ./results/2020.06.27-06.53.38-app
+; START 2020-06-27 06:53:46
+; WARNING Using internal pfind, will ignore any arguments to the external script
+
+
+[ior-easy-write]
+t_start         = 2020-06-27 06:53:46
+exe             = ./ior -v -C -Q 1 -g -G 271 -k -e -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-easy/stonewall -t 4m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a posix
+result-file     = ./results/2020.06.27-06.53.38-app/ior-easy-write.txt
+accessed-pairs  = 14267
+throughput-stonewall = 1100.82
+score           = 14.240362
+t_delta         = 391.5540
+t_end           = 2020-06-27 07:00:18
+
+[mdtest-easy-write]
+t_start         = 2020-06-27 07:00:18
+exe             = ./mdtest -n 2300000 -u -L -F -P -N 1 -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-easy -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/mdtest-easy-write.txt
+time            = 362.719476
+rate-stonewall  = 82.655171
+score           = 74.672307
+t_delta         = 365.5163
+t_end           = 2020-06-27 07:06:23
+
+[timestamp]
+t_start         = 2020-06-27 07:06:23
+timestamp-file  = /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/timestampfile
+t_delta         = 0.2809
+t_end           = 2020-06-27 07:06:23
+
+[ior-hard-write]
+t_start         = 2020-06-27 07:06:23
+exe             = ./ior -v -C -Q 1 -g -G 27 -k -e -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-hard/file -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/ior-hard-write.txt
+accessed-pairs  = 38731
+throughput-stonewall = 34.85
+score           = 0.479759
+t_delta         = 353.5270
+t_end           = 2020-06-27 07:12:17
+
+[mdtest-hard-write]
+t_start         = 2020-06-27 07:12:17
+exe             = ./mdtest -n 60000 -t -w 3901 -e 3901 -P -N 1 -F -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-hard -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/mdtest-hard-write.txt
+time            = 1732.074194
+rate-stonewall  = 2.676867
+score           = 1.739822
+t_delta         = 1732.2453
+t_end           = 2020-06-27 07:41:09
+
+[find]
+t_start         = 2020-06-27 07:41:09
+exe             = ./pfind /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app -newer /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 100
+found           = 83300
+total-files     = 30098706
+score           = 1553.046946
+t_delta         = 19.3941
+t_end           = 2020-06-27 07:41:29
+
+[ior-easy-read]
+t_start         = 2020-06-27 07:41:29
+exe             = ./ior -v -C -Q 1 -g -G 271 -k -e -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-easy/stonewall -t 4m -b 9920000m -F -r -R -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/ior-easy-read.txt
+score           = 12.737400
+t_delta         = 437.5453
+t_end           = 2020-06-27 07:48:46
+
+[mdtest-easy-stat]
+t_start         = 2020-06-27 07:48:46
+exe             = ./mdtest -n 2300000 -u -L -F -P -N 1 -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-easy -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-easy-stonewall -T -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/mdtest-easy-stat.txt
+time            = 251.255627
+score           = 107.798979
+t_delta         = 251.2753
+t_end           = 2020-06-27 07:52:57
+
+[ior-hard-read]
+t_start         = 2020-06-27 07:52:57
+exe             = ./ior -v -C -Q 1 -g -G 27 -k -e -o /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-hard/file -O stoneWallingStatusFile=/gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/ior-hard-read.txt
+score           = 1.984777
+t_delta         = 85.4561
+t_end           = 2020-06-27 07:54:23
+
+[mdtest-hard-stat]
+t_start         = 2020-06-27 07:54:23
+exe             = ./mdtest -n 60000 -t -w 3901 -e 3901 -P -N 1 -F -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-hard -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-hard-stonewall -T -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/mdtest-hard-stat.txt
+time            = 28.243523
+score           = 106.697030
+t_delta         = 28.2638
+t_end           = 2020-06-27 07:54:51
+
+[mdtest-easy-delete]
+t_start         = 2020-06-27 07:54:51
+exe             = ./mdtest -n 2300000 -u -L -F -P -N 1 -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-easy -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-easy-stonewall -r -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/mdtest-easy-delete.txt
+time            = 831.018521
+score           = 32.592655
+t_delta         = 835.6373
+t_end           = 2020-06-27 08:08:47
+
+[mdtest-hard-read]
+t_start         = 2020-06-27 08:08:47
+exe             = ./mdtest -n 60000 -t -w 3901 -e 3901 -P -N 1 -F -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-hard -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-hard-stonewall -E -X -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/mdtest-hard-read.txt
+time            = 58.171566
+score           = 51.803660
+t_delta         = 58.1963
+t_end           = 2020-06-27 08:09:45
+
+[mdtest-hard-delete]
+t_start         = 2020-06-27 08:09:45
+exe             = ./mdtest -n 60000 -t -w 3901 -e 3901 -P -N 1 -F -d /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-hard -x /gpfs/hal/io500/datafiles/2020.06.27-06.53.38-app/mdtest-hard-stonewall -r -a POSIX
+result-file     = ./results/2020.06.27-06.53.38-app/mdtest-hard-delete.txt
+time            = 6378.708898
+score           = 0.472431
+t_delta         = 6378.8230
+t_end           = 2020-06-27 09:56:04
+
+[SCORE]
+MD              = 34.153035
+BW              = 3.625219
+SCORE           = 11.127094 
+hash            = 5D1B96AD
+; END 2020-06-27 09:56:05

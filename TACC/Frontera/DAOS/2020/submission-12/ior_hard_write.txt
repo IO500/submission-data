@@ -1,0 +1,475 @@
+[0] Pool uuid = 372e1597-1708-4f1e-aa78-1cceb4c7c6ec, SVCL = 1
+
+[0] DFS Container namespace uuid = af091f54-7e7d-4c6b-bc70-a5d7d16e4955
+
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Jul 11 14:51:56 2020
+Command line        : /home1/06758/mschaara/io-500/install/ior/bin/ior -w -s 10000000 -a DFS --dfs.pool=372e1597-1708-4f1e-aa78-1cceb4c7c6ec --dfs.cont=af091f54-7e7d-4c6b-bc70-a5d7d16e4955 --dfs.svcl=1 --dfs.chunk_size=1880320 --dfs.prefix=/tmp/dfuse -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /tmp/dfuse/datafiles/2020.07.11-14.40.08-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/tmp/dfuse/datafiles/2020.07.11-14.40.08-scr/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux c110-001.frontera.tacc.utexas.edu
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Sat Jul 11 14:51:56 2020
+Participating tasks: 420
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /tmp/dfuse/datafiles/2020.07.11-14.40.08-scr/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 420
+tasks               : 420
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 179.56 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Sat Jul 11 14:52:01 2020
+282: stonewalling pairs accessed: 1355708
+292: stonewalling pairs accessed: 1361434
+32: stonewalling pairs accessed: 1365589
+72: stonewalling pairs accessed: 1367833
+197: stonewalling pairs accessed: 1359971
+208: stonewalling pairs accessed: 1368974
+302: stonewalling pairs accessed: 1358839
+312: stonewalling pairs accessed: 1358819
+238: stonewalling pairs accessed: 1371723
+218: stonewalling pairs accessed: 1368959
+311: stonewalling pairs accessed: 1358861
+154: stonewalling pairs accessed: 1362592
+119: stonewalling pairs accessed: 1346352
+228: stonewalling pairs accessed: 1371691
+156: stonewalling pairs accessed: 1362588
+386: stonewalling pairs accessed: 1380658
+297: stonewalling pairs accessed: 1361392
+16: stonewalling pairs accessed: 1380185
+416: stonewalling pairs accessed: 1380718
+166: stonewalling pairs accessed: 1360096
+96: stonewalling pairs accessed: 1367700
+306: stonewalling pairs accessed: 1358895
+26: stonewalling pairs accessed: 1365634
+145: stonewalling pairs accessed: 1362609
+66: stonewalling pairs accessed: 1367620
+36: stonewalling pairs accessed: 1365652
+225: stonewalling pairs accessed: 1371693
+126: stonewalling pairs accessed: 1367397
+405: stonewalling pairs accessed: 1380748
+196: stonewalling pairs accessed: 1360083
+295: stonewalling pairs accessed: 1361455
+316: stonewalling pairs accessed: 1358951
+86: stonewalling pairs accessed: 1367855
+235: stonewalling pairs accessed: 1371726
+65: stonewalling pairs accessed: 1367597
+46: stonewalling pairs accessed: 1368070
+25: stonewalling pairs accessed: 1365651
+76: stonewalling pairs accessed: 1367893
+396: stonewalling pairs accessed: 1380596
+45: stonewalling pairs accessed: 1368075
+276: stonewalling pairs accessed: 1376170
+15: stonewalling pairs accessed: 1380209
+95: stonewalling pairs accessed: 1367863
+216: stonewalling pairs accessed: 1369004
+215: stonewalling pairs accessed: 1368945
+335: stonewalling pairs accessed: 1358923
+266: stonewalling pairs accessed: 1376172
+206: stonewalling pairs accessed: 1368977
+175: stonewalling pairs accessed: 1360109
+135: stonewalling pairs accessed: 1367378
+165: stonewalling pairs accessed: 1360093
+346: stonewalling pairs accessed: 1347271
+375: stonewalling pairs accessed: 1375682
+285: stonewalling pairs accessed: 1361426
+116: stonewalling pairs accessed: 1346371
+205: stonewalling pairs accessed: 1368981
+355: stonewalling pairs accessed: 1347265
+75: stonewalling pairs accessed: 1367701
+245: stonewalling pairs accessed: 1355626
+315: stonewalling pairs accessed: 1358881
+356: stonewalling pairs accessed: 1347251
+55: stonewalling pairs accessed: 1365623
+275: stonewalling pairs accessed: 1376163
+115: stonewalling pairs accessed: 1346350
+336: stonewalling pairs accessed: 1358962
+186: stonewalling pairs accessed: 1360101
+265: stonewalling pairs accessed: 1376154
+236: stonewalling pairs accessed: 1371740
+325: stonewalling pairs accessed: 1358916
+345: stonewalling pairs accessed: 1358984
+226: stonewalling pairs accessed: 1371709
+35: stonewalling pairs accessed: 1365630
+376: stonewalling pairs accessed: 1375697
+85: stonewalling pairs accessed: 1367866
+255: stonewalling pairs accessed: 1347685
+296: stonewalling pairs accessed: 1361420
+5: stonewalling pairs accessed: 1372576
+125: stonewalling pairs accessed: 1367374
+305: stonewalling pairs accessed: 1358856
+246: stonewalling pairs accessed: 1355610
+415: stonewalling pairs accessed: 1380743
+187: stonewalling pairs accessed: 1359961
+146: stonewalling pairs accessed: 1362619
+365: stonewalling pairs accessed: 1375659
+395: stonewalling pairs accessed: 1380623
+155: stonewalling pairs accessed: 1362565
+286: stonewalling pairs accessed: 1361479
+195: stonewalling pairs accessed: 1359981
+366: stonewalling pairs accessed: 1375675
+406: stonewalling pairs accessed: 1380749
+105: stonewalling pairs accessed: 1346345
+385: stonewalling pairs accessed: 1380620
+6: stonewalling pairs accessed: 1380132
+106: stonewalling pairs accessed: 1346334
+176: stonewalling pairs accessed: 1359981
+256: stonewalling pairs accessed: 1355621
+136: stonewalling pairs accessed: 1367348
+326: stonewalling pairs accessed: 1358968
+185: stonewalling pairs accessed: 1359987
+56: stonewalling pairs accessed: 1368097
+357: stonewalling pairs accessed: 1347240
+387: stonewalling pairs accessed: 1380612
+150: stonewalling pairs accessed: 1354067
+319: stonewalling pairs accessed: 1358894
+172: stonewalling pairs accessed: 1360118
+402: stonewalling pairs accessed: 1380756
+62: stonewalling pairs accessed: 1367621
+192: stonewalling pairs accessed: 1360013
+342: stonewalling pairs accessed: 1347291
+4: stonewalling pairs accessed: 1380245
+182: stonewalling pairs accessed: 1360096
+242: stonewalling pairs accessed: 1355647
+143: stonewalling pairs accessed: 1362674
+122: stonewalling pairs accessed: 1367445
+404: stonewalling pairs accessed: 1380822
+352: stonewalling pairs accessed: 1347287
+327: stonewalling pairs accessed: 1358881
+92: stonewalling pairs accessed: 1367740
+162: stonewalling pairs accessed: 1360128
+322: stonewalling pairs accessed: 1358954
+57: stonewalling pairs accessed: 1368110
+362: stonewalling pairs accessed: 1375715
+413: stonewalling pairs accessed: 1380825
+22: stonewalling pairs accessed: 1365654
+372: stonewalling pairs accessed: 1375728
+2: stonewalling pairs accessed: 1380214
+343: stonewalling pairs accessed: 1330077
+102: stonewalling pairs accessed: 1346352
+403: stonewalling pairs accessed: 1380790
+253: stonewalling pairs accessed: 1355686
+27: stonewalling pairs accessed: 1365642
+40: stonewalling pairs accessed: 1368096
+113: stonewalling pairs accessed: 1346377
+204: stonewalling pairs accessed: 1369024
+153: stonewalling pairs accessed: 1362677
+123: stonewalling pairs accessed: 1367460
+93: stonewalling pairs accessed: 1367919
+177: stonewalling pairs accessed: 1360018
+374: stonewalling pairs accessed: 1373493
+43: stonewalling pairs accessed: 1368114
+377: stonewalling pairs accessed: 1375687
+103: stonewalling pairs accessed: 1367780
+17: stonewalling pairs accessed: 1391054
+13: stonewalling pairs accessed: 1380255
+87: stonewalling pairs accessed: 1367652
+144: stonewalling pairs accessed: 1362612
+131: stonewalling pairs accessed: 1367436
+83: stonewalling pairs accessed: 1367928
+414: stonewalling pairs accessed: 1380815
+363: stonewalling pairs accessed: 1375734
+214: stonewalling pairs accessed: 1369066
+243: stonewalling pairs accessed: 1371825
+167: stonewalling pairs accessed: 1360054
+324: stonewalling pairs accessed: 1359007
+120: stonewalling pairs accessed: 1367389
+133: stonewalling pairs accessed: 1367465
+337: stonewalling pairs accessed: 1358905
+184: stonewalling pairs accessed: 1360099
+359: stonewalling pairs accessed: 1347294
+323: stonewalling pairs accessed: 1359017
+97: stonewalling pairs accessed: 1367660
+164: stonewalling pairs accessed: 1360134
+12: stonewalling pairs accessed: 1378777
+1: stonewalling pairs accessed: 1380249
+417: stonewalling pairs accessed: 1380767
+174: stonewalling pairs accessed: 1360169
+82: stonewalling pairs accessed: 1367898
+379: stonewalling pairs accessed: 1375733
+367: stonewalling pairs accessed: 1371452
+254: stonewalling pairs accessed: 1355687
+252: stonewalling pairs accessed: 1355660
+281: stonewalling pairs accessed: 1361504
+19: stonewalling pairs accessed: 1380241
+257: stonewalling pairs accessed: 1355644
+84: stonewalling pairs accessed: 1367913
+332: stonewalling pairs accessed: 1358985
+50: stonewalling pairs accessed: 1368095
+129: stonewalling pairs accessed: 1367452
+313: stonewalling pairs accessed: 1358994
+7: stonewalling pairs accessed: 1380211
+364: stonewalling pairs accessed: 1375727
+330: stonewalling pairs accessed: 1358939
+81: stonewalling pairs accessed: 1367934
+47: stonewalling pairs accessed: 1368095
+44: stonewalling pairs accessed: 1368139
+80: stonewalling pairs accessed: 1367748
+351: stonewalling pairs accessed: 1359023
+333: stonewalling pairs accessed: 1359016
+247: stonewalling pairs accessed: 1355632
+130: stonewalling pairs accessed: 1360461
+361: stonewalling pairs accessed: 1375701
+287: stonewalling pairs accessed: 1361437
+410: stonewalling pairs accessed: 1380648
+51: stonewalling pairs accessed: 1368152
+37: stonewalling pairs accessed: 1368284
+94: stonewalling pairs accessed: 1367927
+320: stonewalling pairs accessed: 1358908
+341: stonewalling pairs accessed: 1347315
+207: stonewalling pairs accessed: 1369006
+391: stonewalling pairs accessed: 1380756
+0: stonewalling pairs accessed: 1757476
+11: stonewalling pairs accessed: 1386523
+111: stonewalling pairs accessed: 1346391
+10: stonewalling pairs accessed: 1380155
+100: stonewalling pairs accessed: 1367408
+390: stonewalling pairs accessed: 1380651
+303: stonewalling pairs accessed: 1358932
+110: stonewalling pairs accessed: 1346373
+41: stonewalling pairs accessed: 1368159
+39: stonewalling pairs accessed: 1365690
+170: stonewalling pairs accessed: 1360096
+401: stonewalling pairs accessed: 1380783
+49: stonewalling pairs accessed: 1368129
+400: stonewalling pairs accessed: 1380775
+331: stonewalling pairs accessed: 1359028
+20: stonewalling pairs accessed: 1368289
+411: stonewalling pairs accessed: 1380804
+109: stonewalling pairs accessed: 1346430
+121: stonewalling pairs accessed: 1367419
+329: stonewalling pairs accessed: 1358989
+409: stonewalling pairs accessed: 1380815
+360: stonewalling pairs accessed: 1360591
+59: stonewalling pairs accessed: 1368152
+340: stonewalling pairs accessed: 1359023
+349: stonewalling pairs accessed: 1347302
+380: stonewalling pairs accessed: 1380638
+369: stonewalling pairs accessed: 1375716
+381: stonewalling pairs accessed: 1380664
+350: stonewalling pairs accessed: 1347285
+321: stonewalling pairs accessed: 1359012
+240: stonewalling pairs accessed: 1355639
+29: stonewalling pairs accessed: 1365708
+419: stonewalling pairs accessed: 1380821
+101: stonewalling pairs accessed: 1346433
+139: stonewalling pairs accessed: 1367417
+328: stonewalling pairs accessed: 1359021
+339: stonewalling pairs accessed: 1358965
+389: stonewalling pairs accessed: 1380672
+388: stonewalling pairs accessed: 1380664
+244: stonewalling pairs accessed: 1371837
+78: stonewalling pairs accessed: 1367977
+398: stonewalling pairs accessed: 1380720
+28: stonewalling pairs accessed: 1368129
+358: stonewalling pairs accessed: 1347316
+310: stonewalling pairs accessed: 1358879
+418: stonewalling pairs accessed: 1380813
+68: stonewalling pairs accessed: 1367966
+88: stonewalling pairs accessed: 1367763
+48: stonewalling pairs accessed: 1368167
+38: stonewalling pairs accessed: 1359486
+338: stonewalling pairs accessed: 1359012
+408: stonewalling pairs accessed: 1380807
+348: stonewalling pairs accessed: 1347330
+368: stonewalling pairs accessed: 1375712
+18: stonewalling pairs accessed: 1380242
+168: stonewalling pairs accessed: 1360142
+118: stonewalling pairs accessed: 1346411
+178: stonewalling pairs accessed: 1360132
+378: stonewalling pairs accessed: 1375702
+108: stonewalling pairs accessed: 1346416
+8: stonewalling pairs accessed: 1380228
+91: stonewalling pairs accessed: 1367950
+248: stonewalling pairs accessed: 1355719
+397: stonewalling pairs accessed: 1380719
+347: stonewalling pairs accessed: 1347355
+138: stonewalling pairs accessed: 1367504
+301: stonewalling pairs accessed: 1359030
+283: stonewalling pairs accessed: 1361648
+128: stonewalling pairs accessed: 1363212
+291: stonewalling pairs accessed: 1361602
+52: stonewalling pairs accessed: 1356684
+3: stonewalling pairs accessed: 1380324
+169: stonewalling pairs accessed: 1360281
+237: stonewalling pairs accessed: 1371852
+217: stonewalling pairs accessed: 1369133
+152: stonewalling pairs accessed: 1362787
+272: stonewalling pairs accessed: 1376334
+227: stonewalling pairs accessed: 1371860
+383: stonewalling pairs accessed: 1380829
+241: stonewalling pairs accessed: 1355818
+277: stonewalling pairs accessed: 1376321
+163: stonewalling pairs accessed: 1360266
+263: stonewalling pairs accessed: 1376348
+267: stonewalling pairs accessed: 1376320
+149: stonewalling pairs accessed: 1362814
+183: stonewalling pairs accessed: 1360180
+353: stonewalling pairs accessed: 1347468
+21: stonewalling pairs accessed: 1368431
+317: stonewalling pairs accessed: 1359013
+344: stonewalling pairs accessed: 1347471
+161: stonewalling pairs accessed: 1357926
+284: stonewalling pairs accessed: 1361648
+304: stonewalling pairs accessed: 1359143
+24: stonewalling pairs accessed: 1368434
+124: stonewalling pairs accessed: 1367603
+399: stonewalling pairs accessed: 1380834
+384: stonewalling pairs accessed: 1380830
+104: stonewalling pairs accessed: 1367914
+58: stonewalling pairs accessed: 1368296
+14: stonewalling pairs accessed: 1391205
+148: stonewalling pairs accessed: 1362813
+98: stonewalling pairs accessed: 1368079
+188: stonewalling pairs accessed: 1360172
+198: stonewalling pairs accessed: 1360264
+261: stonewalling pairs accessed: 1376366
+67: stonewalling pairs accessed: 1367812
+249: stonewalling pairs accessed: 1355832
+258: stonewalling pairs accessed: 1355836
+278: stonewalling pairs accessed: 1376350
+268: stonewalling pairs accessed: 1376353
+293: stonewalling pairs accessed: 1361679
+30: stonewalling pairs accessed: 1342235
+191: stonewalling pairs accessed: 1360223
+60: stonewalling pairs accessed: 1367802
+370: stonewalling pairs accessed: 1364278
+158: stonewalling pairs accessed: 1362820
+209: stonewalling pairs accessed: 1369213
+159: stonewalling pairs accessed: 1358306
+224: stonewalling pairs accessed: 1371953
+373: stonewalling pairs accessed: 1375901
+9: stonewalling pairs accessed: 1380430
+199: stonewalling pairs accessed: 1360203
+132: stonewalling pairs accessed: 1367621
+270: stonewalling pairs accessed: 1376388
+212: stonewalling pairs accessed: 1369237
+160: stonewalling pairs accessed: 1360196
+229: stonewalling pairs accessed: 1371959
+54: stonewalling pairs accessed: 1368321
+392: stonewalling pairs accessed: 1380870
+112: stonewalling pairs accessed: 1346543
+71: stonewalling pairs accessed: 1368106
+73: stonewalling pairs accessed: 1368160
+61: stonewalling pairs accessed: 1367869
+189: stonewalling pairs accessed: 1360340
+181: stonewalling pairs accessed: 1360309
+262: stonewalling pairs accessed: 1376404
+34: stonewalling pairs accessed: 1368496
+318: stonewalling pairs accessed: 1348677
+42: stonewalling pairs accessed: 1365849
+308: stonewalling pairs accessed: 1359227
+234: stonewalling pairs accessed: 1371996
+142: stonewalling pairs accessed: 1362868
+298: stonewalling pairs accessed: 1361684
+23: stonewalling pairs accessed: 1365915
+307: stonewalling pairs accessed: 1359121
+221: stonewalling pairs accessed: 1371986
+289: stonewalling pairs accessed: 1355997
+70: stonewalling pairs accessed: 1367857
+77: stonewalling pairs accessed: 1367822
+279: stonewalling pairs accessed: 1376424
+213: stonewalling pairs accessed: 1369263
+107: stonewalling pairs accessed: 1346570
+382: stonewalling pairs accessed: 1380880
+202: stonewalling pairs accessed: 1369232
+90: stonewalling pairs accessed: 1367965
+173: stonewalling pairs accessed: 1360355
+250: stonewalling pairs accessed: 1355842
+193: stonewalling pairs accessed: 1360332
+53: stonewalling pairs accessed: 1368383
+393: stonewalling pairs accessed: 1380968
+271: stonewalling pairs accessed: 1376426
+180: stonewalling pairs accessed: 1360205
+259: stonewalling pairs accessed: 1355876
+171: stonewalling pairs accessed: 1360345
+114: stonewalling pairs accessed: 1346639
+219: stonewalling pairs accessed: 1369243
+151: stonewalling pairs accessed: 1362888
+274: stonewalling pairs accessed: 1376402
+251: stonewalling pairs accessed: 1372039
+231: stonewalling pairs accessed: 1372003
+31: stonewalling pairs accessed: 1365907
+141: stonewalling pairs accessed: 1362893
+294: stonewalling pairs accessed: 1361744
+194: stonewalling pairs accessed: 1360323
+334: stonewalling pairs accessed: 1359223
+223: stonewalling pairs accessed: 1372014
+314: stonewalling pairs accessed: 1359219
+201: stonewalling pairs accessed: 1369248
+134: stonewalling pairs accessed: 1367676
+273: stonewalling pairs accessed: 1376438
+79: stonewalling pairs accessed: 1367903
+288: stonewalling pairs accessed: 1361753
+203: stonewalling pairs accessed: 1369286
+211: stonewalling pairs accessed: 1369271
+89: stonewalling pairs accessed: 1368137
+179: stonewalling pairs accessed: 1360287
+64: stonewalling pairs accessed: 1368147
+69: stonewalling pairs accessed: 1368202
+137: stonewalling pairs accessed: 1367646
+127: stonewalling pairs accessed: 1367630
+309: stonewalling pairs accessed: 1359199
+157: stonewalling pairs accessed: 1362868
+280: stonewalling pairs accessed: 1361699
+147: stonewalling pairs accessed: 1362864
+233: stonewalling pairs accessed: 1372037
+264: stonewalling pairs accessed: 1376464
+140: stonewalling pairs accessed: 1362854
+63: stonewalling pairs accessed: 1368232
+354: stonewalling pairs accessed: 1347576
+232: stonewalling pairs accessed: 1372044
+222: stonewalling pairs accessed: 1372043
+117: stonewalling pairs accessed: 1346631
+190: stonewalling pairs accessed: 1360276
+33: stonewalling pairs accessed: 1365969
+74: stonewalling pairs accessed: 1368179
+371: stonewalling pairs accessed: 1375971
+210: stonewalling pairs accessed: 1367474
+407: stonewalling pairs accessed: 1381030
+299: stonewalling pairs accessed: 1361781
+412: stonewalling pairs accessed: 1372927
+99: stonewalling pairs accessed: 1368198
+300: stonewalling pairs accessed: 1359155
+239: stonewalling pairs accessed: 1372070
+394: stonewalling pairs accessed: 1381033
+220: stonewalling pairs accessed: 1372017
+260: stonewalling pairs accessed: 1376478
+269: stonewalling pairs accessed: 1376501
+290: stonewalling pairs accessed: 1361752
+200: stonewalling pairs accessed: 1369297
+230: stonewalling pairs accessed: 1372061
+stonewalling pairs accessed min: 1330077 max: 1757476 -- min data: 58.2 GiB mean data: 59.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 197433600000000.
+WARNING: Stat() of aggregate file size      = 34698481359360.
+WARNING: Using actual aggregate bytes moved = 34698481359360.
+WARNING: maybe caused by deadlineForStonewalling
+write     85418      1931575    300.13      45.91      45.91      5.25       382.14     0.001705   387.40     0   
+Max Write: 85418.47 MiB/sec (89567.76 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       85418.47   85418.47   85418.47       0.00 1905372.70 1905372.70 1905372.70       0.00  387.39923     300.05      85773.58     0    420   1    1   0     1        1         0    0 10000000    47008    47008 33091050.0 DFS      0
+Finished            : Sat Jul 11 14:58:24 2020
+[0] Disconnecting from DAOS POOL
+
+[0] Finalizing DAOS..
+

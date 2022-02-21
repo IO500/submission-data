@@ -1,0 +1,20 @@
+-- started at 05/30/2019 17:30:06 --
+
+mdtest-3.3alpha1 was launched with 400 total task(s) on 10 node(s)
+Command line used: /nfs/io-500-dev/bin/mdtest "-T" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/mnt/beegfs/datafiles/io500.2019.05.30-16.53.54/mdt_hard" "-n" "20000" "-x" "/mnt/beegfs/datafiles/io500.2019.05.30-16.53.54/mdt_hard-stonewall"
+Path: /mnt/beegfs/datafiles/io500.2019.05.30-16.53.54
+FS: 80.0 TiB   Used FS: 23.4%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+400 tasks, 8000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :      77246.126      77243.752      77244.614          0.598
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 05/30/2019 17:30:53 --

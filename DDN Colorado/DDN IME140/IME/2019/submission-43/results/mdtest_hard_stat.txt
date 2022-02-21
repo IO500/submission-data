@@ -1,0 +1,20 @@
+-- started at 06/09/2019 14:56:57 --
+
+mdtest-3.3alpha1 was launched with 160 total task(s) on 10 node(s)
+Command line used: /work/home/sihara/io-500-dev-ime/bin/mdtest "-T" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/ime/io500.out/mdt_hard" "-n" "65000" "-x" "/ime/io500.out/mdt_hard-stonewall" "-a" "IME"
+Path: /ime/io500.out
+FS: 106.7 TiB   Used FS: 0.0%   Inodes: 934.6 Mi   Used Inodes: 7.6%
+
+160 tasks, 10400000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :     832741.333     832715.793     832733.794          8.340
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 06/09/2019 14:57:08 --

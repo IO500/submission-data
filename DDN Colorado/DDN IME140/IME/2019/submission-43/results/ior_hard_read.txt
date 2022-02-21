@@ -1,0 +1,41 @@
+ior WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.3alpha1: MPI Coordinated Test of Parallel I/O
+Began               : Sun Jun  9 14:47:10 2019
+Command line        : /work/home/sihara/io-500-dev-ime/bin/ior -r -R -s 4140000 -a IME -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /ime/io500.out/ior_hard/IOR_file -O stoneWallingStatusFile=/ime/io500.out/ior_hard/stonewall
+Machine             : Linux c082
+TestID              : 0
+StartTime           : Sun Jun  9 14:47:10 2019
+Path                : /ime/io500.out/ior_hard
+FS                  : 106.7 TiB   Used FS: 0.0%   Inodes: 934.6 Mi   Used Inodes: 7.6%
+
+Options: 
+api                 : IME
+apiVersion          : 1.3.0 (99)
+test filename       : /ime/io500.out/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 4140000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 28.32 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 31138099200000.
+WARNING: Stat() of aggregate file size      = 28299056680960.
+WARNING: Using actual aggregate bytes moved = 28299056680960.
+read      46431      45.91      45.91      0.014264   581.21     0.013695   581.25     0   
+Max Read:  46431.10 MiB/sec (48686.54 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        46431.10   46431.10   46431.10       0.00 1035707.48 1035707.48 1035707.48       0.00  581.25014     0    160  16    1   0     1        1         0    0 4140000    47008    47008 26988084.0 IME      0
+Finished            : Sun Jun  9 14:56:51 2019

@@ -1,0 +1,41 @@
+ior WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.3alpha1: MPI Coordinated Test of Parallel I/O
+Began               : Sun Jun  9 14:41:06 2019
+Command line        : /work/home/sihara/io-500-dev-ime/bin/ior -r -R -a IME -t 256k -b 256k -s 781250 -F -i 1 -C -Q 1 -g -G 27 -k -e -o /ime/io500.out/ior_easy/ior_file_easy -O stoneWallingStatusFile=/ime/io500.out/ior_easy/stonewall
+Machine             : Linux c082
+TestID              : 0
+StartTime           : Sun Jun  9 14:41:06 2019
+Path                : /ime/io500.out/ior_easy
+FS                  : 106.7 TiB   Used FS: 0.0%   Inodes: 934.6 Mi   Used Inodes: 7.6%
+
+Options: 
+api                 : IME
+apiVersion          : 1.3.0 (99)
+test filename       : /ime/io500.out/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 781250
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 262144 bytes
+blocksize           : 262144 bytes
+aggregate filesize  : 29.80 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 32768000000000.
+WARNING: Stat() of aggregate file size      = 28786892472320.
+WARNING: Using actual aggregate bytes moved = 28786892472320.
+read      106967     256.00     256.00     0.013627   256.63     0.002809   256.65     0   
+Max Read:  106966.62 MiB/sec (112162.63 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       106966.62  106966.62  106966.62       0.00  427866.47  427866.47  427866.47       0.00  256.65315     0    160  16    1   1     1        1         0    0 781250   262144   262144 27453320.0 IME      0
+Finished            : Sun Jun  9 14:45:23 2019

@@ -1,0 +1,39 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jul 14 16:25:16 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /ai400/datafiles/2020.07.14-14.55.35-app/ior-hard/file -O stoneWallingStatusFile=/ai400/datafiles/2020.07.14-14.55.35-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 55000 -r -R -a POSIX
+Machine             : Linux ec01
+TestID              : 0
+StartTime           : Tue Jul 14 16:25:16 2020
+Path                : /ai400/datafiles/2020.07.14-14.55.35-app/ior-hard
+FS                  : 94.9 TiB   Used FS: 65.6%   Inodes: 926.9 Mi   Used Inodes: 17.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ai400/datafiles/2020.07.14-14.55.35-app/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 55000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 40
+tasks               : 1280
+clients per node    : 32
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 3.01 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 55000 max: 55000 -- min data: 2.4 GiB mean data: 2.4 GiB time: 38.4s
+read      82070      1832097    38.43       45.91      45.91      0.021920   38.43      0.008016   38.46      0   
+Max Read:  82069.93 MiB/sec (86056.56 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        82069.93   82069.93   82069.93       0.00 1830678.97 1830678.97 1830678.97       0.00   38.45568      38.43      82135.17     0   1280  32    1   0     1        1         0    0  55000    47008    47008 3156054.8 POSIX      0
+Finished            : Tue Jul 14 16:25:55 2020

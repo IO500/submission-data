@@ -1,0 +1,29 @@
+-- started at 11/08/2019 13:12:32 --
+
+mdtest-3.3.0+dev was launched with 310 total task(s) on 10 node(s)
+Command line used: /home/daos/install/bin/mdtest '-r' '-t' '-F' '-P' '-w' '3901' '-e' '3901' '-d' '/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard' '-n' '2000000' '-x' '/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard-stonewall' '-a' 'DFS' '--dfs.cont' '21f1d599-afb3-483d-b2fd-e3e5d7d39376' '--dfs.svcl' '1' '--dfs.pool' '38df66d4-b4d5-4504-bc9e-e8b68c12ba0a' '--dfs.oclass' 'S1' '--dfs.prefix' '/mnt/dfuse' '-N' '1'
+Nodemap: 1000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2137 Shifting ranks by 1 for each phase.
+310 tasks, 620000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :    1869047.055    1868105.297    1868859.384        374.742
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.001          0.001          0.001          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        244.135        244.012        244.036          0.049
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :        795.639        795.639        795.639          0.000
+-- finished at 11/08/2019 13:29:52 --
+

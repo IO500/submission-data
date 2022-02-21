@@ -1,0 +1,33 @@
+-- started at 11/08/2019 12:22:43 --
+
+mdtest-3.3.0+dev was launched with 310 total task(s) on 10 node(s)
+Command line used: /home/daos/install/bin/mdtest '-C' '-F' '-P' '-d' '/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_easy' '-n' '4000000' '-a' 'DFS' '--dfs.cont' '21f1d599-afb3-483d-b2fd-e3e5d7d39376' '--dfs.svcl' '1' '--dfs.pool' '38df66d4-b4d5-4504-bc9e-e8b68c12ba0a' '-u' '-L' '--dfs.oclass' 'S1' '--dfs.prefix' '/mnt/dfuse' '-x' '/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_easy-stonewall' '-N' '1' '-W' '300'
+Nodemap: 1000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2137 Shifting ranks by 1 for each phase.
+310 tasks, 1240000000 files
+Continue stonewall hit min: 2375342 max: 2703841 avg: 2614959.1 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :    2615886.044    2614567.548    2615623.205        524.653
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA    2794093.368             NA
+   Tree creation             :          0.100          0.100          0.100          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :        320.585        320.423        320.455          0.064
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA        290.125             NA
+   Tree creation             :         10.019         10.019         10.019          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/08/2019 12:28:14 --
+

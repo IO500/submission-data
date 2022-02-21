@@ -1,0 +1,148 @@
+io500_info_submitter="Intel"
+io500_info_institution="Intel"
+io500_info_system="Wolf"
+io500_info_system_classification="Validation/CI"
+io500_info_storage_vendor="Intel"
+io500_info_filesystem_name="DAOS"
+io500_info_filesystem_type="DAOS"
+io500_info_filesystem_version="0.6"
+io500_info_client_nodes="10"
+io500_info_client_procs_per_node="31"
+io500_info_client_operating_system="CentOS"
+io500_info_client_operating_system_version="7.7"
+io500_info_client_kernel_version="3.10.0-1062.1.2.el7.x86_64"
+io500_info_md_nodes="0"
+io500_info_md_storage_devices="0"
+io500_info_ds_nodes="24"
+io500_info_ds_storage_devices="48"
+io500_info_ds_storage_type="Optane DC Persistent Memory"
+io500_info_ds_volatile_memory_capacity="128GB"
+io500_info_ds_storage_interface="DDR-T"
+io500_info_ds_network="Omnipath"
+io500_info_ds_software_version="0.6"
+io500_info_ds_operating_system_version="7.7"
+io500_info_comment="DAOS has no dedicated metadata server"
+System:  wolf-79.wolf.hpdd.intel.com
+filesystem_utilization=dfuse                  0     0         0    - /mnt/dfuse
+date=2019.11.08-12.16.57
+io500_clean_cache=False
+io500_clean_cache_cmd=drop_cache
+io500_cleanup_workdir=False
+io500_find_cmd=/home/daos/install/mpifileutils/bin/dfind
+io500_find_cmd_args='--pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --svcl 1 --stonewall 300 --prefix /mnt/dfuse --print'
+io500_find_mpi=True
+io500_ior_cmd=/home/daos/install/bin/ior
+io500_ior_easy_params='-t 512k -a DFS --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.prefix /mnt/dfuse -b 1000000m'
+io500_ior_easy_size=1000000
+io500_ior_hard_api=DFS
+io500_ior_hard_api_specific_options='--dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.prefix /mnt/dfuse --dfs.chunk_size 376064'
+io500_ior_hard_writes_per_proc=2500000
+io500_mdreal_cmd=/home/daos/src/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/home/daos/install/bin/mdtest
+io500_mdtest_easy_files_per_proc=4000000
+io500_mdtest_easy_params='-a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a -u -L --dfs.oclass S1 --dfs.prefix /mnt/dfuse'
+io500_mdtest_hard_api=DFS
+io500_mdtest_hard_api_specific_options='--dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.oclass S1 --dfs.prefix /mnt/dfuse'
+io500_mdtest_hard_files_per_proc=2000000
+io500_mpiargs='--mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310'
+io500_mpirun=/home/daos/install/bin/orterun
+io500_result_dir=/home/daos/io-500-run/results/2019.11.08-12.16.57
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/ior -w -t 512k -a DFS --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.prefix /mnt/dfuse -b 1000000m -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write              108.306 GB/s : time 319.66 seconds
+
+[Starting] mdtest_easy_write
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/mdtest -C -F -P -d /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_easy -n 4000000 -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a -u -L --dfs.oclass S1 --dfs.prefix /mnt/dfuse -x /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_easy-stonewall -N 1 -W 300
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write             2615.890 kiops : time 320.58 seconds
+
+[Starting] ior_hard_write
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/ior -w -s 2500000 -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.prefix /mnt/dfuse --dfs.chunk_size 376064 -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write               93.177 GB/s : time 302.52 seconds
+
+[Starting] mdtest_hard_write
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/mdtest -C -t -F -P -w 3901 -e 3901 -d /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard -n 2000000 -x /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard-stonewall -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.oclass S1 --dfs.prefix /mnt/dfuse -N 1 -W 300
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write             1273.790 kiops : time 358.22 seconds
+
+[Starting] find
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/mpifileutils/bin/dfind --newer /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/timestampfile --size 3901 --name *01* /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57 --pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --svcl 1 --stonewall 300 --prefix /mnt/dfuse --print
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/find.txt.
+[FIND] MATCHED 3316240/892793363 in 347.9951 seconds
+[RESULT] IOPS phase 3                      find             2565.530 kiops : time 348.00 seconds
+
+[Starting] ior_easy_read
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/ior -r -R -t 512k -a DFS --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.prefix /mnt/dfuse -b 1000000m -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_easy/stonewall
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              185.124 GB/s : time 192.86 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/mdtest -T -F -P -d /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_easy -n 4000000 -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a -u -L --dfs.oclass S1 --dfs.prefix /mnt/dfuse -x /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_easy-stonewall -N 1
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat             2856.700 kiops : time 293.56 seconds
+
+[Starting] ior_hard_read
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/ior -r -R -s 2500000 -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.prefix /mnt/dfuse --dfs.chunk_size 376064 -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_hard/stonewall
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read              126.118 GB/s : time 223.62 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard -n 2000000 -x /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard-stonewall -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.oclass S1 --dfs.prefix /mnt/dfuse -N 1
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat             2829.320 kiops : time 161.28 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/mdtest -r -F -P -d /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_easy -n 4000000 -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a -u -L --dfs.oclass S1 --dfs.prefix /mnt/dfuse -x /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_easy-stonewall -N 1
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete             1880.530 kiops : time 445.94 seconds
+
+[Starting] mdtest_hard_read
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard -n 2000000 -x /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard-stonewall -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.oclass S1 --dfs.prefix /mnt/dfuse -N 1
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read             1897.290 kiops : time 240.50 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] /home/daos/install/bin/orterun --mca oob tcp --mca btl tcp,self --hostfile /home/daos/hosts --allow-run-as-root --map-by node -np 310 /home/daos/install/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard -n 2000000 -x /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/mdt_hard-stonewall -a DFS --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.oclass S1 --dfs.prefix /mnt/dfuse -N 1
+[Results] in /home/daos/io-500-run/results/2019.11.08-12.16.57/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete             1869.050 kiops : time 1048.98 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57
+[Summary] Results files in /home/daos/io-500-run/results/2019.11.08-12.16.57
+[Summary] Data files in /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57
+[RESULT] BW   phase 1            ior_easy_write              108.306 GB/s : time 319.66 seconds
+[RESULT] BW   phase 2            ior_hard_write               93.177 GB/s : time 302.52 seconds
+[RESULT] BW   phase 3             ior_easy_read              185.124 GB/s : time 192.86 seconds
+[RESULT] BW   phase 4             ior_hard_read              126.118 GB/s : time 223.62 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write             2615.890 kiops : time 320.58 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write             1273.790 kiops : time 358.22 seconds
+[RESULT] IOPS phase 3                      find             2565.530 kiops : time 348.00 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat             2856.700 kiops : time 293.56 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat             2829.320 kiops : time 161.28 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete             1880.530 kiops : time 445.94 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read             1897.290 kiops : time 240.50 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete             1869.050 kiops : time 1048.98 seconds
+[SCORE] Bandwidth 123.894 GB/s : IOPS 2152.46 kiops : TOTAL 516.408

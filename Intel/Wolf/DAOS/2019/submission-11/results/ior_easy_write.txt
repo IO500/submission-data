@@ -1,0 +1,44 @@
+ior WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  8 12:17:04 2019
+Command line        : /home/daos/install/bin/ior -w -t 512k -a DFS --dfs.pool 38df66d4-b4d5-4504-bc9e-e8b68c12ba0a --dfs.cont 21f1d599-afb3-483d-b2fd-e3e5d7d39376 --dfs.svcl 1 --dfs.prefix /mnt/dfuse -b 1000000m -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux wolf-79.wolf.hpdd.intel.com
+TestID              : 0
+StartTime           : Fri Nov  8 12:17:04 2019
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /mnt/dfuse/datafiles/io500.2019.11.08-12.16.57/ior_easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 310
+clients per node    : 31
+repetitions         : 1
+xfersize            : 524288 bytes
+blocksize           : 976.56 GiB
+aggregate filesize  : 295.64 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 214844 max: 235886 -- min data: 104.9 GiB mean data: 109.3 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 325058560000000.
+WARNING: Stat() of aggregate file size      = 324133656199168.
+WARNING: Using actual aggregate bytes moved = 38338381742080.
+WARNING: maybe caused by deadlineForStonewalling
+write     110905     228761     0.000159    1024000000 512.00     10.03      319.66     0.167928   329.67     0   
+Max Write: 110904.52 MiB/sec (116291.82 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write      110904.52  110904.52  110904.52       0.00  221809.04  221809.04  221809.04       0.00  329.67394     300.16     115570.41     0    310  31    1   0     1        1         0    0      1 1048576000000   524288 36562328.0 DFS      0
+Finished            : Fri Nov  8 12:22:34 2019

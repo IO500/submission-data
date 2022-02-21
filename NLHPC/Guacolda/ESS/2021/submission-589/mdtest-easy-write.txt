@@ -1,0 +1,33 @@
+-- started at 10/26/2021 07:55:17 --
+
+mdtest-3.4.0+dev was launched with 480 total task(s) on 24 node(s)
+Command line used: ./mdtest '-n' '1000000' '-u' '-L' '-F' '-P' '-G' '1633228665' '-N' '1' '-d' '/home2/nvme/io500/2021.10.26-07.49.11/mdtest-easy' '-x' './results/2021.10.26-07.49.11/mdtest-easy.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=./results/2021.10.26-07.49.11/mdtest-easy-write.csv' '-a' 'POSIX'
+Path                : /home2/nvme/io500/2021.10.26-07.49.11/mdtest-easy
+FS                  : 3603.7 TiB   Used FS: 0.8%   Inodes: 528.0 Mi   Used Inodes: 0.1%
+Nodemap: 111111111111111111110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2469 Shifting ranks by 20 for each phase.
+480 tasks, 480000000 files
+Continue stonewall hit min: 209337 max: 234207 avg: 222957.5 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation              348479.339     348479.339     348479.339          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   1.301          1.301          1.301          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 322.600        322.600        322.600          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.768          0.768          0.768          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 10/26/2021 08:00:41 --
+

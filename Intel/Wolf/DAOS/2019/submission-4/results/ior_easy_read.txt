@@ -1,0 +1,40 @@
+ior WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  8 11:00:37 2019
+Command line        : /home/daos/install/bin/ior -r -R -t 512k -a DFS --dfs.pool e149eaaf-ac9b-4d5f-ae05-7932caa11de5 --dfs.cont 5000c9fc-d8a7-4992-8c77-b945e603aa07 --dfs.svcl 1 --dfs.prefix /mnt/dfuse -b 1000000m -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/dfuse/datafiles/io500.2019.11.08-10.28.23/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/dfuse/datafiles/io500.2019.11.08-10.28.23/ior_easy/stonewall
+Machine             : Linux wolf-79.wolf.hpdd.intel.com
+TestID              : 0
+StartTime           : Fri Nov  8 11:00:37 2019
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /mnt/dfuse/datafiles/io500.2019.11.08-10.28.23/ior_easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 26
+tasks               : 728
+clients per node    : 28
+repetitions         : 1
+xfersize            : 524288 bytes
+blocksize           : 976.56 GiB
+aggregate filesize  : 694.27 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 763363328000000.
+WARNING: Stat() of aggregate file size      = 762371319005184.
+WARNING: Using actual aggregate bytes moved = 41180779773952.
+read      316320     632750     0.000062    1024000000 512.00     0.022791   124.13     0.067534   124.16     0   
+Max Read:  316320.43 MiB/sec (331686.01 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       316320.43  316320.43  316320.43       0.00  632640.86  632640.86  632640.86       0.00  124.15591         NA            NA     0    728  28    1   0     1        1         0    0      1 1048576000000   524288 39273052.0 DFS      0
+Finished            : Fri Nov  8 11:02:42 2019

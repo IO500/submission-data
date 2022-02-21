@@ -1,0 +1,107 @@
+version         = io500-sc20_v3
+config-hash     = 5876522F
+result-dir      = ./results/2020.10.30-00.59.02
+; START 2020-10-30 01:00:48
+
+
+[ior-easy-write]
+t_start         = 2020-10-30 01:00:48
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /lustre/client/io500/2020.10.30-00.59.02/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.10.30-00.59.02/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect
+throughput-stonewall = 57117.49
+score           = 98.302897
+t_delta         = 423.2879
+t_end           = 2020-10-30 01:07:52
+
+[mdtest-easy-write]
+t_start         = 2020-10-30 01:07:52
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/client/io500/2020.10.30-00.59.02/mdtest-easy -x ./results/2020.10.30-00.59.02/mdtest-easy.stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 1375.456403
+score           = 319.521106
+t_delta         = 1701.0213
+t_end           = 2020-10-30 01:36:17
+
+[timestamp]
+t_start         = 2020-10-30 01:36:17
+t_delta         = 0.0008
+t_end           = 2020-10-30 01:36:17
+
+[ior-hard-write]
+t_start         = 2020-10-30 01:36:17
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /lustre/client/io500/2020.10.30-00.59.02/ior-hard/file -O stoneWallingStatusFile=./results/2020.10.30-00.59.02/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 250000 -w -D 300 -a MPIIO
+throughput-stonewall = 13007.06
+score           = 19.940947
+t_delta         = 415.9450
+t_end           = 2020-10-30 01:43:14
+
+[mdtest-hard-write]
+t_start         = 2020-10-30 01:43:14
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/client/io500/2020.10.30-00.59.02/mdtest-hard -x ./results/2020.10.30-00.59.02/mdtest-hard.stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 260.698726
+score           = 62.724894
+t_delta         = 1462.6176
+t_end           = 2020-10-30 02:07:40
+
+[find]
+t_start         = 2020-10-30 02:07:40
+exe             = ./pfind /lustre/client/io500/2020.10.30-00.59.02 -newer ./results/2020.10.30-00.59.02/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 4058334
+total-files     = 607503457
+score           = 1806.571011
+t_delta         = 336.2981
+t_end           = 2020-10-30 02:13:17
+
+[ior-easy-read]
+t_start         = 2020-10-30 02:13:17
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /lustre/client/io500/2020.10.30-00.59.02/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.10.30-00.59.02/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX --posix.odirect
+score           = 122.731960
+t_delta         = 339.0060
+t_end           = 2020-10-30 02:18:57
+
+[mdtest-easy-stat]
+t_start         = 2020-10-30 02:18:57
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/client/io500/2020.10.30-00.59.02/mdtest-easy -x ./results/2020.10.30-00.59.02/mdtest-easy.stonewall -T -a POSIX
+score           = 2171.375248
+t_delta         = 240.0265
+t_end           = 2020-10-30 02:22:58
+
+[ior-hard-read]
+t_start         = 2020-10-30 02:22:58
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /lustre/client/io500/2020.10.30-00.59.02/ior-hard/file -O stoneWallingStatusFile=./results/2020.10.30-00.59.02/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 250000 -r -R -a MPIIO
+score           = 17.519461
+t_delta         = 476.8069
+t_end           = 2020-10-30 02:30:56
+
+[mdtest-hard-stat]
+t_start         = 2020-10-30 02:30:56
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/client/io500/2020.10.30-00.59.02/mdtest-hard -x ./results/2020.10.30-00.59.02/mdtest-hard.stonewall -T -a POSIX
+score           = 348.524972
+t_delta         = 247.9152
+t_end           = 2020-10-30 02:35:04
+
+[mdtest-easy-delete]
+t_start         = 2020-10-30 02:35:04
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/client/io500/2020.10.30-00.59.02/mdtest-easy -x ./results/2020.10.30-00.59.02/mdtest-easy.stonewall -r -a POSIX
+score           = 526.144738
+t_delta         = 992.6695
+t_end           = 2020-10-30 02:51:39
+
+[mdtest-hard-read]
+t_start         = 2020-10-30 02:51:39
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/client/io500/2020.10.30-00.59.02/mdtest-hard -x ./results/2020.10.30-00.59.02/mdtest-hard.stonewall -E -X -a POSIX
+score           = 250.473274
+t_delta         = 344.7165
+t_end           = 2020-10-30 02:57:25
+
+[mdtest-hard-delete]
+t_start         = 2020-10-30 02:57:25
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/client/io500/2020.10.30-00.59.02/mdtest-hard -x ./results/2020.10.30-00.59.02/mdtest-hard.stonewall -r -a POSIX
+score           = 59.036743
+t_delta         = 1465.5956
+t_end           = 2020-10-30 03:21:54
+
+[SCORE]
+MD              = 347.611424
+BW              = 45.310372
+SCORE           = 125.500609 
+hash            = 70F799B4
+; END 2020-10-30 03:23:14

@@ -1,0 +1,33 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct 30 02:22:58 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /lustre/client/io500/2020.10.30-00.59.02/ior-hard/file -O stoneWallingStatusFile=./results/2020.10.30-00.59.02/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 250000 -r -R -a MPIIO
+Machine             : Linux s01p001
+TestID              : 0
+StartTime           : Fri Oct 30 02:22:58 2020
+Path                : /lustre/client/io500/2020.10.30-00.59.02/ior-hard/file
+FS                  : 180.1 TiB   Used FS: 27.2%   Inodes: 1224.7 Mi   Used Inodes: 47.3%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /lustre/client/io500/2020.10.30-00.59.02/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 250000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 54
+tasks               : 756
+clients per node    : 14
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 8.08 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 250000 max: 250000 -- min data: 10.9 GiB mean data: 10.9 GiB time: 472.1s
+read      17940      400289     472.15      45.91      45.91      0.139807   472.16     0.016423   472.29     0   

@@ -1,0 +1,40 @@
+IOR-3.3alpha1: MPI Coordinated Test of Parallel I/O
+Began               : Wed Jun  5 10:29:56 2019
+Command line        : /data/home/aaw360/io-500/benchmarks/io-500/io-500-dev/bin/ior -r -R -s 75000 -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /data/home/aaw360/io-500/benchmarks/io-500/io-500-dev/datafiles.e8/io500.2019.06.05-09.54.40/ior_hard/IOR_file -O stoneWallingStatusFile=/data/home/aaw360/io-500/benchmarks/io-500/io-500-dev/datafiles.e8/io500.2019.06.05-09.54.40/ior_hard/stonewall
+Machine             : Linux sdv29
+TestID              : 0
+StartTime           : Wed Jun  5 10:29:56 2019
+Path                : /data/scratch/aaw360/io-500/io500.2019.06.05-09.54.40/ior_hard
+FS                  : 120.0 TiB   Used FS: 27.7%   Inodes: 314.9 Mi   Used Inodes: 12.2%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /data/home/aaw360/io-500/benchmarks/io-500/io-500-dev/datafiles.e8/io500.2019.06.05-09.54.40/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 75000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 788.03 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 846144000000.
+WARNING: Stat() of aggregate file size      = 324434173440.
+WARNING: Using actual aggregate bytes moved = 324434173440.
+read      3868       45.91      45.91      0.008277   79.99      0.006733   79.99      0   
+Max Read:  3868.01 MiB/sec (4055.91 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         3868.01    3868.01    3868.01       0.00   86281.22   86281.22   86281.22       0.00   79.99052     0    240  24    1   0     1        1         0    0  75000    47008    47008  309404.5 POSIX      0
+Finished            : Wed Jun  5 10:31:17 2019

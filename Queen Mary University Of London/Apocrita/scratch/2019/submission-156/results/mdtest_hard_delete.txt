@@ -1,0 +1,20 @@
+-- started at 06/05/2019 10:51:01 --
+
+mdtest-3.3alpha1 was launched with 240 total task(s) on 10 node(s)
+Command line used: /data/home/aaw360/io-500/benchmarks/io-500/io-500-dev/bin/mdtest "-r" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/data/home/aaw360/io-500/benchmarks/io-500/io-500-dev/datafiles.e8/io500.2019.06.05-09.54.40/mdt_hard" "-n" "12000" "-x" "/data/home/aaw360/io-500/benchmarks/io-500/io-500-dev/datafiles.e8/io500.2019.06.05-09.54.40/mdt_hard-stonewall"
+Path: /data/scratch/aaw360/io-500/io500.2019.06.05-09.54.40
+FS: 120.0 TiB   Used FS: 27.8%   Inodes: 314.9 Mi   Used Inodes: 10.0%
+
+240 tasks, 2880000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :       5327.677       5327.673       5327.676          0.001
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.333          0.333          0.333          0.000
+
+-- finished at 06/05/2019 11:00:05 --

@@ -1,0 +1,31 @@
+-- started at 06/04/2021 19:53:32 --
+
+mdtest-3.4.0+dev was launched with 80 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '1000000' '-u' '-L' '-F' '-P' '-G' '1664181374' '-N' '1' '-d' '/mnt/lustre02/work/bk1040/k202079/io500/2021.06.04-18.25.22/mdtest-easy' '-x' './results/2021.06.04-18.25.22/mdtest-easy.stonewall' '-r' '--saveRankPerformanceDetails=./results/2021.06.04-18.25.22/mdtest-easy-delete.csv' '-a' 'POSIX'
+Path                : /mnt/lustre02/work/bk1040/k202079/io500/2021.06.04-18.25.22/mdtest-easy
+FS                  : 33157.7 TiB   Used FS: 82.8%   Inodes: 8102.5 Mi   Used Inodes: 7.7%
+Nodemap: 11111111000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2469 Shifting ranks by 8 for each phase.
+80 tasks, 80000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                16824.885      16824.885      16824.885          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    8.152          8.152          8.152          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                  351.769        351.769        351.769          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.123          0.123          0.123          0.000
+-- finished at 06/04/2021 19:59:25 --
+

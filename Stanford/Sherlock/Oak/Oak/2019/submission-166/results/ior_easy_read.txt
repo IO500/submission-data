@@ -1,0 +1,39 @@
+srun: error: Ignoring conflicting option "x11" in plugin "x11"
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 28 00:30:26 2019
+Command line        : /home/users/sthiell/io-500/io500-sc19/bin/ior -r -R -t 2048k -b 16000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /oak/stanford/groups/ruthm/sthiell/io500/sc19/datafiles/io500.2019.10.27-23.32.25/ior_easy/ior_file_easy -O stoneWallingStatusFile=/oak/stanford/groups/ruthm/sthiell/io500/sc19/datafiles/io500.2019.10.27-23.32.25/ior_easy/stonewall
+Machine             : Linux sh-106-23.int
+TestID              : 0
+StartTime           : Mon Oct 28 00:30:26 2019
+Path                : /oak/stanford/groups/ruthm/sthiell/io500/sc19/datafiles/io500.2019.10.27-23.32.25/ior_easy
+FS                  : 11430.8 TiB   Used FS: 57.1%   Inodes: 4635.7 Mi   Used Inodes: 16.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /oak/stanford/groups/ruthm/sthiell/io500/sc19/datafiles/io500.2019.10.27-23.32.25/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 15.62 GiB
+aggregate filesize  : 3.66 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      8020       5133       0.046758    16384000   2048.00    0.023375   374.08     104.72     478.80     0   
+Max Read:  8020.13 MiB/sec (8409.71 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         8020.13    8020.13    8020.13       0.00    4010.06    4010.06    4010.06       0.00  478.79548         NA            NA     0    240  24    1   1     1        1         0    0      1 16777216000  2097152 3840000.0 POSIX      0
+Finished            : Mon Oct 28 00:38:25 2019

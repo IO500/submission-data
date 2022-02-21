@@ -1,0 +1,44 @@
+srun: error: Ignoring conflicting option "x11" in plugin "x11"
+srun: Job 53620643 step creation temporarily disabled, retrying
+srun: Step created for job 53620643
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 28 00:07:54 2019
+Command line        : /home/users/sthiell/io-500/io500-sc19/bin/ior -w -s 8000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /oak/stanford/groups/ruthm/sthiell/io500/sc19/datafiles/io500.2019.10.27-23.32.25/ior_hard/IOR_file -O stoneWallingStatusFile=/oak/stanford/groups/ruthm/sthiell/io500/sc19/datafiles/io500.2019.10.27-23.32.25/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux sh-106-23.int
+TestID              : 0
+StartTime           : Mon Oct 28 00:07:54 2019
+Path                : /oak/stanford/groups/ruthm/sthiell/io500/sc19/datafiles/io500.2019.10.27-23.32.25/ior_hard
+FS                  : 11430.8 TiB   Used FS: 57.1%   Inodes: 4635.7 Mi   Used Inodes: 15.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /oak/stanford/groups/ruthm/sthiell/io500/sc19/datafiles/io500.2019.10.27-23.32.25/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 8000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 84.06 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 8000 max: 8000 -- min data: 0.4 GiB mean data: 0.4 GiB time: 254.2s
+write     238.77     7552       254.24      45.91      45.91      0.012357   254.25     106.25     360.49     0   
+Max Write: 238.77 MiB/sec (250.37 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         238.77     238.77     238.77       0.00    5326.04    5326.04    5326.04       0.00  360.49276     254.23        338.57     0    240  24    1   0     1        1         0    0   8000    47008    47008   86074.2 POSIX      0
+Finished            : Mon Oct 28 00:17:26 2019

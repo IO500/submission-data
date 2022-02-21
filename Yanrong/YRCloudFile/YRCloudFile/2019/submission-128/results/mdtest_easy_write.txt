@@ -1,0 +1,20 @@
+-- started at 06/12/2019 07:12:54 --
+
+mdtest-3.3alpha1 was launched with 144 total task(s) on 9 node(s)
+Command line used: /root/io-500-dev/bin/mdtest "-C" "-F" "-d" "/mnt/yrfs/datafiles/io500.2019.06.12-07.07.25/mdt_easy" "-n" "380000" "-u" "-L" "-z" "2" "-b" "16" "-x" "/mnt/yrfs/datafiles/io500.2019.06.12-07.07.25/mdt_easy-stonewall" "-W" "0"
+Path: /mnt/yrfs/datafiles/io500.2019.06.12-07.07.25
+FS: 35.0 TiB   Used FS: 14.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+144 tasks, 54706176 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :     175975.602     175964.582     175967.205          3.173
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        152.031        152.031        152.031          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 06/12/2019 07:18:07 --

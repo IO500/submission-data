@@ -1,0 +1,38 @@
+IOR-3.3alpha1: MPI Coordinated Test of Parallel I/O
+Began               : Wed Jun 12 07:07:30 2019
+Command line        : /root/io-500-dev/bin/ior -w -t 2048K -b 36000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/yrfs/datafiles/io500.2019.06.12-07.07.25/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/yrfs/datafiles/io500.2019.06.12-07.07.25/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0
+Machine             : Linux rdma11
+TestID              : 0
+StartTime           : Wed Jun 12 07:07:30 2019
+Path                : /mnt/yrfs/datafiles/io500.2019.06.12-07.07.25/ior_easy
+FS                  : 35.0 TiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/yrfs/datafiles/io500.2019.06.12-07.07.25/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 144
+clients per node    : 16
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 35.16 GiB
+aggregate filesize  : 4.94 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 18000 max: 18000 -- min data: 35.2 GiB mean data: 35.2 GiB time: 299.9s
+write     17250      36864000   2048.00    0.018672   300.29     0.213126   300.53     0   
+Max Write: 17249.73 MiB/sec (18087.66 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       17249.73   17249.73   17249.73       0.00    8624.87    8624.87    8624.87       0.00  300.52638     0    144  16    1   1     1        1         0    0      1 37748736000  2097152 5184000.0 POSIX      0
+Finished            : Wed Jun 12 07:12:32 2019

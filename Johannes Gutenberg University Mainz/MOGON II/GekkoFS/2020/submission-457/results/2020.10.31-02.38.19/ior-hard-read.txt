@@ -1,0 +1,36 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Oct 31 03:19:37 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /dev/shm/vef_mountdir/ior-hard/file -O stoneWallingStatusFile=./results/2020.10.31-02.38.19/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a POSIX
+Machine             : Linux x0004.mogon
+TestID              : 0
+StartTime           : Sat Oct 31 03:19:37 2020
+Path                : /dev/shm/vef_mountdir/ior-hard/file
+FS                  : 93.2 TiB   Used FS: 55.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /dev/shm/vef_mountdir/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 102.61 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 529811 max: 529811 -- min data: 23.2 GiB mean data: 23.2 GiB time: 399.4s
+WARNING: Expected aggregate file size       = 112819200000000
+WARNING: Stat() of aggregate file size      = 5977285317120
+WARNING: Using actual aggregate bytes moved = 5977285317120
+read      14270      318318     399.46      45.91      45.91      0.009960   399.46     0.000844   399.47     0   

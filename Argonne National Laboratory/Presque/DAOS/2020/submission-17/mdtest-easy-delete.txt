@@ -1,0 +1,29 @@
+-- started at 07/10/2020 12:21:19 --
+
+mdtest-3.3.0+dev was launched with 380 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '4000000' '-u' '-L' '-F' '-P' '-N' '1' '-d' '/tmp/dfuse/datafiles/2020.07.10-10.28.13-app/mdtest-easy' '-x' '/tmp/dfuse/datafiles/2020.07.10-10.28.13-app/mdtest-easy-stonewall' '-r' '-a' 'DFS' '--dfs.pool=a04776a5-bd54-4bf9-ae46-c989b9407c8d' '--dfs.cont=b0599c58-2822-45b2-9e09-23a335940082' '--dfs.svcl=1' '--dfs.oclass=S1' '--dfs.prefix=/tmp/dfuse/'
+Nodemap: 10000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 1 for each phase.
+380 tasks, 1520000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :    1786919.165    1786917.061    1786917.545          0.585
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.067          0.067          0.067          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        527.331        527.330        527.330          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :         14.848         14.848         14.848          0.000
+-- finished at 07/10/2020 12:30:22 --
+

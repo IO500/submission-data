@@ -1,0 +1,14 @@
+IO500 version io500-isc20_v4-2-g20efd247106c-17
+[RESULT]       ior-easy-write       38.704764 GiB/s  : time 308.177 seconds
+[RESULT]    mdtest-easy-write      277.091678 kIOPS : time 493.673 seconds
+[RESULT]       ior-hard-write        9.917340 GiB/s  : time 309.460 seconds
+[RESULT]    mdtest-hard-write      209.095462 kIOPS : time 435.747 seconds
+[RESULT]                 find     4684.309045 kIOPS : time 37.695 seconds
+[RESULT]        ior-easy-read       64.103014 GiB/s  : time 185.429 seconds
+[RESULT]     mdtest-easy-stat     1355.074126 kIOPS : time 76.121 seconds
+[RESULT]        ior-hard-read       35.725194 GiB/s  : time 85.986 seconds
+[RESULT]     mdtest-hard-stat     1245.929561 kIOPS : time 58.946 seconds
+[RESULT]   mdtest-easy-delete      647.296271 kIOPS : time 159.627 seconds
+[RESULT]     mdtest-hard-read      438.037918 kIOPS : time 167.536 seconds
+[RESULT]   mdtest-hard-delete      532.290078 kIOPS : time 144.153 seconds
+[SCORE] Bandwidth 30.619858 GB/s : IOPS 716.109062 kiops : TOTAL 148.078214

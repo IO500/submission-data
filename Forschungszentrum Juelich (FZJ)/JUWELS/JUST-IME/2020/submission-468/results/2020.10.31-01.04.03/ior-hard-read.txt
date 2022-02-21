@@ -1,0 +1,37 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Oct 31 03:00:17 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/ior-hard/file -O stoneWallingStatusFile=/p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a IME
+Machine             : Linux jwc09n048.adm09.juwels.fzj.de
+TestID              : 0
+StartTime           : Sat Oct 31 03:00:17 2020
+Path                : /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/ior-hard/file
+FS                  : 13830.5 TiB   Used FS: 61.0%   Inodes: 5815.9 Mi   Used Inodes: 3.9%
+
+Options: 
+api                 : IME
+apiVersion          : 1.4.1 (141020)
+test filename       : /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 400
+clients per node    : 40
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 171.01 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3995179 max: 3995179 -- min data: 174.9 GiB mean data: 174.9 GiB time: 500.7s
+WARNING: Expected aggregate file size       = 188032000000000
+WARNING: Stat() of aggregate file size      = 75122149772800
+WARNING: Using actual aggregate bytes moved = 75122149772800
+read      143046     3191165    500.76      45.91      45.91      0.050069   500.78     0.032837   500.83     0   

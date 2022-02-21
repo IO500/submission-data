@@ -1,0 +1,107 @@
+version         = 
+config-hash     = C44128B6
+result-dir      = /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03
+; START 2020-10-31 01:04:10
+
+
+[ior-easy-write]
+t_start         = 2020-10-31 01:04:10
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/ior-easy/ior_file_easy -O stoneWallingStatusFile=/p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/ior-easy.stonewall -t 512K -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a IME
+throughput-stonewall = 86600.42
+score           = 219.220071
+t_delta         = 311.6453
+t_end           = 2020-10-31 01:09:22
+
+[mdtest-easy-write]
+t_start         = 2020-10-31 01:09:22
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/mdtest-easy -x /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/mdtest-easy.stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 39.220570
+score           = 9.143485
+t_delta         = 3737.5082
+t_end           = 2020-10-31 02:11:39
+
+[timestamp]
+t_start         = 2020-10-31 02:11:39
+t_delta         = 0.0155
+t_end           = 2020-10-31 02:11:39
+
+[ior-hard-write]
+t_start         = 2020-10-31 02:11:39
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/ior-hard/file -O stoneWallingStatusFile=/p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a IME
+throughput-stonewall = 84508.06
+score           = 220.424072
+t_delta         = 317.5926
+t_end           = 2020-10-31 02:16:57
+
+[mdtest-hard-write]
+t_start         = 2020-10-31 02:16:57
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/mdtest-hard -x /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/mdtest-hard.stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 1.440914
+score           = 1.213449
+t_delta         = 547.9459
+t_end           = 2020-10-31 02:26:05
+
+[find]
+t_start         = 2020-10-31 02:26:05
+exe             = ./pfind /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03 -newer /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/timestampfile -size 3901c -name *01* -C -q 50000
+found           = 11652
+total-files     = 32915601
+score           = 25.240802
+t_delta         = 1304.0805
+t_end           = 2020-10-31 02:47:49
+
+[ior-easy-read]
+t_start         = 2020-10-31 02:47:49
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/ior-easy/ior_file_easy -O stoneWallingStatusFile=/p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/ior-easy.stonewall -t 512K -b 9920000m -F -r -R -a IME
+score           = 149.072155
+t_delta         = 450.1238
+t_end           = 2020-10-31 02:55:19
+
+[mdtest-easy-stat]
+t_start         = 2020-10-31 02:55:19
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/mdtest-easy -x /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/mdtest-easy.stonewall -T -a IME
+score           = 109.311940
+t_delta         = 297.2756
+t_end           = 2020-10-31 03:00:16
+
+[ior-hard-read]
+t_start         = 2020-10-31 03:00:16
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/ior-hard/file -O stoneWallingStatusFile=/p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a IME
+score           = 139.692970
+t_delta         = 501.2321
+t_end           = 2020-10-31 03:08:38
+
+[mdtest-hard-stat]
+t_start         = 2020-10-31 03:08:38
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/mdtest-hard -x /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/mdtest-hard.stonewall -T -a IME
+score           = 1.560767
+t_delta         = 283.4060
+t_end           = 2020-10-31 03:13:21
+
+[mdtest-easy-delete]
+t_start         = 2020-10-31 03:13:21
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/mdtest-easy -x /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/mdtest-easy.stonewall -r -a POSIX
+score           = 8.633245
+t_delta         = 3780.1051
+t_end           = 2020-10-31 04:16:21
+
+[mdtest-hard-read]
+t_start         = 2020-10-31 04:16:21
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/mdtest-hard -x /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/mdtest-hard.stonewall -E -X -a POSIX
+score           = 1.410906
+t_delta         = 313.9719
+t_end           = 2020-10-31 04:21:35
+
+[mdtest-hard-delete]
+t_start         = 2020-10-31 04:21:35
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /p/ime-scratch/fs/vet1/io500/2020.10.31-01.04.03/mdtest-hard -x /p/project/ddn-ime/SC20/results/2020.10.31-01.04.03/mdtest-hard.stonewall -r -a POSIX
+score           = 0.661209
+t_delta         = 669.3375
+t_end           = 2020-10-31 04:32:45
+
+[SCORE]
+MD              = 4.990644
+BW              = 178.105612
+SCORE           = 29.813784 
+hash            = 76B35D43
+; END 2020-10-31 04:32:46

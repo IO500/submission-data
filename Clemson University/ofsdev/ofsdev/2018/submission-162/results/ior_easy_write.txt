@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov  4 20:11:52 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 4m -b 51200m -F -a POSIX -o /mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux pvfs017.ofsdev.clemson.edu
+TestID              : 0
+StartTime           : Sun Nov  4 20:11:52 2018
+Path                : /mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50/ior_easy
+FS                  : 145.4 TiB   Used FS: 74.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 50 GiB
+aggregate filesize  : 3.91 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 10533 max: 12800 -- min data: 41.1 GiB mean data: 44.1 GiB time: 300.1s
+write     11234      52428800   4096       0.007055   363.55     1.04       364.59     0   
+Max Write: 11234.39 MiB/sec (11780.11 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       11234.39   11234.39   11234.39       0.00    2808.60    2808.60    2808.60       0.00  364.59487     0     80   8    1   1     1        1         0    0      1 53687091200  4194304 4096000.0 POSIX      0
+Finished            : Sun Nov  4 20:17:58 2018

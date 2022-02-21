@@ -1,0 +1,100 @@
+-- started at 11/04/2018 20:18:00 --
+
+mdtest-1.9.3 was launched with 80 total task(s) on 10 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-F" "-d" "/mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50/mdt_easy" "-n" "1500000" "-u" "-L" "-x" "/mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50/mdt_easy-stonewall" "-W" "300"
+Path: /mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50
+FS: 145.4 TiB   Used FS: 76.8%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+80 tasks, 120000000 files
+stonewall rank 10: 404750 of 418694 
+stonewall rank 30: 325866 of 418694 
+stonewall rank 50: 389763 of 418694 
+stonewall rank 20: 388833 of 418694 
+stonewall rank 40: 339866 of 418694 
+stonewall rank 60: 340057 of 418694 
+stonewall rank 70: 363605 of 418694 
+stonewall rank 42: 375882 of 418694 
+stonewall rank 58: 375666 of 418694 
+stonewall rank 21: 349520 of 418694 
+Continue stonewall hit min: 325866 max: 418694 avg: 371444.5 
+stonewall rank 0: 356039 of 418694 
+stonewall rank 62: 348610 of 418694 
+stonewall rank 18: 397700 of 418694 
+stonewall rank 14: 374025 of 418694 
+stonewall rank 31: 346642 of 418694 
+stonewall rank 12: 360976 of 418694 
+stonewall rank 28: 398917 of 418694 
+stonewall rank 34: 388817 of 418694 
+stonewall rank 1: 392251 of 418694 
+stonewall rank 22: 385282 of 418694 
+stonewall rank 38: 355159 of 418694 
+stonewall rank 54: 375802 of 418694 
+stonewall rank 11: 352484 of 418694 
+stonewall rank 52: 380324 of 418694 
+stonewall rank 78: 375411 of 418694 
+stonewall rank 74: 373474 of 418694 
+stonewall rank 41: 359582 of 418694 
+stonewall rank 72: 351894 of 418694 
+stonewall rank 48: 337025 of 418694 
+stonewall rank 44: 381231 of 418694 
+stonewall rank 32: 356942 of 418694 
+stonewall rank 68: 372674 of 418694 
+stonewall rank 51: 364618 of 418694 
+stonewall rank 26: 376830 of 418694 
+stonewall rank 8: 380731 of 418694 
+stonewall rank 24: 391593 of 418694 
+stonewall rank 61: 350647 of 418694 
+stonewall rank 36: 355682 of 418694 
+stonewall rank 64: 391450 of 418694 
+stonewall rank 71: 377575 of 418694 
+stonewall rank 46: 347039 of 418694 
+stonewall rank 4: 368690 of 418694 
+stonewall rank 39: 350763 of 418694 
+stonewall rank 66: 382238 of 418694 
+stonewall rank 45: 356930 of 418694 
+stonewall rank 76: 363457 of 418694 
+stonewall rank 13: 396380 of 418694 
+stonewall rank 56: 328541 of 418694 
+stonewall rank 55: 382927 of 418694 
+stonewall rank 6: 418486 of 418694 
+stonewall rank 23: 386522 of 418694 
+stonewall rank 16: 354680 of 418694 
+stonewall rank 49: 348106 of 418694 
+stonewall rank 65: 355460 of 418694 
+stonewall rank 33: 374097 of 418694 
+stonewall rank 59: 382283 of 418694 
+stonewall rank 75: 362833 of 418694 
+stonewall rank 43: 359477 of 418694 
+stonewall rank 79: 378738 of 418694 
+stonewall rank 5: 389388 of 418694 
+stonewall rank 63: 375543 of 418694 
+stonewall rank 19: 392033 of 418694 
+stonewall rank 15: 362329 of 418694 
+stonewall rank 73: 381056 of 418694 
+stonewall rank 9: 373529 of 418694 
+stonewall rank 35: 381982 of 418694 
+stonewall rank 3: 378216 of 418694 
+stonewall rank 25: 386159 of 418694 
+stonewall rank 53: 377174 of 418694 
+stonewall rank 47: 389129 of 418694 
+stonewall rank 29: 385629 of 418694 
+stonewall rank 57: 368029 of 418694 
+stonewall rank 69: 409422 of 418694 
+stonewall rank 67: 367592 of 418694 
+stonewall rank 7: 350085 of 418694 
+stonewall rank 17: 361788 of 418694 
+stonewall rank 37: 361823 of 418694 
+stonewall rank 77: 356834 of 418694 
+stonewall rank 27: 387285 of 418694 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :     303450.546     303450.546     303450.546          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :         25.077         25.077         25.077          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/04/2018 20:24:35 --

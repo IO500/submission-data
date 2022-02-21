@@ -1,0 +1,100 @@
+-- started at 11/04/2018 20:54:49 --
+
+mdtest-1.9.3 was launched with 80 total task(s) on 10 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50/mdt_hard" "-n" "50000" "-x" "/mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50/mdt_hard-stonewall" "-W" "300"
+Path: /mnt/beegfs/jburto2/io500/datafiles/io500.2018.11.04-20.11.50
+FS: 145.4 TiB   Used FS: 76.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+80 tasks, 4000000 files
+stonewall rank 60: 21733 of 22482 
+stonewall rank 70: 21826 of 22482 
+stonewall rank 30: 21954 of 22482 
+stonewall rank 50: 21718 of 22482 
+stonewall rank 40: 22160 of 22482 
+stonewall rank 20: 21960 of 22482 
+stonewall rank 1: 21708 of 22482 
+Continue stonewall hit min: 21500 max: 22482 avg: 21949.5 
+stonewall rank 0: 22149 of 22482 
+stonewall rank 10: 22100 of 22482 
+stonewall rank 21: 21800 of 22482 
+stonewall rank 58: 21659 of 22482 
+stonewall rank 62: 22193 of 22482 
+stonewall rank 14: 21688 of 22482 
+stonewall rank 11: 21681 of 22482 
+stonewall rank 78: 21689 of 22482 
+stonewall rank 72: 22031 of 22482 
+stonewall rank 31: 21851 of 22482 
+stonewall rank 68: 22438 of 22482 
+stonewall rank 42: 22121 of 22482 
+stonewall rank 54: 21682 of 22482 
+stonewall rank 41: 22084 of 22482 
+stonewall rank 18: 21821 of 22482 
+stonewall rank 52: 21971 of 22482 
+stonewall rank 74: 21863 of 22482 
+stonewall rank 51: 21820 of 22482 
+stonewall rank 28: 21822 of 22482 
+stonewall rank 2: 22097 of 22482 
+stonewall rank 24: 21934 of 22482 
+stonewall rank 71: 21841 of 22482 
+stonewall rank 12: 21628 of 22482 
+stonewall rank 34: 21632 of 22482 
+stonewall rank 25: 22235 of 22482 
+stonewall rank 38: 21762 of 22482 
+stonewall rank 22: 22172 of 22482 
+stonewall rank 44: 22108 of 22482 
+stonewall rank 13: 21916 of 22482 
+stonewall rank 48: 22256 of 22482 
+stonewall rank 46: 21919 of 22482 
+stonewall rank 64: 22167 of 22482 
+stonewall rank 29: 22275 of 22482 
+stonewall rank 8: 21714 of 22482 
+stonewall rank 32: 21744 of 22482 
+stonewall rank 75: 21755 of 22482 
+stonewall rank 56: 21794 of 22482 
+stonewall rank 4: 22184 of 22482 
+stonewall rank 39: 21832 of 22482 
+stonewall rank 66: 22192 of 22482 
+stonewall rank 5: 21898 of 22482 
+stonewall rank 76: 21500 of 22482 
+stonewall rank 49: 22384 of 22482 
+stonewall rank 6: 22051 of 22482 
+stonewall rank 35: 22036 of 22482 
+stonewall rank 16: 21844 of 22482 
+stonewall rank 63: 22031 of 22482 
+stonewall rank 26: 22146 of 22482 
+stonewall rank 59: 21846 of 22482 
+stonewall rank 36: 21901 of 22482 
+stonewall rank 45: 22338 of 22482 
+stonewall rank 73: 21599 of 22482 
+stonewall rank 69: 22206 of 22482 
+stonewall rank 55: 21766 of 22482 
+stonewall rank 57: 21640 of 22482 
+stonewall rank 79: 21768 of 22482 
+stonewall rank 65: 22083 of 22482 
+stonewall rank 3: 22322 of 22482 
+stonewall rank 19: 21677 of 22482 
+stonewall rank 15: 21790 of 22482 
+stonewall rank 23: 22065 of 22482 
+stonewall rank 9: 22356 of 22482 
+stonewall rank 33: 21800 of 22482 
+stonewall rank 43: 22012 of 22482 
+stonewall rank 53: 21926 of 22482 
+stonewall rank 17: 21818 of 22482 
+stonewall rank 47: 22212 of 22482 
+stonewall rank 67: 22126 of 22482 
+stonewall rank 77: 21593 of 22482 
+stonewall rank 7: 22225 of 22482 
+stonewall rank 27: 22174 of 22482 
+stonewall rank 37: 21668 of 22482 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      12955.113      12955.113      12955.113          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        261.966        261.966        261.966          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/04/2018 20:59:58 --

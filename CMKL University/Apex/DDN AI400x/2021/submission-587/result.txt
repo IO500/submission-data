@@ -1,0 +1,109 @@
+version         = io500-isc21
+config-hash     = CC4BD75A
+result-dir      = ./experiment/exres8/2021.10.26-21.50.42
+mode            = standard
+; START 2021-10-26 21:50:46
+
+
+[ior-easy-write]
+t_start         = 2021-10-26 21:50:46
+exe             = ./ior -C -Q 1 -g -G 747058756 -k -e -o ./experiment/exdata8/2021.10.26-21.50.42/ior-easy/ior_file_easy -O stoneWallingStatusFile=./experiment/exres8/2021.10.26-21.50.42/ior-easy.stonewall -t 2m -b 3200000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./experiment/exres8/2021.10.26-21.50.42/ior-easy-write.csv
+throughput-stonewall = 11.68
+score           = 11.346902
+t_delta         = 739.4489
+t_end           = 2021-10-26 22:03:06
+
+[mdtest-easy-write]
+t_start         = 2021-10-26 22:03:06
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1633236550 -N 1 -d ./experiment/exdata8/2021.10.26-21.50.42/mdtest-easy -x ./experiment/exres8/2021.10.26-21.50.42/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./experiment/exres8/2021.10.26-21.50.42/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 17.451624
+score           = 17.021276
+t_delta         = 389.3206
+t_end           = 2021-10-26 22:09:35
+
+[timestamp]
+t_start         = 2021-10-26 22:09:35
+t_delta         = 0.0004
+t_end           = 2021-10-26 22:09:35
+
+[ior-hard-write]
+t_start         = 2021-10-26 22:09:35
+exe             = ./ior -C -Q 1 -g -G=747069444 -k -e -o ./experiment/exdata8/2021.10.26-21.50.42/ior-hard/file -O stoneWallingStatusFile=./experiment/exres8/2021.10.26-21.50.42/ior-hard.stonewall -t 47008 -b 47008 -s 1000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./experiment/exres8/2021.10.26-21.50.42/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 2.87
+score           = 2.399540
+t_delta         = 1007.4471
+t_end           = 2021-10-26 22:26:23
+
+[mdtest-hard-write]
+t_start         = 2021-10-26 22:26:23
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1633247238 -N 1 -F -d ./experiment/exdata8/2021.10.26-21.50.42/mdtest-hard -x ./experiment/exres8/2021.10.26-21.50.42/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./experiment/exres8/2021.10.26-21.50.42/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 11.178848
+score           = 10.935025
+t_delta         = 335.3601
+t_end           = 2021-10-26 22:31:58
+
+[find]
+t_start         = 2021-10-26 22:31:58
+exe             = ./pfind ./experiment/exdata8/2021.10.26-21.50.42 -newer ./experiment/exres8/2021.10.26-21.50.42/timestampfile -size 3901c -name *01* -C -q 1000000
+nproc           = 240
+found           = 125988
+total-files     = 10290481
+score           = 491.605094
+t_delta         = 21.0621
+t_end           = 2021-10-26 22:32:19
+
+[ior-easy-read]
+t_start         = 2021-10-26 22:32:19
+exe             = ./ior -C -Q 1 -g -G 747058756 -k -e -o ./experiment/exdata8/2021.10.26-21.50.42/ior-easy/ior_file_easy -O stoneWallingStatusFile=./experiment/exres8/2021.10.26-21.50.42/ior-easy.stonewall -t 2m -b 3200000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./experiment/exres8/2021.10.26-21.50.42/ior-easy-read.csv
+score           = 34.716185
+t_delta         = 241.5980
+t_end           = 2021-10-26 22:36:21
+
+[mdtest-easy-stat]
+t_start         = 2021-10-26 22:36:21
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1633236550 -N 1 -d ./experiment/exdata8/2021.10.26-21.50.42/mdtest-easy -x ./experiment/exres8/2021.10.26-21.50.42/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./experiment/exres8/2021.10.26-21.50.42/mdtest-easy-stat.csv -a POSIX
+score           = 53.421381
+t_delta         = 124.1371
+t_end           = 2021-10-26 22:38:25
+
+[ior-hard-read]
+t_start         = 2021-10-26 22:38:25
+exe             = ./ior -C -Q 1 -g -G=747069444 -k -e -o ./experiment/exdata8/2021.10.26-21.50.42/ior-hard/file -O stoneWallingStatusFile=./experiment/exres8/2021.10.26-21.50.42/ior-hard.stonewall -t 47008 -b 47008 -s 1000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./experiment/exres8/2021.10.26-21.50.42/ior-hard-read.csv
+score           = 11.791693
+t_delta         = 203.2661
+t_end           = 2021-10-26 22:41:48
+
+[mdtest-hard-stat]
+t_start         = 2021-10-26 22:41:48
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1633247238 -N 1 -F -d ./experiment/exdata8/2021.10.26-21.50.42/mdtest-hard -x ./experiment/exres8/2021.10.26-21.50.42/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./experiment/exres8/2021.10.26-21.50.42/mdtest-hard-stat.csv -a POSIX
+score           = 64.378442
+t_delta         = 57.2404
+t_end           = 2021-10-26 22:42:45
+
+[mdtest-easy-delete]
+t_start         = 2021-10-26 22:42:45
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1633236550 -N 1 -d ./experiment/exdata8/2021.10.26-21.50.42/mdtest-easy -x ./experiment/exres8/2021.10.26-21.50.42/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./experiment/exres8/2021.10.26-21.50.42/mdtest-easy-delete.csv -a POSIX
+score           = 17.268098
+t_delta         = 384.1771
+t_end           = 2021-10-26 22:49:09
+
+[mdtest-hard-read]
+t_start         = 2021-10-26 22:49:09
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1633247238 -N 1 -F -d ./experiment/exdata8/2021.10.26-21.50.42/mdtest-hard -x ./experiment/exres8/2021.10.26-21.50.42/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./experiment/exres8/2021.10.26-21.50.42/mdtest-hard-read.csv -a POSIX
+score           = 44.178514
+t_delta         = 83.0560
+t_end           = 2021-10-26 22:50:32
+
+[mdtest-hard-delete]
+t_start         = 2021-10-26 22:50:32
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1633247238 -N 1 -F -d ./experiment/exdata8/2021.10.26-21.50.42/mdtest-hard -x ./experiment/exres8/2021.10.26-21.50.42/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./experiment/exres8/2021.10.26-21.50.42/mdtest-hard-delete.csv -a POSIX
+score           = 6.859286
+t_delta         = 534.5786
+t_end           = 2021-10-26 22:59:27
+
+[SCORE]
+MD              = 33.657146
+BW              = 10.274917
+SCORE           = 18.596354
+hash            = 7945C09E
+; END 2021-10-26 22:59:41

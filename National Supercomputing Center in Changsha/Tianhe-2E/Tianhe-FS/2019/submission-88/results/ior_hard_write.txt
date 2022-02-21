@@ -1,0 +1,73 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov 11 18:28:45 2019
+Command line        : /vol7/io500_20190930/bin/ior -w -s 304000 -a MPIIO -U /vol7/io500_20190930/mpio -H -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /vol7/io500_20190930/datafiles/io500.2019.11.11-18.18.04/ior_hard/IOR_file -O stoneWallingStatusFile=/vol7/io500_20190930/datafiles/io500.2019.11.11-18.18.04/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux node1
+TestID              : 0
+StartTime           : Mon Nov 11 18:28:45 2019
+Path                : /vol7/io500_20190930/datafiles/io500.2019.11.11-18.18.04/ior_hard
+FS                  : 818.4 TiB   Used FS: 5.0%   Inodes: 3344.5 Mi   Used Inodes: 1.2%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /vol7/io500_20190930/datafiles/io500.2019.11.11-18.18.04/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 304000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 2.08 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+
+hints passed to MPI_File_open() {
+	romio_ds_write = disable
+	romio_cb_read = disable
+}
+
+hints returned from opened file {
+	direct_read = false
+	direct_write = false
+	romio_lustre_co_ratio = 1
+	romio_lustre_coll_threshold = 0
+	romio_lustre_ds_in_coll = enable
+	cb_buffer_size = 16777216
+	romio_cb_read = disable
+	romio_cb_write = automatic
+	cb_nodes = 10
+	romio_no_indep_rw = false
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	ind_rd_buffer_size = 4194304
+	ind_wr_buffer_size = 524288
+	romio_ds_read = automatic
+	romio_ds_write = disable
+	cb_config_list = *:1
+	romio_filesystem_type = LUSTRE:
+	romio_aggregator_list = 0 16 32 48 64 80 96 112 128 144 
+	striping_unit = 8388608
+	striping_factor = 568
+	romio_lustre_start_iodevice = 0
+}
+stonewalling pairs accessed min: 247700 max: 304000 -- min data: 10.8 GiB mean data: 13.3 GiB time: 300.0s
+write     5339       45.91      45.91      0.067352   408.36     0.006877   408.44     0   
+Max Write: 5338.76 MiB/sec (5598.10 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        5338.76    5338.76    5338.76       0.00  119088.17  119088.17  119088.17       0.00  408.43687     300.01       7257.66     0    160  16    1   0     1        1         0    0 304000    47008    47008 2180547.0 MPIIO      0
+Finished            : Mon Nov 11 18:35:34 2019

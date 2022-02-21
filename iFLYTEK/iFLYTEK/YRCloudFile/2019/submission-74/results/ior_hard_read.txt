@@ -1,0 +1,37 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  6 01:37:39 2019
+Command line        : /root/io-500-dev/bin/ior -r -R -s 1900000 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/yrfs/datafiles/io500.2019.11.05-23.21.02/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/yrfs/datafiles/io500.2019.11.05-23.21.02/ior_hard/stonewall
+Machine             : Linux node1.yr
+TestID              : 0
+StartTime           : Wed Nov  6 01:37:39 2019
+Path                : /mnt/yrfs/datafiles/io500.2019.11.05-23.21.02/ior_hard
+FS                  : 46.9 TiB   Used FS: 63.3%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/yrfs/datafiles/io500.2019.11.05-23.21.02/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1900000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 16.25 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+read      15700      45.91      45.91      0.200854   1084.71    0.126962   1085.04    0   
+Max Read:  15700.40 MiB/sec (16463.07 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        15700.40   15700.40   15700.40       0.00  350218.39  350218.39  350218.39       0.00 1085.03727         NA            NA     0    200  20    1   0     1        1         0    0 1900000    47008    47008 17035522.0 POSIX      0
+Finished            : Wed Nov  6 01:55:44 2019

@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct 30 10:04:47 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-easy/ior_file_easy -O stoneWallingStatusFile=/tmp/dfuse/results/2020.10.30-09.32.49/ior-easy.stonewall -t 256k -b 100000m -r -R -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.prefix=/tmp/dfuse
+Machine             : Linux eia161
+TestID              : 0
+StartTime           : Fri Oct 30 10:04:48 2020
+Path                : /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-easy/ior_file_easy
+FS                  : -1710806887.6 GiB   Used FS: 100.0%   Inodes: 134206810.4 Mi   Used Inodes: 83.9%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+repetitions         : 1
+xfersize            : 262144 bytes
+blocksize           : 97.66 GiB
+aggregate filesize  : 61.04 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 67108864000000
+WARNING: Stat() of aggregate file size      = 67057587322880
+WARNING: Using actual aggregate bytes moved = 34291790643200
+read      44380      179022     0.001827    102400000  256.00     6.18       730.71     0.000803   736.89     0   

@@ -1,0 +1,108 @@
+version         = io500-sc20_v3-1-g4c17ac501883-12
+config-hash     = 3CE19019
+result-dir      = /tmp/dfuse/results/2020.10.30-09.32.49
+; START 2020-10-30 09:33:00
+
+
+[ior-easy-write]
+t_start         = 2020-10-30 09:33:00
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-easy/ior_file_easy -O stoneWallingStatusFile=/tmp/dfuse/results/2020.10.30-09.32.49/ior-easy.stonewall -t 256k -b 100000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.prefix=/tmp/dfuse
+throughput-stonewall = 17001.62
+score           = 53.372671
+t_delta         = 606.0921
+t_end           = 2020-10-30 09:43:06
+
+[mdtest-easy-write]
+t_start         = 2020-10-30 09:43:06
+exe             = ./mdtest -n 10000000 -u -L -F -P -N 1 -d /tmp/dfuse/datafiles/2020.10.30-09.32.49/mdtest-easy -x /tmp/dfuse/results/2020.10.30-09.32.49/mdtest-easy.stonewall -C -Y -W 300 -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.oclass=S1 --dfs.prefix=/tmp/dfuse
+rate-stonewall  = 5751.786562
+score           = 5702.333575
+t_delta         = 317.7481
+t_end           = 2020-10-30 09:48:24
+
+[timestamp]
+t_start         = 2020-10-30 09:48:24
+t_delta         = 0.0242
+t_end           = 2020-10-30 09:48:24
+
+[ior-hard-write]
+t_start         = 2020-10-30 09:48:24
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-hard/file -O stoneWallingStatusFile=/tmp/dfuse/results/2020.10.30-09.32.49/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.chunk_size=470080 --dfs.prefix=/tmp/dfuse
+throughput-stonewall = 23994.88
+score           = 40.839710
+t_delta         = 344.2002
+t_end           = 2020-10-30 09:54:08
+
+[mdtest-hard-write]
+t_start         = 2020-10-30 09:54:08
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/dfuse/datafiles/2020.10.30-09.32.49/mdtest-hard -x /tmp/dfuse/results/2020.10.30-09.32.49/mdtest-hard.stonewall -C -Y -W 300 -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.oclass=S1 --dfs.prefix=/tmp/dfuse
+rate-stonewall  = 1256.729203
+score           = 1253.005913
+t_delta         = 327.0532
+t_end           = 2020-10-30 09:59:35
+
+[find]
+t_start         = 2020-10-30 09:59:35
+exe             = ./pfind /tmp/dfuse/datafiles/2020.10.30-09.32.49 -newer /tmp/dfuse/results/2020.10.30-09.32.49/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 640
+found           = 12763278
+total-files     = 843723591
+score           = 2714.238117
+t_delta         = 310.9214
+t_end           = 2020-10-30 10:04:46
+
+[ior-easy-read]
+t_start         = 2020-10-30 10:04:46
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-easy/ior_file_easy -O stoneWallingStatusFile=/tmp/dfuse/results/2020.10.30-09.32.49/ior-easy.stonewall -t 256k -b 100000m -r -R -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.prefix=/tmp/dfuse
+score           = 43.340062
+t_delta         = 743.4720
+t_end           = 2020-10-30 10:17:10
+
+[mdtest-easy-stat]
+t_start         = 2020-10-30 10:17:10
+exe             = ./mdtest -n 10000000 -u -L -F -P -N 1 -d /tmp/dfuse/datafiles/2020.10.30-09.32.49/mdtest-easy -x /tmp/dfuse/results/2020.10.30-09.32.49/mdtest-easy.stonewall -T -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.oclass=S1 --dfs.prefix=/tmp/dfuse
+score           = 5600.548081
+t_delta         = 317.3790
+t_end           = 2020-10-30 10:22:27
+
+[ior-hard-read]
+t_start         = 2020-10-30 10:22:27
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-hard/file -O stoneWallingStatusFile=/tmp/dfuse/results/2020.10.30-09.32.49/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.chunk_size=470080 --dfs.prefix=/tmp/dfuse
+score           = 38.202499
+t_delta         = 367.5066
+t_end           = 2020-10-30 10:28:35
+
+[mdtest-hard-stat]
+t_start         = 2020-10-30 10:28:35
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/dfuse/datafiles/2020.10.30-09.32.49/mdtest-hard -x /tmp/dfuse/results/2020.10.30-09.32.49/mdtest-hard.stonewall -T -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.oclass=S1 --dfs.prefix=/tmp/dfuse
+score           = 2706.865398
+t_delta         = 154.8284
+t_end           = 2020-10-30 10:31:10
+
+[mdtest-easy-delete]
+t_start         = 2020-10-30 10:31:10
+exe             = ./mdtest -n 10000000 -u -L -F -P -N 1 -d /tmp/dfuse/datafiles/2020.10.30-09.32.49/mdtest-easy -x /tmp/dfuse/results/2020.10.30-09.32.49/mdtest-easy.stonewall -r -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.oclass=S1 --dfs.prefix=/tmp/dfuse
+score           = 3463.991234
+t_delta         = 518.0797
+t_end           = 2020-10-30 10:39:48
+
+[mdtest-hard-read]
+t_start         = 2020-10-30 10:39:48
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/dfuse/datafiles/2020.10.30-09.32.49/mdtest-hard -x /tmp/dfuse/results/2020.10.30-09.32.49/mdtest-hard.stonewall -E -X -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.oclass=S1 --dfs.prefix=/tmp/dfuse
+score           = 1660.421548
+t_delta         = 248.4449
+t_end           = 2020-10-30 10:43:56
+
+[mdtest-hard-delete]
+t_start         = 2020-10-30 10:43:56
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/dfuse/datafiles/2020.10.30-09.32.49/mdtest-hard -x /tmp/dfuse/results/2020.10.30-09.32.49/mdtest-hard.stonewall -r -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.oclass=S1 --dfs.prefix=/tmp/dfuse
+score           = 2727.029792
+t_delta         = 929.2505
+t_end           = 2020-10-30 10:59:26
+
+[SCORE]
+MD              = 2870.644995
+BW              = 43.585870
+SCORE           = 353.722434 
+hash            = 701ABADD
+; END 2020-10-30 10:59:27

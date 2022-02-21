@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct 30 09:48:24 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-hard/file -O stoneWallingStatusFile=/tmp/dfuse/results/2020.10.30-09.32.49/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=751d2a8f-3fba-4d3b-9cad-13beafe3ee0a --dfs.cont=77c5931d-c4f4-48fb-b865-8359d6f18b0a --dfs.svcl=1 --dfs.chunk_size=470080 --dfs.prefix=/tmp/dfuse
+Machine             : Linux eia161
+TestID              : 0
+StartTime           : Fri Oct 30 09:48:25 2020
+Path                : /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-hard/file
+FS                  : -1710806887.6 GiB   Used FS: 100.0%   Inodes: 134206810.4 Mi   Used Inodes: 83.9%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /tmp/dfuse/datafiles/2020.10.30-09.32.49/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 273.62 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 425969 max: 492370 -- min data: 18.6 GiB mean data: 19.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 300851200000000
+WARNING: Stat() of aggregate file size      = 14813010534400
+WARNING: Using actual aggregate bytes moved = 14813010534400
+WARNING: Maybe caused by deadlineForStonewalling
+write     41820      956760     307.70      45.91      45.91      8.44       329.36     0.000857   337.80     0   

@@ -1,0 +1,137 @@
+System:  node301.sis.cnes.fr
+filesystem_utilization=work           6818529017856 4479718923264 2338810094592  66% /work
+date=2019.11.05-21.32.43
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 300 -r /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/pfind_results'
+io500_find_cmd=/opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=SSD
+io500_info_filesystem='Spectrum Scale'
+io500_info_filesystem_vendor=IBM
+io500_info_filesystem_version=4.2.3-18
+io500_info_institute_name=CNES
+io500_info_metadata_storage_type=NVME
+io500_info_num_client_nodes=96
+io500_info_num_data_server_nodes=8
+io500_info_num_data_storage_devices=xxx
+io500_info_num_metadata_server_nodes=2
+io500_info_num_metadata_storage_devices=16
+io500_info_procs_per_node=1
+io500_info_storage_age_in_months=1
+io500_info_storage_install_date=03/16
+io500_info_storage_interface='SAS, NVMe'
+io500_info_storage_network=infiniband
+io500_info_system_name=HPC5G
+io500_info_whatever=WhateverElseYouThinkRelevant
+io500_ior_cmd=/opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/ior
+io500_ior_easy_params='-t 1024k -b 300g -F'
+io500_ior_easy_size=300
+io500_ior_hard_other_options=
+io500_ior_hard_writes_per_proc=8000
+io500_mdreal_cmd=/opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/mdtest
+io500_mdtest_easy_files_per_proc=800000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=60000
+io500_mdtest_hard_other_options=
+io500_mpiargs='-np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib'
+io500_mpirun=mpirun
+io500_result_dir=/opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/work/ADM/hpc/io500/io500.2019.11.05-21.32.43
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 1024k -b 300g -F -o /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_easy/ior_file_easy -O stoneWallingStatusFile=/work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               62.644 GB/s : time 334.70 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/mdtest -C -F -d /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_easy -n 800000 -u -L -x /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_easy-stonewall -W 300
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write              144.070 kiops : time 332.41 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 8000  -o /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_hard/IOR_file -O stoneWallingStatusFile=/work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                0.094 GB/s : time 357.58 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/mdtest -C -t -F -w 3901 -e 3901 -d /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_hard -n 60000 -x /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_hard-stonewall  -W 300
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write               18.266 kiops : time 316.51 seconds
+
+[Starting] find
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/pfind /work/ADM/hpc/io500/io500.2019.11.05-21.32.43 -newer /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/timestampfile -size 3901c -name *01* -s 300 -r /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/pfind_results
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/find.txt.
+[FIND] MATCHED 161664/53447718 in 19.1813 seconds
+[RESULT] IOPS phase 3                      find             2786.440 kiops : time  19.18 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 1024k -b 300g -F -o /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_easy/ior_file_easy -O stoneWallingStatusFile=/work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_easy/stonewall
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               72.330 GB/s : time 289.88 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/mdtest -T -F -d /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_easy -n 800000 -u -L -x /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_easy-stonewall
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              277.727 kiops : time 172.86 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 8000  -o /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_hard/IOR_file -O stoneWallingStatusFile=/work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_hard/stonewall
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read               20.861 GB/s : time   1.61 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/mdtest -T -t -F -w 3901 -e 3901 -d /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_hard -n 60000 -x /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_hard-stonewall 
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat              234.027 kiops : time  25.63 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/mdtest -r -F -d /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_easy -n 800000 -u -L -x /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_easy-stonewall
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              111.901 kiops : time 427.42 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/mdtest -E -t -F -w 3901 -e 3901 -d /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_hard -n 60000 -x /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_hard-stonewall 
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              108.136 kiops : time  54.43 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun -np 96 -hostfile ./machinefile -npernode 1 --allow-run-as-root --mca btl vader,self,openib /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/mdtest -r -t -F -w 3901 -e 3901 -d /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_hard -n 60000 -x /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/mdt_hard-stonewall 
+[Results] in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete               28.982 kiops : time 234.72 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /work/ADM/hpc/io500/io500.2019.11.05-21.32.43
+[Summary] Results files in /opt/cluster/benchs/io-500-dev-1.1-testBurst/results/2019.11.05-21.32.43
+[Summary] Data files in /work/ADM/hpc/io500/io500.2019.11.05-21.32.43
+[RESULT] BW   phase 1            ior_easy_write               62.644 GB/s : time 334.70 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.094 GB/s : time 357.58 seconds
+[RESULT] BW   phase 3             ior_easy_read               72.330 GB/s : time 289.88 seconds
+[RESULT] BW   phase 4             ior_hard_read               20.861 GB/s : time   1.61 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write              144.070 kiops : time 332.41 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write               18.266 kiops : time 316.51 seconds
+[RESULT] IOPS phase 3                      find             2786.440 kiops : time  19.18 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              277.727 kiops : time 172.86 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              234.027 kiops : time  25.63 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              111.901 kiops : time 427.42 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              108.136 kiops : time  54.43 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete               28.982 kiops : time 234.72 seconds
+[SCORE] Bandwidth 9.70967 GB/s : IOPS 142.195 kiops : TOTAL 37.1573

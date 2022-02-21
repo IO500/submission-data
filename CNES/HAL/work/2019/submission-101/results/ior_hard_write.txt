@@ -1,0 +1,40 @@
+IOR-3.2.1: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov  5 21:43:53 2019
+Command line        : /opt/cluster/benchs/io-500-dev-1.1-testBurst/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 8000 -o /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_hard/IOR_file -O stoneWallingStatusFile=/work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux node301.sis.cnes.fr
+TestID              : 0
+StartTime           : Tue Nov  5 21:43:53 2019
+Path                : /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_hard
+FS                  : 6350.2 TiB   Used FS: 66.0%   Inodes: 1797.4 Mi   Used Inodes: 47.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/ADM/hpc/io500/io500.2019.11.05-21.32.43/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 8000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 96
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 33.62 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 5226 max: 8000 -- min data: 0.2 GiB mean data: 0.3 GiB time: 300.3s
+write     96.29      45.91      45.91      0.036585   357.55     0.029594   357.58     0   
+Max Write: 96.29 MiB/sec (100.96 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write          96.29      96.29      96.29       0.00    2147.77    2147.77    2147.77       0.00  357.58089     0     96   1    1   0     1        1         0    0   8000    47008    47008   34429.7 POSIX      0
+Finished            : Tue Nov  5 21:49:51 2019

@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  7 16:21:34 2018
+Command line        : /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 12500 -o /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_hard/IOR_file -O stoneWallingStatusFile=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_hard/stonewall
+Machine             : Linux sdv21
+TestID              : 0
+StartTime           : Wed Nov  7 16:21:34 2018
+Path                : /data/ITSR-Testing/io-500/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_hard
+FS                  : 11.0 TiB   Used FS: 58.2%   Inodes: 104.9 Mi   Used Inodes: 7.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 12500
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 131.34 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      422.06     45.91      45.91      0.003059   318.63     0.020323   318.66     0   
+Max Read:  422.06 MiB/sec (442.56 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read          422.06     422.06     422.06       0.00    9414.55    9414.55    9414.55       0.00  318.65564     0    240  24    1   0     1        1         0    0  12500    47008    47008  134491.0 POSIX      0
+Finished            : Wed Nov  7 16:26:52 2018

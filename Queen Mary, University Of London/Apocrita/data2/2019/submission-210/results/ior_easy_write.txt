@@ -1,0 +1,44 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  7 15:47:58 2018
+Command line        : /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 4000m -F -o /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_easy/ior_file_easy -O stoneWallingStatusFile=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux sdv21
+TestID              : 0
+StartTime           : Wed Nov  7 15:47:58 2018
+Path                : /data/ITSR-Testing/io-500/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_easy
+FS                  : 11.0 TiB   Used FS: 48.2%   Inodes: 104.9 Mi   Used Inodes: 2.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 3.91 GiB
+aggregate filesize  : 937.50 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1029 max: 1801 -- min data: 2.0 GiB mean data: 2.9 GiB time: 303.2s
+WARNING: Expected aggregate file size       = 1006632960000.
+WARNING: Stat() of aggregate file size      = 906472980480.
+WARNING: Using actual aggregate bytes moved = 906472980480.
+WARNING: maybe caused by deadlineForStonewalling
+write     2297.80    4096000    2048.00    1.39       374.83     0.005066   376.22     0   
+Max Write: 2297.80 MiB/sec (2409.42 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        2297.80    2297.80    2297.80       0.00    1148.90    1148.90    1148.90       0.00  376.22096     0    240  24    1   1     1        1         0    0      1 4194304000  2097152  864480.0 POSIX      0
+Finished            : Wed Nov  7 15:54:15 2018

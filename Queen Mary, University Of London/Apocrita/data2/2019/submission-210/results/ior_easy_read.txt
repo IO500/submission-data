@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  7 16:14:07 2018
+Command line        : /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 4000m -F -o /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_easy/ior_file_easy -O stoneWallingStatusFile=/data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_easy/stonewall
+Machine             : Linux sdv21
+TestID              : 0
+StartTime           : Wed Nov  7 16:14:07 2018
+Path                : /data/ITSR-Testing/io-500/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_easy
+FS                  : 11.0 TiB   Used FS: 58.2%   Inodes: 104.9 Mi   Used Inodes: 7.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /data/autoScratch/weekly/aaw360/io-500/benchmarks/io-500/io-500-qmul/datafiles.gs7k/io500.2018.11.07-15.47.43/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 3.91 GiB
+aggregate filesize  : 937.50 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 1006632960000.
+WARNING: Stat() of aggregate file size      = 906472980480.
+WARNING: Using actual aggregate bytes moved = 906472980480.
+read      2218.84    4096000    2048.00    0.029846   389.58     0.001495   389.61     0   
+Max Read:  2218.84 MiB/sec (2326.62 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         2218.84    2218.84    2218.84       0.00    1109.42    1109.42    1109.42       0.00  389.60902     0    240  24    1   1     1        1         0    0      1 4194304000  2097152  864480.0 POSIX      0
+Finished            : Wed Nov  7 16:20:37 2018

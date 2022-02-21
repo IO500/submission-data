@@ -1,0 +1,137 @@
+System:  mom5
+filesystem_utilization=10.10.30.83@o2ib2000:10.10.30.84@o2ib2000:/snx11053 1443326059008 844390507384 584366858288  60% /fs2
+date=2018.11.09-21.36.49
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 0 -r /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/pfind_results'
+io500_find_cmd=/fs2/n02/shared/io-tests/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=xxx
+io500_info_filesystem_vendor=xxx
+io500_info_filesystem_version=xxx
+io500_info_filesystem=xxx
+io500_info_institute_name=xxx
+io500_info_metadata_storage_type=xxx
+io500_info_num_client_nodes=xxx
+io500_info_num_data_server_nodes=xxx
+io500_info_num_data_storage_devices=xxx
+io500_info_num_metadata_server_nodes=xxx
+io500_info_num_metadata_storage_devices=xxx
+io500_info_procs_per_node=xxx
+io500_info_storage_age_in_months=xxx
+io500_info_storage_install_date=xxx
+io500_info_storage_interface=xxx
+io500_info_storage_network=xxx
+io500_info_system_name=xxx
+io500_info_whatever=WhateverElseYouThinkRelevant
+io500_ior_cmd=/fs2/n02/shared/io-tests/bin/ior
+io500_ior_easy_params='-t 2048k -b 45000m -F -a MPIIO'
+io500_ior_easy_size=45000
+io500_ior_hard_other_options=-E
+io500_ior_hard_writes_per_proc=700
+io500_mdreal_cmd=/fs2/n02/shared/io-tests/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/fs2/n02/shared/io-tests/bin/mdtest
+io500_mdtest_easy_files_per_proc=100000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=27000
+io500_mdtest_hard_other_options=
+io500_mpiargs='-N 8 -n 80 -j1'
+io500_mpirun=aprun
+io500_result_dir=/work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=0
+io500_workdir=/work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 45000m -F -a MPIIO -o /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_easy/ior_file_easy -O stoneWallingStatusFile=/work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               10.532 GB/s : time 333.80 seconds
+
+[Starting] mdtest_easy_write
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/mdtest -C -F -d /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_easy -n 100000 -u -L -x /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_easy-stonewall -W 0
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               16.783 kiops : time 480.72 seconds
+
+[Starting] ior_hard_write
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 700 -E -o /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_hard/IOR_file -O stoneWallingStatusFile=/work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                0.008 GB/s : time 308.12 seconds
+
+[Starting] mdtest_hard_write
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/mdtest -C -t -F -w 3901 -e 3901 -d /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_hard -n 27000 -x /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_hard-stonewall  -W 0
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                8.427 kiops : time 303.69 seconds
+
+[Starting] find
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/pfind /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49 -newer /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/timestampfile -size 3901c -name *01* -s 0 -r /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/pfind_results
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/find.txt.
+[FIND] MATCHED 58160/10160084 in 39.5892 seconds
+[RESULT] IOPS phase 3                      find              256.630 kiops : time  39.59 seconds
+
+[Starting] ior_easy_read
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 45000m -F -a MPIIO -o /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_easy/ior_file_easy -O stoneWallingStatusFile=/work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_easy/stonewall
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read                5.217 GB/s : time 673.87 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/mdtest -T -F -d /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_easy -n 100000 -u -L -x /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_easy-stonewall
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat               60.794 kiops : time 155.32 seconds
+
+[Starting] ior_hard_read
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 700 -E -o /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_hard/IOR_file -O stoneWallingStatusFile=/work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_hard/stonewall
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                0.783 GB/s : time   3.13 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/mdtest -T -t -F -w 3901 -e 3901 -d /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_hard -n 27000 -x /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_hard-stonewall 
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               39.797 kiops : time  64.98 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/mdtest -r -F -d /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_easy -n 100000 -u -L -x /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_easy-stonewall
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete                4.754 kiops : time 1687.46 seconds
+
+[Starting] mdtest_hard_read
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/mdtest -E -t -F -w 3901 -e 3901 -d /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_hard -n 27000 -x /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_hard-stonewall 
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read                6.713 kiops : time 331.47 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] aprun -N 8 -n 80 -j1 /fs2/n02/shared/io-tests/bin/mdtest -r -t -F -w 3901 -e 3901 -d /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_hard -n 27000 -x /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/mdt_hard-stonewall 
+[Results] in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                3.664 kiops : time 594.91 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49
+[Summary] Results files in /work/n02/n02-kunkel/kunkel/results/2018.11.09-21.36.49
+[Summary] Data files in /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49
+[RESULT] BW   phase 1            ior_easy_write               10.532 GB/s : time 333.80 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.008 GB/s : time 308.12 seconds
+[RESULT] BW   phase 3             ior_easy_read                5.217 GB/s : time 673.87 seconds
+[RESULT] BW   phase 4             ior_hard_read                0.783 GB/s : time   3.13 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               16.783 kiops : time 480.72 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                8.427 kiops : time 303.69 seconds
+[RESULT] IOPS phase 3                      find              256.630 kiops : time  39.59 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               60.794 kiops : time 155.32 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               39.797 kiops : time  64.98 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete                4.754 kiops : time 1687.46 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read                6.713 kiops : time 331.47 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                3.664 kiops : time 594.91 seconds
+[SCORE] Bandwidth 0.764839 GB/s : IOPS 17.8415 kiops : TOTAL 3.69403

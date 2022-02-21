@@ -1,0 +1,39 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  9 21:36:51 2018
+Command line        : /fs2/n02/shared/io-tests/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 45000m -F -a MPIIO -o /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_easy/ior_file_easy -O stoneWallingStatusFile=/work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0
+Machine             : Linux nid04914
+TestID              : 0
+StartTime           : Fri Nov  9 21:36:51 2018
+Path                : /fs2/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_easy
+FS                  : 1344.2 TiB   Used FS: 58.5%   Inodes: 1890.6 Mi   Used Inodes: 5.4%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 43.95 GiB
+aggregate filesize  : 3.43 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 22500 max: 22500 -- min data: 43.9 GiB mean data: 43.9 GiB time: 332.4s
+write     10785      46080000   2048.00    0.005655   333.79     0.002548   333.80     0   
+Max Write: 10784.94 MiB/sec (11308.83 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       10784.94   10784.94   10784.94       0.00    5392.47    5392.47    5392.47       0.00  333.79892     0     80   8    1   1     1        1         0    0      1 47185920000  2097152 3600000.0 MPIIO      0
+Finished            : Fri Nov  9 21:42:25 2018
+Application 32745057 resources: utime ~10595s, stime ~5048s, Rss ~13544, inblocks ~102488, outblocks ~7373025224

@@ -1,0 +1,38 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  9 22:16:18 2018
+Command line        : /fs2/n02/shared/io-tests/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 700 -E -o /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_hard/IOR_file -O stoneWallingStatusFile=/work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_hard/stonewall
+Machine             : Linux nid04914
+TestID              : 0
+StartTime           : Fri Nov  9 22:16:18 2018
+Path                : /fs2/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_hard
+FS                  : 1344.2 TiB   Used FS: 58.8%   Inodes: 1890.6 Mi   Used Inodes: 5.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/n02/n02-kunkel/kunkel/datafiles/io500.2018.11.09-21.36.49/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 700
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 2.45 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      801.31     45.91      45.91      0.005518   3.13       0.000809   3.13       0   
+Max Read:  801.31 MiB/sec (840.23 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read          801.31     801.31     801.31       0.00   17874.18   17874.18   17874.18       0.00    3.13301     0     80   8    1   0     1        1         0    0    700    47008    47008    2510.5 POSIX      0
+Finished            : Fri Nov  9 22:16:21 2018
+Application 32745496 resources: utime ~35s, stime ~17s, Rss ~11072, inblocks ~5243994, outblocks ~225224

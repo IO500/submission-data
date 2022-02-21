@@ -1,0 +1,110 @@
+version         = 
+config-hash     = DDF3E59A
+result-dir      = ./results/2021.10.31-00.37.13
+mode            = standard
+; START 2021-10-31 00:37:18
+
+
+[ior-easy-write]
+t_start         = 2021-10-31 00:37:18
+exe             = ./ior -C -Q 1 -g -G 746759673 -k -e -o ./datafiles/2021.10.31-00.37.13/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.10.31-00.37.13/ior-easy.stonewall -t 1m -b 80000m -u -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.31-00.37.13/ior-easy-write.csv
+throughput-stonewall = 67.35
+score           = 35.253660
+t_delta         = 1332.7152
+t_end           = 2021-10-31 00:59:31
+
+[mdtest-easy-write]
+t_start         = 2021-10-31 00:59:31
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1632937467 -N 1 -d ./datafiles/2021.10.31-00.37.13/mdtest-easy -x ./results/2021.10.31-00.37.13/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2021.10.31-00.37.13/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 229.031442
+score           = 104.463044
+t_delta         = 973.5307
+t_end           = 2021-10-31 01:15:44
+
+[timestamp]
+t_start         = 2021-10-31 01:15:44
+score           = 0.000000
+t_delta         = 0.0009
+t_end           = 2021-10-31 01:15:44
+
+[ior-hard-write]
+t_start         = 2021-10-31 01:15:44
+exe             = ./ior -C -Q 1 -g -G=746770361 -k -e -o ./datafiles/2021.10.31-00.37.13/ior-hard/file -O stoneWallingStatusFile=./results/2021.10.31-00.37.13/ior-hard.stonewall -t 47008 -b 47008 -s 1000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.31-00.37.13/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.66
+score           = 11.559773
+t_delta         = 606.9224
+t_end           = 2021-10-31 01:25:51
+
+[mdtest-hard-write]
+t_start         = 2021-10-31 01:25:51
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1632948155 -N 1 -F -d ./datafiles/2021.10.31-00.37.13/mdtest-hard -x ./results/2021.10.31-00.37.13/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2021.10.31-00.37.13/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 86.714698
+score           = 34.607753
+t_delta         = 774.9586
+t_end           = 2021-10-31 01:38:46
+
+[find]
+t_start         = 2021-10-31 01:38:46
+exe             = ./pfind ./datafiles/2021.10.31-00.37.13 -newer ./results/2021.10.31-00.37.13/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1584
+found           = 1090527
+total-files     = 128508337
+score           = 578.350956
+t_delta         = 222.2419
+t_end           = 2021-10-31 01:42:28
+
+[ior-easy-read]
+t_start         = 2021-10-31 01:42:28
+exe             = ./ior -C -Q 1 -g -G 746759673 -k -e -o ./datafiles/2021.10.31-00.37.13/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.10.31-00.37.13/ior-easy.stonewall -t 1m -b 80000m -u -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.31-00.37.13/ior-easy-read.csv
+score           = 44.449522
+t_delta         = 1056.9310
+t_end           = 2021-10-31 02:00:05
+
+[mdtest-easy-stat]
+t_start         = 2021-10-31 02:00:05
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1632937467 -N 1 -d ./datafiles/2021.10.31-00.37.13/mdtest-easy -x ./results/2021.10.31-00.37.13/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2021.10.31-00.37.13/mdtest-easy-stat.csv -a POSIX
+score           = 1806.668384
+t_delta         = 56.3118
+t_end           = 2021-10-31 02:01:02
+
+[ior-hard-read]
+t_start         = 2021-10-31 02:01:02
+exe             = ./ior -C -Q 1 -g -G=746770361 -k -e -o ./datafiles/2021.10.31-00.37.13/ior-hard/file -O stoneWallingStatusFile=./results/2021.10.31-00.37.13/ior-hard.stonewall -t 47008 -b 47008 -s 1000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.31-00.37.13/ior-hard-read.csv
+score           = 32.221185
+t_delta         = 217.8726
+t_end           = 2021-10-31 02:04:39
+
+[mdtest-hard-stat]
+t_start         = 2021-10-31 02:04:39
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1632948155 -N 1 -F -d ./datafiles/2021.10.31-00.37.13/mdtest-hard -x ./results/2021.10.31-00.37.13/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2021.10.31-00.37.13/mdtest-hard-stat.csv -a POSIX
+score           = 547.676134
+t_delta         = 49.0137
+t_end           = 2021-10-31 02:05:29
+
+[mdtest-easy-delete]
+t_start         = 2021-10-31 02:05:29
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1632937467 -N 1 -d ./datafiles/2021.10.31-00.37.13/mdtest-easy -x ./results/2021.10.31-00.37.13/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2021.10.31-00.37.13/mdtest-easy-delete.csv -a POSIX
+score           = 323.443896
+t_delta         = 319.3256
+t_end           = 2021-10-31 02:10:48
+
+[mdtest-hard-read]
+t_start         = 2021-10-31 02:10:48
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1632948155 -N 1 -F -d ./datafiles/2021.10.31-00.37.13/mdtest-hard -x ./results/2021.10.31-00.37.13/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2021.10.31-00.37.13/mdtest-hard-read.csv -a POSIX
+score           = 449.618959
+t_delta         = 59.6721
+t_end           = 2021-10-31 02:11:48
+
+[mdtest-hard-delete]
+t_start         = 2021-10-31 02:11:48
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1632948155 -N 1 -F -d ./datafiles/2021.10.31-00.37.13/mdtest-hard -x ./results/2021.10.31-00.37.13/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2021.10.31-00.37.13/mdtest-hard-delete.csv -a POSIX
+score           = 91.404636
+t_delta         = 307.9271
+t_end           = 2021-10-31 02:16:55
+
+[SCORE]
+MD              = 269.102480
+BW              = 27.640159
+SCORE           = 86.244045
+hash            = 764DD05F
+; END 2021-10-31 02:16:56

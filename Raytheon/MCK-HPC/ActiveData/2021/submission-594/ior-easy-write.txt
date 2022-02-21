@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct 31 00:37:18 2021
+Command line        : ./ior -C -Q 1 -g -G 746759673 -k -e -o ./datafiles/2021.10.31-00.37.13/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.10.31-00.37.13/ior-easy.stonewall -t 1m -b 80000m -u -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.10.31-00.37.13/ior-easy-write.csv
+Machine             : Linux cn3.mck.us.ray.com
+TestID              : 0
+StartTime           : Sun Oct 31 00:37:18 2021
+Path                : ./datafiles/2021.10.31-00.37.13/ior-easy/0/ior_file_easy.00000000
+FS                  : 210.8 TiB   Used FS: 8.5%   Inodes: 4854.3 Mi   Used Inodes: 17.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/2021.10.31-00.37.13/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 44
+tasks               : 1584
+clients per node    : 36
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 78.12 GiB
+aggregate filesize  : 120.85 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3589 max: 30368 -- min data: 3.5 GiB mean data: 12.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 132875550720000
+WARNING: Stat() of aggregate file size      = 50439559053312
+WARNING: Using actual aggregate bytes moved = 50439559053312
+WARNING: Maybe caused by deadlineForStonewalling
+write     36100      36100      0.008358    81920000   1024.00    0.008160   1332.48    0.012083   1332.50    0   

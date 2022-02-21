@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Oct 31 22:24:11 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 4m -b 147456m -F -a POSIX -o /scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux ofstest011.ofsdev.clemson.edu
+TestID              : 0
+StartTime           : Wed Oct 31 22:24:11 2018
+Path                : /scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/ior_easy
+FS                  : 174.6 TiB   Used FS: 3.6%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 10
+clients per node    : 1
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 144 GiB
+aggregate filesize  : 1.41 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 36864 max: 36864 -- min data: 144.0 GiB mean data: 144.0 GiB time: 266.3s
+write     3738       150994944  4096       0.001362   394.41     0.044027   394.45     0   
+Max Write: 3738.22 MiB/sec (3919.81 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        3738.22    3738.22    3738.22       0.00     934.56     934.56     934.56       0.00  394.45459     0     10   1    1   1     1        1         0    0      1 154618822656  4194304 1474560.0 POSIX      0
+Finished            : Wed Oct 31 22:30:46 2018

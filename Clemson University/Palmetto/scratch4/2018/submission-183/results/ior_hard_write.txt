@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Oct 31 22:37:59 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 2200000 -a POSIX -o /scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux ofstest011.ofsdev.clemson.edu
+TestID              : 0
+StartTime           : Wed Oct 31 22:37:59 2018
+Path                : /scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/ior_hard
+FS                  : 174.6 TiB   Used FS: 4.4%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 2200000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 10
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 963.15 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2200000 max: 2200000 -- min data: 96.3 GiB mean data: 96.3 GiB time: 292.3s
+write     3239.48    45.91      45.91      0.002384   304.45     0.105365   304.45     0   
+Max Write: 3239.48 MiB/sec (3396.84 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        3239.48    3239.48    3239.48       0.00   72260.93   72260.93   72260.93       0.00  304.45223     0     10   1    1   0     1        1         0    0 2200000    47008    47008  986267.1 POSIX      0
+Finished            : Wed Oct 31 22:43:03 2018

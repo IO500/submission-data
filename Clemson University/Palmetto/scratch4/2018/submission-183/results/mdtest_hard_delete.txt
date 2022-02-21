@@ -1,0 +1,20 @@
+-- started at 10/31/2018 23:34:09 --
+
+mdtest-1.9.3 was launched with 10 total task(s) on 10 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-r" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/mdt_hard" "-n" "200000" "-x" "/scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10/mdt_hard-stonewall"
+Path: /scratch4/jburto2/io500/datafiles/io500.2018.10.31-22.24.10
+FS: 174.6 TiB   Used FS: 4.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+10 tasks, 2000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :       6705.478       6705.478       6705.478          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.525          0.525          0.525          0.000
+
+-- finished at 10/31/2018 23:37:54 --

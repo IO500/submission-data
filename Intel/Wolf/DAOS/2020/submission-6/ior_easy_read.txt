@@ -1,0 +1,52 @@
+[0] Pool uuid = 9ae1db5f-54fa-4822-81cd-2faaaeacc442, SVCL = 1
+
+[0] DFS Container namespace uuid = 9f8cf146-1aec-46d8-8789-5a0746355be1
+
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jun 29 05:14:59 2020
+Command line        : /home/daos/io-500/install/ior/bin/ior -r -R -a DFS --dfs.pool=9ae1db5f-54fa-4822-81cd-2faaaeacc442 --dfs.cont=9f8cf146-1aec-46d8-8789-5a0746355be1 --dfs.svcl=1 --dfs.prefix=/mnt/dfuse/ -t 128k -v -b 200000m -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/dfuse/datafiles/2020.06.29-04.46.44-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/dfuse/datafiles/2020.06.29-04.46.44-scr/ior_easy/stonewall
+Machine             : Linux wolf-79.wolf.hpdd.intel.com
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Mon Jun 29 05:14:59 2020
+Participating tasks: 420
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /mnt/dfuse/datafiles/2020.06.29-04.46.44-scr/ior_easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 420
+clients per node    : 42
+repetitions         : 1
+xfersize            : 131072 bytes
+blocksize           : 195.31 GiB
+aggregate filesize  : 80.11 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing read performance test: Mon Jun 29 05:14:59 2020
+
+WARNING: Expected aggregate file size       = 88080384000000.
+WARNING: Stat() of aggregate file size      = 88014406680576.
+WARNING: Using actual aggregate bytes moved = 60369909841920.
+read      217942     1743695    0.000165    204800000  128.00     0.022957   264.14     0.000844   264.17     0   
+Max Read:  217942.08 MiB/sec (228528.84 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       217942.08  217942.08  217942.08       0.00 1743536.65 1743536.65 1743536.65       0.00  264.16758         NA            NA     0    420  42    1   0     1        1         0    0      1 209715200000   131072 57573232.0 DFS      0
+Finished            : Mon Jun 29 05:19:23 2020
+[0] Disconnecting from DAOS POOL
+
+[0] Finalizing DAOS..
+

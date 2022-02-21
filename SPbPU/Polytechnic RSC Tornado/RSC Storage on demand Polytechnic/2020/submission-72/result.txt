@@ -1,0 +1,107 @@
+version         = io500-isc20_v3-3-g18c6d03b40b0
+config-hash     = 79D0E1C6
+result-dir      = ./results/2020.07.11-05.26.49-app
+; START 2020-07-11 05:26:57
+
+
+[ior-easy-write]
+t_start         = 2020-07-11 05:26:57
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/ior-easy/stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect
+throughput-stonewall = 100478.66
+score           = 124.797180
+t_delta         = 380.3455
+t_end           = 2020-07-11 05:33:17
+
+[mdtest-easy-write]
+t_start         = 2020-07-11 05:33:17
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-easy -x /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 330.216880
+score           = 188.810311
+t_delta         = 865.6456
+t_end           = 2020-07-11 05:47:43
+
+[timestamp]
+t_start         = 2020-07-11 05:47:43
+t_delta         = 0.0026
+t_end           = 2020-07-11 05:47:43
+
+[ior-hard-write]
+t_start         = 2020-07-11 05:47:43
+exe             = ./ior -v -C -Q 1 -g -G 27 -k -e -o /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/ior-hard/file -O stoneWallingStatusFile=/lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 34000 -w -D 300 -a MPIIO
+throughput-stonewall = 2487.70
+score           = 2.977780
+t_delta         = 359.1609
+t_end           = 2020-07-11 05:53:42
+
+[mdtest-hard-write]
+t_start         = 2020-07-11 05:53:42
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-hard -x /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 212.383141
+score           = 88.857976
+t_delta         = 998.7831
+t_end           = 2020-07-11 06:10:21
+
+[find]
+t_start         = 2020-07-11 06:10:21
+exe             = ./pfind /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app -newer /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 2489850
+total-files     = 196200022
+score           = 146.540073
+t_delta         = 1339.0652
+t_end           = 2020-07-11 06:32:40
+
+[ior-easy-read]
+t_start         = 2020-07-11 06:32:40
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/ior-easy/stonewall -t 2m -b 9920000m -F -r -R -a POSIX --posix.odirect
+score           = 194.968294
+t_delta         = 242.9673
+t_end           = 2020-07-11 06:36:43
+
+[mdtest-easy-stat]
+t_start         = 2020-07-11 06:36:43
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-easy -x /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-easy-stonewall -T -a POSIX
+score           = 735.712630
+t_delta         = 179.3527
+t_end           = 2020-07-11 06:39:42
+
+[ior-hard-read]
+t_start         = 2020-07-11 06:39:43
+exe             = ./ior -v -C -Q 1 -g -G 27 -k -e -o /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/ior-hard/file -O stoneWallingStatusFile=/lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 34000 -r -R -a MPIIO
+score           = 2.982220
+t_delta         = 359.3232
+t_end           = 2020-07-11 06:45:42
+
+[mdtest-hard-stat]
+t_start         = 2020-07-11 06:45:42
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-hard -x /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-hard-stonewall -T -a POSIX
+score           = 380.504663
+t_delta         = 175.8626
+t_end           = 2020-07-11 06:48:38
+
+[mdtest-easy-delete]
+t_start         = 2020-07-11 06:48:38
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-easy -x /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-easy-stonewall -r -a POSIX
+score           = 134.522826
+t_delta         = 970.7914
+t_end           = 2020-07-11 07:04:48
+
+[mdtest-hard-read]
+t_start         = 2020-07-11 07:04:48
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-hard -x /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-hard-stonewall -E -X -a POSIX
+score           = 304.474903
+t_delta         = 219.4346
+t_end           = 2020-07-11 07:08:28
+
+[mdtest-hard-delete]
+t_start         = 2020-07-11 07:08:28
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-hard -x /lustre/iospb/io500-2020spring/datafiles/2020.07.11-05.26.49-app/mdtest-hard-stonewall -r -a POSIX
+score           = 64.770776
+t_delta         = 1028.8761
+t_end           = 2020-07-11 07:25:37
+
+[SCORE]
+MD              = 191.727391
+BW              = 21.560074
+SCORE           = 64.293521 
+hash            = EA28C17C
+; END 2020-07-11 07:25:39

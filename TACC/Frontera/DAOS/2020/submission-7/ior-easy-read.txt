@@ -1,0 +1,36 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Jul 13 00:26:02 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/dfuse/datafiles/2020.07.12-23.55.34-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/tmp/dfuse/datafiles/2020.07.12-23.55.34-app/ior-easy/stonewall -t 256k -b 20000m -r -R -a DFS --dfs.pool=695abaf8-862d-44f5-9ae2-296c7a8ea791 --dfs.cont=f01034e0-f006-4c7f-9440-8b6fbb5d0a40 --dfs.svcl=1 --dfs.prefix=/tmp/dfuse
+Machine             : Linux c110-011.frontera.tacc.utexas.edu
+TestID              : 0
+StartTime           : Mon Jul 13 00:26:11 2020
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /tmp/dfuse/datafiles/2020.07.12-23.55.34-app/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 1440
+tasks               : 1440
+clients per node    : 1
+repetitions         : 1
+xfersize            : 262144 bytes
+blocksize           : 19.53 GiB
+aggregate filesize  : 27.47 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      76461      324255     0.004441    20480000   256.00     21.38      355.28     0.008780   376.66     0   
+Max Read:  76461.12 MiB/sec (80175.29 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        76461.12   76461.12   76461.12       0.00  305844.48  305844.48  305844.48       0.00  376.66202         NA            NA     0   1440   1    1   0     1        1         0    0      1 20971520000   262144 28800000.0 DFS      0
+Finished            : Mon Jul 13 00:32:30 2020

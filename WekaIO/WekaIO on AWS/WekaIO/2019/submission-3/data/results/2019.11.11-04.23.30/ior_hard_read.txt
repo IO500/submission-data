@@ -1,0 +1,41 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov 11 05:20:25 2019
+Command line        : /mnt/weka/io-500-dev/bin/ior -r -R -s 1900000 -a POSIX --posix.odirect -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /mnt/weka/io-500-dev/datafiles/io500.2019.11.11-04.23.30/ior_hard/IOR_file -O stoneWallingStatusFile=/mnt/weka/io-500-dev/datafiles/io500.2019.11.11-04.23.30/ior_hard/stonewall
+Machine             : Linux ip-172-31-56-151
+TestID              : 0
+StartTime           : Mon Nov 11 05:20:25 2019
+Path                : /mnt/weka/io-500-dev/datafiles/io500.2019.11.11-04.23.30/ior_hard
+FS                  : 4096.0 TiB   Used FS: 40.0%   Inodes: 262143.5 Mi   Used Inodes: 1.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/weka/io-500-dev/datafiles/io500.2019.11.11-04.23.30/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1900000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 345
+tasks               : 8625
+clients per node    : 25
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 700.62 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 770343600000000.
+WARNING: Stat() of aggregate file size      = 69536484108000.
+WARNING: Using actual aggregate bytes moved = 69536484108000.
+read      137417     3070884    481.69      45.91      45.91      0.855184   481.70     0.029744   482.58     0   
+Max Read:  137417.25 MiB/sec (144092.43 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       137417.25  137417.25  137417.25       0.00 3065274.69 3065274.69 3065274.69       0.00  482.58248         NA            NA     0   8625  25    1   0     1        1         0    0 1900000    47008    47008 66315160.0 POSIX      0
+Finished            : Mon Nov 11 05:28:28 2019

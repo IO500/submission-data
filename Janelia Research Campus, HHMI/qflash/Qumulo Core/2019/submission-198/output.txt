@@ -1,0 +1,1310 @@
+
+[START TIME] 2019-02-20 21:58:30-05:00
+
+[IOR EASY WRITE]
+time: 1550717910.090851233
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Feb 20 21:58:34 2019
+Command line        : ./bin//ior -t 1m -b 3500m -F -w -C -Q 1 -g -G 27 -k -e -o ./datafiles//ior_easy/ior_file_easy -O stoneWallingStatusFile=./datafiles//ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux h10u01.int.janelia.org
+TestID              : 0
+StartTime           : Wed Feb 20 21:58:34 2019
+Path                : /misc/qflash/scicompsys/io-500-script/datafiles/ior_easy
+FS                  : 47.2 TiB   Used FS: 16.7%   Inodes: 12075.0 Mi   Used Inodes: 16.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles//ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 960
+clients per node    : 10
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 3.42 GiB
+aggregate filesize  : 3.20 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3500 max: 3500 -- min data: 3.4 GiB mean data: 3.4 GiB time: 2.2s
+write     9976       3584000    1024.00    3.00       333.79     0.010443   336.79     0   
+Max Write: 9976.40 MiB/sec (10461.01 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        9976.40    9976.40    9976.40       0.00    9976.40    9976.40    9976.40       0.00  336.79483     0    960  10    1   1     1        1         0    0      1 3670016000  1048576 3360000.0 POSIX      0
+Finished            : Wed Feb 20 22:04:11 2019
+
+[MDTEST EASY WRITE]
+time: 1550718251.919542881
+-- started at 02/20/2019 22:04:14 --
+
+mdtest-1.9.3 was launched with 960 total task(s) on 96 node(s)
+Command line used: ./bin//mdtest "-n" "4000" "-u" "-L" "-C" "-F" "-d" "./datafiles//mdt_easy" "-x" "./datafiles//mdt_easy-stonewall" "-W" "300"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 23.5%   Inodes: 12075.0 Mi   Used Inodes: 23.5%
+
+960 tasks, 3840000 files
+Continue stonewall hit min: 1191 max: 4000 avg: 2879.3 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :       8627.090       8627.043       8627.075          0.004
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.366          0.366          0.366          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 22:11:45 --
+
+[CREATING TIMESTAMP]
+time: 1550718706.536911975
+
+[IOR HARD WRITE]
+time: 1550718706.547017702
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Feb 20 22:11:49 2019
+Command line        : ./bin//ior -B -s 1000 -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o ./datafiles//ior_hard/IOR_file -O stoneWallingStatusFile=./datafiles//ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux h10u01.int.janelia.org
+TestID              : 0
+StartTime           : Wed Feb 20 22:11:49 2019
+Path                : /misc/qflash/scicompsys/io-500-script/datafiles/ior_hard
+FS                  : 47.2 TiB   Used FS: 23.6%   Inodes: 12075.0 Mi   Used Inodes: 23.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles//ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 960
+clients per node    : 10
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 42.03 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 708 max: 1000 -- min data: 0.0 GiB mean data: 0.0 GiB time: 300.2s
+ior WARNING: inconsistent file size by different tasks.
+WARNING: Expected aggregate file size       = 45127680000.
+WARNING: Stat() of aggregate file size      = 45127209920.
+WARNING: Using actual aggregate bytes moved = 45127680000.
+WARNING: maybe caused by deadlineForStonewalling
+write     119.42     45.91      45.91      0.061505   360.32     0.004511   360.39     0   
+Max Write: 119.42 MiB/sec (125.22 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         119.42     119.42     119.42       0.00    2663.78    2663.78    2663.78       0.00  360.39057     0    960  10    1   0     1        1         0    0   1000    47008    47008   43037.1 POSIX      0
+Finished            : Wed Feb 20 22:17:50 2019
+
+[MDTEST HARD WRITE]
+time: 1550719070.718940563
+-- started at 02/20/2019 22:17:53 --
+
+mdtest-1.9.3 was launched with 960 total task(s) on 96 node(s)
+Command line used: ./bin//mdtest "-n" "600" "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "./datafiles//mdt_hard" "-x" "./datafiles//mdt_hard-stonewall" "-W" "300"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 23.7%   Inodes: 12075.0 Mi   Used Inodes: 23.7%
+
+960 tasks, 576000 files
+Continue stonewall hit min: 64 max: 106 avg: 89.8 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :        288.380        288.349        288.366          0.012
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        482.159        482.159        482.159          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 22:23:49 --
+
+[PFIND EASY]
+time: 1550719430.513828695
+[2] rate: 0.996 kiops time: 108.2s found: 0 (scanned 107790 files, scanned dirents: 108000, unknown dirents: 36188)
+[1] rate: 0.296 kiops time: 108.2s found: 0 (scanned 32038 files, scanned dirents: 32002, unknown dirents: 11493)
+[3] rate: 0.995 kiops time: 108.2s found: 0 (scanned 107618 files, scanned dirents: 108000, unknown dirents: 35461)
+[0] rate: 0.524 kiops time: 108.2s found: 0 (scanned 56669 files, scanned dirents: 57930, unknown dirents: 16930)
+[4] rate: 0.481 kiops time: 108.2s found: 0 (scanned 52091 files, scanned dirents: 52000, unknown dirents: 15189)
+[10] rate: 0.298 kiops time: 108.2s found: 0 (scanned 32268 files, scanned dirents: 32000, unknown dirents: 10130)
+[6] rate: 0.111 kiops time: 108.2s found: 0 (scanned 12010 files, scanned dirents: 12000, unknown dirents: 2163)
+[13] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[7] rate: 0.112 kiops time: 108.2s found: 0 (scanned 12070 files, scanned dirents: 12000, unknown dirents: 4344)
+[11] rate: 0.294 kiops time: 108.2s found: 0 (scanned 31763 files, scanned dirents: 32000, unknown dirents: 6495)
+[5] rate: 0.444 kiops time: 108.2s found: 0 (scanned 48011 files, scanned dirents: 48000, unknown dirents: 15195)
+[12] rate: 0.077 kiops time: 108.2s[8] rate: 0.000 kiops time: 108.2s found: 0 (scanned 34 files, scanned dirents: 0, unknown dirents: 0)
+ found: 0 (scanned 8369 files, scanned dirents: 8000, unknown dirents: 2896)
+[9] rate: 0.662 kiops time: 108.2s found: 0 (scanned 71627 files, scanned dirents: 72000, unknown dirents: 26064)
+[14] rate: 0.000 kiops time: 108.2s found: 0 (scanned 13 files, scanned dirents: 0, unknown dirents: 0)
+[20] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[15] rate: 0.075 kiops time: 108.2s found: 0 (scanned 8090 files, scanned dirents: 8000, unknown dirents: 1442)
+[21] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4000 files, scanned dirents: 4000, unknown dirents: 1448)
+[16] rate: 0.001 kiops time: 108.2s found: 0 (scanned 104 files, scanned dirents: 0, unknown dirents: 0)
+[22] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[17] rate: 0.000 kiops time: 108.2s found: 0 (scanned 22 files, scanned dirents: 0, unknown dirents: 0)
+[23] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[18] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[24] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[19] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[25] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[26] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[27] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[28] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[30] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[29] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[31] rate: 0.000 kiops time: 108.2s found: 0 (scanned 12 files, scanned dirents: 0, unknown dirents: 0)
+[32] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3963 files, scanned dirents: 4000, unknown dirents: 721)
+[37] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[33] rate: 0.000 kiops time: 108.2s found: 0 (scanned 48 files, scanned dirents: 0, unknown dirents: 0)
+[34] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[35] rate: 0.220 kiops time: 108.2s found: 0 (scanned 23809 files, scanned dirents: 24000, unknown dirents: 4326)
+[36] rate: 0.113 kiops time: 108.2s found: 1 (scanned 12264 files, scanned dirents: 12000, unknown dirents: 4344)
+[38] rate: 0.074 kiops time: 108.2s found: 0 (scanned 7959 files, scanned dirents: 8000, unknown dirents: 2169)
+[39] rate: 0.001 kiops time: 108.2s found: 0 (scanned 55 files, scanned dirents: 0, unknown dirents: 0)
+[40] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[43] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[41] rate: 0.075 kiops time: 108.2s found: 12 (scanned 8133 files, scanned dirents: 8000, unknown dirents: 1442)
+[42] rate: 0.002 kiops time: 108.2s found: 0 (scanned 199 files, scanned dirents: 0, unknown dirents: 0)
+[51] rate: 0.000 kiops time: 108.2s found: 0 (scanned 12 files, scanned dirents: 0, unknown dirents: 0)
+[44] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[50] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[46] rate: 0.014 kiops time: 108.2s found: 1510 (scanned 1512 files, scanned dirents: 0, unknown dirents: 0)
+[52] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[47] rate: 0.037 kiops time: 108.2s found: 38 (scanned 4045 files, scanned dirents: 4000, unknown dirents: 1448)
+[53] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[48] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[54] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[45] rate: 0.925 kiops time: 108.2s found: 238 (scanned 100101 files, scanned dirents: 101762, unknown dirents: 11247)
+[55] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[49] rate: 0.000 kiops time: 108.2s found: 1 (scanned 12 files, scanned dirents: 0, unknown dirents: 0)
+[56] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[60] rate: 0.332 kiops time: 108.2s found: 0 (scanned 35967 files, scanned dirents: 36000, unknown dirents: 8670)
+[57] rate: 0.000 kiops time: 108.2s found: 0 (scanned 16 files, scanned dirents: 0, unknown dirents: 0)
+[61] rate: 0.041 kiops time: 108.2s found: 0 (scanned 4407 files, scanned dirents: 4000, unknown dirents: 1448)
+[58] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[62] rate: 0.000 kiops time: 108.2s found: 0 (scanned 27 files, scanned dirents: 0, unknown dirents: 0)
+[59] rate: 0.440 kiops time: 108.2s found: 0 (scanned 47630 files, scanned dirents: 48000, unknown dirents: 17376)
+[63] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[64] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[66] rate: 0.000 kiops time: 108.2s found: 0 (scanned 34 files, scanned dirents: 0, unknown dirents: 0)
+[67] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[68] rate: 0.000 kiops time: 108.2s found: 0 (scanned 7 files, scanned dirents: 0, unknown dirents: 0)
+[69] rate: 0.479 kiops time: 108.2s found: 18 (scanned 51785 files, scanned dirents: 52000, unknown dirents: 18006)
+[65] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3990 files, scanned dirents: 4000, unknown dirents: 1448)
+[71] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4033 files, scanned dirents: 4000, unknown dirents: 1448)
+[72] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[70] rate: 0.001 kiops time: 108.2s found: 0 (scanned 69 files, scanned dirents: 0, unknown dirents: 0)
+[73] rate: 0.184 kiops time: 108.2s found: 0 (scanned 19900 files, scanned dirents: 20000, unknown dirents: 5059)
+[74] rate: 0.001 kiops time: 108.2s found: 0 (scanned 129 files, scanned dirents: 0, unknown dirents: 0)
+[75] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7952 files, scanned dirents: 8000, unknown dirents: 1442)
+[76] rate: 0.038 kiops time: 108.2s found: 0 (scanned 4099 files, scanned dirents: 4000, unknown dirents: 1448)
+[80] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[77] rate: 0.184 kiops time: 108.2s found: 0 (scanned 19864 files, scanned dirents: 20000, unknown dirents: 5059)
+[81] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[78] rate: 0.038 kiops time: 108.2s found: 0 (scanned 4101 files, scanned dirents: 4000, unknown dirents: 721)
+[82] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[79] rate: 0.000 kiops time: 108.2s found: 0 (scanned 47 files, scanned dirents: 0, unknown dirents: 0)
+[83] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4000 files, scanned dirents: 4000, unknown dirents: 1448)
+[84] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[85] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[86] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[87] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11924 files, scanned dirents: 12000, unknown dirents: 2890)
+[88] rate: 0.001 kiops time: 108.2s found: 0 (scanned 58 files, scanned dirents: 0, unknown dirents: 0)
+[89] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[90] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11929 files, scanned dirents: 12000, unknown dirents: 2890)
+[92] rate: 0.001 kiops time: 108.2s found: 0 (scanned 121 files, scanned dirents: 0, unknown dirents: 0)
+[91] rate: 0.338 kiops time: 108.2s found: 0 (scanned 36616 files, scanned dirents: 36000, unknown dirents: 10851)
+[94] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[93] rate: 0.074 kiops time: 108.2s found: 0 (scanned 8010 files, scanned dirents: 8000, unknown dirents: 2896)
+[95] rate: 0.185 kiops time: 108.2s found: 0 (scanned 20002 files, scanned dirents: 20000, unknown dirents: 7240)
+[100] rate: 0.000 kiops time: 108.2s found: 0 (scanned 22 files, scanned dirents: 0, unknown dirents: 0)
+[97] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[101] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3990 files, scanned dirents: 4000, unknown dirents: 1357)
+[96] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[98] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[102] rate: 0.552 kiops time: 108.2s found: 0 (scanned 59782 files, scanned dirents: 60000, unknown dirents: 18630)
+[99] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[103] rate: 0.077 kiops time: 108.2s found: 0 (scanned 8285 files, scanned dirents: 8000, unknown dirents: 2896)
+[104] rate: 0.000 kiops time: 108.2s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[105] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[107] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[106] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[108] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[110] rate: 0.000 kiops time: 108.2s found: 0 (scanned 18 files, scanned dirents: 0, unknown dirents: 0)
+[109] rate: 0.037 kiops time: 108.2s found: 1 (scanned 3955 files, scanned dirents: 4000, unknown dirents: 721)
+[111] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[112] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[113] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[114] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[115] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[116] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[120] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7912 files, scanned dirents: 8000, unknown dirents: 2896)
+[117] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3960 files, scanned dirents: 4000, unknown dirents: 721)
+[121] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[119] rate: 0.000 kiops time: 108.2s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[122] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[118] rate: 0.000 kiops time: 108.2s found: 0 (scanned 46 files, scanned dirents: 0, unknown dirents: 0)
+[123] rate: 0.000 kiops time: 108.2s found: 0 (scanned 24 files, scanned dirents: 0, unknown dirents: 0)
+[124] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[125] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[126] rate: 0.000 kiops time: 108.2s found: 0 (scanned 12 files, scanned dirents: 0, unknown dirents: 0)
+[127] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3964 files, scanned dirents: 4000, unknown dirents: 1448)
+[128] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[130] rate: 0.036 kiops time: 108.2s found: 0 (scanned 3946 files, scanned dirents: 4000, unknown dirents: 721)
+[129] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[131] rate: 0.000 kiops time: 108.2s found: 0 (scanned 26 files, scanned dirents: 0, unknown dirents: 0)
+[132] rate: 0.000 kiops time: 108.2s found: 0 (scanned 18 files, scanned dirents: 0, unknown dirents: 0)
+[133] rate: 0.000 kiops time: 108.2s found: 0 (scanned 12 files, scanned dirents: 0, unknown dirents: 0)
+[134] rate: 0.000 kiops time: 108.2s found: 0 (scanned 15 files, scanned dirents: 0, unknown dirents: 0)
+[137] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[135] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[140] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[136] rate: 0.000 kiops time: 108.2s found: 0 (scanned 17 files, scanned dirents: 0, unknown dirents: 0)
+[141] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[138] rate: 0.000 kiops time: 108.2s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[142] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[139] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[143] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[144] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[145] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[146] rate: 0.000 kiops time: 108.2s found: 2 (scanned 19 files, scanned dirents: 0, unknown dirents: 0)
+[147] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[148] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[150] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[149] rate: 0.000 kiops time: 108.2s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[151] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7919 files, scanned dirents: 8000, unknown dirents: 1442)
+[152] rate: 0.001 kiops time: 108.2s found: 0 (scanned 87 files, scanned dirents: 0, unknown dirents: 0)
+[153] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[154] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[155] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[156] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[158] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[157] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[160] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[159] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[161] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[162] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[164] rate: 0.331 kiops time: 108.2s found: 0 (scanned 35845 files, scanned dirents: 36000, unknown dirents: 9306)
+[163] rate: 0.184 kiops time: 108.2s found: 0 (scanned 19875 files, scanned dirents: 20000, unknown dirents: 4332)
+[166] rate: 0.001 kiops time: 108.2s found: 0 (scanned 112 files, scanned dirents: 0, unknown dirents: 0)
+[165] rate: 0.117 kiops time: 108.2s found: 0 (scanned 12631 files, scanned dirents: 12000, unknown dirents: 2163)
+[167] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[168] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[169] rate: 0.405 kiops time: 108.2s found: 0 (scanned 43820 files, scanned dirents: 44000, unknown dirents: 15928)
+[170] rate: 0.332 kiops time: 108.2s found: 0 (scanned 35902 files, scanned dirents: 36000, unknown dirents: 7852)
+[172] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[171] rate: 0.040 kiops time: 108.2s found: 0 (scanned 4322 files, scanned dirents: 4000, unknown dirents: 1448)
+[173] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[174] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[175] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[176] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[177] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3961 files, scanned dirents: 4000, unknown dirents: 1448)
+[178] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[179] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[180] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[181] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[183] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[184] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[182] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11897 files, scanned dirents: 12000, unknown dirents: 4253)
+[185] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[186] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[187] rate: 0.183 kiops time: 108.2s found: 9 (scanned 19830 files, scanned dirents: 20000, unknown dirents: 3605)
+[190] rate: 0.000 kiops time: 108.2s found: 0 (scanned 14 files, scanned dirents: 0, unknown dirents: 0)
+[188] rate: 0.002 kiops time: 108.2s found: 0 (scanned 173 files, scanned dirents: 0, unknown dirents: 0)
+[191] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[189] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[192] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[193] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[194] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[196] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[197] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[198] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[199] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[200] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[195] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[201] rate: 0.000 kiops time: 108.2s found: 0 (scanned 21 files, scanned dirents: 0, unknown dirents: 0)
+[202] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[203] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[204] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[205] rate: 0.000 kiops time: 108.2s found: 0 (scanned 25 files, scanned dirents: 0, unknown dirents: 0)
+[206] rate: 0.173 kiops time: 108.2s found: 0 (scanned 18766 files, scanned dirents: 20000, unknown dirents: 4968)
+[207] rate: 0.083 kiops time: 108.2s found: 0 (scanned 9003 files, scanned dirents: 8000, unknown dirents: 2896)
+[208] rate: 0.221 kiops time: 108.2s found: 0 (scanned 23950 files, scanned dirents: 24000, unknown dirents: 7961)
+[210] rate: 0.002 kiops time: 108.2s found: 0 (scanned 165 files, scanned dirents: 0, unknown dirents: 0)
+[209] rate: 0.184 kiops time: 108.2s found: 0 (scanned 19903 files, scanned dirents: 20000, unknown dirents: 7240)
+[212] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[211] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[213] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[214] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[215] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[220] rate: 0.001 kiops time: 108.2s found: 0 (scanned 59 files, scanned dirents: 0, unknown dirents: 0)
+[216] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[221] rate: 0.000 kiops time: 108.2s found: 0 (scanned 12 files, scanned dirents: 0, unknown dirents: 0)
+[217] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[222] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[218] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[223] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[219] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7943 files, scanned dirents: 8000, unknown dirents: 2896)
+[224] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[225] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[226] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[227] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[228] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[229] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[230] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[231] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[232] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[233] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[234] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[235] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[236] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[237] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[238] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[240] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[239] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[241] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[242] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[243] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[244] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[246] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[247] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[250] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[248] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[251] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[249] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3983 files, scanned dirents: 4000, unknown dirents: 1448)
+[252] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[245] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[253] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7942 files, scanned dirents: 8000, unknown dirents: 1442)
+[260] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7943 files, scanned dirents: 8000, unknown dirents: 2169)
+[254] rate: 0.001 kiops time: 108.2s found: 0 (scanned 58 files, scanned dirents: 0, unknown dirents: 0)
+[261] rate: 0.001 kiops time: 108.2s found: 0 (scanned 73 files, scanned dirents: 0, unknown dirents: 0)
+[256] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[262] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[258] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[263] rate: 0.000 kiops time: 108.2s found: 0 (scanned 13 files, scanned dirents: 0, unknown dirents: 0)
+[257] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[264] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3959 files, scanned dirents: 4000, unknown dirents: 721)
+[259] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[265] rate: 0.000 kiops time: 108.2s found: 0 (scanned 47 files, scanned dirents: 0, unknown dirents: 0)
+[255] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[266] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[267] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[268] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[269] rate: 0.294 kiops time: 108.2s found: 0 (scanned 31800 files, scanned dirents: 32000, unknown dirents: 11584)
+[270] rate: 0.002 kiops time: 108.2s found: 0 (scanned 200 files, scanned dirents: 0, unknown dirents: 0)
+[271] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[272] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[273] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[274] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[275] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7926 files, scanned dirents: 8000, unknown dirents: 2169)
+[281] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4018 files, scanned dirents: 4000, unknown dirents: 721)
+[276] rate: 0.000 kiops time: 108.2s found: 0 (scanned 26 files, scanned dirents: 0, unknown dirents: 0)
+[282] rate: 0.000 kiops time: 108.2s found: 0 (scanned 51 files, scanned dirents: 0, unknown dirents: 0)
+[277] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[283] rate: 0.000 kiops time: 108.2s found: 0 (scanned 18 files, scanned dirents: 0, unknown dirents: 0)
+[278] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[280] rate: 0.074 kiops time: 108.2s found: 0 (scanned 7975 files, scanned dirents: 8000, unknown dirents: 2078)
+[279] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11955 files, scanned dirents: 12000, unknown dirents: 4344)
+[284] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3972 files, scanned dirents: 4000, unknown dirents: 1448)
+[285] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[286] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3984 files, scanned dirents: 4000, unknown dirents: 721)
+[287] rate: 0.000 kiops time: 108.2s found: 0 (scanned 25 files, scanned dirents: 0, unknown dirents: 0)
+[288] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[289] rate: 0.147 kiops time: 108.2s found: 0 (scanned 15950 files, scanned dirents: 16000, unknown dirents: 5065)
+[290] rate: 0.000 kiops time: 108.2s found: 0 (scanned 28 files, scanned dirents: 0, unknown dirents: 0)
+[291] rate: 0.551 kiops time: 108.2s found: 0 (scanned 59666 files, scanned dirents: 60000, unknown dirents: 16631)
+[292] rate: 0.040 kiops time: 108.2s found: 0 (scanned 4336 files, scanned dirents: 4000, unknown dirents: 1448)
+[293] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[296] rate: 0.000 kiops time: 108.2s found: 0 (scanned 21 files, scanned dirents: 0, unknown dirents: 0)
+[294] rate: 0.785 kiops time: 108.2s found: 0 (scanned 84972 files, scanned dirents: 88000, unknown dirents: 24586)
+[295] rate: 0.028 kiops time: 108.2s found: 0 (scanned 3054 files, scanned dirents: 0, unknown dirents: 0)
+[299] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4026 files, scanned dirents: 4000, unknown dirents: 1448)
+[300] rate: 0.000 kiops time: 108.2s found: 0 (scanned 24 files, scanned dirents: 0, unknown dirents: 0)
+[298] rate: 0.046 kiops time: 108.2s found: 0 (scanned 4944 files, scanned dirents: 4000, unknown dirents: 1448)
+[303] rate: 0.146 kiops time: 108.2s found: 0 (scanned 15844 files, scanned dirents: 16000, unknown dirents: 4338)
+[297] rate: 0.959 kiops time: 108.2s found: 5 (scanned 103811 files, scanned dirents: 104000, unknown dirents: 27379)
+[301] rate: 0.515 kiops time: 108.2s found: 10 (scanned 55763 files, scanned dirents: 56000, unknown dirents: 18818)
+[302] rate: 0.001 kiops time: 108.2s found: 0 (scanned 72 files, scanned dirents: 0, unknown dirents: 0)
+[305] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[306] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[310] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[307] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[311] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[304] rate: 0.001 kiops time: 108.2s found: 0 (scanned 142 files, scanned dirents: 0, unknown dirents: 0)
+[312] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[308] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[313] rate: 0.037 kiops time: 108.2s found: 3 (scanned 4031 files, scanned dirents: 4000, unknown dirents: 1448)
+[309] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[314] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[315] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[316] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[317] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[318] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[320] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[319] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[321] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[322] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[323] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[324] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[330] rate: 0.000 kiops time: 108.2s found: 9 (scanned 16 files, scanned dirents: 0, unknown dirents: 0)
+[325] rate: 0.258 kiops time: 108.2s found: 0 (scanned 27889 files, scanned dirents: 28000, unknown dirents: 8682)
+[331] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[326] rate: 0.185 kiops time: 108.2s found: 0 (scanned 20054 files, scanned dirents: 20000, unknown dirents: 5059)
+[332] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[327] rate: 0.259 kiops time: 108.2s found: 0 (scanned 27995 files, scanned dirents: 28000, unknown dirents: 8682)
+[334] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[328] rate: 0.331 kiops time: 108.2s found: 14 (scanned 35813 files, scanned dirents: 36000, unknown dirents: 9397)
+[333] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[329] rate: 0.040 kiops time: 108.2s found: 13 (scanned 4290 files, scanned dirents: 4000, unknown dirents: 1448)
+[336] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[338] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[337] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[339] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[340] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[341] rate: 0.000 kiops time: 108.2s found: 0 (scanned 7 files, scanned dirents: 0, unknown dirents: 0)
+[335] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[342] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[343] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11855 files, scanned dirents: 12000, unknown dirents: 2163)
+[344] rate: 0.074 kiops time: 108.2s found: 0 (scanned 8030 files, scanned dirents: 8000, unknown dirents: 2078)
+[345] rate: 0.000 kiops time: 108.2s found: 0 (scanned 37 files, scanned dirents: 0, unknown dirents: 0)
+[347] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3964 files, scanned dirents: 4000, unknown dirents: 721)
+[350] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[346] rate: 0.000 kiops time: 108.2s found: 0 (scanned 15 files, scanned dirents: 0, unknown dirents: 0)
+[348] rate: 0.000 kiops time: 108.2s found: 0 (scanned 33 files, scanned dirents: 0, unknown dirents: 0)
+[351] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[349] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[352] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[353] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[354] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[356] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3965 files, scanned dirents: 4000, unknown dirents: 721)
+[357] rate: 0.000 kiops time: 108.2s found: 0 (scanned 46 files, scanned dirents: 0, unknown dirents: 0)
+[358] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7912 files, scanned dirents: 8000, unknown dirents: 1442)
+[359] rate: 0.001 kiops time: 108.2s found: 0 (scanned 88 files, scanned dirents: 0, unknown dirents: 0)
+[360] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[355] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[361] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[362] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[363] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[364] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[365] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[366] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[367] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[370] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[369] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[371] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4013 files, scanned dirents: 4000, unknown dirents: 721)
+[368] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4007 files, scanned dirents: 4000, unknown dirents: 1448)
+[372] rate: 0.000 kiops time: 108.2s found: 0 (scanned 14 files, scanned dirents: 0, unknown dirents: 0)
+[373] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[374] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[376] rate: 0.074 kiops time: 108.2s found: 0 (scanned 7988 files, scanned dirents: 8000, unknown dirents: 1442)
+[375] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7937 files, scanned dirents: 8000, unknown dirents: 1442)
+[377] rate: 0.001 kiops time: 108.2s found: 0 (scanned 82 files, scanned dirents: 0, unknown dirents: 0)
+[378] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[379] rate: 0.185 kiops time: 108.2s found: 0 (scanned 19970 files, scanned dirents: 20000, unknown dirents: 7149)
+[380] rate: 0.000 kiops time: 108.2s found: 0 (scanned 22 files, scanned dirents: 0, unknown dirents: 0)
+[381] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[382] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[383] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[384] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[386] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[387] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[390] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[388] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[391] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[389] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[392] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[385] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[393] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[394] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[395] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[396] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[397] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[398] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[399] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[400] rate: 0.000 kiops time: 108.2s found: 0 (scanned 49 files, scanned dirents: 0, unknown dirents: 0)
+[401] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[402] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[403] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[404] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11944 files, scanned dirents: 12000, unknown dirents: 3617)
+[405] rate: 0.147 kiops time: 108.2s found: 0 (scanned 15922 files, scanned dirents: 16000, unknown dirents: 4974)
+[406] rate: 0.001 kiops time: 108.2s found: 0 (scanned 87 files, scanned dirents: 0, unknown dirents: 0)
+[407] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[408] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7928 files, scanned dirents: 8000, unknown dirents: 2805)
+[409] rate: 0.000 kiops time: 108.2s found: 0 (scanned 23 files, scanned dirents: 0, unknown dirents: 0)
+[411] rate: 0.185 kiops time: 108.2s found: 0 (scanned 20021 files, scanned dirents: 20000, unknown dirents: 3605)
+[412] rate: 0.002 kiops time: 108.2s found: 0 (scanned 211 files, scanned dirents: 0, unknown dirents: 0)
+[413] rate: 0.000 kiops time: 108.2s found: 0 (scanned 24 files, scanned dirents: 0, unknown dirents: 0)
+[414] rate: 0.000 kiops time: 108.2s found: 0 (scanned 22 files, scanned dirents: 0, unknown dirents: 0)
+[410] rate: 0.295 kiops time: 108.2s found: 0 (scanned 31945 files, scanned dirents: 32000, unknown dirents: 9948)
+[415] rate: 0.000 kiops time: 108.2s found: 0 (scanned 15 files, scanned dirents: 0, unknown dirents: 0)
+[420] rate: 0.000 kiops time: 108.2s found: 0 (scanned 20 files, scanned dirents: 0, unknown dirents: 0)
+[416] rate: 0.000 kiops time: 108.2s found: 0 (scanned 15 files, scanned dirents: 0, unknown dirents: 0)
+[417] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3961 files, scanned dirents: 4000, unknown dirents: 1357)
+[421] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3980 files, scanned dirents: 4000, unknown dirents: 721)
+[418] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7922 files, scanned dirents: 8000, unknown dirents: 2078)
+[422] rate: 0.000 kiops time: 108.2s found: 0 (scanned 48 files, scanned dirents: 0, unknown dirents: 0)
+[419] rate: 0.001 kiops time: 108.2s found: 0 (scanned 61 files, scanned dirents: 0, unknown dirents: 0)
+[423] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3969 files, scanned dirents: 4000, unknown dirents: 721)
+[424] rate: 0.000 kiops time: 108.2s found: 0 (scanned 49 files, scanned dirents: 0, unknown dirents: 0)
+[425] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11917 files, scanned dirents: 12000, unknown dirents: 3617)
+[426] rate: 0.000 kiops time: 108.2s found: 0 (scanned 37 files, scanned dirents: 0, unknown dirents: 0)
+[429] rate: 0.000 kiops time: 108.2s found: 0 (scanned 24 files, scanned dirents: 0, unknown dirents: 0)
+[428] rate: 0.027 kiops time: 108.2s found: 0 (scanned 2975 files, scanned dirents: 0, unknown dirents: 0)
+[427] rate: 0.638 kiops time: 108.2s found: 2 (scanned 69091 files, scanned dirents: 72000, unknown dirents: 12978)
+[430] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[431] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[432] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[433] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[434] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11879 files, scanned dirents: 12000, unknown dirents: 2890)
+[435] rate: 0.001 kiops time: 108.2s found: 0 (scanned 128 files, scanned dirents: 0, unknown dirents: 0)
+[437] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4044 files, scanned dirents: 4000, unknown dirents: 1448)
+[440] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[436] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3955 files, scanned dirents: 4000, unknown dirents: 721)
+[441] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[438] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[442] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[439] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[443] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[445] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[444] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[446] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[447] rate: 0.074 kiops time: 108.2s found: 0 (scanned 7960 files, scanned dirents: 8000, unknown dirents: 2169)
+[448] rate: 0.001 kiops time: 108.2s found: 0 (scanned 61 files, scanned dirents: 0, unknown dirents: 0)
+[449] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[450] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3962 files, scanned dirents: 4000, unknown dirents: 721)
+[451] rate: 0.000 kiops time: 108.2s found: 0 (scanned 42 files, scanned dirents: 0, unknown dirents: 0)
+[453] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[452] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[454] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[455] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[456] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[457] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[461] rate: 0.000 kiops time: 108.2s found: 0 (scanned 16 files, scanned dirents: 0, unknown dirents: 0)
+[458] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[460] rate: 0.000 kiops time: 108.2s found: 0 (scanned 23 files, scanned dirents: 0, unknown dirents: 0)
+[459] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3986 files, scanned dirents: 4000, unknown dirents: 1448)
+[462] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[464] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[465] rate: 0.000 kiops time: 108.2s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[470] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[466] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[471] rate: 0.405 kiops time: 108.2s found: 0 (scanned 43807 files, scanned dirents: 44000, unknown dirents: 14474)
+[463] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[467] rate: 0.146 kiops time: 108.2s found: 0 (scanned 15805 files, scanned dirents: 16000, unknown dirents: 3611)
+[472] rate: 0.296 kiops time: 108.2s found: 0 (scanned 32061 files, scanned dirents: 32000, unknown dirents: 10766)
+[468] rate: 0.074 kiops time: 108.2s found: 0 (scanned 8041 files, scanned dirents: 8000, unknown dirents: 2805)
+[469] rate: 0.000 kiops time: 108.2s found: 0 (scanned 36 files, scanned dirents: 0, unknown dirents: 0)
+[473] rate: 0.185 kiops time: 108.2s found: 0 (scanned 19987 files, scanned dirents: 20000, unknown dirents: 5059)
+[474] rate: 0.001 kiops time: 108.2s found: 0 (scanned 129 files, scanned dirents: 0, unknown dirents: 0)
+[475] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4001 files, scanned dirents: 4000, unknown dirents: 721)
+[476] rate: 0.000 kiops time: 108.2s found: 0 (scanned 45 files, scanned dirents: 0, unknown dirents: 0)
+[477] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[478] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[479] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[480] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7938 files, scanned dirents: 8000, unknown dirents: 2169)
+[481] rate: 0.001 kiops time: 108.2s found: 0 (scanned 87 files, scanned dirents: 0, unknown dirents: 0)
+[483] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[482] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[484] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[485] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[486] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[487] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[488] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[489] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7949 files, scanned dirents: 8000, unknown dirents: 2805)
+[490] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11928 files, scanned dirents: 12000, unknown dirents: 2163)
+[491] rate: 0.038 kiops time: 108.2s found: 0 (scanned 4154 files, scanned dirents: 4000, unknown dirents: 1448)
+[492] rate: 0.260 kiops time: 108.2s found: 0 (scanned 28092 files, scanned dirents: 28000, unknown dirents: 9409)
+[493] rate: 0.406 kiops time: 108.2s found: 0 (scanned 43902 files, scanned dirents: 44000, unknown dirents: 13020)
+[495] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[494] rate: 0.001 kiops time: 108.2s found: 0 (scanned 152 files, scanned dirents: 0, unknown dirents: 0)
+[496] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[500] rate: 0.000 kiops time: 108.2s found: 0 (scanned 19 files, scanned dirents: 0, unknown dirents: 0)
+[497] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[501] rate: 0.000 kiops time: 108.2s found: 0 (scanned 19 files, scanned dirents: 0, unknown dirents: 0)
+[498] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[502] rate: 0.147 kiops time: 108.2s found: 0 (scanned 15878 files, scanned dirents: 16000, unknown dirents: 4338)
+[499] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[504] rate: 0.149 kiops time: 108.2s found: 0 (scanned 16083 files, scanned dirents: 16000, unknown dirents: 3520)
+[503] rate: 0.293 kiops time: 108.2s found: 0 (scanned 31729 files, scanned dirents: 32000, unknown dirents: 8585)
+[506] rate: 0.039 kiops time: 108.2s found: 0 (scanned 4222 files, scanned dirents: 4000, unknown dirents: 1448)
+[507] rate: 0.000 kiops time: 108.2s found: 0 (scanned 16 files, scanned dirents: 0, unknown dirents: 0)
+[508] rate: 0.000 kiops time: 108.2s found: 0 (scanned 14 files, scanned dirents: 0, unknown dirents: 0)
+[509] rate: 0.146 kiops time: 108.2s found: 0 (scanned 15847 files, scanned dirents: 16000, unknown dirents: 5701)
+[505] rate: 0.222 kiops time: 108.2s found: 0 (scanned 23983 files, scanned dirents: 24000, unknown dirents: 5053)
+[510] rate: 0.001 kiops time: 108.2s found: 0 (scanned 72 files, scanned dirents: 0, unknown dirents: 0)
+[512] rate: 0.001 kiops time: 108.2s found: 0 (scanned 145 files, scanned dirents: 0, unknown dirents: 0)
+[514] rate: 0.588 kiops time: 108.2s found: 0 (scanned 63597 files, scanned dirents: 64000, unknown dirents: 16625)
+[511] rate: 0.147 kiops time: 108.2s found: 0 (scanned 15869 files, scanned dirents: 16000, unknown dirents: 2884)
+[513] rate: 0.332 kiops time: 108.2s found: 0 (scanned 35908 files, scanned dirents: 36000, unknown dirents: 12305)
+[515] rate: 0.152 kiops time: 108.2s found: 0 (scanned 16499 files, scanned dirents: 16000, unknown dirents: 3611)
+[516] rate: 0.001 kiops time: 108.2s found: 0 (scanned 138 files, scanned dirents: 0, unknown dirents: 0)
+[517] rate: 0.147 kiops time: 108.2s found: 0 (scanned 15858 files, scanned dirents: 16000, unknown dirents: 3611)
+[520] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[518] rate: 0.001 kiops time: 108.2s found: 0 (scanned 159 files, scanned dirents: 0, unknown dirents: 0)
+[521] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[519] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[522] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[523] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[524] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[525] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[526] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[527] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[530] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[528] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[531] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[529] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[532] rate: 0.331 kiops time: 108.2s found: 1 (scanned 35796 files, scanned dirents: 36000, unknown dirents: 10033)
+[533] rate: 0.039 kiops time: 108.2s found: 0 (scanned 4209 files, scanned dirents: 4000, unknown dirents: 1448)
+[534] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[535] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[536] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[537] rate: 0.000 kiops time: 108.2s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[538] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[539] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[541] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[540] rate: 0.148 kiops time: 108.2s found: 0 (scanned 16010 files, scanned dirents: 16000, unknown dirents: 5792)
+[542] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[543] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[544] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[545] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[546] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[547] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11868 files, scanned dirents: 12000, unknown dirents: 2890)
+[548] rate: 0.001 kiops time: 108.2s found: 0 (scanned 92 files, scanned dirents: 0, unknown dirents: 0)
+[549] rate: 0.185 kiops time: 108.2s found: 0 (scanned 19980 files, scanned dirents: 20000, unknown dirents: 7240)
+[550] rate: 0.000 kiops time: 108.2s found: 0 (scanned 39 files, scanned dirents: 0, unknown dirents: 0)
+[551] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[552] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[553] rate: 0.000 kiops time: 108.2s found: 0 (scanned 17 files, scanned dirents: 0, unknown dirents: 0)
+[554] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11872 files, scanned dirents: 12000, unknown dirents: 3526)
+[556] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[555] rate: 0.001 kiops time: 108.2s found: 0 (scanned 65 files, scanned dirents: 0, unknown dirents: 0)
+[560] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[557] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[561] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[558] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[562] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[559] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[563] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[564] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[566] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[567] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[568] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[569] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[570] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[565] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[571] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[572] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[573] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[574] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[575] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[576] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[580] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[578] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[581] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[577] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[582] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4010 files, scanned dirents: 4000, unknown dirents: 1448)
+[579] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[583] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[584] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7932 files, scanned dirents: 8000, unknown dirents: 1442)
+[585] rate: 0.001 kiops time: 108.2s found: 0 (scanned 77 files, scanned dirents: 0, unknown dirents: 0)
+[586] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[587] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[589] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[588] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[590] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[591] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[592] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[593] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[594] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[595] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[597] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4037 files, scanned dirents: 4000, unknown dirents: 1448)
+[596] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7915 files, scanned dirents: 8000, unknown dirents: 1442)
+[598] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[600] rate: 0.000 kiops time: 108.2s found: 0 (scanned 22 files, scanned dirents: 0, unknown dirents: 0)
+[599] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[601] rate: 0.219 kiops time: 108.2s found: 0 (scanned 23756 files, scanned dirents: 24000, unknown dirents: 6416)
+[602] rate: 0.221 kiops time: 108.2s found: 0 (scanned 23882 files, scanned dirents: 24000, unknown dirents: 5689)
+[603] rate: 0.001 kiops time: 108.2s found: 0 (scanned 154 files, scanned dirents: 0, unknown dirents: 0)
+[604] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[605] rate: 0.000 kiops time: 108.2s found: 0 (scanned 18 files, scanned dirents: 0, unknown dirents: 0)
+[606] rate: 0.000 kiops time: 108.2s found: 0 (scanned 13 files, scanned dirents: 0, unknown dirents: 0)
+[608] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[607] rate: 0.000 kiops time: 108.2s found: 0 (scanned 15 files, scanned dirents: 0, unknown dirents: 0)
+[609] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4006 files, scanned dirents: 4000, unknown dirents: 1448)
+[610] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[611] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[612] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[613] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[614] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[616] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[620] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[617] rate: 0.000 kiops time: 108.2s found: 0 (scanned 21 files, scanned dirents: 0, unknown dirents: 0)
+[621] rate: 0.000 kiops time: 108.2s found: 0 (scanned 20 files, scanned dirents: 0, unknown dirents: 0)
+[618] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[622] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7917 files, scanned dirents: 8000, unknown dirents: 2896)
+[619] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[623] rate: 0.000 kiops time: 108.2s found: 0 (scanned 37 files, scanned dirents: 0, unknown dirents: 0)
+[615] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4001 files, scanned dirents: 4000, unknown dirents: 1448)
+[624] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[625] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[629] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[626] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7919 files, scanned dirents: 8000, unknown dirents: 2714)
+[630] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[628] rate: 0.001 kiops time: 108.2s found: 0 (scanned 91 files, scanned dirents: 0, unknown dirents: 0)
+[631] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[627] rate: 0.074 kiops time: 108.2s found: 0 (scanned 7969 files, scanned dirents: 8000, unknown dirents: 2169)
+[632] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[633] rate: 0.000 kiops time: 108.2s found: 0 (scanned 15 files, scanned dirents: 0, unknown dirents: 0)
+[634] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[635] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[636] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[637] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[638] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[639] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[640] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[641] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[642] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[643] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[644] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[645] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[647] rate: 0.000 kiops time: 108.2s found: 0 (scanned 19 files, scanned dirents: 0, unknown dirents: 0)
+[648] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[650] rate: 0.001 kiops time: 108.2s found: 0 (scanned 64 files, scanned dirents: 0, unknown dirents: 0)
+[649] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7946 files, scanned dirents: 8000, unknown dirents: 2896)
+[652] rate: 0.000 kiops time: 108.2s found: 0 (scanned 26 files, scanned dirents: 0, unknown dirents: 0)
+[646] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[651] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3982 files, scanned dirents: 4000, unknown dirents: 721)
+[653] rate: 0.074 kiops time: 108.2s found: 0 (scanned 7986 files, scanned dirents: 8000, unknown dirents: 2169)
+[654] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[655] rate: 0.000 kiops time: 108.2s found: 0 (scanned 16 files, scanned dirents: 0, unknown dirents: 0)
+[656] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[657] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[658] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[659] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[660] rate: 0.220 kiops time: 108.2s found: 0 (scanned 23825 files, scanned dirents: 24000, unknown dirents: 7143)
+[661] rate: 0.149 kiops time: 108.2s found: 0 (scanned 16078 files, scanned dirents: 16000, unknown dirents: 5792)
+[663] rate: 0.003 kiops time: 108.2s found: 0 (scanned 273 files, scanned dirents: 0, unknown dirents: 0)
+[664] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[662] rate: 0.257 kiops time: 108.2s found: 0 (scanned 27842 files, scanned dirents: 28000, unknown dirents: 6501)
+[665] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[666] rate: 0.220 kiops time: 108.2s found: 0 (scanned 23770 files, scanned dirents: 24000, unknown dirents: 4326)
+[667] rate: 0.002 kiops time: 108.2s found: 0 (scanned 248 files, scanned dirents: 0, unknown dirents: 0)
+[669] rate: 0.001 kiops time: 108.2s found: 0 (scanned 70 files, scanned dirents: 0, unknown dirents: 0)
+[668] rate: 0.146 kiops time: 108.2s found: 0 (scanned 15854 files, scanned dirents: 16000, unknown dirents: 4338)
+[670] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[671] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[672] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[673] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[674] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[675] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[676] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[677] rate: 0.074 kiops time: 108.2s found: 0 (scanned 7959 files, scanned dirents: 8000, unknown dirents: 2896)
+[680] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[678] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[681] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[679] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[682] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[683] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[684] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[685] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[686] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[687] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[688] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[689] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[690] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[691] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[692] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[693] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[694] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[695] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[699] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[696] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[700] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[697] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[701] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[698] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[702] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[703] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3969 files, scanned dirents: 4000, unknown dirents: 1448)
+[704] rate: 0.000 kiops time: 108.2s found: 0 (scanned 40 files, scanned dirents: 0, unknown dirents: 0)
+[705] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7912 files, scanned dirents: 8000, unknown dirents: 1442)
+[707] rate: 0.000 kiops time: 108.2s found: 0 (scanned 15 files, scanned dirents: 0, unknown dirents: 0)
+[706] rate: 0.001 kiops time: 108.2s found: 0 (scanned 70 files, scanned dirents: 0, unknown dirents: 0)
+[708] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[709] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[710] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[711] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3974 files, scanned dirents: 4000, unknown dirents: 1448)
+[714] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[716] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[713] rate: 0.001 kiops time: 108.2s found: 0 (scanned 98 files, scanned dirents: 0, unknown dirents: 0)
+[717] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[715] rate: 0.148 kiops time: 108.2s found: 0 (scanned 16008 files, scanned dirents: 16000, unknown dirents: 5792)
+[718] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[720] rate: 0.000 kiops time: 108.2s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[719] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[721] rate: 0.000 kiops time: 108.2s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+[712] rate: 0.164 kiops time: 108.2s found: 0 (scanned 17746 files, scanned dirents: 20000, unknown dirents: 5786)
+[722] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[723] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[724] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[725] rate: 0.000 kiops time: 108.2s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[726] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[727] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[728] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3961 files, scanned dirents: 4000, unknown dirents: 721)
+[729] rate: 0.001 kiops time: 108.2s found: 0 (scanned 66 files, scanned dirents: 0, unknown dirents: 0)
+[730] rate: 0.037 kiops time: 108.2s found: 0 (scanned 4011 files, scanned dirents: 4000, unknown dirents: 1448)
+[731] rate: 0.147 kiops time: 108.2s found: 0 (scanned 15954 files, scanned dirents: 16000, unknown dirents: 5065)
+[732] rate: 0.001 kiops time: 108.2s found: 0 (scanned 58 files, scanned dirents: 0, unknown dirents: 0)
+[733] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3983 files, scanned dirents: 4000, unknown dirents: 1448)
+[734] rate: 0.000 kiops time: 108.2s found: 0 (scanned 35 files, scanned dirents: 0, unknown dirents: 0)
+[735] rate: 0.000 kiops time: 108.2s found: 0 (scanned 7 files, scanned dirents: 0, unknown dirents: 0)
+[736] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[737] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[738] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[740] rate: 0.000 kiops time: 108.2s found: 0 (scanned 52 files, scanned dirents: 0, unknown dirents: 0)
+[741] rate: 0.000 kiops time: 108.2s found: 0 (scanned 13 files, scanned dirents: 0, unknown dirents: 0)
+[739] rate: 0.073 kiops time: 108.2s found: 0 (scanned 7934 files, scanned dirents: 8000, unknown dirents: 2805)
+[742] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[743] rate: 0.000 kiops time: 108.2s found: 0 (scanned 7 files, scanned dirents: 0, unknown dirents: 0)
+[744] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[745] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[746] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[750] rate: 0.000 kiops time: 108.2s found: 0 (scanned 23 files, scanned dirents: 0, unknown dirents: 0)
+[747] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[751] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[748] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[752] rate: 0.074 kiops time: 108.2s found: 0 (scanned 8003 files, scanned dirents: 8000, unknown dirents: 2896)
+[749] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3953 files, scanned dirents: 4000, unknown dirents: 1448)
+[753] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[756] rate: 0.000 kiops time: 108.2s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[755] rate: 0.000 kiops time: 108.2s found: 0 (scanned 12 files, scanned dirents: 0, unknown dirents: 0)
+[760] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[754] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[761] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[757] rate: 0.000 kiops time: 108.2s found: 0 (scanned 14 files, scanned dirents: 0, unknown dirents: 0)
+[762] rate: 0.000 kiops time: 108.2s found: 0 (scanned 7 files, scanned dirents: 0, unknown dirents: 0)
+[758] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[763] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[759] rate: 0.000 kiops time: 108.2s found: 0 (scanned 28 files, scanned dirents: 0, unknown dirents: 0)
+[764] rate: 0.000 kiops time: 108.2s found: 0 (scanned 25 files, scanned dirents: 0, unknown dirents: 0)
+[765] rate: 0.000 kiops time: 108.2s found: 0 (scanned 12 files, scanned dirents: 0, unknown dirents: 0)
+[766] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[767] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[768] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[769] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[770] rate: 0.156 kiops time: 108.2s found: 0 (scanned 16886 files, scanned dirents: 20000, unknown dirents: 5786)
+[772] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[773] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[771] rate: 0.024 kiops time: 108.2s found: 0 (scanned 2590 files, scanned dirents: 0, unknown dirents: 0)
+[774] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[775] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[776] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[780] rate: 0.000 kiops time: 108.2s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[777] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[781] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[778] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[782] rate: 0.000 kiops time: 108.2s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[779] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[783] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3962 files, scanned dirents: 4000, unknown dirents: 721)
+[784] rate: 0.000 kiops time: 108.2s found: 0 (scanned 47 files, scanned dirents: 0, unknown dirents: 0)
+[785] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[786] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[787] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[788] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[789] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[790] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[791] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[792] rate: 0.000 kiops time: 108.2s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[793] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[794] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[795] rate: 0.000 kiops time: 108.2s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[796] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[800] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[797] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[801] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[798] rate: 0.000 kiops time: 108.2s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[802] rate: 0.000 kiops time: 108.2s found: 0 (scanned 34 files, scanned dirents: 0, unknown dirents: 0)
+[799] rate: 0.000 kiops time: 108.2s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[804] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[803] rate: 0.110 kiops time: 108.2s found: 0 (scanned 11917 files, scanned dirents: 12000, unknown dirents: 4344)
+[805] rate: 0.037 kiops time: 108.2s found: 0 (scanned 3962 files, scanned dirents: 4000, unknown dirents: 721)
+[806] rate: 0.000 kiops time: 108.2s found: 0 (scanned 42 files, scanned dirents: 0, unknown dirents: 0)
+[807] rate: 0.261 kiops time: 108.2s found: 1 (scanned 28229 files, scanned dirents: 28000, unknown dirents: 10045)
+[808] rate: 0.000 kiops time: 108.2s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[809] rate: 0.000 kiops time: 108.2s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[810] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[811] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[812] rate: 0.000 kiops time: 108.3s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[813] rate: 0.000 kiops time: 108.3s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[814] rate: 0.000 kiops time: 108.3s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[815] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[816] rate: 0.000 kiops time: 108.3s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[820] rate: 0.000 kiops time: 108.3s found: 0 (scanned 27 files, scanned dirents: 0, unknown dirents: 0)
+[821] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[817] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[818] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[822] rate: 0.000 kiops time: 108.3s found: 0 (scanned 51 files, scanned dirents: 0, unknown dirents: 0)
+[819] rate: 0.037 kiops time: 108.3s found: 0 (scanned 3985 files, scanned dirents: 4000, unknown dirents: 1448)
+[823] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[824] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[825] rate: 0.000 kiops time: 108.3s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[826] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[827] rate: 0.073 kiops time: 108.3s found: 0 (scanned 7896 files, scanned dirents: 8000, unknown dirents: 1442)
+[828] rate: 0.001 kiops time: 108.3s found: 0 (scanned 81 files, scanned dirents: 0, unknown dirents: 0)
+[829] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[830] rate: 0.000 kiops time: 108.3s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[831] rate: 0.037 kiops time: 108.3s found: 0 (scanned 4010 files, scanned dirents: 4000, unknown dirents: 1448)
+[832] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[834] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[833] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[835] rate: 0.000 kiops time: 108.3s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[836] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[837] rate: 0.000 kiops time: 108.3s found: 0 (scanned 7 files, scanned dirents: 0, unknown dirents: 0)
+[838] rate: 0.000 kiops time: 108.3s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[840] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[839] rate: 0.037 kiops time: 108.3s found: 0 (scanned 4018 files, scanned dirents: 4000, unknown dirents: 1448)
+[841] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[842] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[843] rate: 0.037 kiops time: 108.3s found: 0 (scanned 4009 files, scanned dirents: 4000, unknown dirents: 721)
+[844] rate: 0.000 kiops time: 108.3s found: 0 (scanned 16 files, scanned dirents: 0, unknown dirents: 0)
+[845] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[846] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[847] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[850] rate: 0.440 kiops time: 108.3s found: 0 (scanned 47627 files, scanned dirents: 48000, unknown dirents: 10833)
+[848] rate: 0.037 kiops time: 108.3s found: 0 (scanned 3959 files, scanned dirents: 4000, unknown dirents: 721)
+[851] rate: 0.115 kiops time: 108.3s found: 0 (scanned 12456 files, scanned dirents: 12000, unknown dirents: 4344)
+[849] rate: 0.000 kiops time: 108.3s found: 0 (scanned 42 files, scanned dirents: 0, unknown dirents: 0)
+[852] rate: 0.000 kiops time: 108.3s found: 4 (scanned 24 files, scanned dirents: 0, unknown dirents: 0)
+[853] rate: 0.000 kiops time: 108.3s found: 2 (scanned 22 files, scanned dirents: 0, unknown dirents: 0)
+[854] rate: 0.183 kiops time: 108.3s found: 1 (scanned 19801 files, scanned dirents: 20000, unknown dirents: 3605)
+[860] rate: 0.075 kiops time: 108.3s found: 1 (scanned 8129 files, scanned dirents: 8000, unknown dirents: 2896)
+[855] rate: 0.002 kiops time: 108.3s found: 0 (scanned 231 files, scanned dirents: 0, unknown dirents: 0)
+[861] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[856] rate: 0.000 kiops time: 108.3s found: 0 (scanned 18 files, scanned dirents: 0, unknown dirents: 0)
+[862] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[857] rate: 0.293 kiops time: 108.3s found: 0 (scanned 31673 files, scanned dirents: 32000, unknown dirents: 6495)
+[863] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[858] rate: 0.040 kiops time: 108.3s found: 2 (scanned 4297 files, scanned dirents: 4000, unknown dirents: 1448)
+[864] rate: 0.000 kiops time: 108.3s found: 0 (scanned 6 files, scanned dirents: 0, unknown dirents: 0)
+[859] rate: 0.111 kiops time: 108.3s found: 7 (scanned 11967 files, scanned dirents: 12000, unknown dirents: 4344)
+[865] rate: 0.000 kiops time: 108.3s found: 0 (scanned 5 files, scanned dirents: 0, unknown dirents: 0)
+[866] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[876] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[867] rate: 0.000 kiops time: 108.3s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[877] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[868] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[870] rate: 0.037 kiops time: 108.3s found: 0 (scanned 3974 files, scanned dirents: 4000, unknown dirents: 721)
+[869] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[871] rate: 0.000 kiops time: 108.3s found: 0 (scanned 41 files, scanned dirents: 0, unknown dirents: 0)
+[880] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[872] rate: 0.000 kiops time: 108.3s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[881] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[874] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[882] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[875] rate: 0.000 kiops time: 108.3s found: 0 (scanned 15 files, scanned dirents: 0, unknown dirents: 0)
+[883] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[878] rate: 0.000 kiops time: 108.3s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[884] rate: 0.000 kiops time: 108.3s found: 0 (scanned 21 files, scanned dirents: 0, unknown dirents: 0)
+[873] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[885] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[879] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[886] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[888] rate: 0.183 kiops time: 108.3s found: 0 (scanned 19848 files, scanned dirents: 20000, unknown dirents: 5059)
+[890] rate: 0.000 kiops time: 108.3s found: 0 (scanned 41 files, scanned dirents: 0, unknown dirents: 0)
+[887] rate: 0.037 kiops time: 108.3s found: 0 (scanned 3964 files, scanned dirents: 4000, unknown dirents: 1448)
+[891] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[889] rate: 0.038 kiops time: 108.3s found: 0 (scanned 4153 files, scanned dirents: 4000, unknown dirents: 1448)
+[892] rate: 0.183 kiops time: 108.3s found: 0 (scanned 19809 files, scanned dirents: 20000, unknown dirents: 7240)
+[893] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[897] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[900] rate: 0.000 kiops time: 108.3s found: 0 (scanned 19 files, scanned dirents: 0, unknown dirents: 0)
+[894] rate: 0.000 kiops time: 108.3s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[901] rate: 0.000 kiops time: 108.3s found: 0 (scanned 22 files, scanned dirents: 0, unknown dirents: 0)
+[895] rate: 0.000 kiops time: 108.3s found: 0 (scanned 19 files, scanned dirents: 0, unknown dirents: 0)
+[902] rate: 0.000 kiops time: 108.3s found: 0 (scanned 28 files, scanned dirents: 0, unknown dirents: 0)
+[896] rate: 0.037 kiops time: 108.3s found: 0 (scanned 4015 files, scanned dirents: 4000, unknown dirents: 1448)
+[903] rate: 0.110 kiops time: 108.3s found: 0 (scanned 11951 files, scanned dirents: 12000, unknown dirents: 4253)
+[898] rate: 0.000 kiops time: 108.3s found: 0 (scanned 4 files, scanned dirents: 0, unknown dirents: 0)
+[904] rate: 0.147 kiops time: 108.3s found: 0 (scanned 15890 files, scanned dirents: 16000, unknown dirents: 3611)
+[899] rate: 0.000 kiops time: 108.3s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[905] rate: 0.001 kiops time: 108.3s found: 0 (scanned 125 files, scanned dirents: 0, unknown dirents: 0)
+[906] rate: 0.037 kiops time: 108.3s found: 0 (scanned 4017 files, scanned dirents: 4000, unknown dirents: 1448)
+[907] rate: 0.037 kiops time: 108.3s found: 0 (scanned 4026 files, scanned dirents: 4000, unknown dirents: 1448)
+[908] rate: 0.001 kiops time: 108.3s found: 0 (scanned 64 files, scanned dirents: 0, unknown dirents: 0)
+[909] rate: 0.110 kiops time: 108.3s found: 0 (scanned 11960 files, scanned dirents: 12000, unknown dirents: 3617)
+[910] rate: 0.184 kiops time: 108.3s[911] rate: 0.111 kiops time: 108.3s found: 0 (scanned 11973 files, scanned dirents: 12000, unknown dirents: 4253)
+ found: 0 (scanned 19913 files, scanned dirents: 20000, unknown dirents: 6513)
+[912] rate: 0.111 kiops time: 108.3s found: 0 (scanned 11965 files, scanned dirents: 12000, unknown dirents: 4344)
+[914] rate: 0.292 kiops time: 108.3s found: 0 (scanned 31649 files, scanned dirents: 32000, unknown dirents: 7767)
+[915] rate: 0.111 kiops time: 108.3s[913] rate: 0.220 kiops time: 108.3s found: 0 (scanned 23855 files, scanned dirents: 24000, unknown dirents: 7961)
+ found: 0 (scanned 12047 files, scanned dirents: 12000, unknown dirents: 2799)
+[920] rate: 0.148 kiops time: 108.3s found: 0 (scanned 15978 files, scanned dirents: 16000, unknown dirents: 5065)
+[916] rate: 0.110 kiops time: 108.3s[921] rate: 0.075 kiops time: 108.3s found: 0 (scanned 8102 files, scanned dirents: 8000, unknown dirents: 2896)
+[917] rate: 0.111 kiops time: 108.3s found: 0 (scanned 11981 files, scanned dirents: 12000, unknown dirents: 4253)
+[922] rate: 0.073 kiops time: 108.3s found: 0 (scanned 7914 files, scanned dirents: 8000, unknown dirents: 1442)
+ found: 0 (scanned 11945 files, scanned dirents: 12000, unknown dirents: 3617)
+[923] rate: 0.001 kiops time: 108.3s found: 0 (scanned 64 files, scanned dirents: 0, unknown dirents: 0)
+[919] rate: 0.074 kiops time: 108.3s found: 0 (scanned 8040 files, scanned dirents: 8000, unknown dirents: 2805)
+[924] rate: 0.000 kiops time: 108.3s found: 0 (scanned 7 files, scanned dirents: 0, unknown dirents: 0)
+[918] rate: 0.220 kiops time: 108.3s[925] rate: 0.000 kiops time: 108.3s found: 0 (scanned 8 files, scanned dirents: 0, unknown dirents: 0)
+ found: 0 (scanned 23796 files, scanned dirents: 24000, unknown dirents: 6507)
+[926] rate: 0.037 kiops time: 108.3s found: 0 (scanned 3978 files, scanned dirents: 4000, unknown dirents: 1448)
+[927] rate: 0.000 kiops time: 108.3s found: 0 (scanned 9 files, scanned dirents: 0, unknown dirents: 0)
+[928] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[929] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[930] rate: 0.000 kiops time: 108.3s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[932] rate: 0.066 kiops time: 108.3s found: 0 (scanned 7121 files, scanned dirents: 4000, unknown dirents: 721)
+[933] rate: 0.000 kiops time: 108.3s found: 0 (scanned 16 files, scanned dirents: 0, unknown dirents: 0)
+[935] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[931] rate: 0.303 kiops time: 108.3s found: 0 (scanned 32807 files, scanned dirents: 36000, unknown dirents: 8670)
+[934] rate: 0.000 kiops time: 108.3s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[936] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[938] rate: 0.000 kiops time: 108.3s found: 0 (scanned 33 files, scanned dirents: 0, unknown dirents: 0)
+[940] rate: 0.000 kiops time: 108.3s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[937] rate: 0.183 kiops time: 108.3s found: 0 (scanned 19850 files, scanned dirents: 20000, unknown dirents: 5604)
+[941] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[939] rate: 0.000 kiops time: 108.3s found: 0 (scanned 7 files, scanned dirents: 0, unknown dirents: 0)
+[942] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[943] rate: 0.073 kiops time: 108.3s found: 0 (scanned 7945 files, scanned dirents: 8000, unknown dirents: 2169)
+[944] rate: 0.001 kiops time: 108.3s found: 0 (scanned 68 files, scanned dirents: 0, unknown dirents: 0)
+[945] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[946] rate: 0.000 kiops time: 108.3s found: 0 (scanned 11 files, scanned dirents: 0, unknown dirents: 0)
+[950] rate: 0.000 kiops time: 108.3s found: 0 (scanned 16 files, scanned dirents: 0, unknown dirents: 0)
+[947] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[951] rate: 0.000 kiops time: 108.3s found: 0 (scanned 1 files, scanned dirents: 0, unknown dirents: 0)
+[948] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[952] rate: 0.000 kiops time: 108.3s found: 0 (scanned 2 files, scanned dirents: 0, unknown dirents: 0)
+[949] rate: 0.000 kiops time: 108.3s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[954] rate: 0.479 kiops time: 108.3s found: 0 (scanned 51808 files, scanned dirents: 52000, unknown dirents: 16643)
+[955] rate: 0.002 kiops time: 108.3s found: 0 (scanned 173 files, scanned dirents: 0, unknown dirents: 0)
+[956] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[953] rate: 0.626 kiops time: 108.3s found: 0 (scanned 67781 files, scanned dirents: 68000, unknown dirents: 21708)
+[957] rate: 0.000 kiops time: 108.3s found: 0 (scanned 0 files, scanned dirents: 0, unknown dirents: 0)
+[958] rate: 0.000 kiops time: 108.3s found: 0 (scanned 3 files, scanned dirents: 0, unknown dirents: 0)
+[959] rate: 0.000 kiops time: 108.3s found: 0 (scanned 10 files, scanned dirents: 0, unknown dirents: 0)
+[DONE] rate: 36.417 kiops time: 108.3s found: 1905 (scanned 3942726 files, scanned dirents: 3943694, unknown dirents: 1124355)
+MATCHED 1905/3942726
+time: 1550719542.968952076
+
+[IOR EASY READ]
+time: 1550719542.970239850
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Feb 20 22:25:46 2019
+Command line        : ./bin//ior -t 1m -b 3500m -F -r -R -C -Q 1 -g -G 27 -k -e -o ./datafiles//ior_easy/ior_file_easy -O stoneWallingStatusFile=./datafiles//ior_easy/stonewall
+Machine             : Linux h10u01.int.janelia.org
+TestID              : 0
+StartTime           : Wed Feb 20 22:25:46 2019
+Path                : /misc/qflash/scicompsys/io-500-script/datafiles/ior_easy
+FS                  : 47.2 TiB   Used FS: 23.7%   Inodes: 12075.0 Mi   Used Inodes: 23.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles//ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 960
+clients per node    : 10
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 3.42 GiB
+aggregate filesize  : 3.20 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      17729      3584000    1024.00    0.078942   189.42     0.030480   189.52     0   
+Max Read:  17729.28 MiB/sec (18590.50 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        17729.28   17729.28   17729.28       0.00   17729.28   17729.28   17729.28       0.00  189.51696     0    960  10    1   1     1        1         0    0      1 3670016000  1048576 3360000.0 POSIX      0
+Finished            : Wed Feb 20 22:28:56 2019
+
+[MDTEST EASY STAT]
+time: 1550719736.741936337
+-- started at 02/20/2019 22:29:00 --
+
+mdtest-1.9.3 was launched with 960 total task(s) on 96 node(s)
+Command line used: ./bin//mdtest "-n" "4000" "-u" "-L" "-T" "-F" "-d" "./datafiles//mdt_easy" "-x" "./datafiles//mdt_easy-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 23.7%   Inodes: 12075.0 Mi   Used Inodes: 23.7%
+
+960 tasks, 3840000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :     105024.015     105012.960     105014.587          0.485
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 22:29:40 --
+
+[IOR HARD READ]
+time: 1550719780.463992990
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Feb 20 22:29:43 2019
+Command line        : ./bin//ior -B -s 1000 -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 1000 -B -o ./datafiles//ior_hard/IOR_file -O stoneWallingStatusFile=./datafiles//ior_hard/stonewall
+Machine             : Linux h10u01.int.janelia.org
+TestID              : 0
+StartTime           : Wed Feb 20 22:29:43 2019
+Path                : /misc/qflash/scicompsys/io-500-script/datafiles/ior_hard
+FS                  : 47.2 TiB   Used FS: 23.7%   Inodes: 12075.0 Mi   Used Inodes: 23.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles//ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 960
+clients per node    : 10
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 42.03 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      3198.73    45.91      45.91      0.088737   13.36      0.006518   13.45      0   
+Max Read:  3198.73 MiB/sec (3354.11 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         3198.73    3198.73    3198.73       0.00   71351.89   71351.89   71351.89       0.00   13.45444     0    960  10    1   0     1        1         0    0   1000    47008    47008   43037.1 POSIX      0
+Finished            : Wed Feb 20 22:29:57 2019
+
+[MDTEST HARD STAT]
+time: 1550719797.905476891
+-- started at 02/20/2019 22:30:00 --
+
+mdtest-1.9.3 was launched with 960 total task(s) on 96 node(s)
+Command line used: ./bin//mdtest "-n" "600" "-T" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "./datafiles//mdt_hard" "-x" "./datafiles//mdt_hard-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 23.7%   Inodes: 12075.0 Mi   Used Inodes: 23.7%
+
+960 tasks, 576000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :      35307.762      35250.458      35273.826         17.823
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 22:30:06 --
+
+[MDTEST EASY DELETE]
+time: 1550719806.431245357
+-- started at 02/20/2019 22:30:08 --
+
+mdtest-1.9.3 was launched with 960 total task(s) on 96 node(s)
+Command line used: ./bin//mdtest "-n" "4000" "-u" "-L" "-r" "-F" "-d" "./datafiles//mdt_easy" "-x" "./datafiles//mdt_easy-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 23.7%   Inodes: 12075.0 Mi   Used Inodes: 23.7%
+
+960 tasks, 3840000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :      11337.669      11337.602      11337.647          0.007
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.399          0.399          0.399          0.000
+
+-- finished at 02/20/2019 22:35:53 --
+
+[MDTEST HARD READ]
+time: 1550720153.666871255
+-- started at 02/20/2019 22:35:56 --
+
+mdtest-1.9.3 was launched with 960 total task(s) on 96 node(s)
+Command line used: ./bin//mdtest "-n" "600" "-E" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "./datafiles//mdt_hard" "-x" "./datafiles//mdt_hard-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 23.6%   Inodes: 12075.0 Mi   Used Inodes: 23.6%
+
+960 tasks, 576000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :      90470.225      90382.232      90449.646         10.150
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 22:36:00 --
+
+[MDTEST HARD DELETE]
+time: 1550720160.739461579
+-- started at 02/20/2019 22:36:02 --
+
+mdtest-1.9.3 was launched with 960 total task(s) on 96 node(s)
+Command line used: ./bin//mdtest "-n" "600" "-r" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "./datafiles//mdt_hard" "-x" "./datafiles//mdt_hard-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 23.6%   Inodes: 12075.0 Mi   Used Inodes: 23.6%
+
+960 tasks, 576000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :        317.832        317.828        317.831          0.001
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :        165.704        165.704        165.704          0.000
+
+-- finished at 02/20/2019 22:41:25 --
+
+Deleting IO-500 ./datafiles/
+time: 1550720486.518023396
+[END TIME] 2019-02-20 22:41:59-05:00
+[IO-500 COMPLETED] Result also in config-96-result-1550717910.txt; Now use io-500-score.sh to compute the score

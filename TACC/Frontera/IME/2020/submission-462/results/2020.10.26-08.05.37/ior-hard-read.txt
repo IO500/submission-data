@@ -1,0 +1,37 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 26 08:32:55 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /flash/datafiles/2020.10.26-08.05.37/ior-hard/file -O stoneWallingStatusFile=./results/2020.10.26-08.05.37/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a IME
+Machine             : Linux flash-42
+TestID              : 0
+StartTime           : Mon Oct 26 08:32:55 2020
+Path                : /flash/datafiles/2020.10.26-08.05.37/ior-hard/file
+FS                  : 10835.6 TiB   Used FS: 12.7%   Inodes: 1144.4 Mi   Used Inodes: 28.9%
+
+Options: 
+api                 : IME
+apiVersion          : 1.4.1 (141015)
+test filename       : /flash/datafiles/2020.10.26-08.05.37/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 280
+clients per node    : 28
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 119.71 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4851523 max: 4851523 -- min data: 212.4 GiB mean data: 212.4 GiB time: 415.9s
+WARNING: Expected aggregate file size       = 131622400000000
+WARNING: Stat() of aggregate file size      = 63856910091520
+WARNING: Using actual aggregate bytes moved = 63856910091520
+read      146329     3264376    416.12      45.91      45.91      0.003747   416.14     0.040449   416.18     0   

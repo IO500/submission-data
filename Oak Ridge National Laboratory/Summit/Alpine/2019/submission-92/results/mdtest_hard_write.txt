@@ -1,0 +1,180 @@
+-- started at 11/08/2018 16:13:51 --
+
+mdtest-1.9.3 was launched with 160 total task(s) on 10 node(s)
+Command line used: /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard" "-n" "1250000" "-x" "/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard-stonewall" "-W" "300"
+Path: /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05
+FS: 225668.2 TiB   Used FS: 1.2%   Inodes: 30000.0 Mi   Used Inodes: 0.4%
+
+160 tasks, 200000000 files
+Continue stonewall hit min: 19357 max: 20942 avg: 19914.6 
+stonewall rank 0: 19404 of 20942 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :     643679.338     643679.338     643679.338          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :       6188.464       6188.464       6188.464          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 16:19:02 --
+stonewall rank 71: 20906 of 20942 
+stonewall rank 121: 20930 of 20942 
+stonewall rank 142: 19572 of 20942 
+stonewall rank 112: 19603 of 20942 
+stonewall rank 40: 19403 of 20942 
+stonewall rank 125: 20375 of 20942 
+stonewall rank 65: 20373 of 20942 
+stonewall rank 1: 20937 of 20942 
+stonewall rank 59: 20195 of 20942 
+stonewall rank 145: 20371 of 20942 
+stonewall rank 140: 19404 of 20942 
+stonewall rank 91: 20937 of 20942 
+stonewall rank 39: 20194 of 20942 
+stonewall rank 70: 19405 of 20942 
+stonewall rank 90: 19403 of 20942 
+stonewall rank 135: 20369 of 20942 
+stonewall rank 55: 20340 of 20942 
+stonewall rank 62: 19601 of 20942 
+stonewall rank 42: 19603 of 20942 
+stonewall rank 114: 19624 of 20942 
+stonewall rank 124: 19616 of 20942 
+stonewall rank 20: 19388 of 20942 
+stonewall rank 134: 19639 of 20942 
+stonewall rank 56: 19643 of 20942 
+stonewall rank 64: 19639 of 20942 
+stonewall rank 150: 19405 of 20942 
+stonewall rank 155: 20349 of 20942 
+stonewall rank 30: 19403 of 20942 
+stonewall rank 120: 19377 of 20942 
+stonewall rank 84: 19637 of 20942 
+stonewall rank 89: 20191 of 20942 
+stonewall rank 12: 19600 of 20942 
+stonewall rank 108: 19884 of 20942 
+stonewall rank 88: 19893 of 20942 
+stonewall rank 153: 19722 of 20942 
+stonewall rank 149: 20192 of 20942 
+stonewall rank 14: 19639 of 20942 
+stonewall rank 141: 20905 of 20942 
+stonewall rank 23: 19758 of 20942 
+stonewall rank 5: 20373 of 20942 
+stonewall rank 66: 19663 of 20942 
+stonewall rank 111: 20893 of 20942 
+stonewall rank 105: 20352 of 20942 
+stonewall rank 136: 19639 of 20942 
+stonewall rank 102: 19598 of 20942 
+stonewall rank 36: 19662 of 20942 
+stonewall rank 74: 19639 of 20942 
+stonewall rank 101: 20913 of 20942 
+stonewall rank 22: 19603 of 20942 
+stonewall rank 43: 19728 of 20942 
+stonewall rank 52: 19604 of 20942 
+stonewall rank 33: 19757 of 20942 
+stonewall rank 104: 19616 of 20942 
+stonewall rank 130: 19406 of 20942 
+stonewall rank 98: 19897 of 20942 
+stonewall rank 122: 19543 of 20942 
+stonewall rank 10: 19407 of 20942 
+stonewall rank 21: 20908 of 20942 
+stonewall rank 32: 19605 of 20942 
+stonewall rank 69: 20190 of 20942 
+stonewall rank 53: 19758 of 20942 
+stonewall rank 99: 20189 of 20942 
+stonewall rank 49: 20188 of 20942 
+stonewall rank 44: 19639 of 20942 
+stonewall rank 118: 19894 of 20942 
+stonewall rank 94: 19617 of 20942 
+stonewall rank 148: 19896 of 20942 
+stonewall rank 85: 20327 of 20942 
+stonewall rank 19: 20185 of 20942 
+stonewall rank 82: 19583 of 20942 
+stonewall rank 31: 20938 of 20942 
+stonewall rank 86: 19663 of 20942 
+stonewall rank 132: 19607 of 20942 
+stonewall rank 96: 19656 of 20942 
+stonewall rank 51: 20933 of 20942 
+stonewall rank 106: 19660 of 20942 
+stonewall rank 95: 20346 of 20942 
+stonewall rank 151: 20894 of 20942 
+stonewall rank 50: 19377 of 20942 
+stonewall rank 41: 20935 of 20942 
+stonewall rank 116: 19640 of 20942 
+stonewall rank 57: 19742 of 20942 
+stonewall rank 103: 19742 of 20942 
+stonewall rank 119: 20196 of 20942 
+stonewall rank 156: 19668 of 20942 
+stonewall rank 138: 19898 of 20942 
+stonewall rank 113: 19738 of 20942 
+stonewall rank 126: 19609 of 20942 
+stonewall rank 72: 19604 of 20942 
+stonewall rank 16: 19662 of 20942 
+stonewall rank 8: 19900 of 20942 
+stonewall rank 115: 20342 of 20942 
+stonewall rank 46: 19665 of 20942 
+stonewall rank 48: 19855 of 20942 
+stonewall rank 54: 19638 of 20942 
+stonewall rank 13: 19759 of 20942 
+stonewall rank 79: 20195 of 20942 
+stonewall rank 143: 19756 of 20942 
+stonewall rank 109: 20119 of 20942 
+stonewall rank 146: 19663 of 20942 
+stonewall rank 61: 20938 of 20942 
+stonewall rank 158: 19899 of 20942 
+stonewall rank 159: 20158 of 20942 
+stonewall rank 15: 20373 of 20942 
+stonewall rank 6: 19643 of 20942 
+stonewall rank 58: 19896 of 20942 
+stonewall rank 76: 19667 of 20942 
+stonewall rank 75: 20373 of 20942 
+stonewall rank 17: 19769 of 20942 
+stonewall rank 78: 19898 of 20942 
+stonewall rank 11: 20934 of 20942 
+stonewall rank 100: 19408 of 20942 
+stonewall rank 92: 19598 of 20942 
+stonewall rank 38: 19899 of 20942 
+stonewall rank 2: 19604 of 20942 
+stonewall rank 123: 19752 of 20942 
+stonewall rank 80: 19406 of 20942 
+stonewall rank 45: 20375 of 20942 
+stonewall rank 26: 19666 of 20942 
+stonewall rank 3: 19758 of 20942 
+stonewall rank 152: 19599 of 20942 
+stonewall rank 24: 19640 of 20942 
+stonewall rank 9: 20191 of 20942 
+stonewall rank 129: 20144 of 20942 
+stonewall rank 68: 19895 of 20942 
+stonewall rank 27: 19770 of 20942 
+stonewall rank 35: 20371 of 20942 
+stonewall rank 133: 19759 of 20942 
+stonewall rank 131: 20940 of 20942 
+stonewall rank 34: 19637 of 20942 
+stonewall rank 63: 19732 of 20942 
+stonewall rank 47: 19746 of 20942 
+stonewall rank 25: 20368 of 20942 
+stonewall rank 28: 19902 of 20942 
+stonewall rank 139: 20164 of 20942 
+stonewall rank 144: 19637 of 20942 
+stonewall rank 107: 19769 of 20942 
+stonewall rank 4: 19633 of 20942 
+stonewall rank 60: 19357 of 20942 
+stonewall rank 128: 19899 of 20942 
+stonewall rank 157: 19768 of 20942 
+stonewall rank 18: 19893 of 20942 
+stonewall rank 83: 19757 of 20942 
+stonewall rank 93: 19756 of 20942 
+stonewall rank 67: 19768 of 20942 
+stonewall rank 29: 20193 of 20942 
+stonewall rank 154: 19637 of 20942 
+stonewall rank 73: 19761 of 20942 
+stonewall rank 110: 19410 of 20942 
+stonewall rank 87: 19746 of 20942 
+stonewall rank 147: 19751 of 20942 
+stonewall rank 37: 19742 of 20942 
+stonewall rank 127: 19768 of 20942 
+stonewall rank 137: 19770 of 20942 
+stonewall rank 97: 19718 of 20942 
+stonewall rank 77: 19750 of 20942 
+stonewall rank 7: 19769 of 20942 
+stonewall rank 117: 19771 of 20942 

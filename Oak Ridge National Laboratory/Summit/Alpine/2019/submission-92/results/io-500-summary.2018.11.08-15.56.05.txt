@@ -1,0 +1,137 @@
+System:  batch5
+filesystem_utilization=alpine         242309426315264 2869692858368 239439733456896   2% /gpfs/alpine
+date=2018.11.08-15.56.05
+io500_cleanup_workdir=False
+io500_find_cmd=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/pfind
+io500_find_cmd_args='-s 300 -r /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/pfind_results'
+io500_find_mpi=True
+io500_info_data_storage_type=xxx
+io500_info_filesystem=xxx
+io500_info_filesystem_vendor=xxx
+io500_info_filesystem_version=xxx
+io500_info_institute_name=xxx
+io500_info_metadata_storage_type=xxx
+io500_info_num_client_nodes=xxx
+io500_info_num_data_server_nodes=xxx
+io500_info_num_data_storage_devices=xxx
+io500_info_num_metadata_server_nodes=xxx
+io500_info_num_metadata_storage_devices=xxx
+io500_info_procs_per_node=xxx
+io500_info_storage_age_in_months=xxx
+io500_info_storage_install_date=xxx
+io500_info_storage_interface=xxx
+io500_info_storage_network=xxx
+io500_info_system_name=xxx
+io500_info_whatever=WhateverElseYouThinkRelevant
+io500_ior_cmd=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/ior
+io500_ior_easy_params='-t 16m -b 700000m -F'
+io500_ior_easy_size=700000
+io500_ior_hard_other_options=
+io500_ior_hard_writes_per_proc=9500
+io500_mdreal_cmd=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=1750000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=1250000
+io500_mdtest_hard_other_options=
+io500_mpiargs='-n 10 -a 16 -c 16 -r 1'
+io500_mpirun=jsrun
+io500_result_dir=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 16m -b 700000m -F -o /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write              218.322 GB/s : time 304.45 seconds
+
+[Starting] mdtest_easy_write
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest -C -F -d /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_easy -n 1750000 -u -L -x /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_easy-stonewall -W 300
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write              846.369 kiops : time 334.15 seconds
+
+[Starting] ior_hard_write
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 9500  -o /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                0.158 GB/s : time 420.53 seconds
+
+[Starting] mdtest_hard_write
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard -n 1250000 -x /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard-stonewall  -W 300
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write              643.679 kiops : time 313.27 seconds
+
+[Starting] find
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/pfind /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05 -newer /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/timestampfile -size 3901c -name *01* -s 300 -r /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/pfind_results
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/find.txt.
+[FIND] MATCHED 0/13001926 in 15.2071 seconds
+[RESULT] IOPS phase 3                      find              854.990 kiops : time  15.21 seconds
+
+[Starting] ior_easy_read
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 16m -b 700000m -F -o /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_easy/stonewall
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              145.395 GB/s : time 457.15 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest -T -F -d /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_easy -n 1750000 -u -L -x /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_easy-stonewall
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat             1807.740 kiops : time  24.69 seconds
+
+[Starting] ior_hard_read
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 9500  -o /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_hard/stonewall
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                1.869 GB/s : time  35.60 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard -n 1250000 -x /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard-stonewall 
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat              916.311 kiops : time   6.97 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest -r -F -d /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_easy -n 1750000 -u -L -x /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_easy-stonewall
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              282.126 kiops : time  40.03 seconds
+
+[Starting] mdtest_hard_read
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard -n 1250000 -x /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard-stonewall 
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              737.557 kiops : time   9.41 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] jsrun -n 10 -a 16 -c 16 -r 1 /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard -n 1250000 -x /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_hard-stonewall 
+[Results] in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete               27.163 kiops : time 160.81 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05
+[Summary] Results files in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/results/2018.11.08-15.56.05
+[Summary] Data files in /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05
+[RESULT] BW   phase 1            ior_easy_write              218.322 GB/s : time 304.45 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.158 GB/s : time 420.53 seconds
+[RESULT] BW   phase 3             ior_easy_read              145.395 GB/s : time 457.15 seconds
+[RESULT] BW   phase 4             ior_hard_read                1.869 GB/s : time  35.60 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write              846.369 kiops : time 334.15 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write              643.679 kiops : time 313.27 seconds
+[RESULT] IOPS phase 3                      find              854.990 kiops : time  15.21 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat             1807.740 kiops : time  24.69 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              916.311 kiops : time   6.97 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              282.126 kiops : time  40.03 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              737.557 kiops : time   9.41 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete               27.163 kiops : time 160.81 seconds
+[SCORE] Bandwidth 9.84383 GB/s : IOPS 506.93 kiops : TOTAL 70.6409

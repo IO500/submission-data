@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 16:27:30 2018
+Command line        : /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 9500 -o /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_hard/IOR_file -O stoneWallingStatusFile=/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_hard/stonewall
+Machine             : Linux g26n07
+TestID              : 0
+StartTime           : Thu Nov  8 16:27:30 2018
+Path                : /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_hard
+FS                  : 225668.2 TiB   Used FS: 1.2%   Inodes: 30000.0 Mi   Used Inodes: 0.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 9500
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 66.55 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      1914.20    45.91      45.91      0.003667   35.59      0.000998   35.60      0   
+Max Read:  1914.20 MiB/sec (2007.18 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         1914.20    1914.20    1914.20       0.00   42698.69   42698.69   42698.69       0.00   35.59828     0    160  16    1   0     1        1         0    0   9500    47008    47008   68142.1 POSIX      0
+Finished            : Thu Nov  8 16:28:06 2018

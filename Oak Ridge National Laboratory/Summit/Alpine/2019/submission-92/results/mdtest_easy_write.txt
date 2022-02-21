@@ -1,0 +1,180 @@
+-- started at 11/08/2018 16:01:14 --
+
+mdtest-1.9.3 was launched with 160 total task(s) on 10 node(s)
+Command line used: /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/bin/mdtest "-C" "-F" "-d" "/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_easy" "-n" "1750000" "-u" "-L" "-x" "/gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05/mdt_easy-stonewall" "-W" "300"
+Path: /gpfs/alpine/stf007/scratch/gmarkoma/io-500-dev/datafiles/io500.2018.11.08-15.56.05
+FS: 225668.2 TiB   Used FS: 1.2%   Inodes: 30000.0 Mi   Used Inodes: 0.4%
+
+160 tasks, 280000000 files
+Continue stonewall hit min: 46858 max: 60319 avg: 53925.5 
+stonewall rank 0: 54274 of 60319 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :     846368.737     846368.737     846368.737          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          1.259          1.259          1.259          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/08/2018 16:06:46 --
+stonewall rank 105: 54826 of 60319 
+stonewall rank 45: 53334 of 60319 
+stonewall rank 66: 55229 of 60319 
+stonewall rank 156: 57745 of 60319 
+stonewall rank 60: 55431 of 60319 
+stonewall rank 113: 56644 of 60319 
+stonewall rank 95: 58956 of 60319 
+stonewall rank 43: 55968 of 60319 
+stonewall rank 104: 52707 of 60319 
+stonewall rank 94: 53105 of 60319 
+stonewall rank 99: 54280 of 60319 
+stonewall rank 148: 56041 of 60319 
+stonewall rank 17: 51015 of 60319 
+stonewall rank 31: 51956 of 60319 
+stonewall rank 29: 56023 of 60319 
+stonewall rank 16: 56927 of 60319 
+stonewall rank 47: 54184 of 60319 
+stonewall rank 83: 57733 of 60319 
+stonewall rank 67: 52102 of 60319 
+stonewall rank 52: 58405 of 60319 
+stonewall rank 50: 57796 of 60319 
+stonewall rank 77: 50999 of 60319 
+stonewall rank 112: 50805 of 60319 
+stonewall rank 39: 49487 of 60319 
+stonewall rank 71: 53435 of 60319 
+stonewall rank 49: 50253 of 60319 
+stonewall rank 37: 54307 of 60319 
+stonewall rank 107: 54631 of 60319 
+stonewall rank 103: 52145 of 60319 
+stonewall rank 130: 55891 of 60319 
+stonewall rank 48: 55127 of 60319 
+stonewall rank 108: 54190 of 60319 
+stonewall rank 102: 58023 of 60319 
+stonewall rank 4: 57119 of 60319 
+stonewall rank 53: 57050 of 60319 
+stonewall rank 119: 55402 of 60319 
+stonewall rank 11: 52563 of 60319 
+stonewall rank 92: 54703 of 60319 
+stonewall rank 141: 58879 of 60319 
+stonewall rank 46: 54915 of 60319 
+stonewall rank 58: 55688 of 60319 
+stonewall rank 21: 53753 of 60319 
+stonewall rank 129: 54760 of 60319 
+stonewall rank 86: 52478 of 60319 
+stonewall rank 78: 52321 of 60319 
+stonewall rank 151: 58194 of 60319 
+stonewall rank 54: 54056 of 60319 
+stonewall rank 41: 54579 of 60319 
+stonewall rank 124: 56420 of 60319 
+stonewall rank 57: 55560 of 60319 
+stonewall rank 125: 55782 of 60319 
+stonewall rank 27: 57682 of 60319 
+stonewall rank 76: 54925 of 60319 
+stonewall rank 121: 52795 of 60319 
+stonewall rank 63: 53913 of 60319 
+stonewall rank 106: 54402 of 60319 
+stonewall rank 93: 55936 of 60319 
+stonewall rank 22: 53214 of 60319 
+stonewall rank 89: 54313 of 60319 
+stonewall rank 61: 51250 of 60319 
+stonewall rank 126: 49969 of 60319 
+stonewall rank 159: 52765 of 60319 
+stonewall rank 38: 52218 of 60319 
+stonewall rank 18: 53593 of 60319 
+stonewall rank 14: 52480 of 60319 
+stonewall rank 132: 55443 of 60319 
+stonewall rank 13: 54913 of 60319 
+stonewall rank 32: 56790 of 60319 
+stonewall rank 44: 55126 of 60319 
+stonewall rank 73: 57196 of 60319 
+stonewall rank 117: 52353 of 60319 
+stonewall rank 149: 50581 of 60319 
+stonewall rank 19: 53663 of 60319 
+stonewall rank 158: 52125 of 60319 
+stonewall rank 139: 52120 of 60319 
+stonewall rank 147: 50851 of 60319 
+stonewall rank 42: 52478 of 60319 
+stonewall rank 122: 49492 of 60319 
+stonewall rank 2: 51049 of 60319 
+stonewall rank 133: 52213 of 60319 
+stonewall rank 70: 55893 of 60319 
+stonewall rank 142: 50994 of 60319 
+stonewall rank 154: 51133 of 60319 
+stonewall rank 79: 54636 of 60319 
+stonewall rank 109: 55349 of 60319 
+stonewall rank 146: 51182 of 60319 
+stonewall rank 140: 53125 of 60319 
+stonewall rank 116: 50136 of 60319 
+stonewall rank 24: 55043 of 60319 
+stonewall rank 68: 57754 of 60319 
+stonewall rank 64: 54498 of 60319 
+stonewall rank 120: 52584 of 60319 
+stonewall rank 36: 53788 of 60319 
+stonewall rank 115: 53358 of 60319 
+stonewall rank 127: 54109 of 60319 
+stonewall rank 153: 56515 of 60319 
+stonewall rank 6: 51653 of 60319 
+stonewall rank 97: 58689 of 60319 
+stonewall rank 128: 54394 of 60319 
+stonewall rank 134: 51943 of 60319 
+stonewall rank 114: 50313 of 60319 
+stonewall rank 51: 52619 of 60319 
+stonewall rank 136: 55346 of 60319 
+stonewall rank 56: 57654 of 60319 
+stonewall rank 23: 51797 of 60319 
+stonewall rank 10: 54375 of 60319 
+stonewall rank 74: 53930 of 60319 
+stonewall rank 118: 54921 of 60319 
+stonewall rank 8: 54746 of 60319 
+stonewall rank 137: 58282 of 60319 
+stonewall rank 59: 55680 of 60319 
+stonewall rank 20: 54665 of 60319 
+stonewall rank 96: 55248 of 60319 
+stonewall rank 138: 50548 of 60319 
+stonewall rank 100: 51601 of 60319 
+stonewall rank 75: 57064 of 60319 
+stonewall rank 72: 54657 of 60319 
+stonewall rank 82: 54805 of 60319 
+stonewall rank 5: 54599 of 60319 
+stonewall rank 15: 48974 of 60319 
+stonewall rank 144: 52066 of 60319 
+stonewall rank 1: 55351 of 60319 
+stonewall rank 110: 52935 of 60319 
+stonewall rank 90: 47788 of 60319 
+stonewall rank 131: 52230 of 60319 
+stonewall rank 26: 52406 of 60319 
+stonewall rank 3: 47498 of 60319 
+stonewall rank 28: 52202 of 60319 
+stonewall rank 135: 57281 of 60319 
+stonewall rank 98: 53977 of 60319 
+stonewall rank 30: 49283 of 60319 
+stonewall rank 157: 54176 of 60319 
+stonewall rank 123: 54463 of 60319 
+stonewall rank 145: 49125 of 60319 
+stonewall rank 35: 55818 of 60319 
+stonewall rank 101: 52190 of 60319 
+stonewall rank 40: 55559 of 60319 
+stonewall rank 152: 53503 of 60319 
+stonewall rank 12: 49605 of 60319 
+stonewall rank 81: 53618 of 60319 
+stonewall rank 7: 55069 of 60319 
+stonewall rank 69: 50759 of 60319 
+stonewall rank 91: 52317 of 60319 
+stonewall rank 55: 51071 of 60319 
+stonewall rank 25: 52953 of 60319 
+stonewall rank 62: 53921 of 60319 
+stonewall rank 84: 53626 of 60319 
+stonewall rank 87: 52520 of 60319 
+stonewall rank 111: 54577 of 60319 
+stonewall rank 65: 57619 of 60319 
+stonewall rank 88: 55274 of 60319 
+stonewall rank 85: 58912 of 60319 
+stonewall rank 150: 53969 of 60319 
+stonewall rank 80: 54818 of 60319 
+stonewall rank 33: 46858 of 60319 
+stonewall rank 9: 52550 of 60319 
+stonewall rank 155: 52776 of 60319 
+stonewall rank 34: 54460 of 60319 

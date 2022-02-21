@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sat Nov 10 13:17:39 2018
+Command line        : /scratch/io-500-dev-master/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 38600 -o /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/IOR_file -O stoneWallingStatusFile=/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux lgcp-client0
+TestID              : 0
+StartTime           : Sat Nov 10 13:17:39 2018
+Path                : /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard
+FS                  : 86.6 TiB   Used FS: 31.7%   Inodes: 2400.0 Mi   Used Inodes: 2.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 38600
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 480
+clients per node    : 8
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 811.15 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 17575 max: 38600 -- min data: 0.8 GiB mean data: 1.2 GiB time: 300.0s
+write     1481.75    45.91      45.91      0.031263   560.48     0.052326   560.57     0   
+Max Write: 1481.75 MiB/sec (1553.72 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        1481.75    1481.75    1481.75       0.00   33052.33   33052.33   33052.33       0.00  560.56556     0    480   8    1   0     1        1         0    0  38600    47008    47008  830616.2 POSIX      0
+Finished            : Sat Nov 10 13:27:00 2018

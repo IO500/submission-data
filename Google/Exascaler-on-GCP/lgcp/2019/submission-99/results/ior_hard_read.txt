@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sat Nov 10 14:08:27 2018
+Command line        : /scratch/io-500-dev-master/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 38600 -o /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/IOR_file -O stoneWallingStatusFile=/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/stonewall
+Machine             : Linux lgcp-client0
+TestID              : 0
+StartTime           : Sat Nov 10 14:08:27 2018
+Path                : /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard
+FS                  : 86.6 TiB   Used FS: 32.6%   Inodes: 2400.0 Mi   Used Inodes: 2.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 38600
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 480
+clients per node    : 8
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 811.15 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      8293       45.91      45.91      0.025722   100.12     0.014362   100.16     0   
+Max Read:  8292.68 MiB/sec (8695.51 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         8292.68    8292.68    8292.68       0.00  184979.29  184979.29  184979.29       0.00  100.16256     0    480   8    1   0     1        1         0    0  38600    47008    47008  830616.2 POSIX      0
+Finished            : Sat Nov 10 14:10:08 2018

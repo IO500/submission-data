@@ -1,0 +1,20 @@
+-- started at 11/10/2018 14:10:08 --
+
+mdtest-1.9.3 was launched with 480 total task(s) on 60 node(s)
+Command line used: /scratch/io-500-dev-master/bin/mdtest "-T" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard" "-n" "60000" "-x" "/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard-stonewall"
+Path: /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41
+FS: 86.6 TiB   Used FS: 32.6%   Inodes: 2400.0 Mi   Used Inodes: 2.7%
+
+480 tasks, 28800000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :      81643.462      81643.462      81643.462          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/10/2018 14:10:32 --

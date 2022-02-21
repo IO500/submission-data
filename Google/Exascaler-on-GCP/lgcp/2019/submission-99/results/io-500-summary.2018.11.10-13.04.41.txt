@@ -1,0 +1,137 @@
+System:  lgcp-client0
+filesystem_utilization=10.40.0.3@tcp:/lgcpfs 93012988800 18551828 92046786412   1% /lustre/lgcpfs/client
+date=2018.11.10-13.04.41
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 300 -r /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/pfind_results'
+io500_find_cmd=/scratch/io-500-dev-master/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=SSD
+io500_info_filesystem=Lustre
+io500_info_filesystem_vendor='DDN Exascaler'
+io500_info_filesystem_version=2.11.56
+io500_info_institute_name=Google
+io500_info_metadata_storage_type=SSD
+io500_info_num_client_nodes=60
+io500_info_num_data_server_nodes=60
+io500_info_num_data_storage_devices=240
+io500_info_num_metadata_server_nodes=5
+io500_info_num_metadata_storage_devices=20
+io500_info_procs_per_node=5
+io500_info_storage_age_in_months=xxx
+io500_info_storage_install_date=xxx
+io500_info_storage_interface='SAS, NVMe'
+io500_info_storage_network=ethernet
+io500_info_system_name='Exascaler on Google GCP'
+io500_info_whatever=WhateverElseYouThinkRelevant
+io500_ior_cmd=/scratch/io-500-dev-master/bin/ior
+io500_ior_easy_params='-t 2048k -b 60000m -F'
+io500_ior_easy_size=60000
+io500_ior_hard_other_options=
+io500_ior_hard_writes_per_proc=38600
+io500_mdreal_cmd=/scratch/io-500-dev-master/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/scratch/io-500-dev-master/bin/mdtest
+io500_mdtest_easy_files_per_proc=135000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=60000
+io500_mdtest_hard_other_options=
+io500_mpiargs='-np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt'
+io500_mpirun=mpirun
+io500_result_dir=/lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 60000m -F -o /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_easy/ior_file_easy -O stoneWallingStatusFile=/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               69.727 GB/s : time 403.36 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/mdtest -C -F -d /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_easy -n 135000 -u -L -x /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_easy-stonewall -W 300
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write              173.606 kiops : time 374.11 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 38600  -o /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/IOR_file -O stoneWallingStatusFile=/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                1.447 GB/s : time 560.57 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/mdtest -C -t -F -w 3901 -e 3901 -d /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard -n 60000 -x /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard-stonewall  -W 300
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write               16.646 kiops : time 1731.14 seconds
+
+[Starting] find
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/pfind /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41 -newer /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/timestampfile -size 3901c -name *01* -s 300 -r /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/pfind_results
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/find.txt.
+[FIND] MATCHED 48668/66699366 in 20.6704 seconds
+[RESULT] IOPS phase 3                      find             3226.800 kiops : time  20.67 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 60000m -F -o /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_easy/ior_file_easy -O stoneWallingStatusFile=/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_easy/stonewall
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               51.353 GB/s : time 547.68 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/mdtest -T -F -d /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_easy -n 135000 -u -L -x /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_easy-stonewall
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              347.680 kiops : time 186.84 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 38600  -o /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/IOR_file -O stoneWallingStatusFile=/lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/ior_hard/stonewall
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                8.099 GB/s : time 100.16 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/mdtest -T -t -F -w 3901 -e 3901 -d /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard -n 60000 -x /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard-stonewall 
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               81.644 kiops : time  23.72 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/mdtest -r -F -d /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_easy -n 135000 -u -L -x /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_easy-stonewall
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               98.217 kiops : time 661.74 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/mdtest -E -t -F -w 3901 -e 3901 -d /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard -n 60000 -x /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard-stonewall 
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              174.057 kiops : time  11.34 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun -np 480 -ppn 1 -f /lustre/lgcpfs/client/cfg/machines.txt /scratch/io-500-dev-master/bin/mdtest -r -t -F -w 3901 -e 3901 -d /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard -n 60000 -x /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41/mdt_hard-stonewall 
+[Results] in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete               57.248 kiops : time  33.63 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41
+[Summary] Results files in /lustre/lgcpfs/client/io500/results/2018.11.10-13.04.41
+[Summary] Data files in /lustre/lgcpfs/client/io500/datafiles/io500.2018.11.10-13.04.41
+[RESULT] BW   phase 1            ior_easy_write               69.727 GB/s : time 403.36 seconds
+[RESULT] BW   phase 2            ior_hard_write                1.447 GB/s : time 560.57 seconds
+[RESULT] BW   phase 3             ior_easy_read               51.353 GB/s : time 547.68 seconds
+[RESULT] BW   phase 4             ior_hard_read                8.099 GB/s : time 100.16 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write              173.606 kiops : time 374.11 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write               16.646 kiops : time 1731.14 seconds
+[RESULT] IOPS phase 3                      find             3226.800 kiops : time  20.67 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              347.680 kiops : time 186.84 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               81.644 kiops : time  23.72 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               98.217 kiops : time 661.74 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              174.057 kiops : time  11.34 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete               57.248 kiops : time  33.63 seconds
+[SCORE] Bandwidth 14.3124 GB/s : IOPS 150.2 kiops : TOTAL 46.3651

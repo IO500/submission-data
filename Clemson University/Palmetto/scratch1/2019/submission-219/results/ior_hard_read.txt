@@ -1,0 +1,56 @@
+[node1832.palmetto.clemson.edu:37266] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1806.palmetto.clemson.edu:10349] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1881.palmetto.clemson.edu:61380] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0121.palmetto.clemson.edu:08975] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0046.palmetto.clemson.edu:94191] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0139.palmetto.clemson.edu:27353] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1810.palmetto.clemson.edu:03913] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1808.palmetto.clemson.edu:18549] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0145.palmetto.clemson.edu:55212] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0175.palmetto.clemson.edu:63449] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1882.palmetto.clemson.edu:59148] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1805.palmetto.clemson.edu:78230] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1811.palmetto.clemson.edu:10105] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0200.palmetto.clemson.edu:41382] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1883.palmetto.clemson.edu:122401] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0653.palmetto.clemson.edu:101417] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Oct 18 14:11:14 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 2000000 -a MPIIO -o /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_hard/stonewall
+Machine             : Linux node0046.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Oct 18 14:11:14 2018
+Path                : /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_hard
+FS                  : 232.8 TiB   Used FS: 14.3%   Inodes: 4398046511104.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 2000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 16
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.37 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 1504256000000.
+WARNING: Stat() of aggregate file size      = 274280774144.
+WARNING: Using actual aggregate bytes moved = 274280774144.
+read      479.08     45.91      45.91      0.354061   545.64     0.000873   545.99     0   
+Max Read:  479.08 MiB/sec (502.35 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read          479.08     479.08     479.08       0.00   10686.54   10686.54   10686.54       0.00  545.99242     0     16   1    1   0     1        1         0    0 2000000    47008    47008  261574.5 MPIIO      0
+Finished            : Thu Oct 18 14:20:20 2018

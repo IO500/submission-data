@@ -1,0 +1,93 @@
+[node1832.palmetto.clemson.edu:35932] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1806.palmetto.clemson.edu:09154] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1881.palmetto.clemson.edu:60182] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0121.palmetto.clemson.edu:07838] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1808.palmetto.clemson.edu:17409] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0145.palmetto.clemson.edu:53919] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0200.palmetto.clemson.edu:40180] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0046.palmetto.clemson.edu:93028] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0139.palmetto.clemson.edu:26203] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1810.palmetto.clemson.edu:02805] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1883.palmetto.clemson.edu:121185] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1811.palmetto.clemson.edu:09031] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0175.palmetto.clemson.edu:62261] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1805.palmetto.clemson.edu:77000] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0653.palmetto.clemson.edu:100306] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1882.palmetto.clemson.edu:58009] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Oct 18 13:18:29 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2m -b 131072m -F -a MPIIO -o /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux node0046.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Oct 18 13:18:29 2018
+Path                : /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_easy
+FS                  : 232.8 TiB   Used FS: 14.5%   Inodes: 4398046511104.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 16
+clients per node    : 1
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 128 GiB
+aggregate filesize  : 2 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+[E 13:23:30.153970] job_time_mgr_expire: job time out: cancelling bmi operation, job_id: 272.
+stonewalling pairs accessed min: 8 max: 50995 -- min data: 0.0 GiB mean data: 81.4 GiB time: 304.9s
+WARNING: Expected aggregate file size       = 2199023255552.
+WARNING: Stat() of aggregate file size      = 1711108259840.
+WARNING: Using actual aggregate bytes moved = 1711108259840.
+WARNING: maybe caused by deadlineForStonewalling
+write     3485.42    134217728  2048.00    0.591140   467.60     0.001545   468.19     0   
+Max Write: 3485.42 MiB/sec (3654.73 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        3485.42    3485.42    3485.42       0.00    1742.71    1742.71    1742.71       0.00  468.19008     0     16   1    1   1     1        1         0    0      1 137438953472  2097152 1631840.0 MPIIO      0
+Finished            : Thu Oct 18 13:26:18 2018

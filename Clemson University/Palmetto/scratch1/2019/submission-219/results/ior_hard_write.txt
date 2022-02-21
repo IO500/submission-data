@@ -1,0 +1,62 @@
+[node1808.palmetto.clemson.edu:17777] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0145.palmetto.clemson.edu:54315] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1881.palmetto.clemson.edu:60552] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1832.palmetto.clemson.edu:36329] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0046.palmetto.clemson.edu:93406] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1806.palmetto.clemson.edu:09518] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0175.palmetto.clemson.edu:62645] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1805.palmetto.clemson.edu:77396] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1810.palmetto.clemson.edu:03179] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0200.palmetto.clemson.edu:40578] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0139.palmetto.clemson.edu:26578] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1883.palmetto.clemson.edu:121572] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0121.palmetto.clemson.edu:08209] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1882.palmetto.clemson.edu:58375] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node1811.palmetto.clemson.edu:09391] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+[node0653.palmetto.clemson.edu:100676] mca: base: component_find: unable to open /software/openmpi/1.10.7_gcc/lib/openmpi/mca_btl_openib: libibverbs.so.1: cannot open shared object file: No such file or directory (ignored)
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Oct 18 13:32:16 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 2000000 -a MPIIO -o /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux node0046.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Oct 18 13:32:16 2018
+Path                : /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_hard
+FS                  : 232.8 TiB   Used FS: 14.0%   Inodes: 4398046511104.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /scratch1/jburto2/io500/datafiles/io500.2018.10.18-13.18.27/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 2000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 16
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.37 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+cannot create file without MPI_MODE_CREATE
+cannot create file without MPI_MODE_CREATE
+stonewalling pairs accessed min: 364668 max: 364673 -- min data: 16.0 GiB mean data: 16.0 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 1504256000000.
+WARNING: Stat() of aggregate file size      = 274280774144.
+WARNING: Using actual aggregate bytes moved = 274280774144.
+WARNING: maybe caused by deadlineForStonewalling
+write     849.08     45.91      45.91      0.478721   307.59     0.000989   308.07     0   
+Max Write: 849.08 MiB/sec (890.33 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         849.08     849.08     849.08       0.00   18939.95   18939.95   18939.95       0.00  308.06671     0     16   1    1   0     1        1         0    0 2000000    47008    47008  261574.5 MPIIO      0
+Finished            : Thu Oct 18 13:37:25 2018

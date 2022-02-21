@@ -1,0 +1,32 @@
+-- started at 07/14/2020 01:47:20 --
+
+mdtest-3.3.0+dev was launched with 160 total task(s) on 10 node(s)
+Command line used: /home/vef/git/io500-app/bin/mdtest '-r' '-F' '-P' '-d' '/tmp/vef_mountdir/io500-scr/mdt_easy' '-n' '5000000' '-u' '-L' '-a' 'POSIX' '-x' '/tmp/vef_mountdir/io500-scr/mdt_easy-stonewall' '-N' '1'
+Path: /tmp/vef_mountdir/io500-scr
+FS: 83.2 TiB   Used FS: 25.8%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 1000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 1 for each phase.
+160 tasks, 800000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :     782981.276     782981.099     782981.182          0.038
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.066          0.066          0.066          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        633.920        633.919        633.920          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :         15.156         15.156         15.156          0.000
+-- finished at 07/14/2020 01:58:10 --
+

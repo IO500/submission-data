@@ -1,0 +1,209 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jul 14 00:57:44 2020
+Command line        : /home/vef/git/io500-app/bin/ior -w -a POSIX -t 64m -v -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /tmp/vef_mountdir/io500-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/tmp/vef_mountdir/io500-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux x0003.mogon
+Start time skew across all tasks: 243197.02 sec
+TestID              : 0
+StartTime           : Tue Jul 14 00:57:44 2020
+Path                : /tmp/vef_mountdir/io500-scr/ior_easy
+FS                  : 83.2 TiB   Used FS: 0.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+Participating tasks: 160
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/vef_mountdir/io500-scr/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 64 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 1513.67 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Tue Jul 14 00:57:45 2020
+83: stonewalling pairs accessed: 1877
+127: stonewalling pairs accessed: 1856
+93: stonewalling pairs accessed: 2018
+82: stonewalling pairs accessed: 1828
+153: stonewalling pairs accessed: 1931
+151: stonewalling pairs accessed: 1992
+25: stonewalling pairs accessed: 1848
+45: stonewalling pairs accessed: 1830
+105: stonewalling pairs accessed: 1834
+135: stonewalling pairs accessed: 1939
+44: stonewalling pairs accessed: 1838
+24: stonewalling pairs accessed: 1865
+37: stonewalling pairs accessed: 1970
+43: stonewalling pairs accessed: 1935
+123: stonewalling pairs accessed: 1873
+20: stonewalling pairs accessed: 1860
+65: stonewalling pairs accessed: 1842
+143: stonewalling pairs accessed: 1878
+29: stonewalling pairs accessed: 1843
+104: stonewalling pairs accessed: 1816
+18: stonewalling pairs accessed: 2017
+98: stonewalling pairs accessed: 1968
+130: stonewalling pairs accessed: 1963
+110: stonewalling pairs accessed: 1995
+53: stonewalling pairs accessed: 1938
+55: stonewalling pairs accessed: 2066
+115: stonewalling pairs accessed: 1983
+0: stonewalling pairs accessed: 1854
+9: stonewalling pairs accessed: 1811
+69: stonewalling pairs accessed: 1893
+79: stonewalling pairs accessed: 2002
+8: stonewalling pairs accessed: 1858
+138: stonewalling pairs accessed: 1990
+149: stonewalling pairs accessed: 1814
+119: stonewalling pairs accessed: 2030
+19: stonewalling pairs accessed: 2035
+109: stonewalling pairs accessed: 1801
+94: stonewalling pairs accessed: 1999
+4: stonewalling pairs accessed: 1828
+3: stonewalling pairs accessed: 1871
+2: stonewalling pairs accessed: 1868
+32: stonewalling pairs accessed: 2063
+158: stonewalling pairs accessed: 1933
+102: stonewalling pairs accessed: 1827
+14: stonewalling pairs accessed: 2013
+59: stonewalling pairs accessed: 1994
+139: stonewalling pairs accessed: 2025
+154: stonewalling pairs accessed: 1914
+27: stonewalling pairs accessed: 1851
+52: stonewalling pairs accessed: 1948
+58: stonewalling pairs accessed: 2055
+140: stonewalling pairs accessed: 1839
+71: stonewalling pairs accessed: 2017
+50: stonewalling pairs accessed: 1979
+85: stonewalling pairs accessed: 1859
+1: stonewalling pairs accessed: 1910
+114: stonewalling pairs accessed: 1982
+157: stonewalling pairs accessed: 1951
+64: stonewalling pairs accessed: 1901
+41: stonewalling pairs accessed: 1849
+67: stonewalling pairs accessed: 1879
+101: stonewalling pairs accessed: 1846
+7: stonewalling pairs accessed: 1865
+107: stonewalling pairs accessed: 1813
+137: stonewalling pairs accessed: 1990
+144: stonewalling pairs accessed: 1875
+49: stonewalling pairs accessed: 1876
+36: stonewalling pairs accessed: 1900
+23: stonewalling pairs accessed: 1894
+77: stonewalling pairs accessed: 2025
+141: stonewalling pairs accessed: 1890
+84: stonewalling pairs accessed: 1886
+30: stonewalling pairs accessed: 1961
+96: stonewalling pairs accessed: 1962
+73: stonewalling pairs accessed: 1994
+6: stonewalling pairs accessed: 1862
+13: stonewalling pairs accessed: 2046
+80: stonewalling pairs accessed: 1873
+125: stonewalling pairs accessed: 1817
+108: stonewalling pairs accessed: 1877
+42: stonewalling pairs accessed: 1827
+113: stonewalling pairs accessed: 1972
+129: stonewalling pairs accessed: 1839
+136: stonewalling pairs accessed: 1959
+66: stonewalling pairs accessed: 1861
+26: stonewalling pairs accessed: 1832
+46: stonewalling pairs accessed: 1875
+62: stonewalling pairs accessed: 1871
+122: stonewalling pairs accessed: 1859
+74: stonewalling pairs accessed: 1951
+131: stonewalling pairs accessed: 1938
+68: stonewalling pairs accessed: 1869
+87: stonewalling pairs accessed: 1832
+11: stonewalling pairs accessed: 1938
+133: stonewalling pairs accessed: 1994
+146: stonewalling pairs accessed: 1823
+112: stonewalling pairs accessed: 1987
+33: stonewalling pairs accessed: 1939
+106: stonewalling pairs accessed: 1813
+28: stonewalling pairs accessed: 1830
+132: stonewalling pairs accessed: 1951
+54: stonewalling pairs accessed: 1915
+75: stonewalling pairs accessed: 1950
+148: stonewalling pairs accessed: 1869
+147: stonewalling pairs accessed: 1851
+126: stonewalling pairs accessed: 1804
+22: stonewalling pairs accessed: 1852
+145: stonewalling pairs accessed: 1842
+95: stonewalling pairs accessed: 1976
+142: stonewalling pairs accessed: 1815
+10: stonewalling pairs accessed: 1980
+81: stonewalling pairs accessed: 1842
+56: stonewalling pairs accessed: 2003
+17: stonewalling pairs accessed: 1916
+21: stonewalling pairs accessed: 1863
+128: stonewalling pairs accessed: 1875
+35: stonewalling pairs accessed: 1938
+12: stonewalling pairs accessed: 1972
+63: stonewalling pairs accessed: 1787
+60: stonewalling pairs accessed: 1841
+38: stonewalling pairs accessed: 2009
+155: stonewalling pairs accessed: 1911
+31: stonewalling pairs accessed: 2003
+118: stonewalling pairs accessed: 1972
+15: stonewalling pairs accessed: 1999
+103: stonewalling pairs accessed: 1905
+89: stonewalling pairs accessed: 1847
+159: stonewalling pairs accessed: 1944
+120: stonewalling pairs accessed: 1867
+91: stonewalling pairs accessed: 2017
+97: stonewalling pairs accessed: 1969
+100: stonewalling pairs accessed: 1855
+72: stonewalling pairs accessed: 2014
+70: stonewalling pairs accessed: 2013
+51: stonewalling pairs accessed: 1922
+150: stonewalling pairs accessed: 1990
+99: stonewalling pairs accessed: 1928
+88: stonewalling pairs accessed: 1897
+47: stonewalling pairs accessed: 1892
+117: stonewalling pairs accessed: 1935
+111: stonewalling pairs accessed: 1910
+61: stonewalling pairs accessed: 1895
+152: stonewalling pairs accessed: 2011
+92: stonewalling pairs accessed: 2026
+90: stonewalling pairs accessed: 1925
+48: stonewalling pairs accessed: 1890
+57: stonewalling pairs accessed: 2000
+39: stonewalling pairs accessed: 1992
+78: stonewalling pairs accessed: 1986
+5: stonewalling pairs accessed: 1825
+124: stonewalling pairs accessed: 1866
+40: stonewalling pairs accessed: 1869
+121: stonewalling pairs accessed: 1778
+76: stonewalling pairs accessed: 1942
+34: stonewalling pairs accessed: 1974
+134: stonewalling pairs accessed: 1888
+16: stonewalling pairs accessed: 1974
+156: stonewalling pairs accessed: 1979
+86: stonewalling pairs accessed: 1872
+stonewalling pairs accessed min: 1778 max: 2066 -- min data: 111.1 GiB mean data: 119.7 GiB time: 300.2s
+116: stonewalling pairs accessed: 1983
+WARNING: Expected aggregate file size       = 1664299827200000.
+WARNING: Stat() of aggregate file size      = 22183506083840.
+WARNING: Using actual aggregate bytes moved = 22183506083840.
+WARNING: maybe caused by deadlineForStonewalling
+write     64626      1009.78    0.002085    10158080000 65536      0.000976   327.36     0.000209   327.36     0   
+Max Write: 64625.68 MiB/sec (67764.94 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       64625.68   64625.68   64625.68       0.00    1009.78    1009.78    1009.78       0.00  327.35964     300.23      65320.22     0    160  16    1   1     1        1         0    0      1 10401873920000 67108864 21155840.0 POSIX      0
+Finished            : Tue Jul 14 01:03:12 2020

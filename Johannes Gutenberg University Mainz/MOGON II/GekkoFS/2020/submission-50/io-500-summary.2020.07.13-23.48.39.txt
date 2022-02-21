@@ -1,0 +1,125 @@
+System:  x0003.mogon
+filesystem_utilization=/dev/sda3       20961280 3626136  17335144  18% /
+date=2020.07.13-23.48.39
+io500_clean_cache=False
+io500_clean_cache_cmd='bash -c "/cluster/System/tools/flushcache"'
+io500_cleanup_workdir=
+io500_find_cmd=/home/vef/git/io500-app/bin/pfind
+io500_find_cmd_args=
+io500_find_mpi=True
+io500_ini=config-gkfs_full.ini
+io500_ior_cmd=/home/vef/git/io500-app/bin/ior
+io500_ior_easy_params=' -a POSIX -t 64m -v -b 9920000m -F'
+io500_ior_easy_size=9920000
+io500_ior_hard_api=POSIX
+io500_ior_hard_api_specific_options=' -v'
+io500_ior_hard_writes_per_proc=10000000
+io500_mdreal_cmd=/home/vef/git/io500-app/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/home/vef/git/io500-app/bin/mdtest
+io500_mdtest_easy_files_per_proc=5000000
+io500_mdtest_easy_params='-u -L -a POSIX'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=1000000
+io500_mpiargs='-np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1'
+io500_mpirun=mpiexec
+io500_result_dir=./results/2020.07.13-23.48.39-scr
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/tmp/vef_mountdir/io500-scr
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/ior -w  -a POSIX -t 64m -v -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /tmp/vef_mountdir/io500-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/tmp/vef_mountdir/io500-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in ./results/2020.07.13-23.48.39-scr/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               63.111 GiB/s : time 327.36 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/mdtest -Y -C -F -P -d /tmp/vef_mountdir/io500-scr/mdt_easy -n 5000000 -u -L -a POSIX -x /tmp/vef_mountdir/io500-scr/mdt_easy-stonewall -N 1 -W 300
+[Results] in ./results/2020.07.13-23.48.39-scr/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write             1462.020 kiops : time 339.49 seconds
+
+[Starting] ior_hard_write
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/ior -w -s 10000000 -a POSIX  -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /tmp/vef_mountdir/io500-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/tmp/vef_mountdir/io500-scr/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in ./results/2020.07.13-23.48.39-scr/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                2.867 GiB/s : time 300.11 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/mdtest -Y -C -t -F -P -w 3901 -e 3901 -d /tmp/vef_mountdir/io500-scr/mdt_hard -n 1000000 -x /tmp/vef_mountdir/io500-scr/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in ./results/2020.07.13-23.48.39-scr/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write              249.105 kiops : time 316.24 seconds
+
+[Starting] find
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/pfind /tmp/vef_mountdir/io500-scr -newer /tmp/vef_mountdir/io500-scr/timestampfile -size 3901c -name "*01*" 
+[Results] in ./results/2020.07.13-23.48.39-scr/find.txt.
+[FIND] MATCHED 3451984/575124486 in 162.3329 seconds
+[RESULT] IOPS phase 3                      find             3542.870 kiops : time 162.33 seconds
+
+[Starting] ior_easy_read
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/ior -r -R  -a POSIX -t 64m -v -b 9920000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /tmp/vef_mountdir/io500-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/tmp/vef_mountdir/io500-scr/ior_easy/stonewall
+[Results] in ./results/2020.07.13-23.48.39-scr/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               22.486 GiB/s : time 918.77 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/mdtest -T -F -P -d /tmp/vef_mountdir/io500-scr/mdt_easy -n 5000000 -u -L -a POSIX -x /tmp/vef_mountdir/io500-scr/mdt_easy-stonewall -N 1
+[Results] in ./results/2020.07.13-23.48.39-scr/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat             1454.740 kiops : time 341.19 seconds
+
+[Starting] ior_hard_read
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/ior -r -R -s 10000000 -a POSIX  -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /tmp/vef_mountdir/io500-scr/ior_hard/IOR_file -O stoneWallingStatusFile=/tmp/vef_mountdir/io500-scr/ior_hard/stonewall
+[Results] in ./results/2020.07.13-23.48.39-scr/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                4.460 GiB/s : time 192.87 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d /tmp/vef_mountdir/io500-scr/mdt_hard -n 1000000 -x /tmp/vef_mountdir/io500-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.07.13-23.48.39-scr/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat             1493.590 kiops : time  52.74 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/mdtest -r -F -P -d /tmp/vef_mountdir/io500-scr/mdt_easy -n 5000000 -u -L -a POSIX -x /tmp/vef_mountdir/io500-scr/mdt_easy-stonewall -N 1
+[Results] in ./results/2020.07.13-23.48.39-scr/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              782.981 kiops : time 633.92 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d /tmp/vef_mountdir/io500-scr/mdt_hard -n 1000000 -x /tmp/vef_mountdir/io500-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.07.13-23.48.39-scr/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              284.090 kiops : time 277.30 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpiexec -np 160 --map-by node --hostfile /home/vef/hostfile -x LD_PRELOAD=/gpfs/fs1/home/vef/scp/gekkofs/build/src/client/libgkfs_intercept.so -x LIBGKFS_HOSTS_FILE=/lustre/miifs01/project/m2_zdvresearch/vef/gkfs_hostfile -x FI_PSM2_DISCONNECT=1 -x PSM2_MULTI_EP=1 /home/vef/git/io500-app/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d /tmp/vef_mountdir/io500-scr/mdt_hard -n 1000000 -x /tmp/vef_mountdir/io500-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.07.13-23.48.39-scr/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete              273.357 kiops : time 290.65 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /tmp/vef_mountdir/io500-scr
+[Summary] Results files in ./results/2020.07.13-23.48.39-scr
+[Summary] Data files in /tmp/vef_mountdir/io500-scr
+[RESULT] BW   phase 1            ior_easy_write               63.111 GiB/s : time 327.36 seconds
+[RESULT] BW   phase 2            ior_hard_write                2.867 GiB/s : time 300.11 seconds
+[RESULT] BW   phase 3             ior_easy_read               22.486 GiB/s : time 918.77 seconds
+[RESULT] BW   phase 4             ior_hard_read                4.460 GiB/s : time 192.87 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write             1462.020 kiops : time 339.49 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write              249.105 kiops : time 316.24 seconds
+[RESULT] IOPS phase 3                      find             3542.870 kiops : time 162.33 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat             1454.740 kiops : time 341.19 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat             1493.590 kiops : time  52.74 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              782.981 kiops : time 633.92 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              284.090 kiops : time 277.30 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete              273.357 kiops : time 290.65 seconds
+[SCORE] Bandwidth 11.6068 GiB/s : IOPS 801.596 kiops : TOTAL 96.4571

@@ -1,0 +1,36 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 26 09:11:38 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/r/ior-hard/file -O stoneWallingStatusFile=./results_run_second/2020.10.26-08.35.23/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a POSIX
+Machine             : Linux nextgenio-cn01
+TestID              : 0
+StartTime           : Mon Oct 26 09:11:38 2020
+Path                : /tmp/r/ior-hard/file
+FS                  : 56.3 TiB   Used FS: 49.8%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/r/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 360
+clients per node    : 36
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 153.91 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 74777 max: 74777 -- min data: 3.3 GiB mean data: 3.3 GiB time: 42.9s
+WARNING: Expected aggregate file size       = 169228800000000
+WARNING: Stat() of aggregate file size      = 1265442197760
+WARNING: Using actual aggregate bytes moved = 1265442197760
+read      27984      627267     42.91       45.91      45.91      0.216062   42.92      0.008112   43.13      0   

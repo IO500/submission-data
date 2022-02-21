@@ -1,0 +1,43 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jul 14 15:55:53 2020
+Command line        : /scratch2/leh015/io500-app/bin/ior -r -R -a POSIX -t 16m --posix.odirect -v -b 130000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.07.14-13.32.08-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=./datafiles/2020.07.14-13.32.08-scr/ior_easy/stonewall
+Machine             : Linux bss022
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Tue Jul 14 15:55:53 2020
+Path                : /scratch2/leh015/io500-app/datafiles/2020.07.14-13.32.08-scr/ior_easy
+FS                  : 457.2 TiB   Used FS: 11.6%   Inodes: 3984.8 Mi   Used Inodes: 7.1%
+Participating tasks: 400
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/2020.07.14-13.32.08-scr/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 400
+clients per node    : 40
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 126.95 GiB
+aggregate filesize  : 49.59 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing read performance test: Tue Jul 14 15:55:53 2020
+
+read      136828     8554       0.046748    133120000  16384      0.093511   379.93     0.085107   380.04     0   
+Max Read:  136827.89 MiB/sec (143474.45 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       136827.89  136827.89  136827.89       0.00    8551.74    8551.74    8551.74       0.00  380.03947         NA            NA     0    400  40    1   1     1        1         0    0      1 136314880000 16777216 52000000.0 POSIX      0
+Finished            : Tue Jul 14 16:02:13 2020

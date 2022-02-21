@@ -1,0 +1,125 @@
+System:  bss022
+filesystem_utilization=10.149.10.116@o2ib:/lustrefs 490966201296 55929454512 430064356668  12% /scratch2
+date=2020.07.14-13.32.08
+io500_clean_cache=False
+io500_clean_cache_cmd='sudo -n bash -c "echo 3 > /proc/sys/vm/drop_caches"'
+io500_cleanup_workdir=
+io500_find_cmd=/scratch2/leh015/io500-app/bin/pfind
+io500_find_cmd_args=
+io500_find_mpi=True
+io500_ini=config-full.ini
+io500_ior_cmd=/scratch2/leh015/io500-app/bin/ior
+io500_ior_easy_params=' -a POSIX -t 16m --posix.odirect -v -b 130000m -F'
+io500_ior_easy_size=130000
+io500_ior_hard_api=POSIX
+io500_ior_hard_api_specific_options=' -v'
+io500_ior_hard_writes_per_proc=200000
+io500_mdreal_cmd=/scratch2/leh015/io500-app/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/scratch2/leh015/io500-app/bin/mdtest
+io500_mdtest_easy_files_per_proc=340000
+io500_mdtest_easy_params='-u -L -a POSIX'
+io500_mdtest_hard_api=POSIX
+io500_mdtest_hard_api_specific_options=
+io500_mdtest_hard_files_per_proc=800000
+io500_mpiargs='--hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif'
+io500_mpirun=/scratch2/tools/bin/mpirun
+io500_result_dir=./results/2020.07.14-13.32.08-scr
+io500_rules=regular
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=./datafiles/2020.07.14-13.32.08-scr
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/ior -w  -a POSIX -t 16m --posix.odirect -v -b 130000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.07.14-13.32.08-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=./datafiles/2020.07.14-13.32.08-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in ./results/2020.07.14-13.32.08-scr/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write              135.033 GiB/s : time 375.95 seconds
+
+[Starting] mdtest_easy_write
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/mdtest -Y -C -F -P -d ./datafiles/2020.07.14-13.32.08-scr/mdt_easy -n 340000 -u -L -a POSIX -x ./datafiles/2020.07.14-13.32.08-scr/mdt_easy-stonewall -N 1 -W 300
+[Results] in ./results/2020.07.14-13.32.08-scr/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write              206.327 kiops : time 659.17 seconds
+
+[Starting] ior_hard_write
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/ior -w -s 200000 -a POSIX  -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o ./datafiles/2020.07.14-13.32.08-scr/ior_hard/IOR_file -O stoneWallingStatusFile=./datafiles/2020.07.14-13.32.08-scr/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in ./results/2020.07.14-13.32.08-scr/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write               10.440 GiB/s : time 335.39 seconds
+
+[Starting] mdtest_hard_write
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/mdtest -Y -C -t -F -P -w 3901 -e 3901 -d ./datafiles/2020.07.14-13.32.08-scr/mdt_hard -n 800000 -x ./datafiles/2020.07.14-13.32.08-scr/mdt_hard-stonewall -a POSIX  -N 1 -W 300
+[Results] in ./results/2020.07.14-13.32.08-scr/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write              150.710 kiops : time 525.81 seconds
+
+[Starting] find
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/pfind ./datafiles/2020.07.14-13.32.08-scr -newer ./datafiles/2020.07.14-13.32.08-scr/timestampfile -size 3901c -name "*01*" 
+[Results] in ./results/2020.07.14-13.32.08-scr/find.txt.
+[FIND] MATCHED 3302231/215239606 in 404.2288 seconds
+[RESULT] IOPS phase 3                      find              532.460 kiops : time 404.23 seconds
+
+[Starting] ior_easy_read
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/ior -r -R  -a POSIX -t 16m --posix.odirect -v -b 130000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.07.14-13.32.08-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=./datafiles/2020.07.14-13.32.08-scr/ior_easy/stonewall
+[Results] in ./results/2020.07.14-13.32.08-scr/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              133.621 GiB/s : time 379.93 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/mdtest -T -F -P -d ./datafiles/2020.07.14-13.32.08-scr/mdt_easy -n 340000 -u -L -a POSIX -x ./datafiles/2020.07.14-13.32.08-scr/mdt_easy-stonewall -N 1
+[Results] in ./results/2020.07.14-13.32.08-scr/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              485.453 kiops : time 280.20 seconds
+
+[Starting] ior_hard_read
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/ior -r -R -s 200000 -a POSIX  -v -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o ./datafiles/2020.07.14-13.32.08-scr/ior_hard/IOR_file -O stoneWallingStatusFile=./datafiles/2020.07.14-13.32.08-scr/ior_hard/stonewall
+[Results] in ./results/2020.07.14-13.32.08-scr/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read               13.458 GiB/s : time 260.13 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/mdtest -T -t -F -P -w 3901 -e 3901 -d ./datafiles/2020.07.14-13.32.08-scr/mdt_hard -n 800000 -x ./datafiles/2020.07.14-13.32.08-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.07.14-13.32.08-scr/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat              378.141 kiops : time 209.62 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/mdtest -r -F -P -d ./datafiles/2020.07.14-13.32.08-scr/mdt_easy -n 340000 -u -L -a POSIX -x ./datafiles/2020.07.14-13.32.08-scr/mdt_easy-stonewall -N 1
+[Results] in ./results/2020.07.14-13.32.08-scr/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              186.398 kiops : time 729.69 seconds
+
+[Starting] mdtest_hard_read
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/mdtest -X -E -t -F -P -w 3901 -e 3901 -d ./datafiles/2020.07.14-13.32.08-scr/mdt_hard -n 800000 -x ./datafiles/2020.07.14-13.32.08-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.07.14-13.32.08-scr/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              208.812 kiops : time 379.51 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] /scratch2/tools/bin/mpirun --hostfile host.io500 --allow-run-as-root --mca orte_base_help_aggregate 0 singularity.sh -B /usr/lib64 -B /sys/class/infiniband_verbs -B /bin -B /sbin /scratch/centos8.sif /scratch2/leh015/io500-app/bin/mdtest -r -t -F -P -w 3901 -e 3901 -d ./datafiles/2020.07.14-13.32.08-scr/mdt_hard -n 800000 -x ./datafiles/2020.07.14-13.32.08-scr/mdt_hard-stonewall -a POSIX  -N 1
+[Results] in ./results/2020.07.14-13.32.08-scr/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete              124.152 kiops : time 646.20 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in ./datafiles/2020.07.14-13.32.08-scr
+[Summary] Results files in ./results/2020.07.14-13.32.08-scr
+[Summary] Data files in ./datafiles/2020.07.14-13.32.08-scr
+[RESULT] BW   phase 1            ior_easy_write              135.033 GiB/s : time 375.95 seconds
+[RESULT] BW   phase 2            ior_hard_write               10.440 GiB/s : time 335.39 seconds
+[RESULT] BW   phase 3             ior_easy_read              133.621 GiB/s : time 379.93 seconds
+[RESULT] BW   phase 4             ior_hard_read               13.458 GiB/s : time 260.13 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write              206.327 kiops : time 659.17 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write              150.710 kiops : time 525.81 seconds
+[RESULT] IOPS phase 3                      find              532.460 kiops : time 404.23 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              485.453 kiops : time 280.20 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              378.141 kiops : time 209.62 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              186.398 kiops : time 729.69 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              208.812 kiops : time 379.51 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete              124.152 kiops : time 646.20 seconds
+[SCORE] Bandwidth 39.9019 GiB/s : IOPS 248.81 kiops : TOTAL 99.6393

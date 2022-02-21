@@ -1,0 +1,36 @@
+-- started at 07/14/2020 15:36:01 --
+
+mdtest-3.3.0+dev was launched with 400 total task(s) on 10 node(s)
+Command line used: /scratch2/leh015/io500-app/bin/mdtest '-Y' '-C' '-t' '-F' '-P' '-w' '3901' '-e' '3901' '-d' './datafiles/2020.07.14-13.32.08-scr/mdt_hard' '-n' '800000' '-x' './datafiles/2020.07.14-13.32.08-scr/mdt_hard-stonewall' '-a' 'POSIX' '-N' '1' '-W' '300'
+Path: /scratch2/leh015/io500-app/datafiles/2020.07.14-13.32.08-scr
+FS: 457.2 TiB   Used FS: 11.6%   Inodes: 3909.2 Mi   Used Inodes: 5.3%
+
+Nodemap: 1111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2166 Shifting ranks by 40 for each phase.
+400 tasks, 320000000 files
+Continue stonewall hit min: 141209 max: 198098 avg: 164669.8 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :     150710.483     150699.175     150706.922          1.978
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA     220021.404             NA
+   Tree creation             :          1.546          1.546          1.546          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :        525.810        525.771        525.783          0.007
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA        299.371             NA
+   Tree creation             :          0.647          0.647          0.647          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 07/14/2020 15:49:06 --
+

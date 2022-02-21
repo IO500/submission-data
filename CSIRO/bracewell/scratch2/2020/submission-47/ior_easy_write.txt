@@ -1,0 +1,445 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jul 14 15:09:04 2020
+Command line        : /scratch2/leh015/io500-app/bin/ior -w -a POSIX -t 16m --posix.odirect -v -b 130000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.07.14-13.32.08-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=./datafiles/2020.07.14-13.32.08-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux bss022
+Start time skew across all tasks: 0.00 sec
+TestID              : 0
+StartTime           : Tue Jul 14 15:09:04 2020
+Path                : /scratch2/leh015/io500-app/datafiles/2020.07.14-13.32.08-scr/ior_easy
+FS                  : 457.2 TiB   Used FS: 10.6%   Inodes: 3779.5 Mi   Used Inodes: 2.0%
+Participating tasks: 400
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/2020.07.14-13.32.08-scr/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 400
+clients per node    : 40
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 126.95 GiB
+aggregate filesize  : 49.59 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Tue Jul 14 15:09:04 2020
+211: stonewalling pairs accessed: 8125
+201: stonewalling pairs accessed: 8125
+210: stonewalling pairs accessed: 8125
+222: stonewalling pairs accessed: 8125
+215: stonewalling pairs accessed: 8125
+207: stonewalling pairs accessed: 8125
+229: stonewalling pairs accessed: 8125
+228: stonewalling pairs accessed: 8125
+129: stonewalling pairs accessed: 8125
+155: stonewalling pairs accessed: 8125
+219: stonewalling pairs accessed: 8125
+362: stonewalling pairs accessed: 8125
+301: stonewalling pairs accessed: 8125
+203: stonewalling pairs accessed: 8125
+214: stonewalling pairs accessed: 8125
+379: stonewalling pairs accessed: 8125
+221: stonewalling pairs accessed: 8125
+84: stonewalling pairs accessed: 8125
+344: stonewalling pairs accessed: 8125
+226: stonewalling pairs accessed: 8125
+239: stonewalling pairs accessed: 8125
+98: stonewalling pairs accessed: 8125
+213: stonewalling pairs accessed: 8125
+234: stonewalling pairs accessed: 8125
+195: stonewalling pairs accessed: 8125
+218: stonewalling pairs accessed: 8125
+220: stonewalling pairs accessed: 8125
+162: stonewalling pairs accessed: 8125
+212: stonewalling pairs accessed: 8125
+367: stonewalling pairs accessed: 8125
+103: stonewalling pairs accessed: 8125
+161: stonewalling pairs accessed: 8125
+372: stonewalling pairs accessed: 8125
+124: stonewalling pairs accessed: 8125
+308: stonewalling pairs accessed: 8125
+292: stonewalling pairs accessed: 8125
+94: stonewalling pairs accessed: 8125
+281: stonewalling pairs accessed: 8125
+223: stonewalling pairs accessed: 8125
+216: stonewalling pairs accessed: 8125
+111: stonewalling pairs accessed: 8125
+141: stonewalling pairs accessed: 8125
+205: stonewalling pairs accessed: 8125
+236: stonewalling pairs accessed: 8125
+342: stonewalling pairs accessed: 8125
+164: stonewalling pairs accessed: 8125
+291: stonewalling pairs accessed: 8125
+179: stonewalling pairs accessed: 8125
+121: stonewalling pairs accessed: 8125
+166: stonewalling pairs accessed: 8125
+356: stonewalling pairs accessed: 8125
+122: stonewalling pairs accessed: 8125
+392: stonewalling pairs accessed: 8125
+360: stonewalling pairs accessed: 8125
+199: stonewalling pairs accessed: 8125
+290: stonewalling pairs accessed: 8125
+137: stonewalling pairs accessed: 8125
+285: stonewalling pairs accessed: 8125
+147: stonewalling pairs accessed: 8125
+358: stonewalling pairs accessed: 8125
+387: stonewalling pairs accessed: 8125
+192: stonewalling pairs accessed: 8125
+117: stonewalling pairs accessed: 8125
+232: stonewalling pairs accessed: 8125
+159: stonewalling pairs accessed: 8125
+138: stonewalling pairs accessed: 8125
+177: stonewalling pairs accessed: 8125
+293: stonewalling pairs accessed: 8125
+283: stonewalling pairs accessed: 8125
+182: stonewalling pairs accessed: 8125
+163: stonewalling pairs accessed: 8125
+17: stonewalling pairs accessed: 8125
+386: stonewalling pairs accessed: 8125
+224: stonewalling pairs accessed: 8125
+225: stonewalling pairs accessed: 8125
+180: stonewalling pairs accessed: 8125
+244: stonewalling pairs accessed: 8125
+183: stonewalling pairs accessed: 8125
+299: stonewalling pairs accessed: 8125
+289: stonewalling pairs accessed: 8125
+366: stonewalling pairs accessed: 8125
+193: stonewalling pairs accessed: 8125
+307: stonewalling pairs accessed: 8125
+186: stonewalling pairs accessed: 8125
+151: stonewalling pairs accessed: 8125
+135: stonewalling pairs accessed: 8125
+300: stonewalling pairs accessed: 8125
+140: stonewalling pairs accessed: 8125
+303: stonewalling pairs accessed: 8125
+305: stonewalling pairs accessed: 8125
+8: stonewalling pairs accessed: 8125
+100: stonewalling pairs accessed: 8125
+373: stonewalling pairs accessed: 8125
+50: stonewalling pairs accessed: 8125
+316: stonewalling pairs accessed: 8125
+310: stonewalling pairs accessed: 8125
+313: stonewalling pairs accessed: 8125
+127: stonewalling pairs accessed: 8125
+376: stonewalling pairs accessed: 8125
+158: stonewalling pairs accessed: 8125
+19: stonewalling pairs accessed: 8125
+286: stonewalling pairs accessed: 8125
+206: stonewalling pairs accessed: 8125
+370: stonewalling pairs accessed: 8125
+287: stonewalling pairs accessed: 8125
+3: stonewalling pairs accessed: 8125
+97: stonewalling pairs accessed: 8125
+208: stonewalling pairs accessed: 8125
+115: stonewalling pairs accessed: 8125
+104: stonewalling pairs accessed: 8125
+378: stonewalling pairs accessed: 8125
+384: stonewalling pairs accessed: 8125
+123: stonewalling pairs accessed: 8125
+154: stonewalling pairs accessed: 8125
+82: stonewalling pairs accessed: 8125
+198: stonewalling pairs accessed: 8125
+160: stonewalling pairs accessed: 8125
+238: stonewalling pairs accessed: 8125
+297: stonewalling pairs accessed: 8125
+359: stonewalling pairs accessed: 8125
+348: stonewalling pairs accessed: 8125
+150: stonewalling pairs accessed: 8125
+125: stonewalling pairs accessed: 8125
+145: stonewalling pairs accessed: 8125
+322: stonewalling pairs accessed: 8125
+383: stonewalling pairs accessed: 8125
+374: stonewalling pairs accessed: 8125
+92: stonewalling pairs accessed: 8125
+237: stonewalling pairs accessed: 8125
+230: stonewalling pairs accessed: 8125
+185: stonewalling pairs accessed: 8125
+350: stonewalling pairs accessed: 8125
+119: stonewalling pairs accessed: 8125
+327: stonewalling pairs accessed: 8125
+397: stonewalling pairs accessed: 8125
+156: stonewalling pairs accessed: 8125
+328: stonewalling pairs accessed: 8125
+391: stonewalling pairs accessed: 8125
+189: stonewalling pairs accessed: 8125
+96: stonewalling pairs accessed: 8125
+187: stonewalling pairs accessed: 8125
+339: stonewalling pairs accessed: 8125
+394: stonewalling pairs accessed: 8125
+349: stonewalling pairs accessed: 8125
+361: stonewalling pairs accessed: 8125
+12: stonewalling pairs accessed: 8125
+320: stonewalling pairs accessed: 8125
+396: stonewalling pairs accessed: 8125
+18: stonewalling pairs accessed: 8125
+142: stonewalling pairs accessed: 8125
+107: stonewalling pairs accessed: 8125
+101: stonewalling pairs accessed: 8125
+83: stonewalling pairs accessed: 8125
+246: stonewalling pairs accessed: 8125
+81: stonewalling pairs accessed: 8125
+165: stonewalling pairs accessed: 8125
+227: stonewalling pairs accessed: 8125
+91: stonewalling pairs accessed: 8125
+87: stonewalling pairs accessed: 8125
+265: stonewalling pairs accessed: 8125
+133: stonewalling pairs accessed: 8125
+46: stonewalling pairs accessed: 8125
+245: stonewalling pairs accessed: 8125
+312: stonewalling pairs accessed: 8125
+99: stonewalling pairs accessed: 8125
+267: stonewalling pairs accessed: 8125
+262: stonewalling pairs accessed: 8125
+202: stonewalling pairs accessed: 8125
+217: stonewalling pairs accessed: 8125
+13: stonewalling pairs accessed: 8125
+190: stonewalling pairs accessed: 8125
+85: stonewalling pairs accessed: 8125
+171: stonewalling pairs accessed: 8125
+64: stonewalling pairs accessed: 8125
+45: stonewalling pairs accessed: 8125
+35: stonewalling pairs accessed: 8125
+294: stonewalling pairs accessed: 8125
+242: stonewalling pairs accessed: 8125
+63: stonewalling pairs accessed: 8125
+393: stonewalling pairs accessed: 8125
+157: stonewalling pairs accessed: 8125
+28: stonewalling pairs accessed: 8125
+345: stonewalling pairs accessed: 8125
+343: stonewalling pairs accessed: 8125
+200: stonewalling pairs accessed: 8125
+76: stonewalling pairs accessed: 8125
+279: stonewalling pairs accessed: 8125
+134: stonewalling pairs accessed: 8125
+259: stonewalling pairs accessed: 8125
+148: stonewalling pairs accessed: 8125
+352: stonewalling pairs accessed: 8125
+336: stonewalling pairs accessed: 8125
+25: stonewalling pairs accessed: 8125
+204: stonewalling pairs accessed: 8125
+304: stonewalling pairs accessed: 8125
+233: stonewalling pairs accessed: 8125
+20: stonewalling pairs accessed: 8125
+209: stonewalling pairs accessed: 8125
+268: stonewalling pairs accessed: 8125
+31: stonewalling pairs accessed: 8125
+380: stonewalling pairs accessed: 8125
+24: stonewalling pairs accessed: 8125
+70: stonewalling pairs accessed: 8125
+175: stonewalling pairs accessed: 8125
+146: stonewalling pairs accessed: 8125
+260: stonewalling pairs accessed: 8125
+80: stonewalling pairs accessed: 8125
+321: stonewalling pairs accessed: 8125
+235: stonewalling pairs accessed: 8125
+231: stonewalling pairs accessed: 8125
+269: stonewalling pairs accessed: 8125
+167: stonewalling pairs accessed: 8125
+311: stonewalling pairs accessed: 8125
+389: stonewalling pairs accessed: 8125
+7: stonewalling pairs accessed: 8125
+355: stonewalling pairs accessed: 8125
+257: stonewalling pairs accessed: 8125
+251: stonewalling pairs accessed: 8125
+102: stonewalling pairs accessed: 8125
+191: stonewalling pairs accessed: 8125
+188: stonewalling pairs accessed: 8125
+172: stonewalling pairs accessed: 8125
+282: stonewalling pairs accessed: 8125
+337: stonewalling pairs accessed: 8125
+32: stonewalling pairs accessed: 8125
+21: stonewalling pairs accessed: 8125
+11: stonewalling pairs accessed: 8125
+319: stonewalling pairs accessed: 7810
+276: stonewalling pairs accessed: 5957
+388: stonewalling pairs accessed: 7831
+39: stonewalling pairs accessed: 8024
+280: stonewalling pairs accessed: 5710
+6: stonewalling pairs accessed: 7863
+14: stonewalling pairs accessed: 6629
+15: stonewalling pairs accessed: 6558
+22: stonewalling pairs accessed: 5239
+36: stonewalling pairs accessed: 7340
+95: stonewalling pairs accessed: 8091
+390: stonewalling pairs accessed: 7266
+275: stonewalling pairs accessed: 7923
+295: stonewalling pairs accessed: 7344
+399: stonewalling pairs accessed: 6057
+248: stonewalling pairs accessed: 6325
+318: stonewalling pairs accessed: 5693
+375: stonewalling pairs accessed: 6392
+264: stonewalling pairs accessed: 6453
+288: stonewalling pairs accessed: 5755
+364: stonewalling pairs accessed: 7752
+272: stonewalling pairs accessed: 6339
+302: stonewalling pairs accessed: 5553
+334: stonewalling pairs accessed: 8110
+377: stonewalling pairs accessed: 6280
+273: stonewalling pairs accessed: 6143
+381: stonewalling pairs accessed: 6225
+247: stonewalling pairs accessed: 6241
+255: stonewalling pairs accessed: 5957
+250: stonewalling pairs accessed: 6466
+335: stonewalling pairs accessed: 7550
+30: stonewalling pairs accessed: 7885
+243: stonewalling pairs accessed: 8003
+5: stonewalling pairs accessed: 6618
+27: stonewalling pairs accessed: 6505
+353: stonewalling pairs accessed: 5225
+252: stonewalling pairs accessed: 6217
+306: stonewalling pairs accessed: 5968
+263: stonewalling pairs accessed: 5930
+382: stonewalling pairs accessed: 7431
+0: stonewalling pairs accessed: 6365
+256: stonewalling pairs accessed: 6083
+315: stonewalling pairs accessed: 7353
+270: stonewalling pairs accessed: 8080
+325: stonewalling pairs accessed: 8121
+371: stonewalling pairs accessed: 7246
+395: stonewalling pairs accessed: 7134
+271: stonewalling pairs accessed: 6260
+181: stonewalling pairs accessed: 5709
+332: stonewalling pairs accessed: 6028
+16: stonewalling pairs accessed: 7776
+340: stonewalling pairs accessed: 7280
+363: stonewalling pairs accessed: 7218
+196: stonewalling pairs accessed: 7090
+34: stonewalling pairs accessed: 5199
+240: stonewalling pairs accessed: 6047
+357: stonewalling pairs accessed: 7897
+4: stonewalling pairs accessed: 5122
+326: stonewalling pairs accessed: 6184
+338: stonewalling pairs accessed: 6269
+354: stonewalling pairs accessed: 6233
+341: stonewalling pairs accessed: 8014
+368: stonewalling pairs accessed: 7188
+2: stonewalling pairs accessed: 6711
+23: stonewalling pairs accessed: 6546
+398: stonewalling pairs accessed: 7284
+296: stonewalling pairs accessed: 7929
+298: stonewalling pairs accessed: 5635
+309: stonewalling pairs accessed: 7226
+284: stonewalling pairs accessed: 5774
+38: stonewalling pairs accessed: 5098
+333: stonewalling pairs accessed: 5105
+254: stonewalling pairs accessed: 7914
+278: stonewalling pairs accessed: 6329
+173: stonewalling pairs accessed: 5976
+249: stonewalling pairs accessed: 6095
+329: stonewalling pairs accessed: 7464
+168: stonewalling pairs accessed: 7253
+174: stonewalling pairs accessed: 7366
+176: stonewalling pairs accessed: 7005
+184: stonewalling pairs accessed: 8077
+369: stonewalling pairs accessed: 7440
+10: stonewalling pairs accessed: 7349
+266: stonewalling pairs accessed: 6100
+37: stonewalling pairs accessed: 6551
+40: stonewalling pairs accessed: 7791
+48: stonewalling pairs accessed: 6516
+49: stonewalling pairs accessed: 7417
+51: stonewalling pairs accessed: 7975
+52: stonewalling pairs accessed: 4974
+54: stonewalling pairs accessed: 7797
+274: stonewalling pairs accessed: 6317
+1: stonewalling pairs accessed: 6644
+126: stonewalling pairs accessed: 7227
+120: stonewalling pairs accessed: 4981
+128: stonewalling pairs accessed: 7093
+130: stonewalling pairs accessed: 7335
+131: stonewalling pairs accessed: 5692
+132: stonewalling pairs accessed: 5145
+136: stonewalling pairs accessed: 5170
+139: stonewalling pairs accessed: 5904
+143: stonewalling pairs accessed: 6216
+144: stonewalling pairs accessed: 4879
+152: stonewalling pairs accessed: 4971
+153: stonewalling pairs accessed: 6206
+26: stonewalling pairs accessed: 7986
+261: stonewalling pairs accessed: 6175
+253: stonewalling pairs accessed: 7687
+365: stonewalling pairs accessed: 7554
+88: stonewalling pairs accessed: 7679
+90: stonewalling pairs accessed: 7446
+108: stonewalling pairs accessed: 6536
+110: stonewalling pairs accessed: 7985
+112: stonewalling pairs accessed: 7206
+116: stonewalling pairs accessed: 7271
+118: stonewalling pairs accessed: 7370
+86: stonewalling pairs accessed: 6295
+89: stonewalling pairs accessed: 7970
+93: stonewalling pairs accessed: 8115
+105: stonewalling pairs accessed: 7318
+106: stonewalling pairs accessed: 6438
+109: stonewalling pairs accessed: 6294
+113: stonewalling pairs accessed: 8056
+114: stonewalling pairs accessed: 7963
+149: stonewalling pairs accessed: 5718
+170: stonewalling pairs accessed: 7404
+347: stonewalling pairs accessed: 5101
+178: stonewalling pairs accessed: 7420
+194: stonewalling pairs accessed: 8049
+351: stonewalling pairs accessed: 5063
+324: stonewalling pairs accessed: 7634
+330: stonewalling pairs accessed: 7635
+331: stonewalling pairs accessed: 7941
+346: stonewalling pairs accessed: 8108
+241: stonewalling pairs accessed: 6242
+9: stonewalling pairs accessed: 6565
+29: stonewalling pairs accessed: 6673
+33: stonewalling pairs accessed: 6600
+323: stonewalling pairs accessed: 7910
+197: stonewalling pairs accessed: 5692
+314: stonewalling pairs accessed: 5899
+317: stonewalling pairs accessed: 7714
+55: stonewalling pairs accessed: 4766
+56: stonewalling pairs accessed: 6266
+57: stonewalling pairs accessed: 6144
+59: stonewalling pairs accessed: 6201
+60: stonewalling pairs accessed: 7548
+62: stonewalling pairs accessed: 7365
+71: stonewalling pairs accessed: 5720
+72: stonewalling pairs accessed: 6414
+75: stonewalling pairs accessed: 7841
+79: stonewalling pairs accessed: 7913
+43: stonewalling pairs accessed: 6441
+44: stonewalling pairs accessed: 6207
+47: stonewalling pairs accessed: 6247
+53: stonewalling pairs accessed: 7748
+58: stonewalling pairs accessed: 6073
+69: stonewalling pairs accessed: 5940
+74: stonewalling pairs accessed: 7567
+42: stonewalling pairs accessed: 7340
+78: stonewalling pairs accessed: 4983
+41: stonewalling pairs accessed: 6083
+61: stonewalling pairs accessed: 6285
+65: stonewalling pairs accessed: 6409
+67: stonewalling pairs accessed: 6182
+68: stonewalling pairs accessed: 4892
+73: stonewalling pairs accessed: 7666
+77: stonewalling pairs accessed: 8027
+385: stonewalling pairs accessed: 7033
+258: stonewalling pairs accessed: 6018
+277: stonewalling pairs accessed: 6242
+66: stonewalling pairs accessed: 8056
+169: stonewalling pairs accessed: 5806
+stonewalling pairs accessed min: 4766 max: 8125 -- min data: 74.5 GiB mean data: 117.6 GiB time: 300.1s
+write     138274     8645       0.041303    133120000  16384      0.065982   375.95     0.085531   376.06     0   
+Max Write: 138274.04 MiB/sec (144990.84 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write      138274.04  138274.04  138274.04       0.00    8642.13    8642.13    8642.13       0.00  376.06480     300.09     160461.44     0    400  40    1   1     1        1         0    0      1 136314880000 16777216 52000000.0 POSIX      0
+Finished            : Tue Jul 14 15:15:20 2020

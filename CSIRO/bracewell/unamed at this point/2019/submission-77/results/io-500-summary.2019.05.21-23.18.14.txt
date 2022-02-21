@@ -1,0 +1,137 @@
+System:  bss017
+filesystem_utilization=beegfs_nodev   1199986114560 80549599232 1119436515328   7% /scratch1
+date=2019.05.21-23.18.14
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 20000 -r /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/pfind_results'
+io500_find_cmd=/scratch1/leh015/io-500-dev/bin/pfind
+io500_find_mpi=True
+io500_info_data_storage_type=SSD
+io500_info_filesystem=BeeGFS
+io500_info_filesystem_vendor=DELL
+io500_info_filesystem_version=7.1.2
+io500_info_institute_name=CSIRO
+io500_info_metadata_storage_type=SSD
+io500_info_num_client_nodes=10
+io500_info_num_data_server_nodes=16
+io500_info_num_data_storage_devices=384
+io500_info_num_metadata_server_nodes=2
+io500_info_num_metadata_storage_devices=12
+io500_info_procs_per_node=12
+io500_info_storage_age_in_months=3
+io500_info_storage_install_date=10/18
+io500_info_storage_interface=NVMe
+io500_info_storage_network=infiniband
+io500_info_system_name=bracewell/pearcey
+io500_info_whatever=
+io500_ior_cmd=/scratch1/leh015/io-500-dev/bin/ior
+io500_ior_easy_params='-t 2048k -b 220g -F -B '
+io500_ior_easy_size=220
+io500_ior_hard_other_options=
+io500_ior_hard_writes_per_proc=110000
+io500_mdreal_cmd=/scratch1/leh015/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/scratch1/leh015/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=300000
+io500_mdtest_easy_params='-z 1 -b 24 -u -L'
+io500_mdtest_hard_files_per_proc=20000
+io500_mdtest_hard_other_options=
+io500_mpiargs='--hostfile host.10x16 '
+io500_mpirun=mpirun
+io500_result_dir=/scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_stonewall_timer=0
+io500_workdir=/scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 220g -F -B  -o /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/ior_easy/stonewall -O stoneWallingWearOut=1 -D 0 
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write              113.373 GB/s : time 310.48 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/mdtest -C -F -d /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_easy -n 300000 -z 1 -b 24 -u -L -x /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_easy-stonewall -W 0
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write              151.681 kiops : time 319.39 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 110000  -o /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/ior_hard/stonewall -O stoneWallingWearOut=1 -D 0
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                2.453 GB/s : time 314.14 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_hard -n 20000 -x /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_hard-stonewall  -W 0
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                9.850 kiops : time 327.67 seconds
+
+[Starting] find
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/pfind /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14 -newer /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/timestampfile -size 3901c -name *01* -s 20000 -r /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/pfind_results
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/find.txt.
+[FIND] MATCHED 97605/51212663 in 34.0867 seconds
+[RESULT] IOPS phase 3                      find             1502.420 kiops : time  34.09 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 220g -F -B  -o /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/ior_easy/stonewall
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               93.800 GB/s : time 375.27 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/mdtest -T -F -d /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_easy -n 300000 -z 1 -b 24 -u -L -x /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_easy-stonewall
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              873.490 kiops : time  58.00 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 110000  -o /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/ior_hard/stonewall
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read               56.562 GB/s : time  13.62 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_hard -n 20000 -x /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_hard-stonewall 
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat              136.769 kiops : time  26.38 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/mdtest -r -F -d /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_easy -n 300000 -z 1 -b 24 -u -L -x /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_easy-stonewall
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              247.030 kiops : time 204.46 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_hard -n 20000 -x /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_hard-stonewall 
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read               32.739 kiops : time 100.87 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun --hostfile host.10x16  /scratch1/leh015/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_hard -n 20000 -x /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_hard-stonewall 
+[Results] in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete               14.666 kiops : time 224.25 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14
+[Summary] Results files in /scratch1/leh015/io-500-dev/results/2019.05.21-23.18.14
+[Summary] Data files in /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14
+[RESULT] BW   phase 1            ior_easy_write              113.373 GB/s : time 310.48 seconds
+[RESULT] BW   phase 2            ior_hard_write                2.453 GB/s : time 314.14 seconds
+[RESULT] BW   phase 3             ior_easy_read               93.800 GB/s : time 375.27 seconds
+[RESULT] BW   phase 4             ior_hard_read               56.562 GB/s : time  13.62 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write              151.681 kiops : time 319.39 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                9.850 kiops : time 327.67 seconds
+[RESULT] IOPS phase 3                      find             1502.420 kiops : time  34.09 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              873.490 kiops : time  58.00 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              136.769 kiops : time  26.38 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              247.030 kiops : time 204.46 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               32.739 kiops : time 100.87 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete               14.666 kiops : time 224.25 seconds
+[SCORE] Bandwidth 34.8517 GB/s : IOPS 115.562 kiops : TOTAL 63.4628

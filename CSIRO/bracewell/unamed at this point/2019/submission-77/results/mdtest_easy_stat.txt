@@ -1,0 +1,39 @@
+--------------------------------------------------------------------------
+WARNING: There are more than one active ports on host 'bss025', but the
+default subnet GID prefix was detected on more than one of these
+ports.  If these ports are connected to different physical IB
+networks, this configuration will fail in Open MPI.  This version of
+Open MPI requires that every physically separate IB subnet that is
+used between connected MPI processes must have different subnet ID
+values.
+
+Please see this FAQ entry for more details:
+
+  http://www.open-mpi.org/faq/?category=openfabrics#ofa-default-subnet-gid
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_default_gid_prefix to 0.
+--------------------------------------------------------------------------
+-- started at 05/21/2019 23:46:25 --
+
+mdtest-3.3.0+dev was launched with 160 total task(s) on 10 node(s)
+Command line used: /scratch1/leh015/io-500-dev/bin/mdtest "-T" "-F" "-d" "/scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_easy" "-n" "300000" "-z" "1" "-b" "24" "-u" "-L" "-x" "/scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14/mdt_easy-stonewall"
+Path: /scratch1/leh015/io-500-dev/datafiles/io500.2019.05.21-23.18.14
+FS: 1117.6 TiB   Used FS: 9.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+160 tasks, 48000000 files
+WARNING: could not read stonewall status file
+[bss017:128546] 159 more processes have sent help message help-mpi-btl-openib.txt / default subnet prefix
+[bss017:128546] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :     873489.740     873488.779     873489.436          0.241
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 05/21/2019 23:47:20 --

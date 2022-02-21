@@ -1,0 +1,109 @@
+version         = io500-isc21
+config-hash     = 5E72CB01
+result-dir      = /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34
+mode            = standard
+; START 2021-10-08 10:42:35
+
+
+[ior-easy-write]
+t_start         = 2021-10-08 10:42:35
+exe             = ./ior -C -Q 1 -g -G 745465282 -k -e -o /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-easy-write.csv
+throughput-stonewall = 1.85
+score           = 1.831022
+t_delta         = 333.4635
+t_end           = 2021-10-08 10:48:08
+
+[mdtest-easy-write]
+t_start         = 2021-10-08 10:48:08
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1631643076 -N 1 -d /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/mdtest-easy -x /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 13.849608
+score           = 13.668734
+t_delta         = 321.2992
+t_end           = 2021-10-08 10:53:29
+
+[timestamp]
+t_start         = 2021-10-08 10:53:29
+t_delta         = 0.0003
+t_end           = 2021-10-08 10:53:29
+
+[ior-hard-write]
+t_start         = 2021-10-08 10:53:29
+exe             = ./ior -C -Q 1 -g -G=745475970 -k -e -o /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-hard/file -O stoneWallingStatusFile=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.13
+score           = 0.113321
+t_delta         = 1273.7966
+t_end           = 2021-10-08 11:14:43
+
+[mdtest-hard-write]
+t_start         = 2021-10-08 11:14:43
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1631653764 -N 1 -F -d /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/mdtest-hard -x /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 4.152534
+score           = 3.597200
+t_delta         = 432.7465
+t_end           = 2021-10-08 11:21:56
+
+[find]
+t_start         = 2021-10-08 11:21:56
+exe             = ./pfind /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34 -newer /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 100
+found           = 40400
+total-files     = 5937701
+score           = 253.054225
+t_delta         = 23.4687
+t_end           = 2021-10-08 11:22:19
+
+[ior-easy-read]
+t_start         = 2021-10-08 11:22:19
+exe             = ./ior -C -Q 1 -g -G 745465282 -k -e -o /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-easy-read.csv
+score           = 2.020913
+t_delta         = 302.1276
+t_end           = 2021-10-08 11:27:22
+
+[mdtest-easy-stat]
+t_start         = 2021-10-08 11:27:22
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1631643076 -N 1 -d /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/mdtest-easy -x /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-easy-stat.csv -a POSIX
+score           = 30.999401
+t_delta         = 141.3363
+t_end           = 2021-10-08 11:29:43
+
+[ior-hard-read]
+t_start         = 2021-10-08 11:29:43
+exe             = ./ior -C -Q 1 -g -G=745475970 -k -e -o /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-hard/file -O stoneWallingStatusFile=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-hard-read.csv
+score           = 0.325357
+t_delta         = 443.6646
+t_end           = 2021-10-08 11:37:07
+
+[mdtest-hard-stat]
+t_start         = 2021-10-08 11:37:07
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1631653764 -N 1 -F -d /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/mdtest-hard -x /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-hard-stat.csv -a POSIX
+score           = 19.981029
+t_delta         = 77.9151
+t_end           = 2021-10-08 11:38:24
+
+[mdtest-easy-delete]
+t_start         = 2021-10-08 11:38:24
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1631643076 -N 1 -d /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/mdtest-easy -x /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-easy-delete.csv -a POSIX
+score           = 11.902744
+t_delta         = 369.4166
+t_end           = 2021-10-08 11:44:34
+
+[mdtest-hard-read]
+t_start         = 2021-10-08 11:44:34
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1631653764 -N 1 -F -d /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/mdtest-hard -x /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-hard-read.csv -a POSIX
+score           = 14.349057
+t_delta         = 108.4932
+t_end           = 2021-10-08 11:46:22
+
+[mdtest-hard-delete]
+t_start         = 2021-10-08 11:46:22
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1631653764 -N 1 -F -d /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/mdtest-hard -x /gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/mdtest-hard-delete.csv -a POSIX
+score           = 4.308941
+t_delta         = 364.5335
+t_end           = 2021-10-08 11:52:27
+
+[SCORE]
+MD              = 16.565892
+BW              = 0.607754
+SCORE           = 3.173008
+hash            = B882A5CB
+; END 2021-10-08 11:52:27

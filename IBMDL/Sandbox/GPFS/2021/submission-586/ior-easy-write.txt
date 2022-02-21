@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct  8 10:42:35 2021
+Command line        : ./ior -C -Q 1 -g -G 745465282 -k -e -o /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-easy-write.csv
+Machine             : Linux tuleta08
+TestID              : 0
+StartTime           : Fri Oct  8 10:42:35 2021
+Path                : /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-easy/ior_file_easy.00000000
+FS                  : 50.2 TiB   Used FS: 85.9%   Inodes: 90.1 Mi   Used Inodes: 38.2%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 100
+clients per node    : 10
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 946.04 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2521 max: 3126 -- min data: 4.9 GiB mean data: 5.6 GiB time: 301.3s
+WARNING: Expected aggregate file size       = 1040187392000000
+WARNING: Stat() of aggregate file size      = 655569715200
+WARNING: Using actual aggregate bytes moved = 655569715200
+WARNING: Maybe caused by deadlineForStonewalling
+write     1874.97    938.12     0.000063    10158080000 2048.00    0.069943   333.22     0.155831   333.45     0   

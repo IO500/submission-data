@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct  8 11:22:19 2021
+Command line        : ./ior -C -Q 1 -g -G 745465282 -k -e -o /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/users/rxt63-sxa03/io500/results/2021.10.08-10.42.34/ior-easy-read.csv
+Machine             : Linux tuleta08
+TestID              : 0
+StartTime           : Fri Oct  8 11:22:19 2021
+Path                : /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-easy/ior_file_easy.00000000
+FS                  : 50.2 TiB   Used FS: 88.8%   Inodes: 90.1 Mi   Used Inodes: 44.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/users/rxt63-sxa03/io500/datafiles/2021.10.08-10.42.34/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 100
+clients per node    : 10
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 946.04 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 1040187392000000
+WARNING: Stat() of aggregate file size      = 655569715200
+WARNING: Using actual aggregate bytes moved = 655569715200
+read      2069.41    1034.91    0.000061    10158080000 2048.00    0.039042   302.06     0.018984   302.11     0   

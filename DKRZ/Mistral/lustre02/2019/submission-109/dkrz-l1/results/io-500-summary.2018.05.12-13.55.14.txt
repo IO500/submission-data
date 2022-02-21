@@ -1,0 +1,118 @@
+System:  mlogin103
+filesystem_utilization=                     22548188515536 20952512590300 1367424262828  94% /mnt/lustre01
+date=2018.05.12-13.55.14
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 3 -r /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/pfind_results'
+io500_find_cmd=/home/dkrz/k202079/work/io-500/io-500-dev/bin/pfind
+io500_find_mpi=True
+io500_info_institute_name=DKRZ
+io500_info_modules='module add intel mxm/3.4.3082 fca/2.5.2431 bullxmpi_mlx/bullxmpi_mlx-1.2.9.2'
+io500_info_system_name=btlogin1
+io500_ior_cmd=/home/dkrz/k202079/work/io-500/io-500-dev/bin/ior
+io500_ior_easy_params='-t 2048k -b 20g -F -a MPIIO'
+io500_ior_hard_writes_per_proc='6000 -a MPIIO -E'
+io500_mdreal_cmd=/home/dkrz/k202079/work/io-500/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/home/dkrz/k202079/work/io-500/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=3300
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=3300
+io500_mpiargs='--ntasks-per-node=12 --distribution=block'
+io500_mpirun=srun
+io500_result_dir=/home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_workdir=/home/dkrz/k202079/work/io-500/io-500-dev/datafiles/
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 20g -F -a MPIIO -o /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//ior_easy/ior_file_easy
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               40.915 GB/s : time 586.58 seconds
+
+[Starting] mdtest_easy_write
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/mdtest -C -F -d /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//mdt_easy -n 3300 -u -L
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               11.771 kiops : time 347.53 seconds
+
+[Starting] ior_hard_write
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 6000 -a MPIIO -E -o /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//ior_hard/IOR_file
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                0.998 GB/s : time 315.82 seconds
+
+[Starting] mdtest_hard_write
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//mdt_hard -n 3300
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write               10.757 kiops : time 379.67 seconds
+
+[Starting] find
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/pfind /home/dkrz/k202079/work/io-500/io-500-dev/datafiles/ -newer /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//timestampfile -size 3901c -name *01* -s 3 -r /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/pfind_results
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/find.txt.
+[FIND] MATCHED 11294/2613029 in 26.4296 seconds
+[RESULT] IOPS phase 3                      find               98.860 kiops : time  26.43 seconds
+
+[Starting] ior_easy_read
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 20g -F -a MPIIO -o /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//ior_easy/ior_file_easy
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              123.395 GB/s : time 194.50 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/mdtest -T -F -d /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//mdt_easy -n 3300 -u -L
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat               46.839 kiops : time  95.95 seconds
+
+[Starting] ior_hard_read
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 6000 -a MPIIO -E -o /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//ior_hard/IOR_file
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                5.126 GB/s : time  61.49 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//mdt_hard -n 3300
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               43.548 kiops : time 103.68 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/mdtest -r -F -d /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//mdt_easy -n 3300 -u -L
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete                5.252 kiops : time 766.03 seconds
+
+[Starting] mdtest_hard_read
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//mdt_hard -n 3300
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read               19.002 kiops : time 219.82 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] srun --ntasks-per-node=12 --distribution=block /home/dkrz/k202079/work/io-500/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /home/dkrz/k202079/work/io-500/io-500-dev/datafiles//mdt_hard -n 3300
+[Results] in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                6.335 kiops : time 635.81 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /home/dkrz/k202079/work/io-500/io-500-dev/datafiles/
+[Summary] Results files in /home/dkrz/k202079/work/io-500/io-500-dev/results/2018.05.12-13.55.14
+[Summary] Data files in /home/dkrz/k202079/work/io-500/io-500-dev/datafiles/
+[RESULT] BW   phase 1            ior_easy_write               40.915 GB/s : time 586.58 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.998 GB/s : time 315.82 seconds
+[RESULT] BW   phase 3             ior_easy_read              123.395 GB/s : time 194.50 seconds
+[RESULT] BW   phase 4             ior_hard_read                5.126 GB/s : time  61.49 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               11.771 kiops : time 347.53 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write               10.757 kiops : time 379.67 seconds
+[RESULT] IOPS phase 3                      find               98.860 kiops : time  26.43 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat               46.839 kiops : time  95.95 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               43.548 kiops : time 103.68 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete                5.252 kiops : time 766.03 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read               19.002 kiops : time 219.82 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                6.335 kiops : time 635.81 seconds
+[SCORE] Bandwidth 12.6775 GB/s : IOPS 18.8796 kiops : TOTAL 15.4708

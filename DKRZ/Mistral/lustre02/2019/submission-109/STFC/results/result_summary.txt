@@ -1,0 +1,13 @@
+[RESULT] BW   phase 1            ior_easy_write                3.616 GB/s : time 353.98 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               43.244 kiops : time 299.70 seconds
+[RESULT] BW   phase 2            ior_hard_write                0.011 GB/s : time 1807.60 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                1.345 kiops : time 382.73 seconds
+[RESULT] IOPS phase 3                      find                0.680 kiops : time 107.19 seconds
+[RESULT] BW   phase 3             ior_easy_read                0.947 GB/s : time 1351.80 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              224.698 kiops : time  59.07 seconds
+[RESULT] BW   phase 4             ior_hard_read                0.050 GB/s : time 391.63 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              177.377 kiops : time   4.83 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               52.745 kiops : time 245.79 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              161.514 kiops : time   4.67 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                1.146 kiops : time 448.84 seconds
+[SCORE] Bandwidth 0.207684 GB/s : IOPS 18.7666 kiops : TOTAL 1.97421

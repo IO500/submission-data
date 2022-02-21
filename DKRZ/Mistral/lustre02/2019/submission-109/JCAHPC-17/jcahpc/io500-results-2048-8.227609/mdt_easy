@@ -1,0 +1,207 @@
+-- started at 11/07/2017 08:50:34 --
+
+mdtest-1.9.3 was launched with 16384 total task(s) on 2048 node(s)
+Command line used: /cache/xg17i000/x10007/bin/mdtest -C -v -u -L -F -d /cache/xg17i000/x10007/io500/io500-data.227609/mdt_easy -u -n 500
+V-1: Entering parse_dirpath...
+V-1: Entering valid_tests...
+barriers                : True
+collective_creates      : False
+create_only             : True
+dirpath(s):
+	/cache/xg17i000/x10007/io500/io500-data.227609/mdt_easy
+dirs_only               : False
+read_bytes              : 0
+read_only               : False
+first                   : 1
+files_only              : True
+iterations              : 1
+items_per_dir           : 0
+last                    : 0
+leaf_only               : True
+items                   : 500
+nstride                 : 0
+pre_delay               : 0
+remove_only             : True
+random_seed             : 0
+stride                  : 1
+shared_file             : False
+time_unique_dir_overhead: False
+stat_only               : False
+unique_dir_per_task     : True
+write_bytes             : 0
+sync_file               : False
+depth                   : 0
+V-1: Entering display_freespace...
+V-1: Entering show_file_system_size...
+Path: /cache/0/xg17i000/x10007/io500/io500-data.227609
+FS: 23597.0 TiB   Used FS: 9.3%   Inodes: 12312.0 Mi   Used Inodes: 4.8%
+
+16384 tasks, 8192000 files
+
+   Operation               Duration              Rate
+   ---------               --------              ----
+V-1: main: * iteration 1 *
+V-1: Entering create_remove_directory_tree, currDepth = 0...
+V-1: Entering create_remove_directory_tree, currDepth = 1...
+V-1: main:   Tree creation     :          1.129 sec,          0.886 ops/sec
+V-1: Entering file_test...
+V-1: Entering unique_dir_access...
+V-1: Entering offset_timers...
+V-1: Entering create_remove_items, currDepth = 0...
+V-1: Entering create_remove_items_helper...
+V-1: Entering offset_timers...
+V-1:   File creation     :        289.263 sec,      28320.219 ops/sec
+V-1:   File stat         :          0.003 sec,          0.000 ops/sec
+V-1:   File read         :          0.002 sec,          0.000 ops/sec
+V-1:   File removal      :          0.003 sec,          0.000 ops/sec
+V-1: Entering summarize_results...
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      28320.444      28320.444      28320.444          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.886          0.886          0.886          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+V-1: Entering timestamp...
+
+-- finished at 11/07/2017 08:55:24 --
+-- started at 11/07/2017 09:13:35 --
+
+mdtest-1.9.3 was launched with 16384 total task(s) on 2048 node(s)
+Command line used: /cache/xg17i000/x10007/bin/mdtest -T -v -u -L -F -d /cache/xg17i000/x10007/io500/io500-data.227609/mdt_easy -u -n 500
+V-1: Entering parse_dirpath...
+V-1: Entering valid_tests...
+barriers                : True
+collective_creates      : False
+create_only             : False
+dirpath(s):
+	/cache/xg17i000/x10007/io500/io500-data.227609/mdt_easy
+dirs_only               : False
+read_bytes              : 0
+read_only               : False
+first                   : 1
+files_only              : True
+iterations              : 1
+items_per_dir           : 0
+last                    : 0
+leaf_only               : True
+items                   : 500
+nstride                 : 0
+pre_delay               : 0
+remove_only             : True
+random_seed             : 0
+stride                  : 1
+shared_file             : False
+time_unique_dir_overhead: False
+stat_only               : True
+unique_dir_per_task     : True
+write_bytes             : 0
+sync_file               : False
+depth                   : 0
+V-1: Entering display_freespace...
+V-1: Entering show_file_system_size...
+Path: /cache/0/xg17i000/x10007/io500/io500-data.227609
+FS: 23597.0 TiB   Used FS: 9.3%   Inodes: 12312.0 Mi   Used Inodes: 4.8%
+
+16384 tasks, 8192000 files
+
+   Operation               Duration              Rate
+   ---------               --------              ----
+V-1: main: * iteration 1 *
+V-1: Entering file_test...
+V-1: Entering unique_dir_access...
+V-1: Entering offset_timers...
+V-1: Entering mdtest_stat...
+V-1: Entering offset_timers...
+V-1:   File creation     :          0.000 sec,          0.000 ops/sec
+V-1:   File stat         :        153.072 sec,      53517.187 ops/sec
+V-1:   File read         :          0.002 sec,          0.000 ops/sec
+V-1:   File removal      :          0.001 sec,          0.000 ops/sec
+V-1: Entering summarize_results...
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :      53517.350      53517.350      53517.350          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+V-1: Entering timestamp...
+
+-- finished at 11/07/2017 09:16:08 --
+-- started at 11/07/2017 09:28:32 --
+
+mdtest-1.9.3 was launched with 16384 total task(s) on 2048 node(s)
+Command line used: /cache/xg17i000/x10007/bin/mdtest -r -v -u -L -F -d /cache/xg17i000/x10007/io500/io500-data.227609/mdt_easy -u -n 500
+V-1: Entering parse_dirpath...
+V-1: Entering valid_tests...
+barriers                : True
+collective_creates      : False
+create_only             : False
+dirpath(s):
+	/cache/xg17i000/x10007/io500/io500-data.227609/mdt_easy
+dirs_only               : False
+read_bytes              : 0
+read_only               : False
+first                   : 1
+files_only              : True
+iterations              : 1
+items_per_dir           : 0
+last                    : 0
+leaf_only               : True
+items                   : 500
+nstride                 : 0
+pre_delay               : 0
+remove_only             : True
+random_seed             : 0
+stride                  : 1
+shared_file             : False
+time_unique_dir_overhead: False
+stat_only               : False
+unique_dir_per_task     : True
+write_bytes             : 0
+sync_file               : False
+depth                   : 0
+V-1: Entering display_freespace...
+V-1: Entering show_file_system_size...
+Path: /cache/0/xg17i000/x10007/io500/io500-data.227609
+FS: 23597.0 TiB   Used FS: 9.3%   Inodes: 12312.0 Mi   Used Inodes: 4.8%
+
+16384 tasks, 8192000 files
+
+   Operation               Duration              Rate
+   ---------               --------              ----
+V-1: main: * iteration 1 *
+V-1: Entering file_test...
+V-1: Entering unique_dir_access...
+V-1: Entering offset_timers...
+V-1: Entering create_remove_items, currDepth = 0...
+V-1: Entering create_remove_items_helper...
+V-1: Entering unique_dir_access...
+V-1: Entering offset_timers...
+V-1:   File creation     :          0.000 sec,          0.000 ops/sec
+V-1:   File stat         :          0.000 sec,          0.000 ops/sec
+V-1:   File read         :          0.001 sec,          0.000 ops/sec
+V-1:   File removal      :        225.727 sec,      36291.562 ops/sec
+V-1: Entering create_remove_directory_tree, currDepth = 0...
+V-1: Entering create_remove_directory_tree, currDepth = 1...
+V-1: main   Tree removal      :          4.781 sec,          0.209 ops/sec
+V-1: Entering summarize_results...
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :      36291.654      36291.654      36291.654          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.209          0.209          0.209          0.000
+V-1: Entering timestamp...
+
+-- finished at 11/07/2017 09:32:23 --

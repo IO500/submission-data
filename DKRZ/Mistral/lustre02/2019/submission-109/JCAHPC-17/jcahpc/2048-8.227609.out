@@ -1,0 +1,37 @@
+date=2017-11-07
+nodes=2048
+ppn=8
+ior_easy_params=-t 2048k -b 15g
+ior_hard_writes_per_proc=220000
+mdtest_easy_files_per_proc=500
+mdtest_hard_files_per_proc=20
+/cache/xg17i000/x10007/io500
+[Precreating] missing directories
+[Starting] ior-easy-write
+1/ior-easy-write BW:794393.97 MB/s time: 420s
+[Starting] md-easy-create
+1/md-easy-create IOPs:28320.444 time:313s
+[Starting] ior-hard-write
+2/ior-hard-write BW:687956.26 MB/s time: 331s
+[Starting] md-hard-create
+[Warning]: the runtime is below 5 minutes
+2/md-hard-create IOPs:4140.437 time:101s
+[Starting] ior-easy-read
+3/ior-easy-read BW:476671.16 MB/s time: 637s
+[Starting] md-easy-stat
+3/md-easy-stat IOPs:53517.350 time:175s
+[Starting] ior-hard-read
+4/ior-hard-read BW:281533.86 MB/s time: 684s
+[Starting] md-hard-stat
+4/md-hard-stat IOPs:61442.918 time:27s
+[Starting] find
+5/find IOPs:5020 time:10s
+[Starting] md-easy-delete
+6/md-easy-delete IOPs:36291.654 time:253s
+[Starting] md-hard-delete
+7/md-hard-delete IOPs:1393.784 time:258s
+
+IO-500 bw score: 520399 MB/s
+IO-500 md score: 13853.1 IOPS
+
+IO-500 score:  7209139386.9

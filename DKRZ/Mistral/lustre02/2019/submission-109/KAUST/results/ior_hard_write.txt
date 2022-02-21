@@ -1,0 +1,31 @@
+IOR-3.1.0: MPI Coordinated Test of Parallel I/O
+
+ior WARNING: fsync() only available in POSIX/MMAP.  Using value of 0.
+Began: Thu Jun 21 19:15:40 2018
+Command line used: /var/opt/cray/dws/mounts/batch/5890895_striped_scratch/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 120000 -o /var/opt/cray/dws/mounts/batch/5890895_striped_scratch/datafiles/io500.2018.06.21-18.59.50/ior_hard/IOR_file
+Machine: Linux nid00328
+
+Test 0 started: Thu Jun 21 19:15:40 2018
+Summary:
+	api                = MPIIO (version=3, subversion=1)
+	test filename      = /var/opt/cray/dws/mounts/batch/5890895_striped_scratch/datafiles/io500.2018.06.21-18.59.50/ior_hard/IOR_file
+	access             = single-shared-file
+	ordering in a file = sequential offsets
+	ordering inter file= constant task offsets = 1
+	clients            = 8192 (8 per node)
+	repetitions        = 1
+	xfersize           = 47008 bytes
+	blocksize          = 47008 bytes
+	aggregate filesize = 43037.11 GiB
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+write     142940     45.91      45.91      0.412867   307.59     0.306588   308.31     0   
+
+Max Write: 142940.42 MiB/sec (149883.89 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt blksiz xsize aggsize API RefNum
+write      142940.42  142940.42  142940.42       0.00 3188476.22 3188476.22 3188476.22       0.00  308.31028 0 8192 8 1 0 1 1 0 0 120000 47008 47008 46210744320000 MPIIO 0
+
+Finished: Thu Jun 21 19:23:15 2018

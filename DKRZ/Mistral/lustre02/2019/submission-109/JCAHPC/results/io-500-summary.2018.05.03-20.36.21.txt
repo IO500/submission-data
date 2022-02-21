@@ -1,0 +1,116 @@
+System:  c0001.ofp
+filesystem_utilization=imefs          25337068386520 4030508560452 21050659454860  17% /cache
+date=2018.05.03-20.36.21
+io500_cleanup_workdir=False
+io500_find_cmd_args='-s 300 -r /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/pfind_results'
+io500_find_cmd=/cache/0/gz02/z30218/io-500-dev/bin/pfind
+io500_find_mpi=True
+io500_ior_cmd=/cache/0/gz02/z30218/io-500-dev/bin/ior
+io500_ior_easy_params='-t 2048k -b 128g -F'
+io500_ior_hard_writes_per_proc=2400000
+io500_mdreal_cmd=/cache/0/gz02/z30218/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/cache/0/gz02/z30218/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=5200
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=320
+io500_mpiargs='-n 2048'
+io500_mpirun=mpiexec.hydra
+io500_result_dir=/cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21
+io500_run_find=True
+io500_run_ior_easy_read=True
+io500_run_ior_easy=True
+io500_run_ior_hard_read=True
+io500_run_ior_hard=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_easy=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_md_hard=True
+io500_run_mdreal=False
+io500_workdir=/cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21
+System_name='JCAHPC Oakforest-PACS'
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 128g -F -o /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/ior_easy/ior_file_easy
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write              744.760 GB/s : time 351.98 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/mdtest -C -F -d /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/mdt_easy -n 5200 -u -L
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               37.015 kiops : time 310.99 seconds
+
+[Starting] ior_hard_write
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 2400000 -o /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/ior_hard/IOR_file
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write              692.738 GB/s : time 310.63 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/mdt_hard -n 320
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                1.960 kiops : time 356.55 seconds
+
+[Starting] find
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/pfind /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21 -newer /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/timestampfile -size 3901c -name *01* -s 300 -r /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/pfind_results
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/find.txt.
+[FIND] MATCHED 0/11307010 in 28.6263 seconds
+[RESULT] IOPS phase 3                      find              394.980 kiops : time  28.63 seconds
+
+[Starting] ior_easy_read
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 128g -F -o /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/ior_easy/ior_file_easy
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              664.468 GB/s : time 394.52 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/mdtest -T -F -d /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/mdt_easy -n 5200 -u -L
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              202.011 kiops : time  75.58 seconds
+
+[Starting] ior_hard_read
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 2400000 -o /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/ior_hard/IOR_file
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read              287.089 GB/s : time 749.54 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/mdt_hard -n 320
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat               67.242 kiops : time  32.99 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/mdtest -r -F -d /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/mdt_easy -n 5200 -u -L
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               22.182 kiops : time 503.00 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/mdt_hard -n 320
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              266.706 kiops : time  25.69 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpiexec.hydra -n 2048 /cache/0/gz02/z30218/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/mdt_hard -n 320
+[Results] in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                0.756 kiops : time 891.32 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21
+[Summary] Results files in /cache/0/gz02/z30218/io-500-dev/results/2018.05.03-20.36.21
+[Summary] Data files in /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21
+[RESULT] BW   phase 1            ior_easy_write              744.760 GB/s : time 351.98 seconds
+[RESULT] BW   phase 2            ior_hard_write              692.738 GB/s : time 310.63 seconds
+[RESULT] BW   phase 3             ior_easy_read              664.468 GB/s : time 394.52 seconds
+[RESULT] BW   phase 4             ior_hard_read              287.089 GB/s : time 749.54 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               37.015 kiops : time 310.99 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                1.960 kiops : time 356.55 seconds
+[RESULT] IOPS phase 3                      find              394.980 kiops : time  28.63 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              202.011 kiops : time  75.58 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat               67.242 kiops : time  32.99 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               22.182 kiops : time 503.00 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              266.706 kiops : time  25.69 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                0.756 kiops : time 891.32 seconds
+[SCORE] Bandwidth 560.104 GB/s : IOPS 33.8903 kiops : TOTAL 18982.0925

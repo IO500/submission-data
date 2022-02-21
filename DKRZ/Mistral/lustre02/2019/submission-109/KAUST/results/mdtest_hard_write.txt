@@ -1,0 +1,20 @@
+-- started at 06/21/2018 19:24:54 --
+
+mdtest-1.9.4-rc1 was launched with 8192 total task(s) on 1024 node(s)
+Command line used: /var/opt/cray/dws/mounts/batch/5890895_striped_scratch/bin/mdtest -C -t -F -w 3901 -e 3901 -d /var/opt/cray/dws/mounts/batch/5890895_striped_scratch/datafiles/io500.2018.06.21-18.59.50/mdt_hard -n 150
+Path: /var/opt/cray/dws/mounts/batch/5890895_striped_scratch/datafiles/io500.2018.06.21-18.59.50
+FS: 479.5 TiB   Used FS: 75.9%   Inodes: 98255.8 Mi   Used Inodes: 0.0%
+
+8192 tasks, 1228800 files
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :       3439.061       3439.061       3439.061          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        472.119        472.119        472.119          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 06/21/2018 19:30:51 --

@@ -1,0 +1,71 @@
+-- started at 06/21/2018 19:54:55 --
+
+mdtest-1.9.4-rc1 was launched with 8192 total task(s) on 1024 node(s)
+Command line used: /var/opt/cray/dws/mounts/batch/5890895_striped_scratch/bin/mdtest -r -F -d -u /var/opt/cray/dws/mounts/batch/5890895_striped_scratch/datafiles/io500.2018.06.21-18.59.50/mdt_easy -n 500 -v -u -L
+V-1: Entering valid_tests...
+barriers                : True
+collective_creates      : False
+create_only             : False
+dirpath(s):
+	-u
+dirs_only               : False
+read_bytes              : 0
+read_only               : False
+first                   : 1
+files_only              : True
+iterations              : 1
+items_per_dir           : 0
+last                    : 0
+leaf_only               : True
+items                   : 500
+nstride                 : 0
+pre_delay               : 0
+remove_only             : True
+random_seed             : 0
+stride                  : 1
+shared_file             : False
+time_unique_dir_overhead: False
+stat_only               : False
+unique_dir_per_task     : True
+write_bytes             : 0
+sync_file               : False
+depth                   : 0
+V-1: Entering display_freespace...
+V-1: Entering show_file_system_size...
+Path: /var/opt/cray/dws/mounts/batch/5890895_striped_scratch
+FS: 479.5 TiB   Used FS: 75.9%   Inodes: 98255.8 Mi   Used Inodes: 0.0%
+
+8192 tasks, 4096000 files
+
+   Operation               Duration              Rate
+   ---------               --------              ----
+V-1: Entering timestamp...
+V-1: main: * iteration 1 06/21/2018 19:54:55 *
+V-1: Entering file_test...
+V-1: Entering unique_dir_access...
+V-1: Entering offset_timers...
+V-1: Entering create_remove_items, currDepth = 0...
+V-1: Entering create_remove_items_helper...
+V-1: Entering unique_dir_access...
+V-1: Entering offset_timers...
+V-1:   File creation     :          0.002 sec,          0.000 ops/sec
+V-1:   File stat         :          0.003 sec,          0.000 ops/sec
+V-1:   File read         :          0.003 sec,          0.000 ops/sec
+V-1:   File removal      :        241.483 sec,      16961.870 ops/sec
+V-1: Entering create_remove_directory_tree, currDepth = 0...
+V-1: Entering create_remove_directory_tree, currDepth = 1...
+V-1: main   Tree removal      :          0.303 sec,          3.295 ops/sec
+V-1: Entering summarize_results...
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :      16962.273      16962.273      16962.273          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          3.295          3.295          3.295          0.000
+V-1: Entering timestamp...
+
+-- finished at 06/21/2018 19:58:56 --

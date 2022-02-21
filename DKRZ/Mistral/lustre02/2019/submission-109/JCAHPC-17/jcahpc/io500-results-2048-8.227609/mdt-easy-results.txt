@@ -1,0 +1,3 @@
+1/md-easy-create IOPs:28320.444 time:313s
+3/md-easy-stat IOPs:53517.350 time:175s
+6/md-easy-delete IOPs:36291.654 time:253s

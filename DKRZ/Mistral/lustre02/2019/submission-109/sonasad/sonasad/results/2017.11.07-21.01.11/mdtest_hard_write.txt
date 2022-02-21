@@ -1,0 +1,20 @@
+-- started at 11/07/2017 21:39:02 --
+
+mdtest-1.9.3 was launched with 10 total task(s) on 10 node(s)
+Command line used: /perform/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /ibm/fs2-16m-09/io500.2017.11.07-21.01.11/mdt_hard -n 700000
+Path: 
+FS: 128.1 TiB   Used FS: 91.2%   Inodes: 953.8 Mi   Used Inodes: 23.0%
+
+10 tasks, 7000000 files
+
+SUMMARY: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      21573.524      21573.524      21573.524          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :       7917.720       7917.720       7917.720          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 11/07/2017 21:44:27 --

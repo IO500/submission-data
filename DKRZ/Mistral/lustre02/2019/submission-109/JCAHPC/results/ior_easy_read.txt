@@ -1,0 +1,31 @@
+IOR-3.1.0: MPI Coordinated Test of Parallel I/O
+
+ior WARNING: fsync() only available in POSIX.  Using value of 0.
+Began: Thu May  3 21:00:12 2018
+Command line used: /cache/0/gz02/z30218/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 128g -F -o /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/ior_easy/ior_file_easy
+Machine: Linux c0001.ofp
+
+Test 0 started: Thu May  3 21:00:12 2018
+Summary:
+	api                = MPIIO (version=3, subversion=1)
+	test filename      = /cache/0/gz02/z30218/io-500-dev/datafiles/io500.2018.05.03-20.36.21/ior_easy/ior_file_easy
+	access             = file-per-process
+	ordering in a file = sequential offsets
+	ordering inter file= constant task offsets = 1
+	clients            = 2048 (1 per node)
+	repetitions        = 1
+	xfersize           = 2 MiB
+	blocksize          = 128 GiB
+	aggregate filesize = 262144 GiB
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      680415     134217728  2048.00    0.237256   394.27     0.006414   394.52     0   
+
+Max Read:  680414.54 MiB/sec (713466.36 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt blksiz xsize aggsize API RefNum
+read       680414.54  680414.54  680414.54       0.00  394.51752 0 2048 1 1 1 1 1 0 0 1 137438953472 2097152 281474976710656 MPIIO 0
+
+Finished: Thu May  3 21:06:47 2018

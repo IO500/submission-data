@@ -1,0 +1,220 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov 12 19:27:08 2019
+Command line        : /vol7/io500/bin/ior -r -R -s 304000 -a MPIIO -U /vol7/io500_20190930/mpio -H -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /vol7/io500/datafiles/io500.2019.11.12-18.38.34/ior_hard/IOR_file -O stoneWallingStatusFile=/vol7/io500/datafiles/io500.2019.11.12-18.38.34/ior_hard/stonewall
+Machine             : Linux node1
+TestID              : 0
+StartTime           : Tue Nov 12 19:27:08 2019
+Path                : /vol7/io500/datafiles/io500.2019.11.12-18.38.34/ior_hard
+FS                  : 824.1 TiB   Used FS: 3.5%   Inodes: 7452.5 Mi   Used Inodes: 0.6%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /vol7/io500/datafiles/io500.2019.11.12-18.38.34/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 304000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 2.08 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+
+hints passed to MPI_File_open() {
+}
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+ior WARNING: cannot open hints file.
+
+hints returned from opened file {
+	cb_buffer_size = 16777216
+	romio_cb_read = automatic
+	romio_cb_write = automatic
+	cb_nodes = 10
+	romio_no_indep_rw = false
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	ind_rd_buffer_size = 4194304
+	ind_wr_buffer_size = 524288
+	romio_ds_read = automatic
+	romio_ds_write = automatic
+	cb_config_list = *:1
+	romio_filesystem_type = UFS: Generic ROMIO driver for all UNIX-like file systems
+	romio_aggregator_list = 0 16 32 48 64 80 96 112 128 144 
+}
+read      11735      45.91      45.91      0.019121   185.78     0.045296   185.81     0   
+Max Read:  11735.42 MiB/sec (12305.48 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        11735.42   11735.42   11735.42       0.00  261774.19  261774.19  261774.19       0.00  185.80900         NA            NA     0    160  16    1   0     1        1         0    0 304000    47008    47008 2180547.0 MPIIO      0
+Finished            : Tue Nov 12 19:30:14 2019

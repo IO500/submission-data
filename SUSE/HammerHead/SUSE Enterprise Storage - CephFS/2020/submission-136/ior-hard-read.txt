@@ -1,0 +1,42 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Jul 11 10:41:39 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /mnt/cephfs/datafiles/2020.07.11-10.09.37-app/ior-hard/file -O stoneWallingStatusFile=/mnt/cephfs/datafiles/2020.07.11-10.09.37-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 500000 -r -R -a POSIX
+Machine             : Linux sr650-1
+TestID              : 0
+StartTime           : Sat Jul 11 10:41:39 2020
+Path                : /mnt/cephfs/datafiles/2020.07.11-10.09.37-app/ior-hard
+FS                  : 62.8 TiB   Used FS: 19.5%   Inodes: 22.4 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/cephfs/datafiles/2020.07.11-10.09.37-app/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 500000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 220
+clients per node    : 22
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 4.70 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 102101 max: 102101 -- min data: 4.5 GiB mean data: 4.5 GiB time: 80.6s
+WARNING: Expected aggregate file size       = 5170880000000.
+WARNING: Stat() of aggregate file size      = 1055904037760.
+WARNING: Using actual aggregate bytes moved = 1055904037760.
+read      12491      278656     80.61       45.91      45.91      0.005093   80.61      0.003645   80.61      0   
+Max Read:  12491.37 MiB/sec (13098.15 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        12491.37   12491.37   12491.37       0.00  278636.65  278636.65  278636.65       0.00   80.61474      80.60      12493.39     0    220  22    1   0     1        1         0    0 500000    47008    47008 1006988.6 POSIX      0
+Finished            : Sat Jul 11 10:42:59 2020

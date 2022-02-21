@@ -1,0 +1,84 @@
+-- started at 10/24/2018 21:27:23 --
+
+mdtest-1.9.3 was launched with 64 total task(s) on 32 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-F" "-d" "/scratch4/jburto2/io500/datafiles/io500.2018.10.24-21.18.36/mdt_easy" "-n" "800000" "-u" "-L" "-x" "/scratch4/jburto2/io500/datafiles/io500.2018.10.24-21.18.36/mdt_easy-stonewall" "-W" "300"
+Path: /scratch4/jburto2/io500/datafiles/io500.2018.10.24-21.18.36
+FS: 174.6 TiB   Used FS: 26.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+64 tasks, 51200000 files
+stonewall rank 21: 436865 of 480777 
+stonewall rank 58: 262393 of 480777 
+stonewall rank 7: 281885 of 480777 
+stonewall rank 15: 271289 of 480777 
+stonewall rank 41: 332006 of 480777 
+stonewall rank 1: 232415 of 480777 
+stonewall rank 3: 314188 of 480777 
+stonewall rank 37: 252365 of 480777 
+stonewall rank 44: 293177 of 480777 
+stonewall rank 32: 323771 of 480777 
+stonewall rank 38: 354547 of 480777 
+stonewall rank 52: 195303 of 480777 
+stonewall rank 45: 344547 of 480777 
+stonewall rank 61: 201169 of 480777 
+stonewall rank 19: 215394 of 480777 
+stonewall rank 9: 232740 of 480777 
+stonewall rank 57: 188025 of 480777 
+stonewall rank 24: 275604 of 480777 
+stonewall rank 25: 297695 of 480777 
+stonewall rank 42: 329644 of 480777 
+stonewall rank 11: 242146 of 480777 
+stonewall rank 53: 132772 of 480777 
+stonewall rank 17: 308064 of 480777 
+stonewall rank 2: 311763 of 480777 
+stonewall rank 40: 348027 of 480777 
+stonewall rank 33: 294010 of 480777 
+stonewall rank 59: 271797 of 480777 
+stonewall rank 39: 261155 of 480777 
+stonewall rank 46: 296338 of 480777 
+stonewall rank 49: 332164 of 480777 
+stonewall rank 56: 278901 of 480777 
+stonewall rank 62: 308429 of 480777 
+stonewall rank 5: 264521 of 480777 
+stonewall rank 8: 312935 of 480777 
+stonewall rank 36: 281085 of 480777 
+stonewall rank 63: 281607 of 480777 
+stonewall rank 43: 334893 of 480777 
+stonewall rank 28: 442619 of 480777 
+stonewall rank 26: 304988 of 480777 
+stonewall rank 4: 232579 of 480777 
+stonewall rank 48: 352180 of 480777 
+stonewall rank 54: 227373 of 480777 
+stonewall rank 29: 325807 of 480777 
+stonewall rank 13: 271192 of 480777 
+stonewall rank 30: 324751 of 480777 
+stonewall rank 47: 293594 of 480777 
+stonewall rank 22: 440092 of 480777 
+stonewall rank 34: 245059 of 480777 
+Continue stonewall hit min: 132772 max: 480777 avg: 294080.7 
+stonewall rank 0: 233046 of 480777 
+stonewall rank 12: 429466 of 480777 
+stonewall rank 16: 151585 of 480777 
+stonewall rank 18: 264643 of 480777 
+stonewall rank 20: 295524 of 480777 
+stonewall rank 35: 324403 of 480777 
+stonewall rank 51: 321595 of 480777 
+stonewall rank 27: 308284 of 480777 
+stonewall rank 55: 228498 of 480777 
+stonewall rank 6: 432047 of 480777 
+stonewall rank 10: 239768 of 480777 
+stonewall rank 31: 296469 of 480777 
+stonewall rank 14: 269464 of 480777 
+stonewall rank 23: 290620 of 480777 
+stonewall rank 60: 299113 of 480777 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :      48942.324      48942.324      48942.324          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          1.801          1.801          1.801          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 10/24/2018 21:44:50 --

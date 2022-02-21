@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Oct 24 22:59:46 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 550000 -a POSIX -o /scratch4/jburto2/io500/datafiles/io500.2018.10.24-21.18.36/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch4/jburto2/io500/datafiles/io500.2018.10.24-21.18.36/ior_hard/stonewall
+Machine             : Linux ofstest008.ofsdev.clemson.edu
+TestID              : 0
+StartTime           : Wed Oct 24 22:59:46 2018
+Path                : /scratch4/jburto2/io500/datafiles/io500.2018.10.24-21.18.36/ior_hard
+FS                  : 174.6 TiB   Used FS: 26.6%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch4/jburto2/io500/datafiles/io500.2018.10.24-21.18.36/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 550000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 64
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.50 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 1654681600000.
+WARNING: Stat() of aggregate file size      = 889905815552.
+WARNING: Using actual aggregate bytes moved = 889905815552.
+read      878.97     45.91      45.91      0.031779   965.46     0.092257   965.54     0   
+Max Read:  878.97 MiB/sec (921.67 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read          878.97     878.97     878.97       0.00   19606.61   19606.61   19606.61       0.00  965.53897     0     64   2    1   0     1        1         0    0 550000    47008    47008  848680.3 POSIX      0
+Finished            : Wed Oct 24 23:15:52 2018

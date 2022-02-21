@@ -1,0 +1,69 @@
+[node0092.palmetto.clemson.edu:49733] mca_base_component_repository_open: unable to open mca_plm_tm: libpbs.so.0: cannot open shared object file: No such file or directory (ignored)
+[node0092.palmetto.clemson.edu:49733] mca_base_component_repository_open: unable to open mca_ras_tm: libpbs.so.0: cannot open shared object file: No such file or directory (ignored)
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            node0089
+  Device name:           mlx5_2
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   node0089
+  Local device: mlx5_2
+--------------------------------------------------------------------------
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  1 17:11:52 2019
+Command line        : /home/jburto2/io-500-dev/bin/ior -r -R -s 416666 -a POSIX -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/ior_hard/IOR_file -O stoneWallingStatusFile=/burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/ior_hard/stonewall
+Machine             : Linux node0092.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Fri Nov  1 17:11:52 2019
+Path                : /burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/ior_hard
+FS                  : 750.6 TiB   Used FS: 9.4%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 416666
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 120
+clients per node    : 12
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 2.14 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+[node0092.palmetto.clemson.edu:49733] 119 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[node0092.palmetto.clemson.edu:49733] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[node0092.palmetto.clemson.edu:49733] 119 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+WARNING: Expected aggregate file size       = 2350396239360.
+WARNING: Stat() of aggregate file size      = 1836572474880.
+WARNING: Using actual aggregate bytes moved = 1836572474880.
+read      13371      298722     130.79      45.91      45.91      0.061924   130.79     0.143681   130.99     0   
+Max Read:  13370.85 MiB/sec (14020.35 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        13370.85   13370.85   13370.85       0.00  298254.65  298254.65  298254.65       0.00  130.99330         NA            NA     0    120  12    1   0     1        1         0    0 416666    47008    47008 1751492.0 POSIX      0
+Finished            : Fri Nov  1 17:14:03 2019

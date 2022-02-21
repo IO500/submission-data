@@ -1,0 +1,60 @@
+[node0092.palmetto.clemson.edu:49584] mca_base_component_repository_open: unable to open mca_plm_tm: libpbs.so.0: cannot open shared object file: No such file or directory (ignored)
+[node0092.palmetto.clemson.edu:49584] mca_base_component_repository_open: unable to open mca_ras_tm: libpbs.so.0: cannot open shared object file: No such file or directory (ignored)
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            node0058
+  Device name:           mlx5_2
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   node0058
+  Local device: mlx5_2
+--------------------------------------------------------------------------
+-- started at 11/01/2019 17:10:12 --
+
+mdtest-3.3.0+dev was launched with 120 total task(s) on 10 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest '-T' '-F' '-P' '-d' '/burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/mdt_easy' '-n' '200000' '-u' '-L' '-x' '/burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/mdt_easy-stonewall' '-N' '1'
+Path: /burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15
+FS: 750.6 TiB   Used FS: 9.4%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2137 Shifting ranks by 1 for each phase.
+120 tasks, 24000000 files
+[node0092.palmetto.clemson.edu:49584] 119 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[node0092.palmetto.clemson.edu:49584] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[node0092.palmetto.clemson.edu:49584] 119 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :     190594.484     190592.868     190593.354          0.256
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :         99.314         99.313         99.314          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/01/2019 17:11:51 --
+

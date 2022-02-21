@@ -1,0 +1,73 @@
+[node0092.palmetto.clemson.edu:45565] mca_base_component_repository_open: unable to open mca_plm_tm: libpbs.so.0: cannot open shared object file: No such file or directory (ignored)
+[node0092.palmetto.clemson.edu:45565] mca_base_component_repository_open: unable to open mca_ras_tm: libpbs.so.0: cannot open shared object file: No such file or directory (ignored)
+--------------------------------------------------------------------------
+WARNING: No preset parameters were found for the device that Open MPI
+detected:
+
+  Local host:            node0099
+  Device name:           mlx5_2
+  Device vendor ID:      0x02c9
+  Device vendor part ID: 4123
+
+Default device parameters will be used, which may result in lower
+performance.  You can edit any of the files specified by the
+btl_openib_device_param_files MCA parameter to set values for your
+device.
+
+NOTE: You can turn off this warning by setting the MCA parameter
+      btl_openib_warn_no_device_params_found to 0.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+WARNING: There was an error initializing an OpenFabrics device.
+
+  Local host:   node0099
+  Local device: mlx5_2
+--------------------------------------------------------------------------
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  1 16:25:18 2019
+Command line        : /home/jburto2/io-500-dev/bin/ior -w -t 2048k -b 174848m -F -a POSIX -b 174848m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/ior_easy/ior_file_easy -O stoneWallingStatusFile=/burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux node0092.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Fri Nov  1 16:25:18 2019
+Path                : /burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/ior_easy
+FS                  : 750.6 TiB   Used FS: 7.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /burstbuffer/fast/jburto2/io500/datafiles/io500.2019.11.01-16.25.15/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 120
+clients per node    : 12
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 170.75 GiB
+aggregate filesize  : 20.01 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+[node0092.palmetto.clemson.edu:45565] 119 more processes have sent help message help-mpi-btl-openib.txt / no device params found
+[node0092.palmetto.clemson.edu:45565] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+[node0092.palmetto.clemson.edu:45565] 119 more processes have sent help message help-mpi-btl-openib.txt / error in device init
+stonewalling pairs accessed min: 18572 max: 68813 -- min data: 36.3 GiB mean data: 60.3 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 22000969973760.
+WARNING: Stat() of aggregate file size      = 144311320576.
+WARNING: Using actual aggregate bytes moved = 17317358469120.
+WARNING: maybe caused by deadlineForStonewalling
+write     21368      10687      0.007681    179044352  2048.00    0.025252   772.68     0.178895   772.89     0   
+Max Write: 21368.06 MiB/sec (22406.03 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       21368.06   21368.06   21368.06       0.00   10684.03   10684.03   10684.03       0.00  772.88824     300.01      24711.84     0    120  12    1   2     1        1         0    0      1 183341416448  2097152 16515120.0 POSIX      0
+Finished            : Fri Nov  1 16:38:11 2019

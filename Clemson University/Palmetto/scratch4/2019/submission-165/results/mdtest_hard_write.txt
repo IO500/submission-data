@@ -1,0 +1,52 @@
+-- started at 10/24/2018 11:13:26 --
+
+mdtest-1.9.3 was launched with 32 total task(s) on 32 node(s)
+Command line used: /home/jburto2/io-500-dev/bin/mdtest "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "/scratch4/jburto2/io500/datafiles/io500.2018.10.24-10.38.54/mdt_hard" "-n" "75000" "-x" "/scratch4/jburto2/io500/datafiles/io500.2018.10.24-10.38.54/mdt_hard-stonewall" "-W" "300"
+Path: /scratch4/jburto2/io500/datafiles/io500.2018.10.24-10.38.54
+FS: 174.6 TiB   Used FS: 19.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+32 tasks, 2400000 files
+stonewall rank 14: 53631 of 53867 
+stonewall rank 3: 53644 of 53867 
+stonewall rank 7: 53810 of 53867 
+stonewall rank 1: 53786 of 53867 
+stonewall rank 11: 53620 of 53867 
+stonewall rank 17: 50230 of 53867 
+stonewall rank 5: 53662 of 53867 
+stonewall rank 18: 49868 of 53867 
+stonewall rank 19: 50068 of 53867 
+stonewall rank 28: 50373 of 53867 
+stonewall rank 16: 46108 of 53867 
+stonewall rank 24: 50354 of 53867 
+stonewall rank 26: 50452 of 53867 
+stonewall rank 20: 50157 of 53867 
+stonewall rank 21: 50008 of 53867 
+stonewall rank 9: 53688 of 53867 
+stonewall rank 4: 53765 of 53867 
+stonewall rank 13: 53753 of 53867 
+stonewall rank 25: 50186 of 53867 
+stonewall rank 22: 50386 of 53867 
+stonewall rank 30: 50279 of 53867 
+stonewall rank 8: 53593 of 53867 
+stonewall rank 15: 50191 of 53867 
+Continue stonewall hit min: 46108 max: 53867 avg: 51721.8 
+stonewall rank 0: 53509 of 53867 
+stonewall rank 23: 50365 of 53867 
+stonewall rank 29: 50049 of 53867 
+stonewall rank 12: 53727 of 53867 
+stonewall rank 27: 50138 of 53867 
+stonewall rank 6: 53649 of 53867 
+stonewall rank 10: 53825 of 53867 
+stonewall rank 31: 50355 of 53867 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :       7406.617       7406.617       7406.617          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :         23.903         23.903         23.903          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 10/24/2018 11:18:50 --

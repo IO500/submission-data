@@ -1,0 +1,30 @@
+IOR-3.1.0: MPI Coordinated Test of Parallel I/O
+
+Began: Tue Aug 28 12:19:58 2018
+Command line used: /home/jburto2/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 4m -b 327680m -F -a POSIX -o /mnt/beegfs/jburto2/io500/datafiles/io500.2018.08.28-11.51.37/ior_easy/ior_file_easy
+Machine: Linux pvfs017.ofsdev.clemson.edu
+
+Test 0 started: Tue Aug 28 12:19:58 2018
+Summary:
+	api                = POSIX
+	test filename      = /mnt/beegfs/jburto2/io500/datafiles/io500.2018.08.28-11.51.37/ior_easy/ior_file_easy
+	access             = file-per-process
+	ordering in a file = sequential offsets
+	ordering inter file= constant task offsets = 1
+	clients            = 16 (1 per node)
+	repetitions        = 1
+	xfersize           = 4 MiB
+	blocksize          = 320 GiB
+	aggregate filesize = 5120 GiB
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      12316      335544320  4096       0.004306   425.67     0.025804   425.68     0   
+
+Max Read:  12316.44 MiB/sec (12914.72 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt blksiz xsize aggsize API RefNum
+read        12316.44   12316.44   12316.44       0.00    3079.11    3079.11    3079.11       0.00  425.68158 0 16 1 1 1 1 1 0 0 1 343597383680 4194304 5497558138880 POSIX 0
+
+Finished: Tue Aug 28 12:27:04 2018

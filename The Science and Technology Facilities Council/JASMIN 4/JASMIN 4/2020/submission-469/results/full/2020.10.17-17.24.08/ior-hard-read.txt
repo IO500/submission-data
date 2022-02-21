@@ -1,0 +1,42 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Oct 17 17:59:36 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-17.24.08-app/ior-hard/file -O stoneWallingStatusFile=/var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-17.24.08-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a MPIIO
+Machine             : Linux host639.jc.rl.ac.uk
+TestID              : 0
+StartTime           : Sat Oct 17 17:59:36 2020
+Path                : /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-17.24.08-app/ior-hard
+FS                  : 931.3 TiB   Used FS: 6.5%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /var/tmp/gws_quobyte-replicated/r2020/datafiles_all/2020.10.17-17.24.08-app/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 48
+tasks               : 336
+clients per node    : 7
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 143.65 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 66603 max: 66603 -- min data: 2.9 GiB mean data: 2.9 GiB time: 261.1s
+WARNING: Expected aggregate file size       = 157946880000000.
+WARNING: Stat() of aggregate file size      = 1051973604864.
+WARNING: Using actual aggregate bytes moved = 1051973604864.
+read      3622       85675      261.20      45.91      45.91      15.74      261.20     0.016833   276.96     0   
+Max Read:  3622.33 MiB/sec (3798.29 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         3622.33    3622.33    3622.33       0.00   80800.99   80800.99   80800.99       0.00  276.95958     261.10       3842.31     0    336   7    1   0     1        1         0    0 10000000    47008    47008 1003240.2 MPIIO      0
+Finished            : Sat Oct 17 18:04:14 2020

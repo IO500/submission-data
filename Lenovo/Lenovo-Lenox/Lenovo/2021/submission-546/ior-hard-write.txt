@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jun 11 19:07:04 2021
+Command line        : ./ior -C -Q 1 -g -G=778277175 -k -e -o /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.11-18.55.05/ior-hard/file -O stoneWallingStatusFile=/daos/daos_mlx/mhennecke/io500/results/2021.06.11-18.55.05/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=6f5327ff-414d-49bd-b4c6-834d2be840bf --dfs.cont=9b9e5373-0c6e-42fd-aca1-887ea02e170f --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/daos/daos_mlx/mhennecke/io500/results/2021.06.11-18.55.05/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux clxap0201.hpc.eu.lenovo.com
+TestID              : 0
+StartTime           : Fri Jun 11 19:07:04 2021
+Path                : /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.11-18.55.05/ior-hard/file
+FS                  : 156.2 TiB   Used FS: 38.4%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.11-18.55.05/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 36
+tasks               : 3456
+clients per node    : 96
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1477.56 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 288785 max: 300574 -- min data: 12.6 GiB mean data: 12.9 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 1624596480000000
+WARNING: Stat() of aggregate file size      = 48831146237952
+WARNING: Using actual aggregate bytes moved = 48831146237952
+WARNING: Maybe caused by deadlineForStonewalling
+write     151549     3380552    304.36      45.91      45.91      0.008080   307.28     0.007753   307.29     0   

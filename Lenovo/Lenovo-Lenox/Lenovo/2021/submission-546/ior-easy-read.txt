@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jun 11 19:22:37 2021
+Command line        : ./ior -C -Q 1 -g -G 778266487 -k -e -o /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.11-18.55.05/ior-easy/ior_file_easy -O stoneWallingStatusFile=/daos/daos_mlx/mhennecke/io500/results/2021.06.11-18.55.05/ior-easy.stonewall -t 1m -b 1000000m -r -R -a DFS --dfs.pool=6f5327ff-414d-49bd-b4c6-834d2be840bf --dfs.cont=9b9e5373-0c6e-42fd-aca1-887ea02e170f --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/daos_mlx/mhennecke/io500/results/2021.06.11-18.55.05/ior-easy-read.csv
+Machine             : Linux clxap0201.hpc.eu.lenovo.com
+TestID              : 0
+StartTime           : Fri Jun 11 19:22:37 2021
+Path                : /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.11-18.55.05/ior-easy/ior_file_easy
+FS                  : 156.2 TiB   Used FS: 70.9%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.11-18.55.05/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 36
+tasks               : 3456
+clients per node    : 96
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 976.56 GiB
+aggregate filesize  : 3295.90 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 3623878656000000
+WARNING: Stat() of aggregate file size      = 3622847125651456
+WARNING: Using actual aggregate bytes moved = 58909771431936
+read      200041     200042     0.000281    1024000000 1024.00    0.010774   280.85     0.010946   280.85     0   

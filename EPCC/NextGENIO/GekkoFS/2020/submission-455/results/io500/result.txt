@@ -1,0 +1,108 @@
+version         = io500-sc20_v3
+config-hash     = A0C0BC36
+result-dir      = results
+; START 2020-10-30 16:00:05
+
+
+[ior-easy-write]
+t_start         = 2020-10-30 16:00:05
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/r/ior-easy/ior_file_easy -O stoneWallingStatusFile=results/ior-easy.stonewall -t 512kb -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX
+throughput-stonewall = 26883.15
+score           = 73.660290
+t_delta         = 317.2223
+t_end           = 2020-10-30 16:05:22
+
+[mdtest-easy-write]
+t_start         = 2020-10-30 16:05:22
+exe             = ./mdtest -n 2200000 -u -L -F -P -N 1 -d /tmp/r/mdtest-easy -x results/mdtest-easy.stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 1834.270339
+score           = 1709.389499
+t_delta         = 377.6713
+t_end           = 2020-10-30 16:11:40
+
+[timestamp]
+t_start         = 2020-10-30 16:11:40
+t_delta         = 0.0007
+t_end           = 2020-10-30 16:11:40
+
+[ior-hard-write]
+t_start         = 2020-10-30 16:11:40
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/r/ior-hard/file -O stoneWallingStatusFile=results/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX
+throughput-stonewall = 9573.20
+score           = 26.841359
+t_delta         = 328.0219
+t_end           = 2020-10-30 16:17:08
+
+[mdtest-hard-write]
+t_start         = 2020-10-30 16:17:08
+exe             = ./mdtest -n 165000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/r/mdtest-hard -x results/mdtest-hard.stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 331.253163
+score           = 288.530970
+t_delta         = 300.1474
+t_end           = 2020-10-30 16:22:08
+
+[find]
+t_start         = 2020-10-30 16:22:08
+exe             = ./pfind /tmp/r -newer results/timestampfile -size 3901c -name *01* -C -N -H 1 -q 100000
+nproc           = 80
+found           = 2701581
+total-files     = 641487121
+score           = 4941.520633
+t_delta         = 129.8230
+t_end           = 2020-10-30 16:24:18
+
+[ior-easy-read]
+t_start         = 2020-10-30 16:24:18
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /tmp/r/ior-easy/ior_file_easy -O stoneWallingStatusFile=results/ior-easy.stonewall -t 512kb -b 9920000m -F -r -R -a POSIX
+score           = 76.414370
+t_delta         = 304.7856
+t_end           = 2020-10-30 16:29:22
+
+[mdtest-easy-stat]
+t_start         = 2020-10-30 16:29:22
+exe             = ./mdtest -n 2200000 -u -L -F -P -N 1 -d /tmp/r/mdtest-easy -x results/mdtest-easy.stonewall -T -a POSIX
+score           = 1926.370017
+t_delta         = 300.4656
+t_end           = 2020-10-30 16:34:23
+
+[ior-hard-read]
+t_start         = 2020-10-30 16:34:23
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /tmp/r/ior-hard/file -O stoneWallingStatusFile=results/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a POSIX
+score           = 29.101179
+t_delta         = 302.5582
+t_end           = 2020-10-30 16:39:25
+
+[mdtest-hard-stat]
+t_start         = 2020-10-30 16:39:25
+exe             = ./mdtest -n 165000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/r/mdtest-hard -x results/mdtest-hard.stonewall -T -a POSIX
+score           = 1721.456790
+t_delta         = 36.4334
+t_end           = 2020-10-30 16:40:02
+
+[mdtest-easy-delete]
+t_start         = 2020-10-30 16:40:02
+exe             = ./mdtest -n 2200000 -u -L -F -P -N 1 -d /tmp/r/mdtest-easy -x results/mdtest-easy.stonewall -r -a POSIX
+score           = 1844.140322
+t_delta         = 316.4252
+t_end           = 2020-10-30 16:45:18
+
+[mdtest-hard-read]
+t_start         = 2020-10-30 16:45:18
+exe             = ./mdtest -n 165000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/r/mdtest-hard -x results/mdtest-hard.stonewall -E -X -a POSIX
+score           = 583.342793
+t_delta         = 107.4961
+t_end           = 2020-10-30 16:47:06
+
+[mdtest-hard-delete]
+t_start         = 2020-10-30 16:47:06
+exe             = ./mdtest -n 165000 -t -w 3901 -e 3901 -P -N 1 -F -d /tmp/r/mdtest-hard -x results/mdtest-hard.stonewall -r -a POSIX
+score           = 691.369215
+t_delta         = 91.4932
+t_end           = 2020-10-30 16:48:37
+
+[SCORE]
+MD              = 1251.323842
+BW              = 45.791080
+SCORE           = 239.373077 
+hash            = 5D23E7D6
+; END 2020-10-30 16:49:35

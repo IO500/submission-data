@@ -1,0 +1,32 @@
+-- started at 10/30/2020 16:29:22 --
+
+mdtest-3.4.0+dev was launched with 380 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '2200000' '-u' '-L' '-F' '-P' '-N' '1' '-d' '/tmp/r/mdtest-easy' '-x' 'results/mdtest-easy.stonewall' '-T' '-a' 'POSIX'
+Path: /tmp/r
+FS: 93.0 GiB   Used FS: 10.0%   Inodes: 23.3 Mi   Used Inodes: 0.4%
+
+Nodemap: 11111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2216 Shifting ranks by 38 for each phase.
+380 tasks, 836000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :    1926377.676    1926361.143    1926370.215          3.480
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :        300.456        300.453        300.455          0.001
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 10/30/2020 16:34:23 --
+

@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  8 13:40:21 2018
+Command line        : /home/jburto2/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 4m -b 153600m -F -a MPIIO -o /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-13.06.41/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-13.06.41/ior_easy/stonewall
+Machine             : Linux pvfs017-ib0.palmetto.clemson.edu
+TestID              : 0
+StartTime           : Thu Nov  8 13:40:21 2018
+Path                : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-13.06.41/ior_easy
+FS                  : 144.2 TiB   Used FS: 8.8%   Inodes: 290.9 Mi   Used Inodes: 3.4%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.0)
+test filename       : /mnt/lustre/jburto2/io500/datafiles/io500.2018.11.08-13.06.41/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 32
+clients per node    : 2
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 150 GiB
+aggregate filesize  : 4.69 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 5153960755200.
+WARNING: Stat() of aggregate file size      = 5028601397248.
+WARNING: Using actual aggregate bytes moved = 5028601397248.
+read      7484       157286400  4096       0.010441   640.77     0.018999   640.79     0   
+Max Read:  7484.01 MiB/sec (7847.55 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         7484.01    7484.01    7484.01       0.00    1871.00    1871.00    1871.00       0.00  640.78612     0     32   2    1   1     1        1         0    0      1 161061273600  4194304 4795648.0 MPIIO      0
+Finished            : Thu Nov  8 13:51:01 2018

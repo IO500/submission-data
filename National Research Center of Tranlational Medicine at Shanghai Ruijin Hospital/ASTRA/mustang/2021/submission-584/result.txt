@@ -1,0 +1,110 @@
+[run]
+version         = io500-sc21
+config-hash     = 10AD1510
+result-dir      = /daos/u2/results/2021.10.23-10.42.55
+mode            = standard
+; START 2021-10-23 10:42:57
+
+
+[ior-easy-write]
+t_start         = 2021-10-23 10:42:57
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746251723 -k -e -o /daos/u2/datafiles/2021.10.23-10.42.55/ior-easy/ior_file_easy -O stoneWallingStatusFile=/daos/u2/results/2021.10.23-10.42.55/ior-easy.stonewall -t 1m -b 90938m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.prefix=/daos/u2 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/u2/results/2021.10.23-10.42.55/ior-easy-write.csv
+throughput-stonewall = 108.51
+score           = 97.884571
+t_delta         = 302.3103
+t_end           = 2021-10-23 10:47:59
+
+[mdtest-easy-write]
+t_start         = 2021-10-23 10:47:59
+exe             = ./mdtest --dataPacketType=timestamp -n 4096269 -u -L -F -P -G 1632429517 -N 1 -d /daos/u2/datafiles/2021.10.23-10.42.55/mdtest-easy -x /daos/u2/results/2021.10.23-10.42.55/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/daos/u2/results/2021.10.23-10.42.55/mdtest-easy-write.csv -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.oclass=S1 --dfs.dir_oclass=SX --dfs.prefix=/daos/u2
+rate-stonewall  = 4915.282480
+score           = 4896.241935
+t_delta         = 304.9908
+t_end           = 2021-10-23 10:53:04
+
+[timestamp]
+t_start         = 2021-10-23 10:53:09
+t_delta         = 0.0042
+t_end           = 2021-10-23 10:53:09
+
+[ior-hard-write]
+t_start         = 2021-10-23 10:53:09
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746262411 -k -e -o /daos/u2/datafiles/2021.10.23-10.42.55/ior-hard/file -O stoneWallingStatusFile=/daos/u2/results/2021.10.23-10.42.55/ior-hard.stonewall -t 47008 -b 47008 -s 1647571 -w -D 300 -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.chunk_size=470080 --dfs.prefix=/daos/u2 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/u2/results/2021.10.23-10.42.55/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 79.99
+score           = 71.710894
+t_delta         = 317.7074
+t_end           = 2021-10-23 10:58:26
+
+[mdtest-hard-write]
+t_start         = 2021-10-23 10:58:26
+exe             = ./mdtest --dataPacketType=timestamp -n 1910260 -t -w 3901 -e 3901 -P -G=1632440205 -N 1 -F -d /daos/u2/datafiles/2021.10.23-10.42.55/mdtest-hard -x /daos/u2/results/2021.10.23-10.42.55/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/daos/u2/results/2021.10.23-10.42.55/mdtest-hard-write.csv -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.oclass=S1 --dfs.dir_oclass=SX --dfs.prefix=/daos/u2
+rate-stonewall  = 1783.356627
+score           = 1754.731265
+t_delta         = 312.3332
+t_end           = 2021-10-23 11:03:39
+
+[find]
+t_start         = 2021-10-23 11:03:43
+exe             = ./pfind /daos/u2/datafiles/2021.10.23-10.42.55 -newer /daos/u2/results/2021.10.23-10.42.55/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 360
+found           = 29304660
+total-files     = 2017606330
+score           = 2813.659509
+t_delta         = 729.8332
+t_end           = 2021-10-23 11:15:53
+
+[ior-easy-read]
+t_start         = 2021-10-23 11:15:53
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746251723 -k -e -o /daos/u2/datafiles/2021.10.23-10.42.55/ior-easy/ior_file_easy -O stoneWallingStatusFile=/daos/u2/results/2021.10.23-10.42.55/ior-easy.stonewall -t 1m -b 90938m -r -R -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.prefix=/daos/u2 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/u2/results/2021.10.23-10.42.55/ior-easy-read.csv
+score           = 102.354627
+t_delta         = 287.9980
+t_end           = 2021-10-23 11:20:41
+
+[mdtest-easy-stat]
+t_start         = 2021-10-23 11:20:41
+exe             = ./mdtest --dataPacketType=timestamp -n 4096269 -u -L -F -P -G 1632429517 -N 1 -d /daos/u2/datafiles/2021.10.23-10.42.55/mdtest-easy -x /daos/u2/results/2021.10.23-10.42.55/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/daos/u2/results/2021.10.23-10.42.55/mdtest-easy-stat.csv -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.oclass=S1 --dfs.dir_oclass=SX --dfs.prefix=/daos/u2
+score           = 5041.119244
+t_delta         = 295.5869
+t_end           = 2021-10-23 11:25:37
+
+[ior-hard-read]
+t_start         = 2021-10-23 11:25:41
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746262411 -k -e -o /daos/u2/datafiles/2021.10.23-10.42.55/ior-hard/file -O stoneWallingStatusFile=/daos/u2/results/2021.10.23-10.42.55/ior-hard.stonewall -t 47008 -b 47008 -s 1647571 -r -R -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.chunk_size=470080 --dfs.prefix=/daos/u2 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/u2/results/2021.10.23-10.42.55/ior-hard-read.csv
+score           = 81.574438
+t_delta         = 276.3093
+t_end           = 2021-10-23 11:30:17
+
+[mdtest-hard-stat]
+t_start         = 2021-10-23 11:30:17
+exe             = ./mdtest --dataPacketType=timestamp -n 1910260 -t -w 3901 -e 3901 -P -G=1632440205 -N 1 -F -d /daos/u2/datafiles/2021.10.23-10.42.55/mdtest-hard -x /daos/u2/results/2021.10.23-10.42.55/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/daos/u2/results/2021.10.23-10.42.55/mdtest-hard-stat.csv -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.oclass=S1 --dfs.dir_oclass=SX --dfs.prefix=/daos/u2
+score           = 4392.239470
+t_delta         = 126.6161
+t_end           = 2021-10-23 11:32:24
+
+[mdtest-easy-delete]
+t_start         = 2021-10-23 11:32:28
+exe             = ./mdtest --dataPacketType=timestamp -n 4096269 -u -L -F -P -G 1632429517 -N 1 -d /daos/u2/datafiles/2021.10.23-10.42.55/mdtest-easy -x /daos/u2/results/2021.10.23-10.42.55/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/daos/u2/results/2021.10.23-10.42.55/mdtest-easy-delete.csv -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.oclass=S1 --dfs.dir_oclass=SX --dfs.prefix=/daos/u2
+score           = 2179.374241
+t_delta         = 688.2881
+t_end           = 2021-10-23 11:43:57
+
+[mdtest-hard-read]
+t_start         = 2021-10-23 11:44:01
+exe             = ./mdtest --dataPacketType=timestamp -n 1910260 -t -w 3901 -e 3901 -P -G=1632440205 -N 1 -F -d /daos/u2/datafiles/2021.10.23-10.42.55/mdtest-hard -x /daos/u2/results/2021.10.23-10.42.55/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/daos/u2/results/2021.10.23-10.42.55/mdtest-hard-read.csv -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.oclass=S1 --dfs.dir_oclass=SX --dfs.prefix=/daos/u2
+score           = 3456.875758
+t_delta         = 159.9853
+t_end           = 2021-10-23 11:46:41
+
+[mdtest-hard-delete]
+t_start         = 2021-10-23 11:46:45
+exe             = ./mdtest --dataPacketType=timestamp -n 1910260 -t -w 3901 -e 3901 -P -G=1632440205 -N 1 -F -d /daos/u2/datafiles/2021.10.23-10.42.55/mdtest-hard -x /daos/u2/results/2021.10.23-10.42.55/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/daos/u2/results/2021.10.23-10.42.55/mdtest-hard-delete.csv -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.oclass=S1 --dfs.dir_oclass=SX --dfs.prefix=/daos/u2
+score           = 1561.463428
+t_delta         = 853.3928
+t_end           = 2021-10-23 12:00:59
+
+[SCORE]
+MD              = 2984.614027
+BW              = 87.496411
+SCORE           = 511.021541
+hash            = 15BCD352
+; END 2021-10-23 12:01:05

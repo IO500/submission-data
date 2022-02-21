@@ -1,0 +1,31 @@
+-- started at 10/23/2021 11:20:42 --
+
+mdtest-3.4.0+dev was launched with 360 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '4096269' '-u' '-L' '-F' '-P' '-G' '1632429517' '-N' '1' '-d' '/daos/u2/datafiles/2021.10.23-10.42.55/mdtest-easy' '-x' '/daos/u2/results/2021.10.23-10.42.55/mdtest-easy.stonewall' '-T' '--saveRankPerformanceDetails=/daos/u2/results/2021.10.23-10.42.55/mdtest-easy-stat.csv' '-a' 'DFS' '--dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911' '--dfs.cont=77235465-b362-48f2-be5e-bc0726595be1' '--dfs.oclass=S1' '--dfs.dir_oclass=SX' '--dfs.prefix=/daos/u2'
+Path                : /daos/u2/datafiles/2021.10.23-10.42.55/mdtest-easy
+FS                  : 72.3 TiB   Used FS: 85.2%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+Nodemap: 111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2479 Shifting ranks by 36 for each phase.
+360 tasks, 1474656840 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                 5041119.244    5041119.244    5041119.244          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                     292.526        292.526        292.526          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 10/23/2021 11:25:35 --
+

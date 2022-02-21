@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Oct 23 10:42:57 2021
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746251723 -k -e -o /daos/u2/datafiles/2021.10.23-10.42.55/ior-easy/ior_file_easy -O stoneWallingStatusFile=/daos/u2/results/2021.10.23-10.42.55/ior-easy.stonewall -t 1m -b 90938m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.prefix=/daos/u2 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/u2/results/2021.10.23-10.42.55/ior-easy-write.csv
+Machine             : Linux aep01.astra
+TestID              : 0
+StartTime           : Sat Oct 23 10:42:58 2021
+Path                : /daos/u2/datafiles/2021.10.23-10.42.55/ior-easy/ior_file_easy
+FS                  : 72.3 TiB   Used FS: 0.0%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /daos/u2/datafiles/2021.10.23-10.42.55/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 360
+clients per node    : 36
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 88.81 GiB
+aggregate filesize  : 31.22 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 90938 max: 90938 -- min data: 88.8 GiB mean data: 88.8 GiB time: 294.6s
+write     100234     100235     0.003240    93120512   1024.00    31.98      326.61     31.98      326.61     0   

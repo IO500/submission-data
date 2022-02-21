@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Oct 23 11:25:41 2021
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746262411 -k -e -o /daos/u2/datafiles/2021.10.23-10.42.55/ior-hard/file -O stoneWallingStatusFile=/daos/u2/results/2021.10.23-10.42.55/ior-hard.stonewall -t 47008 -b 47008 -s 1647571 -r -R -a DFS --dfs.pool=e9cd968a-137f-4332-b23e-2d6f87cdd911 --dfs.cont=77235465-b362-48f2-be5e-bc0726595be1 --dfs.chunk_size=470080 --dfs.prefix=/daos/u2 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/u2/results/2021.10.23-10.42.55/ior-hard-read.csv
+Machine             : Linux aep01.astra
+TestID              : 0
+StartTime           : Sat Oct 23 11:25:41 2021
+Path                : /daos/u2/datafiles/2021.10.23-10.42.55/ior-hard/file
+FS                  : 72.3 TiB   Used FS: 85.2%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /daos/u2/datafiles/2021.10.23-10.42.55/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 1647571
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 360
+clients per node    : 36
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 25.36 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 27881646324480
+WARNING: Stat() of aggregate file size      = 26440121560320
+WARNING: Using actual aggregate bytes moved = 26440121560320
+read      83532      1863616    269.83      45.91      45.91      32.03      301.81     31.98      301.86     0   

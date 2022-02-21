@@ -1,0 +1,40 @@
+IOR-3.3alpha1: MPI Coordinated Test of Parallel I/O
+Began               : Sun Jun  9 12:51:25 2019
+Command line        : /work/home/sihara/io-500-dev/bin/ior -w -s 230000 -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /es90/io500.out/ior_hard/IOR_file -O stoneWallingStatusFile=/es90/io500.out/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux c082
+TestID              : 0
+StartTime           : Sun Jun  9 12:51:25 2019
+Path                : /es90/io500.out/ior_hard
+FS                  : 106.7 TiB   Used FS: 17.2%   Inodes: 940.3 Mi   Used Inodes: 8.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /es90/io500.out/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 230000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.57 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 183350 max: 230000 -- min data: 8.0 GiB mean data: 9.2 GiB time: 300.0s
+write     4694       45.91      45.91      0.032990   351.39     0.000876   351.43     0   
+Max Write: 4694.46 MiB/sec (4922.50 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        4694.46    4694.46    4694.46       0.00  104716.18  104716.18  104716.18       0.00  351.42611     0    160  16    1   0     1        1         0    0 230000    47008    47008 1649755.9 POSIX      0
+Finished            : Sun Jun  9 12:57:17 2019

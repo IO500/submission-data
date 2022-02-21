@@ -1,0 +1,137 @@
+System:  c082
+filesystem_utilization=172.16.254.190@o2ib:/es90 114584427840 867968 113423656576   1% /es90
+date=2019.06.09-12.40.54
+io500_cleanup_workdir=False
+io500_find_cmd=/work/home/sihara/io-500-dev/bin/pfind
+io500_find_cmd_args='-q 200000 -s 300 -r /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/pfind_results'
+io500_find_mpi=True
+io500_info_data_storage_type=xxx
+io500_info_filesystem=xxx
+io500_info_filesystem_vendor=xxx
+io500_info_filesystem_version=xxx
+io500_info_institute_name=xxx
+io500_info_metadata_storage_type=xxx
+io500_info_num_client_nodes=xxx
+io500_info_num_data_server_nodes=xxx
+io500_info_num_data_storage_devices=xxx
+io500_info_num_metadata_server_nodes=xxx
+io500_info_num_metadata_storage_devices=xxx
+io500_info_procs_per_node=xxx
+io500_info_storage_age_in_months=xxx
+io500_info_storage_install_date=xxx
+io500_info_storage_interface=xxx
+io500_info_storage_network=xxx
+io500_info_system_name=xxx
+io500_info_whatever=WhateverElseYouThinkRelevant
+io500_ior_cmd=/work/home/sihara/io-500-dev/bin/ior
+io500_ior_easy_params='-t 2048k -b 120000m -F'
+io500_ior_easy_size=120000
+io500_ior_hard_other_options=
+io500_ior_hard_writes_per_proc=230000
+io500_mdreal_cmd=/work/home/sihara/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/work/home/sihara/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=500000
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=81500
+io500_mdtest_hard_other_options=
+io500_mpiargs='-np 160 -hostfile hostfile -ppn 16'
+io500_mpirun=/work/home/sihara/mpi/mpich-3.3/bin/mpirun
+io500_result_dir=/work/home/sihara/io-500-dev/results/2019.06.09-12.40.54
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/es90/io500.out
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/ior -w -t 2048k -b 120000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /es90/io500.out/ior_easy/ior_file_easy -O stoneWallingStatusFile=/es90/io500.out/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write               60.081 GB/s : time 312.08 seconds
+
+[Starting] mdtest_easy_write
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/mdtest -C -F -d /es90/io500.out/mdt_easy -n 500000 -u -L -x /es90/io500.out/mdt_easy-stonewall -W 300
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write              253.930 kiops : time 316.20 seconds
+
+[Starting] ior_hard_write
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/ior -w -s 230000  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /es90/io500.out/ior_hard/IOR_file -O stoneWallingStatusFile=/es90/io500.out/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write                4.584 GB/s : time 351.43 seconds
+
+[Starting] mdtest_hard_write
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /es90/io500.out/mdt_hard -n 81500 -x /es90/io500.out/mdt_hard-stonewall  -W 300
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write               40.215 kiops : time 314.32 seconds
+
+[Starting] find
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/pfind /es90/io500.out -newer /es90/io500.out/timestampfile -size 3901c -name "*01*" -q 200000 -s 300 -r /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/pfind_results
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/find.txt.
+[FIND] MATCHED 437893/92590086 in 27.6273 seconds
+[RESULT] IOPS phase 3                      find             3351.390 kiops : time  27.63 seconds
+
+[Starting] ior_easy_read
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/ior -r -R -t 2048k -b 120000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /es90/io500.out/ior_easy/ior_file_easy -O stoneWallingStatusFile=/es90/io500.out/ior_easy/stonewall
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read               74.139 GB/s : time 252.90 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/mdtest -T -F -d /es90/io500.out/mdt_easy -n 500000 -u -L -x /es90/io500.out/mdt_easy-stonewall
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat             2765.040 kiops : time  31.09 seconds
+
+[Starting] ior_hard_read
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/ior -r -R -s 230000  -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /es90/io500.out/ior_hard/IOR_file -O stoneWallingStatusFile=/es90/io500.out/ior_hard/stonewall
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read                7.307 GB/s : time 220.50 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /es90/io500.out/mdt_hard -n 81500 -x /es90/io500.out/mdt_hard-stonewall 
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat             3062.620 kiops : time   4.95 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/mdtest -r -F -d /es90/io500.out/mdt_easy -n 500000 -u -L -x /es90/io500.out/mdt_easy-stonewall
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete              160.116 kiops : time 501.45 seconds
+
+[Starting] mdtest_hard_read
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /es90/io500.out/mdt_hard -n 81500 -x /es90/io500.out/mdt_hard-stonewall 
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read             4247.800 kiops : time   5.15 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] /work/home/sihara/mpi/mpich-3.3/bin/mpirun -np 160 -hostfile hostfile -ppn 16 /work/home/sihara/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /es90/io500.out/mdt_hard -n 81500 -x /es90/io500.out/mdt_hard-stonewall 
+[Results] in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete               44.999 kiops : time 280.96 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /es90/io500.out
+[Summary] Results files in /work/home/sihara/io-500-dev/results/2019.06.09-12.40.54
+[Summary] Data files in /es90/io500.out
+[RESULT] BW   phase 1            ior_easy_write               60.081 GB/s : time 312.08 seconds
+[RESULT] BW   phase 2            ior_hard_write                4.584 GB/s : time 351.43 seconds
+[RESULT] BW   phase 3             ior_easy_read               74.139 GB/s : time 252.90 seconds
+[RESULT] BW   phase 4             ior_hard_read                7.307 GB/s : time 220.50 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write              253.930 kiops : time 316.20 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write               40.215 kiops : time 314.32 seconds
+[RESULT] IOPS phase 3                      find             3351.390 kiops : time  27.63 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat             2765.040 kiops : time  31.09 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat             3062.620 kiops : time   4.95 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete              160.116 kiops : time 501.45 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read             4247.800 kiops : time   5.15 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete               44.999 kiops : time 280.96 seconds
+[SCORE] Bandwidth 19.6533 GB/s : IOPS 553.975 kiops : TOTAL 104.343

@@ -1,0 +1,40 @@
+IOR-3.3alpha1: MPI Coordinated Test of Parallel I/O
+Began               : Sun Jun  9 12:40:56 2019
+Command line        : /work/home/sihara/io-500-dev/bin/ior -w -t 2048k -b 120000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /es90/io500.out/ior_easy/ior_file_easy -O stoneWallingStatusFile=/es90/io500.out/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux c082
+TestID              : 0
+StartTime           : Sun Jun  9 12:40:56 2019
+Path                : /es90/io500.out/ior_easy
+FS                  : 106.7 TiB   Used FS: 0.0%   Inodes: 864.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /es90/io500.out/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 117.19 GiB
+aggregate filesize  : 18.31 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 54440 max: 60000 -- min data: 106.3 GiB mean data: 117.0 GiB time: 300.0s
+write     61523      122880000  2048.00    0.010937   312.05     0.014708   312.08     0   
+Max Write: 61522.69 MiB/sec (64511.21 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       61522.69   61522.69   61522.69       0.00   30761.34   30761.34   30761.34       0.00  312.07999     0    160  16    1   1     1        1         0    0      1 125829120000  2097152 19200000.0 POSIX      0
+Finished            : Sun Jun  9 12:46:08 2019

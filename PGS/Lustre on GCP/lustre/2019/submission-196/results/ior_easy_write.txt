@@ -1,0 +1,49 @@
+Warning: Permanently added 'lustre-client-7,10.166.0.90' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-8,10.166.0.94' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-2,10.166.0.72' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-9,10.166.0.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-6,10.166.0.87' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-3,10.166.0.88' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-5,10.166.0.86' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-4,10.166.0.73' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-10,10.166.0.96' (ECDSA) to the list of known hosts.
+IOR-3.3alpha1: MPI Coordinated Test of Parallel I/O
+Began               : Fri Jun  7 12:29:23 2019
+Command line        : /opt/io-500-dev/bin/ior -w -t 2048k -b 64000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/datafiles/io500.2019.06.07-12.29.22/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/datafiles/io500.2019.06.07-12.29.22/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux lustre-client-1
+TestID              : 0
+StartTime           : Fri Jun  7 12:29:23 2019
+Path                : /mnt/datafiles/io500.2019.06.07-12.29.22/ior_easy
+FS                  : 232.3 TiB   Used FS: 0.0%   Inodes: 301.2 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/datafiles/io500.2019.06.07-12.29.22/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 50
+clients per node    : 5
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 62.50 GiB
+aggregate filesize  : 3.05 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 19692 max: 32000 -- min data: 38.5 GiB mean data: 47.0 GiB time: 300.0s
+write     7517       65536000   2048.00    0.011010   425.71     0.004030   425.72     0   
+Max Write: 7516.61 MiB/sec (7881.74 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        7516.61    7516.61    7516.61       0.00    3758.31    3758.31    3758.31       0.00  425.72382     0     50   5    1   1     1        1         0    0      1 67108864000  2097152 3200000.0 POSIX      0
+Finished            : Fri Jun  7 12:36:28 2019

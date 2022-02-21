@@ -1,0 +1,29 @@
+Warning: Permanently added 'lustre-client-3,10.166.0.88' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-7,10.166.0.90' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-5,10.166.0.86' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-2,10.166.0.72' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-9,10.166.0.7' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-6,10.166.0.87' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-4,10.166.0.73' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-8,10.166.0.94' (ECDSA) to the list of known hosts.
+Warning: Permanently added 'lustre-client-10,10.166.0.96' (ECDSA) to the list of known hosts.
+-- started at 06/07/2019 13:10:33 --
+
+mdtest-3.3alpha1 was launched with 50 total task(s) on 10 node(s)
+Command line used: /opt/io-500-dev/bin/mdtest "-r" "-F" "-d" "/mnt/datafiles/io500.2019.06.07-12.29.22/mdt_easy" "-n" "275000" "-u" "-L" "-x" "/mnt/datafiles/io500.2019.06.07-12.29.22/mdt_easy-stonewall"
+Path: /mnt/datafiles/io500.2019.06.07-12.29.22
+FS: 232.3 TiB   Used FS: 1.4%   Inodes: 222.3 Mi   Used Inodes: 2.3%
+
+50 tasks, 13750000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :       7792.931       7792.892       7792.913          0.010
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :         14.531         14.531         14.531          0.000
+
+-- finished at 06/07/2019 13:16:18 --

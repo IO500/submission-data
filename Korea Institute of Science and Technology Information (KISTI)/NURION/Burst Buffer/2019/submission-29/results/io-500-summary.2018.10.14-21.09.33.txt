@@ -1,0 +1,137 @@
+System:  node0001
+filesystem_utilization=imefs          20056546192752 1895308109100 17150170630212  10% /scratch_ime
+date=2018.10.14-21.09.33
+io500_cleanup_workdir=False
+io500_find_cmd=/home01/ddnadm/acceptance/bin/io-500-dev/bin/pfind
+io500_find_cmd_args='-s 300 -r /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/pfind_results'
+io500_find_mpi=True
+io500_info_data_storage_type=xxx
+io500_info_filesystem=xxx
+io500_info_filesystem_vendor=xxx
+io500_info_filesystem_version=xxx
+io500_info_institute_name=xxx
+io500_info_metadata_storage_type=xxx
+io500_info_num_client_nodes=xxx
+io500_info_num_data_server_nodes=xxx
+io500_info_num_data_storage_devices=xxx
+io500_info_num_metadata_server_nodes=xxx
+io500_info_num_metadata_storage_devices=xxx
+io500_info_procs_per_node=xxx
+io500_info_storage_age_in_months=xxx
+io500_info_storage_install_date=xxx
+io500_info_storage_interface=xxx
+io500_info_storage_network=xxx
+io500_info_system_name=xxx
+io500_info_whatever=WhateverElseYouThinkRelevant
+io500_ior_cmd=/home01/ddnadm/acceptance/bin/io-500-dev/bin/ior
+io500_ior_easy_params='-t 2048k -b 70000m -F'
+io500_ior_easy_size=70000
+io500_ior_hard_other_options=
+io500_ior_hard_writes_per_proc=1400000
+io500_mdreal_cmd=/home01/ddnadm/acceptance/bin/io-500-dev/bin/md-real-io
+io500_mdreal_params='-P=5000 -I=1000'
+io500_mdtest_cmd=/home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest
+io500_mdtest_easy_files_per_proc=2500
+io500_mdtest_easy_params='-u -L'
+io500_mdtest_hard_files_per_proc=500
+io500_mdtest_hard_other_options=
+io500_mpiargs='-hostfile 2048_nodelist -np 4096 -ppn 2'
+io500_mpirun=mpirun
+io500_result_dir=/home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33
+io500_run_find=True
+io500_run_ior_easy=True
+io500_run_ior_easy_read=True
+io500_run_ior_hard=True
+io500_run_ior_hard_read=True
+io500_run_md_easy=True
+io500_run_md_easy_delete=True
+io500_run_md_easy_stat=True
+io500_run_md_hard=True
+io500_run_md_hard_delete=True
+io500_run_md_hard_read=True
+io500_run_md_hard_stat=True
+io500_run_mdreal=False
+io500_stonewall_timer=300
+io500_workdir=/scratch_ime/ddnadm/io500_test/datafil
+Running the IO500 Benchmark now
+[Creating] directories
+
+[Starting] ior_easy_write
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 2048k -b 70000m -F -o /scratch_ime/ddnadm/io500_test/datafil/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch_ime/ddnadm/io500_test/datafil/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300 
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/ior_easy_write.txt.
+[RESULT] BW   phase 1            ior_easy_write              797.234 GB/s : time 351.21 seconds
+
+[Starting] mdtest_easy_write
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest -C -F -d /scratch_ime/ddnadm/io500_test/datafil/mdt_easy -n 2500 -u -L -x /scratch_ime/ddnadm/io500_test/datafil/mdt_easy-stonewall -W 300
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/mdtest_easy_write.txt.
+[RESULT] IOPS phase 1         mdtest_easy_write               28.792 kiops : time 366.69 seconds
+
+[Starting] ior_hard_write
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 1400000  -o /scratch_ime/ddnadm/io500_test/datafil/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch_ime/ddnadm/io500_test/datafil/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/ior_hard_write.txt.
+[RESULT] BW   phase 2            ior_hard_write              716.124 GB/s : time 350.57 seconds
+
+[Starting] mdtest_hard_write
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest -C -t -F -w 3901 -e 3901 -d /scratch_ime/ddnadm/io500_test/datafil/mdt_hard -n 500 -x /scratch_ime/ddnadm/io500_test/datafil/mdt_hard-stonewall  -W 300
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/mdtest_hard_write.txt.
+[RESULT] IOPS phase 2         mdtest_hard_write                2.965 kiops : time 701.46 seconds
+
+[Starting] find
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/pfind /scratch_ime/ddnadm/io500_test/datafil -newer /scratch_ime/ddnadm/io500_test/datafil/timestampfile -size 3901c -name *01* -s 300 -r /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/pfind_results
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/find.txt.
+[FIND] MATCHED 50704/9887750 in 22.7471 seconds
+[RESULT] IOPS phase 3                      find              434.680 kiops : time  22.75 seconds
+
+[Starting] ior_easy_read
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 70000m -F -o /scratch_ime/ddnadm/io500_test/datafil/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch_ime/ddnadm/io500_test/datafil/ior_easy/stonewall
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/ior_easy_read.txt.
+[RESULT] BW   phase 3             ior_easy_read              751.385 GB/s : time 372.65 seconds
+
+[Starting] mdtest_easy_stat
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest -T -F -d /scratch_ime/ddnadm/io500_test/datafil/mdt_easy -n 2500 -u -L -x /scratch_ime/ddnadm/io500_test/datafil/mdt_easy-stonewall
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/mdtest_easy_stat.txt.
+[RESULT] IOPS phase 4          mdtest_easy_stat              325.453 kiops : time  35.45 seconds
+
+[Starting] ior_hard_read
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 1400000  -o /scratch_ime/ddnadm/io500_test/datafil/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch_ime/ddnadm/io500_test/datafil/ior_hard/stonewall
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/ior_hard_read.txt.
+[RESULT] BW   phase 4             ior_hard_read              219.946 GB/s : time 1141.41 seconds
+
+[Starting] mdtest_hard_stat
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest -T -t -F -w 3901 -e 3901 -d /scratch_ime/ddnadm/io500_test/datafil/mdt_hard -n 500 -x /scratch_ime/ddnadm/io500_test/datafil/mdt_hard-stonewall 
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/mdtest_hard_stat.txt.
+[RESULT] IOPS phase 5          mdtest_hard_stat              417.053 kiops : time  15.04 seconds
+
+[Starting] mdtest_easy_delete
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest -r -F -d /scratch_ime/ddnadm/io500_test/datafil/mdt_easy -n 2500 -u -L -x /scratch_ime/ddnadm/io500_test/datafil/mdt_easy-stonewall
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/mdtest_easy_delete.txt.
+[RESULT] IOPS phase 6        mdtest_easy_delete               37.893 kiops : time 228.90 seconds
+
+[Starting] mdtest_hard_read
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest -E -t -F -w 3901 -e 3901 -d /scratch_ime/ddnadm/io500_test/datafil/mdt_hard -n 500 -x /scratch_ime/ddnadm/io500_test/datafil/mdt_hard-stonewall 
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/mdtest_hard_read.txt.
+[RESULT] IOPS phase 7          mdtest_hard_read              233.133 kiops : time  18.22 seconds
+
+[Starting] mdtest_hard_delete
+[Exec] mpirun -hostfile 2048_nodelist -np 4096 -ppn 2 /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest -r -t -F -w 3901 -e 3901 -d /scratch_ime/ddnadm/io500_test/datafil/mdt_hard -n 500 -x /scratch_ime/ddnadm/io500_test/datafil/mdt_hard-stonewall 
+[Results] in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33/mdtest_hard_delete.txt.
+[RESULT] IOPS phase 8        mdtest_hard_delete                0.498 kiops : time 3571.39 seconds
+
+[Skipping] mdreal
+
+[Leaving] datafiles in /scratch_ime/ddnadm/io500_test/datafil
+[Summary] Results files in /home01/ddnadm/acceptance/bin/io-500-dev/results/2018.10.14-21.09.33
+[Summary] Data files in /scratch_ime/ddnadm/io500_test/datafil
+[RESULT] BW   phase 1            ior_easy_write              797.234 GB/s : time 351.21 seconds
+[RESULT] BW   phase 2            ior_hard_write              716.124 GB/s : time 350.57 seconds
+[RESULT] BW   phase 3             ior_easy_read              751.385 GB/s : time 372.65 seconds
+[RESULT] BW   phase 4             ior_hard_read              219.946 GB/s : time 1141.41 seconds
+[RESULT] IOPS phase 1         mdtest_easy_write               28.792 kiops : time 366.69 seconds
+[RESULT] IOPS phase 2         mdtest_hard_write                2.965 kiops : time 701.46 seconds
+[RESULT] IOPS phase 3                      find              434.680 kiops : time  22.75 seconds
+[RESULT] IOPS phase 4          mdtest_easy_stat              325.453 kiops : time  35.45 seconds
+[RESULT] IOPS phase 5          mdtest_hard_stat              417.053 kiops : time  15.04 seconds
+[RESULT] IOPS phase 6        mdtest_easy_delete               37.893 kiops : time 228.90 seconds
+[RESULT] IOPS phase 7          mdtest_hard_read              233.133 kiops : time  18.22 seconds
+[RESULT] IOPS phase 8        mdtest_hard_delete                0.498 kiops : time 3571.39 seconds
+[SCORE] Bandwidth 554.228 GB/s : IOPS 46.5804 kiops : TOTAL 160.674

@@ -1,0 +1,40 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct 14 21:21:51 2018
+Command line        : /home01/ddnadm/acceptance/bin/io-500-dev/bin/ior -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 1400000 -o /scratch_ime/ddnadm/io500_test/datafil/ior_hard/IOR_file -O stoneWallingStatusFile=/scratch_ime/ddnadm/io500_test/datafil/ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux node0025
+TestID              : 0
+StartTime           : Sun Oct 14 21:21:51 2018
+Path                : /scratch_ime/ddnadm/io500_test/datafil/ior_hard
+FS                  : 18679.1 TiB   Used FS: 9.4%   Inodes: 3993.6 Mi   Used Inodes: 1.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch_ime/ddnadm/io500_test/datafil/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 1400000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 4096
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 245.17 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1039424 max: 1400000 -- min data: 45.5 GiB mean data: 59.3 GiB time: 300.1s
+write     733311     45.91      45.91      0.146628   350.42     0.002989   350.57     0   
+Max Write: 733310.66 MiB/sec (768931.96 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write      733310.66  733310.66  733310.66       0.00 16357470.24 16357470.24 16357470.24       0.00  350.56766     0   4096   2    1   0     1        1         0    0 1400000    47008    47008 257075008.0 POSIX      0
+Finished            : Sun Oct 14 21:27:42 2018

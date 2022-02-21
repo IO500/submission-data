@@ -1,0 +1,37 @@
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct 14 21:39:57 2018
+Command line        : /home01/ddnadm/acceptance/bin/io-500-dev/bin/ior -r -R -C -Q 1 -g -G 27 -k -e -t 2048k -b 70000m -F -o /scratch_ime/ddnadm/io500_test/datafil/ior_easy/ior_file_easy -O stoneWallingStatusFile=/scratch_ime/ddnadm/io500_test/datafil/ior_easy/stonewall
+Machine             : Linux node0025
+TestID              : 0
+StartTime           : Sun Oct 14 21:39:57 2018
+Path                : /scratch_ime/ddnadm/io500_test/datafil/ior_easy
+FS                  : 18679.1 TiB   Used FS: 9.4%   Inodes: 3993.6 Mi   Used Inodes: 1.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch_ime/ddnadm/io500_test/datafil/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 4096
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 68.36 GiB
+aggregate filesize  : 273.44 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      769418     71680000   2048.00    0.120520   372.50     0.028731   372.65     0   
+Max Read:  769418.27 MiB/sec (806793.54 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       769418.27  769418.27  769418.27       0.00  384709.14  384709.14  384709.14       0.00  372.64517     0   4096   2    1   1     1        1         0    0      1 73400320000  2097152 286720000.0 POSIX      0
+Finished            : Sun Oct 14 21:46:09 2018

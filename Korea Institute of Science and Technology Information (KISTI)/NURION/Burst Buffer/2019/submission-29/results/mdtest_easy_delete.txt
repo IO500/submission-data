@@ -1,0 +1,20 @@
+-- started at 10/14/2018 22:06:23 --
+
+mdtest-1.9.3 was launched with 4096 total task(s) on 2048 node(s)
+Command line used: /home01/ddnadm/acceptance/bin/io-500-dev/bin/mdtest "-r" "-F" "-d" "/scratch_ime/ddnadm/io500_test/datafil/mdt_easy" "-n" "2500" "-u" "-L" "-x" "/scratch_ime/ddnadm/io500_test/datafil/mdt_easy-stonewall"
+Path: /scratch_ime/ddnadm/io500_test/datafil
+FS: 18679.1 TiB   Used FS: 9.4%   Inodes: 3993.6 Mi   Used Inodes: 1.5%
+
+4096 tasks, 10240000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :      37893.154      37893.154      37893.154          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.418          0.418          0.418          0.000
+
+-- finished at 10/14/2018 22:10:00 --

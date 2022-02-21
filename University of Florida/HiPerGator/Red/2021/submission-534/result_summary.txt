@@ -1,0 +1,15 @@
+IO500 version io500-isc21_v2-4-gaecc082e1315 (standard)
+[RESULT]       ior-easy-write      323.677069 GiB/s : time 384.019 seconds
+[RESULT]    mdtest-easy-write      269.898165 kIOPS : time 333.359 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write       30.251297 GiB/s : time 324.579 seconds
+[RESULT]    mdtest-hard-write      149.203752 kIOPS : time 346.715 seconds
+[RESULT]                 find     1766.080472 kIOPS : time 80.194 seconds
+[RESULT]        ior-easy-read      471.263867 GiB/s : time 263.694 seconds
+[RESULT]     mdtest-easy-stat     1617.732748 kIOPS : time 56.422 seconds
+[RESULT]        ior-hard-read      234.497306 GiB/s : time 41.958 seconds
+[RESULT]     mdtest-hard-stat      535.082749 kIOPS : time 97.352 seconds
+[RESULT]   mdtest-easy-delete      241.026981 kIOPS : time 374.038 seconds
+[RESULT]     mdtest-hard-read      384.997275 kIOPS : time 135.101 seconds
+[RESULT]   mdtest-hard-delete      116.396349 kIOPS : time 444.600 seconds
+[SCORE ] Bandwidth 181.369595 GiB/s : IOPS 400.726045 kiops : TOTAL 269.591396

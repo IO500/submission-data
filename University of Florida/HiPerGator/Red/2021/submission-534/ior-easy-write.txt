@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Jun  9 06:45:47 2021
+Command line        : ./ior -C -Q 1 -g -G 779290244 -k -e -o /lustre_ai400x/io500/datafiles/2021.06.09-06.45.36/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre_ai400x/io500/results/2021.06.09-06.45.36/ior-easy.stonewall -t 16m -b 448000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/lustre_ai400x/io500/results/2021.06.09-06.45.36/ior-easy-write.csv
+Machine             : Linux c0800a-s11.ufhpc
+TestID              : 0
+StartTime           : Wed Jun  9 06:45:47 2021
+Path                : /lustre_ai400x/io500/datafiles/2021.06.09-06.45.36/ior-easy/ior_file_easy.00000000
+FS                  : 2470.5 TiB   Used FS: 0.5%   Inodes: 6336.0 Mi   Used Inodes: 0.2%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre_ai400x/io500/datafiles/2021.06.09-06.45.36/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 140
+tasks               : 4480
+clients per node    : 32
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 437.50 GiB
+aggregate filesize  : 1914.06 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 982 max: 1775 -- min data: 15.3 GiB mean data: 23.5 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 2104533975040000
+WARNING: Stat() of aggregate file size      = 133412421632000
+WARNING: Using actual aggregate bytes moved = 133412421632000
+WARNING: Maybe caused by deadlineForStonewalling
+write     331445     20723      0.012687    458752000  16384      0.101932   383.74     0.031932   383.87     0   

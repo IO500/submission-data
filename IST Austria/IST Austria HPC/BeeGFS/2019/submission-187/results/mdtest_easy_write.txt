@@ -1,0 +1,36 @@
+-- started at 11/08/2019 16:33:12 --
+
+mdtest-3.3.0+dev was launched with 100 total task(s) on 10 node(s)
+Command line used: /nfs/scistore12/itgrp/jkiss/io500_NewestCode/io-500-dev/bin/mdtest '-C' '-F' '-P' '-d' '/mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.08-16.25.26/mdt_easy' '-n' '170000' '-u' '-L' '-x' '/mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.08-16.25.26/mdt_easy-stonewall' '-N' '1' '-W' '300'
+Path: /mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.08-16.25.26
+FS: 885.9 TiB   Used FS: 0.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 1111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2137 Shifting ranks by 10 for each phase.
+100 tasks, 17000000 files
+Continue stonewall hit min: 92678 max: 101269 avg: 96667.4 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :      31211.145      31211.090      31211.114          0.011
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA      32211.666             NA
+   Tree creation             :         32.956         32.956         32.956          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :        324.465        324.464        324.465          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   File create (stonewall)   :             NA             NA        300.101             NA
+   Tree creation             :          0.030          0.030          0.030          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/08/2019 16:38:37 --
+

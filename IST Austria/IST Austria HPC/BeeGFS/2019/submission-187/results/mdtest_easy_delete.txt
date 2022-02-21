@@ -1,0 +1,32 @@
+-- started at 11/08/2019 17:11:26 --
+
+mdtest-3.3.0+dev was launched with 100 total task(s) on 10 node(s)
+Command line used: /nfs/scistore12/itgrp/jkiss/io500_NewestCode/io-500-dev/bin/mdtest '-r' '-F' '-P' '-d' '/mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.08-16.25.26/mdt_easy' '-n' '170000' '-u' '-L' '-x' '/mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.08-16.25.26/mdt_easy-stonewall' '-N' '1'
+Path: /mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.08-16.25.26
+FS: 885.9 TiB   Used FS: 0.2%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 1111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2137 Shifting ranks by 10 for each phase.
+100 tasks, 17000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :      39334.665      39334.646      39334.655          0.006
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.125          0.125          0.125          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        257.455        257.455        257.455          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          7.981          7.981          7.981          0.000
+-- finished at 11/08/2019 17:15:53 --
+

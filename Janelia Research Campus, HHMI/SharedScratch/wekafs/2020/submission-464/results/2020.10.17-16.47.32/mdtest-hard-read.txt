@@ -1,0 +1,32 @@
+-- started at 10/17/2020 17:42:11 --
+
+mdtest-3.4.0+dev was launched with 320 total task(s) on 10 node(s)
+Command line used: ./mdtest '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-N' '1' '-F' '-d' './datadir/2020.10.17-16.47.32/mdtest-hard' '-x' './results/2020.10.17-16.47.32/mdtest-hard.stonewall' '-E' '-X' '-a' 'POSIX'
+Path: /misc/weka/wekaFS_1/io500-sc20/io500/datadir/2020.10.17-16.47.32
+FS: 150.0 TiB   Used FS: 46.4%   Inodes: 858.3 Mi   Used Inodes: 8.7%
+
+Nodemap: 11111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2216 Shifting ranks by 32 for each phase.
+320 tasks, 320000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :      92880.315      92880.205      92880.257          0.030
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :         62.315         62.315         62.315          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 10/17/2020 17:43:13 --
+

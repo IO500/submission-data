@@ -1,0 +1,14 @@
+IO500 version io500-sc20
+[RESULT]       ior-easy-write       58.442848 GiB/s : time 505.689 seconds
+[RESULT]    mdtest-easy-write      195.515703 kIOPS : time 473.532 seconds
+[RESULT]       ior-hard-write        6.782759 GiB/s : time 476.458 seconds
+[RESULT]    mdtest-hard-write       16.164503 kIOPS : time 495.436 seconds
+[RESULT]                 find     1403.535811 kIOPS : time 53.273 seconds
+[RESULT]        ior-easy-read       48.018003 GiB/s : time 615.425 seconds
+[RESULT]     mdtest-easy-stat     1570.349371 kIOPS : time 43.921 seconds
+[RESULT]        ior-hard-read        9.826414 GiB/s : time 328.882 seconds
+[RESULT]     mdtest-hard-stat      124.759602 kIOPS : time 46.397 seconds
+[RESULT]   mdtest-easy-delete      294.300080 kIOPS : time 239.317 seconds
+[RESULT]     mdtest-hard-read       92.880208 kIOPS : time 62.321 seconds
+[RESULT]   mdtest-hard-delete       19.688750 kIOPS : time 295.818 seconds
+[SCORE] Bandwidth 20.796212 GB/s : IOPS 161.713465 kiops : TOTAL 57.991615

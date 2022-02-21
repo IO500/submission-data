@@ -1,0 +1,45 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jul 14 14:55:48 2020
+Command line        : /work/BMLab/Lustre/io500_isc20/io500-app/bin/ior -w -a POSIX -t 16m --posix.odirect -b 70000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /ai400/datafiles/2020.07.14-14.55.35-scr/ior_easy/ior_file_easy -O stoneWallingStatusFile=/ai400/datafiles/2020.07.14-14.55.35-scr/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux ec01
+TestID              : 0
+StartTime           : Tue Jul 14 14:55:48 2020
+Path                : /ai400/datafiles/2020.07.14-14.55.35-scr/ior_easy
+FS                  : 94.9 TiB   Used FS: 0.0%   Inodes: 768.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ai400/datafiles/2020.07.14-14.55.35-scr/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 40
+tasks               : 1280
+clients per node    : 32
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 68.36 GiB
+aggregate filesize  : 85.45 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 884 max: 1451 -- min data: 13.8 GiB mean data: 17.5 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 93952409600000.
+WARNING: Stat() of aggregate file size      = 31159987732480.
+WARNING: Using actual aggregate bytes moved = 31159987732480.
+WARNING: maybe caused by deadlineForStonewalling
+write     75334      4710       0.088906    71680000   16384      0.093032   394.35     0.020854   394.46     0   
+Max Write: 75333.76 MiB/sec (78993.18 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       75333.76   75333.76   75333.76       0.00    4708.36    4708.36    4708.36       0.00  394.46430     300.23      76421.16     0   1280  32    1   1     1        1         0    0      1 73400320000 16777216 29716480.0 POSIX      0
+Finished            : Tue Jul 14 15:02:22 2020

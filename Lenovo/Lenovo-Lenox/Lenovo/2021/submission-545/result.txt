@@ -1,0 +1,110 @@
+version         = io500-isc21_v1-12
+config-hash     = F74DCD08
+result-dir      = /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16
+mode            = standard
+; START 2021-06-09 14:47:48
+
+
+[ior-easy-write]
+t_start         = 2021-06-09 14:47:48
+exe             = ./ior -C -Q 1 -g -G 779298556 -k -e -o /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/ior-easy/ior_file_easy -O stoneWallingStatusFile=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-easy.stonewall -t 1m -b 1000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-easy-write.csv
+throughput-stonewall = 113.32
+score           = 112.999945
+t_delta         = 324.0904
+t_end           = 2021-06-09 14:53:12
+
+[mdtest-easy-write]
+t_start         = 2021-06-09 14:53:12
+exe             = ./mdtest -n 10000000 -u -L -F -P -G 1665476350 -N 1 -d /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/mdtest-easy -x /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-easy-write.csv -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=S1 --dfs.dir_oclass=SX
+rate-stonewall  = 4889.215670
+score           = 4815.063677
+t_delta         = 309.4009
+t_end           = 2021-06-09 14:58:22
+
+[timestamp]
+t_start         = 2021-06-09 14:58:22
+score           = 0.000000
+t_delta         = 0.0078
+t_end           = 2021-06-09 14:58:22
+
+[ior-hard-write]
+t_start         = 2021-06-09 14:58:22
+exe             = ./ior -C -Q 1 -g -G=779309244 -k -e -o /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/ior-hard/file -O stoneWallingStatusFile=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 109.06
+score           = 108.445586
+t_delta         = 305.1755
+t_end           = 2021-06-09 15:03:27
+
+[mdtest-hard-write]
+t_start         = 2021-06-09 15:03:27
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -G=1665487038 -N 1 -F -d /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/mdtest-hard -x /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-hard-write.csv -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=S1 --dfs.dir_oclass=SX
+rate-stonewall  = 1736.152323
+score           = 1714.672326
+t_delta         = 315.4387
+t_end           = 2021-06-09 15:08:42
+
+[find]
+t_start         = 2021-06-09 15:08:42
+exe             = ./pfind /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16 -newer /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 960
+found           = 1832104
+total-files     = 1526894867
+score           = 5057.189716
+t_delta         = 303.7095
+t_end           = 2021-06-09 15:13:46
+
+[ior-easy-read]
+t_start         = 2021-06-09 15:13:46
+exe             = ./ior -C -Q 1 -g -G 779298556 -k -e -o /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/ior-easy/ior_file_easy -O stoneWallingStatusFile=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-easy.stonewall -t 1m -b 1000000m -r -R -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-easy-read.csv
+score           = 108.468716
+t_delta         = 318.5532
+t_end           = 2021-06-09 15:19:05
+
+[mdtest-easy-stat]
+t_start         = 2021-06-09 15:19:05
+exe             = ./mdtest -n 10000000 -u -L -F -P -G 1665476350 -N 1 -d /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/mdtest-easy -x /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-easy-stat.csv -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=S1 --dfs.dir_oclass=SX
+score           = 9277.016263
+t_delta         = 161.1834
+t_end           = 2021-06-09 15:21:46
+
+[ior-hard-read]
+t_start         = 2021-06-09 15:21:46
+exe             = ./ior -C -Q 1 -g -G=779309244 -k -e -o /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/ior-hard/file -O stoneWallingStatusFile=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-hard-read.csv
+score           = 92.411538
+t_delta         = 358.0024
+t_end           = 2021-06-09 15:27:44
+
+[mdtest-hard-stat]
+t_start         = 2021-06-09 15:27:44
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -G=1665487038 -N 1 -F -d /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/mdtest-hard -x /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-hard-stat.csv -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=S1 --dfs.dir_oclass=SX
+score           = 8016.986057
+t_delta         = 68.4454
+t_end           = 2021-06-09 15:28:52
+
+[mdtest-easy-delete]
+t_start         = 2021-06-09 15:28:52
+exe             = ./mdtest -n 10000000 -u -L -F -P -G 1665476350 -N 1 -d /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/mdtest-easy -x /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-easy-delete.csv -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=S1 --dfs.dir_oclass=SX
+score           = 1982.357356
+t_delta         = 794.4858
+t_end           = 2021-06-09 15:42:07
+
+[mdtest-hard-read]
+t_start         = 2021-06-09 15:42:07
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -G=1665487038 -N 1 -F -d /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/mdtest-hard -x /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-hard-read.csv -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=S1 --dfs.dir_oclass=SX
+score           = 1923.210161
+t_delta         = 281.6723
+t_end           = 2021-06-09 15:46:48
+
+[mdtest-hard-delete]
+t_start         = 2021-06-09 15:46:48
+exe             = ./mdtest -n 10000000 -t -w 3901 -e 3901 -P -G=1665487038 -N 1 -F -d /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/mdtest-hard -x /daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/mdtest-hard-delete.csv -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=S1 --dfs.dir_oclass=SX
+score           = 2217.838889
+t_delta         = 1721.3518
+t_end           = 2021-06-09 16:15:30
+
+[SCORE]
+MD              = 3567.847794
+BW              = 105.276201
+SCORE           = 612.869856
+hash            = 1FECCF58
+; END 2021-06-09 16:15:30

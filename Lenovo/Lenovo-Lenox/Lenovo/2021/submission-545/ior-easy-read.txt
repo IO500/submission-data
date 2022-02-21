@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Jun  9 15:13:46 2021
+Command line        : ./ior -C -Q 1 -g -G 779298556 -k -e -o /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/ior-easy/ior_file_easy -O stoneWallingStatusFile=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-easy.stonewall -t 1m -b 1000000m -r -R -a DFS --dfs.pool=85d5ee78-6753-4999-a4df-33c4e35806de --dfs.cont=48494d85-6565-4af5-a5bd-24beaa95401d --dfs.prefix=/daos/daos_mlx/mhennecke --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/daos/daos_mlx/mhennecke/io500/results/2021.06.09-14.47.16/ior-easy-read.csv
+Machine             : Linux clxap0220.hpc.eu.lenovo.com
+TestID              : 0
+StartTime           : Wed Jun  9 15:13:46 2021
+Path                : /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/ior-easy/ior_file_easy
+FS                  : 156.2 TiB   Used FS: 48.9%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /daos/daos_mlx/mhennecke/io500/datafiles/2021.06.09-14.47.16/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 960
+clients per node    : 96
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 976.56 GiB
+aggregate filesize  : 915.53 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 1006632960000000
+WARNING: Stat() of aggregate file size      = 1005622946430976
+WARNING: Using actual aggregate bytes moved = 37019933736960
+read      111072     111072     0.000318    1024000000 1024.00    0.009206   317.86     0.007961   317.86     0   

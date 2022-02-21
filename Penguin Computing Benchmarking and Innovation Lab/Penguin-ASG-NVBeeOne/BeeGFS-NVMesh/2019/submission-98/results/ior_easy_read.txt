@@ -1,0 +1,38 @@
+/root/.bashrc: line 30: gcc7: command not found
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov 11 18:05:43 2019
+Command line        : /beegfs/mnt/sc19/io-500-dev/bin/ior -r -R --posix.odirect -t 2048k -b 32g -F -i 1 -C -Q 1 -g -G 27 -k -e -o /beegfs/mnt/sc19/io-500-dev/datafiles/io500.2019.11.11-17.09.33/ior_easy/ior_file_easy -O stoneWallingStatusFile=/beegfs/mnt/sc19/io-500-dev/datafiles/io500.2019.11.11-17.09.33/ior_easy/stonewall
+Machine             : Linux asgnode001
+TestID              : 0
+StartTime           : Mon Nov 11 18:05:43 2019
+Path                : /beegfs/mnt/sc19/io-500-dev/datafiles/io500.2019.11.11-17.09.33/ior_easy
+FS                  : 120.0 TiB   Used FS: 52.7%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /beegfs/mnt/sc19/io-500-dev/datafiles/io500.2019.11.11-17.09.33/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 320
+clients per node    : 32
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 32 GiB
+aggregate filesize  : 10 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s) iter
+------    ---------  ---------- ---------  --------   --------   --------   -------- ----
+read      58903      33554432   2048.00    0.107627   177.89     0.023468   178.02     0   
+Max Read:  58902.81 MiB/sec (61764.07 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        58902.81   58902.81   58902.81       0.00   29451.40   29451.40   29451.40       0.00  178.01800         NA            NA     0    320  32    1   1     1        1         0    0      1 34359738368  2097152 10485760.0 POSIX      0
+Finished            : Mon Nov 11 18:08:41 2019

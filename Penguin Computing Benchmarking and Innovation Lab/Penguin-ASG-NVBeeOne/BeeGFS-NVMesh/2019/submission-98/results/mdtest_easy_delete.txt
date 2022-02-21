@@ -1,0 +1,33 @@
+/root/.bashrc: line 30: gcc7: command not found
+-- started at 11/11/2019 18:12:01 --
+
+mdtest-3.3.0+dev was launched with 320 total task(s) on 10 node(s)
+Command line used: /beegfs/mnt/sc19/io-500-dev/bin/mdtest '-r' '-F' '-P' '-d' '/beegfs/mnt/sc19/io-500-dev/datafiles/io500.2019.11.11-17.09.33/mdt_easy' '-n' '300000' '-u' '-L' '-x' '/beegfs/mnt/sc19/io-500-dev/datafiles/io500.2019.11.11-17.09.33/mdt_easy-stonewall' '-N' '1'
+Path: /beegfs/mnt/sc19/io-500-dev/datafiles/io500.2019.11.11-17.09.33
+FS: 120.0 TiB   Used FS: 52.7%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Nodemap: 10000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2128 Shifting ranks by 1 for each phase.
+320 tasks, 96000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :     120225.119     120225.033     120225.094          0.022
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.048          0.048          0.048          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :          0.000          0.000          0.000          0.000
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :        798.503        798.502        798.502          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :         20.997         20.997         20.997          0.000
+-- finished at 11/11/2019 18:25:51 --
+

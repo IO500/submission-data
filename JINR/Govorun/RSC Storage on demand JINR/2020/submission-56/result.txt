@@ -1,0 +1,107 @@
+version         = io500-isc20_v4-1-g18c6d03b40b0
+config-hash     = 9141A89C
+result-dir      = ./results/2020.07.07-16.09.21-app
+; START 2020-07-07 16:09:32
+
+
+[ior-easy-write]
+t_start         = 2020-07-07 16:09:33
+exe             = ./ior -v -C -Q 1 -g -G 271 -k -e -o /lustre/stor1/io500/2020.07.07-16.09.21-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/stor1/io500/2020.07.07-16.09.21-app/ior-easy/stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect
+throughput-stonewall = 81697.76
+score           = 136.601028
+t_delta         = 558.3757
+t_end           = 2020-07-07 16:18:51
+
+[mdtest-easy-write]
+t_start         = 2020-07-07 16:18:51
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-easy -x /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 515.556233
+score           = 471.965676
+t_delta         = 377.0627
+t_end           = 2020-07-07 16:25:08
+
+[timestamp]
+t_start         = 2020-07-07 16:25:09
+t_delta         = 0.0180
+t_end           = 2020-07-07 16:25:09
+
+[ior-hard-write]
+t_start         = 2020-07-07 16:25:09
+exe             = ./ior -v -C -Q 1 -g -G 27 -k -e -o /lustre/stor1/io500/2020.07.07-16.09.21-app/ior-hard/file -O stoneWallingStatusFile=/lustre/stor1/io500/2020.07.07-16.09.21-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 110000 -w -D 300 -a MPIIO
+throughput-stonewall = 8741.99
+score           = 10.927482
+t_delta         = 373.6386
+t_end           = 2020-07-07 16:31:23
+
+[mdtest-hard-write]
+t_start         = 2020-07-07 16:31:23
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-hard -x /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX
+rate-stonewall  = 103.319515
+score           = 72.405949
+t_delta         = 500.7195
+t_end           = 2020-07-07 16:39:44
+
+[find]
+t_start         = 2020-07-07 16:39:44
+exe             = ./pfind /lustre/stor1/io500/2020.07.07-16.09.21-app -newer /lustre/stor1/io500/2020.07.07-16.09.21-app/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 1216221
+total-files     = 194045606
+score           = 204.177825
+t_delta         = 951.0903
+t_end           = 2020-07-07 16:55:35
+
+[ior-easy-read]
+t_start         = 2020-07-07 16:55:35
+exe             = ./ior -v -C -Q 1 -g -G 271 -k -e -o /lustre/stor1/io500/2020.07.07-16.09.21-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/stor1/io500/2020.07.07-16.09.21-app/ior-easy/stonewall -t 2m -b 9920000m -F -r -R -a POSIX --posix.odirect
+score           = 80.590750
+t_delta         = 931.6662
+t_end           = 2020-07-07 17:11:07
+
+[mdtest-easy-stat]
+t_start         = 2020-07-07 17:11:07
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-easy -x /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-easy-stonewall -T -a POSIX
+score           = 816.135984
+t_delta         = 213.3078
+t_end           = 2020-07-07 17:14:41
+
+[ior-hard-read]
+t_start         = 2020-07-07 17:14:41
+exe             = ./ior -v -C -Q 1 -g -G 27 -k -e -o /lustre/stor1/io500/2020.07.07-16.09.21-app/ior-hard/file -O stoneWallingStatusFile=/lustre/stor1/io500/2020.07.07-16.09.21-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 110000 -r -R -a MPIIO
+score           = 14.394121
+t_delta         = 285.9153
+t_end           = 2020-07-07 17:19:27
+
+[mdtest-hard-stat]
+t_start         = 2020-07-07 17:19:27
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-hard -x /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-hard-stonewall -T -a POSIX
+score           = 205.475790
+t_delta         = 171.1807
+t_end           = 2020-07-07 17:22:18
+
+[mdtest-easy-delete]
+t_start         = 2020-07-07 17:22:18
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-easy -x /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-easy-stonewall -r -a POSIX
+score           = 354.219982
+t_delta         = 514.1532
+t_end           = 2020-07-07 17:30:52
+
+[mdtest-hard-read]
+t_start         = 2020-07-07 17:30:52
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-hard -x /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-hard-stonewall -E -X -a POSIX
+score           = 170.793932
+t_delta         = 202.5748
+t_end           = 2020-07-07 17:34:15
+
+[mdtest-hard-delete]
+t_start         = 2020-07-07 17:34:15
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-hard -x /lustre/stor1/io500/2020.07.07-16.09.21-app/mdtest-hard-stonewall -r -a POSIX
+score           = 66.860460
+t_delta         = 504.8564
+t_end           = 2020-07-07 17:42:40
+
+[SCORE]
+MD              = 215.968997
+BW              = 36.275307
+SCORE           = 88.511817 
+hash            = 1623C448
+; END 2020-07-07 17:42:44

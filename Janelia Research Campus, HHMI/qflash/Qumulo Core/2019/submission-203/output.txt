@@ -1,0 +1,472 @@
+
+[START TIME] 2019-02-20 15:06:36-05:00
+
+[IOR EASY WRITE]
+time: 1550693197.010528479
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Feb 20 15:06:40 2019
+Command line        : ./bin//ior -t 1m -b 25000m -F -w -C -Q 1 -g -G 27 -k -e -o ./datafiles//ior_easy/ior_file_easy -O stoneWallingStatusFile=./datafiles//ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux h10u03.int.janelia.org
+TestID              : 0
+StartTime           : Wed Feb 20 15:06:40 2019
+Path                : /misc/qflash/scicompsys/io-500-script/datafiles/ior_easy
+FS                  : 47.2 TiB   Used FS: 16.7%   Inodes: 12075.0 Mi   Used Inodes: 16.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles//ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 120
+clients per node    : 12
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 24.41 GiB
+aggregate filesize  : 2.86 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 25000 max: 25000 -- min data: 24.4 GiB mean data: 24.4 GiB time: 170.8s
+write     8916       25600000   1024.00    0.311925   336.16     0.002819   336.48     0   
+Max Write: 8915.89 MiB/sec (9348.99 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        8915.89    8915.89    8915.89       0.00    8915.89    8915.89    8915.89       0.00  336.47799     0    120  12    1   1     1        1         0    0      1 26214400000  1048576 3000000.0 POSIX      0
+Finished            : Wed Feb 20 15:12:16 2019
+
+[MDTEST EASY WRITE]
+time: 1550693536.655105417
+-- started at 02/20/2019 15:12:17 --
+
+mdtest-1.9.3 was launched with 120 total task(s) on 10 node(s)
+Command line used: ./bin//mdtest "-n" "30000" "-u" "-L" "-C" "-F" "-d" "./datafiles//mdt_easy" "-x" "./datafiles//mdt_easy-stonewall" "-W" "300"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 22.8%   Inodes: 12075.0 Mi   Used Inodes: 22.8%
+
+120 tasks, 3600000 files
+Continue stonewall hit min: 16469 max: 30000 avg: 24292.3 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :       8573.115       8573.108       8573.113          0.001
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          3.061          3.061          3.061          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 15:19:18 --
+
+[CREATING TIMESTAMP]
+time: 1550693958.846566747
+
+[IOR HARD WRITE]
+time: 1550693958.868984601
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Feb 20 15:19:19 2019
+Command line        : ./bin//ior -B -s 8000 -w -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o ./datafiles//ior_hard/IOR_file -O stoneWallingStatusFile=./datafiles//ior_hard/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux h10u03.int.janelia.org
+TestID              : 0
+StartTime           : Wed Feb 20 15:19:19 2019
+Path                : /misc/qflash/scicompsys/io-500-script/datafiles/ior_hard
+FS                  : 47.2 TiB   Used FS: 22.8%   Inodes: 12075.0 Mi   Used Inodes: 22.8%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles//ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 8000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 120
+clients per node    : 12
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 42.03 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 5457 max: 7350 -- min data: 0.2 GiB mean data: 0.3 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 45127680000.
+WARNING: Stat() of aggregate file size      = 41461056000.
+WARNING: Using actual aggregate bytes moved = 41461056000.
+WARNING: maybe caused by deadlineForStonewalling
+write     118.93     45.91      45.91      0.007414   332.46     0.000601   332.47     0   
+Max Write: 118.93 MiB/sec (124.71 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         118.93     118.93     118.93       0.00    2652.89    2652.89    2652.89       0.00  332.46815     0    120  12    1   0     1        1         0    0   8000    47008    47008   39540.3 POSIX      0
+Finished            : Wed Feb 20 15:24:52 2019
+
+[MDTEST HARD WRITE]
+time: 1550694292.411419297
+-- started at 02/20/2019 15:24:53 --
+
+mdtest-1.9.3 was launched with 120 total task(s) on 10 node(s)
+Command line used: ./bin//mdtest "-n" "5000" "-C" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "./datafiles//mdt_hard" "-x" "./datafiles//mdt_hard-stonewall" "-W" "300"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 22.9%   Inodes: 12075.0 Mi   Used Inodes: 22.9%
+
+120 tasks, 600000 files
+Continue stonewall hit min: 430 max: 960 avg: 687.6 
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :        289.899        289.899        289.899          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :        490.677        490.677        490.677          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 15:31:31 --
+
+[PFIND EASY]
+time: 1550694691.840916289
+[20] rate: 0.005 kiops time: 151.1s found: 3 (scanned 696 files, scanned dirents: 0, unknown dirents: 0)
+[21] rate: 0.391 kiops time: 151.1s found: 0 (scanned 59020 files, scanned dirents: 60000, unknown dirents: 17295)
+[22] rate: 0.198 kiops time: 151.1s found: 0 (scanned 29955 files, scanned dirents: 30000, unknown dirents: 8348)
+[32] rate: 0.000 kiops time: 151.1s found: 0 (scanned 31 files, scanned dirents: 0, unknown dirents: 0)
+[23] rate: 0.200 kiops time: 151.1s found: 0 (scanned 30212 files, scanned dirents: 30000, unknown dirents: 13794)
+[33] rate: 0.001 kiops time: 151.1s found: 0 (scanned 78 files, scanned dirents: 0, unknown dirents: 0)
+[34] rate: 0.000 kiops time: 151.1s found: 0 (scanned 71 files, scanned dirents: 0, unknown dirents: 0)
+[35] rate: 0.199 kiops time: 151.1s found: 4 (scanned 30023 files, scanned dirents: 30000, unknown dirents: 13001)
+[18] rate: 0.001 kiops time: 151.1s found: 0 (scanned 113 files, scanned dirents: 0, unknown dirents: 0)
+[45] rate: 0.390 kiops time: 151.1s found: 0 (scanned 58954 files, scanned dirents: 60000, unknown dirents: 12227)
+[14] rate: 0.198 kiops time: 151.1s found: 6 (scanned 29848 files, scanned dirents: 30000, unknown dirents: 6029)
+[46] rate: 0.009 kiops time: 151.1s found: 4 (scanned 1330 files, scanned dirents: 0, unknown dirents: 0)
+[16] rate: 0.195 kiops time: 151.1s found: 0 (scanned 29512 files, scanned dirents: 30000, unknown dirents: 6056)
+[47] rate: 0.003 kiops time: 151.1s found: 2 (scanned 407 files, scanned dirents: 0, unknown dirents: 0)
+[15] rate: 0.008 kiops time: 151.1s found: 0 (scanned 1154 files, scanned dirents: 0, unknown dirents: 0)
+[44] rate: 0.013 kiops time: 151.1s found: 1 (scanned 2039 files, scanned dirents: 0, unknown dirents: 0)
+[25] rate: 0.010 kiops time: 151.1s found: 0 (scanned 1510 files, scanned dirents: 0, unknown dirents: 0)
+[17] rate: 0.005 kiops time: 151.1s found: 0 (scanned 765 files, scanned dirents: 0, unknown dirents: 0)
+[31] rate: 0.004 kiops time: 151.1s found: 0 (scanned 607 files, scanned dirents: 0, unknown dirents: 0)
+[57] rate: 0.392 kiops time: 151.1s found: 4 (scanned 59245 files, scanned dirents: 60000, unknown dirents: 12235)
+[13] rate: 0.009 kiops time: 151.1s found: 9 (scanned 1353 files, scanned dirents: 0, unknown dirents: 0)
+[27] rate: 0.003 kiops time: 151.1s found: 0 (scanned 524 files, scanned dirents: 0, unknown dirents: 0)
+[61] rate: 0.011 kiops time: 151.1s found: 10 (scanned 1608 files, scanned dirents: 0, unknown dirents: 0)
+[58] rate: 0.008 kiops time: 151.1s found: 6 (scanned 1250 files, scanned dirents: 0, unknown dirents: 0)
+[38] rate: 0.005 kiops time: 151.1s found: 13 (scanned 764 files, scanned dirents: 0, unknown dirents: 0)
+[12] rate: 0.397 kiops time: 151.1s found: 1 (scanned 59906 files, scanned dirents: 60000, unknown dirents: 11846)
+[28] rate: 0.196 kiops time: 151.1s found: 0 (scanned 29554 files, scanned dirents: 30000, unknown dirents: 11349)
+[65] rate: 0.391 kiops time: 151.1s found: 13 (scanned 59052 files, scanned dirents: 60000, unknown dirents: 21852)
+[59] rate: 0.196 kiops time: 151.1s found: 0 (scanned 29638 files, scanned dirents: 30000, unknown dirents: 12280)
+[39] rate: 0.001 kiops time: 151.1s found: 0 (scanned 175 files, scanned dirents: 0, unknown dirents: 0)
+[19] rate: 0.199 kiops time: 151.1s found: 7 (scanned 30103 files, scanned dirents: 30000, unknown dirents: 7618)
+[24] rate: 0.589 kiops time: 151.1s found: 0 (scanned 88993 files, scanned dirents: 90000, unknown dirents: 18189)
+[70] rate: 0.005 kiops time: 151.1s found: 0 (scanned 769 files, scanned dirents: 0, unknown dirents: 0)
+[56] rate: 0.390 kiops time: 151.1s found: 0 (scanned 58900 files, scanned dirents: 60000, unknown dirents: 16487)
+[37] rate: 0.201 kiops time: 151.1s found: 0 (scanned 30331 files, scanned dirents: 30000, unknown dirents: 4320)
+[0] rate: 0.198 kiops time: 151.1s found: 7 (scanned 29955 files, scanned dirents: 30250, unknown dirents: 13794)
+[26] rate: 0.196 kiops time: 151.1s found: 0 (scanned 29576 files, scanned dirents: 30000, unknown dirents: 8417)
+[71] rate: 0.196 kiops time: 151.1s found: 0 (scanned 29609 files, scanned dirents: 30000, unknown dirents: 9976)
+[80] rate: 0.011 kiops time: 151.1s found: 6 (scanned 1588 files, scanned dirents: 0, unknown dirents: 0)
+[50] rate: 0.391 kiops time: 151.1s found: 3 (scanned 59040 files, scanned dirents: 60000, unknown dirents: 12169)
+[41] rate: 0.018 kiops time: 151.1s found: 21 (scanned 2683 files, scanned dirents: 0, unknown dirents: 0)
+[1] rate: 0.395 kiops time: 151.1s found: 2 (scanned 59698 files, scanned dirents: 60002, unknown dirents: 24120)
+[30] rate: 0.207 kiops time: 151.1s found: 2 (scanned 31298 files, scanned dirents: 30000, unknown dirents: 5984)
+[64] rate: 0.391 kiops time: 151.1s found: 8 (scanned 59124 files, scanned dirents: 60000, unknown dirents: 25972)
+[49] rate: 0.008 kiops time: 151.1s found: 0 (scanned 1167 files, scanned dirents: 0, unknown dirents: 0)
+[36] rate: 0.588 kiops time: 151.1s found: 1 (scanned 88903 files, scanned dirents: 90000, unknown dirents: 28674)
+[3] rate: 0.590 kiops time: 151.1s found: 4 (scanned 89140 files, scanned dirents: 90000, unknown dirents: 32438)
+[29] rate: 0.588 kiops time: 151.1s found: 2 (scanned 88845 files, scanned dirents: 90000, unknown dirents: 21146)
+[68] rate: 0.392 kiops time: 151.1s found: 1 (scanned 59258 files, scanned dirents: 60000, unknown dirents: 13791)
+[92] rate: 0.005 kiops time: 151.1s found: 0 (scanned 714 files, scanned dirents: 0, unknown dirents: 0)
+[81] rate: 0.394 kiops time: 151.1s found: 17 (scanned 59476 files, scanned dirents: 60000, unknown dirents: 15437)
+[48] rate: 0.390 kiops time: 151.1s found: 0 (scanned 58848 files, scanned dirents: 60000, unknown dirents: 9043)
+[42] rate: 0.195 kiops time: 151.1s found: 0 (scanned 29526 files, scanned dirents: 30000, unknown dirents: 9719)
+[4] rate: 0.396 kiops time: 151.1s found: 0 (scanned 59880 files, scanned dirents: 60000, unknown dirents: 21349)
+[69] rate: 0.200 kiops time: 151.1s found: 0 (scanned 30186 files, scanned dirents: 30000, unknown dirents: 6924)
+[95] rate: 0.391 kiops time: 151.1s found: 0 (scanned 59118 files, scanned dirents: 60000, unknown dirents: 23312)
+[82] rate: 0.396 kiops time: 151.1s found: 0 (scanned 59754 files, scanned dirents: 60000, unknown dirents: 16714)
+[55] rate: 0.001 kiops time: 151.1s found: 0 (scanned 162 files, scanned dirents: 0, unknown dirents: 0)
+[40] rate: 0.779 kiops time: 151.1s found: 0 (scanned 117666 files, scanned dirents: 120000, unknown dirents: 21759)
+[5] rate: 0.392 kiops time: 151.1s found: 0 (scanned 59279 files, scanned dirents: 60000, unknown dirents: 20610)
+[60] rate: 0.391 kiops time: 151.1s found: 6 (scanned 59059 files, scanned dirents: 60000, unknown dirents: 9207)
+[93] rate: 0.004 kiops time: 151.1s found: 9 (scanned 595 files, scanned dirents: 0, unknown dirents: 0)
+[83] rate: 0.205 kiops time: 151.1s found: 0 (scanned 30916 files, scanned dirents: 30000, unknown dirents: 13794)
+[51] rate: 0.008 kiops time: 151.1s found: 6 (scanned 1254 files, scanned dirents: 0, unknown dirents: 0)
+[43] rate: 0.393 kiops time: 151.1s found: 2 (scanned 59402 files, scanned dirents: 60000, unknown dirents: 8387)
+[6] rate: 0.271 kiops time: 151.1s found: 0 (scanned 41013 files, scanned dirents: 60000, unknown dirents: 18400)
+[62] rate: 0.197 kiops time: 151.1s found: 0 (scanned 29820 files, scanned dirents: 30000, unknown dirents: 12265)
+[94] rate: 0.001 kiops time: 151.1s found: 0 (scanned 160 files, scanned dirents: 0, unknown dirents: 0)
+[107] rate: 0.005 kiops time: 151.1s found: 7 (scanned 798 files, scanned dirents: 0, unknown dirents: 0)
+[75] rate: 0.005 kiops time: 151.1s found: 0 (scanned 709 files, scanned dirents: 0, unknown dirents: 0)
+[54] rate: 0.014 kiops time: 151.1s found: 0 (scanned 2145 files, scanned dirents: 0, unknown dirents: 0)
+[7] rate: 0.238 kiops time: 151.1s found: 1 (scanned 36015 files, scanned dirents: 30000, unknown dirents: 7522)
+[63] rate: 0.197 kiops time: 151.1s found: 0 (scanned 29767 files, scanned dirents: 30000, unknown dirents: 11481)
+[104] rate: 0.391 kiops time: 151.1s found: 12 (scanned 59016 files, scanned dirents: 60000, unknown dirents: 14410)
+[76] rate: 0.000 kiops time: 151.1s found: 0 (scanned 58 files, scanned dirents: 0, unknown dirents: 0)
+[52] rate: 0.586 kiops time: 151.1s found: 5 (scanned 88481 files, scanned dirents: 90000, unknown dirents: 24260)
+[8] rate: 0.201 kiops time: 151.1s found: 0 (scanned 30430 files, scanned dirents: 30000, unknown dirents: 3881)
+[66] rate: 0.584 kiops time: 151.1s found: 5 (scanned 88249 files, scanned dirents: 90000, unknown dirents: 19723)
+[106] rate: 0.202 kiops time: 151.1s found: 2 (scanned 30443 files, scanned dirents: 30000, unknown dirents: 4931)
+[77] rate: 0.195 kiops time: 151.1s found: 1 (scanned 29506 files, scanned dirents: 30000, unknown dirents: 3755)
+[53] rate: 0.590 kiops time: 151.1s found: 8 (scanned 89186 files, scanned dirents: 90000, unknown dirents: 16819)
+[9] rate: 0.008 kiops time: 151.1s found: 11 (scanned 1233 files, scanned dirents: 0, unknown dirents: 0)
+[118] rate: 0.003 kiops time: 151.1s found: 2 (scanned 514 files, scanned dirents: 0, unknown dirents: 0)
+[67] rate: 0.398 kiops time: 151.1s found: 11 (scanned 60180 files, scanned dirents: 60000, unknown dirents: 17651)
+[105] rate: 0.398 kiops time: 151.1s found: 2 (scanned 60171 files, scanned dirents: 60000, unknown dirents: 8602)
+[78] rate: 0.004 kiops time: 151.1s found: 0 (scanned 577 files, scanned dirents: 0, unknown dirents: 0)
+[10] rate: 0.198 kiops time: 151.1s found: 0 (scanned 29916 files, scanned dirents: 30000, unknown dirents: 13794)
+[119] rate: 0.000 kiops time: 151.1s found: 0 (scanned 64 files, scanned dirents: 0, unknown dirents: 0)
+[88] rate: 0.200 kiops time: 151.1s found: 1 (scanned 30200 files, scanned dirents: 30000, unknown dirents: 6502)
+[96] rate: 0.005 kiops time: 151.1s found: 0 (scanned 796 files, scanned dirents: 0, unknown dirents: 0)
+[72] rate: 0.002 kiops time: 151.1s found: 2 (scanned 361 files, scanned dirents: 0, unknown dirents: 0)
+[11] rate: 0.588 kiops time: 151.1s found: 1 (scanned 88902 files, scanned dirents: 90000, unknown dirents: 40538)
+[117] rate: 0.203 kiops time: 151.1s found: 0 (scanned 30622 files, scanned dirents: 30000, unknown dirents: 6858)
+[89] rate: 0.005 kiops time: 151.1s found: 0 (scanned 706 files, scanned dirents: 0, unknown dirents: 0)
+[100] rate: 0.011 kiops time: 151.1s found: 1435 (scanned 1621 files, scanned dirents: 0, unknown dirents: 0)
+[74] rate: 0.196 kiops time: 151.1s found: 0 (scanned 29656 files, scanned dirents: 30000, unknown dirents: 4597)
+[2] rate: 0.394 kiops time: 151.1s found: 0 (scanned 59534 files, scanned dirents: 60000, unknown dirents: 26759)
+[116] rate: 0.397 kiops time: 151.1s found: 2 (scanned 60016 files, scanned dirents: 60000, unknown dirents: 19748)
+[90] rate: 0.195 kiops time: 151.1s found: 0 (scanned 29394 files, scanned dirents: 30000, unknown dirents: 6050)
+[99] rate: 0.751 kiops time: 151.1s found: 218 (scanned 113398 files, scanned dirents: 115202, unknown dirents: 12334)
+[73] rate: 0.196 kiops time: 151.1s found: 0 (scanned 29596 files, scanned dirents: 30000, unknown dirents: 9901)
+[114] rate: 0.001 kiops time: 151.1s found: 0 (scanned 112 files, scanned dirents: 0, unknown dirents: 0)
+[84] rate: 0.004 kiops time: 151.1s found: 0 (scanned 550 files, scanned dirents: 0, unknown dirents: 0)
+[101] rate: 0.001 kiops time: 151.1s found: 23 (scanned 168 files, scanned dirents: 0, unknown dirents: 0)
+[79] rate: 0.586 kiops time: 151.1s found: 0 (scanned 88586 files, scanned dirents: 90000, unknown dirents: 21136)
+[112] rate: 0.391 kiops time: 151.1s found: 0 (scanned 59104 files, scanned dirents: 60000, unknown dirents: 11457)
+[85] rate: 0.778 kiops time: 151.1s found: 2 (scanned 117498 files, scanned dirents: 120000, unknown dirents: 12514)
+[103] rate: 0.016 kiops time: 151.1s found: 17 (scanned 2481 files, scanned dirents: 0, unknown dirents: 0)
+[115] rate: 0.197 kiops time: 151.1s found: 0 (scanned 29750 files, scanned dirents: 30000, unknown dirents: 13794)
+[87] rate: 0.199 kiops time: 151.1s found: 4 (scanned 30005 files, scanned dirents: 30000, unknown dirents: 5724)
+[102] rate: 0.414 kiops time: 151.1s found: 7 (scanned 62608 files, scanned dirents: 60000, unknown dirents: 9111)
+[110] rate: 0.002 kiops time: 151.1s found: 2 (scanned 352 files, scanned dirents: 0, unknown dirents: 0)
+[91] rate: 0.198 kiops time: 151.1s found: 1 (scanned 29891 files, scanned dirents: 30000, unknown dirents: 7693)
+[97] rate: 0.208 kiops time: 151.1s found: 39 (scanned 31390 files, scanned dirents: 30000, unknown dirents: 12989)
+[111] rate: 0.000 kiops time: 151.1s found: 0 (scanned 43 files, scanned dirents: 0, unknown dirents: 0)
+[86] rate: 0.019 kiops time: 151.1s found: 0 (scanned 2941 files, scanned dirents: 0, unknown dirents: 0)
+[98] rate: 0.202 kiops time: 151.1s found: 23 (scanned 30483 files, scanned dirents: 30000, unknown dirents: 11960)
+[113] rate: 0.008 kiops time: 151.1s found: 0 (scanned 1193 files, scanned dirents: 0, unknown dirents: 0)
+[108] rate: 0.002 kiops time: 151.1s found: 4 (scanned 331 files, scanned dirents: 0, unknown dirents: 0)
+[109] rate: 0.003 kiops time: 151.1s found: 3 (scanned 378 files, scanned dirents: 0, unknown dirents: 0)
+[DONE] rate: 24.593 kiops time: 151.1s found: 2031 (scanned 3715326 files, scanned dirents: 3715454, unknown dirents: 982821)
+MATCHED 2031/3715326
+time: 1550694843.814536432
+
+[IOR EASY READ]
+time: 1550694843.815748798
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Feb 20 15:34:04 2019
+Command line        : ./bin//ior -t 1m -b 25000m -F -r -R -C -Q 1 -g -G 27 -k -e -o ./datafiles//ior_easy/ior_file_easy -O stoneWallingStatusFile=./datafiles//ior_easy/stonewall
+Machine             : Linux h10u03.int.janelia.org
+TestID              : 0
+StartTime           : Wed Feb 20 15:34:04 2019
+Path                : /misc/qflash/scicompsys/io-500-script/datafiles/ior_easy
+FS                  : 47.2 TiB   Used FS: 22.9%   Inodes: 12075.0 Mi   Used Inodes: 22.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles//ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 120
+clients per node    : 12
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 24.41 GiB
+aggregate filesize  : 2.86 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      12903      25600000   1024.00    0.015785   232.47     0.007739   232.50     0   
+Max Read:  12903.42 MiB/sec (13530.21 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        12903.42   12903.42   12903.42       0.00   12903.42   12903.42   12903.42       0.00  232.49655     0    120  12    1   1     1        1         0    0      1 26214400000  1048576 3000000.0 POSIX      0
+Finished            : Wed Feb 20 15:37:57 2019
+
+[MDTEST EASY STAT]
+time: 1550695077.299584805
+-- started at 02/20/2019 15:37:58 --
+
+mdtest-1.9.3 was launched with 120 total task(s) on 10 node(s)
+Command line used: ./bin//mdtest "-n" "30000" "-u" "-L" "-T" "-F" "-d" "./datafiles//mdt_easy" "-x" "./datafiles//mdt_easy-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 22.9%   Inodes: 12075.0 Mi   Used Inodes: 22.9%
+
+120 tasks, 3600000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :      65198.463      65198.219      65198.347          0.056
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 15:38:54 --
+
+[IOR HARD READ]
+time: 1550695134.692661262
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Wed Feb 20 15:38:55 2019
+Command line        : ./bin//ior -B -s 8000 -r -R -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -s 8000 -B -o ./datafiles//ior_hard/IOR_file -O stoneWallingStatusFile=./datafiles//ior_hard/stonewall
+Machine             : Linux h10u03.int.janelia.org
+TestID              : 0
+StartTime           : Wed Feb 20 15:38:55 2019
+Path                : /misc/qflash/scicompsys/io-500-script/datafiles/ior_hard
+FS                  : 47.2 TiB   Used FS: 22.9%   Inodes: 12075.0 Mi   Used Inodes: 22.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles//ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 8000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 120
+clients per node    : 12
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 42.03 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 45127680000.
+WARNING: Stat() of aggregate file size      = 41461056000.
+WARNING: Using actual aggregate bytes moved = 41461056000.
+read      1640.90    45.91      45.91      0.004768   24.09      0.000232   24.10      0   
+Max Read:  1640.90 MiB/sec (1720.61 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read         1640.90    1640.90    1640.90       0.00   36602.49   36602.49   36602.49       0.00   24.09672     0    120  12    1   0     1        1         0    0   8000    47008    47008   39540.3 POSIX      0
+Finished            : Wed Feb 20 15:39:19 2019
+
+[MDTEST HARD STAT]
+time: 1550695159.380126972
+-- started at 02/20/2019 15:39:20 --
+
+mdtest-1.9.3 was launched with 120 total task(s) on 10 node(s)
+Command line used: ./bin//mdtest "-n" "5000" "-T" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "./datafiles//mdt_hard" "-x" "./datafiles//mdt_hard-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 22.9%   Inodes: 12075.0 Mi   Used Inodes: 22.9%
+
+120 tasks, 600000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :      66607.228      66599.030      66603.690          1.492
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 15:39:22 --
+
+[MDTEST EASY DELETE]
+time: 1550695162.921800195
+-- started at 02/20/2019 15:39:23 --
+
+mdtest-1.9.3 was launched with 120 total task(s) on 10 node(s)
+Command line used: ./bin//mdtest "-n" "30000" "-u" "-L" "-r" "-F" "-d" "./datafiles//mdt_easy" "-x" "./datafiles//mdt_easy-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 22.9%   Inodes: 12075.0 Mi   Used Inodes: 22.9%
+
+120 tasks, 3600000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :       9503.487       9503.480       9503.484          0.001
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          3.318          3.318          3.318          0.000
+
+-- finished at 02/20/2019 15:45:43 --
+
+[MDTEST HARD READ]
+time: 1550695543.816634327
+-- started at 02/20/2019 15:45:44 --
+
+mdtest-1.9.3 was launched with 120 total task(s) on 10 node(s)
+Command line used: ./bin//mdtest "-n" "5000" "-E" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "./datafiles//mdt_hard" "-x" "./datafiles//mdt_hard-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 22.9%   Inodes: 12075.0 Mi   Used Inodes: 22.9%
+
+120 tasks, 600000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :      73080.074      73073.079      73077.076          1.767
+   File removal      :          0.000          0.000          0.000          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :          0.000          0.000          0.000          0.000
+
+-- finished at 02/20/2019 15:45:47 --
+
+[MDTEST HARD DELETE]
+time: 1550695547.271131133
+-- started at 02/20/2019 15:45:47 --
+
+mdtest-1.9.3 was launched with 120 total task(s) on 10 node(s)
+Command line used: ./bin//mdtest "-n" "5000" "-r" "-t" "-F" "-w" "3901" "-e" "3901" "-d" "./datafiles//mdt_hard" "-x" "./datafiles//mdt_hard-stonewall"
+Path: /misc/qflash/scicompsys/io-500-script/datafiles
+FS: 47.2 TiB   Used FS: 22.9%   Inodes: 12075.0 Mi   Used Inodes: 22.9%
+
+120 tasks, 600000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation     :          0.000          0.000          0.000          0.000
+   File stat         :          0.000          0.000          0.000          0.000
+   File read         :          0.000          0.000          0.000          0.000
+   File removal      :        316.352        316.352        316.352          0.000
+   Tree creation     :          0.000          0.000          0.000          0.000
+   Tree removal      :        150.512        150.512        150.512          0.000
+
+-- finished at 02/20/2019 15:51:52 --
+
+Deleting IO-500 ./datafiles/
+time: 1550695913.056061208
+[END TIME] 2019-02-20 15:52:42-05:00
+[IO-500 COMPLETED] Result also in config-10-result-1550693196.txt; Now use io-500-score.sh to compute the score

@@ -1,0 +1,45 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  6 10:41:26 2019
+Command line        : /nfs/scistore12/itgrp/jkiss/io500_NewestCode/io-500-dev/bin/ior -w -t 2048k -b 30000 -F -b 30000m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.06-10.41.25/ior_easy/ior_file_easy -O stoneWallingStatusFile=/mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.06-10.41.25/ior_easy/stonewall -O stoneWallingWearOut=1 -D 300
+Machine             : Linux serbyn128
+TestID              : 0
+StartTime           : Wed Nov  6 10:41:26 2019
+Path                : /mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.06-10.41.25/ior_easy
+FS                  : 885.9 TiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/beegfs/jkiss_BeeGFS/datafiles/io500.2019.11.06-10.41.25/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 4
+tasks               : 80
+clients per node    : 20
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 29.30 GiB
+aggregate filesize  : 2.29 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 6287 max: 15000 -- min data: 12.3 GiB mean data: 25.0 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 2516582400000.
+WARNING: Stat() of aggregate file size      = 31457280000.
+WARNING: Using actual aggregate bytes moved = 2516582400000.
+WARNING: maybe caused by deadlineForStonewalling
+write     5658       2828.96    0.020002    30720000   2048.00    0.047386   424.18     0.042600   424.20     0   
+Max Write: 5657.68 MiB/sec (5932.50 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write        5657.68    5657.68    5657.68       0.00    2828.84    2828.84    2828.84       0.00  424.20242     300.02       6820.08     0     80  20    1   2     1        1         0    0      1 31457280000  2097152 2400000.0 POSIX      0
+Finished            : Wed Nov  6 10:48:30 2019

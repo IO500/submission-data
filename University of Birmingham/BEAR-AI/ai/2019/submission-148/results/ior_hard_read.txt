@@ -1,0 +1,37 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu May 23 22:38:47 2019
+Command line        : /ai/io-500-dev/bin/ior -r -R -s 280000 -i 1 -C -Q 1 -g -G 27 -k -e -t 47008 -b 47008 -o /ai/io-500-dev/datafiles/io500.2019.05.23-22.00.12/ior_hard/IOR_file -O stoneWallingStatusFile=/ai/io-500-dev/datafiles/io500.2019.05.23-22.00.12/ior_hard/stonewall
+Machine             : Linux bear-pg0305u03a.bear.cluster
+TestID              : 0
+StartTime           : Thu May 23 22:38:47 2019
+Path                : /ai/io-500-dev/datafiles/io500.2019.05.23-22.00.12/ior_hard
+FS                  : 109.5 TiB   Used FS: 19.8%   Inodes: 147.6 Mi   Used Inodes: 50.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ai/io-500-dev/datafiles/io500.2019.05.23-22.00.12/ior_hard/IOR_file
+access              : single-shared-file
+type                : independent
+segments            : 280000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 20
+clients per node    : 2
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 245.17 GiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+read      764.89     45.91      45.91      0.001879   328.22     0.000368   328.22     0   
+Max Read:  764.89 MiB/sec (802.04 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read          764.89     764.89     764.89       0.00   17061.83   17061.83   17061.83       0.00  328.21798     0     20   2    1   0     1        1         0    0 280000    47008    47008  251049.8 POSIX      0
+Finished            : Thu May 23 22:44:16 2019

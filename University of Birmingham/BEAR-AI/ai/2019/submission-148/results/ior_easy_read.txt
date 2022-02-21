@@ -1,0 +1,40 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu May 23 22:25:15 2019
+Command line        : /ai/io-500-dev/bin/ior -r -R -t 2048k -b 301620m -F -i 1 -C -Q 1 -g -G 27 -k -e -o /ai/io-500-dev/datafiles/io500.2019.05.23-22.00.12/ior_easy/ior_file_easy -O stoneWallingStatusFile=/ai/io-500-dev/datafiles/io500.2019.05.23-22.00.12/ior_easy/stonewall
+Machine             : Linux bear-pg0305u03a.bear.cluster
+TestID              : 0
+StartTime           : Thu May 23 22:25:15 2019
+Path                : /ai/io-500-dev/datafiles/io500.2019.05.23-22.00.12/ior_easy
+FS                  : 109.5 TiB   Used FS: 19.8%   Inodes: 147.6 Mi   Used Inodes: 50.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ai/io-500-dev/datafiles/io500.2019.05.23-22.00.12/ior_easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 20
+clients per node    : 2
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 294.55 GiB
+aggregate filesize  : 5.75 TiB
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 6325429862400.
+WARNING: Stat() of aggregate file size      = 4620864716800.
+WARNING: Using actual aggregate bytes moved = 4620864716800.
+read      13090      308858880  2048.00    0.002598   336.65     0.000230   336.65     0   
+Max Read:  13090.20 MiB/sec (13726.07 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read        13090.20   13090.20   13090.20       0.00    6545.10    6545.10    6545.10       0.00  336.64879     0     20   2    1   1     1        1         0    0      1 316271493120  2097152 4406800.0 POSIX      0
+Finished            : Thu May 23 22:30:52 2019

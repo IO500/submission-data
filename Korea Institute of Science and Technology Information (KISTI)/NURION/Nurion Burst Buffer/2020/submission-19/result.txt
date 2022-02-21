@@ -1,0 +1,107 @@
+version         = io500-isc20_v4-2-g20efd247106c
+config-hash     = 14F6BBD8
+result-dir      = /scratch/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/results/2020.07.08-23.59.24-app
+; START 2020-07-09 00:01:06
+
+
+[ior-easy-write]
+t_start         = 2020-07-09 00:01:06
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-easy/stonewall -t 512k -b 9920000m -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect
+throughput-stonewall = 1186728.23
+score           = 787.716552
+t_delta         = 417.7037
+t_end           = 2020-07-09 00:08:04
+
+[mdtest-easy-write]
+t_start         = 2020-07-09 00:08:04
+exe             = ./mdtest -n 250000 -u -L -F -P -N 1 -d /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-easy -x /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-easy-stonewall -C -Y -W 300 -a POSIX --posix.odirect
+rate-stonewall  = 23.689373
+score           = 22.622094
+t_delta         = 398.6679
+t_end           = 2020-07-09 00:14:43
+
+[timestamp]
+t_start         = 2020-07-09 00:14:43
+t_delta         = 0.0978
+t_end           = 2020-07-09 00:14:43
+
+[ior-hard-write]
+t_start         = 2020-07-09 00:14:43
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-hard/file -O stoneWallingStatusFile=/scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 4800000 -w -D 300 -a POSIX --posix.odirect
+throughput-stonewall = 1328595.19
+score           = 740.415929
+t_delta         = 364.0428
+t_end           = 2020-07-09 00:20:47
+
+[mdtest-hard-write]
+t_start         = 2020-07-09 00:20:47
+exe             = ./mdtest -n 20000 -t -w 3901 -e 3901 -P -N 1 -F -d /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-hard -x /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-hard-stonewall -C -Y -W 300 -a POSIX --posix.odirect
+rate-stonewall  = 16.589971
+score           = 15.667045
+t_delta         = 405.2319
+t_end           = 2020-07-09 00:27:32
+
+[find]
+t_start         = 2020-07-09 00:27:32
+exe             = ./pfind /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app -newer /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/timestampfile -size 3901c -name *01* -C -q 10000
+found           = 199128
+total-files     = 13262855
+score           = 489.039063
+t_delta         = 27.3482
+t_end           = 2020-07-09 00:27:59
+
+[ior-easy-read]
+t_start         = 2020-07-09 00:27:59
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-easy/ior_file_easy -O stoneWallingStatusFile=/scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-easy/stonewall -t 512k -b 9920000m -r -R -a POSIX --posix.odirect
+score           = 690.781803
+t_delta         = 476.3229
+t_end           = 2020-07-09 00:35:56
+
+[mdtest-easy-stat]
+t_start         = 2020-07-09 00:35:56
+exe             = ./mdtest -n 250000 -u -L -F -P -N 1 -d /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-easy -x /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-easy-stonewall -T -a POSIX --posix.odirect
+score           = 1667.462554
+t_delta         = 4.7633
+t_end           = 2020-07-09 00:36:00
+
+[ior-hard-read]
+t_start         = 2020-07-09 00:36:00
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-hard/file -O stoneWallingStatusFile=/scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 4800000 -r -R -a POSIX --posix.odirect
+score           = 175.395903
+t_delta         = 1536.2529
+t_end           = 2020-07-09 01:01:37
+
+[mdtest-hard-stat]
+t_start         = 2020-07-09 01:01:37
+exe             = ./mdtest -n 20000 -t -w 3901 -e 3901 -P -N 1 -F -d /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-hard -x /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-hard-stonewall -T -a POSIX --posix.odirect
+score           = 1659.243152
+t_delta         = 3.3771
+t_end           = 2020-07-09 01:01:40
+
+[mdtest-easy-delete]
+t_start         = 2020-07-09 01:01:40
+exe             = ./mdtest -n 250000 -u -L -F -P -N 1 -d /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-easy -x /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-easy-stonewall -r -a POSIX --posix.odirect
+score           = 28.238112
+t_delta         = 277.1142
+t_end           = 2020-07-09 01:06:17
+
+[mdtest-hard-read]
+t_start         = 2020-07-09 01:06:17
+exe             = ./mdtest -n 20000 -t -w 3901 -e 3901 -P -N 1 -F -d /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-hard -x /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-hard-stonewall -E -X -a POSIX --posix.odirect
+score           = 1320.590582
+t_delta         = 4.2257
+t_end           = 2020-07-09 01:06:21
+
+[mdtest-hard-delete]
+t_start         = 2020-07-09 01:06:21
+exe             = ./mdtest -n 20000 -t -w 3901 -e 3901 -P -N 1 -F -d /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-hard -x /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/mdtest-hard-stonewall -r -a POSIX --posix.odirect
+score           = 18.377565
+t_delta         = 298.2373
+t_end           = 2020-07-09 01:11:20
+
+[SCORE]
+MD              = 154.735576
+BW              = 515.586473
+SCORE           = 282.452774 
+hash            = 237BEA02
+; END 2020-07-09 01:11:21

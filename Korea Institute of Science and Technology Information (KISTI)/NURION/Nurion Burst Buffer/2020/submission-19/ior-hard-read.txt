@@ -1,0 +1,42 @@
+IOR-3.3.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Jul  9 00:36:00 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-hard/file -O stoneWallingStatusFile=/scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-hard/stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 4800000 -r -R -a POSIX --posix.odirect
+Machine             : Linux node0026
+TestID              : 0
+StartTime           : Thu Jul  9 00:36:00 2020
+Path                : /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-hard
+FS                  : 18679.1 TiB   Used FS: 41.1%   Inodes: 3993.6 Mi   Used Inodes: 12.2%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch_ime/jwyoon/IO500/ISC20/isc20v2/io500-app-7PM/datafiles/2020.07.08-23.59.24-app/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 4800000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2048
+tasks               : 2048
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 420.28 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3005027 max: 3005027 -- min data: 131.6 GiB mean data: 131.6 GiB time: 1535.7s
+WARNING: Expected aggregate file size       = 462107443200000.
+WARNING: Stat() of aggregate file size      = 289301113274368.
+WARNING: Using actual aggregate bytes moved = 289301113274368.
+read      179605     4006473    1536.07     45.91      45.91      0.027609   1536.09    0.060491   1536.14    0   
+Max Read:  179605.40 MiB/sec (188329.92 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       179605.40  179605.40  179605.40       0.00 4006337.57 4006337.57 4006337.57       0.00 1536.13998    1535.66     179662.01     0   2048   1    1   0     1        1         0    0 4800000    47008    47008 275899040.0 POSIX      0
+Finished            : Thu Jul  9 01:01:37 2020

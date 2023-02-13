@@ -1,0 +1,223 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "abbreviation": "QCT DevCloud",
+      "webpage": "https://qct.io",
+      "institution": "QCT",
+      "nationality": "USA"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": "102.854524 GiB/s",
+          "include_in_10node_ranked_list": "yes",
+          "score": 427.274472,
+          "scoreMD": "1774.967866 kOP/s",
+          "include_in_io500_ranked_list": "yes"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-11-01",
+              "clientNodes": "10",
+              "procsPerNode": "56",
+              "email": "grover.hwang@qct.io",
+              "list_id": "SC21",
+              "id": "New submission; we will assign this value"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": "103.969915 GiB/s",
+              "hard write": "50.510865 GiB/s",
+              "easy write": "119.560689 GiB/s",
+              "easy read": "178.243087 GiB/s"
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": "2590.70146 kOP/s",
+              "easy stat": "4368.152777 kOP/s",
+              "hard write": "821.91233 kOP/s",
+              "hard delete": "1023.352966 kOP/s",
+              "easy write": "2606.603625 kOP/s",
+              "hard stat": "3196.019286 kOP/s",
+              "easy delete": "965.623009 kOP/s"
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": "1286.666016 kOP/s"
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "integrator": "QCT",
+          "name": "QCT DevCloud"
+        },
+        "childs": [
+          {
+            "att": {
+              "count": "10",
+              "vendor": "QCT",
+              "kernel version": "4.18.0-240",
+              "distribution version": "8.3",
+              "Cooling": "",
+              "distribution": "CentOS",
+              "name": "QCT"
+            },
+            "childs": [
+              {
+                "att": {
+                  "channels": "16",
+                  "type": "DDR4",
+                  "net capacity": [
+                    "512",
+                    "GB"
+                  ],
+                  "frequency": [
+                    "3200",
+                    "MHz"
+                  ],
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "vendor": "Intel",
+                  "L3 cache size": [
+                    "42",
+                    "MiB"
+                  ],
+                  "frequency": [
+                    "2",
+                    "GHz"
+                  ],
+                  "microarchitecture": "Ice Lake",
+                  "architecture": "x86_64",
+                  "cores per socket": "28",
+                  "threads per core": "2",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "vendor": "QCT",
+          "name": "QCT ",
+          "raw capacity": [
+            "400",
+            "TiB"
+          ],
+          "Servers": "4",
+          "version": "1.3.106",
+          "usage": "research/test",
+          "type": "file system",
+          "software": "DAOS"
+        },
+        "childs": [
+          {
+            "att": {
+              "Version": "1.3106"
+            },
+            "childs": [
+              {
+                "att": {
+                  "count": "4",
+                  "vendor": "QCT",
+                  "kernel version": "4.18.0-240",
+                  "distribution version": "8.3",
+                  "Cooling": "",
+                  "distribution": "CentOS",
+                  "name": "QCT"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "count": "16",
+                      "vendor": "Intel",
+                      "raw capacity": [
+                        "256",
+                        "GiB"
+                      ],
+                      "file system": "",
+                      "net capacity": [
+                        "256",
+                        "GiB"
+                      ],
+                      "interface": "NVDIMM",
+                      "type": "PMEM"
+                    },
+                    "childs": [],
+                    "type": "StorageMedia"
+                  },
+                  {
+                    "att": {
+                      "channels": "16",
+                      "type": "DDR4",
+                      "net capacity": [
+                        "512",
+                        "GB"
+                      ],
+                      "frequency": [
+                        "3200",
+                        "MHz"
+                      ],
+                      "protection": ""
+                    },
+                    "childs": [],
+                    "type": "Memory"
+                  },
+                  {
+                    "att": {
+                      "vendor": "Mellanox",
+                      "speed": "200 GBit",
+                      "features": "RDMA",
+                      "type": "Infiniband"
+                    },
+                    "childs": [],
+                    "type": "Interconnect"
+                  }
+                ],
+                "type": "Servers"
+              }
+            ],
+            "type": "DAOS"
+          }
+        ],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

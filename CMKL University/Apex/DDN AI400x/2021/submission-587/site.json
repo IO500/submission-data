@@ -1,0 +1,181 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "webpage": "https://www.cmkl.ac.th/research/apex",
+      "abbreviation": "Apex",
+      "location": "Bangkok, Thailand",
+      "nationality": "THA",
+      "annual staff costs": [
+        "90",
+        "k$"
+      ],
+      "institution": "CMKL University"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": [
+            "10.274917",
+            "GiB/s"
+          ],
+          "include_in_10node_ranked_list": "no",
+          "score": "18.596354",
+          "scoreMD": [
+            "33.657146",
+            "kOP/s"
+          ],
+          "include_in_io500_ranked_list": "yes"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-28",
+              "clientNodes": "4",
+              "procsPerNode": "60",
+              "id": "New submission; we will assign this value",
+              "version": "io500-isc21-18-g89dfcda1c0f7",
+              "list_id": "SC21",
+              "submitter": "Akkarit Sangpetch",
+              "email": "akkarit@cmkl.ac.th"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": [
+                "11.791693",
+                "GiB/s"
+              ],
+              "hard write": [
+                "2.399540",
+                "GiB/s"
+              ],
+              "easy write": [
+                "11.346902",
+                "GiB/s"
+              ],
+              "easy read": [
+                "34.716185",
+                "GiB/s"
+              ]
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": [
+                "44.178514",
+                "kOP/s"
+              ],
+              "easy stat": [
+                "53.421381",
+                "kOP/s"
+              ],
+              "hard write": [
+                "10.935025",
+                "kOP/s"
+              ],
+              "hard delete": [
+                "6.859286",
+                "kOP/s"
+              ],
+              "easy write": [
+                "17.021276",
+                "kOP/s"
+              ],
+              "hard stat": [
+                "64.378442",
+                "kOP/s"
+              ],
+              "easy delete": [
+                "17.268098",
+                "kOP/s"
+              ]
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": [
+                "491.605094",
+                "kOP/s"
+              ]
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "compute peak": [
+            "0.00",
+            "FLOPS"
+          ],
+          "memory throughput": [
+            "0.00",
+            "Byte/s"
+          ],
+          "total nodes": "6",
+          "name": "Apex",
+          "memory capacity": [
+            "0.00",
+            "Byte"
+          ],
+          "integrator": "TCC Technology",
+          "total cores": "1536"
+        },
+        "childs": [
+          {
+            "att": {
+              "count": "6",
+              "vendor": "NVIDIA",
+              "kernel version": "5.4.0-73-generic",
+              "distribution version": "5.0.5",
+              "Cooling": "",
+              "distribution": "DGX OS",
+              "name": "Prism"
+            },
+            "childs": [],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "usage": "research/test",
+          "vendor": "DDN",
+          "type": "file system",
+          "name": "DDN AI400x"
+        },
+        "childs": [
+          {
+            "att": {
+              "version": "2.12.6-ddn3-1",
+              "backend": "LDISKFS"
+            },
+            "childs": [],
+            "type": "Lustre"
+          }
+        ],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

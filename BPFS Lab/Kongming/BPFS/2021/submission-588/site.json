@@ -1,0 +1,254 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "abbreviation": "BPFS Lab",
+      "nationality": "CHN",
+      "institution": "ABC BPFS Lab",
+      "location": "Beijing"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": "96.260247 GiB/s",
+          "include_in_10node_ranked_list": "yes",
+          "score": 972.603929,
+          "scoreMD": "9827.093046 kOP/s",
+          "include_in_io500_ranked_list": "yes"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-31",
+              "procsPerNode": "80",
+              "list_id": "SC21",
+              "id": "New submission; we will assign this value",
+              "clientNodes": "10"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": "116.881653 GiB/s",
+              "hard write": "106.138701 GiB/s",
+              "easy write": "91.347802 GiB/s",
+              "easy read": "75.765181 GiB/s"
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": "4086.084567 kOP/s",
+              "easy stat": "11081.175055 kOP/s",
+              "hard write": "3485.201281 kOP/s",
+              "hard delete": "8042.844092 kOP/s",
+              "easy write": "7050.545698 kOP/s",
+              "hard stat": "10336.178181 kOP/s",
+              "easy delete": "7893.367693 kOP/s"
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": "119131.006275 kOP/s"
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "total cores": "800",
+          "total nodes": "10",
+          "name": "Kongming"
+        },
+        "childs": [
+          {
+            "att": {
+              "distribution": "CentOS",
+              "distribution version": "7.5",
+              "Cooling": "",
+              "name": "Kongming-a100",
+              "kernel version": "4.14"
+            },
+            "childs": [
+              {
+                "att": {
+                  "count": "8",
+                  "interface": "NVMe",
+                  "file system": "",
+                  "type": "SSD"
+                },
+                "childs": [],
+                "type": "StorageMedia"
+              },
+              {
+                "att": {
+                  "type": "Ethernet",
+                  "speed": "100 GBit",
+                  "features": "RDMA",
+                  "links": "2"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              },
+              {
+                "att": {
+                  "vendor": "Intel",
+                  "L3 cache size": [
+                    "28160",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "1024",
+                    "KiB"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "20",
+                  "threads per core": "2",
+                  "sockets": "4"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "frequency": [
+                    "2933",
+                    "MHz"
+                  ],
+                  "net capacity": [
+                    "1510",
+                    "GB"
+                  ],
+                  "type": "DDR4",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "usage": "production",
+          "type": "file system",
+          "name": "BPFS",
+          "Servers": "35"
+        },
+        "childs": [
+          {
+            "att": {
+              "transfer protocol": "",
+              "protocol": ""
+            },
+            "childs": [
+              {
+                "att": {
+                  "distribution": "CentOS",
+                  "distribution version": "7.5",
+                  "Cooling": "",
+                  "name": "MBX-XI5-A945",
+                  "kernel version": "4.14.0_1-0-0-43"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "vendor": "Intel",
+                      "L3 cache size": [
+                        "22528",
+                        "KiB"
+                      ],
+                      "L2 cache size": [
+                        "1024",
+                        "KiB"
+                      ],
+                      "frequency": [
+                        "2799",
+                        "MHz"
+                      ],
+                      "microarchitecture": "",
+                      "architecture": "x86_64",
+                      "cores per socket": "16",
+                      "threads per core": "2",
+                      "sockets": "2"
+                    },
+                    "childs": [],
+                    "type": "Processor"
+                  },
+                  {
+                    "att": {
+                      "count": "8",
+                      "interface": "NVMe",
+                      "file system": "EXT4",
+                      "net capacity": [
+                        "7.3",
+                        "TiB"
+                      ],
+                      "type": "SSD"
+                    },
+                    "childs": [
+                      {
+                        "att": {
+                          "Level": ""
+                        },
+                        "childs": [],
+                        "type": "RAID"
+                      }
+                    ],
+                    "type": "StorageMedia"
+                  },
+                  {
+                    "att": {
+                      "type": "Ethernet",
+                      "speed": "100 GBit",
+                      "features": "RDMA",
+                      "links": "1"
+                    },
+                    "childs": [],
+                    "type": "Interconnect"
+                  },
+                  {
+                    "att": {
+                      "net capacity": [
+                        "256",
+                        "GB"
+                      ],
+                      "type": "DDR4",
+                      "protection": ""
+                    },
+                    "childs": [],
+                    "type": "Memory"
+                  }
+                ],
+                "type": "Servers"
+              }
+            ],
+            "type": "NAS"
+          }
+        ],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

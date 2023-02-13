@@ -1,0 +1,289 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "abbreviation": "IBM Tucson",
+      "webpage": "www.ibm.com",
+      "location": "Tucson, AZ",
+      "institution": "IBM Corp",
+      "nationality": "USA"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": "33.019051 GiB/s",
+          "include_in_10node_ranked_list": "yes",
+          "score": 68.825996,
+          "scoreMD": "143.463171 kOP/s",
+          "include_in_io500_ranked_list": "no"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-28",
+              "clientNodes": "10",
+              "procsPerNode": "20",
+              "email": "jayvaddi@us.ibm.com",
+              "list_id": "SC21",
+              "submitter": "Jay Vaddi",
+              "id": "New submission; we will assign this value"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": "29.254735 GiB/s",
+              "hard write": "4.338218 GiB/s",
+              "easy write": "106.350048 GiB/s",
+              "easy read": "88.066995 GiB/s"
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": "205.366311 kOP/s",
+              "easy stat": "272.152271 kOP/s",
+              "hard write": "22.303113 kOP/s",
+              "hard delete": "20.50781 kOP/s",
+              "easy write": "195.624633 kOP/s",
+              "hard stat": "266.883487 kOP/s",
+              "easy delete": "113.436856 kOP/s"
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": "1185.217512 kOP/s"
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "name": "Arches 2021B"
+        },
+        "childs": [
+          {
+            "att": {
+              "count": "10",
+              "vendor": "Lenovo",
+              "kernel version": "4.18.0-147.el8.x86_64",
+              "distribution version": "8.1",
+              "Cooling": "",
+              "distribution": "RedHat",
+              "name": "Arches - Compute"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "AMD",
+                  "frequency": [
+                    "3200",
+                    "MHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "16",
+                  "threads per core": "1",
+                  "sockets": "1"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "channels": "8",
+                  "net capacity": [
+                    "256",
+                    "GB"
+                  ],
+                  "type": "DDR4",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "speed": "200 GBit",
+                  "vendor": "Mellanox",
+                  "features": "RDMA",
+                  "links": "1",
+                  "type": "Infiniband"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "vendor": "IBM",
+          "name": "IBM Elastic Storage System 3200 - 2 Building Blocks",
+          "Servers": "4",
+          "net capacity": [
+            "60",
+            "TiB"
+          ],
+          "version": "IBM ESS 6.1.1 + IBM Spectrum Scale 5.1.2",
+          "usage": "research/test",
+          "type": "file system",
+          "software": "IBM Spectrum Scale"
+        },
+        "childs": [
+          {
+            "att": {
+              "Release": "1",
+              "Version": "5",
+              "FixPack": "0",
+              "Mod": "2"
+            },
+            "childs": [
+              {
+                "att": {
+                  "PagePool Capacity": [
+                    "48",
+                    "GiB"
+                  ],
+                  "features": ""
+                },
+                "childs": [],
+                "type": "Client Options"
+              },
+              {
+                "att": {
+                  "Encryption": "No",
+                  "Erasure Coding": "8+2p",
+                  "Replication": "1",
+                  "Stripe Size": [
+                    "8",
+                    "MiB"
+                  ],
+                  "Inodes (limit:preallocated)": "500M:500M"
+                },
+                "childs": [],
+                "type": "FileSystem Options"
+              },
+              {
+                "att": {
+                  "seqDiscardThreshold": "1048576",
+                  "workerThreads": "1024",
+                  "maxFilesToCache": "131072",
+                  "maxStatCache": "131072",
+                  "maxMBpS": "50000"
+                },
+                "childs": [],
+                "type": "Cluster Options"
+              },
+              {
+                "att": {
+                  "NSD usage": "dataAndMetadata"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "count": "4",
+                      "vendor": "IBM",
+                      "name": "ESS3200-5141-FN1",
+                      "distribution version": "8.2",
+                      "Cooling": "",
+                      "distribution": "RedHat"
+                    },
+                    "childs": [
+                      {
+                        "att": {
+                          "vendor": "AMD",
+                          "frequency": [
+                            "3200",
+                            "MHz"
+                          ],
+                          "microarchitecture": "",
+                          "architecture": "x86_64",
+                          "cores per socket": "48",
+                          "threads per core": "1",
+                          "sockets": "1"
+                        },
+                        "childs": [],
+                        "type": "Processor"
+                      },
+                      {
+                        "att": {
+                          "interface": "NVMe",
+                          "type": "SSD",
+                          "file system": "other",
+                          "net capacity": [
+                            "60",
+                            "TiB"
+                          ],
+                          "vendor": "Samsung"
+                        },
+                        "childs": [
+                          {
+                            "att": {
+                              "Level": "Declustered RAID"
+                            },
+                            "childs": [],
+                            "type": "RAID"
+                          }
+                        ],
+                        "type": "StorageMedia"
+                      },
+                      {
+                        "att": {
+                          "channels": "8",
+                          "net capacity": [
+                            "512",
+                            "GB"
+                          ],
+                          "type": "DDR4",
+                          "protection": ""
+                        },
+                        "childs": [],
+                        "type": "Memory"
+                      },
+                      {
+                        "att": {
+                          "speed": "200 GBit",
+                          "vendor": "Mellanox",
+                          "features": "RDMA",
+                          "links": "4",
+                          "type": "Infiniband"
+                        },
+                        "childs": [],
+                        "type": "Interconnect"
+                      }
+                    ],
+                    "type": "Servers"
+                  }
+                ],
+                "type": "Data Servers"
+              }
+            ],
+            "type": "SpectrumScale"
+          }
+        ],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

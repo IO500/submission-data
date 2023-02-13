@@ -1,0 +1,271 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "webpage": "www.huawei.com",
+      "abbreviation": "Olympus Lab",
+      "energy costs per kWh": [
+        "0.15",
+        "$"
+      ],
+      "location": "Shenzhen",
+      "nationality": "CHN",
+      "institution": "Olympus Storage Technology Innovation Lab"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": "317.07288 GiB/s",
+          "include_in_10node_ranked_list": "yes",
+          "score": 2298.691341,
+          "scoreMD": "16664.881195 kOP/s",
+          "include_in_io500_ranked_list": "yes"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-29",
+              "clientNodes": "10",
+              "procsPerNode": "172",
+              "id": "New submission; we will assign this value",
+              "version": "SC21",
+              "list_id": "SC21",
+              "submitter": "Phost Feng",
+              "email": "phostfeng@139.com"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": "333.193012 GiB/s",
+              "hard write": "282.139748 GiB/s",
+              "easy write": "300.506711 GiB/s",
+              "easy read": "357.784942 GiB/s"
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": "1068.374898 kOP/s",
+              "easy stat": "125682.525548 kOP/s",
+              "hard write": "2723.771711 kOP/s",
+              "hard delete": "4803.187258 kOP/s",
+              "easy write": "4766.548729 kOP/s",
+              "hard stat": "126232.865441 kOP/s",
+              "easy delete": "4771.774125 kOP/s"
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": "1179404.068408 kOP/s"
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "compute peak": [
+            "0.055",
+            "PFLOPS"
+          ],
+          "memory throughput": [
+            "4.3",
+            "TB/s"
+          ],
+          "total nodes": "10",
+          "name": "OceanStor Pacific",
+          "memory capacity": [
+            "15",
+            "TB"
+          ],
+          "integrator": "Huawei",
+          "total cores": "960",
+          "installation date": "2021-04-30"
+        },
+        "childs": [
+          {
+            "att": {
+              "count": "10",
+              "compute peak": [
+                "0.005",
+                "GFLOPS"
+              ],
+              "vendor": "Huawei",
+              "name": "FusionServer Pro",
+              "distribution version": "7.6.1810 ",
+              "Cooling": "air",
+              "power consumption": [
+                "1054",
+                "W"
+              ],
+              "kernel version": "3.10.0-957",
+              "distribution": "CentOS",
+              "installation date": "2021-04-30"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "Intel",
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "24",
+                  "threads per core": "2",
+                  "sockets": "4"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "256",
+                    "GB"
+                  ],
+                  "type": "DDR4",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "type": "Ethernet",
+                  "speed": "100 GBit",
+                  "features": "RDMA",
+                  "links": "4"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "vendor": "Huawei",
+          "name": "OceanStor Pacific",
+          "raw capacity": [
+            "0.568",
+            "PiB"
+          ],
+          "type": "file system",
+          "peak write": [
+            "432",
+            "GiB/s"
+          ],
+          "Servers": "40",
+          "net capacity": [
+            "0.461",
+            "PiB"
+          ],
+          "version": "8.1.1",
+          "usage": "production",
+          "software": "OceanFS",
+          "mount options": "mount -t dpc fsname mountdir",
+          "peak read": [
+            "720",
+            "GiB/s"
+          ],
+          "installation date": "2021-04-30"
+        },
+        "childs": [
+          {
+            "att": {
+              "transfer protocol": "RoCE",
+              "protocol": ""
+            },
+            "childs": [
+              {
+                "att": {
+                  "count": "40",
+                  "vendor": "Huawei",
+                  "kernel version": "4.19.90",
+                  "distribution version": "2.0SP9",
+                  "Cooling": "",
+                  "distribution": "EulerOS",
+                  "name": "OceanStor Pacific"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "vendor": "Huawei",
+                      "microarchitecture": "",
+                      "sockets": "1",
+                      "architecture": "ARM64"
+                    },
+                    "childs": [],
+                    "type": "Processor"
+                  },
+                  {
+                    "att": {
+                      "count": "10",
+                      "vendor": "Huawei",
+                      "raw capacity": [
+                        "1.6",
+                        "TB"
+                      ],
+                      "file system": "OceanFS",
+                      "net capacity": [
+                        "1.298591549",
+                        "TB"
+                      ],
+                      "interface": "NVMe",
+                      "type": "SSD"
+                    },
+                    "childs": [],
+                    "type": "StorageMedia"
+                  },
+                  {
+                    "att": {
+                      "net capacity": [
+                        "256",
+                        "GB"
+                      ],
+                      "type": "DDR4",
+                      "protection": ""
+                    },
+                    "childs": [],
+                    "type": "Memory"
+                  },
+                  {
+                    "att": {
+                      "type": "Ethernet",
+                      "speed": "100 GBit",
+                      "features": "RDMA",
+                      "links": "2"
+                    },
+                    "childs": [],
+                    "type": "Interconnect"
+                  }
+                ],
+                "type": "Servers"
+              }
+            ],
+            "type": "NAS"
+          }
+        ],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

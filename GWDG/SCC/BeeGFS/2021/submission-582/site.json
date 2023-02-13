@@ -1,0 +1,733 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "abbreviation": "GWDG",
+      "nationality": "DEU",
+      "institution": "GWDG"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreMD": "59.850429 kOP/s",
+          "include_in_io500_ranked_list": "",
+          "scoreBW": "2.631452 GiB/s",
+          "score": 12.549643,
+          "include_in_10node_ranked_list": "yes",
+          "scoreX": 12.662357
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-26",
+              "id": "New submission; we will assign this value",
+              "list_id": "SC21"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": "4.762372 GiB/s",
+              "rnd1MB read": "6.661937 GiB/s",
+              "hard write": "0.34875 GiB/s",
+              "rnd4K write": "0.266235 GiB/s",
+              "easy read": "8.852841 GiB/s",
+              "easy write": "3.261078 GiB/s",
+              "rnd4K read": "0.814371 GiB/s",
+              "rnd1MB write": "3.126215 GiB/s"
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": "25.880817 kOP/s",
+              "easy stat": "309.023172 kOP/s",
+              "hard write": "11.789431 kOP/s",
+              "hard delete": "12.372046 kOP/s",
+              "easy write": "52.889747 kOP/s",
+              "hard stat": "76.652839 kOP/s",
+              "easy delete": "58.292741 kOP/s"
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "bench": "112.56576 kOP/s"
+            },
+            "childs": [],
+            "type": "MDWorkbench"
+          },
+          {
+            "att": {
+              "mixed": "597.201043 kOP/s",
+              "hard": "63.300354 kOP/s",
+              "easy": "943.351165 kOP/s"
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "total nodes": "220",
+          "name": "SCC"
+        },
+        "childs": [
+          {
+            "att": {
+              "count": "5",
+              "kernel version": "3.10.0-1160.24.1.el7.x86_64",
+              "distribution version": "7.9",
+              "Cooling": "",
+              "distribution": "scientific",
+              "name": "fat+_haswell,scratch2,fas,local"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "GenuineIntel",
+                  "L3 cache size": [
+                    "25600",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "256",
+                    "KiB"
+                  ],
+                  "frequency": [
+                    "2.0",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "10",
+                  "threads per core": "1",
+                  "sockets": "4"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "1584986424.0",
+                    "KiB"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "1",
+              "kernel version": "3.10.0-1160.36.2.el7.x86_64",
+              "distribution version": "7.9",
+              "Cooling": "",
+              "distribution": "scientific",
+              "name": "fat+_haswell,mdc,local,scratch"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "GenuineIntel",
+                  "L3 cache size": [
+                    "20480",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "256",
+                    "KiB"
+                  ],
+                  "frequency": [
+                    "2.0",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "8",
+                  "threads per core": "1",
+                  "sockets": "4"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "2113454296.0",
+                    "KiB"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "95",
+              "kernel version": "3.10.0-1160.36.2.el7.x86_64",
+              "distribution version": "7.9",
+              "Cooling": "",
+              "distribution": "scientific",
+              "name": "medium_cascadelake,mdc,scratch,local"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "GenuineIntel",
+                  "L3 cache size": [
+                    "36608",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "1024",
+                    "KiB"
+                  ],
+                  "frequency": [
+                    "2.3",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "48",
+                  "threads per core": "1",
+                  "sockets": "4"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "394579720.0",
+                    "KiB"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "68",
+              "kernel version": "3.10.0-1160.24.1.el7.x86_64",
+              "distribution version": "7.9",
+              "Cooling": "",
+              "distribution": "scientific",
+              "name": "medium_broadwell,scratch2,fas,local"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "GenuineIntel",
+                  "L3 cache size": [
+                    "30720",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "256",
+                    "KiB"
+                  ],
+                  "frequency": [
+                    "2.2",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "12",
+                  "threads per core": "1",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "131655820.0",
+                    "KiB"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "5",
+              "kernel version": "3.10.0-1160.24.1.el7.x86_64",
+              "distribution version": "7.9",
+              "Cooling": "",
+              "distribution": "scientific",
+              "name": "fat_haswell,scratch2,fas,local"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "GenuineIntel",
+                  "L3 cache size": [
+                    "30720",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "256",
+                    "KiB"
+                  ],
+                  "frequency": [
+                    "2.2",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "12",
+                  "threads per core": "1",
+                  "sockets": "4"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "528017356.0",
+                    "KiB"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "1",
+              "kernel version": "3.10.0-1160.36.2.el7.x86_64",
+              "distribution version": "7.9",
+              "Cooling": "",
+              "distribution": "scientific",
+              "name": "fat_haswell,mdc,local,scratch"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "GenuineIntel",
+                  "L3 cache size": [
+                    "20480",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "256",
+                    "KiB"
+                  ],
+                  "frequency": [
+                    "2.0",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "8",
+                  "threads per core": "1",
+                  "sockets": "4"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "2113454296.0",
+                    "KiB"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "15",
+              "kernel version": "3.10.0-1160.24.1.el7.x86_64",
+              "distribution version": "7.9",
+              "Cooling": "",
+              "distribution": "scientific",
+              "name": "fat_broadwell,scratch2,fas,local"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "GenuineIntel",
+                  "L3 cache size": [
+                    "30720",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "256",
+                    "KiB"
+                  ],
+                  "frequency": [
+                    "2.2",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "12",
+                  "threads per core": "1",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "528017356.0",
+                    "KiB"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "4",
+              "Cooling": "",
+              "distribution": "",
+              "name": "int_broadwell,scratch2,fas,local"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "",
+                  "microarchitecture": "",
+                  "architecture": "",
+                  "cores per socket": "12",
+                  "threads per core": "1",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "21",
+              "kernel version": "3.10.0-1160.24.1.el7.x86_64",
+              "distribution version": "7.9",
+              "Cooling": "",
+              "distribution": "scientific",
+              "name": "gpu_broadwell,scratch2,fas,local"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "GenuineIntel",
+                  "L3 cache size": [
+                    "30720",
+                    "KiB"
+                  ],
+                  "L2 cache size": [
+                    "256",
+                    "KiB"
+                  ],
+                  "frequency": [
+                    "2.2",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "12",
+                  "threads per core": "1",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "131670208.0",
+                    "KiB"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "4",
+              "Cooling": "",
+              "distribution": "",
+              "name": "gpu_broadwell,scratch2,fas,local,dcv2"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "",
+                  "microarchitecture": "",
+                  "architecture": "",
+                  "cores per socket": "12",
+                  "threads per core": "1",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "usage": "",
+          "type": "",
+          "name": "BeeGFS"
+        },
+        "childs": [
+          {
+            "att": {
+              "version": "7.2.3",
+              "protocol": "RDMA"
+            },
+            "childs": [
+              {
+                "att": {
+                  "count": "2",
+                  "kernel version": "3.10.0-1160",
+                  "distribution version": "7.9",
+                  "Cooling": "air",
+                  "installation date": "2020-11",
+                  "distribution": "CentOS",
+                  "name": "storage3x"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "vendor": "Intel",
+                      "L3 cache size": [
+                        "22",
+                        "MiB"
+                      ],
+                      "L2 cache size": [
+                        "1",
+                        "MiB"
+                      ],
+                      "frequency": [
+                        "2800",
+                        "MHz"
+                      ],
+                      "microarchitecture": "Cascade Lake",
+                      "architecture": "x86_64",
+                      "cores per socket": "16",
+                      "threads per core": "2",
+                      "sockets": "1"
+                    },
+                    "childs": [],
+                    "type": "Processor"
+                  },
+                  {
+                    "att": {
+                      "count": "4",
+                      "raw capacity": [
+                        "2.8",
+                        "TiB"
+                      ],
+                      "file system": "EXT4",
+                      "net capacity": [
+                        "1.4",
+                        "TiB"
+                      ],
+                      "interface": "SAS3",
+                      "type": "SSD"
+                    },
+                    "childs": [
+                      {
+                        "att": {
+                          "Devices": "2",
+                          "Level": "RAID-1"
+                        },
+                        "childs": [],
+                        "type": "RAID"
+                      }
+                    ],
+                    "type": "StorageMedia"
+                  },
+                  {
+                    "att": {
+                      "channels": "6",
+                      "net capacity": [
+                        "192",
+                        "GiB"
+                      ],
+                      "frequency": [
+                        "2933",
+                        "MHz"
+                      ],
+                      "type": "DDR4",
+                      "protection": "ECC"
+                    },
+                    "childs": [],
+                    "type": "Memory"
+                  },
+                  {
+                    "att": {
+                      "type": "Omni-Path",
+                      "speed": "100 GBit",
+                      "features": "RDMA",
+                      "links": "1"
+                    },
+                    "childs": [],
+                    "type": "Interconnect"
+                  }
+                ],
+                "type": "Metadata Server"
+              },
+              {
+                "att": {
+                  "count": "2",
+                  "kernel version": "3.10.0-1160",
+                  "distribution version": "7.9",
+                  "Cooling": "air",
+                  "installation date": "2020-11",
+                  "distribution": "CentOS",
+                  "name": "storage3x"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "vendor": "Intel",
+                      "L3 cache size": [
+                        "26",
+                        "MiB"
+                      ],
+                      "L2 cache size": [
+                        "1",
+                        "MiB"
+                      ],
+                      "frequency": [
+                        "2800",
+                        "MHz"
+                      ],
+                      "microarchitecture": "Cascade Lake",
+                      "architecture": "x86_64",
+                      "cores per socket": "16",
+                      "threads per core": "2",
+                      "sockets": "1"
+                    },
+                    "childs": [],
+                    "type": "Processor"
+                  },
+                  {
+                    "att": {
+                      "count": "4",
+                      "interface": "",
+                      "file system": "XFS",
+                      "net capacity": [
+                        "23",
+                        "TiB"
+                      ],
+                      "type": "SSD"
+                    },
+                    "childs": [
+                      {
+                        "att": {
+                          "Devices": "16",
+                          "Level": "Declustered RAID"
+                        },
+                        "childs": [],
+                        "type": "RAID"
+                      }
+                    ],
+                    "type": "StorageMedia"
+                  },
+                  {
+                    "att": {
+                      "channels": "6",
+                      "net capacity": [
+                        "192",
+                        "GiB"
+                      ],
+                      "frequency": [
+                        "2933",
+                        "MHz"
+                      ],
+                      "type": "DDR4",
+                      "protection": "ECC"
+                    },
+                    "childs": [],
+                    "type": "Memory"
+                  },
+                  {
+                    "att": {
+                      "type": "Omni-Path",
+                      "speed": "100 GBit",
+                      "features": "RDMA",
+                      "links": "1"
+                    },
+                    "childs": [],
+                    "type": "Interconnect"
+                  }
+                ],
+                "type": "Storage Server"
+              }
+            ],
+            "type": "BeeGFS"
+          }
+        ],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

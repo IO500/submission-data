@@ -1,0 +1,338 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "webpage": "www.nlhpc.cl",
+      "abbreviation": "NLHPC",
+      "energy costs per kWh": [
+        "0.2",
+        "$"
+      ],
+      "location": "Chile",
+      "nationality": "CHL",
+      "annual staff costs": [
+        "350",
+        "k$"
+      ],
+      "institution": "National Laboratory for High Performance Computing"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": [
+            "33.872313",
+            "GiB/s"
+          ],
+          "include_in_10node_ranked_list": "no",
+          "score": "83.181492",
+          "scoreMD": [
+            "204.271867",
+            "kOP/s"
+          ],
+          "include_in_io500_ranked_list": "yes"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-26",
+              "nodeType": "Guacolda",
+              "clientNodes": "24",
+              "procsPerNode": "20",
+              "id": "New submission; we will assign this value",
+              "version": "isc21",
+              "list_id": "SC21",
+              "submitter": "Gines Guerrero",
+              "email": "gguerrero@nlhpc.cl"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": [
+                "15.608656",
+                "GiB/s"
+              ],
+              "hard write": [
+                "6.115599",
+                "GiB/s"
+              ],
+              "easy write": [
+                "102.506586",
+                "GiB/s"
+              ],
+              "easy read": [
+                "134.531230",
+                "GiB/s"
+              ]
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": [
+                "169.116507",
+                "kOP/s"
+              ],
+              "easy stat": [
+                "365.844781",
+                "kOP/s"
+              ],
+              "hard write": [
+                "36.383245",
+                "kOP/s"
+              ],
+              "hard delete": [
+                "33.750977",
+                "kOP/s"
+              ],
+              "easy write": [
+                "348.479339",
+                "kOP/s"
+              ],
+              "hard stat": [
+                "155.850567",
+                "kOP/s"
+              ],
+              "easy delete": [
+                "213.887364",
+                "kOP/s"
+              ]
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": [
+                "3435.004156",
+                "kOP/s"
+              ]
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "compute peak": [
+            "196",
+            "TFLOPS"
+          ],
+          "total nodes": "59",
+          "name": "Guacolda",
+          "memory capacity": [
+            "16512",
+            "GB"
+          ],
+          "total cores": "23076",
+          "integrator": "Dell",
+          "installation date": "2019-06-01"
+        },
+        "childs": [
+          {
+            "att": {
+              "count": "59",
+              "compute peak": [
+                "3.32",
+                "TFLOPS"
+              ],
+              "vendor": "Dell",
+              "name": "Dell PowerEdge",
+              "distribution version": "7.9.2009",
+              "Cooling": "partially water",
+              "power consumption": [
+                "335",
+                "W"
+              ],
+              "kernel version": "3.10.0-1160.41.1.el7.x86_64",
+              "distribution": "CentOS",
+              "installation date": "2019-06-01"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "Intel",
+                  "L3 cache size": [
+                    "30.25",
+                    "MiB"
+                  ],
+                  "frequency": [
+                    "2.1",
+                    "MHz"
+                  ],
+                  "microarchitecture": "Skylake",
+                  "architecture": "x86_64",
+                  "cores per socket": "22",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "frequency": [
+                    "2666",
+                    "MHz"
+                  ],
+                  "net capacity": [
+                    "192",
+                    "GB"
+                  ],
+                  "type": "DDR4",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "speed": "100 GBit",
+                  "vendor": "Mellanox",
+                  "features": "RDMA",
+                  "links": "1",
+                  "type": "Infiniband"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "vendor": "IBM",
+          "name": "ESS",
+          "type": "file system",
+          "Servers": "4",
+          "net capacity": [
+            "3.6",
+            "PiB"
+          ],
+          "version": "5.1.1.2",
+          "usage": "production",
+          "software": "SpectrumScale",
+          "mount options": "rw,dev=ess.nlhpc.cl:ess,ldev=gpfs,noauto",
+          "installation date": "2021-08"
+        },
+        "childs": [
+          {
+            "att": {
+              "Release": "1",
+              "Version": "5",
+              "FixPack": "2",
+              "Mod": "1"
+            },
+            "childs": [
+              {
+                "att": {
+                  "NSD usage": "dataAndMetadata"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "count": "4",
+                      "vendor": "IBM",
+                      "kernel version": "4.18.0-193",
+                      "distribution version": "8.2",
+                      "name": "ESS",
+                      "Cooling": "partially water",
+                      "distribution": "RedHat",
+                      "installation date": "2021-08"
+                    },
+                    "childs": [
+                      {
+                        "att": {
+                          "vendor": "AMD",
+                          "L3 cache size": [
+                            "192",
+                            "MiB"
+                          ],
+                          "microarchitecture": "Zen2",
+                          "architecture": "x86_64",
+                          "cores per socket": "48",
+                          "sockets": "1"
+                        },
+                        "childs": [],
+                        "type": "Processor"
+                      },
+                      {
+                        "att": {
+                          "interface": "NVMe",
+                          "file system": "",
+                          "net capacity": [
+                            "194.5",
+                            "TiB"
+                          ],
+                          "type": "SSD"
+                        },
+                        "childs": [
+                          {
+                            "att": {
+                              "Devices": "24",
+                              "Level": "Spectrum Scale RAID"
+                            },
+                            "childs": [],
+                            "type": "RAID"
+                          }
+                        ],
+                        "type": "StorageMedia"
+                      },
+                      {
+                        "att": {
+                          "frequency": [
+                            "3200",
+                            "MHz"
+                          ],
+                          "net capacity": [
+                            "512",
+                            "GB"
+                          ],
+                          "type": "DDR4",
+                          "protection": ""
+                        },
+                        "childs": [],
+                        "type": "Memory"
+                      },
+                      {
+                        "att": {
+                          "speed": "100 GBit",
+                          "vendor": "Nvidia",
+                          "features": "RDMA",
+                          "links": "4",
+                          "type": "Infiniband"
+                        },
+                        "childs": [],
+                        "type": "Interconnect"
+                      }
+                    ],
+                    "type": "Servers"
+                  }
+                ],
+                "type": "Data Servers"
+              }
+            ],
+            "type": "SpectrumScale"
+          }
+        ],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

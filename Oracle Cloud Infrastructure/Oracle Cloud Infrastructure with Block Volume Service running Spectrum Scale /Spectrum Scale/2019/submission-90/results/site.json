@@ -1,0 +1,357 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [], 
+      "pos": {
+        "StorageSystem:WEKA on OCI": [
+          0, 
+          -86.4375
+        ], 
+        "Supercomputer:Oracle Cloud running WEKA on non RDMA netwok": [
+          0, 
+          -86.4375
+        ]
+      }
+    }, 
+    "Network": {
+      "edges": [], 
+      "pos": {
+        "Network:TCP": [
+          0, 
+          -43.5
+        ], 
+        "Nodes:OCI": [
+          0, 
+          -86.9375
+        ]
+      }
+    }
+  }, 
+  "DATA": {
+    "att": {
+      "abbreviation": "OCI", 
+      "webpage": "https://www.oracle.com/cloud/", 
+      "nationality": "USA", 
+      "location": "USA", 
+      "institution": "Oracle Cloud Infrastructure"
+    }, 
+    "childs": [
+      {
+        "att": {
+          "scoreBW": [
+            "97.607880", 
+            "GiB/s"
+          ], 
+          "include_in_10node_ranked_list": "", 
+          "score": "323.522020", 
+          "scoreMD": [
+            "1072.316061", 
+            "kOP/s"
+          ], 
+          "include_in_io500_ranked_list": "yes"
+        }, 
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2022-05-18", 
+              "nodeType": "Baremetal-DenseIO-E4-128", 
+              "clientNodes": "151", 
+              "procsPerNode": "40", 
+              "exclusive_cluster_usage": "", 
+              "email": "pinkesh.valdria@oracle.com", 
+              "note": "Converged Architecture", 
+              "version": "v1", 
+              "list_id": "ISC22", 
+              "submitter": "Pinkesh Valdria", 
+              "id": "New submission; we will assign this value"
+            }, 
+            "childs": [], 
+            "type": "information"
+          }, 
+          {
+            "att": {
+              "hard read": [
+                "131.169063", 
+                "GiB/s"
+              ], 
+              "hard write": [
+                "12.170331", 
+                "GiB/s"
+              ], 
+              "easy write": [
+                "228.945775", 
+                "GiB/s"
+              ], 
+              "easy read": [
+                "248.355096", 
+                "GiB/s"
+              ]
+            }, 
+            "childs": [], 
+            "type": "IOR"
+          }, 
+          {
+            "att": {
+              "hard read": [
+                "131.169063", 
+                "kOP/s"
+              ], 
+              "easy stat": [
+                "18844.875162", 
+                "kOP/s"
+              ], 
+              "hard write": [
+                "132.751708", 
+                "kOP/s"
+              ], 
+              "hard delete": [
+                "193.664995", 
+                "kOP/s"
+              ], 
+              "easy write": [
+                "1394.244866", 
+                "kOP/s"
+              ], 
+              "hard stat": [
+                "918.977172", 
+                "kOP/s"
+              ], 
+              "easy delete": [
+                "2679.314838", 
+                "kOP/s"
+              ]
+            }, 
+            "childs": [], 
+            "type": "MDTest"
+          }, 
+          {
+            "att": {
+              "mixed": [
+                "1166.572132", 
+                "kOP/s"
+              ]
+            }, 
+            "childs": [], 
+            "type": "find"
+          }
+        ], 
+        "type": "IO500"
+      }, 
+      {
+        "att": {
+          "memory capacity": [
+            "302", 
+            "TB"
+          ], 
+          "total cores": "19328", 
+          "total nodes": "151", 
+          "name": "Oracle Cloud running WEKA on non RDMA netwok"
+        }, 
+        "childs": [
+          {
+            "att": {
+              "count": "151", 
+              "vendor": "Oracle", 
+              "name": "OCI", 
+              "distribution version": "7.9", 
+              "Cooling": "", 
+              "distribution": "ol", 
+              "model": "Baremetal-DenseIO-E4-128", 
+              "kernel version": "3.10.0-1160.25.1.el7.x86_64"
+            }, 
+            "childs": [
+              {
+                "att": {
+                  "vendor": "AuthenticAMD", 
+                  "L3 cache size": [
+                    "32768", 
+                    "KiB"
+                  ], 
+                  "L2 cache size": [
+                    "512", 
+                    "KiB"
+                  ], 
+                  "microarchitecture": "", 
+                  "architecture": "x86_64", 
+                  "cores per socket": "64", 
+                  "model": "AMD EPYC 7J13 64-Core Processor", 
+                  "threads per core": "1", 
+                  "sockets": "2"
+                }, 
+                "childs": [], 
+                "type": "Processor"
+              }, 
+              {
+                "att": {
+                  "net capacity": [
+                    "2101046948.0", 
+                    "KiB"
+                  ], 
+                  "type": "", 
+                  "protection": ""
+                }, 
+                "childs": [], 
+                "type": "Memory"
+              }
+            ], 
+            "type": "Nodes"
+          }
+        ], 
+        "type": "Supercomputer"
+      }, 
+      {
+        "att": {
+          "client storage access": "mount", 
+          "vendor": "WekaIO", 
+          "name": "WEKA on OCI", 
+          "client mount options": "-o forcedirect", 
+          "Servers": "151", 
+          "frameworks": "SPDK;DPDK", 
+          "version": "3.14.0", 
+          "usage": "research/test", 
+          "type": "file system", 
+          "software": "WEKA"
+        }, 
+        "childs": [
+          {
+            "att": {}, 
+            "childs": [
+              {
+                "att": {}, 
+                "childs": [], 
+                "type": "MDS"
+              }, 
+              {
+                "att": {}, 
+                "childs": [
+                  {
+                    "att": {}, 
+                    "childs": [], 
+                    "type": "StorageMedia"
+                  }, 
+                  {
+                    "att": {}, 
+                    "childs": [], 
+                    "type": "Interconnect"
+                  }
+                ], 
+                "type": "OSS"
+              }
+            ], 
+            "type": "Lustre"
+          }, 
+          {
+            "att": {}, 
+            "childs": [
+              {
+                "att": {}, 
+                "childs": [], 
+                "type": "Metadata Server"
+              }, 
+              {
+                "att": {}, 
+                "childs": [
+                  {
+                    "att": {}, 
+                    "childs": [], 
+                    "type": "StorageMedia"
+                  }, 
+                  {
+                    "att": {}, 
+                    "childs": [], 
+                    "type": "Interconnect"
+                  }
+                ], 
+                "type": "Storage Server"
+              }
+            ], 
+            "type": "BeeGFS"
+          }, 
+          {
+            "att": {}, 
+            "childs": [
+              {
+                "att": {}, 
+                "childs": [
+                  {
+                    "att": {}, 
+                    "childs": [], 
+                    "type": "StorageMedia"
+                  }, 
+                  {
+                    "att": {}, 
+                    "childs": [], 
+                    "type": "Interconnect"
+                  }
+                ], 
+                "type": "Servers"
+              }
+            ], 
+            "type": "DAOS"
+          }, 
+          {
+            "att": {}, 
+            "childs": [
+              {
+                "att": {}, 
+                "childs": [
+                  {
+                    "att": {}, 
+                    "childs": [], 
+                    "type": "StorageMedia"
+                  }, 
+                  {
+                    "att": {}, 
+                    "childs": [], 
+                    "type": "Interconnect"
+                  }
+                ], 
+                "type": "Servers"
+              }
+            ], 
+            "type": "NAS"
+          }, 
+          {
+            "att": {}, 
+            "childs": [
+              {
+                "att": {}, 
+                "childs": [
+                  {
+                    "att": {}, 
+                    "childs": [
+                      {
+                        "att": {}, 
+                        "childs": [], 
+                        "type": "StorageMedia"
+                      }, 
+                      {
+                        "att": {}, 
+                        "childs": [], 
+                        "type": "Interconnect"
+                      }
+                    ], 
+                    "type": "Servers"
+                  }
+                ], 
+                "type": "Data Servers"
+              }
+            ], 
+            "type": "SpectrumScale"
+          }
+        ], 
+        "type": "StorageSystem"
+      }, 
+      {
+        "att": {
+          "type": "Ethernet", 
+          "name": "TCP", 
+          "topology": ""
+        }, 
+        "childs": [], 
+        "type": "Network"
+      }
+    ], 
+    "type": "Site"
+  }
+}

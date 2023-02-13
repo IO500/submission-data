@@ -1,0 +1,202 @@
+{
+  "DATA": {
+    "type": "Site",
+    "att": {
+      "abbreviation": "IBMDL",
+      "institution": "IBM Research Europe",
+      "location": "Daresbury, UK",
+      "webpage": "https://research.ibm.com/labs/uk/",
+      "nationality": "GBR"
+    },
+    "childs": [
+      {
+        "type": "IO500",
+        "att": {
+          "include_in_io500_ranked_list": "yes",
+          "include_in_10node_ranked_list": "yes",
+          "score": "3.17008",
+          "scoreBW": [
+            "0.607754",
+            "GiB/s"
+          ],
+          "scoreMD": [
+            "16.565892",
+            "kOP/s"
+          ]
+        },
+        "childs": [
+          {
+            "type": "information",
+            "att": {
+              "id": "New submission; we will assign this value",
+              "list_id": "SC21",
+              "submission_date": "2021-11-01",
+              "submitter": "Robert Tracey",
+              "email": "robert.tracey@ibm.com",
+              "clientNodes": "10"
+            },
+            "childs": []
+          },
+          {
+            "type": "IOR",
+            "att": {
+              "easy write": [
+                "1.831022",
+                "GiB/s"
+              ],
+              "easy read": [
+                "2.020913",
+                "GiB/s"
+              ],
+              "hard write": [
+                "0.113321",
+                "GiB/s"
+              ],
+              "hard read": [
+                "0.325357",
+                "GiB/s"
+              ]
+            },
+            "childs": []
+          },
+          {
+            "type": "MDTest",
+            "att": {
+              "easy write": [
+                "13.668734",
+                "kOP/s"
+              ],
+              "easy stat": [
+                "30.999401",
+                "kOP/s"
+              ],
+              "easy delete": [
+                "11.902744",
+                "kOP/s"
+              ],
+              "hard write": [
+                "3.597200",
+                "kOP/s"
+              ],
+              "hard stat": [
+                "19.981029",
+                "kOP/s"
+              ],
+              "hard read": [
+                "14.349057",
+                "kOP/s"
+              ],
+              "hard delete": [
+                "4.308941",
+                "kOP/s"
+              ]
+            },
+            "childs": []
+          },
+          {
+            "type": "find",
+            "att": {},
+            "childs": []
+          }
+        ]
+      },
+      {
+        "type": "Supercomputer",
+        "att": {
+          "name": "Sandbox",
+          "integrator": "IBM",
+          "total nodes": "20"
+        },
+        "childs": [
+          {
+            "type": "Nodes",
+            "att": {
+              "name": "tuleta",
+              "vendor": "IBM",
+              "count": "12",
+              "distribution": "",
+              "Cooling": "air"
+            },
+            "childs": [
+              {
+                "type": "Processor",
+                "att": {
+                  "sockets": "4",
+                  "architecture": "Power",
+                  "vendor": "IBM",
+                  "microarchitecture": "",
+                  "cores per socket": "5",
+                  "threads per core": "1",
+                  "L2 cache size": [
+                    "512",
+                    "KB"
+                  ],
+                  "L3 cache size": [
+                    "8192",
+                    "KB"
+                  ]
+                },
+                "childs": []
+              },
+              {
+                "type": "Memory",
+                "att": {
+                  "type": "DDR3",
+                  "net capacity": [
+                    "1",
+                    "TB"
+                  ],
+                  "protection": ""
+                },
+                "childs": []
+              },
+              {
+                "type": "Interconnect",
+                "att": {
+                  "type": "Ethernet",
+                  "speed": "10 GBit"
+                },
+                "childs": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "StorageSystem",
+        "att": {
+          "name": "GPFS",
+          "usage": "research/test",
+          "vendor": "IBM",
+          "type": "file system",
+          "software": "SpectrumScale"
+        },
+        "childs": [
+          {
+            "type": "SpectrumScale",
+            "att": {},
+            "childs": [
+              {
+                "type": "Data Servers",
+                "att": {
+                  "NSD usage": "dataAndMetadata"
+                },
+                "childs": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "GRAPH": {
+    "Network": {
+      "pos": {},
+      "edges": []
+    },
+    "Building": {
+      "pos": {},
+      "edges": []
+    }
+  }
+}

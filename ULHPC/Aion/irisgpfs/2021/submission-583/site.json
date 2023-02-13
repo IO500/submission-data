@@ -1,0 +1,227 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "abbreviation": "ULHPC",
+      "webpage": "https://hpc.uni.lu",
+      "nationality": "LUX",
+      "location": "Luxembourg",
+      "institution": "University of Luxembourg HPC "
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": [
+            "1.798376",
+            "GiB/s"
+          ],
+          "include_in_10node_ranked_list": "no",
+          "score": "11.34521",
+          "scoreMD": [
+            "71.572357",
+            "kOP/s"
+          ],
+          "include_in_io500_ranked_list": "yes"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-09-28",
+              "nodeType": "regular Dual-CPU AMD Epyc ",
+              "clientNodes": "128",
+              "procsPerNode": "2",
+              "email": "sebastien.varrette@uni.lu",
+              "version": "isc21",
+              "list_id": "SC21",
+              "submitter": "sebastien.varrette",
+              "id": "New submission; we will assign this value"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": [
+                "0.255489",
+                "GiB/s"
+              ],
+              "hard write": [
+                "0.113342",
+                "GiB/s"
+              ],
+              "easy write": [
+                "17.501989",
+                "GiB/s"
+              ],
+              "easy read": [
+                "20.638251",
+                "GiB/s"
+              ]
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": [
+                "77.709539",
+                "kOP/s"
+              ],
+              "easy stat": [
+                "106.298117",
+                "kOP/s"
+              ],
+              "hard write": [
+                "18.152144",
+                "kOP/s"
+              ],
+              "hard delete": [
+                "17.138451",
+                "kOP/s"
+              ],
+              "easy write": [
+                "59.368146",
+                "kOP/s"
+              ],
+              "hard stat": [
+                "105.259659",
+                "kOP/s"
+              ],
+              "easy delete": [
+                "46.333091",
+                "kOP/s"
+              ]
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": [
+                "925.457452",
+                "kOP/s"
+              ]
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "compute peak": [
+            "1693",
+            "PFLOPS"
+          ],
+          "total nodes": "318",
+          "name": "Aion",
+          "memory capacity": [
+            "81408",
+            "GB"
+          ],
+          "integrator": "Atos",
+          "total cores": "40704",
+          "installation date": "2021-04"
+        },
+        "childs": [
+          {
+            "att": {
+              "graph500 problem scale": "36",
+              "graph500": "9750",
+              "top500": [
+                "1253",
+                "PFLOPS"
+              ],
+              "green500": [
+                "5.05",
+                "GFLOPS/W"
+              ]
+            },
+            "childs": [],
+            "type": "Benchmarks"
+          },
+          {
+            "att": {
+              "count": "318",
+              "compute peak": [
+                "5.325",
+                "TFLOPS"
+              ],
+              "vendor": "Atos",
+              "kernel version": "4.18.0-240.10.1",
+              "distribution version": "8.3",
+              "Cooling": "hot water",
+              "installation date": "2021-04",
+              "distribution": "RedHat",
+              "name": "aion"
+            },
+            "childs": [
+              {
+                "att": {
+                  "channels": "8",
+                  "net capacity": [
+                    "256",
+                    "GB"
+                  ],
+                  "frequency": [
+                    "2400",
+                    "MHz"
+                  ],
+                  "type": "",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "vendor": "Mellanox",
+                  "speed": "100 GBit",
+                  "features": "RDMA",
+                  "type": "Infiniband"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "vendor": "DDN",
+          "name": "irisgpfs",
+          "raw capacity": [
+            "4.16",
+            "PiB"
+          ],
+          "mount options": "rw,mtime,relatime,quota=userquota;groupquota;filesetquota;perfileset,dev=irisgpf",
+          "Servers": "4",
+          "net capacity": [
+            "3.1",
+            "PiB"
+          ],
+          "version": "5.0.5-7",
+          "usage": "production",
+          "type": "file system",
+          "software": "GridScaler / GPFS / SpectrumScale"
+        },
+        "childs": [],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

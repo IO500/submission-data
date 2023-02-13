@@ -1,0 +1,473 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "webpage": "https://calculquebec.ca/",
+      "abbreviation": "CQ",
+      "energy costs per kWh": [
+        "0.06",
+        "$"
+      ],
+      "location": "Quebec",
+      "nationality": "CAN",
+      "institution": "Calcul Quebec"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": "32.738265 GiB/s",
+          "include_in_10node_ranked_list": "",
+          "score": 68.309148,
+          "scoreMD": "142.528619 kOP/s",
+          "include_in_io500_ranked_list": "yes"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-29",
+              "clientNodes": "640",
+              "procsPerNode": "1",
+              "version": "io500-sc21",
+              "list_id": "SC21",
+              "id": "New submission; we will assign this value"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": "8.854035 GiB/s",
+              "hard write": "5.576552 GiB/s",
+              "easy write": "126.999381 GiB/s",
+              "easy read": "183.195197 GiB/s"
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": "109.990988 kOP/s",
+              "easy stat": "262.985987 kOP/s",
+              "hard write": "48.307481 kOP/s",
+              "hard delete": "69.006651 kOP/s",
+              "easy write": "79.439712 kOP/s",
+              "hard stat": "258.354255 kOP/s",
+              "easy delete": "90.021943 kOP/s"
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": "955.916368 kOP/s"
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "total nodes": "1300",
+          "installation date": "2021-10-01",
+          "memory capacity": [
+            "391.81",
+            "TiB"
+          ],
+          "integrator": "Dell",
+          "total cores": "80672",
+          "name": "Narval"
+        },
+        "childs": [
+          {
+            "att": {
+              "count": "1109",
+              "vendor": "Dell",
+              "kernel version": "4.18.0-305.19.1.el8_4.x86_64",
+              "distribution version": "8.4",
+              "Cooling": "air",
+              "distribution": "Rocky 8",
+              "name": "nc"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "AMD",
+                  "frequency": [
+                    "2.4",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "32",
+                  "threads per core": "2",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "256",
+                    "GB"
+                  ],
+                  "type": "DDR4",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "speed": "100 GBit",
+                  "vendor": "Mellanox",
+                  "features": "RDMA",
+                  "links": "1",
+                  "type": "Infiniband"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "33",
+              "vendor": "Dell",
+              "kernel version": "4.18.0-305.19.1.el8_4.x86_64",
+              "distribution version": "8.4",
+              "Cooling": "air",
+              "distribution": "Rocky 8",
+              "name": "nl"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "AMD",
+                  "frequency": [
+                    "2.4",
+                    "GHz"
+                  ],
+                  "microarchitecture": "",
+                  "architecture": "x86_64",
+                  "cores per socket": "32",
+                  "threads per core": "2",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "2",
+                    "TB"
+                  ],
+                  "type": "DDR4",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "speed": "100 GBit",
+                  "vendor": "Mellanox",
+                  "links": "1",
+                  "type": "Infiniband"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "158",
+              "vendor": "Dell",
+              "kernel version": "4.18.0-305.19.1.el8_4.x86_64",
+              "distribution version": "8.4",
+              "Cooling": "air",
+              "distribution": "Rocky 8",
+              "name": "ng"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "AMD",
+                  "frequency": [
+                    "2.65",
+                    "GHz"
+                  ],
+                  "microarchitecture": "Zen3",
+                  "architecture": "x86",
+                  "cores per socket": "24",
+                  "threads per core": "2",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "net capacity": [
+                    "512",
+                    "GB"
+                  ],
+                  "type": "DDR4",
+                  "protection": ""
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "count": "4",
+                  "type": "GPU",
+                  "vendor": "Nvidia",
+                  "bus": ""
+                },
+                "childs": [],
+                "type": "Accelerator"
+              },
+              {
+                "att": {
+                  "speed": "100 GBit",
+                  "vendor": "Mellanox",
+                  "links": "1",
+                  "type": "Infiniband"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "vendor": "Dell",
+          "name": "lustre06",
+          "type": "file system",
+          "Servers": "26",
+          "net capacity": [
+            "20",
+            "PiB"
+          ],
+          "version": "2.14.0",
+          "usage": "production",
+          "software": "Lustre",
+          "mount options": "rw,nosuid,seclabel,flock,user_xattr,lazystatfs",
+          "installation date": "2021-10-01"
+        },
+        "childs": [
+          {
+            "att": {
+              "version": "2.14.0",
+              "features": "DNE1;DNE2",
+              "backend": "ZFS"
+            },
+            "childs": [
+              {
+                "att": {
+                  "count": "22",
+                  "vendor": "Dell",
+                  "kernel version": "4.18.0-305",
+                  "distribution version": "8.4",
+                  "Cooling": "air",
+                  "distribution": "RockyLinux",
+                  "name": "lustre06-oss"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "vendor": "Intel",
+                      "L3 cache size": [
+                        "16.5",
+                        "MiB"
+                      ],
+                      "L2 cache size": [
+                        "12",
+                        "MiB"
+                      ],
+                      "frequency": [
+                        "2400",
+                        "MHz"
+                      ],
+                      "microarchitecture": "Cascade Lake",
+                      "architecture": "x86_64",
+                      "cores per socket": "12",
+                      "threads per core": "2",
+                      "sockets": "2"
+                    },
+                    "childs": [],
+                    "type": "Processor"
+                  },
+                  {
+                    "att": {
+                      "count": "106",
+                      "vendor": "Seagate",
+                      "raw capacity": [
+                        "1484",
+                        "TB"
+                      ],
+                      "file system": "ZFS",
+                      "net capacity": [
+                        "980",
+                        "TiB"
+                      ],
+                      "interface": "",
+                      "type": "HDD"
+                    },
+                    "childs": [
+                      {
+                        "att": {
+                          "Devices": "11",
+                          "Level": "RAID-Z3"
+                        },
+                        "childs": [],
+                        "type": "RAID"
+                      }
+                    ],
+                    "type": "StorageMedia"
+                  },
+                  {
+                    "att": {
+                      "net capacity": [
+                        "196",
+                        "GB"
+                      ],
+                      "type": "",
+                      "protection": ""
+                    },
+                    "childs": [],
+                    "type": "Memory"
+                  },
+                  {
+                    "att": {
+                      "speed": "100 GBit",
+                      "vendor": "Mellanox",
+                      "features": "RDMA",
+                      "links": "1",
+                      "type": "Infiniband"
+                    },
+                    "childs": [],
+                    "type": "Interconnect"
+                  }
+                ],
+                "type": "OSS"
+              },
+              {
+                "att": {
+                  "count": "4",
+                  "vendor": "Dell",
+                  "kernel version": "4.18.0-305",
+                  "distribution version": "8.4",
+                  "Cooling": "air",
+                  "distribution": "RockyLinux",
+                  "name": "lustre06-mds"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "vendor": "Intel",
+                      "L3 cache size": [
+                        "11",
+                        "MiB"
+                      ],
+                      "L2 cache size": [
+                        "8",
+                        "MiB"
+                      ],
+                      "frequency": [
+                        "2500",
+                        "MHz"
+                      ],
+                      "microarchitecture": "Cascade Lake",
+                      "architecture": "x86_64",
+                      "cores per socket": "8",
+                      "threads per core": "2",
+                      "sockets": "2"
+                    },
+                    "childs": [],
+                    "type": "Processor"
+                  },
+                  {
+                    "att": {
+                      "count": "8",
+                      "vendor": "TOSHIBA",
+                      "raw capacity": [
+                        "3400",
+                        "GB"
+                      ],
+                      "file system": "ZFS",
+                      "net capacity": [
+                        "7680",
+                        "GB"
+                      ],
+                      "interface": "",
+                      "type": "SSD"
+                    },
+                    "childs": [
+                      {
+                        "att": {
+                          "Devices": "8",
+                          "Level": "RAID-10"
+                        },
+                        "childs": [],
+                        "type": "RAID"
+                      }
+                    ],
+                    "type": "StorageMedia"
+                  },
+                  {
+                    "att": {
+                      "net capacity": [
+                        "196",
+                        "GB"
+                      ],
+                      "type": "",
+                      "protection": ""
+                    },
+                    "childs": [],
+                    "type": "Memory"
+                  },
+                  {
+                    "att": {
+                      "speed": "100 GBit",
+                      "vendor": "Mellanox",
+                      "features": "RDMA",
+                      "links": "1",
+                      "type": "Infiniband"
+                    },
+                    "childs": [],
+                    "type": "Interconnect"
+                  }
+                ],
+                "type": "MDS"
+              }
+            ],
+            "type": "Lustre"
+          }
+        ],
+        "type": "StorageSystem"
+      }
+    ],
+    "type": "Site"
+  }
+}

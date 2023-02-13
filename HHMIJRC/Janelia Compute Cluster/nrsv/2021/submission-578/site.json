@@ -1,0 +1,557 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [], 
+      "pos": {}
+    }, 
+    "Network": {
+      "edges": [], 
+      "pos": {}
+    }
+  }, 
+  "DATA": {
+    "att": {
+      "abbreviation": "HHMIJRC", 
+      "webpage": "www.janelia.org", 
+      "location": "Ashburn, VA", 
+      "institution": "Howard Hughes Medical Institute Janelia Research Campus", 
+      "nationality": "USA"
+    }, 
+    "childs": [
+      {
+        "att": {
+          "scoreMD": "33.416303 kOP/s", 
+          "include_in_io500_ranked_list": "yes", 
+          "scoreBW": "14.114818 GiB/s", 
+          "score": 21.717851, 
+          "include_in_10node_ranked_list": "no", 
+          "scoreX": 13.253362
+        }, 
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-25", 
+              "clientNodes": "80", 
+              "procsPerNode": "36", 
+              "id": "New submission; we will assign this value", 
+              "version": "io500-sc21", 
+              "list_id": "SC21", 
+              "submitter": "Ken Carlile", 
+              "email": "carlilek@janelia.hhmi.org"
+            }, 
+            "childs": [], 
+            "type": "information"
+          }, 
+          {
+            "att": {
+              "hard read": "6.181338 GiB/s", 
+              "rnd1MB read": "53.730696 GiB/s", 
+              "hard write": "1.86618 GiB/s", 
+              "rnd4K write": "0.156084 GiB/s", 
+              "easy read": "95.502215 GiB/s", 
+              "easy write": "36.028946 GiB/s", 
+              "rnd4K read": "0.494981 GiB/s", 
+              "rnd1MB write": "9.395866 GiB/s"
+            }, 
+            "childs": [], 
+            "type": "IOR"
+          }, 
+          {
+            "att": {
+              "hard read": "109.146315 kOP/s", 
+              "easy stat": "324.353413 kOP/s", 
+              "hard write": "1.730222 kOP/s", 
+              "hard delete": "1.86223 kOP/s", 
+              "easy write": "37.791186 kOP/s", 
+              "hard stat": "140.956298 kOP/s", 
+              "easy delete": "42.599252 kOP/s"
+            }, 
+            "childs": [], 
+            "type": "MDTest"
+          }, 
+          {
+            "att": {
+              "bench": "75.540489 kOP/s"
+            }, 
+            "childs": [], 
+            "type": "MDWorkbench"
+          }, 
+          {
+            "att": {
+              "mixed": "60.065826 kOP/s", 
+              "hard": "3.124315 kOP/s", 
+              "easy": "41.265466 kOP/s"
+            }, 
+            "childs": [], 
+            "type": "find"
+          }
+        ], 
+        "type": "IO500"
+      }, 
+      {
+        "att": {
+          "memory capacity": [
+            "99.64", 
+            "TB"
+          ], 
+          "total cores": "5400", 
+          "total nodes": "126", 
+          "name": "Janelia Compute Cluster"
+        }, 
+        "childs": [
+          {
+            "att": {
+              "count": "32", 
+              "vendor": "Dell", 
+              "kernel version": "4.18.0-305.3.1.el8_4.x86_64", 
+              "distribution version": "8.3", 
+              "Cooling": "air", 
+              "distribution": "Oracle Linux", 
+              "name": "Skylake"
+            }, 
+            "childs": [
+              {
+                "att": {
+                  "compute peak": [
+                    "1920", 
+                    "GFLOPS"
+                  ], 
+                  "vendor": "Intel", 
+                  "frequency": [
+                    "2.7", 
+                    "MHz"
+                  ], 
+                  "microarchitecture": "Skylake", 
+                  "architecture": "x86_64", 
+                  "cores per socket": "24", 
+                  "threads per core": "2", 
+                  "sockets": "2"
+                }, 
+                "childs": [], 
+                "type": "Processor"
+              }, 
+              {
+                "att": {
+                  "channels": "6", 
+                  "frequency": [
+                    "2666", 
+                    "MHz"
+                  ], 
+                  "net capacity": [
+                    "768", 
+                    "GiB"
+                  ], 
+                  "type": "DDR4", 
+                  "protection": "ECC"
+                }, 
+                "childs": [], 
+                "type": "Memory"
+              }, 
+              {
+                "att": {
+                  "count": "1", 
+                  "vendor": "NVidia", 
+                  "bus": "PCIe 3.X", 
+                  "frequency": [
+                    "1920", 
+                    "MHz"
+                  ], 
+                  "cores": "2560", 
+                  "type": "GPU"
+                }, 
+                "childs": [
+                  {
+                    "att": {
+                      "bus peak throughput": [
+                        "320", 
+                        "GiB/s"
+                      ], 
+                      "net capacity": [
+                        "16", 
+                        "GiB"
+                      ], 
+                      "type": "GDDR6", 
+                      "protection": ""
+                    }, 
+                    "childs": [], 
+                    "type": "Memory"
+                  }
+                ], 
+                "type": "Accelerator"
+              }, 
+              {
+                "att": {
+                  "vendor": "Mellanox", 
+                  "features": "RDMA", 
+                  "links": "1", 
+                  "speed": "25 GBit", 
+                  "type": "Ethernet", 
+                  "peak throughput": [
+                    "3.125", 
+                    "GiB/s"
+                  ]
+                }, 
+                "childs": [], 
+                "type": "Interconnect"
+              }
+            ], 
+            "type": "Nodes"
+          }, 
+          {
+            "att": {
+              "count": "31", 
+              "compute peak": [
+                "0.00", 
+                "FLOPS"
+              ], 
+              "vendor": "Supermicro", 
+              "kernel version": "4.18.0-305.3.1.el8_4.x86_64", 
+              "distribution version": "8.3", 
+              "Cooling": "air", 
+              "distribution": "Oracle Linux", 
+              "name": "GPU General"
+            }, 
+            "childs": [
+              {
+                "att": {
+                  "compute peak": [
+                    "1216", 
+                    "GFLOPS"
+                  ], 
+                  "vendor": "Intel", 
+                  "frequency": [
+                    "2.00", 
+                    "GHz"
+                  ], 
+                  "microarchitecture": "Skylake-SP", 
+                  "architecture": "x86_64", 
+                  "cores per socket": "20", 
+                  "threads per core": "2", 
+                  "sockets": "2"
+                }, 
+                "childs": [], 
+                "type": "Processor"
+              }, 
+              {
+                "att": {
+                  "channels": "6", 
+                  "net capacity": [
+                    "768", 
+                    "GB"
+                  ], 
+                  "type": "DDR4", 
+                  "protection": "ECC"
+                }, 
+                "childs": [], 
+                "type": "Memory"
+              }, 
+              {
+                "att": {
+                  "count": "8", 
+                  "bus": "PCIe 3.X", 
+                  "type": "GPU", 
+                  "compute peak double": [
+                    "420", 
+                    "GFLOPS"
+                  ]
+                }, 
+                "childs": [
+                  {
+                    "att": {
+                      "protection": "", 
+                      "type": "GDDR5"
+                    }, 
+                    "childs": [], 
+                    "type": "Memory"
+                  }
+                ], 
+                "type": "Accelerator"
+              }, 
+              {
+                "att": {
+                  "speed": "25 GBit", 
+                  "vendor": "Mellanox", 
+                  "peak throughput": [
+                    "3.125", 
+                    "GiB/s"
+                  ], 
+                  "links": "1", 
+                  "type": "Ethernet"
+                }, 
+                "childs": [], 
+                "type": "Interconnect"
+              }
+            ], 
+            "type": "Nodes"
+          }, 
+          {
+            "att": {
+              "count": "32", 
+              "vendor": "Dell", 
+              "kernel version": "4.18.0-305.3.1.el8_4.x86_64", 
+              "distribution version": "8.3", 
+              "Cooling": "air", 
+              "distribution": "Oracle Linux ", 
+              "name": "CascadeLake"
+            }, 
+            "childs": [
+              {
+                "att": {
+                  "compute peak": [
+                    "2464", 
+                    "GFLOPS"
+                  ], 
+                  "vendor": "Intel", 
+                  "frequency": [
+                    "3.0", 
+                    "GHz"
+                  ], 
+                  "microarchitecture": "Cascade Lake", 
+                  "architecture": "x86_64", 
+                  "cores per socket": "24", 
+                  "threads per core": "2", 
+                  "sockets": "2"
+                }, 
+                "childs": [], 
+                "type": "Processor"
+              }, 
+              {
+                "att": {
+                  "count": "1", 
+                  "vendor": "Nvidia", 
+                  "bus": "PCIe 3.X", 
+                  "frequency": [
+                    "1920", 
+                    "MHz"
+                  ], 
+                  "cores": "2560", 
+                  "type": "GPU"
+                }, 
+                "childs": [
+                  {
+                    "att": {
+                      "bus peak throughput": [
+                        "320", 
+                        "GiB/s"
+                      ], 
+                      "net capacity": [
+                        "16", 
+                        "GB"
+                      ], 
+                      "type": "GDDR6", 
+                      "protection": "ECC"
+                    }, 
+                    "childs": [], 
+                    "type": "Memory"
+                  }
+                ], 
+                "type": "Accelerator"
+              }
+            ], 
+            "type": "Nodes"
+          }
+        ], 
+        "type": "Supercomputer"
+      }, 
+      {
+        "att": {
+          "vendor": "Vast Data", 
+          "name": "nrsv", 
+          "raw capacity": [
+            "4.43", 
+            "PiB"
+          ], 
+          "type": "file system", 
+          "net capacity": [
+            "6.5", 
+            "PiB"
+          ], 
+          "version": "4.0sp3", 
+          "usage": "production", 
+          "mount options": "-fstype=nfs,rw,bg,hard,nfsvers=3,proto=rdma,port=20049,nconnect=4,nolock,remoteports=<ip range for all cnodes>", 
+          "software": "Vast"
+        }, 
+        "childs": [
+          {
+            "att": {
+              "protocol version": "3", 
+              "transfer protocol": "RoCE", 
+              "protocol": "NFS"
+            }, 
+            "childs": [
+              {
+                "att": {
+                  "count": "6", 
+                  "Cooling": "air", 
+                  "vendor": "Vast Data", 
+                  "distribution": "", 
+                  "name": "dbox - tlc"
+                }, 
+                "childs": [
+                  {
+                    "att": {
+                      "count": "12", 
+                      "interface": "NVMe", 
+                      "file system": "", 
+                      "net capacity": [
+                        ".873", 
+                        "TiB"
+                      ], 
+                      "type": "PMEM"
+                    }, 
+                    "childs": [], 
+                    "type": "StorageMedia"
+                  }, 
+                  {
+                    "att": {
+                      "count": "220", 
+                      "interface": "NVMe", 
+                      "file system": "", 
+                      "net capacity": [
+                        "1.83", 
+                        "TiB"
+                      ], 
+                      "type": "SSD"
+                    }, 
+                    "childs": [], 
+                    "type": "StorageMedia"
+                  }, 
+                  {
+                    "att": {
+                      "vendor": "Mellanox", 
+                      "features": "RDMA", 
+                      "links": "2", 
+                      "speed": "100 GBit", 
+                      "type": "Ethernet", 
+                      "peak throughput": [
+                        "12.5", 
+                        "GiB/s"
+                      ]
+                    }, 
+                    "childs": [], 
+                    "type": "Interconnect"
+                  }
+                ], 
+                "type": "Servers"
+              }, 
+              {
+                "att": {
+                  "count": "5", 
+                  "Cooling": "air", 
+                  "vendor": "Vast Data", 
+                  "distribution": "", 
+                  "name": "dbox - qlc"
+                }, 
+                "childs": [
+                  {
+                    "att": {
+                      "count": "12", 
+                      "vendor": "Intel", 
+                      "file system": "", 
+                      "net capacity": [
+                        "1.365", 
+                        "TiB"
+                      ], 
+                      "interface": "NVMe", 
+                      "type": "PMEM"
+                    }, 
+                    "childs": [], 
+                    "type": "StorageMedia"
+                  }, 
+                  {
+                    "att": {
+                      "count": "44", 
+                      "interface": "NVMe", 
+                      "file system": "", 
+                      "net capacity": [
+                        "13.973", 
+                        "TiB"
+                      ], 
+                      "type": "SSD"
+                    }, 
+                    "childs": [], 
+                    "type": "StorageMedia"
+                  }, 
+                  {
+                    "att": {
+                      "vendor": "Mellanox", 
+                      "features": "RDMA", 
+                      "links": "2", 
+                      "speed": "100 GBit", 
+                      "type": "Ethernet", 
+                      "peak throughput": [
+                        "12.5", 
+                        "GiB/s"
+                      ]
+                    }, 
+                    "childs": [], 
+                    "type": "Interconnect"
+                  }
+                ], 
+                "type": "Servers"
+              }, 
+              {
+                "att": {
+                  "count": "24", 
+                  "Cooling": "air", 
+                  "vendor": "Vast Data", 
+                  "distribution": "", 
+                  "name": "cnode - broadwell"
+                }, 
+                "childs": [
+                  {
+                    "att": {
+                      "vendor": "Intel", 
+                      "frequency": [
+                        "2.4", 
+                        "GHz"
+                      ], 
+                      "microarchitecture": "Broadwell-EP", 
+                      "architecture": "x86", 
+                      "cores per socket": "10", 
+                      "threads per core": "2", 
+                      "sockets": "2"
+                    }, 
+                    "childs": [], 
+                    "type": "Processor"
+                  }, 
+                  {
+                    "att": {
+                      "net capacity": [
+                        "256", 
+                        "GB"
+                      ], 
+                      "type": "DDR4", 
+                      "protection": "ECC"
+                    }, 
+                    "childs": [], 
+                    "type": "Memory"
+                  }, 
+                  {
+                    "att": {
+                      "vendor": "Mellanox", 
+                      "features": "RDMA", 
+                      "links": "2", 
+                      "speed": "50 GBit", 
+                      "type": "Ethernet", 
+                      "peak throughput": [
+                        "6.25", 
+                        "GiB/s"
+                      ]
+                    }, 
+                    "childs": [], 
+                    "type": "Interconnect"
+                  }
+                ], 
+                "type": "Servers"
+              }
+            ], 
+            "type": "NAS"
+          }
+        ], 
+        "type": "StorageSystem"
+      }
+    ], 
+    "type": "Site"
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "GRAPH": {
+    "Building": {
+      "edges": [],
+      "pos": {}
+    },
+    "Network": {
+      "edges": [],
+      "pos": {}
+    }
+  },
+  "DATA": {
+    "att": {
+      "abbreviation": "NRCTM",
+      "webpage": "https://www.rjh.com.cn",
+      "location": "Shanghai",
+      "institution": "National Research Center for Translational Medicine - Shanghai Ruijin Hospital",
+      "nationality": "PRC"
+    },
+    "childs": [
+      {
+        "att": {
+          "scoreBW": "87.496411 GiB/s",
+          "include_in_10node_ranked_list": "yes",
+          "score": 511.021541,
+          "scoreMD": "2984.614027 kOP/s",
+          "include_in_io500_ranked_list": "yes"
+        },
+        "childs": [
+          {
+            "att": {
+              "submission_date": "2021-10-29",
+              "nodeType": "computing nodes",
+              "clientNodes": "10",
+              "procsPerNode": "36",
+              "id": "New submission; we will assign this value",
+              "version": "v1.0",
+              "list_id": "SC21",
+              "submitter": "LU Gang",
+              "email": "lg30551@rjh.com.cn"
+            },
+            "childs": [],
+            "type": "information"
+          },
+          {
+            "att": {
+              "hard read": "81.574438 GiB/s",
+              "hard write": "71.710894 GiB/s",
+              "easy write": "97.884571 GiB/s",
+              "easy read": "102.354627 GiB/s"
+            },
+            "childs": [],
+            "type": "IOR"
+          },
+          {
+            "att": {
+              "hard read": "3456.875758 kOP/s",
+              "easy stat": "5041.119244 kOP/s",
+              "hard write": "1754.731265 kOP/s",
+              "hard delete": "1561.463428 kOP/s",
+              "easy write": "4896.241935 kOP/s",
+              "hard stat": "4392.23947 kOP/s",
+              "easy delete": "2179.374241 kOP/s"
+            },
+            "childs": [],
+            "type": "MDTest"
+          },
+          {
+            "att": {
+              "mixed": "2813.659509 kOP/s"
+            },
+            "childs": [],
+            "type": "find"
+          }
+        ],
+        "type": "IO500"
+      },
+      {
+        "att": {
+          "integrator": "NRCTM",
+          "total nodes": "66",
+          "installation date": "2020-01-01",
+          "name": "ASTRA",
+          "total cores": "3200"
+        },
+        "childs": [
+          {
+            "att": {
+              "count": "6",
+              "compute peak": [
+                "0.00",
+                "FLOPS"
+              ],
+              "vendor": "Nettrix",
+              "kernel version": "3.10.0-1160.36.2.el7.x86_64",
+              "distribution version": "7.9",
+              "name": "aep",
+              "Cooling": "air",
+              "distribution": "CentOS",
+              "installation date": "2021-08"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "Intel",
+                  "L3 cache size": [
+                    "35.75",
+                    "MiB"
+                  ],
+                  "L2 cache size": [
+                    "24",
+                    "MiB"
+                  ],
+                  "frequency": [
+                    "2400",
+                    "MHz"
+                  ],
+                  "microarchitecture": "Cascade Lake",
+                  "architecture": "x86_64",
+                  "cores per socket": "24",
+                  "threads per core": "2",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "channels": "6",
+                  "type": "DDR4",
+                  "net capacity": [
+                    "387",
+                    "GB"
+                  ],
+                  "frequency": [
+                    "2933",
+                    "MHz"
+                  ],
+                  "protection": "ECC"
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "speed": "100 GBit",
+                  "vendor": "Mellanox",
+                  "links": "2",
+                  "type": "Infiniband"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          },
+          {
+            "att": {
+              "count": "4",
+              "vendor": "Intel",
+              "kernel version": "3.10.0-1160.36.2.el7.x86_64",
+              "distribution version": "7.9",
+              "name": "N9200",
+              "Cooling": "air",
+              "distribution": "CentOS",
+              "installation date": "2021-08"
+            },
+            "childs": [
+              {
+                "att": {
+                  "vendor": "Intel",
+                  "L3 cache size": [
+                    "71.5",
+                    "MiB"
+                  ],
+                  "frequency": [
+                    "2.3",
+                    "GHz"
+                  ],
+                  "microarchitecture": "Cascade Lake",
+                  "architecture": "x86_64",
+                  "cores per socket": "48",
+                  "threads per core": "2",
+                  "sockets": "2"
+                },
+                "childs": [],
+                "type": "Processor"
+              },
+              {
+                "att": {
+                  "channels": "12",
+                  "type": "DDR4",
+                  "net capacity": [
+                    "768",
+                    "GB"
+                  ],
+                  "frequency": [
+                    "2.3",
+                    "MHz"
+                  ],
+                  "protection": "ECC"
+                },
+                "childs": [],
+                "type": "Memory"
+              },
+              {
+                "att": {
+                  "speed": "100 GBit",
+                  "vendor": "Mellanox",
+                  "features": "RDMA",
+                  "links": "2",
+                  "type": "Infiniband"
+                },
+                "childs": [],
+                "type": "Interconnect"
+              }
+            ],
+            "type": "Nodes"
+          }
+        ],
+        "type": "Supercomputer"
+      },
+      {
+        "att": {
+          "vendor": "NRCTM",
+          "name": "mustang",
+          "raw capacity": [
+            "96",
+            "TiB"
+          ],
+          "net capacity": [
+            "96",
+            "TiB"
+          ],
+          "Servers": "32",
+          "version": "2.1.100",
+          "usage": "research/test",
+          "software": "DAOS",
+          "type": "object storage",
+          "installation date": "2021-08"
+        },
+        "childs": [
+          {
+            "att": {},
+            "childs": [
+              {
+                "att": {
+                  "count": "25",
+                  "refresh date": "2021-10",
+                  "vendor": "Nettrix",
+                  "kernel version": "3.10.0-1160",
+                  "distribution version": "7.9",
+                  "name": "aep",
+                  "Cooling": "air",
+                  "distribution": "CentOS",
+                  "installation date": "2021-08"
+                },
+                "childs": [
+                  {
+                    "att": {
+                      "vendor": "Intel",
+                      "L3 cache size": [
+                        "35.75",
+                        "MiB"
+                      ],
+                      "L2 cache size": [
+                        "24",
+                        "MiB"
+                      ],
+                      "frequency": [
+                        "2400",
+                        "MHz"
+                      ],
+                      "microarchitecture": "Cascade Lake",
+                      "architecture": "x86_64",
+                      "cores per socket": "24",
+                      "threads per core": "2",
+                      "sockets": "2"
+                    },
+                    "childs": [],
+                    "type": "Processor"
+                  },
+                  {
+                    "att": {
+                      "count": "12",
+                      "vendor": "Intel",
+                      "raw capacity": [
+                        "256",
+                        "GiB"
+                      ],
+                      "file system": "",
+                      "net capacity": [
+                        "256",
+                        "GiB"
+                      ],
+                      "interface": "NVDIMM",
+                      "type": "PMEM"
+                    },
+                    "childs": [],
+                    "type": "StorageMedia"
+                  },
+                  {
+                    "att": {
+                      "speed": "100 GBit",
+                      "vendor": "Mellanox",
+                      "features": "RDMA",
+                      "links": "2",
+                      "type": "Infiniband"
+                    },
+                    "childs": [],
+                    "type": "Interconnect"
+                  },
+                  {
+                    "att": {
+                      "channels": "6",
+                      "type": "DDR4",
+                      "net capacity": [
+                        "32",
+                        "GB"
+                      ],
+                      "frequency": [
+                        "2933",
+                        "MHz"
+                      ],
+                      "protection": "ECC"
+                    },
+                    "childs": [],
+                    "type": "Memory"
+                  }
+                ],
+                "type": "Servers"
+              }
+            ],
+            "type": "DAOS"
+          }
+        ],
+        "type": "StorageSystem"
+      },
+      {
+        "att": {
+          "vendor": "Mellanox",
+          "bisection bandwidth": [
+            "200",
+            "GiB/s"
+          ],
+          "type": "Infiniband",
+          "name": "IB HDR200",
+          "topology": "Fat-tree"
+        },
+        "childs": [],
+        "type": "Network"
+      }
+    ],
+    "type": "Site"
+  }
+}

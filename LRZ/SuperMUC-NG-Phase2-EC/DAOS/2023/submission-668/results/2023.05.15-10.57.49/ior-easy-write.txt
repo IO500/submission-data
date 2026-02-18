@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 15 10:58:44 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384978421 -k -e -o //2023.05.15-10.57.49/ior-easy/ior_file_easy -O stoneWallingStatusFile=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-easy.stonewall -t 1m -b 99000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX -O saveRankPerformanceDetailsCSV=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-easy-write.csv
+Machine             : Linux m02r01s01dao
+TestID              : 0
+StartTime           : Mon May 15 10:58:44 2023
+Path                : //2023.05.15-10.57.49/ior-easy/ior_file_easy
+FS                  : 454.7 TiB   Used FS: 0.4%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : //2023.05.15-10.57.49/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 24
+tasks               : 2688
+clients per node    : 112
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 94.41 TiB
+aggregate filesize  : 253784.18 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 38790 max: 40027 -- min data: 37.9 GiB mean data: 38.5 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 279038656512000000
+WARNING: Stat() of aggregate file size      = 278934889459351552
+WARNING: Using actual aggregate bytes moved = 112818992971776
+WARNING: Maybe caused by deadlineForStonewalling
+write     353089     353092     0.000003    101376000000 1024.00    0.001899   304.72     0.000322   304.72     0   

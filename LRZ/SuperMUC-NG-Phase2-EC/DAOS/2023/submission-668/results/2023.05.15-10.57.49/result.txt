@@ -1,0 +1,111 @@
+[run]
+procs           = 2688
+version         = io500-isc23
+config-hash     = CA86FFD7
+result-dir      = /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49
+mode            = standard
+; START 2023-05-15 10:58:44
+
+
+[ior-easy-write]
+t_start         = 2023-05-15 10:58:44
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384978421 -k -e -o //2023.05.15-10.57.49/ior-easy/ior_file_easy -O stoneWallingStatusFile=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-easy.stonewall -t 1m -b 99000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX -O saveRankPerformanceDetailsCSV=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-easy-write.csv
+throughput-stonewall = 344.84
+score           = 344.813450
+t_delta         = 304.8058
+t_end           = 2023-05-15 11:03:49
+
+[mdtest-easy-write]
+t_start         = 2023-05-15 11:03:49
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -498800627 -N 1 -d //2023.05.15-10.57.49/mdtest-easy -x /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-easy-write.csv -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+rate-stonewall  = 3533.699747
+score           = 3523.020031
+t_delta         = 307.6014
+t_end           = 2023-05-15 11:08:57
+
+[timestamp]
+t_start         = 2023-05-15 11:08:57
+t_delta         = 0.0002
+t_end           = 2023-05-15 11:08:57
+
+[ior-hard-write]
+t_start         = 2023-05-15 11:08:57
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384967733 -k -e -o //2023.05.15-10.57.49/ior-hard/file -O stoneWallingStatusFile=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2G1 --dfs.oclass=RP_2GX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 166.54
+score           = 166.303533
+t_delta         = 301.4793
+t_end           = 2023-05-15 11:13:58
+
+[mdtest-hard-write]
+t_start         = 2023-05-15 11:13:58
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-498789939 -N 1 -F -d //2023.05.15-10.57.49/mdtest-hard -x /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-hard-write.csv -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+rate-stonewall  = 1935.249838
+score           = 1926.678092
+t_delta         = 319.7287
+t_end           = 2023-05-15 11:19:18
+
+[find]
+t_start         = 2023-05-15 11:19:18
+exe             = ./pfind //2023.05.15-10.57.49 -newer /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 2688
+found           = 33498832
+total-files     = 1693684610
+score           = 8477.259163
+t_delta         = 200.1435
+t_end           = 2023-05-15 11:22:38
+
+[ior-easy-read]
+t_start         = 2023-05-15 11:22:38
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384978421 -k -e -o //2023.05.15-10.57.49/ior-easy/ior_file_easy -O stoneWallingStatusFile=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-easy.stonewall -t 1m -b 99000000m -r -R -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX -O saveRankPerformanceDetailsCSV=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-easy-read.csv
+score           = 781.854726
+t_delta         = 134.4142
+t_end           = 2023-05-15 11:24:53
+
+[mdtest-easy-stat]
+t_start         = 2023-05-15 11:24:53
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -498800627 -N 1 -d //2023.05.15-10.57.49/mdtest-easy -x /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-easy-stat.csv -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 18670.414057
+t_delta         = 58.8475
+t_end           = 2023-05-15 11:25:51
+
+[ior-hard-read]
+t_start         = 2023-05-15 11:25:51
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384967733 -k -e -o //2023.05.15-10.57.49/ior-hard/file -O stoneWallingStatusFile=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2G1 --dfs.oclass=RP_2GX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/ior-hard-read.csv
+score           = 285.479703
+t_delta         = 175.6429
+t_end           = 2023-05-15 11:28:47
+
+[mdtest-hard-stat]
+t_start         = 2023-05-15 11:28:47
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-498789939 -N 1 -F -d //2023.05.15-10.57.49/mdtest-hard -x /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-hard-stat.csv -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 15666.711580
+t_delta         = 40.2126
+t_end           = 2023-05-15 11:29:27
+
+[mdtest-easy-delete]
+t_start         = 2023-05-15 11:29:27
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -498800627 -N 1 -d //2023.05.15-10.57.49/mdtest-easy -x /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-easy-delete.csv -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 2313.044863
+t_delta         = 470.9863
+t_end           = 2023-05-15 11:37:18
+
+[mdtest-hard-read]
+t_start         = 2023-05-15 11:37:18
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-498789939 -N 1 -F -d //2023.05.15-10.57.49/mdtest-hard -x /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-hard-read.csv -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 11840.611635
+t_delta         = 52.8801
+t_end           = 2023-05-15 11:38:11
+
+[mdtest-hard-delete]
+t_start         = 2023-05-15 11:38:11
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-498789939 -N 1 -F -d //2023.05.15-10.57.49/mdtest-hard -x /install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-10.57.49/mdtest-hard-delete.csv -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 2467.370892
+t_delta         = 406.0434
+t_end           = 2023-05-15 11:44:57
+
+[SCORE]
+MD              = 5714.628726
+BW              = 336.354114
+SCORE           = 1386.412234
+hash            = 2235069A
+; END 2023-05-15 11:44:57

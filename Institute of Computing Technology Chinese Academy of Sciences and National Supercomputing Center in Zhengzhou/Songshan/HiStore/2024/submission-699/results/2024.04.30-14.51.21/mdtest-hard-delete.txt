@@ -1,0 +1,33 @@
+-- started at 04/30/2024 15:54:35 --
+
+mdtest-3.4.0+dev was launched with 320 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '13000000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=558977086' '-N' '1' '-F' '-d' './datafiles/2024.04.30-14.51.21/mdtest-hard' '-x' './results/2024.04.30-14.51.21/mdtest-hard.stonewall' '-r' '--saveRankPerformanceDetails=./results/2024.04.30-14.51.21/mdtest-hard-delete.csv' '-a' 'POSIX'
+Path                : ./datafiles/2024.04.30-14.51.21/mdtest-hard
+FS                  : 0.0 GiB   Used FS: -nan%   Inodes: 0.0 Mi   Used Inodes: -nan%
+Nodemap: 11111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2537 Shifting ranks by 32 for each phase.
+320 tasks, 4160000000 files
+WARNING: Unable to remove directory ./datafiles/2024.04.30-14.51.21/mdtest-hard/test-dir.0-0/mdtest_tree.0/
+WARNING: unable to remove directory ./datafiles/2024.04.30-14.51.21/mdtest-hard/test-dir.0-0
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal             85404834.944   85404834.944   85404834.944          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                15650.388      15650.388      15650.388          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                   47.910         47.910         47.910          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 04/30/2024 15:55:24 --
+

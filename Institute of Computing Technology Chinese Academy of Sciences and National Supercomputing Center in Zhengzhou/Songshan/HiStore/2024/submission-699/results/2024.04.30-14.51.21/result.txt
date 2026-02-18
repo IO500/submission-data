@@ -1,0 +1,112 @@
+[run]
+procs           = 320
+version         = io500-sc23_v1
+config-hash     = 37DFE8D9
+result-dir      = ./results/2024.04.30-14.51.21
+mode            = standard
+; START 2024-04-30 14:51:23
+; ERROR INVALID stonewall-time < 30s
+
+
+[ior-easy-write]
+t_start         = 2024-04-30 14:51:23
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -327211397 -k -e -o ./datafiles/2024.04.30-14.51.21/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.04.30-14.51.21/ior-easy.stonewall -t 30576 -b 30576000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.04.30-14.51.21/ior-easy-write.csv
+throughput-stonewall = 57.88
+score           = 50.060989
+t_delta         = 447.1162
+t_end           = 2024-04-30 14:58:50
+
+[mdtest-easy-write]
+t_start         = 2024-04-30 14:58:50
+exe             = ./mdtest --dataPacketType=timestamp -n 35000000 -u -L -F -P -G 558966398 -N 1 -d ./datafiles/2024.04.30-14.51.21/mdtest-easy -x ./results/2024.04.30-14.51.21/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.04.30-14.51.21/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 33476.983124
+score           = 32424.419939
+t_delta         = 328.4354
+t_end           = 2024-04-30 15:04:18
+
+[timestamp]
+t_start         = 2024-04-30 15:04:18
+t_delta         = 0.0000
+t_end           = 2024-04-30 15:04:18
+
+[ior-hard-write]
+t_start         = 2024-04-30 15:04:18
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-327200709 -k -e -o ./datafiles/2024.04.30-14.51.21/ior-hard/file -O stoneWallingStatusFile=./results/2024.04.30-14.51.21/ior-hard.stonewall -t 47008 -b 47008 -s 6000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.04.30-14.51.21/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 57.68
+score           = 49.978698
+t_delta         = 438.1721
+t_end           = 2024-04-30 15:11:36
+
+[mdtest-hard-write]
+t_start         = 2024-04-30 15:11:36
+exe             = ./mdtest --dataPacketType=timestamp -n 13000000 -t -w 3901 -e 3901 -P -G=558977086 -N 1 -F -d ./datafiles/2024.04.30-14.51.21/mdtest-hard -x ./results/2024.04.30-14.51.21/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.04.30-14.51.21/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 13010.895488
+score           = 12464.002414
+t_delta         = 329.2656
+t_end           = 2024-04-30 15:17:06
+
+[find]
+t_start         = 2024-04-30 15:17:06
+exe             =  /home/huyk/huyk-workspace/darkstore/build/pfind  ./datafiles/2024.04.30-14.51.21 -newer ./results/2024.04.30-14.51.21/timestampfile -size 3901c -name "*01*"
+last-output     = "MATCHED 581381776/14708898880"
+total-files     = 14708898880
+found           = 581381776
+score           = 253482.393807
+t_delta         = 58.0274
+t_end           = 2024-04-30 15:18:04
+
+[ior-easy-read]
+t_start         = 2024-04-30 15:18:04
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -327211397 -k -e -o ./datafiles/2024.04.30-14.51.21/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.04.30-14.51.21/ior-easy.stonewall -t 30576 -b 30576000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.04.30-14.51.21/ior-easy-read.csv
+score           = 38.817450
+t_delta         = 576.2780
+t_end           = 2024-04-30 15:27:40
+
+[mdtest-easy-stat]
+t_start         = 2024-04-30 15:27:40
+exe             = ./mdtest --dataPacketType=timestamp -n 35000000 -u -L -F -P -G 558966398 -N 1 -d ./datafiles/2024.04.30-14.51.21/mdtest-easy -x ./results/2024.04.30-14.51.21/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2024.04.30-14.51.21/mdtest-easy-stat.csv -a POSIX
+score           = 41469.895152
+t_delta         = 257.0055
+t_end           = 2024-04-30 15:31:57
+
+[ior-hard-read]
+t_start         = 2024-04-30 15:31:57
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-327200709 -k -e -o ./datafiles/2024.04.30-14.51.21/ior-hard/file -O stoneWallingStatusFile=./results/2024.04.30-14.51.21/ior-hard.stonewall -t 47008 -b 47008 -s 6000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.04.30-14.51.21/ior-hard-read.csv
+score           = 37.825025
+t_delta         = 578.9286
+t_end           = 2024-04-30 15:41:36
+
+[mdtest-hard-stat]
+t_start         = 2024-04-30 15:41:36
+exe             = ./mdtest --dataPacketType=timestamp -n 13000000 -t -w 3901 -e 3901 -P -G=558977086 -N 1 -F -d ./datafiles/2024.04.30-14.51.21/mdtest-hard -x ./results/2024.04.30-14.51.21/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2024.04.30-14.51.21/mdtest-hard-stat.csv -a POSIX
+score           = 41706.394738
+t_delta         = 99.1059
+t_end           = 2024-04-30 15:43:15
+
+[mdtest-easy-delete]
+t_start         = 2024-04-30 15:43:15
+exe             = ./mdtest --dataPacketType=timestamp -n 35000000 -u -L -F -P -G 558966398 -N 1 -d ./datafiles/2024.04.30-14.51.21/mdtest-easy -x ./results/2024.04.30-14.51.21/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2024.04.30-14.51.21/mdtest-easy-delete.csv -a POSIX
+score           = 78262.024955
+t_delta         = 136.6675
+t_end           = 2024-04-30 15:45:32
+
+[mdtest-hard-read]
+t_start         = 2024-04-30 15:45:32
+exe             = ./mdtest --dataPacketType=timestamp -n 13000000 -t -w 3901 -e 3901 -P -G=558977086 -N 1 -F -d ./datafiles/2024.04.30-14.51.21/mdtest-hard -x ./results/2024.04.30-14.51.21/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2024.04.30-14.51.21/mdtest-hard-read.csv -a POSIX
+score           = 7545.621480
+t_delta         = 543.2330
+t_end           = 2024-04-30 15:54:35
+
+[mdtest-hard-delete]
+t_start         = 2024-04-30 15:54:35
+exe             = ./mdtest --dataPacketType=timestamp -n 13000000 -t -w 3901 -e 3901 -P -G=558977086 -N 1 -F -d ./datafiles/2024.04.30-14.51.21/mdtest-hard -x ./results/2024.04.30-14.51.21/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2024.04.30-14.51.21/mdtest-hard-delete.csv -a POSIX
+score           = 85404.834944
+t_delta         = 48.9123
+t_end           = 2024-04-30 15:55:24
+
+[SCORE]
+MD              = 41580.787484
+BW              = 43.779687
+SCORE           = 1349.219718
+hash            = B619B149
+; END 2024-04-30 15:55:24

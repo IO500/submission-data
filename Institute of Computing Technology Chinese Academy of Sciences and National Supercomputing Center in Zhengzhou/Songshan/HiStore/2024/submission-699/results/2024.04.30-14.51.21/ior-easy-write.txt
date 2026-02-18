@@ -1,0 +1,40 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 30 14:51:23 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -327211397 -k -e -o ./datafiles/2024.04.30-14.51.21/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.04.30-14.51.21/ior-easy.stonewall -t 30576 -b 30576000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.04.30-14.51.21/ior-easy-write.csv
+Machine             : Linux d13r1n04
+TestID              : 0
+StartTime           : Tue Apr 30 14:51:23 2024
+Path                : ./datafiles/2024.04.30-14.51.21/ior-easy/ior_file_easy.00000000
+FS                  : 0.0 GiB   Used FS: -nan%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/2024.04.30-14.51.21/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+repetitions         : 1
+xfersize            : 30576 bytes
+blocksize           : 29.16 TiB
+aggregate filesize  : 9331.05 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+WARNING: The file "./datafiles/2024.04.30-14.51.21/ior-easy/ior_file_easy.00000000" exists already and will be overwritten
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1279660 max: 2456330 -- min data: 36.4 GiB mean data: 54.3 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 10259603128320000
+WARNING: Stat() of aggregate file size      = 0
+WARNING: Using actual aggregate bytes moved = 24033518745600
+WARNING: Maybe caused by deadlineForStonewalling
+write     51262      1758001    0.000000    31309824000 29.86      0.195571   447.11     0.226305   447.11     0   

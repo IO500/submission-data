@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Apr 25 22:04:29 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -326945279 -k -e -o /mnt/lustre/ddn/io500-main/datafiles/2024.04.25-21.37.27/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/lustre/ddn/io500-main/results/2024.04.25-21.37.27/ior-easy.stonewall -t 1m -b 129600m -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/lustre/ddn/io500-main/results/2024.04.25-21.37.27/ior-easy-read.csv
+Machine             : Linux hpca-agpmh-g1028
+TestID              : 0
+StartTime           : Thu Apr 25 22:04:29 2024
+Path                : /mnt/lustre/ddn/io500-main/datafiles/2024.04.25-21.37.27/ior-easy/ior_file_easy.00000000
+FS                  : 2075.3 TiB   Used FS: 30.8%   Inodes: 9830.5 Mi   Used Inodes: 24.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/lustre/ddn/io500-main/datafiles/2024.04.25-21.37.27/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 126.56 GiB
+aggregate filesize  : 79.10 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 86973087744000
+WARNING: Stat() of aggregate file size      = 79370995630080
+WARNING: Using actual aggregate bytes moved = 79370995630080
+read      315245     315314     0.001852    132710400  1024.00    0.019384   240.06     0.068939   240.11     0   

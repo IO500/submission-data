@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri May  9 09:19:59 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 762524816 -k -e -o /mnt/io500/2025.05.09-09.19.59/ior-easy/ior_file_easy -O stoneWallingStatusFile=/root/io500/results/2025.05.09-09.19.59/ior-easy.stonewall -t 1m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/root/io500/results/2025.05.09-09.19.59/ior-easy-write.csv
+Machine             : Linux io500.ISC25.test
+TestID              : 0
+StartTime           : Fri May  9 09:19:59 2025
+Path                : /mnt/io500/2025.05.09-09.19.59/ior-easy/ior_file_easy.00000000
+FS                  : 1000.0 TiB   Used FS: 3.2%   Inodes: 9536.7 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/io500/2025.05.09-09.19.59/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 3027.34 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 17256 max: 19041 -- min data: 16.9 GiB mean data: 17.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 3328599654400000
+WARNING: Stat() of aggregate file size      = 6389099397120
+WARNING: Using actual aggregate bytes moved = 6389099397120
+WARNING: Maybe caused by deadlineForStonewalling
+write     18935      18948      0.016000    10158080000 1024.00    0.198446   321.57     0.017400   321.78     0   

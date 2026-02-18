@@ -1,0 +1,43 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Sep 20 16:31:52 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 829368256 -k -e -o /datafiles/2025.09.20-14.56.25/ior-easy/ior_file_easy -F -r -D 300 -z -z -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0 -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.20-14.56.25/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+Machine             : Linux i20r01c05s02
+TestID              : 0
+StartTime           : Sat Sep 20 16:31:52 2025
+Path                : /datafiles/2025.09.20-14.56.25/ior-easy/ior_file_easy.00000000
+FS                  : 1234.8 TiB   Used FS: 55.8%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2025.09.20-14.56.25/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 192
+tasks               : 21504
+clients per node    : 112
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 801.09 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 662707 max: 1292924 -- min data: 2.5 GiB mean data: 3.4 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 880803840000000
+WARNING: Stat() of aggregate file size      = 390158050394112
+WARNING: Using actual aggregate bytes moved = 113881242402816
+WARNING: Maybe caused by deadlineForStonewalling
+read      193651     49574956   0.000308    4.00       4.00       0.002539   560.83     0.000752   560.83     0   
+Pairs deadlineForStonewallingaccessed: 0

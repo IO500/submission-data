@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Sep 20 15:47:46 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 829368256 -k -e -o /datafiles/2025.09.20-14.56.25/ior-easy/ior_file_easy -O stoneWallingStatusFile=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.20-14.56.25/ior-easy.stonewall -t 1m -b 99000000m -F -r -R -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.20-14.56.25/ior-easy-read.csv
+Machine             : Linux i20r01c05s02
+TestID              : 0
+StartTime           : Sat Sep 20 15:47:46 2025
+Path                : /datafiles/2025.09.20-14.56.25/ior-easy/ior_file_easy.00000000
+FS                  : 1234.8 TiB   Used FS: 57.9%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2025.09.20-14.56.25/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 192
+tasks               : 21504
+clients per node    : 112
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 94.41 TiB
+aggregate filesize  : 2030273.44 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 2232309252096000000
+WARNING: Stat() of aggregate file size      = 390158050394112
+WARNING: Using actual aggregate bytes moved = 390158050394112
+read      1828727    1828761    0.011759    101376000000 1024.00    0.003507   203.46     0.000706   203.47     0   

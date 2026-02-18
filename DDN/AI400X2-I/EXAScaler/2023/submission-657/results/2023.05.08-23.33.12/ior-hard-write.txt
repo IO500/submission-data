@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May  8 14:44:06 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385201992 -k -e -o /exafs/io500/2023.05.08-23.33.12/ior-hard/file -O stoneWallingStatusFile=./results/2023.05.08-23.33.12/ior-hard.stonewall -t 47008 -b 47008 -s 119900 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.05.08-23.33.12/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux ec01.maas
+TestID              : 0
+StartTime           : Mon May  8 14:44:06 2023
+Path                : /exafs/io500/2023.05.08-23.33.12/ior-hard/file
+FS                  : 47.4 TiB   Used FS: 38.9%   Inodes: 490.7 Mi   Used Inodes: 21.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /exafs/io500/2023.05.08-23.33.12/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 119900
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.64 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 110933 max: 119900 -- min data: 4.9 GiB mean data: 5.2 GiB time: 300.0s
+write     5504       122842     300.26      45.91      45.91      0.058530   312.34     0.103290   312.50     0   

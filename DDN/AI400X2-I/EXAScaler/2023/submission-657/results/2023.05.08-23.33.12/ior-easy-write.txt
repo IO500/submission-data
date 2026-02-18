@@ -1,0 +1,47 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May  8 14:33:14 2023
+Command line        : ./ior --dataPacketType=timestamp -v -v -C -Q 1 -g -G -1385212680 -k -e -o /exafs/io500/2023.05.08-23.33.12/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.05.08-23.33.12/ior-easy.stonewall -t 1m -b 59g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2023.05.08-23.33.12/ior-easy-write.csv
+Machine             : Linux ec01.maas 4.18.0-425.13.1.el8_7.x86_64 #1 SMP Tue Feb 21 19:25:54 UTC 2023 x86_64
+TestID              : 0
+StartTime           : Mon May  8 14:33:14 2023
+Path                : /exafs/io500/2023.05.08-23.33.12/ior-easy/ior_file_easy.00000000
+FS                  : 47.4 TiB   Used FS: 0.0%   Inodes: 384.0 Mi   Used Inodes: 0.0%
+Participating tasks : 320
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /exafs/io500/2023.05.08-23.33.12/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 59 GiB
+aggregate filesize  : 18.44 TiB
+verbose             : 2
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+Using Time Stamp 2909754616 (0xad6f54f8) for Data Signature
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing write performance test: Mon May  8 14:33:14 2023
+0: stonewalling pairs accessed: 57631
+stonewalling pairs accessed min: 53989 max: 60416 -- min data: 52.7 GiB mean data: 55.3 GiB time: 300.0s
+write     59268      59271      0.005123    61865984   1024.00    0.008885   326.18     0.006661   326.20     0   
+Max Write: 59267.87 MiB/sec (62146.86 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write       59267.87   59267.87   59267.87       0.00   59267.87   59267.87   59267.87       0.00  326.19901     300.02        188.65     0    320  32    1   1     1        1         0    0      1 63350767616  1048576 19333120.0 POSIX      0
+Finished            : Mon May  8 14:38:40 2023

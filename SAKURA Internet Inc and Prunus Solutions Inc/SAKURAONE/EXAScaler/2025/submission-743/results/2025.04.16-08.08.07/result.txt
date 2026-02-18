@@ -1,0 +1,118 @@
+[run]
+procs           = 1280
+version         = io500-sc24_v1-11-gc00ca177071b
+config-hash     = D441EC3B
+result-dir      = ./results/2025.04.16-08.08.07
+mode            = standard
+; START 2025-04-15 23:08:22
+
+
+[ior-easy-write]
+t_start         = 2025-04-15 23:08:22
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746005306 -k -e -o /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.04.16-08.08.07/ior-easy.stonewall -t 1m -b 70g -u -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2025.04.16-08.08.07/ior-easy-write.csv
+throughput-stonewall = 281.27
+score           = 262.909798
+t_delta         = 340.9585
+t_end           = 2025-04-15 23:14:03
+
+[mdtest-easy-write]
+t_start         = 2025-04-15 23:14:03
+exe             = ./mdtest --dataPacketType=timestamp -n 55000 -u -L -F -P -G 1632183100 -N 1 -d /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/mdtest-easy -x ./results/2025.04.16-08.08.07/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2025.04.16-08.08.07/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 228.547656
+score           = 204.439992
+t_delta         = 347.0013
+t_end           = 2025-04-15 23:19:50
+
+[timestamp]
+t_start         = 2025-04-15 23:19:50
+t_delta         = 0.0022
+t_end           = 2025-04-15 23:19:50
+
+[ior-hard-write]
+t_start         = 2025-04-15 23:19:50
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746015994 -k -e -o /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/ior-hard/file -O stoneWallingStatusFile=./results/2025.04.16-08.08.07/ior-hard.stonewall -t 47008 -b 47008 -s 100000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.04.16-08.08.07/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 17.24
+score           = 15.841345
+t_delta         = 354.5994
+t_end           = 2025-04-15 23:25:45
+
+[mdtest-hard-write]
+t_start         = 2025-04-15 23:25:45
+exe             = ./mdtest --dataPacketType=timestamp -n 32000 -t -w 3901 -e 3901 -P -G=1632193788 -N 1 -F -d /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/mdtest-hard -x ./results/2025.04.16-08.08.07/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2025.04.16-08.08.07/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 130.883858
+score           = 120.841897
+t_delta         = 340.0498
+t_end           = 2025-04-15 23:31:25
+
+[find]
+t_start         = 2025-04-15 23:31:25
+exe             = ./pfind /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07 -newer ./results/2025.04.16-08.08.07/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1280
+found           = 1868908
+total-files     = 111361281
+score           = 1976.054381
+t_delta         = 56.3918
+t_end           = 2025-04-15 23:32:22
+
+[ior-easy-read]
+t_start         = 2025-04-15 23:32:22
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746005306 -k -e -o /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.04.16-08.08.07/ior-easy.stonewall -t 1m -b 70g -u -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2025.04.16-08.08.07/ior-easy-read.csv
+score           = 365.706870
+t_delta         = 245.1446
+t_end           = 2025-04-15 23:36:27
+
+[mdtest-easy-stat]
+t_start         = 2025-04-15 23:36:27
+exe             = ./mdtest --dataPacketType=timestamp -n 55000 -u -L -F -P -G 1632183100 -N 1 -d /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/mdtest-easy -x ./results/2025.04.16-08.08.07/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2025.04.16-08.08.07/mdtest-easy-stat.csv -a POSIX
+score           = 358.751915
+t_delta         = 197.3988
+t_end           = 2025-04-15 23:39:44
+
+[ior-hard-read]
+t_start         = 2025-04-15 23:39:44
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746015994 -k -e -o /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/ior-hard/file -O stoneWallingStatusFile=./results/2025.04.16-08.08.07/ior-hard.stonewall -t 47008 -b 47008 -s 100000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.04.16-08.08.07/ior-hard-read.csv
+score           = 205.637772
+t_delta         = 31.2278
+t_end           = 2025-04-15 23:40:15
+
+[mdtest-hard-stat]
+t_start         = 2025-04-15 23:40:15
+exe             = ./mdtest --dataPacketType=timestamp -n 32000 -t -w 3901 -e 3901 -P -G=1632193788 -N 1 -F -d /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/mdtest-hard -x ./results/2025.04.16-08.08.07/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2025.04.16-08.08.07/mdtest-hard-stat.csv -a POSIX
+score           = 262.431304
+t_delta         = 157.1882
+t_end           = 2025-04-15 23:42:52
+
+[mdtest-easy-delete]
+t_start         = 2025-04-15 23:42:52
+exe             = ./mdtest --dataPacketType=timestamp -n 55000 -u -L -F -P -G 1632183100 -N 1 -d /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/mdtest-easy -x ./results/2025.04.16-08.08.07/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2025.04.16-08.08.07/mdtest-easy-delete.csv -a POSIX
+score           = 168.193024
+t_delta         = 422.1208
+t_end           = 2025-04-15 23:49:55
+
+[mdtest-hard-read]
+t_start         = 2025-04-15 23:49:55
+exe             = ./mdtest --dataPacketType=timestamp -n 32000 -t -w 3901 -e 3901 -P -G=1632193788 -N 1 -F -d /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/mdtest-hard -x ./results/2025.04.16-08.08.07/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2025.04.16-08.08.07/mdtest-hard-read.csv -a POSIX
+score           = 205.388071
+t_delta         = 200.5344
+t_end           = 2025-04-15 23:53:15
+
+[mdtest-hard-delete]
+t_start         = 2025-04-15 23:53:15
+exe             = ./mdtest --dataPacketType=timestamp -n 32000 -t -w 3901 -e 3901 -P -G=1632193788 -N 1 -F -d /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/mdtest-hard -x ./results/2025.04.16-08.08.07/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2025.04.16-08.08.07/mdtest-hard-delete.csv -a POSIX
+score           = 92.290202
+t_delta         = 445.9085
+t_end           = 2025-04-16 00:00:41
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-04-16 00:00:41
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746005306 -k -e -o /homel/ddnsihara/pvc/datafiles/2025.04.16-08.08.07/ior-easy/ior_file_easy -u -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.04.16-08.08.07/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=1000000
+score           = 522.049505
+t_delta         = 9.5634
+t_end           = 2025-04-16 00:00:51
+
+[SCORE]
+MD              = 248.737559
+BW              = 133.032794
+SCORE           = 181.907263
+hash            = 35A3166E
+; END 2025-04-16 00:00:51

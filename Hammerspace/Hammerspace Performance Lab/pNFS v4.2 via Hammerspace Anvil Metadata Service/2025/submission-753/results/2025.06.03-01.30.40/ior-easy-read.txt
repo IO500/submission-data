@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jun  3 02:03:48 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 777696323 -k -e -o /mnt/hs_test/data/2025.06.03-01.30.40/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/hs_test/results-io500/2025.06.03-01.30.40/ior-easy.stonewall -t 1m -b 9920000m -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/hs_test/results-io500/2025.06.03-01.30.40/ior-easy-read.csv
+Machine             : Linux plsm221h-01.perf.hammer.space
+TestID              : 0
+StartTime           : Tue Jun  3 02:03:48 2025
+Path                : /mnt/hs_test/data/2025.06.03-01.30.40/ior-easy/ior_file_easy.00000000
+FS                  : 443.8 TiB   Used FS: 81.1%   Inodes: 1073741824.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/hs_test/data/2025.06.03-01.30.40/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 6054.69 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 6657199308800000
+WARNING: Stat() of aggregate file size      = 392478809128960
+WARNING: Using actual aggregate bytes moved = 392478809128960
+read      457514     457520     0.001399    10158080000 1024.00    0.007245   818.10     0.007434   818.11     0   

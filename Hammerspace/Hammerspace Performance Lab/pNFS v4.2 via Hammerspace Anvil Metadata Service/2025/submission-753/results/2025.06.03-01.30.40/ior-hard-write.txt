@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jun  3 01:50:13 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=777707011 -k -e -o /mnt/hs_test/data/2025.06.03-01.30.40/ior-hard/file -O stoneWallingStatusFile=/mnt/hs_test/results-io500/2025.06.03-01.30.40/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/hs_test/results-io500/2025.06.03-01.30.40/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux plsm221h-01.perf.hammer.space
+TestID              : 0
+StartTime           : Tue Jun  3 01:50:13 2025
+Path                : /mnt/hs_test/data/2025.06.03-01.30.40/ior-hard/file
+FS                  : 443.8 TiB   Used FS: 81.0%   Inodes: 1073741824.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/hs_test/data/2025.06.03-01.30.40/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 273.62 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 9885 max: 10612 -- min data: 0.4 GiB mean data: 0.4 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 300851200000000
+WARNING: Stat() of aggregate file size      = 319263293440
+WARNING: Using actual aggregate bytes moved = 319263293440
+WARNING: Maybe caused by deadlineForStonewalling
+write     970.10     21661      0.029326    45.91      45.91      0.311863   313.54     0.002844   313.86     0   

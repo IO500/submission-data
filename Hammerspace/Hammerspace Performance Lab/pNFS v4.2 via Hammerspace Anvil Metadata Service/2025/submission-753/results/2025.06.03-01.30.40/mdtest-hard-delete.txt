@@ -1,0 +1,31 @@
+-- started at 06/03/2025 02:29:49 --
+
+mdtest-4.1.0+dev was launched with 640 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=1663884805' '-N' '1' '-F' '-d' '/mnt/hs_test/data/2025.06.03-01.30.40/mdtest-hard' '-x' '/mnt/hs_test/results-io500/2025.06.03-01.30.40/mdtest-hard.stonewall' '-r' '--saveRankPerformanceDetails=/mnt/hs_test/results-io500/2025.06.03-01.30.40/mdtest-hard-delete.csv' '-a' 'POSIX' '--posix.odirect'
+Nodemap: 1111111111111111111111111111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Path                : /mnt/hs_test/data/2025.06.03-01.30.40/mdtest-hard
+FS                  : 443.8 TiB   Used FS: 81.1%   Inodes: 1073741824.0 Mi   Used Inodes: 0.0%
+V-0: Rank   0 Line  2586 Shifting ranks by 64 for each phase.
+640 tasks, 640000000 files
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                26066.025      26066.025      26066.025          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.160          0.160          0.160          0.000
+
+SUMMARY time (in ms/op): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                  321.154        321.154        321.154          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    6.231          6.231          6.231          0.000
+-- finished at 06/03/2025 02:35:17 --
+

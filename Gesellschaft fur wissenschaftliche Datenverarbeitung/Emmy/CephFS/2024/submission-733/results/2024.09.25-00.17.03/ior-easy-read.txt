@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Sep 25 00:40:29 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -243096587 -k -e -o /mnt/mycephfs/io500_testing1/io500/datafiles/2024.09.25-00.17.03/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.09.25-00.17.03/ior-easy.stonewall -t 4m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.09.25-00.17.03/ior-easy-read.csv
+Machine             : Linux cephhpc003
+TestID              : 0
+StartTime           : Wed Sep 25 00:40:29 2024
+Path                : /mnt/mycephfs/io500_testing1/io500/datafiles/2024.09.25-00.17.03/ior-easy/ior_file_easy.00000000
+FS                  : 694.4 TiB   Used FS: 2.2%   Inodes: 65.2 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/mycephfs/io500_testing1/io500/datafiles/2024.09.25-00.17.03/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 18
+tasks               : 270
+clients per node    : 15
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 2554.32 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 2808505958400000
+WARNING: Stat() of aggregate file size      = 8297549660160
+WARNING: Using actual aggregate bytes moved = 8297549660160
+read      80397      20103      0.000040    10158080000 4096       0.014045   98.41      0.005406   98.43      0   

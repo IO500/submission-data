@@ -1,0 +1,26 @@
+GPFS cluster information
+========================
+  GPFS cluster name:         io500.gpfs
+  GPFS cluster id:           16974596931794312407
+  GPFS UID domain:           io500.gpfs
+  Remote shell command:      /usr/bin/ssh
+  Remote file copy command:  /usr/bin/scp
+  Repository type:           CCR
+
+ Node  Daemon node name     IP address      Admin node name      Designation
+-----------------------------------------------------------------------------
+   1   e351aib.gpfs.net     100.168.82.31   e351aib.gpfs.net     quorum-manager-perfmon
+   2   e351bib.gpfs.net     100.168.82.32   e351bib.gpfs.net     quorum-manager-perfmon
+   3   arches1ib.gpfs.net   100.168.85.111  arches1ib.gpfs.net   manager-perfmon
+   4   arches2ib.gpfs.net   100.168.85.112  arches2ib.gpfs.net   manager-perfmon
+   5   arches3ib.gpfs.net   100.168.85.113  arches3ib.gpfs.net   manager-perfmon
+   6   arches4ib.gpfs.net   100.168.85.114  arches4ib.gpfs.net   manager-perfmon
+   7   arches5ib.gpfs.net   100.168.85.115  arches5ib.gpfs.net   manager-perfmon
+   8   arches6ib.gpfs.net   100.168.85.116  arches6ib.gpfs.net   manager-perfmon
+   9   arches9ib.gpfs.net   100.168.85.119  arches9ib.gpfs.net   manager-perfmon
+  10   arches10ib.gpfs.net  100.168.85.120  arches10ib.gpfs.net  manager-perfmon
+  11   arches14ib.gpfs.net  100.168.85.124  arches14ib.gpfs.net  manager-perfmon
+  12   arches7ib.gpfs.net   100.168.85.117  arches7ib.gpfs.net   manager-perfmon
+  13   arches8ib.gpfs.net   100.168.85.118  arches8ib.gpfs.net   perfmon
+  14   e352aib.gpfs.net     100.168.82.33   e352aib.gpfs.net     manager-perfmon
+  15   e352bib.gpfs.net     100.168.82.34   e352bib.gpfs.net     manager-perfmon

@@ -1,0 +1,118 @@
+Configuration data for cluster io500.gpfs:
+------------------------------------------
+clusterName io500.gpfs
+clusterId 16974596931794312407
+autoload no
+dmapiFileHandleSize 32
+tscCmdAllowRemoteConnections no
+ccrEnabled yes
+cipherList AUTHONLY
+sdrNotifyAuthEnabled yes
+[nc_35,nc_352]
+nsdRAIDTracks 128K
+nspdQueues 120
+nspdBufferMemPerQueue 24m
+nspdThreadsPerQueue 2
+nsdMinWorkerThreads 3842
+nsdMaxWorkerThreads 3842
+nsdSmallThreadRatio 1
+nsdRAIDEventLogToConsole all
+nsdRAIDBlockDeviceMaxSectorsKB 0
+nsdRAIDBlockDeviceNrRequests 0
+nsdRAIDBlockDeviceQueueDepth 0
+nsdRAIDBlockDeviceScheduler off
+nsdRAIDSmallThreadRatio 2
+nsdRAIDDefaultGeneratedFD no
+nsdRAIDMasterBufferPoolSize 2G
+nsdRAIDReconstructAggressiveness 0
+nsdRAIDThreadsPerQueue 16
+nsdRAIDSSDPerformanceShortTimeConstant 2500000
+nsdRAIDDiskDiagTimeout 130
+nsdRAIDEnableRGCMRebalanceWeight yes
+panicOnIOHang yes
+pitWorkerThreadsPerNode 32
+backgroundSpaceReclaim Good: 1 10% 60 1% Info: 0 6% 30 1% Warning: 0 3% 10 0% Critical: 0 2% 5 0% OOS: 0 1% 1 0%
+nsdRAIDEnableSpaceMonitor 1
+nsdRAIDClientOnlyChecksum yes
+pagepoolMaxPhysMemPct 90
+[common]
+maxblocksize 16m
+[client]
+maxblocksize 16M
+dioReentryThreshold 1
+[common]
+dataShipDebugInterval 5
+[arches10ib,arches14ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches9ib]
+dataShipClientBufferPct 50
+[arches8ib,client,nc_35,nc_352]
+ignorePrefetchLUNCount yes
+[client,nc_35,nc_352]
+maxFilesToCache 128k
+[arches8ib]
+maxFilesToCache 131072
+[nc_35,nc_352]
+maxStatCache 128k
+[client]
+maxStatCache 128K
+[arches8ib]
+maxStatCache 131072
+[arches8ib,client,nc_35,nc_352]
+numaMemoryInterleave yes
+prefetchPct 50
+[client]
+verbsPorts mlx5_0/1
+[nc_35]
+verbsPorts mlx5_1 mlx5_3 mlx5_5 mlx5_7
+[nc_352]
+verbsPorts mlx5_1 mlx5_3 mlx5_4 mlx5_7
+[arches8ib]
+verbsPorts mlx5_0/1
+[common]
+verbsRdma enable
+verbsRdmaSend yes
+[arches8ib,client,nc_35,nc_352]
+workerThreads 1024
+[nc_35]
+pagepool 324379307212
+[client]
+pagepool 48G
+[nc_352]
+pagepool 324216102912
+[arches8ib]
+pagepool 51539607552
+[nc_35,nc_352]
+maxMBpS 50000
+[arches8ib,client]
+maxMBpS 24000
+[common]
+minReleaseLevel 5.1.9.0
+nBucketGroups 1024
+traceRecycle off
+tracedevOverwriteBufferSize 12884901888
+tracedevWriteMode overwrite
+trace all 4 tm 2 thread 1 mutex 1 vnode 2 ksvfs 3 klockl 2 io 3 pgalloc 1 mb 1 lock 2 fsck 3 fsckx 3 iolite 0
+[arches10ib,arches14ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches9ib,e351aib,e351bib,e352aib,e352bib,nc_35,nc_352]
+dataShipAssertOnFailure yes
+[arches10ib,arches14ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches9ib,e351aib,e351bib,e352aib,e352bib,nc_35,nc_352]
+preferDesignatedMnode yes
+[nc_35,nc_352]
+autoCompactDir 1
+[arches10ib,arches14ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches9ib,e351aib,e351bib,e352aib,e352bib]
+autoCompactDir 0
+[nc_35,nc_352]
+fgdlTokenBatchAcquire 0
+[arches10ib,arches14ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches9ib,e351aib,e351bib,e352aib,e352bib]
+fgdlTokenBatchAcquire 1
+[common]
+fsyncIsGlobal no
+[e351aib,e351bib,e352aib,e352bib,nc_35,nc_352]
+dataShipClientBuffersPerServer 4
+[arches10ib,arches14ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches9ib]
+dataShipClientBuffersPerServer 50
+[e351aib,e351bib,e352aib,e352bib,nc_35,nc_352]
+dataShipServerBufferPct 10
+[arches10ib,arches14ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches9ib]
+dataShipServerBufferPct 50
+[common]
+inodePrefetchThreshold 5
+adminMode central

@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Oct 22 06:51:47 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1401475334 -k -e -o /gpfs/fs_35/2023.10.22-06.40.20/ior-hard/file -O stoneWallingStatusFile=/nshare/pidsouza/io500/monthly/102023/results/1BB/2023.10.22-06.40.20/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=/nshare/pidsouza/io500/monthly/102023/results/1BB/2023.10.22-06.40.20/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux arches1
+TestID              : 0
+StartTime           : Sun Oct 22 06:51:47 2023
+Path                : /gpfs/fs_35/2023.10.22-06.40.20/ior-hard/file
+FS                  : 121.5 TiB   Used FS: 29.7%   Inodes: 500.0 Mi   Used Inodes: 15.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/fs_35/2023.10.22-06.40.20/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 85.51 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1771618 max: 1771802 -- min data: 77.6 GiB mean data: 77.6 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 94016000000000
+WARNING: Stat() of aggregate file size      = 16657773683200
+WARNING: Using actual aggregate bytes moved = 16657773683200
+WARNING: Maybe caused by deadlineForStonewalling
+write     52543      1180009    300.28      45.91      45.91      1.98       300.30     0.050950   302.35     0   

@@ -1,0 +1,118 @@
+[run]
+procs           = 560
+version         = io500-sc25
+config-hash     = 870F1A54
+result-dir      = /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25
+mode            = standard
+; START 2025-11-05 02:28:25
+
+
+[ior-easy-write]
+t_start         = 2025-11-05 02:28:25
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761447744 -k -e -o /mnt/hammerspace/io500/datadir/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-easy.stonewall -t 1m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-easy-write.csv
+throughput-stonewall = 636.61
+score           = 509.042058
+t_delta         = 521.5117
+t_end           = 2025-11-05 02:37:06
+
+[mdtest-easy-write]
+t_start         = 2025-11-05 02:37:06
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1647625538 -N 1 -d /mnt/hammerspace/io500/datadir/mdtest-easy -x /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-easy-write.csv -a POSIX --posix.odirect
+rate-stonewall  = 73.555157
+score           = 73.294754
+t_delta         = 312.9610
+t_end           = 2025-11-05 02:42:19
+
+[timestamp]
+t_start         = 2025-11-05 02:42:19
+t_delta         = 0.0012
+t_end           = 2025-11-05 02:42:19
+
+[ior-hard-write]
+t_start         = 2025-11-05 02:42:19
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761458432 -k -e -o /mnt/hammerspace/io500/datadir/ior-hard/file -O stoneWallingStatusFile=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 1.11
+score           = 1.147141
+t_delta         = 469.2555
+t_end           = 2025-11-05 02:50:09
+
+[mdtest-hard-write]
+t_start         = 2025-11-05 02:50:09
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647636226 -N 1 -F -d /mnt/hammerspace/io500/datadir/mdtest-hard -x /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-hard-write.csv -a POSIX --posix.odirect
+rate-stonewall  = 14.412035
+score           = 14.370324
+t_delta         = 324.0450
+t_end           = 2025-11-05 02:55:33
+
+[find]
+t_start         = 2025-11-05 02:55:33
+exe             = ./pfind /mnt/hammerspace/io500/datadir -newer /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 8
+found           = 131315
+total-files     = 27462401
+score           = 488.466176
+t_delta         = 56.2534
+t_end           = 2025-11-05 02:56:29
+
+[ior-easy-read]
+t_start         = 2025-11-05 02:56:29
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761447744 -k -e -o /mnt/hammerspace/io500/datadir/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-easy.stonewall -t 1m -b 9920000m -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-easy-read.csv
+score           = 540.754507
+t_delta         = 490.9874
+t_end           = 2025-11-05 03:04:40
+
+[mdtest-easy-stat]
+t_start         = 2025-11-05 03:04:40
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1647625538 -N 1 -d /mnt/hammerspace/io500/datadir/mdtest-easy -x /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-easy-stat.csv -a POSIX --posix.odirect
+score           = 554.875604
+t_delta         = 42.3957
+t_end           = 2025-11-05 03:05:22
+
+[ior-hard-read]
+t_start         = 2025-11-05 03:05:22
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761458432 -k -e -o /mnt/hammerspace/io500/datadir/ior-hard/file -O stoneWallingStatusFile=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-hard-read.csv
+score           = 98.407901
+t_delta         = 5.8264
+t_end           = 2025-11-05 03:05:28
+
+[mdtest-hard-stat]
+t_start         = 2025-11-05 03:05:28
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647636226 -N 1 -F -d /mnt/hammerspace/io500/datadir/mdtest-hard -x /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-hard-stat.csv -a POSIX --posix.odirect
+score           = 571.596277
+t_delta         = 9.3482
+t_end           = 2025-11-05 03:05:38
+
+[mdtest-easy-delete]
+t_start         = 2025-11-05 03:05:38
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1647625538 -N 1 -d /mnt/hammerspace/io500/datadir/mdtest-easy -x /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-easy-delete.csv -a POSIX --posix.odirect
+score           = 48.461368
+t_delta         = 489.5211
+t_end           = 2025-11-05 03:13:47
+
+[mdtest-hard-read]
+t_start         = 2025-11-05 03:13:47
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647636226 -N 1 -F -d /mnt/hammerspace/io500/datadir/mdtest-hard -x /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-hard-read.csv -a POSIX --posix.odirect
+score           = 64.830051
+t_delta         = 72.9042
+t_end           = 2025-11-05 03:15:00
+
+[mdtest-hard-delete]
+t_start         = 2025-11-05 03:15:00
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647636226 -N 1 -F -d /mnt/hammerspace/io500/datadir/mdtest-hard -x /mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/mdtest-hard-delete.csv -a POSIX --posix.odirect
+score           = 15.663266
+t_delta         = 305.0175
+t_end           = 2025-11-05 03:20:05
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-11-05 03:20:05
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761447744 -k -e -o /mnt/hammerspace/io500/datadir/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 16.328168
+t_delta         = 321.1800
+t_end           = 2025-11-05 03:25:26
+
+[SCORE]
+MD              = 97.294696
+BW              = 74.662092
+SCORE           = 85.230426
+hash            = F935AEB1
+; END 2025-11-05 03:25:26

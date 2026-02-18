@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  5 02:28:25 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761447744 -k -e -o /mnt/hammerspace/io500/datadir/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-easy.stonewall -t 1m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/hammerspace/io500/io500_results/2025.11.05-02.28.25/ior-easy-write.csv
+Machine             : Linux dsksa119
+TestID              : 0
+StartTime           : Wed Nov  5 02:28:25 2025
+Path                : /mnt/hammerspace/io500/datadir/ior-easy/ior_file_easy.00000000
+FS                  : 1659.1 TiB   Used FS: 0.0%   Inodes: 1073741824.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/hammerspace/io500/datadir/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 560
+clients per node    : 56
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 5297.85 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 241464 max: 485206 -- min data: 235.8 GiB mean data: 341.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 5825049395200000
+WARNING: Stat() of aggregate file size      = 284914205327360
+WARNING: Using actual aggregate bytes moved = 284914205327360
+WARNING: Maybe caused by deadlineForStonewalling
+write     521259     521347     0.000931    10158080000 1024.00    0.089028   521.18     0.047320   521.27     0   

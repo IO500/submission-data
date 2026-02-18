@@ -1,0 +1,20 @@
+# system-information.txt
+
+System Name: AE-25 
+Institution: Samsung Electronics
+Location: Hwaseong City South Korea
+
+Filesystem Name: Hammerspace Hyperscale NAS
+Filesystem Type: Hammerspace Parallel NFS over RDMA
+Filesystem Version: 5.2.3-90
+
+Number of Clients: 10
+Number of Servers: 12
+Client Nodes: dsksa119–dsksa128
+Server Nodes: dskbd082-dskbd083,dskbd087-dskbd096
+Interconnect: Dual 400 Gb/s Infiniband
+Storage Hardware: Samsung PM1753 NVMe SSDs
+Metadata Storage: HA Hammerspace Anvils (NVMe-oF over RDMA)
+IO500 version: io500-sc25
+Benchmark Date: 2025-11-05
+

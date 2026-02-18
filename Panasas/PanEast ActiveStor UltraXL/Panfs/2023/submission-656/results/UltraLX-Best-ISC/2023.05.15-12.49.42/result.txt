@@ -1,0 +1,70 @@
+[run]
+procs           = 80
+version         = io500-isc23
+config-hash     = 71E801C2
+result-dir      = ../result_dir/2023.05.15-12.49.42
+mode            = standard
+
+
+[ior-easy-write]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384970364 -k -e -o ../../../pgh-realm-75-4//ior-easy/ior_file_easy -O stoneWallingStatusFile=../result_dir/2023.05.15-12.49.42/ior-easy.stonewall -t 1m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=../result_dir/2023.05.15-12.49.42/ior-easy-write.csv
+throughput-stonewall = 16.00
+score           = 15.431616
+
+[mdtest-easy-write]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -498792570 -N 1 -d ../../../pgh-realm-75-4//mdtest-easy -x ../result_dir/2023.05.15-12.49.42/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=../result_dir/2023.05.15-12.49.42/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 4.902906
+score           = 4.896129
+
+[timestamp]
+
+[ior-hard-write]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384959676 -k -e -o ../../../pgh-realm-75-4//ior-hard/file -O stoneWallingStatusFile=../result_dir/2023.05.15-12.49.42/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=../result_dir/2023.05.15-12.49.42/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.08
+score           = 0.076970
+
+[mdtest-hard-write]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-498781882 -N 1 -F -d ../../../pgh-realm-75-4//mdtest-hard -x ../result_dir/2023.05.15-12.49.42/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=../result_dir/2023.05.15-12.49.42/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 4.180484
+score           = 4.171784
+
+[find]
+exe             = ./pfind ../../../pgh-realm-75-4/ -newer ../result_dir/2023.05.15-12.49.42/timestampfile -size 3901c -name *01* -C -H 1 -q 10000
+nproc           = 80
+found           = 32640
+total-files     = 5451511
+score           = 515.320320
+
+[ior-easy-read]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384970364 -k -e -o ../../../pgh-realm-75-4//ior-easy/ior_file_easy -O stoneWallingStatusFile=../result_dir/2023.05.15-12.49.42/ior-easy.stonewall -t 1m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=../result_dir/2023.05.15-12.49.42/ior-easy-read.csv
+score           = 12.473126
+
+[mdtest-easy-stat]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -498792570 -N 1 -d ../../../pgh-realm-75-4//mdtest-easy -x ../result_dir/2023.05.15-12.49.42/mdtest-easy.stonewall -T --saveRankPerformanceDetails=../result_dir/2023.05.15-12.49.42/mdtest-easy-stat.csv -a POSIX
+score           = 47.160092
+
+[ior-hard-read]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384959676 -k -e -o ../../../pgh-realm-75-4//ior-hard/file -O stoneWallingStatusFile=../result_dir/2023.05.15-12.49.42/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=../result_dir/2023.05.15-12.49.42/ior-hard-read.csv
+score           = 0.809731
+
+[mdtest-hard-stat]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-498781882 -N 1 -F -d ../../../pgh-realm-75-4//mdtest-hard -x ../result_dir/2023.05.15-12.49.42/mdtest-hard.stonewall -T --saveRankPerformanceDetails=../result_dir/2023.05.15-12.49.42/mdtest-hard-stat.csv -a POSIX
+score           = 53.858169
+
+[mdtest-easy-delete]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -498792570 -N 1 -d ../../../pgh-realm-75-4//mdtest-easy -x ../result_dir/2023.05.15-12.49.42/mdtest-easy.stonewall -r --saveRankPerformanceDetails=../result_dir/2023.05.15-12.49.42/mdtest-easy-delete.csv -a POSIX
+score           = 6.877864
+
+[mdtest-hard-read]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-498781882 -N 1 -F -d ../../../pgh-realm-75-4//mdtest-hard -x ../result_dir/2023.05.15-12.49.42/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=../result_dir/2023.05.15-12.49.42/mdtest-hard-read.csv -a POSIX
+score           = 52.119726
+
+[mdtest-hard-delete]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-498781882 -N 1 -F -d ../../../pgh-realm-75-4//mdtest-hard -x ../result_dir/2023.05.15-12.49.42/mdtest-hard.stonewall -r --saveRankPerformanceDetails=../result_dir/2023.05.15-12.49.42/mdtest-hard-delete.csv -a POSIX
+score           = 3.968630
+
+[SCORE]
+MD              = 21.014633
+BW              = 1.861069
+SCORE           = 6.253773
+hash            = 994D4DF

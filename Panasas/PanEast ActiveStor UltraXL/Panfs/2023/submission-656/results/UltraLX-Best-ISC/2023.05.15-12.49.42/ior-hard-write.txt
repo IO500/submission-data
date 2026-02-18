@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 15 13:09:26 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384959676 -k -e -o ../../../pgh-realm-75-4//ior-hard/file -O stoneWallingStatusFile=../result_dir/2023.05.15-12.49.42/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=../result_dir/2023.05.15-12.49.42/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux pgh-echo-1-7.palab.panasas.com
+TestID              : 0
+StartTime           : Mon May 15 13:09:26 2023
+Path                : ../../../pgh-realm-75-4//ior-hard/file
+FS                  : 2056.7 TiB   Used FS: 2.9%   Inodes: 128.5 Mi   Used Inodes: 2.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ../../../pgh-realm-75-4//ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 34.20 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 6050 max: 7221 -- min data: 0.3 GiB mean data: 0.3 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 37606400000000
+WARNING: Stat() of aggregate file size      = 27155581440
+WARNING: Using actual aggregate bytes moved = 27155581440
+WARNING: Maybe caused by deadlineForStonewalling
+write     78.82      1759.42    302.05      45.91      45.91      0.009048   328.33     0.232969   328.58     0   

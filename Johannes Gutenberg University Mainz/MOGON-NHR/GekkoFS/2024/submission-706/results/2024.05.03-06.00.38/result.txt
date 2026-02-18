@@ -1,0 +1,132 @@
+[run]
+procs           = 240
+version         = io500-isc24_v3
+config-hash     = B20F50C4
+result-dir      = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38
+mode            = standard
+; START 2024-05-03 06:00:46
+
+
+[ior-easy-write]
+t_start         = 2024-05-03 06:00:46
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312803002 -k -e -o /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-easy.stonewall -t 1m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-easy-write.csv
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-easy-write.txt
+accessed-pairs  = 104588
+throughput-stonewall = 80.21
+score           = 79.654754
+t_delta         = 307.9258
+t_end           = 2024-05-03 06:05:54
+
+[mdtest-easy-write]
+t_start         = 2024-05-03 06:05:54
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 573374793 -N 1 -d /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/mdtest-easy -x /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy-write.csv -a POSIX
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy-write.txt
+time            = 346.574059
+rate-stonewall  = 3728.613873
+score           = 3387.625039
+t_delta         = 347.5983
+t_end           = 2024-05-03 06:11:41
+
+[timestamp]
+t_start         = 2024-05-03 06:11:41
+timestamp-file  = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/timestampfile
+t_delta         = 0.0023
+t_end           = 2024-05-03 06:11:41
+
+[ior-hard-write]
+t_start         = 2024-05-03 06:11:41
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312792314 -k -e -o /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/ior-hard/file -O stoneWallingStatusFile=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-hard-write.csv -O stoneWallingWearOut=1
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-hard-write.txt
+accessed-pairs  = 1387739
+throughput-stonewall = 48.60
+score           = 48.597859
+t_delta         = 300.0570
+t_end           = 2024-05-03 06:16:41
+
+[mdtest-hard-write]
+t_start         = 2024-05-03 06:16:41
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=573385481 -N 1 -F -d /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/mdtest-hard -x /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard-write.csv -a POSIX
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard-write.txt
+time            = 326.021105
+rate-stonewall  = 579.517801
+score           = 551.172170
+t_delta         = 327.0405
+t_end           = 2024-05-03 06:22:08
+
+[find]
+t_start         = 2024-05-03 06:22:08
+exe             = ./pfind /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38 -newer /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 40
+found           = 8435862
+total-files     = 1353756961
+score           = 3677.965948
+t_delta         = 368.1067
+t_end           = 2024-05-03 06:28:17
+
+[ior-easy-read]
+t_start         = 2024-05-03 06:28:17
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312803002 -k -e -o /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-easy.stonewall -t 1m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-easy-read.csv
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-easy-read.txt
+score           = 65.374413
+t_delta         = 375.3177
+t_end           = 2024-05-03 06:34:32
+
+[mdtest-easy-stat]
+t_start         = 2024-05-03 06:34:32
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 573374793 -N 1 -d /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/mdtest-easy -x /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy-stat.csv -a POSIX
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy-stat.txt
+time            = 327.910696
+score           = 3580.435083
+t_delta         = 328.9323
+t_end           = 2024-05-03 06:40:01
+
+[ior-hard-read]
+t_start         = 2024-05-03 06:40:01
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312792314 -k -e -o /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/ior-hard/file -O stoneWallingStatusFile=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-hard-read.csv
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/ior-hard-read.txt
+score           = 21.337972
+t_delta         = 683.4217
+t_end           = 2024-05-03 06:51:24
+
+[mdtest-hard-stat]
+t_start         = 2024-05-03 06:51:24
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=573385481 -N 1 -F -d /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/mdtest-hard -x /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard-stat.csv -a POSIX
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard-stat.txt
+time            = 53.611429
+score           = 3351.780832
+t_delta         = 54.6333
+t_end           = 2024-05-03 06:52:19
+
+[mdtest-easy-delete]
+t_start         = 2024-05-03 06:52:19
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 573374793 -N 1 -d /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/mdtest-easy -x /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy-delete.csv -a POSIX
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-easy-delete.txt
+time            = 364.461296
+score           = 3221.365268
+t_delta         = 501.9991
+t_end           = 2024-05-03 07:00:41
+
+[mdtest-hard-read]
+t_start         = 2024-05-03 07:00:41
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=573385481 -N 1 -F -d /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/mdtest-hard -x /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard-read.csv -a POSIX
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard-read.txt
+time            = 253.419344
+score           = 709.076731
+t_delta         = 254.4406
+t_end           = 2024-05-03 07:04:55
+
+[mdtest-hard-delete]
+t_start         = 2024-05-03 07:04:55
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=573385481 -N 1 -F -d /dev/shm/vef_gkfs_mountdir/2024.05.03-06.00.38/mdtest-hard -x /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard-delete.csv -a POSIX
+result-file     = /lustre/project/nhr-admire/vef/run/io500/results/2024.05.03-06.00.38/mdtest-hard-delete.txt
+time            = 617.989275
+score           = 290.771648
+t_delta         = 620.5853
+t_end           = 2024-05-03 07:15:16
+
+[SCORE]
+MD              = 1649.247654
+BW              = 48.205594
+SCORE           = 281.962699
+hash            = E870DF49
+; END 2024-05-03 07:16:34

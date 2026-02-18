@@ -1,0 +1,111 @@
+[run]
+procs           = 1040
+version         = io500-isc23
+config-hash     = B60365C4
+result-dir      = /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27
+mode            = standard
+; START 2023-05-16 07:00:51
+
+
+[ior-easy-write]
+t_start         = 2023-05-16 07:00:52
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384705727 -k -e -o //2023.05.16-07.00.27/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-easy.stonewall -t 1m -b 99000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-easy-write.csv
+throughput-stonewall = 133.06
+score           = 133.122464
+t_delta         = 330.9774
+t_end           = 2023-05-16 07:06:23
+
+[mdtest-easy-write]
+t_start         = 2023-05-16 07:06:23
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -498527933 -N 1 -d //2023.05.16-07.00.27/mdtest-easy -x /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-easy-write.csv -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 2434.858362
+score           = 2423.730083
+t_delta         = 307.9374
+t_end           = 2023-05-16 07:11:30
+
+[timestamp]
+t_start         = 2023-05-16 07:11:30
+t_delta         = 0.0819
+t_end           = 2023-05-16 07:11:31
+
+[ior-hard-write]
+t_start         = 2023-05-16 07:11:31
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384695039 -k -e -o //2023.05.16-07.00.27/ior-hard/file -O stoneWallingStatusFile=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 105.43
+score           = 105.286295
+t_delta         = 304.2607
+t_end           = 2023-05-16 07:16:35
+
+[mdtest-hard-write]
+t_start         = 2023-05-16 07:16:35
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-498517245 -N 1 -F -d //2023.05.16-07.00.27/mdtest-hard -x /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-hard-write.csv -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 1098.082908
+score           = 1095.326073
+t_delta         = 316.1287
+t_end           = 2023-05-16 07:21:51
+
+[find]
+t_start         = 2023-05-16 07:21:51
+exe             = ./pfind //2023.05.16-07.00.27 -newer /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1040
+found           = 19723620
+total-files     = 1088071922
+score           = 425.865787
+t_delta         = 2555.1459
+t_end           = 2023-05-16 08:04:26
+
+[ior-easy-read]
+t_start         = 2023-05-16 08:04:26
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384705727 -k -e -o //2023.05.16-07.00.27/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-easy.stonewall -t 1m -b 99000000m -r -R -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-easy-read.csv
+score           = 134.719635
+t_delta         = 326.9765
+t_end           = 2023-05-16 08:09:53
+
+[mdtest-easy-stat]
+t_start         = 2023-05-16 08:09:53
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -498527933 -N 1 -d //2023.05.16-07.00.27/mdtest-easy -x /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-easy-stat.csv -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 2674.888250
+t_delta         = 279.1096
+t_end           = 2023-05-16 08:14:32
+
+[ior-hard-read]
+t_start         = 2023-05-16 08:14:32
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384695039 -k -e -o //2023.05.16-07.00.27/ior-hard/file -O stoneWallingStatusFile=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-hard-read.csv
+score           = 130.173092
+t_delta         = 246.0691
+t_end           = 2023-05-16 08:18:38
+
+[mdtest-hard-stat]
+t_start         = 2023-05-16 08:18:38
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-498517245 -N 1 -F -d //2023.05.16-07.00.27/mdtest-hard -x /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-hard-stat.csv -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 2426.429865
+t_delta         = 143.4971
+t_end           = 2023-05-16 08:21:02
+
+[mdtest-easy-delete]
+t_start         = 2023-05-16 08:21:02
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -498527933 -N 1 -d //2023.05.16-07.00.27/mdtest-easy -x /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-easy-delete.csv -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1417.273344
+t_delta         = 535.3603
+t_end           = 2023-05-16 08:29:57
+
+[mdtest-hard-read]
+t_start         = 2023-05-16 08:29:57
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-498517245 -N 1 -F -d //2023.05.16-07.00.27/mdtest-hard -x /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-hard-read.csv -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1642.528751
+t_delta         = 211.3795
+t_end           = 2023-05-16 08:33:28
+
+[mdtest-hard-delete]
+t_start         = 2023-05-16 08:33:28
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-498517245 -N 1 -F -d //2023.05.16-07.00.27/mdtest-hard -x /home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/mdtest-hard-delete.csv -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1395.863515
+t_delta         = 650.7364
+t_end           = 2023-05-16 08:44:19
+
+[SCORE]
+MD              = 1486.527410
+BW              = 125.211387
+SCORE           = 431.428046
+hash            = 2FA13E66
+; END 2023-05-16 08:44:20

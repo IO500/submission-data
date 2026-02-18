@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue May 16 07:00:52 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384705727 -k -e -o //2023.05.16-07.00.27/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-easy.stonewall -t 1m -b 99000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=mhenneck --dfs.cont=cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-borealis/2023.05.16-07.00.27/ior-easy-write.csv
+Machine             : Linux x1001c4s0b0n0
+TestID              : 0
+StartTime           : Tue May 16 07:00:52 2023
+Path                : //2023.05.16-07.00.27/ior-easy/ior_file_easy
+FS                  : 181.9 TiB   Used FS: 0.3%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : //2023.05.16-07.00.27/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1040
+clients per node    : 104
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 94.41 TiB
+aggregate filesize  : 98190.31 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 36994 max: 43330 -- min data: 36.1 GiB mean data: 38.4 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 107961384960000000
+WARNING: Stat() of aggregate file size      = 107857621370798080
+WARNING: Using actual aggregate bytes moved = 47252190003200
+WARNING: Maybe caused by deadlineForStonewalling
+write     136317     136322     0.000003    101376000000 1024.00    0.010506   330.56     0.001576   330.58     0   

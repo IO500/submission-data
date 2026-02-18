@@ -1,0 +1,41 @@
+# see  https://www.vi4io.org/io500-info-creator/
+#
+# Intel "Borealis" Cluster
+# (2 Intel Xeon CPU Max Series processors, 6 Intel Data Center GPU Max Series)
+#
+
+io500_info_submitter="Michael Hennecke <michael.hennecke@intel.com>"
+io500_info_include-in-io500="true"
+io500_info_include-in-10node="true"
+
+io500_info_institution="Intel"
+io500_info_system="Borealis"
+io500_info_system_classification="research"
+io500_info_storage_install_date="2022-11-14"
+io500_info_storage_vendor="Intel"
+io500_info_filesystem_name="/daos"
+io500_info_filesystem_type="DAOS"
+io500_info_filesystem_version="2.3.107-1"
+
+io500_info_client_nodes="10"
+io500_info_client_procs_per_node="104"
+io500_info_client_operating_system="SUSE Linux Enterprise Server 15 SP4"
+io500_info_client_operating_system_version="SLES 15 SP4"
+io500_info_client_kernel_version="5.14.21-150400.24.38-default"
+
+io500_info_md_nodes="0"
+io500_info_md_storage_devices="0"
+
+io500_info_ds_nodes="3"
+io500_info_ds_storage_devices="16 + 16"
+io500_info_ds_storage_type="16x 512GB Optane DC PMem 200 + 16x 15.36TB U.2 NVMe (PCIe gen4)"
+io500_info_ds_volatile_memory_capacity="512GiB (16x 32GiB DDR4)"
+io500_info_ds_storage_interface="DDR + U.2 NVMe"
+io500_info_ds_network="HPE Slingshot 11"
+io500_info_filesystem_version="2.3.107-1"
+io500_info_ds_operating_system_version="SLES 15 SP4"
+io500_info_ds_overhead="0"
+
+io500_info_whatever="DAOS Server: Intel M50CYP with 2x Xeon 5320, 16x 512GB Optane PMem 200, 16x 15.36TB U.2 NVMe, 2x HPE Slingshot 11 (2x 200Gbps)"
+io500_info_comment="DAOS has no dedicated metadata servers"
+

@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov  3 09:16:54 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=760961972 -k -e -o /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-hard/file -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux saguaro1
+TestID              : 0
+StartTime           : Mon Nov  3 09:16:54 2025
+Path                : /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-hard/file
+FS                  : 386.5 TiB   Used FS: 0.8%   Inodes: 750.0 Mi   Used Inodes: 14.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 250
+clients per node    : 25
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 106.88 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1101988 max: 1103197 -- min data: 48.2 GiB mean data: 48.3 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 117520000000000
+WARNING: Stat() of aggregate file size      = 12964771144000
+WARNING: Using actual aggregate bytes moved = 12964771144000
+WARNING: Maybe caused by deadlineForStonewalling
+write     40688      917351     0.000273    45.91      45.91      3.22       300.65     0.007397   303.87     0   

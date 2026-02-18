@@ -1,0 +1,120 @@
+[run]
+procs           = 250
+version         = io500-sc25
+config-hash     = 33FFF421
+result-dir      = /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01
+mode            = standard
+; START 2025-11-03 09:03:01
+
+
+[ior-easy-write]
+t_start         = 2025-11-03 09:03:01
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 760951284 -k -e -o /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-easy.stonewall -t 16m -b 1984000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-easy-write.csv
+throughput-stonewall = 241.58
+score           = 238.744068
+t_delta         = 319.6582
+t_end           = 2025-11-03 09:08:21
+
+[mdtest-easy-write]
+t_start         = 2025-11-03 09:08:21
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1647129078 -N 1 -d /gpfs/fs1/datadir/2025.11.03-09.03.01/mdtest-easy -x /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 270.164354
+score           = 223.550041
+t_delta         = 512.8874
+t_end           = 2025-11-03 09:16:54
+
+[timestamp]
+t_start         = 2025-11-03 09:16:54
+t_delta         = 0.0006
+t_end           = 2025-11-03 09:16:54
+
+[ior-hard-write]
+t_start         = 2025-11-03 09:16:54
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=760961972 -k -e -o /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-hard/file -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 40.23
+score           = 39.734840
+t_delta         = 304.0136
+t_end           = 2025-11-03 09:21:58
+
+[mdtest-hard-write]
+t_start         = 2025-11-03 09:21:58
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647139766 -N 1 -F -d /gpfs/fs1/datadir/2025.11.03-09.03.01/mdtest-hard -x /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-hard-write.csv -a POSIX --posix.gpfs.createsharing
+rate-stonewall  = 30.020439
+score           = 23.889823
+t_delta         = 499.4755
+t_end           = 2025-11-03 09:30:17
+
+[find]
+t_start         = 2025-11-03 09:30:17
+exe             =  /nshare/ess_regression/ess6000/io500_sc25.2/io500/find_script/find_script_stop.sh  /gpfs/fs1/datadir/2025.11.03-09.03.01 -newer /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/timestampfile -size 3901c -name "*01*"
+last-output     = "MATCHED 428056/126217501"
+total-files     = 126217501
+found           = 428056
+score           = 4803.055069
+t_delta         = 26.2792
+t_end           = 2025-11-03 09:30:44
+
+[ior-easy-read]
+t_start         = 2025-11-03 09:30:44
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 760951284 -k -e -o /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-easy.stonewall -t 16m -b 1984000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-easy-read.csv
+score           = 422.225378
+t_delta         = 180.7913
+t_end           = 2025-11-03 09:33:44
+
+[mdtest-easy-stat]
+t_start         = 2025-11-03 09:33:44
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1647129078 -N 1 -d /gpfs/fs1/datadir/2025.11.03-09.03.01/mdtest-easy -x /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-easy-stat.csv -a POSIX
+score           = 546.595825
+t_delta         = 210.2810
+t_end           = 2025-11-03 09:37:15
+
+[ior-hard-read]
+t_start         = 2025-11-03 09:37:15
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=760961972 -k -e -o /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-hard/file -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX --posix.gpfs.finegrainreadsharing -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-hard-read.csv
+score           = 142.429168
+t_delta         = 84.9030
+t_end           = 2025-11-03 09:38:40
+
+[mdtest-hard-stat]
+t_start         = 2025-11-03 09:38:40
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647139766 -N 1 -F -d /gpfs/fs1/datadir/2025.11.03-09.03.01/mdtest-hard -x /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-hard-stat.csv -a POSIX
+score           = 292.574456
+t_delta         = 41.8263
+t_end           = 2025-11-03 09:39:21
+
+[mdtest-easy-delete]
+t_start         = 2025-11-03 09:39:21
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1647129078 -N 1 -d /gpfs/fs1/datadir/2025.11.03-09.03.01/mdtest-easy -x /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-easy-delete.csv -a POSIX
+score           = 218.923180
+t_delta         = 534.5003
+t_end           = 2025-11-03 09:48:16
+
+[mdtest-hard-read]
+t_start         = 2025-11-03 09:48:16
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647139766 -N 1 -F -d /gpfs/fs1/datadir/2025.11.03-09.03.01/mdtest-hard -x /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-hard-read.csv -a POSIX
+score           = 365.303916
+t_delta         = 33.7427
+t_end           = 2025-11-03 09:48:50
+
+[mdtest-hard-delete]
+t_start         = 2025-11-03 09:48:50
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647139766 -N 1 -F -d /gpfs/fs1/datadir/2025.11.03-09.03.01/mdtest-hard -x /nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/mdtest-hard-delete.csv -a POSIX
+score           = 27.959357
+t_delta         = 435.1730
+t_end           = 2025-11-03 09:56:05
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-11-03 09:56:05
+; WARNING Provided API option --aio.max-pending=8 starts with a different prefix and might be not supported - don't worry if you checked!
+; WARNING Provided API option --aio.granularity=4 starts with a different prefix and might be not supported - don't worry if you checked!
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 760951284 -k -e -o /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX --aio.max-pending=8 --aio.granularity=4 --posix.odirect -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 13.012773
+t_delta         = 325.7187
+t_end           = 2025-11-03 10:01:31
+
+[SCORE]
+MD              = 234.590355
+BW              = 154.547446
+SCORE           = 190.408351
+hash            = 8D94CD27
+; END 2025-11-03 10:01:32

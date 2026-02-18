@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov  3 09:30:44 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 760951284 -k -e -o /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-easy.stonewall -t 16m -b 1984000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-easy-read.csv
+Machine             : Linux saguaro1
+TestID              : 0
+StartTime           : Mon Nov  3 09:30:44 2025
+Path                : /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy.00000000
+FS                  : 386.5 TiB   Used FS: 3.8%   Inodes: 750.0 Mi   Used Inodes: 16.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 250
+clients per node    : 25
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 1.89 TiB
+aggregate filesize  : 473.02 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 520093696000000
+WARNING: Stat() of aggregate file size      = 81885396992000
+WARNING: Using actual aggregate bytes moved = 81885396992000
+read      432359     27025      0.009251    2031616000 16384      0.013641   180.60     0.000450   180.62     0   

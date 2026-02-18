@@ -1,0 +1,43 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov  3 09:56:05 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 760951284 -k -e -o /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX --aio.max-pending=8 --aio.granularity=4 --posix.odirect -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_sc25.2/io500/IO500_results_temp/2025.11.03-09.03.01/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+Machine             : Linux saguaro1
+TestID              : 0
+StartTime           : Mon Nov  3 09:56:05 2025
+Path                : /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy.00000000
+FS                  : 386.5 TiB   Used FS: 3.8%   Inodes: 750.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/fs1/datadir/2025.11.03-09.03.01/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 250
+clients per node    : 25
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 9.31 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4090311 max: 4442556 -- min data: 15.6 GiB mean data: 15.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 10240000000000
+WARNING: Stat() of aggregate file size      = 81885396992000
+WARNING: Using actual aggregate bytes moved = 4549177344000
+WARNING: Maybe caused by deadlineForStonewalling
+read      13325      3411334    0.000073    4.00       4.00       0.010550   325.57     0.000171   325.58     0   
+Pairs deadlineForStonewallingaccessed: 0

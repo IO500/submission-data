@@ -1,0 +1,32 @@
+-- started at 10/16/2025 13:01:24 --
+
+mdtest-4.1.0+dev was launched with 170 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-u' '-L' '-F' '-P' '-G' '1632175491' '-N' '1' '-d' '/tmp/quobyte_mnt/io500/datafiles/mdtest-easy' '-x' '/tmp/quobyte_mnt/io500/results/2025.10.16-12.29.26/mdtest-easy.stonewall' '-r' '--saveRankPerformanceDetails=/tmp/quobyte_mnt/io500/results/2025.10.16-12.29.26/mdtest-easy-delete.csv' '-a' 'POSIX'
+Nodemap: 11111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Path                : /tmp/quobyte_mnt/io500/datafiles/mdtest-easy
+FS                  : 1362.1 TiB   Used FS: 4.9%   Inodes: 8796093022208.0 Mi   Used Inodes: 0.0%
+V-0: Rank   0 Line  2586 Shifting ranks by 17 for each phase.
+170 tasks, 170000000 files
+WARNING: unable to remove directory /tmp/quobyte_mnt/io500/datafiles/mdtest-easy/test-dir.0-0
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                94195.230      94195.230      94195.230          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.202          0.202          0.202          0.000
+
+SUMMARY time (in ms/op): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                  408.984        408.984        408.984          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    4.950          4.950          4.950          0.000
+-- finished at 10/16/2025 13:08:19 --
+

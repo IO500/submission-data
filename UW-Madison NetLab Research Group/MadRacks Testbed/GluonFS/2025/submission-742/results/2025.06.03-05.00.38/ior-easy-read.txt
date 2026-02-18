@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jun  3 00:31:21 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 777711943 -k -e -o /tmp/rfds_fs/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.06.03-05.00.38/ior-easy.stonewall -t 256k -b 5000000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.06.03-05.00.38/ior-easy-read.csv
+Machine             : Linux madracks-snode1
+TestID              : 0
+StartTime           : Tue Jun  3 00:31:22 2025
+Path                : /tmp/rfds_fs/ior-easy/ior_file_easy.00000000
+FS                  : 2.4 TiB   Used FS: 95.0%   Inodes: 0.0 Mi   Used Inodes: -13965130111292.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/rfds_fs/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 620
+clients per node    : 70
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 262144 bytes
+blocksize           : 4.77 TiB
+aggregate filesize  : 2956.39 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 3250585600000000
+WARNING: Stat() of aggregate file size      = 23143194296320
+WARNING: Using actual aggregate bytes moved = 23143194296320
+read      172114     690026     0.000898    5120000000 256.00     0.108494   127.94     0.110039   128.24     0   

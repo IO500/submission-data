@@ -1,0 +1,33 @@
+-- started at 08/19/2024 22:40:45 --
+
+mdtest-4.1.0+dev was launched with 280 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '400000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=626355650' '-N' '1' '-F' '-d' '/mnt/io500/2024.08.19-22.23.19/mdtest-hard' '-x' './results/2024.08.19-22.23.19/mdtest-hard.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=./results/2024.08.19-22.23.19/mdtest-hard-write.csv' '-a' 'POSIX'
+Nodemap: 1111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Path                : /mnt/io500/2024.08.19-22.23.19/mdtest-hard
+FS                  : 387.9 TiB   Used FS: 30.2%   Inodes: 618.2 Mi   Used Inodes: 36.7%
+V-0: Rank   0 Line  2581 Shifting ranks by 28 for each phase.
+280 tasks, 112000000 files
+Continue stonewall hit min: 69836 max: 72462 avg: 71323.9 
+
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation               65213.265      65213.265      65213.265          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   2.590          2.590          2.590          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 311.123        311.123        311.123          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.386          0.386          0.386          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 08/19/2024 22:45:58 --
+

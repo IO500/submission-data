@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Aug 19 22:23:21 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -259832833 -k -e -o /mnt/io500/2024.08.19-22.23.19/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.08.19-22.23.19/ior-easy.stonewall -t 128m -b 640000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2024.08.19-22.23.19/ior-easy-write.csv
+Machine             : Linux cstor17
+TestID              : 0
+StartTime           : Mon Aug 19 22:23:21 2024
+Path                : /mnt/io500/2024.08.19-22.23.19/ior-easy/ior_file_easy.00000000
+FS                  : 387.9 TiB   Used FS: 0.0%   Inodes: 391.2 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/io500/2024.08.19-22.23.19/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 280
+clients per node    : 28
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 128 MiB
+blocksize           : 625 GiB
+aggregate filesize  : 170.90 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2813 max: 3325 -- min data: 351.6 GiB mean data: 384.1 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 187904819200000
+WARNING: Stat() of aggregate file size      = 124956704768000
+WARNING: Using actual aggregate bytes moved = 124956704768000
+WARNING: Maybe caused by deadlineForStonewalling
+write     363215     2837.67    0.062622    655360000  131072     0.005340   328.09     0.000914   328.09     0   

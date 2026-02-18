@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 15 09:46:37 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384947914 -k -e -o //2023.05.15-09.35.04/ior-hard/file -O stoneWallingStatusFile=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-09.35.04/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=lrz_18srv --dfs.cont=cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.15-09.35.04/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux m02r01s01dao
+TestID              : 0
+StartTime           : Mon May 15 09:46:37 2023
+Path                : //2023.05.15-09.35.04/ior-hard/file
+FS                  : 454.7 TiB   Used FS: 30.7%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : //2023.05.15-09.35.04/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 24
+tasks               : 2688
+clients per node    : 112
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1149.21 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 918227 max: 932223 -- min data: 40.2 GiB mean data: 40.6 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 1263575040000000
+WARNING: Stat() of aggregate file size      = 117793371451392
+WARNING: Using actual aggregate bytes moved = 117793371451392
+WARNING: Maybe caused by deadlineForStonewalling
+write     371264     8281629    300.85      45.91      45.91      0.003235   302.58     0.000213   302.58     0   

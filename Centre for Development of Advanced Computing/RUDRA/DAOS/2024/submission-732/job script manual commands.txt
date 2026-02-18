@@ -1,0 +1,4 @@
+[root@cn12 ~]#  export DAOS_POOL=io500_pool_1
+[root@cn12 ~]# export DAOS_CONT=io500_1
+[root@cn12 ~]# export I_MPI_OFI_LIBRARY_INTERNAL=0
+[root@cn12 ~]# /home/apps/intel/oneapi/mpi/2021.12/bin/mpirun -np 480 --perhost 48 --hostfile /tmp/io500_host /home/admin/isc24_1/io500/io500 /home/admin/isc24_1/io500/io500_daos_run.ini

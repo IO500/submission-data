@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov 11 11:54:32 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312281280 -k -e -o /datafiles/2024.11.11-11.54.32/ior-easy/ior_file_easy -O stoneWallingStatusFile=/tmp/io500/results/2024.11.11-11.54.32/ior-easy.stonewall -t 1m -b 99200000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=io500_pool_1 --dfs.cont=io500_1 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/tmp/io500/results/2024.11.11-11.54.32/ior-easy-write.csv
+Machine             : Linux cn12
+TestID              : 0
+StartTime           : Mon Nov 11 11:54:32 2024
+Path                : /datafiles/2024.11.11-11.54.32/ior-easy/ior_file_easy
+FS                  : 21.8 TiB   Used FS: 0.4%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2024.11.11-11.54.32/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 480
+clients per node    : 48
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 94.60 TiB
+aggregate filesize  : 45410.16 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 24288 max: 25040 -- min data: 23.7 GiB mean data: 24.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 49928994816000000
+WARNING: Stat() of aggregate file size      = 49825002333143040
+WARNING: Using actual aggregate bytes moved = 12603044659200
+WARNING: Maybe caused by deadlineForStonewalling
+write     26514      26519      0.000003    101580800000 1024.00    148.15     453.23     148.15     453.32     0   

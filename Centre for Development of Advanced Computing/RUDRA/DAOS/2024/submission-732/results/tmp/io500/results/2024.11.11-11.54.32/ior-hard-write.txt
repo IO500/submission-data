@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov 11 12:04:40 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312270592 -k -e -o /datafiles/2024.11.11-11.54.32/ior-hard/file -O stoneWallingStatusFile=/tmp/io500/results/2024.11.11-11.54.32/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=io500_pool_1 --dfs.cont=io500_1 --dfs.chunk_size=470080 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/tmp/io500/results/2024.11.11-11.54.32/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux cn12
+TestID              : 0
+StartTime           : Mon Nov 11 12:04:40 2024
+Path                : /datafiles/2024.11.11-11.54.32/ior-hard/file
+FS                  : 21.8 TiB   Used FS: 53.7%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2024.11.11-11.54.32/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 480
+clients per node    : 48
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 205.22 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 379823 max: 383246 -- min data: 16.6 GiB mean data: 16.7 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 225638400000000
+WARNING: Stat() of aggregate file size      = 8647501424640
+WARNING: Using actual aggregate bytes moved = 8647501424640
+WARNING: Maybe caused by deadlineForStonewalling
+write     18324      408781     301.85      45.91      45.91      148.15     450.02     148.15     450.07     0   

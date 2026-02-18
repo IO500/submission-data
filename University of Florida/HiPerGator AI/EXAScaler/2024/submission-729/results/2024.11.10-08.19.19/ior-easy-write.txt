@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 13:19:26 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312531841 -k -e -o /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-easy.stonewall -t 32m -b 158400m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-easy-write.csv
+Machine             : Linux c0803a-s35.ufhpc
+TestID              : 0
+StartTime           : Sun Nov 10 13:19:26 2024
+Path                : /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-easy/ior_file_easy.00000000
+FS                  : 501.0 TiB   Used FS: 20.5%   Inodes: 6336.0 Mi   Used Inodes: 10.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 32 MiB
+blocksize           : 154.69 GiB
+aggregate filesize  : 96.68 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3675 max: 4950 -- min data: 114.8 GiB mean data: 153.5 GiB time: 300.0s
+write     316858     9903       0.060611    162201600  32768      0.020137   319.92     0.002743   319.94     0   

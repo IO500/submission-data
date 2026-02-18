@@ -1,0 +1,35 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 13:42:49 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312531841 -k -e -o /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-easy.stonewall -t 32m -b 158400m -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-easy-read.csv
+Machine             : Linux c0803a-s35.ufhpc
+TestID              : 0
+StartTime           : Sun Nov 10 13:42:49 2024
+Path                : /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-easy/ior_file_easy.00000000
+FS                  : 501.0 TiB   Used FS: 40.6%   Inodes: 6336.0 Mi   Used Inodes: 13.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 32 MiB
+blocksize           : 154.69 GiB
+aggregate filesize  : 96.68 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      312050     9752       0.065629    162201600  32768      0.006163   324.86     0.002230   324.87     0   

@@ -1,0 +1,111 @@
+[run]
+procs           = 640
+version         = io500-sc24_v1
+config-hash     = E040EED6
+result-dir      = /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19
+mode            = standard
+; START 2024-11-10 13:19:26
+
+
+[ior-easy-write]
+t_start         = 2024-11-10 13:19:26
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312531841 -k -e -o /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-easy.stonewall -t 32m -b 158400m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-easy-write.csv
+throughput-stonewall = 327.48
+score           = 309.431514
+t_delta         = 320.0382
+t_end           = 2024-11-10 13:24:46
+
+[mdtest-easy-write]
+t_start         = 2024-11-10 13:24:46
+exe             = ./mdtest --dataPacketType=timestamp -n 205000 -u -L -F -P -G 573645954 -N 1 -d /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/mdtest-easy -x /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 432.321421
+score           = 390.773305
+t_delta         = 337.8985
+t_end           = 2024-11-10 13:30:24
+
+[timestamp]
+t_start         = 2024-11-10 13:30:24
+t_delta         = 0.0005
+t_end           = 2024-11-10 13:30:24
+
+[ior-hard-write]
+t_start         = 2024-11-10 13:30:24
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312521153 -k -e -o /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-hard/file -O stoneWallingStatusFile=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-hard.stonewall -t 47008 -b 47008 -s 140000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 12.76
+score           = 12.226609
+t_delta         = 321.0141
+t_end           = 2024-11-10 13:35:45
+
+[mdtest-hard-write]
+t_start         = 2024-11-10 13:35:45
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=573656642 -N 1 -F -d /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/mdtest-hard -x /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 200.039920
+score           = 186.751856
+t_delta         = 343.7885
+t_end           = 2024-11-10 13:41:28
+
+[find]
+t_start         = 2024-11-10 13:41:28
+exe             = ./pfind /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19 -newer /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/timestampfile -size 3901c -name *01* -C -q 600000
+nproc           = 640
+found           = 2425920
+total-files     = 195200641
+score           = 2409.680188
+t_delta         = 81.0415
+t_end           = 2024-11-10 13:42:49
+
+[ior-easy-read]
+t_start         = 2024-11-10 13:42:49
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312531841 -k -e -o /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-easy.stonewall -t 32m -b 158400m -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-easy-read.csv
+score           = 304.736761
+t_delta         = 324.9607
+t_end           = 2024-11-10 13:48:14
+
+[mdtest-easy-stat]
+t_start         = 2024-11-10 13:48:14
+exe             = ./mdtest --dataPacketType=timestamp -n 205000 -u -L -F -P -G 573645954 -N 1 -d /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/mdtest-easy -x /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-easy-stat.csv -a POSIX
+score           = 951.154001
+t_delta         = 138.9690
+t_end           = 2024-11-10 13:50:33
+
+[ior-hard-read]
+t_start         = 2024-11-10 13:50:33
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312521153 -k -e -o /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/ior-hard/file -O stoneWallingStatusFile=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-hard.stonewall -t 47008 -b 47008 -s 140000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/ior-hard-read.csv
+score           = 210.984162
+t_delta         = 18.6507
+t_end           = 2024-11-10 13:50:52
+
+[mdtest-hard-stat]
+t_start         = 2024-11-10 13:50:52
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=573656642 -N 1 -F -d /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/mdtest-hard -x /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-hard-stat.csv -a POSIX
+score           = 1111.676711
+t_delta         = 58.7465
+t_end           = 2024-11-10 13:51:51
+
+[mdtest-easy-delete]
+t_start         = 2024-11-10 13:51:51
+exe             = ./mdtest --dataPacketType=timestamp -n 205000 -u -L -F -P -G 573645954 -N 1 -d /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/mdtest-easy -x /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-easy-delete.csv -a POSIX
+score           = 341.170643
+t_delta         = 389.8307
+t_end           = 2024-11-10 13:58:21
+
+[mdtest-hard-read]
+t_start         = 2024-11-10 13:58:21
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=573656642 -N 1 -F -d /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/mdtest-hard -x /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-hard-read.csv -a POSIX
+score           = 307.119982
+t_delta         = 209.4659
+t_end           = 2024-11-10 14:01:50
+
+[mdtest-hard-delete]
+t_start         = 2024-11-10 14:01:50
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=573656642 -N 1 -F -d /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-08.19.19/mdtest-hard -x /lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-08.19.19/mdtest-hard-delete.csv -a POSIX
+score           = 133.464462
+t_delta         = 481.9511
+t_end           = 2024-11-10 14:09:52
+
+[SCORE]
+MD              = 475.201707
+BW              = 124.885298
+SCORE           = 243.609743
+hash            = F76CBEA6
+; END 2024-11-10 14:09:52

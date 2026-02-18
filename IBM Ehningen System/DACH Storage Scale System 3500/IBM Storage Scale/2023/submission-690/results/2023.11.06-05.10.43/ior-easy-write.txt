@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov  6 05:10:44 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385762235 -k -e -o /gpfs/bb145nvme/io500/2023.11.06-05.10.43/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-easy.stonewall -t 4m -b 1984000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-easy-write.csv
+Machine             : Linux fscc-sr655v3-1.boeblingen.de.ibm.com
+TestID              : 0
+StartTime           : Mon Nov  6 05:10:44 2023
+Path                : /gpfs/bb145nvme/io500/2023.11.06-05.10.43/ior-easy/ior_file_easy.00000000
+FS                  : 180.1 TiB   Used FS: 1.1%   Inodes: 500.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/bb145nvme/io500/2023.11.06-05.10.43/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 1.89 TiB
+aggregate filesize  : 378.42 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 51358 max: 60925 -- min data: 200.6 GiB mean data: 212.5 GiB time: 301.1s
+WARNING: Expected aggregate file size       = 416074956800000
+WARNING: Stat() of aggregate file size      = 51107594240000
+WARNING: Using actual aggregate bytes moved = 51107594240000
+WARNING: Maybe caused by deadlineForStonewalling
+write     143920     35986      0.000681    2031616000 4096       0.046830   338.60     0.014012   338.66     0   

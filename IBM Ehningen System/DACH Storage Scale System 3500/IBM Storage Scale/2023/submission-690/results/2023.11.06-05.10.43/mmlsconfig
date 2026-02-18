@@ -1,0 +1,144 @@
+Configuration data for cluster GNRockStar.fscc-ess3500-1-a:
+-----------------------------------------------------------
+clusterName GNRockStar.fscc-ess3500-1-a
+clusterId 15935511963386273650
+dmapiFileHandleSize 32
+tscCmdAllowRemoteConnections no
+ccrEnabled yes
+sdrNotifyAuthEnabled yes
+[ess35_1,ess35_2,ess35_4,ess35_5]
+nspdQueues 120
+nspdBufferMemPerQueue 24m
+nspdThreadsPerQueue 2
+nsdSmallThreadRatio 1
+nsdRAIDEventLogToConsole all
+nsdRAIDBlockDeviceMaxSectorsKB 0
+nsdRAIDBlockDeviceNrRequests 0
+nsdRAIDBlockDeviceQueueDepth 0
+nsdRAIDBlockDeviceScheduler off
+nsdRAIDSmallThreadRatio 2
+nsdRAIDDefaultGeneratedFD no
+nsdRAIDMasterBufferPoolSize 2G
+nsdRAIDReconstructAggressiveness 0
+nsdRAIDThreadsPerQueue 16
+nsdRAIDSSDPerformanceShortTimeConstant 2500000
+nsdRAIDDiskDiagTimeout 130
+nsdRAIDEnableRGCMRebalanceWeight yes
+panicOnIOHang yes
+pitWorkerThreadsPerNode 32
+pagepoolMaxPhysMemPct 90
+[common]
+maxblocksize 16M
+verbsRdmaWriteFlush disable
+[ess35_1,ess35_2,ess35_4,ess35_5]
+nsdMaxWorkerThreads 3842
+nsdMinWorkerThreads 3842
+[ess35_2,ess35_4,ess35_5]
+backgroundSpaceReclaim Good: 1 10% 60 1% Info: 0 6% 30 1% Warning: 0 3% 10 0% Critical: 0 2% 5 0% OOS: 0 1% 1 0%
+nsdRAIDEnableSpaceMonitor 1
+[common]
+autoload no
+prefetchTimeout 30
+proactiveReconnect yes
+minReleaseLevel 5.1.7.0
+[clients,ess35_1,ess35_2,ess35_4,ess35_5]
+numaMemoryInterleave yes
+ignorePrefetchLUNCount yes
+[common]
+initPrefetchBuffers 128
+[clientAM1]
+nsdRAIDChecksumMethod 3
+[clients,ess35_2,ess35_4,ess35_5]
+prefetchPct 50
+[ess35_2]
+nsdRAIDDiskPerformanceCollapseICTBins yes
+[amd]
+avoidDirFragments enable
+[common]
+maxStatCache 128k
+[osi49i]
+pagepool 32G
+[clients]
+pagepool 48G
+[ess35_2]
+pagepool 324378953318
+[osa09i]
+pagepool 897648164864
+[common]
+maxFilesToCache 128k
+verbsRdmaSend yes
+nsdRAIDClientOnlyChecksum yes
+[clients,ess35_1,ess35_2,ess35_4,ess35_5,intel]
+workerThreads 1024
+[common]
+maxTcpConnsPerNodeConn 2
+[ess,ess35_1]
+nsdRAIDDefaultIoTimeout 20000
+[ess35_2]
+nsdRAIDDefaultIoTimeout 90000
+[clients]
+numactlOptioni 0
+numactlOptionC 0
+[common]
+dataShipClientBufferPct 20
+[amd]
+dataShipClientBufferPct 20
+[ess35_1,ess35_2]
+nsdRAIDTracks 128K
+[ess35_4]
+nsdRAIDTracks 131072
+[ess35_5]
+nsdRAIDTracks 512k
+[common]
+verbsGPUDirectStorage enable
+cipherList AUTHONLY
+privateSubnetOverride yes
+verbsRdma enable
+verbsRdmaCm disable
+subnets 10.200.1.0/fscc-ess3200-1-a 10.2.1.0/24
+verbsPorts mlx5_0/1/1 mlx5_1/1/1
+[ess35_1,ess35_2,ess35_4,ess35_5]
+verbsPorts  mlx5_1/1/1 mlx5_3/1/1 mlx5_5/1/1 mlx5_7/1/1
+[ess35_1,ess35_2,ess35_4,ess35_5]
+maxMBpS 50000
+[clients]
+maxMBpS 20000
+[newAMD]
+maxMBpS 30000
+[common]
+prefetchMaxBuffersPerInstance 1024
+[ess35_1,ess35_4,ess35_5]
+pagepool 375809638400
+nsdRAIDPagepoolBaseline 375809638400
+[common]
+fsyncIsGlobal no
+[osi02i,osi03i,osi04i,osi05i,osi06i,osi07i,osi08i]
+dataShipClientBuffersPerServer 100
+[amd,ess35_5]
+dataShipClientBuffersPerServer 4
+[osa08i,osa10i]
+dataShipClientBuffersPerServer 100
+[ess35_4]
+dataShipClientBuffersPerServer 4
+[newAMD]
+dataShipClientBuffersPerServer 50
+[ess35_1]
+dataShipServerBufferPct 10
+[osa08i,osa10i,osi02i,osi03i,osi04i,osi05i,osi06i,osi07i,osi08i]
+dataShipServerBufferPct 40
+[ess,ess35_2,ess35_4,ess35_5]
+dataShipServerBufferPct 10
+[newAMD]
+dataShipServerBufferPct 50
+[common]
+dataShipAssertOnFailure yes
+preferDesignatedMnode yes
+autoCompactDir 0
+nBucketGroups 1024
+inodePrefetchThreshold 5
+adminMode central
+
+File systems in cluster GNRockStar.fscc-ess3500-1-a:
+----------------------------------------------------
+/dev/bb145nvme
+

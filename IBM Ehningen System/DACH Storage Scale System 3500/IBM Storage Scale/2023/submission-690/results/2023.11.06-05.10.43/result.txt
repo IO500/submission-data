@@ -1,0 +1,111 @@
+[run]
+procs           = 200
+version         = io500-sc23_v1
+config-hash     = 8FBBD58B
+result-dir      = ./results_bb145nvme_4M/2023.11.06-05.10.43
+mode            = standard
+; START 2023-11-06 05:10:44
+
+
+[ior-easy-write]
+t_start         = 2023-11-06 05:10:44
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385762235 -k -e -o /gpfs/bb145nvme/io500/2023.11.06-05.10.43/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-easy.stonewall -t 4m -b 1984000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-easy-write.csv
+throughput-stonewall = 141.10
+score           = 140.547244
+t_delta         = 338.7274
+t_end           = 2023-11-06 05:16:22
+
+[mdtest-easy-write]
+t_start         = 2023-11-06 05:16:22
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -499584441 -N 1 -d /gpfs/bb145nvme/io500/2023.11.06-05.10.43/mdtest-easy -x ./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 295.829416
+score           = 288.509431
+t_delta         = 326.8038
+t_end           = 2023-11-06 05:21:49
+
+[timestamp]
+t_start         = 2023-11-06 05:21:49
+t_delta         = 0.0098
+t_end           = 2023-11-06 05:21:49
+
+[ior-hard-write]
+t_start         = 2023-11-06 05:21:49
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385751547 -k -e -o /gpfs/bb145nvme/io500/2023.11.06-05.10.43/ior-hard/file -O stoneWallingStatusFile=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 66.06
+score           = 64.825882
+t_delta         = 305.8741
+t_end           = 2023-11-06 05:26:55
+
+[mdtest-hard-write]
+t_start         = 2023-11-06 05:26:55
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-499573753 -N 1 -F -d /gpfs/bb145nvme/io500/2023.11.06-05.10.43/mdtest-hard -x ./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-hard-write.csv -a POSIX --posix.gpfs.createsharing
+rate-stonewall  = 34.687328
+score           = 33.455144
+t_delta         = 353.1816
+t_end           = 2023-11-06 05:32:48
+
+[find]
+t_start         = 2023-11-06 05:32:48
+exe             =  /home/pidsouza/io500_mnt/SC23_Denver/io500/find_script/find_script_stop.sh  /gpfs/bb145nvme/io500/2023.11.06-05.10.43 -newer ./results_bb145nvme_4M/2023.11.06-05.10.43/timestampfile -size 3901c -name "*01*"
+last-output     = "MATCHED 390040/105680001"
+total-files     = 105680001
+found           = 390040
+score           = 3912.502321
+t_delta         = 27.0116
+t_end           = 2023-11-06 05:33:15
+
+[ior-easy-read]
+t_start         = 2023-11-06 05:33:15
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385762235 -k -e -o /gpfs/bb145nvme/io500/2023.11.06-05.10.43/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-easy.stonewall -t 4m -b 1984000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-easy-read.csv
+score           = 227.115780
+t_delta         = 209.6127
+t_end           = 2023-11-06 05:36:45
+
+[mdtest-easy-stat]
+t_start         = 2023-11-06 05:36:45
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -499584441 -N 1 -d /gpfs/bb145nvme/io500/2023.11.06-05.10.43/mdtest-easy -x ./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-easy-stat.csv -a POSIX
+score           = 824.541859
+t_delta         = 114.9170
+t_end           = 2023-11-06 05:38:40
+
+[ior-hard-read]
+t_start         = 2023-11-06 05:38:40
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385751547 -k -e -o /gpfs/bb145nvme/io500/2023.11.06-05.10.43/ior-hard/file -O stoneWallingStatusFile=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX --posix.gpfs.finegrainreadsharing -O saveRankPerformanceDetailsCSV=./results_bb145nvme_4M/2023.11.06-05.10.43/ior-hard-read.csv
+score           = 27.869059
+t_delta         = 711.3471
+t_end           = 2023-11-06 05:50:31
+
+[mdtest-hard-stat]
+t_start         = 2023-11-06 05:50:31
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-499573753 -N 1 -F -d /gpfs/bb145nvme/io500/2023.11.06-05.10.43/mdtest-hard -x ./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-hard-stat.csv -a POSIX
+score           = 700.628381
+t_delta         = 17.8799
+t_end           = 2023-11-06 05:50:49
+
+[mdtest-easy-delete]
+t_start         = 2023-11-06 05:50:49
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -499584441 -N 1 -d /gpfs/bb145nvme/io500/2023.11.06-05.10.43/mdtest-easy -x ./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-easy-delete.csv -a POSIX
+score           = 316.714123
+t_delta         = 304.2255
+t_end           = 2023-11-06 05:55:53
+
+[mdtest-hard-read]
+t_start         = 2023-11-06 05:55:53
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-499573753 -N 1 -F -d /gpfs/bb145nvme/io500/2023.11.06-05.10.43/mdtest-hard -x ./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-hard-read.csv -a POSIX
+score           = 464.850769
+t_delta         = 26.4195
+t_end           = 2023-11-06 05:56:20
+
+[mdtest-hard-delete]
+t_start         = 2023-11-06 05:56:20
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-499573753 -N 1 -F -d /gpfs/bb145nvme/io500/2023.11.06-05.10.43/mdtest-hard -x ./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results_bb145nvme_4M/2023.11.06-05.10.43/mdtest-hard-delete.csv -a POSIX
+score           = 31.885029
+t_delta         = 389.1472
+t_end           = 2023-11-06 06:02:49
+
+[SCORE]
+MD              = 317.170816
+BW              = 87.143519
+SCORE           = 166.250958
+hash            = 4D2D4806
+; END 2023-11-06 06:03:02

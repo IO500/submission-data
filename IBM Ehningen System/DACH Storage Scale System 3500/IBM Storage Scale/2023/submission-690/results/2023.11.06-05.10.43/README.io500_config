@@ -1,0 +1,54 @@
+Notes on the io500 setup
+
+1. io500 is run directly (without using a job scheduler) as follows:
+./io500.sh config-full_FG_CS-EHW_Hint_extfind.ini # config with finegrainread/write and createsharing hints and with external find script
+
+
+2. MPI hints are used for ior-hard-read, ior-hard-write, mdtest-hard-write using the following 'API =' lines defined in the io500 (config-full_FG_CS-EHW_Hint_extfind.ini) ini file, as shown below:
+
+[ior-hard-write]
+# The API to be used
+API =  POSIX --posix.gpfs.finegrainwritesharing
+ 
+[...]
+
+[ior-hard-read]
+# The API to be used
+API =  POSIX --posix.gpfs.finegrainreadsharing
+
+[...]
+
+[mdtest-hard-write]
+# The API to be used
+API = POSIX --posix.gpfs.createsharing
+
+
+3. For the 'Find' benchmark an external script is used as shown below:
+
+[find]
+# Set to an external script to perform the find phase
+external-script = <full_path_specified>/find_script_stop.sh
+
+Full details on the external find script are included in the find_script/ directory, which contains:
+find_script_stop.sh  ssh_script.sh  stop_cont_io500.sh  track_io500.sh
+
+
+4. mpich 3.4.2-1 used and following MPI_ROOT/PATH setup is enabled:
+
+
+5.  io500.sh script sets the following MPI arguments and the hostfile defined below:
+#mpiexe PATH set to mpich4.1 through above PATH/LD_LIBRARY_PATH settings
+io500_mpiargs="-f /nshare/pidsouza/io500/monthly/ISC2023_04212023/nodesib -n 200"
+
+Hostfile:
+fscc-sr655v3-1
+fscc-sr655v3-2
+fscc-sr655v3-3
+fscc-sr655v3-4
+fscc-sr655v3-5
+fscc-sr655v3-6
+fscc-sr655v3-7
+fscc-sr655v3-8
+fscc-sr655v3-9
+fscc-sr655v3-10
+

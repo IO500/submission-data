@@ -1,0 +1,48 @@
+flag                value                    description
+------------------- ------------------------ -----------------------------------
+ -f                 8192                     Minimum fragment (subblock) size in bytes
+ -i                 4096                     Inode size in bytes
+ -I                 32768                    Indirect block size in bytes
+ -m                 1                        Default number of metadata replicas
+ -M                 2                        Maximum number of metadata replicas
+ -r                 1                        Default number of data replicas
+ -R                 2                        Maximum number of data replicas
+ -j                 scatter                  Block allocation type
+ -D                 nfs4                     File locking semantics in effect
+ -k                 all                      ACL semantics in effect
+ -n                 32                       Estimated number of nodes that will mount file system
+ -B                 2097152                  Block size
+ -Q                 none                     Quotas accounting enabled
+                    none                     Quotas enforced
+                    none                     Default quotas enabled
+ --perfileset-quota no                       Per-fileset quota enforcement
+ --filesetdf        no                       Fileset df enabled?
+ -V                 31.00 (5.1.7.0)          File system version
+ --create-time      Tue Nov  7 22:30:57 2023 File system creation time
+ -z                 no                       Is DMAPI enabled?
+ -L                 33554432                 Logfile size
+ -E                 yes                      Exact mtime mount option
+ -S                 relatime                 Suppress atime mount option
+ -K                 whenpossible             Strict replica allocation option
+ --fastea           yes                      Fast external attributes enabled?
+ --encryption       no                       Encryption enabled?
+ --inode-limit      524292096                Maximum number of inodes
+ --uid              9501020A:654AAC91        File system UID
+ --log-replicas     0                        Number of log replicas
+ --is4KAligned      yes                      is4KAligned?
+ --rapid-repair     yes                      rapidRepair enabled?
+ --write-cache-threshold 0                   HAWC Threshold (max 65536)
+ --subblocks-per-full-block 256              Number of subblocks per full block
+ -P                 system                   Disk storage pools in file system
+ --file-audit-log   no                       File Audit Logging enabled?
+ --maintenance-mode no                       Maintenance Mode enabled?
+ --flush-on-close   no                       flush cache on file close enabled?
+ --auto-inode-limit no                       Increase maximum number of inodes per inode space automatically?
+ --nfs4-owner-write-acl yes                  NFSv4 implicit owner WRITE_ACL permission enabled?
+ -d                 RG001LG001VS001;RG001LG002VS001;RG001LG003VS001;RG001LG004VS001;RG002LG001VS002;RG002LG002VS002;RG002LG003VS002;RG002LG004VS002;RG003LG001VS003;RG003LG002VS003;RG003LG003VS003;
+ -d                 RG003LG004VS003  Disks in file system
+ -A                 yes                      Automatic mount option
+ -o                 none                     Additional mount options
+ -T                 /gpfs/bb145nvme          Default mount point
+ --mount-priority   0                        Mount priority
+

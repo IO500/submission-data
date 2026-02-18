@@ -1,0 +1,994 @@
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.03-08.54.19
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Fri Nov  3 09:17:33 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Fri Nov  3 09:17:49 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Fri Nov  3 09:17:49 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Fri Nov  3 09:18:05 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.03-14.34.31
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Fri Nov  3 02:57:23 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Fri Nov  3 02:57:39 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Fri Nov  3 02:57:39 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Fri Nov  3 02:57:55 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.03-17.39.35
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Fri Nov  3 06:01:37 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Fri Nov  3 06:01:53 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Fri Nov  3 06:01:53 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Fri Nov  3 06:02:10 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.03-20.15.00
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Fri Nov  3 08:37:17 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Fri Nov  3 08:37:34 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Fri Nov  3 08:37:34 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Fri Nov  3 08:37:50 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.03-22.45.54
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Fri Nov  3 11:07:36 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Fri Nov  3 11:07:52 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Fri Nov  3 11:07:59 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Fri Nov  3 11:08:15 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.04-08.15.57
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sat Nov  4 08:18:33 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sat Nov  4 08:18:49 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sat Nov  4 08:18:49 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sat Nov  4 08:19:05 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.04-08.30.43
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sat Nov  4 08:33:14 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sat Nov  4 08:33:30 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sat Nov  4 08:33:30 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sat Nov  4 08:33:46 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.04-10.16.16
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sat Nov  4 10:38:33 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sat Nov  4 10:38:50 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sat Nov  4 10:38:50 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sat Nov  4 10:39:06 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.04-15.28.28
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sat Nov  4 03:50:39 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sat Nov  4 03:50:55 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sat Nov  4 03:50:55 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sat Nov  4 03:51:12 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.04-19.18.31
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sat Nov  4 07:40:06 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sat Nov  4 07:40:23 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sat Nov  4 07:40:27 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sat Nov  4 07:40:43 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.05-08.40.59
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sun Nov  5 09:03:24 AM CET 2023
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sun Nov  5 09:03:40 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sun Nov  5 09:03:40 AM CET 2023
+ # inodePrefetchThreshold 5
+Enable complete
+Sun Nov  5 09:03:56 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.05-08.40.59
+[mdtest-easy-stat] workload started ... 
+[ior-hard-read] workload started ... 
+[mdtest-hard-stat] workload started ... 
+[mdtest-easy-delete] workload started ... 
+[mdtest-hard-read] workload started ... 
+[mdtest-hard-delete] workload started ... 
+[SCORE] workload started ... 
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.05-10.46.44
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sun Nov  5 11:08:44 AM CET 2023
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sun Nov  5 11:09:00 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sun Nov  5 11:09:04 AM CET 2023
+ # inodePrefetchThreshold 5
+Enable complete
+Sun Nov  5 11:09:20 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.05-15.37.19
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sun Nov  5 03:59:49 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sun Nov  5 04:00:05 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sun Nov  5 04:00:05 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sun Nov  5 04:00:21 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.05-17.25.42
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sun Nov  5 05:48:21 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sun Nov  5 05:48:37 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sun Nov  5 05:48:37 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sun Nov  5 05:48:53 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.05-19.06.37
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sun Nov  5 07:28:58 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sun Nov  5 07:29:14 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sun Nov  5 07:29:14 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sun Nov  5 07:29:31 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.05-20.41.28
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sun Nov  5 09:03:49 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sun Nov  5 09:04:05 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sun Nov  5 09:04:05 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sun Nov  5 09:04:21 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.05-22.33.39
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Sun Nov  5 10:55:30 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Sun Nov  5 10:55:46 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Sun Nov  5 10:55:53 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Sun Nov  5 10:56:10 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-00.13.55
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 12:36:32 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 12:36:48 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 12:36:48 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 12:37:04 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-01.54.12
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 02:16:36 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 02:16:52 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 02:16:52 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 02:17:09 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-03.33.18
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 03:55:12 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 03:55:28 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 03:55:31 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 03:55:47 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-05.10.43
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 05:33:15 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 05:33:32 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 05:33:32 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 05:33:48 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-06.40.11
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 07:02:43 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 07:02:59 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 07:02:59 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 07:03:15 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-08.17.49
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 08:40:13 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 08:40:30 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 08:40:30 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 08:40:46 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-09.57.51
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 10:19:46 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 10:20:02 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 10:20:09 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 10:20:26 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-11.36.57
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 11:59:30 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 11:59:46 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 11:59:47 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 12:00:03 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-13.07.04
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 01:29:21 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 01:29:38 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 01:29:38 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 01:29:54 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.06-16.13.32
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 04:35:44 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 04:36:00 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 04:36:00 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 04:36:17 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.06-17.54.19
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 06:16:30 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 06:16:46 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 06:16:46 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 06:17:02 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.06-19.32.39
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 07:55:03 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 07:55:19 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 07:55:19 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 07:55:35 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.06-21.11.55
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov  6 09:33:58 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov  6 09:34:14 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov  6 09:34:14 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov  6 09:34:31 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.07-00.22.07
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 12:44:48 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 12:45:04 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 12:45:04 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 12:45:20 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.07-02.01.16
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 02:23:56 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 02:24:12 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 02:24:12 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 02:24:28 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.07-03.32.25
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 03:54:24 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 03:54:40 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 03:54:48 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 03:55:04 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.07-05.04.01
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 05:26:38 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 05:26:54 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 05:26:54 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 05:27:11 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.07-06.35.52
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 06:58:43 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 06:59:00 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 06:59:00 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 06:59:16 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.07-08.16.12
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 08:38:15 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 08:38:31 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 08:38:34 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 08:38:50 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.07-09.52.56
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 10:15:28 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 10:15:44 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 10:15:44 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 10:16:00 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_8M/2023.11.07-11.32.45
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 11:54:47 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 11:55:03 AM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 11:55:06 AM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 11:55:22 AM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_2M/2023.11.07-13.12.27
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 01:34:38 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 01:34:55 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 01:34:55 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 01:35:11 PM CET 2023
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-05.10.43
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-05.10.43
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-05.10.43
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-05.10.43
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.06-05.10.43
+/home/pidsouza/io500_mnt/SC23_Denver/io500/results_bb145nvme_4M/2023.11.07-22.57.54
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Tue Nov  7 11:20:07 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Tue Nov  7 11:20:24 PM CET 2023
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Tue Nov  7 11:20:24 PM CET 2023
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Tue Nov  7 11:20:40 PM CET 2023

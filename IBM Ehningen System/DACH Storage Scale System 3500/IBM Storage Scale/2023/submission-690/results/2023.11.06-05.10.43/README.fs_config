@@ -1,0 +1,28 @@
+##############
+#Server Nodes only (only the non-default config options, beyond those set by the standard mmvdisk setup, are listed):
+dataShipServerBufferPct=10
+
+#RDMA enabled, using one link per each Mellanox CX-6 adapter:
+verbsRdma = "enable"
+verbsRdmaSend = "yes"
+verbsPorts="mlx5_1,mlx5_3,mlx5_5,mlx5_7"
+
+##############
+#Client Nodes only:
+
+#Use the tunings that are printed by this script used to enable common client tunings and setting pagepool=16 GiB 
+#Note we over-ride some of these options in the config options listed below (verbsPorts and maxStatCache):
+#(-M option will take the supplied number as memory in MiB. 25% of which will be used to set pagepool)
+/usr/lpp/mmfs/samples/gss/gssClientConfig.sh -D -M 65536 # -D will show the changes but will not apply them - use this output to set options
+
+#Plus added these additional settings (verbsPorts and  of which over-ride settings from gssClientConfig.sh:
+verbsPorts="mlx5_0/1 mlx5_1/1"
+dataShipClientBuffersPerServer 100
+.
+##############
+Set on Both Clients and Servers:
+maxStatCache=131072
+dioReentryThreshold 1 # set but not really needed io500 submission as DIO is not used in these io500 runs
+nsdRAIDClientOnlyChecksum yes
+preferDesignatedMnode yes
+

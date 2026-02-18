@@ -1,0 +1,49 @@
+
+GPFS cluster information
+========================
+  GPFS cluster name:         GNRockStar.fscc-ess3500-1-a
+  GPFS cluster id:           15935511963386273650
+  GPFS UID domain:           GNRockStar.fscc-ess3500-1-a
+  Remote shell command:      /usr/bin/ssh
+  Remote file copy command:  /usr/bin/scp
+  Repository type:           CCR
+
+ Node  Daemon node name  IP address  Admin node name  Designation
+------------------------------------------------------------------
+   1   ess3500-1a-i1     10.2.1.21   ess3500-1a-e1    manager-perfmon
+   2   ess3500-1b-i1     10.2.1.23   ess3500-1b-e1    manager-perfmon
+   9   osi49i            10.2.1.149  osi49e           quorum-manager-perfmon
+  10   ess3500-4a-i1     10.2.1.33   ess3500-4a-e1    quorum-manager-perfmon
+  11   ess3500-4b-i1     10.2.1.35   ess3500-4b-e1    quorum-manager-perfmon
+ 145   osa09i            10.2.1.109  osa09e           manager-perfmon
+ 155   ess3500-5a-i1     10.2.1.37   ess3500-5a-e1    manager-perfmon
+ 156   ess3500-5b-i1     10.2.1.39   ess3500-5b-e1    manager-perfmon
+ 165   osi02i            10.2.1.202  osi02e           manager-perfmon
+ 166   osi05i            10.2.1.205  osi05e           manager-perfmon
+ 167   osi03i            10.2.1.203  osi03e           manager-perfmon
+ 168   osi04i            10.2.1.204  osi04e           manager-perfmon
+ 169   osi06i            10.2.1.206  osi06e           manager-perfmon
+ 170   osi07i            10.2.1.207  osi07e           manager-perfmon
+ 171   osi08i            10.2.1.208  osi08e           manager-perfmon
+ 190   osa08i            10.2.1.108  osa08e           manager
+ 191   osa10i            10.2.1.110  osa10e           manager
+ 192   osa11i            10.2.1.111  osa11e           manager
+ 193   osa12i            10.2.1.112  osa12e           manager
+ 194   osa13i            10.2.1.113  osa13e           manager
+ 195   osa14i            10.2.1.114  osa14e           manager
+ 196   osa16i            10.2.1.116  osa16e           manager
+ 197   osa17i            10.2.1.117  osa17e           manager
+ 198   osa18i            10.2.1.118  osa18e           manager
+ 199   osa15i            10.2.1.115  osa15e           manager
+ 200   osa301i           10.2.1.121  osa301i 
+ 201   osa302i           10.2.1.122  osa302i          
+ 202   osa303i           10.2.1.123  osa303i          
+ 203   osa304i           10.2.1.124  osa304i          
+ 204   osa305i           10.2.1.125  osa305i          
+ 205   osa306i           10.2.1.126  osa306i          
+ 206   osa307i           10.2.1.127  osa307i          
+ 207   osa308i           10.2.1.128  osa308i          
+ 208   osa309i           10.2.1.129  osa309i          
+ 209   osa311i           10.2.1.131  osa311i          
+ 210   osa310i           10.2.1.130  osa310i          
+ 211   osa312i           10.2.1.132  osa312i  

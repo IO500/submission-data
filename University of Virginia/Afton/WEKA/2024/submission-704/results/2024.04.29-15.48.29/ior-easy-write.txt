@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Apr 29 15:48:29 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -325896381 -k -e -o ./datafiles/2024.04.29-15.48.29/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.04.29-15.48.29/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.04.29-15.48.29/ior-easy-write.csv
+Machine             : Linux udc-ba02-5c0
+TestID              : 0
+StartTime           : Mon Apr 29 15:48:29 2024
+Path                : ./datafiles/2024.04.29-15.48.29/ior-easy/ior_file_easy.00000000
+FS                  : 1876.6 TiB   Used FS: 70.1%   Inodes: 480414.8 Mi   Used Inodes: 0.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/2024.04.29-15.48.29/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 850
+clients per node    : 85
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 8041.38 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 8785 max: 30690 -- min data: 17.2 GiB mean data: 29.3 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 8841592832000000
+WARNING: Stat() of aggregate file size      = 54707355648000
+WARNING: Using actual aggregate bytes moved = 54707355648000
+WARNING: Maybe caused by deadlineForStonewalling
+write     77597      38810      0.000121    10158080000 2048.00    0.178201   672.16     0.012583   672.35     0   

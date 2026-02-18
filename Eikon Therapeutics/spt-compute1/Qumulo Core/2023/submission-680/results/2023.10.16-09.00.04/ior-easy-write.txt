@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 16 09:00:06 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1401474762 -k -e -o /mnt/SPT_Raw_Data/testing/io500/2023.10.16-09.00.04/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.10.16-09.00.04/ior-easy.stonewall -t 2m -b 9020000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2023.10.16-09.00.04/ior-easy-write.csv
+Machine             : Linux spt-compute1
+TestID              : 0
+StartTime           : Mon Oct 16 09:00:06 2023
+Path                : /mnt/SPT_Raw_Data/testing/io500/2023.10.16-09.00.04/ior-easy/ior_file_easy.00000000
+FS                  : 16370.9 TiB   Used FS: 53.9%   Inodes: 4190951.6 Mi   Used Inodes: 53.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/SPT_Raw_Data/testing/io500/2023.10.16-09.00.04/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 23
+tasks               : 552
+clients per node    : 24
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 8.60 TiB
+aggregate filesize  : 4748.38 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4401 max: 9431 -- min data: 8.6 GiB mean data: 16.0 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 5220901847040000
+WARNING: Stat() of aggregate file size      = 10917588762624
+WARNING: Using actual aggregate bytes moved = 10917588762624
+WARNING: Maybe caused by deadlineForStonewalling
+write     22216      11239      0.000101    9236480000 2048.00    5.46       463.21     0.001211   468.67     0   

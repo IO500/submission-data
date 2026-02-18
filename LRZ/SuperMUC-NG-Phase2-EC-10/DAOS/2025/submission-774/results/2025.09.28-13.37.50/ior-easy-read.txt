@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Sep 28 14:01:12 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 831460871 -k -e -o /datafiles/2025.09.28-13.37.50/ior-easy/ior_file_easy -O stoneWallingStatusFile=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-easy.stonewall -t 2m -b 99000000m -F -r -R -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX --dfs.chunk_size=2MiB -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-easy-read.csv
+Machine             : Linux i20r01c03s10
+TestID              : 0
+StartTime           : Sun Sep 28 14:01:12 2025
+Path                : /datafiles/2025.09.28-13.37.50/ior-easy/ior_file_easy.00000000
+FS                  : 1234.8 TiB   Used FS: 19.9%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2025.09.28-13.37.50/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1120
+clients per node    : 112
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 94.41 TiB
+aggregate filesize  : 105743.41 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 116266106880000000
+WARNING: Stat() of aggregate file size      = 142051345694720
+WARNING: Using actual aggregate bytes moved = 142051345694720
+read      358293     179148     0.006252    101376000000 2048.00    0.003803   378.10     0.000824   378.10     0   

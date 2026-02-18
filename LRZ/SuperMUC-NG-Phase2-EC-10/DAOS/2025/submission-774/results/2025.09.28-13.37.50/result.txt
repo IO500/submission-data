@@ -1,0 +1,117 @@
+[run]
+procs           = 1120
+version         = io500-isc25_v2-13
+config-hash     = EAF4D447
+result-dir      = /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50
+mode            = standard
+; START 2025-09-28 13:38:36
+
+
+[ior-easy-write]
+t_start         = 2025-09-28 13:38:37
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 831460871 -k -e -o /datafiles/2025.09.28-13.37.50/ior-easy/ior_file_easy -O stoneWallingStatusFile=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-easy.stonewall -t 2m -b 99000000m -F -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX --dfs.chunk_size=2MiB -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-easy-write.csv
+throughput-stonewall = 429.70
+score           = 427.560920
+t_delta         = 310.1409
+t_end           = 2025-09-28 13:43:47
+
+[mdtest-easy-write]
+t_start         = 2025-09-28 13:43:47
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1717638665 -N 1 -d /datafiles/2025.09.28-13.37.50/mdtest-easy -x /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-easy-write.csv -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+rate-stonewall  = 4176.570897
+score           = 4163.695056
+t_delta         = 304.8972
+t_end           = 2025-09-28 13:48:52
+
+[timestamp]
+t_start         = 2025-09-28 13:48:52
+t_delta         = 0.0003
+t_end           = 2025-09-28 13:48:52
+
+[ior-hard-write]
+t_start         = 2025-09-28 13:48:52
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=831471559 -k -e -o /datafiles/2025.09.28-13.37.50/ior-hard/file -O stoneWallingStatusFile=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX --dfs.chunk_size=2MiB -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 156.18
+score           = 155.526671
+t_delta         = 303.4588
+t_end           = 2025-09-28 13:53:55
+
+[mdtest-hard-write]
+t_start         = 2025-09-28 13:53:55
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=1717649353 -N 1 -F -d /datafiles/2025.09.28-13.37.50/mdtest-hard -x /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-hard-write.csv -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+rate-stonewall  = 2058.008583
+score           = 2049.168315
+t_delta         = 305.4342
+t_end           = 2025-09-28 13:59:01
+
+[find]
+t_start         = 2025-09-28 13:59:01
+exe             = ./pfind /datafiles/2025.09.28-13.37.50 -newer /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1120
+found           = 35295855
+total-files     = 1888518241
+score           = 14502.962142
+t_delta         = 131.0803
+t_end           = 2025-09-28 14:01:12
+
+[ior-easy-read]
+t_start         = 2025-09-28 14:01:12
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 831460871 -k -e -o /datafiles/2025.09.28-13.37.50/ior-easy/ior_file_easy -O stoneWallingStatusFile=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-easy.stonewall -t 2m -b 99000000m -F -r -R -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX --dfs.chunk_size=2MiB -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-easy-read.csv
+score           = 349.895226
+t_delta         = 378.1506
+t_end           = 2025-09-28 14:07:30
+
+[mdtest-easy-stat]
+t_start         = 2025-09-28 14:07:30
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1717638665 -N 1 -d /datafiles/2025.09.28-13.37.50/mdtest-easy -x /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-easy-stat.csv -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 15215.514486
+t_delta         = 84.1351
+t_end           = 2025-09-28 14:08:54
+
+[ior-hard-read]
+t_start         = 2025-09-28 14:08:54
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=831471559 -k -e -o /datafiles/2025.09.28-13.37.50/ior-hard/file -O stoneWallingStatusFile=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX --dfs.chunk_size=2MiB -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-hard-read.csv
+score           = 178.834705
+t_delta         = 263.9073
+t_end           = 2025-09-28 14:13:18
+
+[mdtest-hard-stat]
+t_start         = 2025-09-28 14:13:18
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=1717649353 -N 1 -F -d /datafiles/2025.09.28-13.37.50/mdtest-hard -x /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-hard-stat.csv -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 14009.544133
+t_delta         = 45.5397
+t_end           = 2025-09-28 14:14:03
+
+[mdtest-easy-delete]
+t_start         = 2025-09-28 14:14:03
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1717638665 -N 1 -d /datafiles/2025.09.28-13.37.50/mdtest-easy -x /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-easy-delete.csv -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 2761.511951
+t_delta         = 461.5456
+t_end           = 2025-09-28 14:21:45
+
+[mdtest-hard-read]
+t_start         = 2025-09-28 14:21:45
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=1717649353 -N 1 -F -d /datafiles/2025.09.28-13.37.50/mdtest-hard -x /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-hard-read.csv -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 11217.179177
+t_delta         = 56.6203
+t_end           = 2025-09-28 14:22:42
+
+[mdtest-hard-delete]
+t_start         = 2025-09-28 14:22:42
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=1717649353 -N 1 -F -d /datafiles/2025.09.28-13.37.50/mdtest-hard -x /dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/mdtest-hard-delete.csv -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 2628.468314
+t_delta         = 402.1960
+t_end           = 2025-09-28 14:29:24
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-09-28 14:29:24
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 831460871 -k -e -o /datafiles/2025.09.28-13.37.50/ior-easy/ior_file_easy -F -r -D 300 -z -z -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-13.37.50/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 35.026791
+t_delta         = 312.6450
+t_end           = 2025-09-28 14:34:36
+
+[SCORE]
+MD              = 6187.207120
+BW              = 253.979214
+SCORE           = 1253.563720
+hash            = 63AD550A

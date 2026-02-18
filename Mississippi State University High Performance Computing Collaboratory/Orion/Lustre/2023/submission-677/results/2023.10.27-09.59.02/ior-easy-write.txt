@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Oct 27 09:59:02 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400162188 -k -e -o /work/hpc/users/jbradley/io500/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/jbradley/io500/results/orion_data/2023.10.27-09.59.02/ior-easy.stonewall -t 16m -b 40000m -F -w -D 300 -O stoneWallingWearOut=1 -a mpiio -O saveRankPerformanceDetailsCSV=/home/jbradley/io500/results/orion_data/2023.10.27-09.59.02/ior-easy-write.csv
+Machine             : Linux Orion-03-72.HPC.MsState.Edu
+TestID              : 0
+StartTime           : Fri Oct 27 09:59:02 2023
+Path                : /work/hpc/users/jbradley/io500/ior-easy/ior_file_easy.00000000
+FS                  : 1024.0 TiB   Used FS: 92.3%   Inodes: 9311.3 Mi   Used Inodes: 4.9%
+
+Options: 
+api                 : mpiio
+apiVersion          : (3.1)
+test filename       : /work/hpc/users/jbradley/io500/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 400
+clients per node    : 40
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 39.06 GiB
+aggregate filesize  : 15.26 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1376 max: 2500 -- min data: 21.5 GiB mean data: 38.1 GiB time: 300.0s
+write     46582      2911.90    0.128198    40960000   16384      0.063461   343.42     0.006472   343.48     0   

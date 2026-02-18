@@ -1,0 +1,31 @@
+-- started at 10/27/2023 10:53:54 --
+
+mdtest-3.4.0+dev was launched with 400 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '60000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=-513973706' '-N' '1' '-F' '-d' '/work/hpc/users/jbradley/io500/mdtest-hard' '-x' '/home/jbradley/io500/results/orion_data/2023.10.27-09.59.02/mdtest-hard.stonewall' '-E' '-X' '--saveRankPerformanceDetails=/home/jbradley/io500/results/orion_data/2023.10.27-09.59.02/mdtest-hard-read.csv' '-a' 'POSIX'
+Path                : /work/hpc/users/jbradley/io500/mdtest-hard
+FS                  : 1024.0 TiB   Used FS: 93.8%   Inodes: 9303.5 Mi   Used Inodes: 5.0%
+Nodemap: 1111111111111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2537 Shifting ranks by 40 for each phase.
+400 tasks, 24000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                   23219.786      23219.786      23219.786          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                     384.620        384.620        384.620          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 10/27/2023 11:00:20 --
+

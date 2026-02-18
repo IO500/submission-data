@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 14:12:42 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312521921 -k -e -o /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-14.01.19/ior-hard/file -O stoneWallingStatusFile=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-14.01.19/ior-hard.stonewall -t 47008 -b 47008 -s 70000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-14.01.19/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux c0803a-s35.ufhpc
+TestID              : 0
+StartTime           : Sun Nov 10 14:12:42 2024
+Path                : /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-14.01.19/ior-hard/file
+FS                  : 501.0 TiB   Used FS: 40.8%   Inodes: 6336.0 Mi   Used Inodes: 14.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-14.01.19/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 70000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.92 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 55788 max: 70000 -- min data: 2.4 GiB mean data: 2.9 GiB time: 300.0s
+write     5945       132613     318.33      45.91      45.91      0.004332   337.82     0.000768   337.83     0   

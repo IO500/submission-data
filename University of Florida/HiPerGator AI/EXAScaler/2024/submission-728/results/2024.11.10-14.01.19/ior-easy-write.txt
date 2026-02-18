@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 14:01:39 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312532609 -k -e -o /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-14.01.19/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-14.01.19/ior-easy.stonewall -t 32m -b 153600m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/lustre/red/ufhpc/cpp/io500/results/2024.11.10-14.01.19/ior-easy-write.csv
+Machine             : Linux c0803a-s35.ufhpc
+TestID              : 0
+StartTime           : Sun Nov 10 14:01:39 2024
+Path                : /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-14.01.19/ior-easy/ior_file_easy.00000000
+FS                  : 501.0 TiB   Used FS: 22.1%   Inodes: 6336.0 Mi   Used Inodes: 13.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/red/ufhpc/cpp/io500/datafiles/2024.11.10-14.01.19/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 32 MiB
+blocksize           : 150 GiB
+aggregate filesize  : 93.75 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3452 max: 4800 -- min data: 107.9 GiB mean data: 149.0 GiB time: 300.0s
+write     309637     9677       0.062505    157286400  32768      0.021674   317.45     0.007189   317.48     0   

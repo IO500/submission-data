@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  8 14:12:19 2024
+Command line        : ./ior --dataPacketType=incompressible -C -Q 1 -g -G=-311476410 -k -e -o ./datadir/2024.11.08-13.35.38/ior-hard/file -O stoneWallingStatusFile=./results/2024.11.08-13.35.38/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.11.08-13.35.38/ior-hard-read.csv
+Machine             : Linux h06u02.int.janelia.org
+TestID              : 0
+StartTime           : Fri Nov  8 14:12:19 2024
+Path                : ./datadir/2024.11.08-13.35.38/ior-hard/file
+FS                  : 100.0 TiB   Used FS: 21.2%   Inodes: 17452.2 Mi   Used Inodes: 0.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datadir/2024.11.08-13.35.38/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 273.62 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 300851200000000
+WARNING: Stat() of aggregate file size      = 650921656320
+WARNING: Using actual aggregate bytes moved = 650921656320
+read      5268       117563     117.78      45.91      45.91      0.066647   117.78     0.004814   117.85     0   

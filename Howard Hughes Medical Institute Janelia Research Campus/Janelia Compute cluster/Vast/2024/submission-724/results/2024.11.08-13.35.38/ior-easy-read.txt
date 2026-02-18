@@ -1,0 +1,35 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  8 14:04:56 2024
+Command line        : ./ior --dataPacketType=incompressible -C -Q 1 -g -G -311487098 -k -e -o ./datadir/2024.11.08-13.35.38/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.11.08-13.35.38/ior-easy.stonewall -t 1m -b 30000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.11.08-13.35.38/ior-easy-read.csv
+Machine             : Linux h06u02.int.janelia.org
+TestID              : 0
+StartTime           : Fri Nov  8 14:04:56 2024
+Path                : ./datadir/2024.11.08-13.35.38/ior-easy/ior_file_easy.00000000
+FS                  : 100.0 TiB   Used FS: 21.2%   Inodes: 17452.2 Mi   Used Inodes: 0.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datadir/2024.11.08-13.35.38/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 29.30 GiB
+aggregate filesize  : 18.31 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      56393      56407      0.011346    30720000   1024.00    0.090271   340.38     0.004691   340.47     0   

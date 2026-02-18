@@ -1,0 +1,131 @@
+Configuration data for cluster GNRrocks.slurm-master:
+-----------------------------------------------------
+clusterName GNRrocks.slurm-master
+clusterId 16923518350347494074
+dmapiFileHandleSize 32
+tscCmdAllowRemoteConnections no
+ccrEnabled yes
+sdrNotifyAuthEnabled yes
+[bb8,sss6_7]
+nspdBufferMemPerQueue 24m
+nspdThreadsPerQueue 2
+nsdMinWorkerThreads 3842
+nsdMaxWorkerThreads 3842
+nsdSmallThreadRatio 1
+nsdRAIDEventLogToConsole all
+nsdRAIDBlockDeviceMaxSectorsKB 0
+nsdRAIDBlockDeviceNrRequests 0
+nsdRAIDBlockDeviceQueueDepth 0
+nsdRAIDBlockDeviceScheduler off
+nsdRAIDSmallThreadRatio 2
+nsdRAIDDefaultGeneratedFD no
+nsdRAIDMasterBufferPoolSize 2G
+nsdRAIDReconstructAggressiveness 0
+nsdRAIDThreadsPerQueue 16
+nsdRAIDSSDPerformanceShortTimeConstant 2500000
+nsdRAIDDiskDiagTimeout 130
+[common]
+numaMemoryInterleave no
+[bb8,sss6_7]
+numaMemoryInterleave yes
+panicOnIOHang yes
+pitWorkerThreadsPerNode 32
+pagepoolMaxPhysMemPct 90
+nspdQueues 240
+[common]
+maxblocksize 16M
+[sss6_7]
+dataShipAssertOnFailure yes
+[common]
+fsyncIsGlobal no
+nsdRAIDClientOnlyChecksum yes
+subnets 10.200.0.0/16
+maxTcpConnsPerNodeConn 2
+nBucketGroups 1024
+[all16]
+allowFullblockRead 0
+randomReadblockThreshold -1
+dataShipClientBuffersPerServer 50
+dataShipClientBufferPct 50
+[common]
+ignorePrefetchLUNCount no
+[all16,bb8,sss6_7]
+ignorePrefetchLUNCount yes
+[sss6_7]
+dataShipServerBufferPct 50
+[common]
+disableAssert bufdesc.C:4179
+[bb8,sss6_7]
+nsdRAIDTracks 320K
+nsdRAIDClientOnlyChecksum yes
+nsdRAIDEnableSpaceMonitor 1
+[common]
+autoload no
+[fscc-ess6000-2-a,fscc-ess6000-2-b]
+autoBuildGPL yes
+[sss6_7]
+nsdRAIDPagepoolBaseline 973400319590
+[common]
+maxFilesToCache 128k
+maxStatCache 128k
+[all16]
+fgdlTokenBatchAcquire yes
+autoCompactDir no
+[bb8]
+maxFilesToCache 128k
+maxStatCache 128k
+nsdRAIDPagepoolBaseline 486354672844
+[common]
+verbsRdma enable
+verbsRdmaSend yes
+verbsRdmaCm enable
+minReleaseLevel 5.2.1.0
+cipherList AUTHONLY
+nsdRAIDDisablePartitionTrim yes
+proactiveReconnect no
+allToAllConnection all
+[bb8,sss6_7]
+verbsPorts mlx5_0/1/77 mlx5_1/1/78 mlx5_2/1/77  mlx5_3/1/78 mlx5_4/1/77  mlx5_5/1/78 mlx5_6/1/77 mlx5_7/1/78
+[all16]
+verbsPorts mlx5_0/1/77 mlx5_1/1/78
+[all16,bb8,sss6_7]
+prefetchPct 50
+[common]
+preferDesignatedMnode yes
+trace all 0 vnop 4 io 3 ksvfs 3
+[fscc-ess6000-3-a,fscc-ess6000-3-b,fscc-sr655v3-1,fscc-sr655v3-10,fscc-sr655v3-2,fscc-sr655v3-3,fscc-sr655v3-4,fscc-sr655v3-5,fscc-sr655v3-6,fscc-sr655v3-7,fscc-sr655v3-8,fscc-sr655v3-9]
+trace vnop 1 fs 3 io 1 pgalloc 1
+[common]
+tracedevTimeFormat relative
+[fscc-ess6000-3-a,fscc-ess6000-3-b,fscc-sr655v3-1,fscc-sr655v3-10,fscc-sr655v3-2,fscc-sr655v3-3,fscc-sr655v3-4,fscc-sr655v3-5,fscc-sr655v3-6,fscc-sr655v3-7,fscc-sr655v3-8,fscc-sr655v3-9]
+tracedevTimeFormat absolute
+[common]
+traceRecycle off
+tracedevOverwriteBufferSize 2147483648
+[fscc-ess6000-3-a,fscc-ess6000-3-b,fscc-sr655v3-1,fscc-sr655v3-10,fscc-sr655v3-2,fscc-sr655v3-3,fscc-sr655v3-4,fscc-sr655v3-5,fscc-sr655v3-6,fscc-sr655v3-7,fscc-sr655v3-8,fscc-sr655v3-9]
+tracedevOverwriteBufferSize 21474836480
+[common]
+tracedevWriteMode overwrite
+workerThreads 48
+[all16,bb8,sss6_7]
+workerThreads 1024
+[common]
+pagepool 1G
+[sss6_7]
+pagepool 973400319590
+[bb8]
+pagepool 486354672844
+[all16]
+pagepool 32g
+[common]
+inodePrefetchThreshold 5
+[bb8,sss6_7]
+maxMBpS 50000
+[all16]
+maxMBpS 2048
+[common]
+adminMode central
+
+File systems in cluster GNRrocks.slurm-master:
+----------------------------------------------
+/dev/bb7nvme

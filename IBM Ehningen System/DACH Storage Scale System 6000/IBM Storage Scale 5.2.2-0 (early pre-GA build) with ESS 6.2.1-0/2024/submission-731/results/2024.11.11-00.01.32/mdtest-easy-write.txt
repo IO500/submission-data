@@ -1,0 +1,33 @@
+-- started at 11/11/2024 00:06:40 --
+
+mdtest-4.1.0+dev was launched with 200 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-u' '-L' '-F' '-P' '-G' '573874563' '-N' '1' '-d' '/gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-easy' '-x' './results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-easy.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-easy-write.csv' '-a' 'POSIX'
+Nodemap: 11111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Path                : /gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-easy
+FS                  : 101.7 TiB   Used FS: 38.1%   Inodes: 1500.0 Mi   Used Inodes: 0.0%
+V-0: Rank   0 Line  2586 Shifting ranks by 20 for each phase.
+200 tasks, 200000000 files
+Continue stonewall hit min: 445534 max: 555336 avg: 511653.2 
+
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation              322913.191     322913.191     322913.191          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   4.751          4.751          4.751          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time (in ms/op): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 343.954        343.954        343.954          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.210          0.210          0.210          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 11/11/2024 00:12:25 --
+

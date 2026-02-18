@@ -1,0 +1,35 @@
+
+GPFS cluster information
+========================
+  GPFS cluster name:         GNRrocks.slurm-master
+  GPFS cluster id:           16923518350347494074
+  GPFS UID domain:           GNRrocks.slurm-master
+  Remote shell command:      /usr/bin/ssh
+  Remote file copy command:  /usr/bin/scp
+  Repository type:           CCR
+
+ Node  Daemon node name  IP address     Admin node name   Designation
+----------------------------------------------------------------------
+   1   slurm-master      9.152.185.93   slurm-master      quorum-perfmon
+   4   fscc-ess6000-2-a  9.152.184.114  fscc-ess6000-2-a  manager-perfmon
+   5   fscc-ess6000-2-b  9.152.184.116  fscc-ess6000-2-b  manager-perfmon
+  22   fscc-ess6000-3-a  9.152.185.171  fscc-ess6000-3-a  manager-perfmon
+  23   fscc-ess6000-3-b  9.152.185.173  fscc-ess6000-3-b  manager-perfmon
+  24   fscc-sr650-54     9.152.187.80   fscc-sr650-54     perfmon
+  25   fscc-sr655v3-1    9.152.184.26   fscc-sr655v3-1    manager
+  26   fscc-sr655v3-2    9.152.184.28   fscc-sr655v3-2    manager
+  27   fscc-sr655v3-3    9.152.184.30   fscc-sr655v3-3    manager
+  28   fscc-sr655v3-4    9.152.184.32   fscc-sr655v3-4    manager
+  29   fscc-sr655v3-5    9.152.184.34   fscc-sr655v3-5    manager
+  30   fscc-sr655v3-6    9.152.184.46   fscc-sr655v3-6    manager
+  31   fscc-sr655v3-7    9.152.184.48   fscc-sr655v3-7    manager
+  32   fscc-sr655v3-8    9.152.184.50   fscc-sr655v3-8    manager
+  33   fscc-sr655v3-9    9.152.184.52   fscc-sr655v3-9    manager
+  34   fscc-sr655v3-10   9.152.184.55   fscc-sr655v3-10   manager
+  35   fscc-sr655v3-11   9.152.184.57   fscc-sr655v3-11   manager
+  36   fscc-sr655v3-12   9.152.184.59   fscc-sr655v3-12   manager
+  37   fscc-sr655v3-13   9.152.184.61   fscc-sr655v3-13   manager
+  38   fscc-sr655v3-14   9.152.186.201  fscc-sr655v3-14   manager
+  39   fscc-sr655v3-15   9.152.186.203  fscc-sr655v3-15   manager
+  40   fscc-sr655v3-16   9.152.186.205  fscc-sr655v3-16   manager
+

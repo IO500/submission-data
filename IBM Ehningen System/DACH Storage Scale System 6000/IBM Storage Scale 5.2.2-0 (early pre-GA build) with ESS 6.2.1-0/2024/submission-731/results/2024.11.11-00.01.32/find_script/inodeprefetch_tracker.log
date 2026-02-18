@@ -1,0 +1,26 @@
+/home/pidsouza/io500_mnt/SC24_Atlanta/io500/results_bb8nvme_8M.extPFIND/2024.11.11-08.08.25
+[mdtest-easy-write] workload started ... 
+[timestamp] workload started ... 
+[ior-hard-write] workload started ... 
+[mdtest-hard-write] workload started ... 
+[find] workload started ... 
+Disabling inodePrefetchThreshold
+Mon Nov 11 08:32:43 AM CET 2024
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 2000000
+Disable complete
+Mon Nov 11 08:32:52 AM CET 2024
+[ior-easy-read] workload started ... 
+enabling inodePrefetchThreshold
+Mon Nov 11 08:33:02 AM CET 2024
+mmchconfig: Attention: Unknown attribute specified: inodePrefetchThreshold.  Press the ENTER key to continue.
+mmchconfig: Command successfully completed
+mmchconfig: Propagating the cluster configuration data to all
+  affected nodes.  This is an asynchronous process.
+ # inodePrefetchThreshold 5
+Enable complete
+Mon Nov 11 08:33:11 AM CET 2024
+Exiting

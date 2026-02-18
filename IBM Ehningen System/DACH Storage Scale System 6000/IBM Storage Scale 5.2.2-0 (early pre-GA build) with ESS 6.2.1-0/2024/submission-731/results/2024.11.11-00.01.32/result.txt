@@ -1,0 +1,111 @@
+[run]
+procs           = 200
+version         = io500-sc24_v1
+config-hash     = 451AE3DE
+result-dir      = ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32
+mode            = standard
+; START 2024-11-11 00:01:32
+
+
+[ior-easy-write]
+t_start         = 2024-11-11 00:01:32
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312303232 -k -e -o /gpfs/bb8nvme/io500/2024.11.11-00.01.32/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/ior-easy.stonewall -t 16m -b 1984000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/ior-easy-write.csv
+throughput-stonewall = 148.25
+score           = 148.001603
+t_delta         = 307.6895
+t_end           = 2024-11-11 00:06:40
+
+[mdtest-easy-write]
+t_start         = 2024-11-11 00:06:40
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 573874563 -N 1 -d /gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-easy -x ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 341.044489
+score           = 322.913191
+t_delta         = 345.1888
+t_end           = 2024-11-11 00:12:25
+
+[timestamp]
+t_start         = 2024-11-11 00:12:25
+t_delta         = 0.0336
+t_end           = 2024-11-11 00:12:25
+
+[ior-hard-write]
+t_start         = 2024-11-11 00:12:25
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312292544 -k -e -o /gpfs/bb8nvme/io500/2024.11.11-00.01.32/ior-hard/file -O stoneWallingStatusFile=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 44.63
+score           = 44.193659
+t_delta         = 303.1243
+t_end           = 2024-11-11 00:17:28
+
+[mdtest-hard-write]
+t_start         = 2024-11-11 00:17:28
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=573885251 -N 1 -F -d /gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-hard -x ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-hard-write.csv -a POSIX --posix.gpfs.createsharing
+rate-stonewall  = 30.909893
+score           = 27.571390
+t_delta         = 410.3029
+t_end           = 2024-11-11 00:24:19
+
+[find]
+t_start         = 2024-11-11 00:24:19
+exe             = ./pfind /gpfs/bb8nvme/io500/2024.11.11-00.01.32 -newer ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 200
+found           = 378602
+total-files     = 122351601
+score           = 12203.137716
+t_delta         = 10.0350
+t_end           = 2024-11-11 00:24:29
+
+[ior-easy-read]
+t_start         = 2024-11-11 00:24:29
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312303232 -k -e -o /gpfs/bb8nvme/io500/2024.11.11-00.01.32/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/ior-easy.stonewall -t 16m -b 1984000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/ior-easy-read.csv
+score           = 310.400939
+t_delta         = 146.7017
+t_end           = 2024-11-11 00:26:55
+
+[mdtest-easy-stat]
+t_start         = 2024-11-11 00:26:55
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 573874563 -N 1 -d /gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-easy -x ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-easy-stat.csv -a POSIX
+score           = 961.905678
+t_delta         = 116.4879
+t_end           = 2024-11-11 00:28:52
+
+[ior-hard-read]
+t_start         = 2024-11-11 00:28:52
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312292544 -k -e -o /gpfs/bb8nvme/io500/2024.11.11-00.01.32/ior-hard/file -O stoneWallingStatusFile=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX --posix.gpfs.finegrainreadsharing -O saveRankPerformanceDetailsCSV=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/ior-hard-read.csv
+score           = 130.189815
+t_delta         = 102.9130
+t_end           = 2024-11-11 00:30:35
+
+[mdtest-hard-stat]
+t_start         = 2024-11-11 00:30:35
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=573885251 -N 1 -F -d /gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-hard -x ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-hard-stat.csv -a POSIX
+score           = 327.164624
+t_delta         = 35.5488
+t_end           = 2024-11-11 00:31:10
+
+[mdtest-easy-delete]
+t_start         = 2024-11-11 00:31:10
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 573874563 -N 1 -d /gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-easy -x ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-easy-delete.csv -a POSIX
+score           = 133.655903
+t_delta         = 847.3817
+t_end           = 2024-11-11 00:45:18
+
+[mdtest-hard-read]
+t_start         = 2024-11-11 00:45:18
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=573885251 -N 1 -F -d /gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-hard -x ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-hard-read.csv -a POSIX
+score           = 305.670500
+t_delta         = 37.9412
+t_end           = 2024-11-11 00:45:56
+
+[mdtest-hard-delete]
+t_start         = 2024-11-11 00:45:56
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=573885251 -N 1 -F -d /gpfs/bb8nvme/io500/2024.11.11-00.01.32/mdtest-hard -x ./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results_bb8nvme_8M.extPFIND/2024.11.11-00.01.32/mdtest-hard-delete.csv -a POSIX
+score           = 36.108839
+t_delta         = 318.0449
+t_end           = 2024-11-11 00:51:14
+
+[SCORE]
+MD              = 290.299474
+BW              = 127.506288
+SCORE           = 192.392849
+hash            = F69F17DE
+; END 2024-11-11 00:51:16

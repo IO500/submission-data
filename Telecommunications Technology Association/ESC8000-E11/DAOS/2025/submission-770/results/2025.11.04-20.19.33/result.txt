@@ -1,0 +1,117 @@
+[run]
+procs           = 1008
+version         = io500-sc25
+config-hash     = 39F91CC2
+result-dir      = ./results/dfs-rf0/2025.11.04-20.19.33
+mode            = standard
+; START 2025-11-04 20:19:38
+
+
+[ior-easy-write]
+t_start         = 2025-11-04 20:19:38
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761209986 -k -e -o //2025.11.04-20.19.33/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/dfs-rf0/2025.11.04-20.19.33/ior-easy.stonewall -t 1m -b 992000m -F -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=./results/dfs-rf0/2025.11.04-20.19.33/ior-easy-write.csv
+throughput-stonewall = 105.40
+score           = 99.711478
+t_delta         = 397.4463
+t_end           = 2025-11-04 20:26:15
+
+[mdtest-easy-write]
+t_start         = 2025-11-04 20:26:15
+exe             = ./mdtest --dataPacketType=timestamp -n 2000000 -u -L -F -P -G 1647387780 -N 1 -d //2025.11.04-20.19.33/mdtest-easy -x ./results/dfs-rf0/2025.11.04-20.19.33/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/dfs-rf0/2025.11.04-20.19.33/mdtest-easy-write.csv -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 2899.350114
+score           = 2887.963314
+t_delta         = 307.1483
+t_end           = 2025-11-04 20:31:22
+
+[timestamp]
+t_start         = 2025-11-04 20:31:22
+t_delta         = 0.0000
+t_end           = 2025-11-04 20:31:22
+
+[ior-hard-write]
+t_start         = 2025-11-04 20:31:22
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761220674 -k -e -o //2025.11.04-20.19.33/ior-hard/file -O stoneWallingStatusFile=./results/dfs-rf0/2025.11.04-20.19.33/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=./results/dfs-rf0/2025.11.04-20.19.33/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 103.54
+score           = 98.943210
+t_delta         = 373.4616
+t_end           = 2025-11-04 20:37:36
+
+[mdtest-hard-write]
+t_start         = 2025-11-04 20:37:36
+exe             = ./mdtest --dataPacketType=timestamp -n 500000 -t -w 3901 -e 3901 -P -G=1647398468 -N 1 -F -d //2025.11.04-20.19.33/mdtest-hard -x ./results/dfs-rf0/2025.11.04-20.19.33/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/dfs-rf0/2025.11.04-20.19.33/mdtest-hard-write.csv -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 276.577124
+score           = 266.080737
+t_delta         = 323.2566
+t_end           = 2025-11-04 20:42:59
+
+[find]
+t_start         = 2025-11-04 20:42:59
+exe             = ./pfind //2025.11.04-20.19.33 -newer ./results/dfs-rf0/2025.11.04-20.19.33/timestampfile -size 3901c -name *01* -C -q 20160
+nproc           = 448
+found           = 3337606
+total-files     = 969750433
+score           = 2465.889011
+t_delta         = 393.3657
+t_end           = 2025-11-04 20:49:32
+
+[ior-easy-read]
+t_start         = 2025-11-04 20:49:32
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761209986 -k -e -o //2025.11.04-20.19.33/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/dfs-rf0/2025.11.04-20.19.33/ior-easy.stonewall -t 1m -b 992000m -F -r -R -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=./results/dfs-rf0/2025.11.04-20.19.33/ior-easy-read.csv
+score           = 109.535206
+t_delta         = 354.8566
+t_end           = 2025-11-04 20:55:27
+
+[mdtest-easy-stat]
+t_start         = 2025-11-04 20:55:27
+exe             = ./mdtest --dataPacketType=timestamp -n 2000000 -u -L -F -P -G 1647387780 -N 1 -d //2025.11.04-20.19.33/mdtest-easy -x ./results/dfs-rf0/2025.11.04-20.19.33/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/dfs-rf0/2025.11.04-20.19.33/mdtest-easy-stat.csv -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 5311.591684
+t_delta         = 167.4472
+t_end           = 2025-11-04 20:58:15
+
+[ior-hard-read]
+t_start         = 2025-11-04 20:58:15
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761220674 -k -e -o //2025.11.04-20.19.33/ior-hard/file -O stoneWallingStatusFile=./results/dfs-rf0/2025.11.04-20.19.33/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=./results/dfs-rf0/2025.11.04-20.19.33/ior-hard-read.csv
+score           = 103.254146
+t_delta         = 357.8669
+t_end           = 2025-11-04 21:04:13
+
+[mdtest-hard-stat]
+t_start         = 2025-11-04 21:04:13
+exe             = ./mdtest --dataPacketType=timestamp -n 500000 -t -w 3901 -e 3901 -P -G=1647398468 -N 1 -F -d //2025.11.04-20.19.33/mdtest-hard -x ./results/dfs-rf0/2025.11.04-20.19.33/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/dfs-rf0/2025.11.04-20.19.33/mdtest-hard-stat.csv -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 4890.096863
+t_delta         = 18.5505
+t_end           = 2025-11-04 21:04:31
+
+[mdtest-easy-delete]
+t_start         = 2025-11-04 21:04:31
+exe             = ./mdtest --dataPacketType=timestamp -n 2000000 -u -L -F -P -G 1647387780 -N 1 -d //2025.11.04-20.19.33/mdtest-easy -x ./results/dfs-rf0/2025.11.04-20.19.33/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/dfs-rf0/2025.11.04-20.19.33/mdtest-easy-delete.csv -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 258.291715
+t_delta         = 3424.0279
+t_end           = 2025-11-04 22:01:35
+
+[mdtest-hard-read]
+t_start         = 2025-11-04 22:01:35
+exe             = ./mdtest --dataPacketType=timestamp -n 500000 -t -w 3901 -e 3901 -P -G=1647398468 -N 1 -F -d //2025.11.04-20.19.33/mdtest-hard -x ./results/dfs-rf0/2025.11.04-20.19.33/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/dfs-rf0/2025.11.04-20.19.33/mdtest-hard-read.csv -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 2285.435965
+t_delta         = 38.5336
+t_end           = 2025-11-04 22:02:14
+
+[mdtest-hard-delete]
+t_start         = 2025-11-04 22:02:14
+exe             = ./mdtest --dataPacketType=timestamp -n 500000 -t -w 3901 -e 3901 -P -G=1647398468 -N 1 -F -d //2025.11.04-20.19.33/mdtest-hard -x ./results/dfs-rf0/2025.11.04-20.19.33/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/dfs-rf0/2025.11.04-20.19.33/mdtest-hard-delete.csv -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 552.163064
+t_delta         = 172.0196
+t_end           = 2025-11-04 22:05:06
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-11-04 22:05:06
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761209986 -k -e -o //2025.11.04-20.19.33/ior-easy/ior_file_easy -F -r -D 300 -z -z -a DFS --dfs.pool=tank --dfs.cont=posix_container --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=./results/dfs-rf0/2025.11.04-20.19.33/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 21.033722
+t_delta         = 311.8249
+t_end           = 2025-11-04 22:10:18
+
+[SCORE]
+MD              = 1414.680795
+BW              = 102.777511
+SCORE           = 381.310071
+hash            = 2AAC1765

@@ -1,0 +1,63 @@
+apiVersion: kubeflow.org/v2beta1
+kind: MPIJob
+metadata:
+  name: io500
+  namespace: ns-bmuser
+spec:
+  slotsPerWorker: 16
+  mpiReplicaSpecs:
+    Launcher:
+      replicas: 1
+      template:
+        spec:
+          containers:
+            - name: mpi-launcher
+              image: 172.16.44.253:5000/bmuser/io500:latest
+              command:
+                - /bin/sh
+                - -c
+                - |
+                  ulimit -n 65536
+                  sleep 5
+                  cp -r /io500 /io500-bin/
+                  cp /io500-config/* /io500-bin/io500/
+                  chmod +x /io500-bin/io500/*.sh
+                  cd /io500-bin/io500/
+                  ./myio500.sh ./myio500.ini
+              volumeMounts:
+                - name: io500-config-volume
+                  mountPath: /io500-config
+                - name: io500-bin
+                  mountPath: /io500-bin
+          volumes:
+            - name: io500-config-volume
+              configMap:
+                name: io500-user-config
+            - name: io500-bin
+              persistentVolumeClaim:
+                claimName: io500-pvc
+
+    Worker:
+      replicas: 80
+      template:
+        spec:
+          containers:
+            - name: mpi-worker
+              image: 172.16.44.253:5000/bmuser/io500:latest
+              resources:
+                requests:
+                  cpu: "8"
+                limits:
+                  cpu: "8"
+              volumeMounts:
+                - name: io500-config-volume
+                  mountPath: /io500-config
+                - name: io500-bin
+                  mountPath: /io500-bin
+          volumes:
+            - name: io500-config-volume
+              configMap:
+                name: io500-user-config
+            - name: io500-bin
+              persistentVolumeClaim:
+                claimName: io500-pvc

@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Jun  3 09:04:50 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 777728584 -k -e -o ./datafiles/2025.06.03-09.04.45/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.06.03-09.04.45/ior-easy.stonewall -t 4m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2025.06.03-09.04.45/ior-easy-write.csv
+Machine             : Linux io500-worker-0
+TestID              : 0
+StartTime           : Tue Jun  3 09:04:50 2025
+Path                : ./datafiles/2025.06.03-09.04.45/ior-easy/ior_file_easy.00000000
+FS                  : 30.0 TiB   Used FS: 0.0%   Inodes: 316.8 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/2025.06.03-09.04.45/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 80
+tasks               : 1280
+clients per node    : 16
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 12109.38 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3850 max: 3889 -- min data: 15.0 GiB mean data: 15.1 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 13314398617600000
+WARNING: Stat() of aggregate file size      = 20878909767680
+WARNING: Using actual aggregate bytes moved = 20878909767680
+WARNING: Maybe caused by deadlineForStonewalling
+write     65668      16433      0.077315    10158080000 4096       0.161156   302.92     0.082961   303.22     0   

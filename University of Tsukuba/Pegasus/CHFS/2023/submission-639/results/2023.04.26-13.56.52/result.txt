@@ -1,0 +1,111 @@
+[run]
+procs           = 480
+version         = io500-isc23
+config-hash     = CECC0859
+result-dir      = ./results/2023.04.26-13.56.52
+mode            = standard
+; START 2023-04-26 13:57:07
+
+
+[ior-easy-write]
+t_start         = 2023-04-26 13:57:07
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400432696 -k -e -o /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.04.26-13.56.52/ior-easy.stonewall -t 1048576 -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a CHFS --chfs.chunk_size=1048576 -O saveRankPerformanceDetailsCSV=./results/2023.04.26-13.56.52/ior-easy-write.csv
+throughput-stonewall = 230.68
+score           = 230.286770
+t_delta         = 316.1983
+t_end           = 2023-04-26 14:02:23
+
+[mdtest-easy-write]
+t_start         = 2023-04-26 14:02:23
+exe             = ./mdtest --dataPacketType=timestamp -n 30000000 -u -L -F -P -G -514254902 -N 1 -d /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/mdtest-easy -x ./results/2023.04.26-13.56.52/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2023.04.26-13.56.52/mdtest-easy-write.csv -a CHFS --chfs.chunk_size=1
+rate-stonewall  = 2694.757798
+score           = 2648.161206
+t_delta         = 309.4702
+t_end           = 2023-04-26 14:07:32
+
+[timestamp]
+t_start         = 2023-04-26 14:07:32
+t_delta         = 0.0005
+t_end           = 2023-04-26 14:07:32
+
+[ior-hard-write]
+t_start         = 2023-04-26 14:07:32
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1400422008 -k -e -o /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-hard/file -O stoneWallingStatusFile=./results/2023.04.26-13.56.52/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a CHFS --chfs.chunk_size=47008 -O saveRankPerformanceDetailsCSV=./results/2023.04.26-13.56.52/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 54.23
+score           = 53.657788
+t_delta         = 308.9774
+t_end           = 2023-04-26 14:12:41
+
+[mdtest-hard-write]
+t_start         = 2023-04-26 14:12:41
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-514244214 -N 1 -F -d /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/mdtest-hard -x ./results/2023.04.26-13.56.52/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2023.04.26-13.56.52/mdtest-hard-write.csv -a CHFS --chfs.chunk_size=3902
+rate-stonewall  = 1466.740982
+score           = 1447.060840
+t_delta         = 309.4933
+t_end           = 2023-04-26 14:17:51
+
+[find]
+t_start         = 2023-04-26 14:17:51
+exe             =  bin/chfindrun -hostfile $CHOST -output_dir $io500_resultdir/find -q /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52 -newer ./results/2023.04.26-13.56.52/timestampfile -size 3901c -name "*01*"
+last-output     = "MATCHED 21057124/1258473982"
+total-files     = 1258473982
+found           = 21057124
+score           = 13437.727523
+t_delta         = 93.6535
+t_end           = 2023-04-26 14:19:25
+
+[ior-easy-read]
+t_start         = 2023-04-26 14:19:25
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400432696 -k -e -o /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.04.26-13.56.52/ior-easy.stonewall -t 1048576 -b 9920000m -F -r -R -a CHFS --chfs.chunk_size=1048576 -O saveRankPerformanceDetailsCSV=./results/2023.04.26-13.56.52/ior-easy-read.csv
+score           = 184.290124
+t_delta         = 383.2978
+t_end           = 2023-04-26 14:25:48
+
+[mdtest-easy-stat]
+t_start         = 2023-04-26 14:25:48
+exe             = ./mdtest --dataPacketType=timestamp -n 30000000 -u -L -F -P -G -514254902 -N 1 -d /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/mdtest-easy -x ./results/2023.04.26-13.56.52/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2023.04.26-13.56.52/mdtest-easy-stat.csv -a CHFS --chfs.chunk_size=1
+score           = 3097.774347
+t_delta         = 264.7297
+t_end           = 2023-04-26 14:30:13
+
+[ior-hard-read]
+t_start         = 2023-04-26 14:30:13
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1400422008 -k -e -o /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-hard/file -O stoneWallingStatusFile=./results/2023.04.26-13.56.52/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a CHFS --chfs.chunk_size=47008 -O saveRankPerformanceDetailsCSV=./results/2023.04.26-13.56.52/ior-hard-read.csv
+score           = 40.899235
+t_delta         = 404.9060
+t_end           = 2023-04-26 14:36:58
+
+[mdtest-hard-stat]
+t_start         = 2023-04-26 14:36:58
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-514244214 -N 1 -F -d /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/mdtest-hard -x ./results/2023.04.26-13.56.52/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2023.04.26-13.56.52/mdtest-hard-stat.csv -a CHFS --chfs.chunk_size=3902
+score           = 3097.368079
+t_delta         = 145.7789
+t_end           = 2023-04-26 14:39:23
+
+[mdtest-easy-delete]
+t_start         = 2023-04-26 14:39:24
+exe             = ./mdtest --dataPacketType=timestamp -n 30000000 -u -L -F -P -G -514254902 -N 1 -d /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/mdtest-easy -x ./results/2023.04.26-13.56.52/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2023.04.26-13.56.52/mdtest-easy-delete.csv -a CHFS --chfs.chunk_size=1
+score           = 1152.990620
+t_delta         = 714.0619
+t_end           = 2023-04-26 14:51:18
+
+[mdtest-hard-read]
+t_start         = 2023-04-26 14:51:18
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-514244214 -N 1 -F -d /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/mdtest-hard -x ./results/2023.04.26-13.56.52/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2023.04.26-13.56.52/mdtest-hard-read.csv -a CHFS --chfs.chunk_size=3902
+score           = 1564.565083
+t_delta         = 286.3146
+t_end           = 2023-04-26 14:56:04
+
+[mdtest-hard-delete]
+t_start         = 2023-04-26 14:56:04
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-514244214 -N 1 -F -d /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/mdtest-hard -x ./results/2023.04.26-13.56.52/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2023.04.26-13.56.52/mdtest-hard-delete.csv -a CHFS --chfs.chunk_size=3902
+score           = 1188.841268
+t_delta         = 381.9583
+t_end           = 2023-04-26 15:02:26
+
+[SCORE]
+MD              = 2388.596902
+BW              = 98.238054
+SCORE           = 484.408001
+hash            = 7C63E6D3
+; END 2023-04-26 15:02:38

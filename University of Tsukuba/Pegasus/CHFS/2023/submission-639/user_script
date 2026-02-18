@@ -1,0 +1,167 @@
+#!/bin/bash
+#PBS -A NBB
+#PBS -q gpu
+#PBS -b 20
+#PBS -T openmpi
+#PBS -v NQSV_MPI_VER=4.1.5/gcc9.4.0-cuda12.1.0
+#PBS -l elapstim_req=03:00:00
+#PBS -v PPN=48
+
+# INSTRUCTIONS:
+#
+# The only parts of the script that may need to be modified are:
+#  - setup() to configure the binary locations and MPI parameters
+# Please visit https://vi4io.org/io500-info-creator/ to help generate the
+# "system-information.txt" file, by pasting the output of the info-creator.
+# This file contains details of your system hardware for your submission.
+
+module load openmpi/$NQSV_MPI_VER
+cd $PBS_O_WORKDIR
+
+PREFIX=$PWD
+export PATH=$PREFIX/bin:$PATH
+TMPDIR=/pmem
+MDIR=/tmp/gfarm-tatebe
+
+clients=10
+ppn=$PPN
+nnodes=$(wc -l $PBS_NODEFILE | awk '{ print $1 }')
+nprocs=$((ppn * clients))
+
+CDIR=$PBS_O_WORKDIR/cdir-$nnodes-$$
+LOGD=$CDIR/log
+mkdir -p $LOGD
+
+export THOST=$CDIR/host-$$
+export CHOST=$CDIR/chost-$$
+export MPIHOST=$CDIR/mpihost-$$
+
+tail -n $((nnodes - clients)) $PBS_NODEFILE > $THOST
+head -n $clients $PBS_NODEFILE > $CHOST
+head -n $clients $NQSII_MPINODES > $MPIHOST
+
+chfsctl -h $PBS_NODEFILE -m $MDIR kill > /dev/null 2>&1
+
+export CHFS_RPC_TIMEOUT_MSEC=0
+eval `chfsctl -p verbs -h $THOST -c $TMPDIR -L $LOGD -O "-H 0 -T 46" start`
+chmkdir $MDIR
+for host in $(cat $CHOST); do
+        ssh $host mkdir -p "$MDIR"
+        ssh $host PATH=\"$PATH\" CHFS_SERVER=\"$CHFS_SERVER\" CHFS_LOG_PRIORITY=$CHFS_LOG_PRIORITY CHFS_CHUNK_SIZE=$CHFS_CHUNK_SIZE CHFS_BUF_SIZE=$CHFS_BUF_SIZE CHFS_RDMA_THRESH=$CHFS_RDMA_THRESH CHFS_RPC_TIMEOUT_MSEC=$CHFS_RPC_TIMEOUT_MSEC CHFS_NODE_LIST_CACHE_TIMEOUT=$CHFS_NODE_LIST_CACHE_TIMEOUT chfuse -o direct_io,modules=subdir,subdir="$MDIR" "$MDIR"
+done
+
+chfsctl -h $THOST status
+chlist
+echo $CHFS_SERVER > $CDIR/chfs_server-$$
+
+# This script takes its parameters from the same .ini file as io500 binary.
+io500_ini="config.ini"          # You can set the ini file here
+io500_mpirun="mpirun"
+io500_mpiargs="--leave-session-attached -hostfile $MPIHOST -x PATH -x CHFS_SERVER -x CHFS_RPC_TIMEOUT_MSEC -np $nprocs -npernode $ppn"
+
+function setup(){
+  local workdir="$1"
+  local resultdir="$2"
+  mkdir -p $workdir $resultdir
+
+  # Example commands to create output directories for Lustre.  Creating
+  # top-level directories is allowed, but not the whole directory tree.
+  #if (( $(lfs df $workdir | grep -c MDT) > 1 )); then
+  #  lfs setdirstripe -D -c -1 $workdir
+  #fi
+  #lfs setstripe -c 1 $workdir
+  #mkdir $workdir/ior-easy $workdir/ior-hard
+  #mkdir $workdir/mdtest-easy $workdir/mdtest-hard
+  #local osts=$(lfs df $workdir | grep -c OST)
+  # Try overstriping for ior-hard to improve scaling, or use wide striping
+  #lfs setstripe -C $((osts * 4)) $workdir/ior-hard ||
+  #  lfs setstripe -c -1 $workdir/ior-hard
+  # Try to use DoM if available, otherwise use default for small files
+  #lfs setstripe -E 64k -L mdt $workdir/mdtest-easy || true #DoM?
+  #lfs setstripe -E 64k -L mdt $workdir/mdtest-hard || true #DoM?
+  #lfs setstripe -E 64k -L mdt $workdir/mdtest-rnd
+}
+
+# *****  YOU SHOULD NOT EDIT ANYTHING BELOW THIS LINE  *****
+set -eo pipefail  # better error handling
+
+if [[ -z "$io500_ini" ]]; then
+  echo "error: ini file must be specified.  usage: $0 <config.ini>"
+  exit 1
+fi
+if [[ ! -s "$io500_ini" ]]; then
+  echo "error: ini file '$io500_ini' not found or empty"
+  exit 2
+fi
+
+function get_ini_section_param() {
+  local section="$1"
+  local param="$2"
+  local inside=false
+
+  while read LINE; do
+    LINE=$(sed -e 's/ *#.*//' -e '1s/ *= */=/' <<<$LINE)
+    $inside && [[ "$LINE" =~ "[.*]" ]] && inside=false && break
+    [[ -n "$section" && "$LINE" =~ "[$section]" ]] && inside=true && continue
+    ! $inside && continue
+    #echo $LINE | awk -F = "/^$param/ { print \$2 }"
+    if [[ $(echo $LINE | grep "^$param *=" ) != "" ]] ; then
+      # echo "$section : $param : $inside : $LINE" >> parsed.txt # debugging
+      echo $LINE | sed -e "s/[^=]*=[ \t]*\(.*\)/\1/"
+      return
+    fi
+  done < $io500_ini
+  echo ""
+}
+
+function get_ini_global_param() {
+  local param="$1"
+  local default="$2"
+  local val
+
+  val=$(get_ini_section_param global $param |
+  	sed -e 's/[Ff][Aa][Ll][Ss][Ee]/False/' -e 's/[Tt][Rr][Uu][Ee]/True/')
+
+  echo "${val:-$default}"
+}
+
+function run_benchmarks {
+  $io500_mpirun $io500_mpiargs $PWD/io500 $io500_ini --timestamp $timestamp
+}
+
+create_tarball() {
+  local sourcedir=$(dirname $io500_resultdir)
+  local fname=$(basename ${io500_resultdir})
+  local tarball=$sourcedir/io500-$HOSTNAME-$fname.tgz
+
+  cp -v $0 $io500_ini $io500_resultdir
+  tar czf $tarball -C $sourcedir $fname
+  echo "Created result tarball $tarball"
+}
+
+function main {
+  # These commands extract the 'datadir' and 'resultdir' from .ini file
+  timestamp=$(date +%Y.%m.%d-%H.%M.%S)           # create a uniquifier
+  [ $(get_ini_global_param timestamp-datadir True) != "False" ] &&
+    ts="$timestamp" || ts="io500"
+  # working directory where the test files will be created
+  export io500_workdir=$(get_ini_global_param datadir $PWD/datafiles)/$ts
+  [ $(get_ini_global_param timestamp-resultdir True) != "False" ] &&
+    ts="$timestamp" || ts="io500"
+  # the directory where the output results will be kept
+  export io500_resultdir=$(get_ini_global_param resultdir $PWD/results)/$ts
+
+  setup $io500_workdir $io500_resultdir
+  run_benchmarks
+
+  if [[ ! -s "system-information.txt" ]]; then
+    echo "Warning: please create a 'system-information.txt' description by"
+    echo "copying the information from https://vi4io.org/io500-info-creator/"
+  else
+    cp "system-information.txt" $io500_resultdir
+  fi
+
+  create_tarball
+}
+
+main

@@ -1,0 +1,40 @@
+WARNING: fsync() not supported in selected backend. Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Apr 26 14:07:33 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1400422008 -k -e -o /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-hard/file -O stoneWallingStatusFile=./results/2023.04.26-13.56.52/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a CHFS --chfs.chunk_size=47008 -O saveRankPerformanceDetailsCSV=./results/2023.04.26-13.56.52/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux bnode002
+TestID              : 0
+StartTime           : Wed Apr 26 14:07:33 2023
+Path                : /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-hard/file
+FS                  : 3.7 TiB   Used FS: -326.8%   Inodes: 134201344.0 Mi   Used Inodes: 32.9%
+
+Options: 
+api                 : CHFS
+apiVersion          : 2.0.0
+test filename       : /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 480
+clients per node    : 48
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 205.22 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 764488 max: 785398 -- min data: 33.5 GiB mean data: 33.9 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 225638400000000
+WARNING: Stat() of aggregate file size      = 17721594808320
+WARNING: Using actual aggregate bytes moved = 17721594808320
+WARNING: Maybe caused by deadlineForStonewalling
+write     54946      1225712    305.69      45.91      45.91      0.019408   307.57     0.000327   307.59     0   

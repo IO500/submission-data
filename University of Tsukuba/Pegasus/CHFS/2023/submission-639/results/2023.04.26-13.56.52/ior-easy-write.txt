@@ -1,0 +1,40 @@
+WARNING: fsync() not supported in selected backend. Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Apr 26 13:57:07 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400432696 -k -e -o /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.04.26-13.56.52/ior-easy.stonewall -t 1048576 -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a CHFS --chfs.chunk_size=1048576 -O saveRankPerformanceDetailsCSV=./results/2023.04.26-13.56.52/ior-easy-write.csv
+Machine             : Linux bnode002
+TestID              : 0
+StartTime           : Wed Apr 26 13:57:16 2023
+Path                : /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-easy/ior_file_easy.00000000
+FS                  : 4.5 TiB   Used FS: -84.9%   Inodes: 134201344.0 Mi   Used Inodes: 32.9%
+
+Options: 
+api                 : CHFS
+apiVersion          : 2.0.0
+test filename       : /tmp/gfarm-tatebe/datafiles/2023.04.26-13.56.52/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 480
+clients per node    : 48
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 4541.02 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 145842 max: 150188 -- min data: 142.4 GiB mean data: 144.2 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 4992899481600000
+WARNING: Stat() of aggregate file size      = 75592095498240
+WARNING: Using actual aggregate bytes moved = 75592095498240
+WARNING: Maybe caused by deadlineForStonewalling
+write     235814     235826     0.000031    10158080000 1024.00    0.016180   305.69     0.000214   305.71     0   

@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Sep 17 22:15:13 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-243572934 -k -e -o /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/ior-hard/file -O stoneWallingStatusFile=./results/2024.09.17-21.41.20/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.09.17-21.41.20/ior-hard-read.csv
+Machine             : Linux cephhpc101
+TestID              : 0
+StartTime           : Tue Sep 17 22:15:13 2024
+Path                : /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/ior-hard/file
+FS                  : 20884.6 TiB   Used FS: 2.4%   Inodes: 138.2 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 8
+tasks               : 256
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 109.45 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 120340480000000
+WARNING: Stat() of aggregate file size      = 16137658368
+WARNING: Using actual aggregate bytes moved = 16137658368
+read      222.16     4956       69.27       45.91      45.91      0.002307   69.27      0.000716   69.28      0   

@@ -1,0 +1,111 @@
+[run]
+procs           = 256
+version         = io500-isc24_v3
+config-hash     = A12F9769
+result-dir      = ./results/2024.09.17-21.41.20
+mode            = standard
+; START 2024-09-17 21:41:46
+
+
+[ior-easy-write]
+t_start         = 2024-09-17 21:41:46
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -243583622 -k -e -o /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.09.17-21.41.20/ior-easy.stonewall -t 4m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.09.17-21.41.20/ior-easy-write.csv
+throughput-stonewall = 24.27
+score           = 22.313981
+t_delta         = 365.3589
+t_end           = 2024-09-17 21:47:51
+
+[mdtest-easy-write]
+t_start         = 2024-09-17 21:47:51
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 642594173 -N 1 -d /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/mdtest-easy -x ./results/2024.09.17-21.41.20/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.09.17-21.41.20/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 198.892436
+score           = 191.393674
+t_delta         = 346.2574
+t_end           = 2024-09-17 21:53:38
+
+[timestamp]
+t_start         = 2024-09-17 21:53:38
+t_delta         = 0.0003
+t_end           = 2024-09-17 21:53:38
+
+[ior-hard-write]
+t_start         = 2024-09-17 21:53:38
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-243572934 -k -e -o /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/ior-hard/file -O stoneWallingStatusFile=./results/2024.09.17-21.41.20/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.09.17-21.41.20/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.04
+score           = 0.034486
+t_delta         = 436.1899
+t_end           = 2024-09-17 22:00:54
+
+[mdtest-hard-write]
+t_start         = 2024-09-17 22:00:54
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=642604861 -N 1 -F -d /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/mdtest-hard -x ./results/2024.09.17-21.41.20/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.09.17-21.41.20/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 13.043621
+score           = 12.619709
+t_delta         = 334.7799
+t_end           = 2024-09-17 22:06:29
+
+[find]
+t_start         = 2024-09-17 22:06:29
+exe             = ./pfind /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20 -newer ./results/2024.09.17-21.41.20/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 256
+found           = 140342
+total-files     = 70250241
+score           = 1133.541364
+t_delta         = 61.9756
+t_end           = 2024-09-17 22:07:31
+
+[ior-easy-read]
+t_start         = 2024-09-17 22:07:31
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -243583622 -k -e -o /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.09.17-21.41.20/ior-easy.stonewall -t 4m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.09.17-21.41.20/ior-easy-read.csv
+score           = 49.651664
+t_delta         = 162.4243
+t_end           = 2024-09-17 22:10:13
+
+[mdtest-easy-stat]
+t_start         = 2024-09-17 22:10:13
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 642594173 -N 1 -d /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/mdtest-easy -x ./results/2024.09.17-21.41.20/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2024.09.17-21.41.20/mdtest-easy-stat.csv -a POSIX
+score           = 221.150732
+t_delta         = 299.6772
+t_end           = 2024-09-17 22:15:13
+
+[ior-hard-read]
+t_start         = 2024-09-17 22:15:13
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-243572934 -k -e -o /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/ior-hard/file -O stoneWallingStatusFile=./results/2024.09.17-21.41.20/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.09.17-21.41.20/ior-hard-read.csv
+score           = 0.216950
+t_delta         = 69.3166
+t_end           = 2024-09-17 22:16:22
+
+[mdtest-hard-stat]
+t_start         = 2024-09-17 22:16:22
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=642604861 -N 1 -F -d /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/mdtest-hard -x ./results/2024.09.17-21.41.20/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2024.09.17-21.41.20/mdtest-hard-stat.csv -a POSIX
+score           = 100.575239
+t_delta         = 42.9428
+t_end           = 2024-09-17 22:17:05
+
+[mdtest-easy-delete]
+t_start         = 2024-09-17 22:17:05
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 642594173 -N 1 -d /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/mdtest-easy -x ./results/2024.09.17-21.41.20/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2024.09.17-21.41.20/mdtest-easy-delete.csv -a POSIX
+score           = 104.919690
+t_delta         = 630.8339
+t_end           = 2024-09-17 22:27:36
+
+[mdtest-hard-read]
+t_start         = 2024-09-17 22:27:36
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=642604861 -N 1 -F -d /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/mdtest-hard -x ./results/2024.09.17-21.41.20/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2024.09.17-21.41.20/mdtest-hard-read.csv -a POSIX
+score           = 65.748842
+t_delta         = 65.0744
+t_end           = 2024-09-17 22:28:41
+
+[mdtest-hard-delete]
+t_start         = 2024-09-17 22:28:41
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=642604861 -N 1 -F -d /mnt/mycephfs/ec_dir/datafiles/2024.09.17-21.41.20/mdtest-hard -x ./results/2024.09.17-21.41.20/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2024.09.17-21.41.20/mdtest-hard-delete.csv -a POSIX
+score           = 11.399259
+t_delta         = 370.5525
+t_end           = 2024-09-17 22:34:51
+
+[SCORE]
+MD              = 91.206741
+BW              = 1.696787
+SCORE           = 12.440195
+hash            = AEC8B610
+; END 2024-09-17 22:35:19

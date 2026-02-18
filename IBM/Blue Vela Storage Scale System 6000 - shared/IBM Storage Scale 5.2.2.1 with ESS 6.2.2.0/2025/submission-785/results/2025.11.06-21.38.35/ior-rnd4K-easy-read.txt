@@ -1,0 +1,43 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  6 22:35:37 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761738820 -k -e -o /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+Machine             : Linux p1-r06-n1.bluevela.rmf.ibm.com
+TestID              : 0
+StartTime           : Thu Nov  6 22:35:37 2025
+Path                : /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/ior-easy/ior_file_easy.00000000
+FS                  : 609.0 TiB   Used FS: 67.7%   Inodes: 501.0 Mi   Used Inodes: 34.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 20
+tasks               : 400
+clients per node    : 20
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 14.90 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1075332 max: 1132282 -- min data: 4.1 GiB mean data: 4.2 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 16384000000000
+WARNING: Stat() of aggregate file size      = 183911841792000
+WARNING: Using actual aggregate bytes moved = 1855130828800
+WARNING: Maybe caused by deadlineForStonewalling
+read      5758       1474177    0.000269    4.00       4.00       0.000565   307.23     0.000865   307.23     0   
+Pairs deadlineForStonewallingaccessed: 0

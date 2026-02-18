@@ -1,0 +1,118 @@
+[run]
+procs           = 400
+version         = io500-sc25
+config-hash     = 9F08D861
+result-dir      = /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35
+mode            = standard
+; START 2025-11-06 21:38:35
+
+
+[ior-easy-write]
+t_start         = 2025-11-06 21:38:35
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761738820 -k -e -o /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/ior-easy/ior_file_easy -O stoneWallingStatusFile=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-easy.stonewall -t 16m -b 1984000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-easy-write.csv
+throughput-stonewall = 477.95
+score           = 436.642877
+t_delta         = 392.2895
+t_end           = 2025-11-06 21:45:07
+
+[mdtest-easy-write]
+t_start         = 2025-11-06 21:45:07
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1647916614 -N 1 -d /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/mdtest-easy -x /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 522.695086
+score           = 506.842778
+t_delta         = 327.3496
+t_end           = 2025-11-06 21:50:35
+
+[timestamp]
+t_start         = 2025-11-06 21:50:35
+t_delta         = 0.0002
+t_end           = 2025-11-06 21:50:35
+
+[ior-hard-write]
+t_start         = 2025-11-06 21:50:35
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761749508 -k -e -o /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/ior-hard/file -O stoneWallingStatusFile=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 108.97
+score           = 107.175616
+t_delta         = 305.2355
+t_end           = 2025-11-06 21:55:40
+
+[mdtest-hard-write]
+t_start         = 2025-11-06 21:55:40
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647927302 -N 1 -F -d /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/mdtest-hard -x /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-hard-write.csv -a POSIX --posix.gpfs.createsharing
+rate-stonewall  = 46.797907
+score           = 40.300533
+t_delta         = 486.2758
+t_end           = 2025-11-06 22:03:46
+
+[find]
+t_start         = 2025-11-06 22:03:46
+exe             = ./pfind /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35 -newer /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 400
+found           = 688181
+total-files     = 184610401
+score           = 1922.519082
+t_delta         = 96.0275
+t_end           = 2025-11-06 22:05:22
+
+[ior-easy-read]
+t_start         = 2025-11-06 22:05:22
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761738820 -k -e -o /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/ior-easy/ior_file_easy -O stoneWallingStatusFile=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-easy.stonewall -t 16m -b 1984000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-easy-read.csv
+score           = 615.735476
+t_delta         = 278.1950
+t_end           = 2025-11-06 22:10:00
+
+[mdtest-easy-stat]
+t_start         = 2025-11-06 22:10:00
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1647916614 -N 1 -d /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/mdtest-easy -x /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-easy-stat.csv -a POSIX
+score           = 559.595518
+t_delta         = 295.9631
+t_end           = 2025-11-06 22:14:56
+
+[ior-hard-read]
+t_start         = 2025-11-06 22:14:56
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761749508 -k -e -o /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/ior-hard/file -O stoneWallingStatusFile=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX --posix.gpfs.finegrainreadsharing -O saveRankPerformanceDetailsCSV=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-hard-read.csv
+score           = 172.070246
+t_delta         = 190.1231
+t_end           = 2025-11-06 22:18:06
+
+[mdtest-hard-stat]
+t_start         = 2025-11-06 22:18:06
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647927302 -N 1 -F -d /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/mdtest-hard -x /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-hard-stat.csv -a POSIX
+score           = 560.092202
+t_delta         = 35.9266
+t_end           = 2025-11-06 22:18:42
+
+[mdtest-easy-delete]
+t_start         = 2025-11-06 22:18:42
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1647916614 -N 1 -d /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/mdtest-easy -x /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-easy-delete.csv -a POSIX
+score           = 321.603750
+t_delta         = 541.6619
+t_end           = 2025-11-06 22:27:44
+
+[mdtest-hard-read]
+t_start         = 2025-11-06 22:27:44
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647927302 -N 1 -F -d /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/mdtest-hard -x /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-hard-read.csv -a POSIX
+score           = 547.530307
+t_delta         = 36.7286
+t_end           = 2025-11-06 22:28:21
+
+[mdtest-hard-delete]
+t_start         = 2025-11-06 22:28:21
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647927302 -N 1 -F -d /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/mdtest-hard -x /u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/mdtest-hard-delete.csv -a POSIX
+score           = 51.295455
+t_delta         = 435.7837
+t_end           = 2025-11-06 22:35:37
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-11-06 22:35:37
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761738820 -k -e -o /gpfs/gpfs0_bench/io500/2025.11.06-21.38.35/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=/u/jlewars/io500/results_bb4nvme_16m/2025.11.06-21.38.35/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 5.623511
+t_delta         = 307.2473
+t_end           = 2025-11-06 22:40:44
+
+[SCORE]
+MD              = 320.442105
+BW              = 265.357020
+SCORE           = 291.601718
+hash            = C9CFC6E8
+; END 2025-11-06 22:40:52

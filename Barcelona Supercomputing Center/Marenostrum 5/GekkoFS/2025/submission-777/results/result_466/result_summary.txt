@@ -1,0 +1,16 @@
+IO500 version io500-sc25-3-gfcd41756b9fd (standard)
+[RESULT]       ior-easy-write       91.347873 GiB/s : time 469.993 seconds
+[RESULT]    mdtest-easy-write     4436.210379 kIOPS : time 336.424 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.000 seconds
+[RESULT]       ior-hard-write       61.659816 GiB/s : time 338.766 seconds
+[RESULT]    mdtest-hard-write      833.758631 kIOPS : time 349.801 seconds
+[RESULT]                 find     2677.337708 kIOPS : time 664.378 seconds
+[RESULT]        ior-easy-read      111.701353 GiB/s : time 383.861 seconds
+[RESULT]     mdtest-easy-stat     4405.483666 kIOPS : time 338.762 seconds
+[RESULT]        ior-hard-read       99.203425 GiB/s : time 210.567 seconds
+[RESULT]     mdtest-hard-stat     4384.900961 kIOPS : time 67.330 seconds
+[RESULT]   mdtest-easy-delete     4255.425884 kIOPS : time 350.673 seconds
+[RESULT]     mdtest-hard-read     1644.226563 kIOPS : time 177.876 seconds
+[RESULT]   mdtest-hard-delete      958.815817 kIOPS : time 304.311 seconds
+[      ]  ior-rnd4K-easy-read       12.763015 GiB/s : time 324.894 seconds
+[SCORE ] Bandwidth 88.883560 GiB/s : IOPS 2446.490941 kiops : TOTAL 466.318372

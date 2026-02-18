@@ -1,0 +1,118 @@
+[run]
+procs           = 320
+version         = io500-sc25-3-gfcd41756b9fd
+config-hash     = 8349B484
+result-dir      = /gpfs/home/bsc/bsc025015/results
+mode            = standard
+; START 2025-11-04 15:24:13
+
+
+[ior-easy-write]
+t_start         = 2025-11-04 15:24:13
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761213963 -k -e -o /dev/shm/rnou/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/bsc/bsc025015/results/ior-easy.stonewall -t 512k -b 192g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/bsc/bsc025015/results/ior-easy-write.csv
+throughput-stonewall = 100.39
+score           = 91.347873
+t_delta         = 469.9935
+t_end           = 2025-11-04 15:32:03
+
+[mdtest-easy-write]
+t_start         = 2025-11-04 15:32:03
+exe             = ./mdtest --dataPacketType=timestamp -n 5000000 -u -L -F -P -G 1647391757 -N 1 -d /dev/shm/rnou/mdtest-easy -x /gpfs/home/bsc/bsc025015/results/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/home/bsc/bsc025015/results/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 4637.904497
+score           = 4436.210379
+t_delta         = 336.4242
+t_end           = 2025-11-04 15:37:39
+
+[timestamp]
+t_start         = 2025-11-04 15:37:39
+t_delta         = 0.0002
+t_end           = 2025-11-04 15:37:39
+
+[ior-hard-write]
+t_start         = 2025-11-04 15:37:39
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761224651 -k -e -o /dev/shm/rnou/ior-hard/file -O stoneWallingStatusFile=/gpfs/home/bsc/bsc025015/results/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/bsc/bsc025015/results/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 65.83
+score           = 61.659816
+t_delta         = 338.7659
+t_end           = 2025-11-04 15:43:18
+
+[mdtest-hard-write]
+t_start         = 2025-11-04 15:43:18
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647402445 -N 1 -F -d /dev/shm/rnou/mdtest-hard -x /gpfs/home/bsc/bsc025015/results/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/home/bsc/bsc025015/results/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 901.204101
+score           = 833.758631
+t_delta         = 349.8010
+t_end           = 2025-11-04 15:49:08
+
+[find]
+t_start         = 2025-11-04 15:49:08
+exe             =  /home/bsc/bsc025015/ADMIRE/iodeps/bin/pfind.sh  /dev/shm/rnou -newer /gpfs/home/bsc/bsc025015/results/timestampfile -size 3901c -name "*01*"
+last-output     = "MATCHED 14105671/1778763841"
+total-files     = 1778763841
+found           = 14105671
+score           = 2677.337708
+t_delta         = 664.3781
+t_end           = 2025-11-04 16:00:12
+
+[ior-easy-read]
+t_start         = 2025-11-04 16:00:12
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761213963 -k -e -o /dev/shm/rnou/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/bsc/bsc025015/results/ior-easy.stonewall -t 512k -b 192g -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/bsc/bsc025015/results/ior-easy-read.csv
+score           = 111.701353
+t_delta         = 383.8613
+t_end           = 2025-11-04 16:06:36
+
+[mdtest-easy-stat]
+t_start         = 2025-11-04 16:06:36
+exe             = ./mdtest --dataPacketType=timestamp -n 5000000 -u -L -F -P -G 1647391757 -N 1 -d /dev/shm/rnou/mdtest-easy -x /gpfs/home/bsc/bsc025015/results/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/gpfs/home/bsc/bsc025015/results/mdtest-easy-stat.csv -a POSIX
+score           = 4405.483666
+t_delta         = 338.7618
+t_end           = 2025-11-04 16:12:15
+
+[ior-hard-read]
+t_start         = 2025-11-04 16:12:15
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761224651 -k -e -o /dev/shm/rnou/ior-hard/file -O stoneWallingStatusFile=/gpfs/home/bsc/bsc025015/results/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/bsc/bsc025015/results/ior-hard-read.csv
+score           = 99.203425
+t_delta         = 210.5672
+t_end           = 2025-11-04 16:15:46
+
+[mdtest-hard-stat]
+t_start         = 2025-11-04 16:15:46
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647402445 -N 1 -F -d /dev/shm/rnou/mdtest-hard -x /gpfs/home/bsc/bsc025015/results/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/gpfs/home/bsc/bsc025015/results/mdtest-hard-stat.csv -a POSIX
+score           = 4384.900961
+t_delta         = 67.3298
+t_end           = 2025-11-04 16:16:53
+
+[mdtest-easy-delete]
+t_start         = 2025-11-04 16:16:53
+exe             = ./mdtest --dataPacketType=timestamp -n 5000000 -u -L -F -P -G 1647391757 -N 1 -d /dev/shm/rnou/mdtest-easy -x /gpfs/home/bsc/bsc025015/results/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/gpfs/home/bsc/bsc025015/results/mdtest-easy-delete.csv -a POSIX
+score           = 4255.425884
+t_delta         = 350.6734
+t_end           = 2025-11-04 16:22:44
+
+[mdtest-hard-read]
+t_start         = 2025-11-04 16:22:44
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647402445 -N 1 -F -d /dev/shm/rnou/mdtest-hard -x /gpfs/home/bsc/bsc025015/results/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/gpfs/home/bsc/bsc025015/results/mdtest-hard-read.csv -a POSIX
+score           = 1644.226563
+t_delta         = 177.8756
+t_end           = 2025-11-04 16:25:41
+
+[mdtest-hard-delete]
+t_start         = 2025-11-04 16:25:41
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1647402445 -N 1 -F -d /dev/shm/rnou/mdtest-hard -x /gpfs/home/bsc/bsc025015/results/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/gpfs/home/bsc/bsc025015/results/mdtest-hard-delete.csv -a POSIX
+score           = 958.815817
+t_delta         = 304.3112
+t_end           = 2025-11-04 16:30:46
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-11-04 16:30:46
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761213963 -k -e -o /dev/shm/rnou/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/bsc/bsc025015/results/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 12.763015
+t_delta         = 324.8938
+t_end           = 2025-11-04 16:36:11
+
+[SCORE]
+MD              = 2446.490941
+BW              = 88.883560
+SCORE           = 466.318372
+hash            = E4323989
+; END 2025-11-04 16:36:34

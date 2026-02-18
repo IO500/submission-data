@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov  4 15:24:13 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761213963 -k -e -o /dev/shm/rnou/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/bsc/bsc025015/results/ior-easy.stonewall -t 512k -b 192g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/bsc/bsc025015/results/ior-easy-write.csv
+Machine             : Linux gs07r1b06
+TestID              : 0
+StartTime           : Tue Nov  4 15:24:13 2025
+Path                : /dev/shm/rnou/ior-easy/ior_file_easy.00000000
+FS                  : 342.0 TiB   Used FS: 5.7%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /dev/shm/rnou/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 524288 bytes
+blocksize           : 192 GiB
+aggregate filesize  : 60 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 166304 max: 274409 -- min data: 81.2 GiB mean data: 94.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 65970697666560
+WARNING: Stat() of aggregate file size      = 46038190653440
+WARNING: Using actual aggregate bytes moved = 46038190653440
+WARNING: Maybe caused by deadlineForStonewalling
+write     93540      187081     0.001114    201326592  512.00     0.001836   469.37     0.000141   469.37     0   

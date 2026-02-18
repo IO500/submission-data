@@ -1,0 +1,43 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov  4 16:30:46 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761213963 -k -e -o /dev/shm/rnou/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/bsc/bsc025015/results/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+Machine             : Linux gs07r1b06
+TestID              : 0
+StartTime           : Tue Nov  4 16:30:46 2025
+Path                : /dev/shm/rnou/ior-easy/ior_file_easy.00000000
+FS                  : 342.0 TiB   Used FS: 23.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /dev/shm/rnou/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 11.92 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 3132781 max: 3396776 -- min data: 12.0 GiB mean data: 12.4 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 13107200000000
+WARNING: Stat() of aggregate file size      = 46038190653440
+WARNING: Using actual aggregate bytes moved = 4452222238720
+WARNING: Maybe caused by deadlineForStonewalling
+read      13069      3345762    0.000088    4.00       4.00       0.001357   324.88     0.000106   324.88     0   
+Pairs deadlineForStonewallingaccessed: 0

@@ -1,0 +1,33 @@
+-- started at 11/04/2025 15:32:03 --
+
+mdtest-4.1.0+dev was launched with 320 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '5000000' '-u' '-L' '-F' '-P' '-G' '1647391757' '-N' '1' '-d' '/dev/shm/rnou/mdtest-easy' '-x' '/gpfs/home/bsc/bsc025015/results/mdtest-easy.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=/gpfs/home/bsc/bsc025015/results/mdtest-easy-write.csv' '-a' 'POSIX'
+Nodemap: 11111111111111111111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Path                : /dev/shm/rnou/mdtest-easy
+FS                  : 342.0 TiB   Used FS: 17.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+V-0: Rank   0 Line  2586 Shifting ranks by 32 for each phase.
+320 tasks, 1600000000 files
+Continue stonewall hit min: 4162233 max: 4649862 avg: 4348036.0 
+
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation             4436210.379    4436210.379    4436210.379          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                2353.706       2353.706       2353.706          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time (in ms/op): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 335.411        335.411        335.411          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 11/04/2025 15:37:39 --
+

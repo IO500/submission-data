@@ -1,0 +1,57 @@
+#!/bin/bash
+#SBATCH --job-name=leo_io500
+
+#SBATCH --output=/leonardo/home/userexternal/fgarciac/dcamarma/RES/mpi_%j.out
+#SBATCH --error=/leonardo/home/userexternal/fgarciac/dcamarma/RES/mpi_%j.out
+
+### For exclusive usage ###
+#SBATCH -A admir_integr_0
+#SBATCH --nodes=128
+#SBATCH --partition=dcgp_usr_prod
+#SBATCH --qos=dcgp_qos_bprod
+#SBATCH --gres=tmpfs:1000g
+#SBATCH --exclusive
+
+#SBATCH --ntasks-per-node=32
+#SBATCH --cpus-per-task=3
+
+#SBATCH --time=03:00:00
+
+module load "intel-oneapi-mpi/2021.10.0"
+
+scontrol show hostnames ${SLURM_JOB_NODELIST} | sed 's/.*/&.leonardo.local/g' > /leonardo/home/userexternal/fgarciac/dcamarma/tmp/machinefile.${SLURM_JOBID}
+head -n 118 /leonardo/home/userexternal/fgarciac/dcamarma/tmp/machinefile.${SLURM_JOBID} > /leonardo/home/userexternal/fgarciac/dcamarma/tmp/machinefile.${SLURM_JOBID}_1 #Servers
+tail -n 10  /leonardo/home/userexternal/fgarciac/dcamarma/tmp/machinefile.${SLURM_JOBID} > /leonardo/home/userexternal/fgarciac/dcamarma/tmp/machinefile.${SLURM_JOBID}_2 #Clients
+
+echo "[partition]"           >  /leonardo/home/userexternal/fgarciac/dcamarma/tmp/config.${SLURM_JOBID}.xml
+echo "bsize = 512k"          >> /leonardo/home/userexternal/fgarciac/dcamarma/tmp/config.${SLURM_JOBID}.xml
+echo "replication_level = 0" >> /leonardo/home/userexternal/fgarciac/dcamarma/tmp/config.${SLURM_JOBID}.xml
+echo "partition_name = xpn"  >> /leonardo/home/userexternal/fgarciac/dcamarma/tmp/config.${SLURM_JOBID}.xml
+ITER=1
+while IFS= read -r line
+do
+   echo "server_url = mpi_server://$line/$TMPDIR" >> /leonardo/home/userexternal/fgarciac/dcamarma/tmp/config.${SLURM_JOBID}.xml
+   ITER=$((${ITER}+1))
+done < /leonardo/home/userexternal/fgarciac/dcamarma/tmp/machinefile.${SLURM_JOBID}_1
+
+sleep 10
+
+export I_MPI_SPAWN=on
+export FI_MLX_NS_ENABLE=1
+
+mpiexec.hydra -np 118 -rr \
+              -f /leonardo/home/userexternal/fgarciac/dcamarma/tmp/machinefile.${SLURM_JOBID}_1 \
+              /leonardo/home/userexternal/fgarciac/dcamarma/bin/xpn/bin/xpn_server -t pool -d / &
+
+sleep 30
+
+mpiexec.hydra -np 640 -rr \
+              -f /leonardo/home/userexternal/fgarciac/dcamarma/tmp/machinefile.${SLURM_JOBID}_2 \
+              -genv XPN_CONF /leonardo/home/userexternal/fgarciac/dcamarma/tmp/config.${SLURM_JOBID}.xml \
+              -genv LD_PRELOAD /leonardo/home/userexternal/fgarciac/dcamarma/bin/xpn/lib/xpn_bypass.so \
+              -genv XPN_LOCALITY 0 \
+              -genv XPN_THREAD 0 \
+              -genv XPN_SESSION 0 \
+              /leonardo/home/userexternal/fgarciac/dcamarma/src/io500/io500 /leonardo/home/userexternal/fgarciac/dcamarma/jobs/config-all-xpn.ini
+
+pkill mpiexec

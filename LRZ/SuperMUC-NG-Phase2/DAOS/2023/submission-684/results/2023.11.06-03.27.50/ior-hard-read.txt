@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov  6 04:24:10 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385759034 -k -e -o /datafiles/2023.11.06-03.27.50/ior-hard/file -O stoneWallingStatusFile=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.4.0-dfs/2023.11.06-03.27.50/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=lrz_42srv --dfs.cont=cont01_rf0 --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.4.0-dfs/2023.11.06-03.27.50/ior-hard-read.csv
+Machine             : Linux i20r04c01s02
+TestID              : 0
+StartTime           : Mon Nov  6 04:24:10 2023
+Path                : /datafiles/2023.11.06-03.27.50/ior-hard/file
+FS                  : 1091.4 TiB   Used FS: 57.7%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2023.11.06-03.27.50/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 90
+tasks               : 6480
+clients per node    : 72
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 2770.43 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 3046118400000000
+WARNING: Stat() of aggregate file size      = 278907169881600
+WARNING: Using actual aggregate bytes moved = 278907169881600
+read      739964     16506091   359.45      45.91      45.91      0.004319   359.45     0.000266   359.46     0   

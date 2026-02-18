@@ -1,0 +1,40 @@
+# see  https://www.vi4io.org/io500-info-creator/
+#
+# HPE ProLiant DL320 Gen 11 with Slingshot 400 - DAOS Storage System (MD-on-SSD)
+#
+
+io500_info_submitter="Michael Hennecke <michael.hennecke@hpe.com>"
+io500_info_include-in-io500="true"
+io500_info_include-in-10node="true"
+
+io500_info_institution="HPE"
+io500_info_system="HPE-DL320-SS400"
+io500_info_system_classification="research"
+io500_info_storage_install_date="2025-06-26"
+io500_info_storage_vendor="HPE"
+io500_info_filesystem_name="/daos"
+io500_info_filesystem_type="DAOS"
+io500_info_filesystem_version="2.6.4-2"
+
+io500_info_client_nodes="10"
+io500_info_client_procs_per_node="128"
+io500_info_client_operating_system="Red Hat Enterprise Linux 9.6"
+io500_info_client_operating_system_version="9.6"
+io500_info_client_kernel_version="5.14.0-570.12.1.el9_6.x86_64"
+
+io500_info_md_nodes="0"
+io500_info_md_storage_devices="0"
+
+io500_info_ds_nodes="8"
+io500_info_ds_storage_devices="4"
+io500_info_ds_storage_type="4x Samsung PM1743 E3.S 3.84TB NVMe"
+io500_info_ds_volatile_memory_capacity="512GiB"
+io500_info_ds_storage_interface="NVMe (PCIe gen5 x4)"
+io500_info_ds_network="Slingshot 400"
+io500_info_filesystem_version="2.6.4-2"
+io500_info_ds_operating_system_version="Red Hat Enterprise Linux 9.6"
+io500_info_ds_overhead="0"
+
+io500_info_whatever="DAOS Server: HPE ProLiant DL320 Gen11 with 1x Intel Xeon Gold 6448H, 4x Samsung 3.84TB PM1743 NVMe, 512 GiB DRAM, 1x Slingshot 400 NIC"
+io500_info_comment="DAOS has no dedicated metadata servers"
+

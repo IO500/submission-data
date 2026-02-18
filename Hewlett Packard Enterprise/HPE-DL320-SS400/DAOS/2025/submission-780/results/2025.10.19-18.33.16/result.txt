@@ -1,0 +1,118 @@
+[run]
+procs           = 1280
+version         = io500-sc25-26
+config-hash     = 2CB0FAB5
+result-dir      = /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16
+mode            = standard
+; START 2025-10-19 18:33:54
+
+
+[ior-easy-write]
+t_start         = 2025-10-19 18:33:54
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746808573 -k -e -o /datafiles/2025.10.19-18.33.16/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-easy.stonewall -t 4m -b 99000000m -F -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=4MiB -O saveRankPerformanceDetailsCSV=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-easy-write.csv
+throughput-stonewall = 146.89
+score           = 144.980934
+t_delta         = 330.0733
+t_end           = 2025-10-19 18:39:24
+
+[mdtest-easy-write]
+t_start         = 2025-10-19 18:39:24
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1632986367 -N 1 -d /datafiles/2025.10.19-18.33.16/mdtest-easy -x /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-easy-write.csv -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 5098.408366
+score           = 5085.140551
+t_delta         = 304.4078
+t_end           = 2025-10-19 18:44:29
+
+[timestamp]
+t_start         = 2025-10-19 18:44:29
+t_delta         = 0.0008
+t_end           = 2025-10-19 18:44:29
+
+[ior-hard-write]
+t_start         = 2025-10-19 18:44:29
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746819261 -k -e -o /datafiles/2025.10.19-18.33.16/ior-hard/file -O stoneWallingStatusFile=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 58.71
+score           = 52.045726
+t_delta         = 350.2806
+t_end           = 2025-10-19 18:50:19
+
+[mdtest-hard-write]
+t_start         = 2025-10-19 18:50:19
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=1632997055 -N 1 -F -d /datafiles/2025.10.19-18.33.16/mdtest-hard -x /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-hard-write.csv -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 916.908184
+score           = 775.691803
+t_delta         = 365.2736
+t_end           = 2025-10-19 18:56:24
+
+[find]
+t_start         = 2025-10-19 18:56:24
+exe             = ./pfind /datafiles/2025.10.19-18.33.16 -newer /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1280
+found           = 15605978
+total-files     = 1825260801
+score           = 376.511997
+t_delta         = 4883.0997
+t_end           = 2025-10-19 20:17:47
+
+[ior-easy-read]
+t_start         = 2025-10-19 20:17:47
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746808573 -k -e -o /datafiles/2025.10.19-18.33.16/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-easy.stonewall -t 4m -b 99000000m -F -r -R -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=4MiB -O saveRankPerformanceDetailsCSV=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-easy-read.csv
+score           = 353.606528
+t_delta         = 135.3608
+t_end           = 2025-10-19 20:20:03
+
+[mdtest-easy-stat]
+t_start         = 2025-10-19 20:20:03
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1632986367 -N 1 -d /datafiles/2025.10.19-18.33.16/mdtest-easy -x /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-easy-stat.csv -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1355.844780
+t_delta         = 1138.8384
+t_end           = 2025-10-19 20:39:02
+
+[ior-hard-read]
+t_start         = 2025-10-19 20:39:02
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=746819261 -k -e -o /datafiles/2025.10.19-18.33.16/ior-hard/file -O stoneWallingStatusFile=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-hard-read.csv
+score           = 44.656769
+t_delta         = 408.2284
+t_end           = 2025-10-19 20:45:50
+
+[mdtest-hard-stat]
+t_start         = 2025-10-19 20:45:50
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=1632997055 -N 1 -F -d /datafiles/2025.10.19-18.33.16/mdtest-hard -x /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-hard-stat.csv -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1356.547329
+t_delta         = 209.3022
+t_end           = 2025-10-19 20:49:19
+
+[mdtest-easy-delete]
+t_start         = 2025-10-19 20:49:19
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 1632986367 -N 1 -d /datafiles/2025.10.19-18.33.16/mdtest-easy -x /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-easy-delete.csv -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1733.770993
+t_delta         = 893.6980
+t_end           = 2025-10-19 21:04:13
+
+[mdtest-hard-read]
+t_start         = 2025-10-19 21:04:13
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=1632997055 -N 1 -F -d /datafiles/2025.10.19-18.33.16/mdtest-hard -x /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-hard-read.csv -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1311.077260
+t_delta         = 216.5312
+t_end           = 2025-10-19 21:07:49
+
+[mdtest-hard-delete]
+t_start         = 2025-10-19 21:07:49
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=1632997055 -N 1 -F -d /datafiles/2025.10.19-18.33.16/mdtest-hard -x /home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/mdtest-hard-delete.csv -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1593.824744
+t_delta         = 238.5235
+t_end           = 2025-10-19 21:11:48
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-10-19 21:11:48
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 746808573 -k -e -o /datafiles/2025.10.19-18.33.16/ior-easy/ior_file_easy -F -r -D 300 -z -z -a DFS --dfs.pool=cpe-pool --dfs.cont=hennecke_rf0_e1MiB -O saveRankPerformanceDetailsCSV=/home/users/hennecke/bench/results-hpe-daos-2.6.4-dfs/2025.10.19-18.33.16/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 10.078759
+t_delta         = 305.5329
+t_end           = 2025-10-19 21:16:53
+
+[SCORE]
+MD              = 1331.786355
+BW              = 104.478249
+SCORE           = 373.018373
+hash            = D16E1346
+; END 2025-10-19 21:16:54

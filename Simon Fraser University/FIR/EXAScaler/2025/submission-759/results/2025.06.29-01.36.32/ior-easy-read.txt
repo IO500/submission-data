@@ -1,0 +1,47 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Jun 29 09:01:03 2025
+Command line        : ./ior --dataPacketType=timestamp -v -v -C -Q 1 -g -G 781366721 -k -e -o ./data/2025.06.29-01.36.32/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.06.29-01.36.32/ior-easy.stonewall -t 16m -b 60g -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2025.06.29-01.36.32/ior-easy-read.csv
+Machine             : Linux fc20102 5.14.0-427.13.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Wed May 1 19:11:28 UTC 2024 x86_64
+TestID              : 0
+StartTime           : Sun Jun 29 09:01:03 2025
+Path                : ./data/2025.06.29-01.36.32/ior-easy/ior_file_easy.00000000
+FS                  : 46167.8 TiB   Used FS: 54.3%   Inodes: 16381.2 Mi   Used Inodes: 13.0%
+Participating tasks : 1280
+Using reorderTasks '-C' (useful to avoid read cache in client)
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./data/2025.06.29-01.36.32/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1280
+clients per node    : 128
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 60 GiB
+aggregate filesize  : 75 TiB
+verbose             : 2
+
+Results: 
+Using Time Stamp 781366721 (0x2e92b5c1) for Data Signature
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+Commencing read performance test: Sun Jun 29 09:01:04 2025
+
+read      202489     12660      0.100050    62914560   16384      4.17       388.25     4.06       388.38     0   
+Max Read:  202488.95 MiB/sec (212325.06 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Stonewall(s) Stonewall(MiB) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+read       202488.95  202488.95  202488.95       0.00   12655.56   12655.56   12655.56       0.00  388.38267         NA            NA     0   1280 128    1   1     1        1         0    0      1 64424509440 16777216 78643200.0 POSIX      0
+Finished            : Sun Jun 29 09:07:28 2025

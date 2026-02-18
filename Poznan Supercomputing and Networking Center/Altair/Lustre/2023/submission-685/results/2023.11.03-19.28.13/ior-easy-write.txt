@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  3 19:28:17 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1386515143 -k -e -o /mnt/lustre/datafiles/2023.11.03-19.28.13/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/lustre/results/2023.11.03-19.28.13/ior-easy.stonewall -t 2m -b 99200m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/lustre/results/2023.11.03-19.28.13/ior-easy-write.csv
+Machine             : Linux client1
+TestID              : 0
+StartTime           : Fri Nov  3 19:28:17 2023
+Path                : /mnt/lustre/datafiles/2023.11.03-19.28.13/ior-easy/ior_file_easy.00000000
+FS                  : 140.7 TiB   Used FS: 0.0%   Inodes: 1600.0 Mi   Used Inodes: 11.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/lustre/datafiles/2023.11.03-19.28.13/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 14
+tasks               : 392
+clients per node    : 28
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 96.88 GiB
+aggregate filesize  : 37.08 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2884 max: 30990 -- min data: 5.6 GiB mean data: 24.9 GiB time: 308.0s
+WARNING: Expected aggregate file size       = 40775345766400
+WARNING: Stat() of aggregate file size      = 25476370268160
+WARNING: Using actual aggregate bytes moved = 25476370268160
+WARNING: Maybe caused by deadlineForStonewalling
+write     15354      7677       0.013116    101580800  2048.00    0.018867   1582.38    0.014606   1582.41    0   

@@ -1,0 +1,35 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 15 16:59:55 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 745751798 -k -e -o /home/ddnsihara/out/datafiles/2025.04.15-16.33.03/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.04.15-16.33.03/ior-easy.stonewall -t 1m -b 23g -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2025.04.15-16.33.03/ior-easy-read.csv
+Machine             : Linux osk-gpu01
+TestID              : 0
+StartTime           : Tue Apr 15 16:59:55 2025
+Path                : /home/ddnsihara/out/datafiles/2025.04.15-16.33.03/ior-easy/ior_file_easy.00000000
+FS                  : 1885.5 TiB   Used FS: 43.2%   Inodes: 11673.6 Mi   Used Inodes: 1.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /home/ddnsihara/out/datafiles/2025.04.15-16.33.03/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 96
+tasks               : 3072
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 23 GiB
+aggregate filesize  : 69 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      313197     313238     0.009806    24117248   1024.00    0.022900   230.98     0.005765   231.01     0   

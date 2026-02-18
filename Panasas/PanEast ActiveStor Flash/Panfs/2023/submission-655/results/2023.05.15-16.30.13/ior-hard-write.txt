@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 15 17:00:55 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384944135 -k -e -o ../../../pgh-realm-65-244//ior-hard/file -O stoneWallingStatusFile=../result_dir/2023.05.15-16.30.13/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=../result_dir/2023.05.15-16.30.13/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux pgh-echo-1-7.palab.panasas.com
+TestID              : 0
+StartTime           : Mon May 15 17:00:55 2023
+Path                : ../../../pgh-realm-65-244//ior-hard/file
+FS                  : 2056.7 TiB   Used FS: 2.4%   Inodes: 128.5 Mi   Used Inodes: 2.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ../../../pgh-realm-65-244//ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 80
+clients per node    : 8
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 34.20 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 19459 max: 25891 -- min data: 0.9 GiB mean data: 1.0 GiB time: 312.3s
+WARNING: Expected aggregate file size       = 37606400000000
+WARNING: Stat() of aggregate file size      = 97366730240
+WARNING: Using actual aggregate bytes moved = 97366730240
+WARNING: Maybe caused by deadlineForStonewalling
+write     249.33     5638       337.05      45.91      45.91      3.91       367.40     1.12       372.42     0   

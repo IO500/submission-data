@@ -1,0 +1,41 @@
+# see  https://www.vi4io.org/io500-info-creator/
+#
+# HPE ProLiant DL360 Gen12 - DAOS Storage System (MD-on-SSD)
+#
+
+io500_info_submitter="Michael Hennecke <michael.hennecke@hpe.com>"
+io500_info_include-in-io500="true"
+io500_info_include-in-10node="true"
+
+io500_info_institution="HPE"
+io500_info_system="HPE-DL360-NDR"
+io500_info_system_classification="research"
+io500_info_storage_install_date="2025-09-15"
+io500_info_storage_vendor="HPE"
+io500_info_filesystem_name="/daos"
+io500_info_filesystem_type="DAOS"
+io500_info_filesystem_version="2.6.4-6"
+
+io500_info_client_nodes="10"
+io500_info_client_procs_per_node="32"
+io500_info_client_operating_system="Rocky Linux release 9.4 (Blue Onyx)"
+io500_info_client_operating_system_version="9.4"
+io500_info_client_kernel_version="5.14.0-427.13.1.el9_4.x86_64"
+
+io500_info_md_nodes="0"
+io500_info_md_storage_devices="0"
+
+io500_info_ds_nodes="1"
+io500_info_ds_storage_devices="20"
+io500_info_ds_storage_type="20x 15.36TB E3.S NVMe (Samsung PM1743)"
+io500_info_ds_volatile_memory_capacity="2048GiB"
+io500_info_ds_storage_interface="NVMe (PCIe gen5 x4)"
+io500_info_ds_network="NDR InfiniBand"
+io500_info_filesystem_version="2.6.4-6"
+io500_info_ds_operating_system="Rocky Linux release 9.5 (Blue Onyx)"
+io500_info_ds_operating_system_version="9.5"
+io500_info_ds_overhead="0"
+
+io500_info_whatever="DAOS Server: HPE ProLiant DL360 Gen12 with 2x Intel Xeon 6740P 48core, 2048 GiB DRAM, 20x 15.36TB Samsung PM1743 E3.S NVMe, 2x ConnectX-7 NDR NIC"
+io500_info_comment="DAOS has no dedicated metadata servers"
+

@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  5 17:34:41 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761491264 -k -e -o /datafiles/2025.11.05-16.41.19/ior-hard/file -O stoneWallingStatusFile=/home/hennecke/io500-dl360/results-hpe-daos-2.6.4-dfs/2025.11.05-16.41.19/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=hennecke_pool01 --dfs.cont=cont_rf0 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/hennecke/io500-dl360/results-hpe-daos-2.6.4-dfs/2025.11.05-16.41.19/ior-hard-read.csv
+Machine             : Linux c-ftc0037
+TestID              : 0
+StartTime           : Wed Nov  5 17:34:41 2025
+Path                : /datafiles/2025.11.05-16.41.19/ior-hard/file
+FS                  : 278.3 TiB   Used FS: 23.1%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2025.11.05-16.41.19/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 136.81 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 150425600000000
+WARNING: Stat() of aggregate file size      = 24725485957120
+WARNING: Using actual aggregate bytes moved = 24725485957120
+read      77574      1730393    0.000185    45.91      45.91      0.009560   303.97     0.009161   303.97     0   

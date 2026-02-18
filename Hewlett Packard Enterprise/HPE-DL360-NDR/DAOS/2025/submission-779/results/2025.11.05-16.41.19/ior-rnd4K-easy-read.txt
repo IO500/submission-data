@@ -1,0 +1,43 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  5 18:01:34 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761480576 -k -e -o /datafiles/2025.11.05-16.41.19/ior-easy/ior_file_easy -F -r -D 300 -z -z -a DFS --dfs.pool=hennecke_pool01 --dfs.cont=cont_rf0 -O saveRankPerformanceDetailsCSV=/home/hennecke/io500-dl360/results-hpe-daos-2.6.4-dfs/2025.11.05-16.41.19/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+Machine             : Linux c-ftc0037
+TestID              : 0
+StartTime           : Wed Nov  5 18:01:34 2025
+Path                : /datafiles/2025.11.05-16.41.19/ior-easy/ior_file_easy.00000000
+FS                  : 278.3 TiB   Used FS: 23.1%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2025.11.05-16.41.19/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 11.92 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2347963 max: 2404139 -- min data: 9.0 GiB mean data: 9.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 13107200000000
+WARNING: Stat() of aggregate file size      = 44654238105600
+WARNING: Using actual aggregate bytes moved = 3151153070080
+WARNING: Maybe caused by deadlineForStonewalling
+read      9816       2512950    0.000125    4.00       4.00       0.011860   306.14     0.006148   306.15     0   
+Pairs deadlineForStonewallingaccessed: 0

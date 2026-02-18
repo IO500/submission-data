@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  5 17:23:26 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761480576 -k -e -o /datafiles/2025.11.05-16.41.19/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/hennecke/io500-dl360/results-hpe-daos-2.6.4-dfs/2025.11.05-16.41.19/ior-easy.stonewall -t 4m -b 99000000m -F -r -R -a DFS --dfs.pool=hennecke_pool01 --dfs.cont=cont_rf0 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/hennecke/io500-dl360/results-hpe-daos-2.6.4-dfs/2025.11.05-16.41.19/ior-easy-read.csv
+Machine             : Linux c-ftc0037
+TestID              : 0
+StartTime           : Wed Nov  5 17:23:26 2025
+Path                : /datafiles/2025.11.05-16.41.19/ior-easy/ior_file_easy.00000000
+FS                  : 278.3 TiB   Used FS: 23.1%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2025.11.05-16.41.19/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 94.41 TiB
+aggregate filesize  : 30212.40 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 33218887680000000
+WARNING: Stat() of aggregate file size      = 44654238105600
+WARNING: Using actual aggregate bytes moved = 44654238105600
+read      93367      23342      0.013709    101376000000 4096       0.009431   456.11     0.009466   456.11     0   

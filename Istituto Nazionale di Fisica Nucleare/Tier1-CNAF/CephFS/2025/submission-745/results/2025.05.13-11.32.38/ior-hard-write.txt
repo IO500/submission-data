@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue May 13 11:45:15 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761994887 -k -e -o /mnt/ceph/fast/io500_test/2025.05.13-11.32.38/ior-hard/file -O stoneWallingStatusFile=/mnt/ceph/fast/io500_test/results/2025.05.13-11.32.38/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/ceph/fast/io500_test/results/2025.05.13-11.32.38/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux xs-403.cr.cnaf.infn.it
+TestID              : 0
+StartTime           : Tue May 13 11:45:15 2025
+Path                : /mnt/ceph/fast/io500_test/2025.05.13-11.32.38/ior-hard/file
+FS                  : 8903.0 TiB   Used FS: 7.4%   Inodes: 86.5 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/ceph/fast/io500_test/2025.05.13-11.32.38/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 160
+clients per node    : 16
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 68.41 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 62045 max: 79371 -- min data: 2.7 GiB mean data: 3.2 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 75212800000000
+WARNING: Stat() of aggregate file size      = 596971514880
+WARNING: Using actual aggregate bytes moved = 596971514880
+WARNING: Maybe caused by deadlineForStonewalling
+write     1478.58    32999      0.003783    45.91      45.91      0.195129   384.84     0.001915   385.04     0   

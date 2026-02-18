@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Sep 29 00:18:31 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=831487734 -k -e -o /datafiles/2025.09.28-23.34.03/ior-hard/file -O stoneWallingStatusFile=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-23.34.03/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e128kiB --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.28-23.34.03/ior-hard-read.csv
+Machine             : Linux i20r04c03s02
+TestID              : 0
+StartTime           : Mon Sep 29 00:18:31 2025
+Path                : /datafiles/2025.09.28-23.34.03/ior-hard/file
+FS                  : 1234.8 TiB   Used FS: 22.5%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2025.09.28-23.34.03/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1120
+clients per node    : 112
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 478.84 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 526489600000000
+WARNING: Stat() of aggregate file size      = 129973487221760
+WARNING: Using actual aggregate bytes moved = 129973487221760
+read      182160     4063335    0.000276    45.91      45.91      0.003534   680.46     0.000490   680.46     0   

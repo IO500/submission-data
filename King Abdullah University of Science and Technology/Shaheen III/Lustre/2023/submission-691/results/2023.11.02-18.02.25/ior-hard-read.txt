@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  2 18:39:14 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1386771585 -k -e -o /scratch/hpe/benchmarks/io500/2023.11.02-18.02.25/ior-hard/file -O stoneWallingStatusFile=./results_bw/2023.11.02-18.02.25/ior-hard.stonewall -t 47008 -b 47008 -s 50000 -r -R -c -a MPIIO -O saveRankPerformanceDetailsCSV=./results_bw/2023.11.02-18.02.25/ior-hard-read.csv
+Machine             : Linux nid00001
+TestID              : 0
+StartTime           : Thu Nov  2 18:39:14 2023
+Path                : /scratch/hpe/benchmarks/io500/2023.11.02-18.02.25/ior-hard/file
+FS                  : 29877.0 TiB   Used FS: 3.6%   Inodes: 30459.0 Mi   Used Inodes: 4.1%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (3.1)
+test filename       : /scratch/hpe/benchmarks/io500/2023.11.02-18.02.25/ior-hard/file
+access              : single-shared-file
+type                : collective
+segments            : 50000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2080
+tasks               : 16640
+clients per node    : 8
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 35.57 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 39110656000000
+WARNING: Stat() of aggregate file size      = 7718879068160
+WARNING: Using actual aggregate bytes moved = 7718879068160
+read      1185100    28463389   5.77        45.91      45.91      0.438369   5.77       0.004318   6.21       0   

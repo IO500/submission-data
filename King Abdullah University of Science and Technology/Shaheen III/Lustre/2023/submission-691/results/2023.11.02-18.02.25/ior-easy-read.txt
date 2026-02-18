@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  2 18:31:08 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1386782273 -k -e -o /scratch/hpe/benchmarks/io500/2023.11.02-18.02.25/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results_bw/2023.11.02-18.02.25/ior-easy.stonewall -t 64m -b 64g -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results_bw/2023.11.02-18.02.25/ior-easy-read.csv
+Machine             : Linux nid00001
+TestID              : 0
+StartTime           : Thu Nov  2 18:31:08 2023
+Path                : /scratch/hpe/benchmarks/io500/2023.11.02-18.02.25/ior-easy/ior_file_easy.00000000
+FS                  : 29877.0 TiB   Used FS: 3.6%   Inodes: 30459.0 Mi   Used Inodes: 4.1%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch/hpe/benchmarks/io500/2023.11.02-18.02.25/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2080
+tasks               : 16640
+clients per node    : 8
+repetitions         : 1
+xfersize            : 64 MiB
+blocksize           : 64 GiB
+aggregate filesize  : 1040 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      4044757    63245      0.263104    67108864   65536      0.121628   269.42     0.072639   269.61     0   

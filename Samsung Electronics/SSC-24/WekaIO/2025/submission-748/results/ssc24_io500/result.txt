@@ -1,0 +1,111 @@
+[run]
+procs           = 16005
+version         = 
+config-hash     = 973FB172
+result-dir      = ./results/2024.12.16-20.37.30
+mode            = standard
+; START 2024-12-16 20:37:37
+
+
+[ior-easy-write]
+t_start         = 2024-12-16 20:37:37
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -294181378 -k -e -o ./datafiles/2024.12.16-20.37.30/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.12.16-20.37.30/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.12.16-20.37.30/ior-easy-write.csv
+throughput-stonewall = 537.44
+score           = 515.036878
+t_delta         = 1672.1111
+t_end           = 2024-12-16 21:05:29
+
+[mdtest-easy-write]
+t_start         = 2024-12-16 21:05:29
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 591996417 -N 1 -d ./datafiles/2024.12.16-20.37.30/mdtest-easy -x ./results/2024.12.16-20.37.30/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.12.16-20.37.30/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 2244.661759
+score           = 2101.354027
+t_delta         = 391.3892
+t_end           = 2024-12-16 21:12:01
+
+[timestamp]
+t_start         = 2024-12-16 21:12:01
+t_delta         = 0.0006
+t_end           = 2024-12-16 21:12:01
+
+[ior-hard-write]
+t_start         = 2024-12-16 21:12:01
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-294170690 -k -e -o ./datafiles/2024.12.16-20.37.30/ior-hard/file -O stoneWallingStatusFile=./results/2024.12.16-20.37.30/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.12.16-20.37.30/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 1.29
+score           = 28.699560
+t_delta         = 370.8885
+t_end           = 2024-12-16 21:18:12
+
+[mdtest-hard-write]
+t_start         = 2024-12-16 21:18:12
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=592007105 -N 1 -F -d ./datafiles/2024.12.16-20.37.30/mdtest-hard -x ./results/2024.12.16-20.37.30/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.12.16-20.37.30/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 518.177382
+score           = 510.924432
+t_delta         = 311.1121
+t_end           = 2024-12-16 21:23:23
+
+[find]
+t_start         = 2024-12-16 21:23:23
+exe             = ./pfind ./datafiles/2024.12.16-20.37.30 -newer ./results/2024.12.16-20.37.30/timestampfile -size 3901c -name *01* -C -q 17000
+nproc           = 16005
+found           = 6976649
+total-files     = 977537386
+score           = 486.727217
+t_delta         = 2008.4393
+t_end           = 2024-12-16 21:56:51
+
+[ior-easy-read]
+t_start         = 2024-12-16 21:56:51
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -294181378 -k -e -o ./datafiles/2024.12.16-20.37.30/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.12.16-20.37.30/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.12.16-20.37.30/ior-easy-read.csv
+score           = 1461.311039
+t_delta         = 588.1573
+t_end           = 2024-12-16 22:06:39
+
+[mdtest-easy-stat]
+t_start         = 2024-12-16 22:06:39
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 591996417 -N 1 -d ./datafiles/2024.12.16-20.37.30/mdtest-easy -x ./results/2024.12.16-20.37.30/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2024.12.16-20.37.30/mdtest-easy-stat.csv -a POSIX
+score           = 17409.070284
+t_delta         = 48.4317
+t_end           = 2024-12-16 22:07:28
+
+[ior-hard-read]
+t_start         = 2024-12-16 22:07:28
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-294170690 -k -e -o ./datafiles/2024.12.16-20.37.30/ior-hard/file -O stoneWallingStatusFile=./results/2024.12.16-20.37.30/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.12.16-20.37.30/ior-hard-read.csv
+score           = 177.020053
+t_delta         = 60.0866
+t_end           = 2024-12-16 22:08:28
+
+[mdtest-hard-stat]
+t_start         = 2024-12-16 22:08:28
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=592007105 -N 1 -F -d ./datafiles/2024.12.16-20.37.30/mdtest-hard -x ./results/2024.12.16-20.37.30/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2024.12.16-20.37.30/mdtest-hard-stat.csv -a POSIX
+score           = 16634.743735
+t_delta         = 10.8692
+t_end           = 2024-12-16 22:08:39
+
+[mdtest-easy-delete]
+t_start         = 2024-12-16 22:08:39
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 591996417 -N 1 -d ./datafiles/2024.12.16-20.37.30/mdtest-easy -x ./results/2024.12.16-20.37.30/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2024.12.16-20.37.30/mdtest-easy-delete.csv -a POSIX
+score           = 2768.382484
+t_delta         = 306.6097
+t_end           = 2024-12-16 22:13:45
+
+[mdtest-hard-read]
+t_start         = 2024-12-16 22:13:45
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=592007105 -N 1 -F -d ./datafiles/2024.12.16-20.37.30/mdtest-hard -x ./results/2024.12.16-20.37.30/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2024.12.16-20.37.30/mdtest-hard-read.csv -a POSIX
+score           = 12935.076692
+t_delta         = 13.6098
+t_end           = 2024-12-16 22:13:59
+
+[mdtest-hard-delete]
+t_start         = 2024-12-16 22:13:59
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=592007105 -N 1 -F -d ./datafiles/2024.12.16-20.37.30/mdtest-hard -x ./results/2024.12.16-20.37.30/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2024.12.16-20.37.30/mdtest-hard-delete.csv -a POSIX
+score           = 602.544265
+t_delta         = 383.8287
+t_end           = 2024-12-16 22:20:23
+
+[SCORE]
+MD              = 2749.410963
+BW              = 248.667870
+SCORE           = 826.855590
+hash            = 1B0957B8
+; END 2024-12-16 22:21:10

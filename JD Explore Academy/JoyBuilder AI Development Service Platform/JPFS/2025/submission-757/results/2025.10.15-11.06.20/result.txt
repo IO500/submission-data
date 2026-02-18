@@ -1,0 +1,118 @@
+[run]
+procs           = 960
+version         = io500-sc25
+config-hash     = 6C8F23AB
+result-dir      = /root/io500-sc25/io500/results/2025.10.15-11.06.20
+mode            = standard
+; START 2025-10-15 11:06:24
+
+
+[ior-easy-write]
+t_start         = 2025-10-15 11:06:24
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 745730747 -k -e -o /mnt/jdufs_test/io500/2025.10.15-11.06.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-easy-write.csv
+throughput-stonewall = 243.71
+score           = 236.193438
+t_delta         = 354.3275
+t_end           = 2025-10-15 11:12:19
+
+[mdtest-easy-write]
+t_start         = 2025-10-15 11:12:19
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1631908541 -N 1 -d /mnt/jdufs_test/io500/2025.10.15-11.06.20/mdtest-easy -x /root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 3171.987092
+score           = 2706.077436
+t_delta         = 359.2509
+t_end           = 2025-10-15 11:18:18
+
+[timestamp]
+t_start         = 2025-10-15 11:18:18
+t_delta         = 0.0000
+t_end           = 2025-10-15 11:18:18
+
+[ior-hard-write]
+t_start         = 2025-10-15 11:18:18
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=745741435 -k -e -o /mnt/jdufs_test/io500/2025.10.15-11.06.20/ior-hard/file -O stoneWallingStatusFile=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 46.08
+score           = 32.095883
+t_delta         = 520.5226
+t_end           = 2025-10-15 11:26:58
+
+[mdtest-hard-write]
+t_start         = 2025-10-15 11:26:58
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1631919229 -N 1 -F -d /mnt/jdufs_test/io500/2025.10.15-11.06.20/mdtest-hard -x /root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 324.657617
+score           = 317.470875
+t_delta         = 316.1718
+t_end           = 2025-10-15 11:32:15
+
+[find]
+t_start         = 2025-10-15 11:32:15
+exe             = ./pfind /mnt/jdufs_test/io500/2025.10.15-11.06.20 -newer /root/io500-sc25/io500/results/2025.10.15-11.06.20/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 960
+found           = 4788459
+total-files     = 1059937921
+score           = 2658.401005
+t_delta         = 398.7146
+t_end           = 2025-10-15 11:38:53
+
+[ior-easy-read]
+t_start         = 2025-10-15 11:38:53
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 745730747 -k -e -o /mnt/jdufs_test/io500/2025.10.15-11.06.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-easy-read.csv
+score           = 390.559138
+t_delta         = 214.1552
+t_end           = 2025-10-15 11:42:27
+
+[mdtest-easy-stat]
+t_start         = 2025-10-15 11:42:28
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1631908541 -N 1 -d /mnt/jdufs_test/io500/2025.10.15-11.06.20/mdtest-easy -x /root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-easy-stat.csv -a POSIX
+score           = 3369.054588
+t_delta         = 286.0330
+t_end           = 2025-10-15 11:47:14
+
+[ior-hard-read]
+t_start         = 2025-10-15 11:47:14
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=745741435 -k -e -o /mnt/jdufs_test/io500/2025.10.15-11.06.20/ior-hard/file -O stoneWallingStatusFile=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-hard-read.csv
+score           = 64.096349
+t_delta         = 260.7199
+t_end           = 2025-10-15 11:51:34
+
+[mdtest-hard-stat]
+t_start         = 2025-10-15 11:51:34
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1631919229 -N 1 -F -d /mnt/jdufs_test/io500/2025.10.15-11.06.20/mdtest-hard -x /root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-hard-stat.csv -a POSIX
+score           = 2711.180649
+t_delta         = 38.3762
+t_end           = 2025-10-15 11:52:13
+
+[mdtest-easy-delete]
+t_start         = 2025-10-15 11:52:13
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1631908541 -N 1 -d /mnt/jdufs_test/io500/2025.10.15-11.06.20/mdtest-easy -x /root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-easy-delete.csv -a POSIX
+score           = 1518.029917
+t_delta         = 662.3336
+t_end           = 2025-10-15 12:03:15
+
+[mdtest-hard-read]
+t_start         = 2025-10-15 12:03:15
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1631919229 -N 1 -F -d /mnt/jdufs_test/io500/2025.10.15-11.06.20/mdtest-hard -x /root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-hard-read.csv -a POSIX
+score           = 1856.322403
+t_delta         = 54.8650
+t_end           = 2025-10-15 12:04:10
+
+[mdtest-hard-delete]
+t_start         = 2025-10-15 12:04:10
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1631919229 -N 1 -F -d /mnt/jdufs_test/io500/2025.10.15-11.06.20/mdtest-hard -x /root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/root/io500-sc25/io500/results/2025.10.15-11.06.20/mdtest-hard-delete.csv -a POSIX
+score           = 252.380514
+t_delta         = 402.2328
+t_end           = 2025-10-15 12:10:52
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-10-15 12:10:52
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 745730747 -k -e -o /mnt/jdufs_test/io500/2025.10.15-11.06.20/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 16.435665
+t_delta         = 304.2895
+t_end           = 2025-10-15 12:15:56
+
+[SCORE]
+MD              = 1400.925637
+BW              = 117.370597
+SCORE           = 405.496582
+hash            = ACB91F71
+; END 2025-10-15 12:16:01

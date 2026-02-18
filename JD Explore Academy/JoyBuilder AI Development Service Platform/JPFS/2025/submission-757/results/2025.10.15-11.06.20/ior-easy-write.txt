@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Oct 15 11:06:24 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 745730747 -k -e -o /mnt/jdufs_test/io500/2025.10.15-11.06.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/root/io500-sc25/io500/results/2025.10.15-11.06.20/ior-easy-write.csv
+Machine             : Linux f6a46e8f604b
+TestID              : 0
+StartTime           : Wed Oct 15 11:06:24 2025
+Path                : /mnt/jdufs_test/io500/2025.10.15-11.06.20/ior-easy/ior_file_easy.00000000
+FS                  : 10000.0 TiB   Used FS: 0.0%   Inodes: 9536.7 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/jdufs_test/io500/2025.10.15-11.06.20/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 80
+tasks               : 960
+clients per node    : 12
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 9082.03 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 29167 max: 44582 -- min data: 57.0 GiB mean data: 76.2 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 9985798963200000
+WARNING: Stat() of aggregate file size      = 89755421245440
+WARNING: Using actual aggregate bytes moved = 89755421245440
+WARNING: Maybe caused by deadlineForStonewalling
+write     241862     120944     0.007788    10158080000 2048.00    0.037253   353.87     0.000392   353.91     0   

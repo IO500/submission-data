@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 16:15:40 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312516613 -k -e -o /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file -O stoneWallingStatusFile=./results/2024.11.10-15.38.15/ior-hard.stonewall -t 47008 -b 47008 -s 130000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.11.10-15.38.15/ior-hard-read.csv
+Machine             : Linux dgx014
+TestID              : 0
+StartTime           : Sun Nov 10 16:15:40 2024
+Path                : /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file
+FS                  : 6308.9 TiB   Used FS: 3.2%   Inodes: 17694.8 Mi   Used Inodes: 1.8%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 130000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 128
+tasks               : 12288
+clients per node    : 96
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 68.30 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 75092459520000
+WARNING: Stat() of aggregate file size      = 11371886542848
+WARNING: Using actual aggregate bytes moved = 11371886542848
+read      165547     3969332    49.22       45.91      45.91      0.989542   60.95      4.73       65.51      0   

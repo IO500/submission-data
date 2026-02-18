@@ -1,0 +1,35 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 16:08:55 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312527301 -k -e -o /lustre/gefion1/ddn/io500/datafiles/io500/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.11.10-15.38.15/ior-easy.stonewall -t 16m -b 16g -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2024.11.10-15.38.15/ior-easy-read.csv
+Machine             : Linux dgx014
+TestID              : 0
+StartTime           : Sun Nov 10 16:08:55 2024
+Path                : /lustre/gefion1/ddn/io500/datafiles/io500/ior-easy/ior_file_easy.00000000
+FS                  : 6308.9 TiB   Used FS: 3.2%   Inodes: 17694.8 Mi   Used Inodes: 1.8%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/gefion1/ddn/io500/datafiles/io500/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 128
+tasks               : 12288
+clients per node    : 96
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 16 GiB
+aggregate filesize  : 192 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      932387     58320      0.209748    16777216   16384      1.06       215.76     1.04       215.93     0   

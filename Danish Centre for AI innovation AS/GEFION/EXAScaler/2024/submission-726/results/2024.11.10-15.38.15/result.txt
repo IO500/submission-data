@@ -1,0 +1,111 @@
+[run]
+procs           = 12288
+version         = io500-sc24_v1
+config-hash     = F19B4C17
+result-dir      = ./results/2024.11.10-15.38.15
+mode            = standard
+; START 2024-11-10 15:38:46
+
+
+[ior-easy-write]
+t_start         = 2024-11-10 15:38:46
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312527301 -k -e -o /lustre/gefion1/ddn/io500/datafiles/io500/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.11.10-15.38.15/ior-easy.stonewall -t 16m -b 16g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2024.11.10-15.38.15/ior-easy-write.csv
+throughput-stonewall = 623.08
+score           = 563.862602
+t_delta         = 347.8534
+t_end           = 2024-11-10 15:44:34
+
+[mdtest-easy-write]
+t_start         = 2024-11-10 15:44:34
+exe             = ./mdtest --dataPacketType=timestamp -n 780000 -u -L -F -P -G 573650494 -N 1 -d /lustre/gefion1/ddn/io500/datafiles/io500/mdtest-easy -x ./results/2024.11.10-15.38.15/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.11.10-15.38.15/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 748.715968
+score           = 515.692008
+t_delta         = 591.9128
+t_end           = 2024-11-10 15:54:26
+
+[timestamp]
+t_start         = 2024-11-10 15:54:26
+t_delta         = 0.0006
+t_end           = 2024-11-10 15:54:26
+
+[ior-hard-write]
+t_start         = 2024-11-10 15:54:26
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312516613 -k -e -o /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file -O stoneWallingStatusFile=./results/2024.11.10-15.38.15/ior-hard.stonewall -t 47008 -b 47008 -s 130000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.11.10-15.38.15/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 22.13
+score           = 23.014703
+t_delta         = 461.0519
+t_end           = 2024-11-10 16:02:07
+
+[mdtest-hard-write]
+t_start         = 2024-11-10 16:02:07
+exe             = ./mdtest --dataPacketType=timestamp -n 280200 -t -w 3901 -e 3901 -P -G=573661182 -N 1 -F -d /lustre/gefion1/ddn/io500/datafiles/io500/mdtest-hard -x ./results/2024.11.10-15.38.15/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.11.10-15.38.15/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 137.960529
+score           = 137.774909
+t_delta         = 314.9564
+t_end           = 2024-11-10 16:07:22
+
+[find]
+t_start         = 2024-11-10 16:07:22
+exe             = ./pfind /lustre/gefion1/ddn/io500/datafiles/io500 -newer ./results/2024.11.10-15.38.15/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 12288
+found           = 1975170
+total-files     = 340144129
+score           = 3664.224894
+t_delta         = 92.8581
+t_end           = 2024-11-10 16:08:55
+
+[ior-easy-read]
+t_start         = 2024-11-10 16:08:55
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312527301 -k -e -o /lustre/gefion1/ddn/io500/datafiles/io500/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.11.10-15.38.15/ior-easy.stonewall -t 16m -b 16g -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2024.11.10-15.38.15/ior-easy-read.csv
+score           = 910.533873
+t_delta         = 215.1644
+t_end           = 2024-11-10 16:12:30
+
+[mdtest-easy-stat]
+t_start         = 2024-11-10 16:12:30
+exe             = ./mdtest --dataPacketType=timestamp -n 780000 -u -L -F -P -G 573650494 -N 1 -d /lustre/gefion1/ddn/io500/datafiles/io500/mdtest-easy -x ./results/2024.11.10-15.38.15/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2024.11.10-15.38.15/mdtest-easy-stat.csv -a POSIX
+score           = 1572.153605
+t_delta         = 190.0301
+t_end           = 2024-11-10 16:15:40
+
+[ior-hard-read]
+t_start         = 2024-11-10 16:15:40
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312516613 -k -e -o /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file -O stoneWallingStatusFile=./results/2024.11.10-15.38.15/ior-hard.stonewall -t 47008 -b 47008 -s 130000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.11.10-15.38.15/ior-hard-read.csv
+score           = 161.666816
+t_delta         = 64.8567
+t_end           = 2024-11-10 16:16:45
+
+[mdtest-hard-stat]
+t_start         = 2024-11-10 16:16:45
+exe             = ./mdtest --dataPacketType=timestamp -n 280200 -t -w 3901 -e 3901 -P -G=573661182 -N 1 -F -d /lustre/gefion1/ddn/io500/datafiles/io500/mdtest-hard -x ./results/2024.11.10-15.38.15/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2024.11.10-15.38.15/mdtest-hard-stat.csv -a POSIX
+score           = 1473.577125
+t_delta         = 30.4793
+t_end           = 2024-11-10 16:17:15
+
+[mdtest-easy-delete]
+t_start         = 2024-11-10 16:17:15
+exe             = ./mdtest --dataPacketType=timestamp -n 780000 -u -L -F -P -G 573650494 -N 1 -d /lustre/gefion1/ddn/io500/datafiles/io500/mdtest-easy -x ./results/2024.11.10-15.38.15/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2024.11.10-15.38.15/mdtest-easy-delete.csv -a POSIX
+score           = 341.593738
+t_delta         = 889.0222
+t_end           = 2024-11-10 16:32:04
+
+[mdtest-hard-read]
+t_start         = 2024-11-10 16:32:04
+exe             = ./mdtest --dataPacketType=timestamp -n 280200 -t -w 3901 -e 3901 -P -G=573661182 -N 1 -F -d /lustre/gefion1/ddn/io500/datafiles/io500/mdtest-hard -x ./results/2024.11.10-15.38.15/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2024.11.10-15.38.15/mdtest-hard-read.csv -a POSIX
+score           = 1045.145516
+t_delta         = 42.4491
+t_end           = 2024-11-10 16:32:47
+
+[mdtest-hard-delete]
+t_start         = 2024-11-10 16:32:47
+exe             = ./mdtest --dataPacketType=timestamp -n 280200 -t -w 3901 -e 3901 -P -G=573661182 -N 1 -F -d /lustre/gefion1/ddn/io500/datafiles/io500/mdtest-hard -x ./results/2024.11.10-15.38.15/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2024.11.10-15.38.15/mdtest-hard-delete.csv -a POSIX
+score           = 147.494062
+t_delta         = 294.7047
+t_end           = 2024-11-10 16:37:42
+
+[SCORE]
+MD              = 649.731560
+BW              = 209.061428
+SCORE           = 368.556384
+hash            = 2B1CC036
+; END 2024-11-10 16:37:42

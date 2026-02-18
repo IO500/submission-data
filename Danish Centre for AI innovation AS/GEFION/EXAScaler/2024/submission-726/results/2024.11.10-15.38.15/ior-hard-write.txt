@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 15:54:26 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312516613 -k -e -o /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file -O stoneWallingStatusFile=./results/2024.11.10-15.38.15/ior-hard.stonewall -t 47008 -b 47008 -s 130000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.11.10-15.38.15/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux dgx014
+TestID              : 0
+StartTime           : Sun Nov 10 15:54:26 2024
+Path                : /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file
+FS                  : 6308.9 TiB   Used FS: 3.0%   Inodes: 17694.8 Mi   Used Inodes: 1.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 130000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 128
+tasks               : 12288
+clients per node    : 96
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 68.30 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 10192 max: 19687 -- min data: 0.4 GiB mean data: 0.5 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 75092459520000
+WARNING: Stat() of aggregate file size      = 11371886542848
+WARNING: Using actual aggregate bytes moved = 11371886542848
+WARNING: Maybe caused by deadlineForStonewalling
+write     23567      567373     408.77      45.91      45.91      34.54      426.38     0.987407   460.18     0   

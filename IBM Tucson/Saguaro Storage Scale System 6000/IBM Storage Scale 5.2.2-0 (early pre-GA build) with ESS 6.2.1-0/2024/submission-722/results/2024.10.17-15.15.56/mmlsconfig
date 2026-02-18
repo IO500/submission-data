@@ -1,0 +1,123 @@
+
+######################################################################
+Mon Oct 21 04:22:14 PM EDT 2024: Output for /usr/lpp/mmfs/bin/mmlsconfig on s6k2a - timeout=60
+######################################################################
+Configuration data for cluster test01.s6k2a-hs:
+-----------------------------------------------
+clusterName test01.s6k2a-hs
+clusterId 2115447780686195884
+dmapiFileHandleSize 32
+tscCmdAllowRemoteConnections no
+ccrEnabled yes
+cipherList AUTHONLY
+sdrNotifyAuthEnabled yes
+numaMemoryInterleave no
+[client,nc1]
+numaMemoryInterleave yes
+maxFilesToCache 128k
+[client]
+maxMBpS 24000
+[common]
+workerThreads 48
+[client,nc1]
+workerThreads 1024
+[common]
+ignorePrefetchLUNCount no
+[client,nc1]
+ignorePrefetchLUNCount yes
+[common]
+maxblocksize 16m
+[client]
+maxblocksize 16M
+[common]
+pagepool 1G
+[client]
+pagepool 48G
+[s6k2aib,s6k2bib]
+nsdRAIDDefaultIoTimeout 100000
+[common]
+nsdRAIDClientOnlyChecksum yes
+[saguaro10ib,saguaro1ib,saguaro2ib,saguaro3ib,saguaro4ib,saguaro5ib,saguaro6ib,saguaro7ib,saguaro8ib,saguaro9ib]
+dataShipAssertOnFailure yes
+[common]
+fsyncIsGlobal no
+subnets 192.168.0.0/16
+autoCompactDir 0
+fgdlTokenBatchAcquire 1
+prefetchPct 50
+nsdRAIDLookUpNoFlush 1
+nsdRAIDTracks 128K
+maxTcpConnsPerNodeConn 1
+preferDesignatedMnode yes
+[client]
+maxStatCache 131072
+[saguaro10ib,saguaro1ib,saguaro2ib,saguaro3ib,saguaro4ib,saguaro5ib,saguaro6ib,saguaro7ib,saguaro8ib,saguaro9ib]
+dataShipClientBuffersPerServer 50
+[client]
+dataShipClientBuffersPerServer 50
+[common]
+tasksPerNode 20
+allowSuperstrideReadFastpath 1
+minReleaseLevel 5.2.0.0
+[nc1]
+pagepool 973405011148
+nsdRAIDTracks 320K
+nspdQueues 240
+nspdBufferMemPerQueue 24m
+nspdThreadsPerQueue 2
+nsdMinWorkerThreads 3842
+nsdMaxWorkerThreads 3842
+nsdSmallThreadRatio 1
+nsdRAIDEventLogToConsole all
+nsdRAIDBlockDeviceMaxSectorsKB 0
+nsdRAIDBlockDeviceNrRequests 0
+nsdRAIDBlockDeviceQueueDepth 0
+nsdRAIDBlockDeviceScheduler off
+nsdRAIDSmallThreadRatio 2
+nsdRAIDDefaultGeneratedFD no
+nsdRAIDMasterBufferPoolSize 2G
+nsdRAIDReconstructAggressiveness 0
+nsdRAIDThreadsPerQueue 16
+nsdRAIDSSDPerformanceShortTimeConstant 2500000
+nsdRAIDDiskDiagTimeout 130
+panicOnIOHang yes
+pitWorkerThreadsPerNode 32
+prefetchPct 50
+maxStatCache 128k
+maxMBpS 50000
+nsdRAIDClientOnlyChecksum yes
+nsdRAIDEnableSpaceMonitor 1
+pagepoolMaxPhysMemPct 90
+[client,nc1]
+verbsRdmaSend yes
+verbsRdma enable
+[common]
+autoload no
+[nc1]
+nsdRAIDPagepoolBaseline 973405011148
+nsdRAIDDiskIgnoreOF 1
+verbsPorts mlx5_0/1 mlx5_1/1 mlx5_2/1 mlx5_3/1 mlx5_4/1 mlx5_5/1 mlx5_6/1 mlx5_7/1
+[client]
+verbsPorts mlx5_0/1
+numactlOptioni 0
+numactlOptionN 0
+nBucketGroups 1024
+dataShipClientBufferPct 50
+[common]
+prefetchPartitions 2
+[saguaro10ib,saguaro1ib,saguaro2ib,saguaro3ib,saguaro4ib,saguaro5ib,saguaro6ib,saguaro7ib,saguaro8ib,saguaro9ib,client,nc1]
+dataShipServerBufferPct 50
+[common]
+nsdRAIDDisablePartitionTrim yes
+inodePrefetchThreshold 5
+traceGenDump yes
+dataShipDebugInterval 1
+traceRecycle off
+tracedevOverwriteBufferSize 34359738368
+tracedevWriteMode overwrite
+trace all 1
+adminMode central
+
+File systems in cluster test01.s6k2a-hs:
+----------------------------------------
+/dev/fs1

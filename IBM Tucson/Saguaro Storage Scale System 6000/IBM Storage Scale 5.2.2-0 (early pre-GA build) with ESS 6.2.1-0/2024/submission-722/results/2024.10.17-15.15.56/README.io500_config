@@ -1,0 +1,51 @@
+Notes on the io500 setup
+
+1. io500 is run directly (without using a job scheduler) as follows from the rmpich4.sh wrapper script :
+./io500.sh ess6000_config.ini /nshare/ess_regression/ess6000/io500_isc24/nodesib.10 200
+
+The attached wrapper script (which saves state/debug information) was run as:
+nohup ./rmpich4.sh | tee -a io500.txt 2>&1 &
+
+
+2. MPI hints are used for ior-hard-read, ior-hard-write, mdtest-hard-write using the following 'API =' lines defined in the io500 (config-full_FG_CS-EHW_Hint_extfind.ini) ini file, as shown below:
+
+[ior-hard-write]
+# The API to be used
+API =  POSIX --posix.gpfs.finegrainwritesharing
+ 
+[...]
+
+[ior-hard-read]
+# The API to be used
+API =  POSIX --posix.gpfs.finegrainreadsharing
+
+[...]
+
+[mdtest-hard-write]
+# The API to be used
+API = POSIX --posix.gpfs.createsharing
+
+
+3. For the 'Find' benchmark an external script is used as shown below (it's saved in the .tgz file):
+
+[find]
+# Set to an external script to perform the find phase
+external-script = <full_path_specified>/find_script_stop.sh
+
+Full details on the external find script are included in the find_script/ directory, which contains:
+find_script_stop.sh  ssh_script.sh  stop_cont_io500.sh  track_io500.sh
+
+
+4. mpich 3.2 used and following MPI_ROOT/PATH setup is enabled:
+mpichversion
+MPICH Version:          3.2
+MPICH Release date:     Wed Nov 11 22:06:48 CST 2015
+MPICH Device:           ch3:nemesis
+MPICH configure:        --prefix=/nshare/gpfs-core/x86/benchmarks/rhel8.x/mpich
+MPICH CC:       gcc    -O2
+MPICH CXX:      g++   -O2
+MPICH F77:      gfortran   -O2
+MPICH FC:       gfortran   -O2
+
+
+

@@ -1,0 +1,111 @@
+[run]
+procs           = 200
+version         = io500-isc24_v3
+config-hash     = EE2411F0
+result-dir      = /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56
+mode            = standard
+; START 2024-10-17 15:15:57
+
+
+[ior-easy-write]
+t_start         = 2024-10-17 15:15:57
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -327470196 -k -e -o /gpfs/fs1/datadir/2024.10.17-15.15.56/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/ior-easy.stonewall -t 8m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/ior-easy-write.csv
+throughput-stonewall = 151.62
+score           = 151.096382
+t_delta         = 308.7659
+t_end           = 2024-10-17 15:21:05
+
+[mdtest-easy-write]
+t_start         = 2024-10-17 15:21:05
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000000 -u -L -F -P -G 558707599 -N 1 -d /gpfs/fs1/datadir/2024.10.17-15.15.56/mdtest-easy -x /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 225.099367
+score           = 191.178970
+t_delta         = 492.5151
+t_end           = 2024-10-17 15:29:18
+
+[timestamp]
+t_start         = 2024-10-17 15:29:18
+t_delta         = 0.0004
+t_end           = 2024-10-17 15:29:18
+
+[ior-hard-write]
+t_start         = 2024-10-17 15:29:18
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-327459508 -k -e -o /gpfs/fs1/datadir/2024.10.17-15.15.56/ior-hard/file -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/ior-hard.stonewall -t 47008 -b 47008 -s 1000000000 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 28.48
+score           = 28.274478
+t_delta         = 302.4741
+t_end           = 2024-10-17 15:34:20
+
+[mdtest-hard-write]
+t_start         = 2024-10-17 15:34:20
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000000 -t -w 3901 -e 3901 -P -G=558718287 -N 1 -F -d /gpfs/fs1/datadir/2024.10.17-15.15.56/mdtest-hard -x /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-hard-write.csv -a POSIX --posix.gpfs.createsharing
+rate-stonewall  = 30.790582
+score           = 24.390204
+t_delta         = 467.9281
+t_end           = 2024-10-17 15:42:08
+
+[find]
+t_start         = 2024-10-17 15:42:08
+exe             =  /nshare/ess_regression/ess6000/io500_isc24/find_script/find_script_stop.sh  /gpfs/fs1/datadir/2024.10.17-15.15.56 -newer /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/timestampfile -size 3901c -name "*01*"
+last-output     = "MATCHED 380101/105280001"
+total-files     = 105280001
+found           = 380101
+score           = 7516.716898
+t_delta         = 14.0067
+t_end           = 2024-10-17 15:42:22
+
+[ior-easy-read]
+t_start         = 2024-10-17 15:42:22
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -327470196 -k -e -o /gpfs/fs1/datadir/2024.10.17-15.15.56/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/ior-easy.stonewall -t 8m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/ior-easy-read.csv
+score           = 284.203357
+t_delta         = 164.2328
+t_end           = 2024-10-17 15:45:06
+
+[mdtest-easy-stat]
+t_start         = 2024-10-17 15:45:06
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000000 -u -L -F -P -G 558707599 -N 1 -d /gpfs/fs1/datadir/2024.10.17-15.15.56/mdtest-easy -x /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-easy-stat.csv -a POSIX
+score           = 571.343765
+t_delta         = 165.4930
+t_end           = 2024-10-17 15:47:52
+
+[ior-hard-read]
+t_start         = 2024-10-17 15:47:52
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-327459508 -k -e -o /gpfs/fs1/datadir/2024.10.17-15.15.56/ior-hard/file -O stoneWallingStatusFile=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/ior-hard.stonewall -t 47008 -b 47008 -s 1000000000 -r -R -a POSIX --posix.gpfs.finegrainreadsharing -O saveRankPerformanceDetailsCSV=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/ior-hard-read.csv
+score           = 107.516766
+t_delta         = 79.6362
+t_end           = 2024-10-17 15:49:12
+
+[mdtest-hard-stat]
+t_start         = 2024-10-17 15:49:12
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000000 -t -w 3901 -e 3901 -P -G=558718287 -N 1 -F -d /gpfs/fs1/datadir/2024.10.17-15.15.56/mdtest-hard -x /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-hard-stat.csv -a POSIX
+score           = 272.657039
+t_delta         = 42.8851
+t_end           = 2024-10-17 15:49:54
+
+[mdtest-easy-delete]
+t_start         = 2024-10-17 15:49:54
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000000 -u -L -F -P -G 558707599 -N 1 -d /gpfs/fs1/datadir/2024.10.17-15.15.56/mdtest-easy -x /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-easy-delete.csv -a POSIX
+score           = 165.275025
+t_delta         = 577.9444
+t_end           = 2024-10-17 15:59:32
+
+[mdtest-hard-read]
+t_start         = 2024-10-17 15:59:32
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000000 -t -w 3901 -e 3901 -P -G=558718287 -N 1 -F -d /gpfs/fs1/datadir/2024.10.17-15.15.56/mdtest-hard -x /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-hard-read.csv -a POSIX
+score           = 321.637907
+t_delta         = 36.5102
+t_end           = 2024-10-17 16:00:09
+
+[mdtest-hard-delete]
+t_start         = 2024-10-17 16:00:09
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000000 -t -w 3901 -e 3901 -P -G=558718287 -N 1 -F -d /gpfs/fs1/datadir/2024.10.17-15.15.56/mdtest-hard -x /nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/nshare/ess_regression/ess6000/io500_isc24/IO500_results/2024.10.17-15.15.56/mdtest-hard-delete.csv -a POSIX
+score           = 29.443611
+t_delta         = 388.8123
+t_end           = 2024-10-17 16:06:38
+
+[SCORE]
+MD              = 232.525419
+BW              = 106.890354
+SCORE           = 157.653812
+hash            = F01BF8AA
+; END 2024-10-17 16:06:40

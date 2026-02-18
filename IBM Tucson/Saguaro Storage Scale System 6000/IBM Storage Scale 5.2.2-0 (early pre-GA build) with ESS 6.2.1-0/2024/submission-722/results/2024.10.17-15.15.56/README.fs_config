@@ -1,0 +1,10 @@
+##############
+#Server Nodes only (only the non-default config options, beyond those set by the standard mmvdisk setup, are listed):
+Almost all settings are automatically set by mmvdisk.
+
+The server-specific settings are listed under [NC] in this mmlsconfig data.
+
+##############
+#Client Nodes only:
+
+The client-specific settings are listed under [client] in this mmlsconfig data.

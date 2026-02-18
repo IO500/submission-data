@@ -1,0 +1,29 @@
+
+######################################################################
+Mon Oct 21 04:22:16 PM EDT 2024: Output for mmlscluster on s6k2a - timeout=60
+######################################################################
+
+GPFS cluster information
+========================
+  GPFS cluster name:         test01.s6k2a-hs
+  GPFS cluster id:           2115447780686195884
+  GPFS UID domain:           test01.s6k2a-hs
+  Remote shell command:      /usr/bin/ssh
+  Remote file copy command:  /usr/bin/scp
+  Repository type:           CCR
+
+ Node  Daemon node name  IP address     Admin node name  Designation
+---------------------------------------------------------------------
+   1   s6k2aib           100.168.83.48  s6k2aib          quorum-manager-perfmon
+   2   s6k2bib           100.168.83.49  s6k2bib          quorum-manager-perfmon
+   3   saguaro1ib        100.168.83.51  saguaro1ib       manager-perfmon
+   4   saguaro2ib        100.168.83.52  saguaro2ib       quorum-manager-perfmon
+   5   saguaro3ib        100.168.83.53  saguaro3ib       quorum-manager-perfmon
+   6   saguaro4ib        100.168.83.54  saguaro4ib       quorum-manager-perfmon
+   7   saguaro5ib        100.168.83.55  saguaro5ib       manager-perfmon
+   8   saguaro6ib        100.168.83.56  saguaro6ib       manager-perfmon
+   9   saguaro7ib        100.168.83.57  saguaro7ib       manager-perfmon
+  10   saguaro8ib        100.168.83.58  saguaro8ib       manager-perfmon
+  11   saguaro9ib        100.168.83.59  saguaro9ib       manager-perfmon
+  12   saguaro10ib       100.168.83.60  saguaro10ib      manager-perfmon
+

@@ -1,0 +1,132 @@
+[run]
+procs           = 792
+version         = aramco-custom
+config-hash     = E653D075
+result-dir      = ./results/2024.01.15-12.55.45
+mode            = standard
+; START 2024-01-15 12:55:46
+
+
+[ior-easy-write]
+t_start         = 2024-01-15 12:55:46
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -378337401 -k -e -o /fsk1/datafiles//2024.01.15-12.55.45/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.01.15-12.55.45/ior-easy.stonewall -t 8m -b 160000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.01.15-12.55.45/ior-easy-write.csv
+result-file     = ./results/2024.01.15-12.55.45/ior-easy-write.txt
+accessed-pairs  = 20000
+throughput-stonewall = 362.66
+score           = 343.766283
+t_delta         = 360.0166
+t_end           = 2024-01-15 13:01:46
+
+[mdtest-easy-write]
+t_start         = 2024-01-15 13:01:46
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 507840394 -N 1 -d /fsk1/datafiles//2024.01.15-12.55.45/mdtest-easy -x ./results/2024.01.15-12.55.45/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.01.15-12.55.45/mdtest-easy-write.csv -a POSIX
+result-file     = ./results/2024.01.15-12.55.45/mdtest-easy-write.txt
+time            = 530.618673
+rate-stonewall  = 86.604576
+score           = 78.200158
+t_delta         = 532.9514
+t_end           = 2024-01-15 13:10:39
+
+[timestamp]
+t_start         = 2024-01-15 13:10:39
+timestamp-file  = ./results/2024.01.15-12.55.45/timestampfile
+t_delta         = 0.0001
+t_end           = 2024-01-15 13:10:39
+
+[ior-hard-write]
+t_start         = 2024-01-15 13:10:39
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-378326713 -k -e -o /fsk1/datafiles//2024.01.15-12.55.45/ior-hard/file -O stoneWallingStatusFile=./results/2024.01.15-12.55.45/ior-hard.stonewall -t 47008 -b 47008 -s 40000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.01.15-12.55.45/ior-hard-write.csv -O stoneWallingWearOut=1
+result-file     = ./results/2024.01.15-12.55.45/ior-hard-write.txt
+accessed-pairs  = 40000
+throughput-stonewall = 4.33
+score           = 2.620071
+t_delta         = 529.5359
+t_end           = 2024-01-15 13:19:28
+
+[mdtest-hard-write]
+t_start         = 2024-01-15 13:19:28
+exe             = ./mdtest --dataPacketType=timestamp -n 12000 -t -w 3901 -e 3901 -P -G=507851082 -N 1 -F -d /fsk1/datafiles//2024.01.15-12.55.45/mdtest-hard -x ./results/2024.01.15-12.55.45/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2024.01.15-12.55.45/mdtest-hard-write.csv -a POSIX
+result-file     = ./results/2024.01.15-12.55.45/mdtest-hard-write.txt
+time            = 354.544102
+rate-stonewall  = 27.794998
+score           = 24.898544
+t_delta         = 355.6051
+t_end           = 2024-01-15 13:25:24
+
+[find]
+t_start         = 2024-01-15 13:25:24
+exe             = ./pfind /fsk1/datafiles//2024.01.15-12.55.45 -newer ./results/2024.01.15-12.55.45/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 792
+found           = 329222
+total-files     = 50322889
+score           = 422.312759
+t_delta         = 119.1689
+t_end           = 2024-01-15 13:27:23
+
+[ior-easy-read]
+t_start         = 2024-01-15 13:27:23
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -378337401 -k -e -o /fsk1/datafiles//2024.01.15-12.55.45/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2024.01.15-12.55.45/ior-easy.stonewall -t 8m -b 160000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.01.15-12.55.45/ior-easy-read.csv
+result-file     = ./results/2024.01.15-12.55.45/ior-easy-read.txt
+score           = 288.471821
+t_delta         = 429.4404
+t_end           = 2024-01-15 13:34:32
+
+[mdtest-easy-stat]
+t_start         = 2024-01-15 13:34:32
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 507840394 -N 1 -d /fsk1/datafiles//2024.01.15-12.55.45/mdtest-easy -x ./results/2024.01.15-12.55.45/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2024.01.15-12.55.45/mdtest-easy-stat.csv -a POSIX
+result-file     = ./results/2024.01.15-12.55.45/mdtest-easy-stat.txt
+time            = 254.668638
+score           = 162.935116
+t_delta         = 256.1001
+t_end           = 2024-01-15 13:38:49
+
+[ior-hard-read]
+t_start         = 2024-01-15 13:38:49
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-378326713 -k -e -o /fsk1/datafiles//2024.01.15-12.55.45/ior-hard/file -O stoneWallingStatusFile=./results/2024.01.15-12.55.45/ior-hard.stonewall -t 47008 -b 47008 -s 40000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.01.15-12.55.45/ior-hard-read.csv
+result-file     = ./results/2024.01.15-12.55.45/ior-hard-read.txt
+score           = 8.147956
+t_delta         = 171.0246
+t_end           = 2024-01-15 13:41:40
+
+[mdtest-hard-stat]
+t_start         = 2024-01-15 13:41:40
+exe             = ./mdtest --dataPacketType=timestamp -n 12000 -t -w 3901 -e 3901 -P -G=507851082 -N 1 -F -d /fsk1/datafiles//2024.01.15-12.55.45/mdtest-hard -x ./results/2024.01.15-12.55.45/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2024.01.15-12.55.45/mdtest-hard-stat.csv -a POSIX
+result-file     = ./results/2024.01.15-12.55.45/mdtest-hard-stat.txt
+time            = 94.234059
+score           = 93.677722
+t_delta         = 95.7083
+t_end           = 2024-01-15 13:43:15
+
+[mdtest-easy-delete]
+t_start         = 2024-01-15 13:43:15
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 507840394 -N 1 -d /fsk1/datafiles//2024.01.15-12.55.45/mdtest-easy -x ./results/2024.01.15-12.55.45/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2024.01.15-12.55.45/mdtest-easy-delete.csv -a POSIX
+result-file     = ./results/2024.01.15-12.55.45/mdtest-easy-delete.txt
+time            = 492.084957
+score           = 84.323781
+t_delta         = 496.0039
+t_end           = 2024-01-15 13:51:31
+
+[mdtest-hard-read]
+t_start         = 2024-01-15 13:51:31
+exe             = ./mdtest --dataPacketType=timestamp -n 12000 -t -w 3901 -e 3901 -P -G=507851082 -N 1 -F -d /fsk1/datafiles//2024.01.15-12.55.45/mdtest-hard -x ./results/2024.01.15-12.55.45/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2024.01.15-12.55.45/mdtest-hard-read.csv -a POSIX
+result-file     = ./results/2024.01.15-12.55.45/mdtest-hard-read.txt
+time            = 187.823477
+score           = 46.999620
+t_delta         = 189.5116
+t_end           = 2024-01-15 13:54:41
+
+[mdtest-hard-delete]
+t_start         = 2024-01-15 13:54:41
+exe             = ./mdtest --dataPacketType=timestamp -n 12000 -t -w 3901 -e 3901 -P -G=507851082 -N 1 -F -d /fsk1/datafiles//2024.01.15-12.55.45/mdtest-hard -x ./results/2024.01.15-12.55.45/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2024.01.15-12.55.45/mdtest-hard-delete.csv -a POSIX
+result-file     = ./results/2024.01.15-12.55.45/mdtest-hard-delete.txt
+time            = 271.632942
+score           = 32.498385
+t_delta         = 273.4317
+t_end           = 2024-01-15 13:59:14
+
+[SCORE]
+MD              = 79.629067
+BW              = 38.144516
+SCORE           = 55.112723
+hash            = 5593F07F
+; END 2024-01-15 13:59:18

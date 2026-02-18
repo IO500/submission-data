@@ -1,0 +1,15 @@
+IO500 version aramco-custom (standard)
+[RESULT]       ior-easy-write      343.766283 GiB/s : time 360.017 seconds
+[RESULT]    mdtest-easy-write       78.200158 kIOPS : time 532.951 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.000 seconds
+[RESULT]       ior-hard-write        2.620071 GiB/s : time 529.536 seconds
+[RESULT]    mdtest-hard-write       24.898544 kIOPS : time 355.605 seconds
+[RESULT]                 find      422.312759 kIOPS : time 119.169 seconds
+[RESULT]        ior-easy-read      288.471821 GiB/s : time 429.440 seconds
+[RESULT]     mdtest-easy-stat      162.935116 kIOPS : time 256.100 seconds
+[RESULT]        ior-hard-read        8.147956 GiB/s : time 171.025 seconds
+[RESULT]     mdtest-hard-stat       93.677722 kIOPS : time 95.708 seconds
+[RESULT]   mdtest-easy-delete       84.323781 kIOPS : time 496.004 seconds
+[RESULT]     mdtest-hard-read       46.999620 kIOPS : time 189.512 seconds
+[RESULT]   mdtest-hard-delete       32.498385 kIOPS : time 273.432 seconds
+[SCORE ] Bandwidth 38.144516 GiB/s : IOPS 79.629067 kiops : TOTAL 55.112723

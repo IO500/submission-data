@@ -1,0 +1,33 @@
+-- started at 09/19/2023 17:27:03 --
+
+mdtest-3.4.0+dev was launched with 160 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=-430605187' '-N' '1' '-F' '-d' './datafiles/2023.09.19-17.06.09/mdtest-hard' '-x' './results/2023.09.19-17.06.09/mdtest-hard.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=./results/2023.09.19-17.06.09/mdtest-hard-write.csv' '-a' 'POSIX' '--posix.gpfs.createsharing'
+Path                : ./datafiles/2023.09.19-17.06.09/mdtest-hard
+FS                  : 97.0 TiB   Used FS: 34.5%   Inodes: 97.0 Mi   Used Inodes: 45.6%
+Nodemap: 1111111111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+V-0: Rank   0 Line  2537 Shifting ranks by 16 for each phase.
+160 tasks, 160000000 files
+Continue stonewall hit min: 31570 max: 40816 avg: 32652.3 
+
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation               16595.532      16595.532      16595.532          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                 160.204        160.204        160.204          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 393.513        393.513        393.513          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.006          0.006          0.006          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 09/19/2023 17:33:37 --
+

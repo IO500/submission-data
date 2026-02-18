@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Apr 17 22:52:58 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1401196734 -k -e -o /lscratch/ddn/io500/2023.04.17-22.41.28/ior-hard/file -O stoneWallingStatusFile=./results/2023.04.17-22.41.28/ior-hard.stonewall -t 47008 -b 47008 -s 80000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.04.17-22.41.28/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux lrdn0003.leonardo.local
+TestID              : 0
+StartTime           : Mon Apr 17 22:52:58 2023
+Path                : /lscratch/ddn/io500/2023.04.17-22.41.28/ior-hard/file
+FS                  : 3561.9 TiB   Used FS: 14.4%   Inodes: 28942.6 Mi   Used Inodes: 0.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lscratch/ddn/io500/2023.04.17-22.41.28/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 80000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2000
+tasks               : 16000
+clients per node    : 8
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 54.72 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 56788 max: 80000 -- min data: 2.5 GiB mean data: 3.2 GiB time: 300.0s
+write     159195     3554069    332.70      45.91      45.91      0.266742   360.15     0.038193   360.46     0   

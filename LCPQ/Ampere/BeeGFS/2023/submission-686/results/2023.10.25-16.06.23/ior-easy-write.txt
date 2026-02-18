@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Oct 25 16:06:25 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400683843 -k -e -o ./datafiles/2023.10.25-16.06.23/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.10.25-16.06.23/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.10.25-16.06.23/ior-easy-write.csv
+Machine             : Linux cnactip-1
+TestID              : 0
+StartTime           : Wed Oct 25 16:06:25 2023
+Path                : ./datafiles/2023.10.25-16.06.23/ior-easy/ior_file_easy.00000000
+FS                  : 59.2 TiB   Used FS: 1.0%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/2023.10.25-16.06.23/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 30
+tasks               : 30
+clients per node    : 1
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 283.81 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 19723 max: 34605 -- min data: 38.5 GiB mean data: 51.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 312056217600000
+WARNING: Stat() of aggregate file size      = 2177158348800
+WARNING: Using actual aggregate bytes moved = 2177158348800
+WARNING: Maybe caused by deadlineForStonewalling
+write     4085       2042.71    0.000065    10158080000 2048.00    0.019843   508.22     0.025469   508.27     0   

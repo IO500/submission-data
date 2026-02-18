@@ -1,0 +1,31 @@
+-- started at 10/25/2023 17:12:37 --
+
+mdtest-3.4.0+dev was launched with 30 total task(s) on 30 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=-514495361' '-N' '1' '-F' '-d' './datafiles/2023.10.25-16.06.23/mdtest-hard' '-x' './results/2023.10.25-16.06.23/mdtest-hard.stonewall' '-T' '--saveRankPerformanceDetails=./results/2023.10.25-16.06.23/mdtest-hard-stat.csv' '-a' 'POSIX'
+Path                : ./datafiles/2023.10.25-16.06.23/mdtest-hard
+FS                  : 59.2 TiB   Used FS: 5.1%   Inodes: 0.0 Mi   Used Inodes: -nan%
+Nodemap: 111000000000000000000000000000
+V-0: Rank   0 Line  2537 Shifting ranks by 1 for each phase.
+30 tasks, 30000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                  101713.627     101713.627     101713.627          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                      25.559         25.559         25.559          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 10/25/2023 17:13:03 --
+

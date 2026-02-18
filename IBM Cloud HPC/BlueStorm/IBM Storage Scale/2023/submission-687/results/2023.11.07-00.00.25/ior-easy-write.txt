@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov  7 00:00:26 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385520833 -k -e -o /gpfs/fs1/2023.11.07-00.00.25/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/vpcuser/pidsouza/share/io500_results/sc23/2023.11.07-00.00.25/ior-easy.stonewall -t 4m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/vpcuser/pidsouza/share/io500_results/sc23/2023.11.07-00.00.25/ior-easy-write.csv
+Machine             : Linux hpc-perf-001
+TestID              : 0
+StartTime           : Tue Nov  7 00:00:26 2023
+Path                : /gpfs/fs1/2023.11.07-00.00.25/ior-easy/ior_file_easy.00000000
+FS                  : 4139.4 TiB   Used FS: 0.0%   Inodes: 2048.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/fs1/2023.11.07-00.00.25/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 199
+tasks               : 1990
+clients per node    : 10
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 18826.29 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4850 max: 79803 -- min data: 18.9 GiB mean data: 140.9 GiB time: 302.0s
+WARNING: Expected aggregate file size       = 20699729100800000
+WARNING: Stat() of aggregate file size      = 666088903802880
+WARNING: Using actual aggregate bytes moved = 666088903802880
+WARNING: Maybe caused by deadlineForStonewalling
+write     776099     194073     0.000297    10158080000 4096       0.197759   818.29     0.012238   818.49     0   

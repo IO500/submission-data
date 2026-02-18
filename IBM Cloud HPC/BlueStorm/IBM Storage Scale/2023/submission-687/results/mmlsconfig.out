@@ -1,0 +1,66 @@
+Configuration data for cluster hpc-perf.strgscale.com:
+------------------------------------------------------
+clusterName hpc-perf.strgscale.com
+clusterId 5159467596462195237
+profile gpfsProtocolDefaults
+dmapiFileHandleSize 32
+minReleaseLevel 5.1.9.0
+tscCmdAllowRemoteConnections no
+ccrEnabled yes
+cipherList AUTHONLY
+sdrNotifyAuthEnabled yes
+[cesNodes]
+enforceFilesetQuotaOnRoot yes
+[common]
+ignorePrefetchLUNCount yes
+workerThreads 1024
+unmountOnDiskFail meta
+readReplicaPolicy local
+maxblocksize 16M
+idleSocketTimeout 0
+minMissedPingTimeout 60
+failureDetectionTime 60
+maxFilesToCache 256K
+numaMemoryInterleave yes
+[storagenodegrp]
+nsdSmallThreadRatio 2
+nsdThreadsPerQueue 16
+nsdbufspace 70
+[cesNodes]
+maxMBpS 5000
+[storagenodegrp]
+maxMBpS 25000
+[mgmt]
+maxMBpS 6000
+[common]
+autoload no
+maxFileToCache 128K
+maxStatCache 128K
+nsdMinWorkerThreads 3842
+nsdMaxWorkerThreads 3842
+[storagenodegrp]
+pagepool 48G
+[mgmt]
+pagepool 4G
+[compute_198]
+pagepool 100G
+nBucketGroups 1024
+[common]
+numactlOptioni 0
+numactlOptionN 0
+trace all 4 tm 2 thread 1 mutex 1 vnode 2 ksvfs 3 klockl 2 io 3 pgalloc 1 mb 1 lock 2 fsck 3 fsckx 3 iolite 0
+traceRecycle off
+tracedevOverwriteBufferSize 2147483648
+tracedevWriteMode overwrite
+[hpc-perf-001,hpc-perf-002,hpc-perf-003,hpc-perf-004,hpc-perf-005,hpc-perf-006,hpc-perf-007,hpc-perf-008,hpc-perf-009,hpc-perf-010,hpc-perf-011,hpc-perf-012,hpc-perf-013,hpc-perf-014,hpc-perf-015,hpc-perf-016,hpc-perf-017,hpc-perf-018,hpc-perf-019,hpc-perf-020,hpc-perf-021,hpc-perf-022,hpc-perf-023,hpc-perf-024,hpc-perf-025,hpc-perf-026,hpc-perf-027,hpc-perf-028,hpc-perf-029,hpc-perf-030,hpc-perf-031,hpc-perf-032,hpc-perf-033,hpc-perf-034,hpc-perf-035,hpc-perf-036,hpc-perf-037,hpc-perf-038,hpc-perf-039,hpc-perf-040,hpc-perf-041,hpc-perf-042,hpc-perf-043,hpc-perf-044,hpc-perf-045,hpc-perf-046,hpc-perf-047,hpc-perf-048,hpc-perf-049,hpc-perf-050,hpc-perf-051,hpc-perf-052,hpc-perf-053,hpc-perf-054,hpc-perf-055,hpc-perf-056,hpc-perf-057,hpc-perf-058,hpc-perf-059,hpc-perf-060,hpc-perf-061,hpc-perf-062,hpc-perf-063,hpc-perf-064,hpc-perf-065,hpc-perf-066,hpc-perf-067,hpc-perf-068,hpc-perf-069,hpc-perf-070,hpc-perf-071,hpc-perf-072,hpc-perf-073,hpc-perf-074,hpc-perf-075,hpc-perf-076,hpc-perf-077,hpc-perf-078,hpc-perf-079,hpc-perf-080,hpc-perf-081,hpc-perf-082,hpc-perf-083,hpc-perf-084,hpc-perf-085,hpc-perf-086,hpc-perf-087,hpc-perf-088,hpc-perf-089,hpc-perf-090,hpc-perf-091,hpc-perf-092,hpc-perf-093,hpc-perf-094,hpc-perf-095,hpc-perf-096,hpc-perf-097,hpc-perf-098,hpc-perf-099,hpc-perf-100,hpc-perf-101,hpc-perf-102,hpc-perf-103,hpc-perf-104,hpc-perf-105,hpc-perf-106,hpc-perf-107,hpc-perf-108,hpc-perf-109,hpc-perf-110,hpc-perf-111,hpc-perf-112,hpc-perf-113,hpc-perf-114,hpc-perf-115,hpc-perf-116,hpc-perf-117,hpc-perf-118,hpc-perf-119,hpc-perf-120,hpc-perf-121,hpc-perf-122,hpc-perf-123,hpc-perf-124,hpc-perf-125,hpc-perf-126,hpc-perf-127,hpc-perf-128,hpc-perf-129,hpc-perf-130,hpc-perf-131,hpc-perf-132,hpc-perf-133,hpc-perf-135,hpc-perf-136,hpc-perf-138,hpc-perf-139,hpc-perf-140,hpc-perf-141,hpc-perf-142,hpc-perf-143,hpc-perf-144,hpc-perf-145,hpc-perf-146,hpc-perf-147,hpc-perf-148,hpc-perf-149,hpc-perf-150,hpc-perf-151,hpc-perf-152,hpc-perf-153,hpc-perf-154,hpc-perf-155,hpc-perf-156,hpc-perf-157,hpc-perf-158,hpc-perf-159,hpc-perf-160,hpc-perf-161,hpc-perf-162,hpc-perf-163,hpc-perf-164,hpc-perf-165,hpc-perf-166,hpc-perf-167,hpc-perf-168,hpc-perf-169,hpc-perf-170,hpc-perf-171,hpc-perf-172,hpc-perf-173,hpc-perf-174,hpc-perf-175,hpc-perf-176,hpc-perf-177,hpc-perf-178,hpc-perf-179,hpc-perf-180,hpc-perf-181,hpc-perf-182,hpc-perf-183,hpc-perf-184,hpc-perf-185,hpc-perf-186,hpc-perf-187,hpc-perf-188,hpc-perf-189,hpc-perf-190,hpc-perf-191,hpc-perf-192,hpc-perf-193,hpc-perf-194,hpc-perf-195,hpc-perf-196,hpc-perf-197,hpc-perf-198,hpc-perf-199,hpc-perf-200,hpc-perf-201,compute_198]
+dataShipAssertOnFailure yes
+preferDesignatedMnode yes
+dataShipClientBuffersPerServer 10
+dataShipClientBufferPct 50
+dataShipServerBufferPct 10
+autoCompactDir 0
+fgdlTokenBatchAcquire 1
+[common]
+fsyncIsGlobal no
+restripeOnDiskFailure no
+adminMode central

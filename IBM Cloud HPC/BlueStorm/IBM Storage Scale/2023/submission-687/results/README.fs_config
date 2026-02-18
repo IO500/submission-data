@@ -1,0 +1,18 @@
+IBM Storage Scale File System is setup with Shared Nothing Configuration (SNC) with NVMe drives on 198 nodes.
+Storage Scale cluster in total consists of 199 compute, out of which 198 are with the NVMe drives and 3 management nodes.
+
+Below are the non-default settings were set on all the compute nodes.
+maxStatCache 128K
+nsdMinWorkerThreads 3842
+nsdMaxWorkerThreads 3842
+pagepool 100G
+nBucketGroups 1024
+numactlOptioni 0
+numactlOptionN 0
+preferDesignatedMnode yes
+dataShipClientBuffersPerServer 10
+dataShipClientBufferPct 50
+dataShipServerBufferPct 10
+autoCompactDir 0
+fgdlTokenBatchAcquire 1
+fsyncIsGlobal no

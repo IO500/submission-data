@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Nov  7 00:22:27 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385510145 -k -e -o /gpfs/fs1/2023.11.07-00.00.25/ior-hard/file -O stoneWallingStatusFile=/home/vpcuser/pidsouza/share/io500_results/sc23/2023.11.07-00.00.25/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=/home/vpcuser/pidsouza/share/io500_results/sc23/2023.11.07-00.00.25/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux hpc-perf-001
+TestID              : 0
+StartTime           : Tue Nov  7 00:22:27 2023
+Path                : /gpfs/fs1/2023.11.07-00.00.25/ior-hard/file
+FS                  : 4139.4 TiB   Used FS: 14.6%   Inodes: 2048.0 Mi   Used Inodes: 70.5%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/fs1/2023.11.07-00.00.25/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 199
+tasks               : 1990
+clients per node    : 10
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 850.80 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1279669 max: 1280474 -- min data: 56.0 GiB mean data: 56.1 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 935459200000000
+WARNING: Stat() of aggregate file size      = 119783118366080
+WARNING: Using actual aggregate bytes moved = 119783118366080
+WARNING: Maybe caused by deadlineForStonewalling
+write     376140     8429855    302.27      45.91      45.91      1.43       302.28     0.008452   303.70     0   

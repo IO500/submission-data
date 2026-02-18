@@ -1,0 +1,47 @@
+Notes on the io500 setup
+
+1. io500 is run directly (without using a job scheduler) as follows:
+./io500.sh config-full_FG_CS_Hint.ini # config with finegrainread/write and createsharing hints and with external find script
+
+
+2. MPI hints are used for ior-hard-read, ior-hard-write, mdtest-hard-write using the following 'API =' lines defined in the io500 (config-full_FG_CS_Hint.ini) ini file, as shown below:
+
+[ior-hard-write]
+# The API to be used
+API =  POSIX --posix.gpfs.finegrainwritesharing
+ 
+[...]
+
+[ior-hard-read]
+# The API to be used
+API =  POSIX --posix.gpfs.finegrainreadsharing
+
+[...]
+
+[mdtest-hard-write]
+# The API to be used
+API = POSIX --posix.gpfs.createsharing
+
+3. mpich 3.4.2-1 used and following MPI_ROOT/PATH setup is enabled:
+export MPI_ROOT=/usr/lib64/mpich/
+export PATH=${MPI_ROOT}/bin:/usr/lpp/mmfs/bin:$PATH
+export LD_LIBRARY_PATH=${MPI_ROOT}/lib:$LD_LIBRARY_PATH
+
+4.  io500.sh script sets the following MPI arguments and the hostfile defined below:
+#mpiexe PATH set to mpich3.4.2-1 through above PATH/LD_LIBRARY_PATH settings
+#Storage Filesystem daemon (mmfsd) is bind to numa node 0, while binding io500 to numa node 1
+io500_mpiargs="-f /home/vpcuser/pidsouza/share/io500_sc23/nodes.199 -n 1990 --bind-to numa:1"
+
+Hostfile:
+hpc-perf-001
+hpc-perf-002
+hpc-perf-003
+[...]
+hpc-perf-1999
+hpc-perf-200
+hpc-perf-201
+In total 199 nodes.
+
+5. During the io500 run, to disable inode prefetching during pfind phase 
+"find_srcipt/track_io500.sh" is run in the background. In future implementation
+we intend to handle this function by adding a hint to standard pfind or a custom pfind.

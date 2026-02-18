@@ -1,0 +1,110 @@
+[run]
+procs           = 1280
+version         = io500-sc23_v1
+config-hash     = 8B20F95
+result-dir      = /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58
+mode            = standard
+; START 2024-11-10 21:48:59
+
+
+[ior-easy-write]
+t_start         = 2024-11-10 21:48:59
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312527026 -k -e -o /lustre/pd03/teosps/io500_data/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-easy.stonewall -t 2m -b 49600m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-easy-write.csv
+throughput-stonewall = 40.69
+score           = 36.232714
+t_delta         = 1713.0652
+t_end           = 2024-11-10 22:17:32
+
+[mdtest-easy-write]
+t_start         = 2024-11-10 22:17:32
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 573650769 -N 1 -d /lustre/pd03/teosps/io500_data/mdtest-easy -x /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 53.245830
+score           = 53.271401
+t_delta         = 311.8092
+t_end           = 2024-11-10 22:22:44
+
+[timestamp]
+t_start         = 2024-11-10 22:22:44
+t_delta         = 0.0012
+t_end           = 2024-11-10 22:22:44
+
+[ior-hard-write]
+t_start         = 2024-11-10 22:22:44
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312516338 -k -e -o /lustre/pd03/teosps/io500_data/ior-hard/file -O stoneWallingStatusFile=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-hard.stonewall -t 47008 -b 47008 -s 50000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 5.63
+score           = 4.279282
+t_delta         = 681.4480
+t_end           = 2024-11-10 22:34:05
+
+[mdtest-hard-write]
+t_start         = 2024-11-10 22:34:05
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=573661457 -N 1 -F -d /lustre/pd03/teosps/io500_data/mdtest-hard -x /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 25.035280
+score           = 24.799468
+t_delta         = 311.1008
+t_end           = 2024-11-10 22:39:16
+
+[find]
+t_start         = 2024-11-10 22:39:16
+exe             = ./pfind /lustre/pd03/teosps/io500_data -newer /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1280
+found           = 269012
+total-files     = 24160001
+score           = 752.671679
+t_delta         = 36.5750
+t_end           = 2024-11-10 22:39:53
+
+[ior-easy-read]
+t_start         = 2024-11-10 22:39:53
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312527026 -k -e -o /lustre/pd03/teosps/io500_data/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-easy.stonewall -t 2m -b 49600m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-easy-read.csv
+score           = 22.410202
+t_delta         = 2773.6223
+t_end           = 2024-11-10 23:26:06
+
+[mdtest-easy-stat]
+t_start         = 2024-11-10 23:26:06
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 573650769 -N 1 -d /lustre/pd03/teosps/io500_data/mdtest-easy -x /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-easy-stat.csv -a POSIX
+score           = 196.004127
+t_delta         = 86.4700
+t_end           = 2024-11-10 23:27:33
+
+[ior-hard-read]
+t_start         = 2024-11-10 23:27:33
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312516338 -k -e -o /lustre/pd03/teosps/io500_data/ior-hard/file -O stoneWallingStatusFile=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-hard.stonewall -t 47008 -b 47008 -s 50000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-hard-read.csv
+score           = 3.852122
+t_delta         = 739.4184
+t_end           = 2024-11-10 23:39:52
+
+[mdtest-hard-stat]
+t_start         = 2024-11-10 23:39:52
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=573661457 -N 1 -F -d /lustre/pd03/teosps/io500_data/mdtest-hard -x /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-hard-stat.csv -a POSIX
+score           = 51.416565
+t_delta         = 151.4409
+t_end           = 2024-11-10 23:42:24
+
+[mdtest-easy-delete]
+t_start         = 2024-11-10 23:42:24
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 573650769 -N 1 -d /lustre/pd03/teosps/io500_data/mdtest-easy -x /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-easy-delete.csv -a POSIX
+score           = 67.868914
+t_delta         = 246.7101
+t_end           = 2024-11-10 23:46:31
+
+[mdtest-hard-read]
+t_start         = 2024-11-10 23:46:31
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=573661457 -N 1 -F -d /lustre/pd03/teosps/io500_data/mdtest-hard -x /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-hard-read.csv -a POSIX
+score           = 77.105929
+t_delta         = 102.1800
+t_end           = 2024-11-10 23:48:13
+
+[mdtest-hard-delete]
+t_start         = 2024-11-10 23:48:13
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=573661457 -N 1 -F -d /lustre/pd03/teosps/io500_data/mdtest-hard -x /home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/mdtest-hard-delete.csv -a POSIX
+score           = 15.367684
+t_delta         = 509.3053
+t_end           = 2024-11-10 23:56:42
+
+[SCORE]
+MD              = 72.993582
+BW              = 10.756089
+SCORE           = 28.020091
+hash            = 6516B32

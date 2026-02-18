@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 23:27:33 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312516338 -k -e -o /lustre/pd03/teosps/io500_data/ior-hard/file -O stoneWallingStatusFile=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-hard.stonewall -t 47008 -b 47008 -s 50000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/teosps/wcss/lem_cpu_test/io500_finalsubmission/results_lem-cpu_multirail/pd03/nodes10/domstripe1M/stripes8/2024.11.10-21.48.58/ior-hard-read.csv
+Machine             : Linux r13ch01b01.bem2.kdm.wcss.pl
+TestID              : 0
+StartTime           : Sun Nov 10 23:27:33 2024
+Path                : /lustre/pd03/teosps/io500_data/ior-hard/file
+FS                  : 1630.1 TiB   Used FS: 1.9%   Inodes: 1621.7 Mi   Used Inodes: 1.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/pd03/teosps/io500_data/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 50000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1280
+clients per node    : 128
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 2.74 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      3945       88071      726.65      45.91      45.91      0.657969   726.69     0.021637   727.36     0   

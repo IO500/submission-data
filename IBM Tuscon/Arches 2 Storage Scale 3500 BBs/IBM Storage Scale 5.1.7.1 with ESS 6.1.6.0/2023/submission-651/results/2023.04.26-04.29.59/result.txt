@@ -1,0 +1,111 @@
+[run]
+procs           = 200
+version         = io500-isc23
+config-hash     = 860EC8CF
+result-dir      = /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59
+mode            = standard
+; START 2023-04-26 04:30:00
+
+
+[ior-easy-write]
+t_start         = 2023-04-26 04:30:00
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400445553 -k -e -o /gpfs/fs_35/2023.04.26-04.29.59/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-easy.stonewall -t 8m -b 992000000000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-easy-write.csv
+throughput-stonewall = 108.72
+score           = 107.839211
+t_delta         = 329.3990
+t_end           = 2023-04-26 04:35:30
+
+[mdtest-easy-write]
+t_start         = 2023-04-26 04:35:30
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000000 -u -L -F -P -G -514267759 -N 1 -d /gpfs/fs_35/2023.04.26-04.29.59/mdtest-easy -x /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 189.663264
+score           = 184.476412
+t_delta         = 350.4499
+t_end           = 2023-04-26 04:41:20
+
+[timestamp]
+t_start         = 2023-04-26 04:41:20
+t_delta         = 0.0004
+t_end           = 2023-04-26 04:41:20
+
+[ior-hard-write]
+t_start         = 2023-04-26 04:41:20
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1400434865 -k -e -o /gpfs/fs_35/2023.04.26-04.29.59/ior-hard/file -O stoneWallingStatusFile=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-hard.stonewall -t 47008 -b 47008 -s 1215752192 -w -D 300 -a POSIX --posix.gpfs.finegrainwritesharing -O saveRankPerformanceDetailsCSV=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 50.36
+score           = 49.903408
+t_delta         = 303.9640
+t_end           = 2023-04-26 04:46:24
+
+[mdtest-hard-write]
+t_start         = 2023-04-26 04:46:24
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000000 -t -w 3901 -e 3901 -P -G=-514257071 -N 1 -F -d /gpfs/fs_35/2023.04.26-04.29.59/mdtest-hard -x /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-hard-write.csv -a POSIX --posix.gpfs.createsharing
+rate-stonewall  = 35.314956
+score           = 33.646511
+t_delta         = 391.3819
+t_end           = 2023-04-26 04:52:56
+
+[find]
+t_start         = 2023-04-26 04:52:56
+exe             =  /nshare/pidsouza/io500/monthly/ISC2023_04212023/io500/find_script/find_script_stop.sh  /gpfs/fs_35/2023.04.26-04.29.59 -newer /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/timestampfile -size 3901c -name "*01*"
+last-output     = "MATCHED 443403/77298201"
+total-files     = 77298201
+found           = 443403
+score           = 4123.124887
+t_delta         = 18.7801
+t_end           = 2023-04-26 04:53:14
+
+[ior-easy-read]
+t_start         = 2023-04-26 04:53:14
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400445553 -k -e -o /gpfs/fs_35/2023.04.26-04.29.59/ior-easy/ior_file_easy -O stoneWallingStatusFile=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-easy.stonewall -t 8m -b 992000000000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-easy-read.csv
+score           = 203.960236
+t_delta         = 174.5664
+t_end           = 2023-04-26 04:56:09
+
+[mdtest-easy-stat]
+t_start         = 2023-04-26 04:56:09
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000000 -u -L -F -P -G -514267759 -N 1 -d /gpfs/fs_35/2023.04.26-04.29.59/mdtest-easy -x /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-easy-stat.csv -a POSIX
+score           = 384.273915
+t_delta         = 169.0591
+t_end           = 2023-04-26 04:58:58
+
+[ior-hard-read]
+t_start         = 2023-04-26 04:58:58
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1400434865 -k -e -o /gpfs/fs_35/2023.04.26-04.29.59/ior-hard/file -O stoneWallingStatusFile=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-hard.stonewall -t 47008 -b 47008 -s 1215752192 -r -R -a POSIX --posix.gpfs.finegrainreadsharing -O saveRankPerformanceDetailsCSV=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-hard-read.csv
+score           = 27.020965
+t_delta         = 560.3657
+t_end           = 2023-04-26 05:08:18
+
+[mdtest-hard-stat]
+t_start         = 2023-04-26 05:08:18
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000000 -t -w 3901 -e 3901 -P -G=-514257071 -N 1 -F -d /gpfs/fs_35/2023.04.26-04.29.59/mdtest-hard -x /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-hard-stat.csv -a POSIX
+score           = 297.526593
+t_delta         = 45.9636
+t_end           = 2023-04-26 05:09:04
+
+[mdtest-easy-delete]
+t_start         = 2023-04-26 05:09:04
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000000 -u -L -F -P -G -514267759 -N 1 -d /gpfs/fs_35/2023.04.26-04.29.59/mdtest-easy -x /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-easy-delete.csv -a POSIX
+score           = 190.897405
+t_delta         = 343.1505
+t_end           = 2023-04-26 05:14:48
+
+[mdtest-hard-read]
+t_start         = 2023-04-26 05:14:48
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000000 -t -w 3901 -e 3901 -P -G=-514257071 -N 1 -F -d /gpfs/fs_35/2023.04.26-04.29.59/mdtest-hard -x /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-hard-read.csv -a POSIX
+score           = 399.794934
+t_delta         = 34.8539
+t_end           = 2023-04-26 05:15:22
+
+[mdtest-hard-delete]
+t_start         = 2023-04-26 05:15:22
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000000 -t -w 3901 -e 3901 -P -G=-514257071 -N 1 -F -d /gpfs/fs_35/2023.04.26-04.29.59/mdtest-hard -x /nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/mdtest-hard-delete.csv -a POSIX
+score           = 26.443120
+t_delta         = 509.0485
+t_end           = 2023-04-26 05:23:52
+
+[SCORE]
+MD              = 222.025577
+BW              = 73.796934
+SCORE           = 128.003152
+hash            = DB0E7405
+; END 2023-04-26 05:23:55

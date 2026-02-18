@@ -1,0 +1,23 @@
+#export PATH=/usr/lib64/mpich/bin:/usr/lpp/mmfs/bin:/home/mpich/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin
+#export PATH=/nshare/pidsouza/mpich-4.1/install/bin:$PATH
+#export PATH=/usr/mpi/gcc/openmpi-4.1.5a1/bin/:$PATH
+
+DATA_DIR=$1
+TIMESTAMP_FILE=$3
+
+IO500_DIR="/nshare/pidsouza/io500/monthly/ISC2023_04212023/io500"
+SCRIPT_DIR="${IO500_DIR}/find_script"
+OUTPUT_FILE="/tmp/pfind.out"
+HOST_FILE="${IO500_DIR}/../nodesib"
+PROCS=100
+
+${SCRIPT_DIR}/ssh_script.sh 19 &
+
+#io500.sh external script invocation passes all required arguments to external script. However, doe to parsing issue with *01* had to hardcode some of the args for pfind
+/usr/bin/time -p mpiexec -np ${PROCS} -f ${HOST_FILE} ${IO500_DIR}/bin/pfind ${DATA_DIR} -newer ${TIMESTAMP_FILE} -size 3901c -name *01* -C -q 10000 >${OUTPUT_FILE} 2>&1
+
+${SCRIPT_DIR}/ssh_script.sh 18 &
+
+cat ${OUTPUT_FILE} >> ${OUTPUT_FILE}.fix1.out &     # This step is not required. Test purpose only
+# grep operation should be at the end for it to output the results back to the caller io500.sh
+grep MATCHED ${OUTPUT_FILE}

@@ -1,0 +1,32 @@
+
+######################################################################
+Wed Apr 26 10:16:46 MST 2023: Output for mmlscluster on e351a - timeout=60
+######################################################################
+
+GPFS cluster information
+========================
+  GPFS cluster name:         io500.gpfs
+  GPFS cluster id:           16974596931769547211
+  GPFS UID domain:           io500.gpfs
+  Remote shell command:      /usr/bin/ssh
+  Remote file copy command:  /usr/bin/scp
+  Repository type:           CCR
+
+ Node  Daemon node name      IP address      Admin node name       Designation
+-------------------------------------------------------------------------------
+   1   e351aib.gpfs.net      100.168.82.31   e351aib.gpfs.net      quorum-manager-perfmon
+   2   e351bib.gpfs.net      100.168.82.32   e351bib.gpfs.net      quorum-manager-perfmon
+   3   arches1ib.gpfs.net    100.168.85.111  arches1ib.gpfs.net    quorum-manager-perfmon
+   4   arches2ib.gpfs.net    100.168.85.112  arches2ib.gpfs.net    quorum-manager-perfmon
+   5   arches3ib.gpfs.net    100.168.85.113  arches3ib.gpfs.net    quorum-manager-perfmon
+   6   arches4ib.gpfs.net    100.168.85.114  arches4ib.gpfs.net    manager-perfmon
+   7   arches5ib.gpfs.net    100.168.85.115  arches5ib.gpfs.net    manager-perfmon
+   8   arches6ib.gpfs.net    100.168.85.116  arches6ib.gpfs.net    manager-perfmon
+   9   arches7ib.gpfs.net    100.168.85.117  arches7ib.gpfs.net    manager-perfmon
+  10   arches8ib.gpfs.net    100.168.85.118  arches8ib.gpfs.net    manager-perfmon
+  11   arches9ib.gpfs.net    100.168.85.119  arches9ib.gpfs.net    manager-perfmon
+  12   arches10ib.gpfs.net   100.168.85.120  arches10ib.gpfs.net   manager-perfmon
+  13   arches14ib.gpfs.net   100.168.85.124  arches14ib.gpfs.net   perfmon
+  14   ess3500rw2a.gpfs.net  192.168.82.171  ess3500rw2a.gpfs.net  manager
+  15   ess3500rw2b.gpfs.net  192.168.82.172  ess3500rw2b.gpfs.net  manager
+

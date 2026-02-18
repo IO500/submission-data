@@ -1,0 +1,56 @@
+Notes on the io500 setup
+
+1. io500 is run directly (without using a job scheduler) as follows:
+./io500.sh config-full_FG_CS-EHW_Hint_extfind.ini # config with finegrainread/write and createsharing hints and with external find script
+
+
+2. MPI hints are used for ior-hard-read, ior-hard-write, mdtest-hard-write using the following 'API =' lines defined in the io500 (config-full_FG_CS-EHW_Hint_extfind.ini) ini file, as shown below:
+
+[ior-hard-write]
+# The API to be used
+API =  POSIX --posix.gpfs.finegrainwritesharing
+ 
+[...]
+
+[ior-hard-read]
+# The API to be used
+API =  POSIX --posix.gpfs.finegrainreadsharing
+
+[...]
+
+[mdtest-hard-write]
+# The API to be used
+API = POSIX --posix.gpfs.createsharing
+
+
+3. For the 'Find' benchmark an external script is used as shown below:
+
+[find]
+# Set to an external script to perform the find phase
+external-script = <full_path_specified>/find_script_stop.sh
+
+Full details on the external find script are included in the find_script/ directory, which contains:
+find_script_stop.sh  ssh_script.sh  stop_cont_io500.sh  track_io500.sh
+
+
+4. mpich 4.1 used and following MPI_ROOT/PATH setup is enabled:
+export MPI_ROOT=/nshare/pidsouza/mpich-4.1/install
+export PATH=${MPI_ROOT}/bin:/usr/lpp/mmfs/bin:/home/mpich/bin:$PATH
+export LD_LIBRARY_PATH=${MPI_ROOT}/lib:$LD_LIBRARY_PATH
+
+
+5.  io500.sh script sets the following MPI arguments and the hostfile defined below:
+#mpiexe PATH set to mpich4.1 through above PATH/LD_LIBRARY_PATH settings
+io500_mpiargs="-f /nshare/pidsouza/io500/monthly/ISC2023_04212023/nodesib -n 200"
+
+Hostfile:
+arches1ib
+arches2ib
+arches3ib
+arches4ib
+arches5ib
+arches6ib
+arches7ib
+arches8ib
+arches9ib
+arches10ib

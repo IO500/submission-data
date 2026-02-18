@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Apr 26 04:58:59 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1400434865 -k -e -o /gpfs/fs_35/2023.04.26-04.29.59/ior-hard/file -O stoneWallingStatusFile=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-hard.stonewall -t 47008 -b 47008 -s 1215752192 -r -R -a POSIX --posix.gpfs.finegrainreadsharing -O saveRankPerformanceDetailsCSV=/nshare/pidsouza/io500/monthly/ISC2023_04212023/results/2BB/2023.04.26-04.29.59/ior-hard-read.csv
+Machine             : Linux arches1
+TestID              : 0
+StartTime           : Wed Apr 26 04:58:59 2023
+Path                : /gpfs/fs_35/2023.04.26-04.29.59/ior-hard/file
+FS                  : 121.5 TiB   Used FS: 42.2%   Inodes: 500.0 Mi   Used Inodes: 14.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/fs_35/2023.04.26-04.29.59/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 1215752192
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 200
+clients per node    : 20
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 10395.54 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 11430015808307200
+WARNING: Stat() of aggregate file size      = 16231044460800
+WARNING: Using actual aggregate bytes moved = 16231044460800
+read      27669      617314     559.30      45.91      45.91      0.040958   559.33     0.031029   559.43     0   

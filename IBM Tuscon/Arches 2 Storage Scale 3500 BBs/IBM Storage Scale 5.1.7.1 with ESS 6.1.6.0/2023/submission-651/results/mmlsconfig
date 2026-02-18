@@ -1,0 +1,102 @@
+
+######################################################################
+Wed Apr 26 10:16:45 MST 2023: Output for /usr/lpp/mmfs/bin/mmlsconfig on e351a - timeout=60
+######################################################################
+Configuration data for cluster io500.gpfs:
+------------------------------------------
+clusterName io500.gpfs
+clusterId 16974596931769547211
+dmapiFileHandleSize 32
+minReleaseLevel 5.1.6.0
+tscCmdAllowRemoteConnections no
+ccrEnabled yes
+cipherList AUTHONLY
+sdrNotifyAuthEnabled yes
+autoload no
+[clients,nc1,nc2]
+numaMemoryInterleave yes
+[common]
+maxFilesToCache 128K
+[clients,nc1,nc2]
+maxFilesToCache 128k
+prefetchPct 50
+[common]
+maxStatCache 128K
+[clients]
+maxMBpS 24000
+[clients,nc1,nc2]
+workerThreads 1024
+ignorePrefetchLUNCount yes
+[common]
+maxblocksize 16m
+[clients]
+maxblocksize 16M
+pagepool 48G
+[common]
+dioReentryThreshold 1
+nsdRAIDClientOnlyChecksum yes
+[nc1]
+pagepool 324379307212
+[nc1,nc2]
+nsdRAIDTracks 128K
+nspdQueues 120
+nspdBufferMemPerQueue 24m
+nspdThreadsPerQueue 2
+nsdMinWorkerThreads 3842
+nsdMaxWorkerThreads 3842
+nsdSmallThreadRatio 1
+nsdRAIDEventLogToConsole all
+nsdRAIDBlockDeviceMaxSectorsKB 0
+nsdRAIDBlockDeviceNrRequests 0
+nsdRAIDBlockDeviceQueueDepth 0
+nsdRAIDBlockDeviceScheduler off
+nsdRAIDSmallThreadRatio 2
+nsdRAIDDefaultGeneratedFD no
+nsdRAIDMasterBufferPoolSize 2G
+nsdRAIDReconstructAggressiveness 0
+nsdRAIDThreadsPerQueue 16
+nsdRAIDSSDPerformanceShortTimeConstant 2500000
+nsdRAIDDiskDiagTimeout 130
+nsdRAIDEnableRGCMRebalanceWeight yes
+panicOnIOHang yes
+pitWorkerThreadsPerNode 32
+maxStatCache 128k
+maxMBpS 50000
+backgroundSpaceReclaim Good: 1 10% 60 1% Info: 0 6% 30 1% Warning: 0 3% 10 0% Critical: 0 2% 5 0% OOS: 0 1% 1 0%
+nsdRAIDEnableSpaceMonitor 1
+pagepoolMaxPhysMemPct 90
+[nc2]
+pagepool 324379437465
+[common]
+verbsRdmaCm disable
+verbsRdma enable
+verbsRdmaSend yes
+[clients]
+verbsPorts mlx5_0/1
+[nc2]
+verbsPorts  mlx5_1  mlx5_3  mlx5_5  mlx5_7
+[nc1]
+verbsPorts mlx5_1  mlx5_3  mlx5_5  mlx5_7
+[common]
+traceRecycle off
+tracedevOverwriteBufferSize 12884901888
+tracedevWriteMode overwrite
+trace all 4 tm 2 thread 1 mutex 1 vnode 2 ksvfs 3 klockl 2 io 3 pgalloc 1 mb 1 lock 2 fsck 3 fsckx 3 iolite 0
+preferDesignatedMnode yes
+[arches10ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches8ib,arches9ib]
+dataShipClientBuffersPerServer 100
+[nc1,nc2]
+dataShipClientBuffersPerServer 4
+[arches10ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches8ib,arches9ib,nc1,nc2]
+dataShipMaxServerThreads 48
+[arches10ib,arches1ib,arches2ib,arches3ib,arches4ib,arches5ib,arches6ib,arches7ib,arches8ib,arches9ib]
+dataShipServerBufferPct 40
+[nc1,nc2]
+dataShipServerBufferPct 10
+[common]
+inodePrefetchThreshold 5
+adminMode central
+
+File systems in cluster io500.gpfs:
+-----------------------------------
+/dev/fs_35

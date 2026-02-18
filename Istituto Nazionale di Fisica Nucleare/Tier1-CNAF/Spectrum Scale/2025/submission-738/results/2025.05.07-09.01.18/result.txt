@@ -1,0 +1,118 @@
+[run]
+procs           = 100
+version         = io500-isc25_v1
+config-hash     = E70ABDAA
+result-dir      = /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18
+mode            = standard
+; START 2025-05-07 09:01:20
+
+
+[ior-easy-write]
+t_start         = 2025-05-07 09:01:20
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761999743 -k -e -o /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-easy-write.csv
+throughput-stonewall = 16.20
+score           = 14.625057
+t_delta         = 345.9412
+t_end           = 2025-05-07 09:07:06
+
+[mdtest-easy-write]
+t_start         = 2025-05-07 09:07:06
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1648177537 -N 1 -d /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-easy -x /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 293.568189
+score           = 227.726067
+t_delta         = 424.4231
+t_end           = 2025-05-07 09:14:10
+
+[timestamp]
+t_start         = 2025-05-07 09:14:10
+t_delta         = 0.0003
+t_end           = 2025-05-07 09:14:10
+
+[ior-hard-write]
+t_start         = 2025-05-07 09:14:10
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=762010431 -k -e -o /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/ior-hard/file -O stoneWallingStatusFile=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 4.98
+score           = 3.562695
+t_delta         = 676.4131
+t_end           = 2025-05-07 09:25:27
+
+[mdtest-hard-write]
+t_start         = 2025-05-07 09:25:27
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1648188225 -N 1 -F -d /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-hard -x /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 38.312613
+score           = 33.356365
+t_delta         = 478.7050
+t_end           = 2025-05-07 09:33:25
+
+[find]
+t_start         = 2025-05-07 09:33:25
+exe             = ./pfind /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18 -newer /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 100
+found           = 564800
+total-files     = 112297301
+score           = 2610.390354
+t_delta         = 43.0311
+t_end           = 2025-05-07 09:34:09
+
+[ior-easy-read]
+t_start         = 2025-05-07 09:34:09
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761999743 -k -e -o /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-easy-read.csv
+score           = 23.750844
+t_delta         = 212.9504
+t_end           = 2025-05-07 09:37:41
+
+[mdtest-easy-stat]
+t_start         = 2025-05-07 09:37:41
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1648177537 -N 1 -d /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-easy -x /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-easy-stat.csv -a POSIX
+score           = 473.709459
+t_delta         = 204.4275
+t_end           = 2025-05-07 09:41:06
+
+[ior-hard-read]
+t_start         = 2025-05-07 09:41:06
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=762010431 -k -e -o /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/ior-hard/file -O stoneWallingStatusFile=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-hard-read.csv
+score           = 13.158206
+t_delta         = 183.1426
+t_end           = 2025-05-07 09:44:09
+
+[mdtest-hard-stat]
+t_start         = 2025-05-07 09:44:09
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1648188225 -N 1 -F -d /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-hard -x /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard-stat.csv -a POSIX
+score           = 56.728573
+t_delta         = 281.8911
+t_end           = 2025-05-07 09:48:51
+
+[mdtest-easy-delete]
+t_start         = 2025-05-07 09:48:51
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 1648177537 -N 1 -d /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-easy -x /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-easy-delete.csv -a POSIX
+score           = 97.811037
+t_delta         = 990.5111
+t_end           = 2025-05-07 10:05:21
+
+[mdtest-hard-read]
+t_start         = 2025-05-07 10:05:21
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1648188225 -N 1 -F -d /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-hard -x /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard-read.csv -a POSIX
+score           = 53.149690
+t_delta         = 300.8050
+t_end           = 2025-05-07 10:10:22
+
+[mdtest-hard-delete]
+t_start         = 2025-05-07 10:10:22
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=1648188225 -N 1 -F -d /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-hard -x /gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard-delete.csv -a POSIX
+score           = 18.826375
+t_delta         = 847.5394
+t_end           = 2025-05-07 10:24:30
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-05-07 10:24:30
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761999743 -k -e -o /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=1000000
+score           = 10.745562
+t_delta         = 35.5102
+t_end           = 2025-05-07 10:25:05
+
+[SCORE]
+MD              = 122.930109
+BW              = 11.296347
+SCORE           = 37.264744
+hash            = CA6F611E
+; END 2025-05-07 10:25:05

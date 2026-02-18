@@ -1,0 +1,33 @@
+-- started at 05/07/2025 09:25:27 --
+
+mdtest-4.1.0+dev was launched with 100 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=1648188225' '-N' '1' '-F' '-d' '/gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-hard' '-x' '/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard.stonewall' '-C' '-Y' '-W' '300' '--saveRankPerformanceDetails=/gpfs/gpfs_test/ssd/io500_test/results//2025.05.07-09.01.18/mdtest-hard-write.csv' '-a' 'POSIX'
+Nodemap: 1111111111000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Path                : /gpfs/gpfs_test/ssd/io500_test/2025.05.07-09.01.18/mdtest-hard
+FS                  : 10792.8 TiB   Used FS: 0.2%   Inodes: 550.0 Mi   Used Inodes: 16.9%
+V-0: Rank   0 Line  2586 Shifting ranks by 10 for each phase.
+100 tasks, 100000000 files
+Continue stonewall hit min: 98159 max: 159343 avg: 114943.1 
+
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation               33356.365      33356.365      33356.365          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                4032.985       4032.985       4032.985          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time (in ms/op): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                 477.699        477.699        477.699          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 05/07/2025 09:33:25 --
+

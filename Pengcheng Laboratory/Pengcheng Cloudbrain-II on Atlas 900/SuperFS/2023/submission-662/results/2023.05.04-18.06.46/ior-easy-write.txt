@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 18:07:29 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1386257720 -k -e -o /datafiles/2023.05.04-18.06.46/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.05.04-18.06.46/ior-easy.stonewall -t 2m -b 60000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.05.04-18.06.46/ior-easy-write.csv
+Machine             : Linux 2023d2-bms-c65a-0014.novalocal
+TestID              : 0
+StartTime           : Thu May  4 18:07:29 2023
+Path                : /datafiles/2023.05.04-18.06.46/ior-easy/ior_file_easy.00000000
+FS                  : 991097.7 TiB   Used FS: 0.0%   Inodes: 953674.3 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /datafiles/2023.05.04-18.06.46/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1200
+clients per node    : 120
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 58.59 GiB
+aggregate filesize  : 68.66 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 27940 max: 29295 -- min data: 54.6 GiB mean data: 55.7 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 75497472000000
+WARNING: Stat() of aggregate file size      = 73723281408000
+WARNING: Using actual aggregate bytes moved = 73723281408000
+WARNING: Maybe caused by deadlineForStonewalling
+write     224439     112223     0.010380    61440000   2048.00    0.007309   313.25     0.002015   313.26     0   

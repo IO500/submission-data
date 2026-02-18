@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu May  4 18:21:54 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1386247032 -k -e -o /datafiles/2023.05.04-18.06.46/ior-hard/file -O stoneWallingStatusFile=./results/2023.05.04-18.06.46/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.05.04-18.06.46/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux 2023d2-bms-c65a-0014.novalocal
+TestID              : 0
+StartTime           : Thu May  4 18:21:54 2023
+Path                : /datafiles/2023.05.04-18.06.46/ior-hard/file
+FS                  : -508000000.0 GiB   Used FS: 0.0%   Inodes: 953674.3 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /datafiles/2023.05.04-18.06.46/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1200
+clients per node    : 120
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 513.04 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1076737 max: 1222977 -- min data: 47.1 GiB mean data: 51.4 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 564096000000000
+WARNING: Stat() of aggregate file size      = 68987643379200
+WARNING: Using actual aggregate bytes moved = 68987643379200
+WARNING: Maybe caused by deadlineForStonewalling
+write     194014     4327899    309.03      45.91      45.91      0.010498   339.10     0.001465   339.11     0   

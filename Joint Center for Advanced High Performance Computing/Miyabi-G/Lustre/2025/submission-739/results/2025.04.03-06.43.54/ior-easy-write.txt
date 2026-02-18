@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Apr  3 06:46:11 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 744162827 -k -e -o /work/gz02/z30232/out/datafiles/2025.04.03-06.43.54/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.04.03-06.43.54/ior-easy.stonewall -t 16m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2025.04.03-06.43.54/ior-easy-write.csv
+Machine             : Linux mg0001
+TestID              : 0
+StartTime           : Thu Apr  3 06:46:11 2025
+Path                : /work/gz02/z30232/out/datafiles/2025.04.03-06.43.54/ior-easy/ior_file_easy.00000000
+FS                  : 10119.6 TiB   Used FS: 1.1%   Inodes: 22730.6 Mi   Used Inodes: 0.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/gz02/z30232/out/datafiles/2025.04.03-06.43.54/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 200
+tasks               : 1600
+clients per node    : 8
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 15136.72 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 6271 max: 9554 -- min data: 98.0 GiB mean data: 120.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 16642998272000000
+WARNING: Stat() of aggregate file size      = 256463234662400
+WARNING: Using actual aggregate bytes moved = 256463234662400
+WARNING: Maybe caused by deadlineForStonewalling
+write     647220     40455      0.000592    10158080000 16384      0.027545   377.86     0.007201   377.90     0   

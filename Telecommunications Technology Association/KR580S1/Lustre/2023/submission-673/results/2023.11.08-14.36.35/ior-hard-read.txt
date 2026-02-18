@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  8 15:05:56 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385214077 -k -e -o /home/io500user/mnt/io500/datafiles/2023.11.08-14.36.35/ior-hard/file -O stoneWallingStatusFile=./results/2023.11.08-14.36.35/ior-hard.stonewall -t 47008 -b 47008 -s 100000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.11.08-14.36.35/ior-hard-read.csv
+Machine             : Linux c1
+TestID              : 0
+StartTime           : Wed Nov  8 15:05:56 2023
+Path                : /home/io500user/mnt/io500/datafiles/2023.11.08-14.36.35/ior-hard/file
+FS                  : 99.0 TiB   Used FS: 39.7%   Inodes: 93.6 Mi   Used Inodes: 36.2%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /home/io500user/mnt/io500/datafiles/2023.11.08-14.36.35/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 100000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.37 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      20223      451122     70.93       45.91      45.91      0.007084   70.93      0.004578   70.94      0   

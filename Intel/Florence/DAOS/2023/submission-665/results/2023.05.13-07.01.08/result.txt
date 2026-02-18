@@ -1,0 +1,111 @@
+[run]
+procs           = 1120
+version         = io500-isc23
+config-hash     = B54C6CE8
+result-dir      = /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08
+mode            = standard
+; START 2023-05-13 07:01:44
+
+
+[ior-easy-write]
+t_start         = 2023-05-13 07:01:44
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385492102 -k -e -o /datafiles/2023.05.13-07.01.08/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/ior-easy.stonewall -t 16m -b 99000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/ior-easy-write.csv
+throughput-stonewall = 19.65
+score           = 19.649724
+t_delta         = 339.5986
+t_end           = 2023-05-13 07:07:24
+
+[mdtest-easy-write]
+t_start         = 2023-05-13 07:07:24
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -499314308 -N 1 -d /datafiles/2023.05.13-07.01.08/mdtest-easy -x /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-easy-write.csv -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 2191.077755
+score           = 2180.218857
+t_delta         = 306.4942
+t_end           = 2023-05-13 07:12:31
+
+[timestamp]
+t_start         = 2023-05-13 07:12:31
+t_delta         = 0.0013
+t_end           = 2023-05-13 07:12:31
+
+[ior-hard-write]
+t_start         = 2023-05-13 07:12:31
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385481414 -k -e -o /datafiles/2023.05.13-07.01.08/ior-hard/file -O stoneWallingStatusFile=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 18.61
+score           = 18.580682
+t_delta         = 313.4562
+t_end           = 2023-05-13 07:17:44
+
+[mdtest-hard-write]
+t_start         = 2023-05-13 07:17:44
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-499303620 -N 1 -F -d /datafiles/2023.05.13-07.01.08/mdtest-hard -x /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-hard-write.csv -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 351.404315
+score           = 301.511898
+t_delta         = 379.9708
+t_end           = 2023-05-13 07:24:04
+
+[find]
+t_start         = 2023-05-13 07:24:04
+exe             = ./pfind /datafiles/2023.05.13-07.01.08 -newer /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1120
+found           = 6544930
+total-files     = 779910882
+score           = 2405.077881
+t_delta         = 324.4578
+t_end           = 2023-05-13 07:29:28
+
+[ior-easy-read]
+t_start         = 2023-05-13 07:29:28
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385492102 -k -e -o /datafiles/2023.05.13-07.01.08/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/ior-easy.stonewall -t 16m -b 99000000m -r -R -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/ior-easy-read.csv
+score           = 51.282845
+t_delta         = 130.0608
+t_end           = 2023-05-13 07:31:38
+
+[mdtest-easy-stat]
+t_start         = 2023-05-13 07:31:38
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -499314308 -N 1 -d /datafiles/2023.05.13-07.01.08/mdtest-easy -x /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-easy-stat.csv -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 2863.223292
+t_delta         = 233.5090
+t_end           = 2023-05-13 07:35:32
+
+[ior-hard-read]
+t_start         = 2023-05-13 07:35:32
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385481414 -k -e -o /datafiles/2023.05.13-07.01.08/ior-hard/file -O stoneWallingStatusFile=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/ior-hard-read.csv
+score           = 49.336514
+t_delta         = 118.0705
+t_end           = 2023-05-13 07:37:30
+
+[mdtest-hard-stat]
+t_start         = 2023-05-13 07:37:30
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-499303620 -N 1 -F -d /datafiles/2023.05.13-07.01.08/mdtest-hard -x /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-hard-stat.csv -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 2207.163384
+t_delta         = 52.7915
+t_end           = 2023-05-13 07:38:23
+
+[mdtest-easy-delete]
+t_start         = 2023-05-13 07:38:23
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -499314308 -N 1 -d /datafiles/2023.05.13-07.01.08/mdtest-easy -x /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-easy-delete.csv -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1240.728212
+t_delta         = 546.2202
+t_end           = 2023-05-13 07:47:29
+
+[mdtest-hard-read]
+t_start         = 2023-05-13 07:47:29
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-499303620 -N 1 -F -d /datafiles/2023.05.13-07.01.08/mdtest-hard -x /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-hard-read.csv -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1364.215813
+t_delta         = 84.7748
+t_end           = 2023-05-13 07:48:54
+
+[mdtest-hard-delete]
+t_start         = 2023-05-13 07:48:54
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-499303620 -N 1 -F -d /datafiles/2023.05.13-07.01.08/mdtest-hard -x /home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/mhenneck/bench/results-florence-daos-2.3.105/2023.05.13-07.01.08/mdtest-hard-delete.csv -a DFS --dfs.pool=mhenneck_pool01 --dfs.cont=mhenneck_cont01 --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 1097.664451
+t_delta         = 242.5654
+t_end           = 2023-05-13 07:52:56
+
+[SCORE]
+MD              = 1440.726654
+BW              = 31.001997
+SCORE           = 211.341911
+hash            = B7429FD3
+; END 2023-05-13 07:52:56

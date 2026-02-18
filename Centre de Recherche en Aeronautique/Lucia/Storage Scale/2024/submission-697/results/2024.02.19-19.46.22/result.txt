@@ -1,0 +1,111 @@
+[run]
+procs           = 1024
+version         = 
+config-hash     = 67DA3F00
+result-dir      = /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22
+mode            = standard
+; START 2024-02-19 19:46:26
+
+
+[ior-easy-write]
+t_start         = 2024-02-19 19:46:26
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -360483140 -k -e -o /gpfs/flash/axians/2024.02.19-19.46.22/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-easy.stonewall -t 16m -b 60g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-easy-write.csv
+throughput-stonewall = 172.64
+score           = 170.296937
+t_delta         = 346.2651
+t_end           = 2024-02-19 19:52:12
+
+[mdtest-easy-write]
+t_start         = 2024-02-19 19:52:12
+exe             = ./mdtest --dataPacketType=timestamp -n 150000 -u -L -F -P -G 525694655 -N 1 -d /gpfs/flash/axians/2024.02.19-19.46.22/mdtest-easy -x /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 487.486415
+score           = 478.938423
+t_delta         = 327.2415
+t_end           = 2024-02-19 19:57:39
+
+[timestamp]
+t_start         = 2024-02-19 19:57:39
+t_delta         = 0.0002
+t_end           = 2024-02-19 19:57:39
+
+[ior-hard-write]
+t_start         = 2024-02-19 19:57:39
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-360472452 -k -e -o /gpfs/flash/axians/2024.02.19-19.46.22/ior-hard/file -O stoneWallingStatusFile=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-hard.stonewall -t 47008 -b 47008 -s 30000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 2.17
+score           = 3.023541
+t_delta         = 444.8353
+t_end           = 2024-02-19 20:05:04
+
+[mdtest-hard-write]
+t_start         = 2024-02-19 20:05:04
+exe             = ./mdtest --dataPacketType=timestamp -n 25000 -t -w 3901 -e 3901 -P -G=525705343 -N 1 -F -d /gpfs/flash/axians/2024.02.19-19.46.22/mdtest-hard -x /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 8.784101
+score           = 12.778687
+t_delta         = 361.9309
+t_end           = 2024-02-19 20:11:06
+
+[find]
+t_start         = 2024-02-19 20:11:06
+exe             = ./pfind /gpfs/flash/axians/2024.02.19-19.46.22 -newer /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1024
+found           = 175420
+total-files     = 158213121
+score           = 2175.306310
+t_delta         = 72.7330
+t_end           = 2024-02-19 20:12:19
+
+[ior-easy-read]
+t_start         = 2024-02-19 20:12:19
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -360483140 -k -e -o /gpfs/flash/axians/2024.02.19-19.46.22/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-easy.stonewall -t 16m -b 60g -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-easy-read.csv
+score           = 291.503588
+t_delta         = 202.5257
+t_end           = 2024-02-19 20:15:41
+
+[mdtest-easy-stat]
+t_start         = 2024-02-19 20:15:41
+exe             = ./mdtest --dataPacketType=timestamp -n 150000 -u -L -F -P -G 525694655 -N 1 -d /gpfs/flash/axians/2024.02.19-19.46.22/mdtest-easy -x /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-easy-stat.csv -a POSIX
+score           = 593.340820
+t_delta         = 260.1161
+t_end           = 2024-02-19 20:20:02
+
+[ior-hard-read]
+t_start         = 2024-02-19 20:20:02
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-360472452 -k -e -o /gpfs/flash/axians/2024.02.19-19.46.22/ior-hard/file -O stoneWallingStatusFile=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-hard.stonewall -t 47008 -b 47008 -s 30000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-hard-read.csv
+score           = 59.825172
+t_delta         = 22.4874
+t_end           = 2024-02-19 20:20:24
+
+[mdtest-hard-stat]
+t_start         = 2024-02-19 20:20:24
+exe             = ./mdtest --dataPacketType=timestamp -n 25000 -t -w 3901 -e 3901 -P -G=525705343 -N 1 -F -d /gpfs/flash/axians/2024.02.19-19.46.22/mdtest-hard -x /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-hard-stat.csv -a POSIX
+score           = 602.334614
+t_delta         = 9.1043
+t_end           = 2024-02-19 20:20:33
+
+[mdtest-easy-delete]
+t_start         = 2024-02-19 20:20:33
+exe             = ./mdtest --dataPacketType=timestamp -n 150000 -u -L -F -P -G 525694655 -N 1 -d /gpfs/flash/axians/2024.02.19-19.46.22/mdtest-easy -x /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-easy-delete.csv -a POSIX
+score           = 240.342904
+t_delta         = 662.0476
+t_end           = 2024-02-19 20:31:35
+
+[mdtest-hard-read]
+t_start         = 2024-02-19 20:31:35
+exe             = ./mdtest --dataPacketType=timestamp -n 25000 -t -w 3901 -e 3901 -P -G=525705343 -N 1 -F -d /gpfs/flash/axians/2024.02.19-19.46.22/mdtest-hard -x /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-hard-read.csv -a POSIX
+score           = 168.813751
+t_delta         = 28.3253
+t_end           = 2024-02-19 20:32:04
+
+[mdtest-hard-delete]
+t_start         = 2024-02-19 20:32:04
+exe             = ./mdtest --dataPacketType=timestamp -n 25000 -t -w 3901 -e 3901 -P -G=525705343 -N 1 -F -d /gpfs/flash/axians/2024.02.19-19.46.22/mdtest-hard -x /gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/mdtest-hard-delete.csv -a POSIX
+score           = 60.588917
+t_delta         = 183.8020
+t_end           = 2024-02-19 20:35:07
+
+[SCORE]
+MD              = 241.828559
+BW              = 54.740990
+SCORE           = 115.056224
+hash            = 6D49A562
+; END 2024-02-19 20:35:09

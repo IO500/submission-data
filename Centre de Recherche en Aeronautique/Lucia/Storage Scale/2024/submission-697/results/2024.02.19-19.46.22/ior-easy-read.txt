@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Feb 19 20:12:19 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -360483140 -k -e -o /gpfs/flash/axians/2024.02.19-19.46.22/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-easy.stonewall -t 16m -b 60g -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-easy-read.csv
+Machine             : Linux cns001.lucia.cenaero.be
+TestID              : 0
+StartTime           : Mon Feb 19 20:12:19 2024
+Path                : /gpfs/flash/axians/2024.02.19-19.46.22/ior-easy/ior_file_easy.00000000
+FS                  : 3251.4 TiB   Used FS: 13.1%   Inodes: 522.1 Mi   Used Inodes: 48.8%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/flash/axians/2024.02.19-19.46.22/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 256
+tasks               : 1024
+clients per node    : 4
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 60 GiB
+aggregate filesize  : 60 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 65970697666560
+WARNING: Stat() of aggregate file size      = 63307817943040
+WARNING: Using actual aggregate bytes moved = 63307817943040
+read      298500     18718      0.052498    62914560   16384      0.670974   201.59     0.000156   202.26     0   

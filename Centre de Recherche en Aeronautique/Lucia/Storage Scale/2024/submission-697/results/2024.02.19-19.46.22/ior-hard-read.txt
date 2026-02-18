@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Feb 19 20:20:02 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-360472452 -k -e -o /gpfs/flash/axians/2024.02.19-19.46.22/ior-hard/file -O stoneWallingStatusFile=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-hard.stonewall -t 47008 -b 47008 -s 30000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-hard-read.csv
+Machine             : Linux cns001.lucia.cenaero.be
+TestID              : 0
+StartTime           : Mon Feb 19 20:20:02 2024
+Path                : /gpfs/flash/axians/2024.02.19-19.46.22/ior-hard/file
+FS                  : 3251.4 TiB   Used FS: 13.1%   Inodes: 522.1 Mi   Used Inodes: 48.8%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/flash/axians/2024.02.19-19.46.22/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 30000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 256
+tasks               : 1024
+clients per node    : 4
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.31 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      61261      1366995    22.47       45.91      45.91      0.007945   22.47      0.000127   22.48      0   

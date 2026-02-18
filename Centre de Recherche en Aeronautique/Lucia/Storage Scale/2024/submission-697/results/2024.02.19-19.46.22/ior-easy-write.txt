@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Feb 19 19:46:26 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -360483140 -k -e -o /gpfs/flash/axians/2024.02.19-19.46.22/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-easy.stonewall -t 16m -b 60g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/axians/aortiz/io500/results/2024.02.19-19.46.22/ior-easy-write.csv
+Machine             : Linux cns001.lucia.cenaero.be
+TestID              : 0
+StartTime           : Mon Feb 19 19:46:26 2024
+Path                : /gpfs/flash/axians/2024.02.19-19.46.22/ior-easy/ior_file_easy.00000000
+FS                  : 3251.4 TiB   Used FS: 11.3%   Inodes: 522.1 Mi   Used Inodes: 19.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /gpfs/flash/axians/2024.02.19-19.46.22/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 256
+tasks               : 1024
+clients per node    : 4
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 60 GiB
+aggregate filesize  : 60 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 2629 max: 3685 -- min data: 41.1 GiB mean data: 51.5 GiB time: 305.7s
+WARNING: Expected aggregate file size       = 65970697666560
+WARNING: Stat() of aggregate file size      = 63307817943040
+WARNING: Using actual aggregate bytes moved = 63307817943040
+WARNING: Maybe caused by deadlineForStonewalling
+write     174384     11037      0.087243    62914560   16384      4.34       341.88     0.000357   346.22     0   

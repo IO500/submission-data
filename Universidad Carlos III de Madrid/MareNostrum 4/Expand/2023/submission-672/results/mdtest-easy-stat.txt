@@ -1,0 +1,30 @@
+-- started at 06/14/2023 20:06:58 --
+
+mdtest-3.4.0+dev was launched with 320 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '10000000' '-u' '-L' '-F' '-P' '-G' '-482249092' '-N' '1' '-d' '/tmp/expand/xpn/2023.06.14-19.45.14/mdtest-easy' '-x' '/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-easy.stonewall' '-T' '--saveRankPerformanceDetails=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-easy-stat.csv' '-a' 'POSIX'
+WARNING: Backend returned error during statfs
+Nodemap: 10000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+V-0: Rank   0 Line  2537 Shifting ranks by 1 for each phase.
+320 tasks, 3200000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                  262149.616     262149.616     262149.616          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       3.417          3.417          3.417          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 06/14/2023 20:07:03 --
+

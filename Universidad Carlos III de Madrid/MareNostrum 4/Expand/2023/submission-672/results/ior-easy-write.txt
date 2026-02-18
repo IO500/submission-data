@@ -1,0 +1,38 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Jun 14 19:45:14 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1368426886 -k -e -o /tmp/expand/xpn/2023.06.14-19.45.14/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-easy-write.csv
+Machine             : Linux s19r2b65
+TestID              : 0
+StartTime           : Wed Jun 14 19:45:14 2023
+WARNING: Backend returned error during statfs
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/expand/xpn/2023.06.14-19.45.14/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 3027.34 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4807 max: 4823 -- min data: 9.4 GiB mean data: 9.4 GiB time: 300.2s
+WARNING: Expected aggregate file size       = 3328599654400000
+WARNING: Stat() of aggregate file size      = 3236660510720
+WARNING: Using actual aggregate bytes moved = 3236660510720
+WARNING: Maybe caused by deadlineForStonewalling
+write     10253      5127       0.000061    10158080000 2048.00    0.023071   301.02     0.002827   301.05     0   

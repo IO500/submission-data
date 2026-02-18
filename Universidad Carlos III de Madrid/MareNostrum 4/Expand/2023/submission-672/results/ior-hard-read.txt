@@ -1,0 +1,34 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Jun 14 20:07:03 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1368416198 -k -e -o /tmp/expand/xpn/2023.06.14-19.45.14/ior-hard/file -O stoneWallingStatusFile=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-hard-read.csv
+Machine             : Linux s19r2b65
+TestID              : 0
+StartTime           : Wed Jun 14 20:07:03 2023
+WARNING: Backend returned error during statfs
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /tmp/expand/xpn/2023.06.14-19.45.14/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 136.81 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 150425600000000
+WARNING: Stat() of aggregate file size      = 2092675819520
+WARNING: Using actual aggregate bytes moved = 2092675819520
+read      68889      1537060    28.96       45.91      45.91      0.010324   28.96      0.002725   28.97      0   

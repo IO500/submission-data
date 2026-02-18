@@ -1,0 +1,60 @@
+#!/bin/bash
+#SBATCH --job-name=mn4_io500_xpn_64n_32p_512k_L1_T0_S0
+#SBATCH --mail-type=all
+#SBATCH --mail-user=dcamarma@inf.uc3m.es
+
+#SBATCH --output=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.out
+#SBATCH --error=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.out
+
+#SBATCH --nodes=74
+#SBATCH --exclusive
+
+#SBATCH --time=08:00:00
+
+echo "sbatch /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/jobs_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0"
+
+echo "XPN Configuration:"
+echo "XPN_LOCALITY=1"
+echo "XPN_THREAD=0"
+echo "XPN_SESSION=0"
+
+scontrol show hostnames ${SLURM_JOB_NODELIST} > /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/machine_files/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}
+head -n 64 /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/machine_files/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID} > /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/machine_files/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}_servers
+tail -n 10 /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/machine_files/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID} > /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/machine_files/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}_clients
+
+echo "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>"         >  /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/configuration/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}.xml
+echo "<xpn_conf>"                                                      >> /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/configuration/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}.xml
+echo "  <partition bsize=\"512k\" type=\"NORMAL\" name=\"xpn\">"       >> /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/configuration/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}.xml
+ITER=1
+while IFS= read -r line
+do
+   echo "    <data_node url=\"mpi_server://$line/$TMPDIR\" id=\"id${ITER}\"/>"    >> /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/configuration/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}.xml
+   ITER=$((${ITER}+1))
+done < /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/machine_files/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}_servers
+echo "  </partition>"                                                  >> /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/configuration/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}.xml
+echo "</xpn_conf>"                                                     >> /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/configuration/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}.xml
+
+rm -rf /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0
+mkdir -p /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0
+cp ./xpn_config.ini /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/io500_config/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}
+sed -i 's|RES_PATH|/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0|g' "/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/io500_config/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}"
+
+sleep 5
+
+mpiexec.hydra -np 64 --rr \
+              -hostfile /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/machine_files/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}_servers \
+              -genv LD_LIBRARY_PATH /gpfs/home/uc3m15/uc3m15971/mn4/bin/mxml/lib:$LD_LIBRARY_PATH \
+              /gpfs/home/uc3m15/uc3m15971/mn4/bin/xpn/bin/xpn_mpi_server -ns /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/dns/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID} -t without &
+
+mpiexec.hydra -np 320 --rr\
+              -hostfile /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/machine_files/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}_clients \
+              -genv LD_LIBRARY_PATH /gpfs/home/uc3m15/uc3m15971/mn4/bin/mxml/lib:$LD_LIBRARY_PATH \
+              -genv XPN_DNS /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/dns/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID} \
+              -genv XPN_CONF /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/configuration/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}.xml \
+              -genv LD_PRELOAD /gpfs/home/uc3m15/uc3m15971/mn4/bin/xpn/lib/xpn_bypass.so \
+              -genv XPN_LOCALITY 1 \
+              -genv XPN_THREAD 0 \
+              -genv XPN_SESSION 0 \
+              /gpfs/home/uc3m15/uc3m15971/mn4/src/io500/io500 /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/io500_config/mn4_io500_xpn_64n_32p_512k_L1_T0_S0.${SLURM_JOBID}
+
+pkill mpiexec

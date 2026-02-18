@@ -1,0 +1,111 @@
+[run]
+procs           = 320
+version         = 
+config-hash     = 406EA34D
+result-dir      = /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0
+mode            = standard
+; START 2023-06-14 19:45:14
+
+
+[ior-easy-write]
+t_start         = 2023-06-14 19:45:14
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1368426886 -k -e -o /tmp/expand/xpn/2023.06.14-19.45.14/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-easy-write.csv
+throughput-stonewall = 10.04
+score           = 10.012985
+t_delta         = 301.0667
+t_end           = 2023-06-14 19:50:15
+
+[mdtest-easy-write]
+t_start         = 2023-06-14 19:50:15
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -482249092 -N 1 -d /tmp/expand/xpn/2023.06.14-19.45.14/mdtest-easy -x /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 2.951955
+score           = 2.929838
+t_delta         = 310.6498
+t_end           = 2023-06-14 19:55:26
+
+[timestamp]
+t_start         = 2023-06-14 19:55:26
+t_delta         = 0.0011
+t_end           = 2023-06-14 19:55:26
+
+[ior-hard-write]
+t_start         = 2023-06-14 19:55:26
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1368416198 -k -e -o /tmp/expand/xpn/2023.06.14-19.45.14/ior-hard/file -O stoneWallingStatusFile=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 5.80
+score           = 5.814799
+t_delta         = 335.1811
+t_end           = 2023-06-14 20:01:01
+
+[mdtest-hard-write]
+t_start         = 2023-06-14 20:01:01
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-482238404 -N 1 -F -d /tmp/expand/xpn/2023.06.14-19.45.14/mdtest-hard -x /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 3.531001
+score           = 3.485391
+t_delta         = 312.1856
+t_end           = 2023-06-14 20:06:13
+
+[find]
+t_start         = 2023-06-14 20:06:13
+exe             = ./pfind /tmp/expand/xpn/2023.06.14-19.45.14 -newer /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 320
+found           = 29982
+total-files     = 1963841
+score           = 234.576426
+t_delta         = 8.3892
+t_end           = 2023-06-14 20:06:22
+
+[ior-easy-read]
+t_start         = 2023-06-14 20:06:22
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1368426886 -k -e -o /tmp/expand/xpn/2023.06.14-19.45.14/ior-easy/ior_file_easy -O stoneWallingStatusFile=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-easy-read.csv
+score           = 82.953347
+t_delta         = 36.3476
+t_end           = 2023-06-14 20:06:58
+
+[mdtest-easy-stat]
+t_start         = 2023-06-14 20:06:58
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -482249092 -N 1 -d /tmp/expand/xpn/2023.06.14-19.45.14/mdtest-easy -x /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-easy-stat.csv -a POSIX
+score           = 262.149616
+t_delta         = 4.4234
+t_end           = 2023-06-14 20:07:03
+
+[ior-hard-read]
+t_start         = 2023-06-14 20:07:03
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1368416198 -k -e -o /tmp/expand/xpn/2023.06.14-19.45.14/ior-hard/file -O stoneWallingStatusFile=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/ior-hard-read.csv
+score           = 67.274137
+t_delta         = 28.9770
+t_end           = 2023-06-14 20:07:32
+
+[mdtest-hard-stat]
+t_start         = 2023-06-14 20:07:32
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-482238404 -N 1 -F -d /tmp/expand/xpn/2023.06.14-19.45.14/mdtest-hard -x /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-hard-stat.csv -a POSIX
+score           = 272.995254
+t_delta         = 4.9200
+t_end           = 2023-06-14 20:07:36
+
+[mdtest-easy-delete]
+t_start         = 2023-06-14 20:07:36
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -482249092 -N 1 -d /tmp/expand/xpn/2023.06.14-19.45.14/mdtest-easy -x /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-easy-delete.csv -a POSIX
+score           = 2.465748
+t_delta         = 365.5289
+t_end           = 2023-06-14 20:13:42
+
+[mdtest-hard-read]
+t_start         = 2023-06-14 20:13:42
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-482238404 -N 1 -F -d /tmp/expand/xpn/2023.06.14-19.45.14/mdtest-hard -x /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-hard-read.csv -a POSIX
+score           = 57.215442
+t_delta         = 19.6696
+t_end           = 2023-06-14 20:14:02
+
+[mdtest-hard-delete]
+t_start         = 2023-06-14 20:14:02
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-482238404 -N 1 -F -d /tmp/expand/xpn/2023.06.14-19.45.14/mdtest-hard -x /gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/gpfs/home/uc3m15/uc3m15971/mn4/test/xpn_mpiserver_disk/results_io500/mn4_io500_xpn_64n_32p_512k_L1_T0_S0/mdtest-hard-delete.csv -a POSIX
+score           = 2.038924
+t_delta         = 551.1273
+t_end           = 2023-06-14 20:23:13
+
+[SCORE]
+MD              = 21.707927
+BW              = 23.875093
+SCORE           = 22.765737
+hash            = BFD872D4
+; END 2023-06-14 20:23:34

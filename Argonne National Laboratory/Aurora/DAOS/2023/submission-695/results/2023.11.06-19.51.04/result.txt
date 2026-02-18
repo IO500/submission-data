@@ -1,0 +1,111 @@
+[run]
+procs           = 31200
+version         = io500-sc23_v1
+config-hash     = 4ACB6E2
+result-dir      = /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04
+mode            = standard
+; START 2023-11-06 19:52:06
+
+
+[ior-easy-write]
+t_start         = 2023-11-06 19:52:06
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385728394 -k -e -o /datafiles/2023.11.06-19.51.04/ior-easy/ior_file_easy -O stoneWallingStatusFile=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-easy.stonewall -t 1m -b 99200000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-easy-write.csv
+throughput-stonewall = 22035.73
+score           = 21029.853648
+t_delta         = 423.9147
+t_end           = 2023-11-06 19:59:10
+
+[mdtest-easy-write]
+t_start         = 2023-11-06 19:59:10
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -499550600 -N 1 -d /datafiles/2023.11.06-19.51.04/mdtest-easy -x /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-easy-write.csv -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=S32 --dfs.oclass=S1
+rate-stonewall  = 248513.586164
+score           = 147769.605660
+t_delta         = 978.6121
+t_end           = 2023-11-06 20:15:29
+
+[timestamp]
+t_start         = 2023-11-06 20:15:29
+t_delta         = 0.0009
+t_end           = 2023-11-06 20:15:29
+
+[ior-hard-write]
+t_start         = 2023-11-06 20:15:29
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385717706 -k -e -o /datafiles/2023.11.06-19.51.04/ior-hard/file -O stoneWallingStatusFile=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.chunk_size=470080 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 10820.59
+score           = 10500.042182
+t_delta         = 323.2240
+t_end           = 2023-11-06 20:20:52
+
+[mdtest-hard-write]
+t_start         = 2023-11-06 20:20:52
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-499539912 -N 1 -F -d /datafiles/2023.11.06-19.51.04/mdtest-hard -x /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-hard-write.csv -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=SX --dfs.oclass=S1
+rate-stonewall  = 104724.324157
+score           = 100519.037093
+t_delta         = 330.1079
+t_end           = 2023-11-06 20:26:22
+
+[find]
+t_start         = 2023-11-06 20:26:22
+exe             = ./pfind /datafiles/2023.11.06-19.51.04 -newer /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 31200
+found           = 2511925770
+total-files     = 177143928002
+score           = 291934.442456
+t_delta         = 634.7226
+t_end           = 2023-11-06 20:36:57
+
+[ior-easy-read]
+t_start         = 2023-11-06 20:36:57
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385728394 -k -e -o /datafiles/2023.11.06-19.51.04/ior-easy/ior_file_easy -O stoneWallingStatusFile=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-easy.stonewall -t 1m -b 99200000m -r -R -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-easy-read.csv
+score           = 11890.364024
+t_delta         = 748.6379
+t_end           = 2023-11-06 20:49:25
+
+[mdtest-easy-stat]
+t_start         = 2023-11-06 20:49:25
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -499550600 -N 1 -d /datafiles/2023.11.06-19.51.04/mdtest-easy -x /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-easy-stat.csv -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=S32 --dfs.oclass=S1
+score           = 230284.570649
+t_delta         = 627.4786
+t_end           = 2023-11-06 20:59:53
+
+[ior-hard-read]
+t_start         = 2023-11-06 20:59:53
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385717706 -k -e -o /datafiles/2023.11.06-19.51.04/ior-hard/file -O stoneWallingStatusFile=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.chunk_size=470080 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-hard-read.csv
+score           = 6348.025367
+t_delta         = 533.8688
+t_end           = 2023-11-06 21:08:47
+
+[mdtest-hard-stat]
+t_start         = 2023-11-06 21:08:47
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-499539912 -N 1 -F -d /datafiles/2023.11.06-19.51.04/mdtest-hard -x /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-hard-stat.csv -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 218972.621403
+t_delta         = 152.1596
+t_end           = 2023-11-06 21:11:19
+
+[mdtest-easy-delete]
+t_start         = 2023-11-06 21:11:19
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G -499550600 -N 1 -d /datafiles/2023.11.06-19.51.04/mdtest-easy -x /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-easy-delete.csv -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=S32 --dfs.oclass=S1
+score           = 131667.537603
+t_delta         = 1097.3812
+t_end           = 2023-11-06 21:29:36
+
+[mdtest-hard-read]
+t_start         = 2023-11-06 21:29:36
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-499539912 -N 1 -F -d /datafiles/2023.11.06-19.51.04/mdtest-hard -x /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-hard-read.csv -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 131761.560109
+t_delta         = 251.5026
+t_end           = 2023-11-06 21:33:48
+
+[mdtest-hard-delete]
+t_start         = 2023-11-06 21:33:48
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=-499539912 -N 1 -F -d /datafiles/2023.11.06-19.51.04/mdtest-hard -x /scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/mdtest-hard-delete.csv -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=SX --dfs.oclass=S1
+score           = 140604.353571
+t_delta         = 235.7632
+t_end           = 2023-11-06 21:37:43
+
+[SCORE]
+MD              = 164391.725821
+BW              = 11362.274434
+SCORE           = 43218.791092
+hash            = 8A5182B2
+; END 2023-11-06 21:37:43

@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Nov  6 20:36:57 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385728394 -k -e -o /datafiles/2023.11.06-19.51.04/ior-easy/ior_file_easy -O stoneWallingStatusFile=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-easy.stonewall -t 1m -b 99200000m -r -R -a DFS --dfs.pool=mypool --dfs.cont=mycont --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/scratchbox/daos/mschaara/io500/sc23/results/2023.11.06-19.51.04/ior-easy-read.csv
+Machine             : Linux x4300c7s2b0n0
+TestID              : 0
+StartTime           : Mon Nov  6 20:36:57 2023
+Path                : /datafiles/2023.11.06-19.51.04/ior-easy/ior_file_easy
+FS                  : 148161.7 TiB   Used FS: 8.5%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2023.11.06-19.51.04/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 300
+tasks               : 31200
+clients per node    : 104
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 94.60 TiB
+aggregate filesize  : 2951660.16 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 3245384663040000000
+WARNING: Stat() of aggregate file size      = 3245280950140010496
+WARNING: Using actual aggregate bytes moved = 9542183367475200
+read      12175733   12181358   0.000008    101580800000 1024.00    0.342730   747.05     0.001580   747.40     0   

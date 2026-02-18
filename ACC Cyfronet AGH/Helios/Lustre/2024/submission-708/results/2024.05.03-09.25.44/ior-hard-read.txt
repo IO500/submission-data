@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri May  3 09:57:14 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312779194 -k -e -o /net/hscra/benchmark/datafiles/2024.05.03-09.25.44/ior-hard/file -O stoneWallingStatusFile=/net/hscra/benchmark/results/2024.05.03-09.25.44/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/net/hscra/benchmark/results/2024.05.03-09.25.44/ior-hard-read.csv
+Machine             : Linux x1000c6s6b0n0
+TestID              : 0
+StartTime           : Fri May  3 09:57:14 2024
+Path                : /net/hscra/benchmark/datafiles/2024.05.03-09.25.44/ior-hard/file
+FS                  : 727.6 TiB   Used FS: 68.2%   Inodes: 799.8 Mi   Used Inodes: 8.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /net/hscra/benchmark/datafiles/2024.05.03-09.25.44/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 80
+tasks               : 640
+clients per node    : 8
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 273.62 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 300851200000000
+WARNING: Stat() of aggregate file size      = 2086764093440
+WARNING: Using actual aggregate bytes moved = 2086764093440
+read      233147     5234314    8.48        45.91      45.91      0.052376   8.48       0.002594   8.54       0   

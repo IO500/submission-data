@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri May  3 09:50:32 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -312789882 -k -e -o /net/hscra/benchmark/datafiles/2024.05.03-09.25.44/ior-easy/ior_file_easy -O stoneWallingStatusFile=/net/hscra/benchmark/results/2024.05.03-09.25.44/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/net/hscra/benchmark/results/2024.05.03-09.25.44/ior-easy-read.csv
+Machine             : Linux x1000c6s6b0n0
+TestID              : 0
+StartTime           : Fri May  3 09:50:32 2024
+Path                : /net/hscra/benchmark/datafiles/2024.05.03-09.25.44/ior-easy/ior_file_easy.00000000
+FS                  : 727.6 TiB   Used FS: 68.2%   Inodes: 799.8 Mi   Used Inodes: 8.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /net/hscra/benchmark/datafiles/2024.05.03-09.25.44/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 80
+tasks               : 640
+clients per node    : 8
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 6054.69 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 6657199308800000
+WARNING: Stat() of aggregate file size      = 146455700439040
+WARNING: Using actual aggregate bytes moved = 146455700439040
+read      475798     237908     0.000059    10158080000 2048.00    0.005102   293.54     0.005097   293.55     0   

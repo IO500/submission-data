@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat May  4 06:21:48 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312529654 -k -e -o /exafs/io500/2024.05.04-06.08.48/ior-hard/file -O stoneWallingStatusFile=./results/2024.05.04-06.08.48/ior-hard.stonewall -t 47008 -b 47008 -s 119900 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.05.04-06.08.48/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux src01-c8-n0
+TestID              : 0
+StartTime           : Sat May  4 06:21:48 2024
+Path                : /exafs/io500/2024.05.04-06.08.48/ior-hard/file
+FS                  : 59.3 TiB   Used FS: 29.7%   Inodes: 479.7 Mi   Used Inodes: 23.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /exafs/io500/2024.05.04-06.08.48/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 119900
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1280
+clients per node    : 128
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 6.56 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 24629 max: 39761 -- min data: 1.1 GiB mean data: 1.4 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 7214411776000
+WARNING: Stat() of aggregate file size      = 2392428912640
+WARNING: Using actual aggregate bytes moved = 2392428912640
+WARNING: Maybe caused by deadlineForStonewalling
+write     5858       131111     336.15      45.91      45.91      1.96       388.18     1.98       389.52     0   

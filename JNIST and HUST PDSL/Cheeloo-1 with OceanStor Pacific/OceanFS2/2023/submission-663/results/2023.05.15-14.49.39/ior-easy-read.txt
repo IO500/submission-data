@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 15 15:22:22 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384962169 -k -e -o /ofs2/ior-easy/ior_file_easy -O stoneWallingStatusFile=./result/2023.05.15-14.49.39/ior-easy.stonewall -t 49152 -b 86973087744 -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./result/2023.05.15-14.49.39/ior-easy-read.csv
+Machine             : Linux c0
+TestID              : 0
+StartTime           : Mon May 15 15:22:23 2023
+Path                : /ofs2/ior-easy/ior_file_easy.00000000
+FS                  : 5578.1 TiB   Used FS: 53.0%   Inodes: 3101691.4 Mi   Used Inodes: 84.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ofs2/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 9600
+clients per node    : 960
+repetitions         : 1
+xfersize            : 49152 bytes
+blocksize           : 81 GiB
+aggregate filesize  : 759.38 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      2497525    53281649   0.000180    84934656   48.00      0.003787   318.81     0.002151   318.82     0   

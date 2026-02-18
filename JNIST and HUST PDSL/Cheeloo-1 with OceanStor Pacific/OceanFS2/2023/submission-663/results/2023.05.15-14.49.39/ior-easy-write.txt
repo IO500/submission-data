@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 15 15:01:05 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1384962169 -k -e -o /ofs2/ior-easy/ior_file_easy -O stoneWallingStatusFile=./result/2023.05.15-14.49.39/ior-easy.stonewall -t 49152 -b 86973087744 -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./result/2023.05.15-14.49.39/ior-easy-write.csv
+Machine             : Linux c0
+TestID              : 0
+StartTime           : Mon May 15 15:01:06 2023
+Path                : /ofs2/ior-easy/ior_file_easy.00000000
+FS                  : 5578.1 TiB   Used FS: 14.3%   Inodes: 3101691.4 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ofs2/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 9600
+clients per node    : 960
+repetitions         : 1
+xfersize            : 49152 bytes
+blocksize           : 81 GiB
+aggregate filesize  : 759.38 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1497524 max: 1769472 -- min data: 68.6 GiB mean data: 80.5 GiB time: 300.3s
+write     2540230    54192800   0.000170    84934656   48.00      0.004885   313.45     0.001814   313.46     0   

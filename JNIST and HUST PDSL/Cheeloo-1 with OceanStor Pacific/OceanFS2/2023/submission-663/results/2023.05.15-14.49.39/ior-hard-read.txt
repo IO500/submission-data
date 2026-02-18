@@ -1,0 +1,32 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May 15 15:32:30 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1384951481 -k -e -o /ofs2/ior-hard/file -O stoneWallingStatusFile=./result/2023.05.15-14.49.39/ior-hard.stonewall -t 47008 -b 47008 -s 1850000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./result/2023.05.15-14.49.39/ior-hard-read.csv
+Machine             : Linux c0
+TestID              : 0
+StartTime           : Mon May 15 15:32:31 2023
+Path                : /ofs2/ior-hard/file
+FS                  : 5578.1 TiB   Used FS: 53.0%   Inodes: 3101691.4 Mi   Used Inodes: 84.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /ofs2/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 1850000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 9600
+clients per node    : 960
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 759.30 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      2439401    54415632   326.34      45.91      45.91      0.004793   326.38     0.003642   326.39     0   

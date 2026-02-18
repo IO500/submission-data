@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Oct 21 13:01:54 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=745746678 -k -e -o /shared/rc/ior.testingssd/io500/datafiles/2025.10.21-12.48.03/ior-hard/file -O stoneWallingStatusFile=./results/2025.10.21-12.48.03/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.10.21-12.48.03/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux clx-a-02.rc.rit.edu
+TestID              : 0
+StartTime           : Tue Oct 21 13:01:54 2025
+Path                : /shared/rc/ior.testingssd/io500/datafiles/2025.10.21-12.48.03/ior-hard/file
+FS                  : 100.0 TiB   Used FS: 12.2%   Inodes: 6.3 Mi   Used Inodes: 100.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /shared/rc/ior.testingssd/io500/datafiles/2025.10.21-12.48.03/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 320
+clients per node    : 32
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 136.81 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 10007 max: 16743 -- min data: 0.4 GiB mean data: 0.6 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 150425600000000
+WARNING: Stat() of aggregate file size      = 251857582080
+WARNING: Using actual aggregate bytes moved = 251857582080
+WARNING: Maybe caused by deadlineForStonewalling
+write     612.32     13673      0.022951    45.91      45.91      0.409156   391.86     0.000228   392.26     0   

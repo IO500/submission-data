@@ -1,0 +1,44 @@
+#!/bin/bash -l
+# NOTE the -l flag!
+#
+
+# Name of the job - You'll probably want to customize this.
+#SBATCH -J io500
+
+# Standard out and Standard Error output files
+#SBATCH -o joblogs/%j.output
+#SBATCH -e joblogs/%j.err
+
+#To send emails, set the adcdress below and remove one of the "#" signs.
+#SBATCH --mail-user slack:@pfmeec
+
+# notify on state change: BEGIN, END, FAIL or ALL
+#SBATCH --mail-type=ALL
+
+# Request 5 hours run time MAX, anything over will be KILLED
+#SBATCH -t 3:00:0
+
+#SBATCH --nodes=10
+#SBATCH --ntasks-per-node=32
+#SBATCH --mem=300G
+
+##SBATCH --nodes=2
+##SBATCH --ntasks-per-node=32
+##SBATCH --mem=300G
+
+##SBATCH --reservation=jchits_97
+##SBATCH --nodelist=skl-a-[01-64]
+##SBATCH --nodelist=skl-a-[00,01,03-46,48-64]
+
+#SBATCH --constraint=intel
+
+#SBATCH --account=rc-admins
+#SBATCH --partition=admin
+
+spack env activate admin-benchmark-x86_64-25011501
+
+timestamp="$(date +%Y.%m.%d-%H.%M.%S)"
+mkdir ./results/$timestamp
+cp $0 ./results/$timestamp
+
+./io500.sh config-all.ini

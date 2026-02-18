@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Sep 22 04:03:20 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 829871159 -k -e -o /datafiles/2025.09.22-03.24.10/ior-easy/ior_file_easy -O stoneWallingStatusFile=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.22-03.24.10/ior-easy.stonewall -t 4m -b 99000000m -F -r -R -a DFS --dfs.pool=di29puz3_pool01 --dfs.cont=cont_rf0_e256kiB --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX --dfs.chunk_size=4MiB -O saveRankPerformanceDetailsCSV=/dss/dsshome1/09/di29puz3/io500-stability/results-lrz-daos-2.6.4-dfs/2025.09.22-03.24.10/ior-easy-read.csv
+Machine             : Linux i20r01c05s02
+TestID              : 0
+StartTime           : Mon Sep 22 04:03:20 2025
+Path                : /datafiles/2025.09.22-03.24.10/ior-easy/ior_file_easy.00000000
+FS                  : 1234.8 TiB   Used FS: 42.9%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2025.09.22-03.24.10/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 192
+tasks               : 21504
+clients per node    : 112
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4 MiB
+blocksize           : 94.41 TiB
+aggregate filesize  : 2030273.44 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 2232309252096000000
+WARNING: Stat() of aggregate file size      = 350044129591296
+WARNING: Using actual aggregate bytes moved = 350044129591296
+read      1880534    470169     0.045736    101376000000 4096       0.013213   177.50     0.000491   177.52     0   

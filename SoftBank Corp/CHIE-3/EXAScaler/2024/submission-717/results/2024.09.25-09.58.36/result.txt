@@ -1,0 +1,111 @@
+[run]
+procs           = 1280
+version         = 
+config-hash     = C701A4D7
+result-dir      = /lustre/ddn/bin/io500/results/2024.09.25-09.58.36
+mode            = standard
+; START 2024-09-25 09:58:54
+
+
+[ior-easy-write]
+t_start         = 2024-09-25 09:58:54
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -243058620 -k -e -o /lustre/ddn/io500_out/2024.09.25-09.58.36/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/ior-easy.stonewall -t 16m -b 210g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/ior-easy-write.csv
+throughput-stonewall = 891.20
+score           = 823.615268
+t_delta         = 326.6176
+t_end           = 2024-09-25 10:04:21
+
+[mdtest-easy-write]
+t_start         = 2024-09-25 10:04:21
+exe             = ./mdtest --dataPacketType=timestamp -n 150000 -u -L -F -P -G 643119175 -N 1 -d /lustre/ddn/io500_out/2024.09.25-09.58.36/mdtest-easy -x /lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 626.736636
+score           = 526.498420
+t_delta         = 367.6505
+t_end           = 2024-09-25 10:10:29
+
+[timestamp]
+t_start         = 2024-09-25 10:10:29
+t_delta         = 0.0018
+t_end           = 2024-09-25 10:10:29
+
+[ior-hard-write]
+t_start         = 2024-09-25 10:10:29
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-243047932 -k -e -o /lustre/ddn/io500_out/2024.09.25-09.58.36/ior-hard/file -O stoneWallingStatusFile=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/ior-hard.stonewall -t 47008 -b 47008 -s 70000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 12.81
+score           = 12.536137
+t_delta         = 313.1073
+t_end           = 2024-09-25 10:15:42
+
+[mdtest-hard-write]
+t_start         = 2024-09-25 10:15:42
+exe             = ./mdtest --dataPacketType=timestamp -n 56000 -t -w 3901 -e 3901 -P -G=643129863 -N 1 -F -d /lustre/ddn/io500_out/2024.09.25-09.58.36/mdtest-hard -x /lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 214.306337
+score           = 211.774700
+t_delta         = 316.6890
+t_end           = 2024-09-25 10:20:58
+
+[find]
+t_start         = 2024-09-25 10:20:58
+exe             = ./pfind /lustre/ddn/io500_out/2024.09.25-09.58.36 -newer /lustre/ddn/bin/io500/results/2024.09.25-09.58.36/timestampfile -size 3901c -name *01* -C -H 1 -q 10000
+nproc           = 1280
+found           = 3082188
+total-files     = 258831361
+score           = 2868.145094
+t_delta         = 90.2807
+t_end           = 2024-09-25 10:22:29
+
+[ior-easy-read]
+t_start         = 2024-09-25 10:22:29
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -243058620 -k -e -o /lustre/ddn/io500_out/2024.09.25-09.58.36/ior-easy/ior_file_easy -O stoneWallingStatusFile=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/ior-easy.stonewall -t 16m -b 210g -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/ior-easy-read.csv
+score           = 799.518849
+t_delta         = 336.3396
+t_end           = 2024-09-25 10:28:05
+
+[mdtest-easy-stat]
+t_start         = 2024-09-25 10:28:05
+exe             = ./mdtest --dataPacketType=timestamp -n 150000 -u -L -F -P -G 643119175 -N 1 -d /lustre/ddn/io500_out/2024.09.25-09.58.36/mdtest-easy -x /lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-easy-stat.csv -a POSIX
+score           = 863.042318
+t_delta         = 223.5566
+t_end           = 2024-09-25 10:31:49
+
+[ior-hard-read]
+t_start         = 2024-09-25 10:31:49
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-243047932 -k -e -o /lustre/ddn/io500_out/2024.09.25-09.58.36/ior-hard/file -O stoneWallingStatusFile=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/ior-hard.stonewall -t 47008 -b 47008 -s 70000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/ior-hard-read.csv
+score           = 74.133310
+t_delta         = 67.8639
+t_end           = 2024-09-25 10:32:57
+
+[mdtest-hard-stat]
+t_start         = 2024-09-25 10:32:57
+exe             = ./mdtest --dataPacketType=timestamp -n 56000 -t -w 3901 -e 3901 -P -G=643129863 -N 1 -F -d /lustre/ddn/io500_out/2024.09.25-09.58.36/mdtest-hard -x /lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-hard-stat.csv -a POSIX
+score           = 883.880581
+t_delta         = 76.7646
+t_end           = 2024-09-25 10:34:13
+
+[mdtest-easy-delete]
+t_start         = 2024-09-25 10:34:13
+exe             = ./mdtest --dataPacketType=timestamp -n 150000 -u -L -F -P -G 643119175 -N 1 -d /lustre/ddn/io500_out/2024.09.25-09.58.36/mdtest-easy -x /lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-easy-delete.csv -a POSIX
+score           = 411.859663
+t_delta         = 471.3268
+t_end           = 2024-09-25 10:42:05
+
+[mdtest-hard-read]
+t_start         = 2024-09-25 10:42:05
+exe             = ./mdtest --dataPacketType=timestamp -n 56000 -t -w 3901 -e 3901 -P -G=643129863 -N 1 -F -d /lustre/ddn/io500_out/2024.09.25-09.58.36/mdtest-hard -x /lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-hard-read.csv -a POSIX
+score           = 423.913310
+t_delta         = 158.8285
+t_end           = 2024-09-25 10:44:43
+
+[mdtest-hard-delete]
+t_start         = 2024-09-25 10:44:43
+exe             = ./mdtest --dataPacketType=timestamp -n 56000 -t -w 3901 -e 3901 -P -G=643129863 -N 1 -F -d /lustre/ddn/io500_out/2024.09.25-09.58.36/mdtest-hard -x /lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/lustre/ddn/bin/io500/results/2024.09.25-09.58.36/mdtest-hard-delete.csv -a POSIX
+score           = 203.634109
+t_delta         = 330.4988
+t_end           = 2024-09-25 10:50:14
+
+[SCORE]
+MD              = 552.423122
+BW              = 157.283280
+SCORE           = 294.765874
+hash            = 64571163
+; END 2024-09-25 10:50:14

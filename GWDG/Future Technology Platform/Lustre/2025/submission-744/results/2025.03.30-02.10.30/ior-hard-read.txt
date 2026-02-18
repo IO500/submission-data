@@ -1,0 +1,35 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Mar 30 03:06:00 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=729738239 -k -e -o /mnt/hasanfs/io500/datafiles/ior-hard/file -O stoneWallingStatusFile=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-hard.stonewall -t 47008 -b 47008 -s 100000 -r -R -a MPIIO -O saveRankPerformanceDetailsCSV=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-hard-read.csv
+Machine             : Linux ssc001
+TestID              : 0
+StartTime           : Sun Mar 30 03:06:00 2025
+Path                : /mnt/hasanfs/io500/datafiles/ior-hard/file
+FS                  : 86.5 TiB   Used FS: 20.9%   Inodes: 349.1 Mi   Used Inodes: 10.9%
+
+Options: 
+api                 : MPIIO
+apiVersion          : (4.0)
+test filename       : /mnt/hasanfs/io500/datafiles/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 100000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 21
+tasks               : 410
+clients per node    : 20
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1.75 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      3003.96    67014      266.50      45.91      45.91      345.36     611.81     345.31     611.87     0   

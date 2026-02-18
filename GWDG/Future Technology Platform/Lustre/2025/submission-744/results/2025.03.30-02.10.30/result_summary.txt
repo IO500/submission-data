@@ -1,0 +1,16 @@
+IO500 version io500-sc24_v1-11-gc00ca177071b (standard)
+[RESULT]       ior-easy-write       21.914556 GiB/s : time 413.156 seconds
+[RESULT]    mdtest-easy-write       40.097611 kIOPS : time 664.771 seconds
+[      ]            timestamp        0.000000 kIOPS : time 0.002 seconds
+[RESULT]       ior-hard-write        1.090555 GiB/s : time 1300.633 seconds
+[RESULT]    mdtest-hard-write       33.634137 kIOPS : time 391.443 seconds
+[RESULT]                 find     1706.298589 kIOPS : time 23.300 seconds
+[RESULT]        ior-easy-read       25.251545 GiB/s : time 312.920 seconds
+[RESULT]     mdtest-easy-stat      120.005037 kIOPS : time 222.833 seconds
+[RESULT]        ior-hard-read        2.933554 GiB/s : time 266.606 seconds
+[RESULT]     mdtest-hard-stat      108.525259 kIOPS : time 122.057 seconds
+[RESULT]   mdtest-easy-delete       30.974213 kIOPS : time 860.516 seconds
+[RESULT]     mdtest-hard-read       55.454835 kIOPS : time 237.903 seconds
+[RESULT]   mdtest-hard-delete       19.732872 kIOPS : time 666.727 seconds
+[      ]  ior-rnd4K-easy-read        4.349500 GiB/s : time 14.334 seconds
+[SCORE ] Bandwidth 6.486577 GiB/s : IOPS 75.136639 kiops : TOTAL 22.076675

@@ -1,0 +1,118 @@
+[run]
+procs           = 410
+version         = io500-sc24_v1-11-gc00ca177071b
+config-hash     = E8E742BA
+result-dir      = /mnt/hasanfs/io500_results/2025.03.30-02.10.30
+mode            = standard
+; START 2025-03-30 02:10:30
+
+
+[ior-easy-write]
+t_start         = 2025-03-30 02:10:30
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 729727551 -k -e -o /mnt/hasanfs/io500/datafiles/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a MPIIO -O saveRankPerformanceDetailsCSV=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-easy-write.csv
+throughput-stonewall = 41.77
+score           = 21.914556
+t_delta         = 413.1561
+t_end           = 2025-03-30 02:17:24
+
+[mdtest-easy-write]
+t_start         = 2025-03-30 02:17:24
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 1615905345 -N 1 -d /mnt/hasanfs/io500/datafiles/mdtest-easy -x /mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 49.793233
+score           = 40.097611
+t_delta         = 664.7711
+t_end           = 2025-03-30 02:28:28
+
+[timestamp]
+t_start         = 2025-03-30 02:28:28
+t_delta         = 0.0016
+t_end           = 2025-03-30 02:28:28
+
+[ior-hard-write]
+t_start         = 2025-03-30 02:28:28
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=729738239 -k -e -o /mnt/hasanfs/io500/datafiles/ior-hard/file -O stoneWallingStatusFile=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-hard.stonewall -t 47008 -b 47008 -s 100000 -w -D 300 -a MPIIO -O saveRankPerformanceDetailsCSV=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 2.62
+score           = 1.090555
+t_delta         = 1300.6326
+t_end           = 2025-03-30 02:50:09
+
+[mdtest-hard-write]
+t_start         = 2025-03-30 02:50:09
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=1615916033 -N 1 -F -d /mnt/hasanfs/io500/datafiles/mdtest-hard -x /mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 37.967865
+score           = 33.634137
+t_delta         = 391.4429
+t_end           = 2025-03-30 02:56:40
+
+[find]
+t_start         = 2025-03-30 02:56:40
+exe             = ./pfind /mnt/hasanfs/io500/datafiles -newer /mnt/hasanfs/io500_results/2025.03.30-02.10.30/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 410
+found           = 508526
+total-files     = 39744991
+score           = 1706.298589
+t_delta         = 23.3000
+t_end           = 2025-03-30 02:57:04
+
+[ior-easy-read]
+t_start         = 2025-03-30 02:57:04
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 729727551 -k -e -o /mnt/hasanfs/io500/datafiles/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a MPIIO -O saveRankPerformanceDetailsCSV=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-easy-read.csv
+score           = 25.251545
+t_delta         = 312.9199
+t_end           = 2025-03-30 03:02:17
+
+[mdtest-easy-stat]
+t_start         = 2025-03-30 03:02:17
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 1615905345 -N 1 -d /mnt/hasanfs/io500/datafiles/mdtest-easy -x /mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-easy-stat.csv -a POSIX
+score           = 120.005037
+t_delta         = 222.8331
+t_end           = 2025-03-30 03:06:00
+
+[ior-hard-read]
+t_start         = 2025-03-30 03:06:00
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=729738239 -k -e -o /mnt/hasanfs/io500/datafiles/ior-hard/file -O stoneWallingStatusFile=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-hard.stonewall -t 47008 -b 47008 -s 100000 -r -R -a MPIIO -O saveRankPerformanceDetailsCSV=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-hard-read.csv
+score           = 2.933554
+t_delta         = 266.6062
+t_end           = 2025-03-30 03:10:26
+
+[mdtest-hard-stat]
+t_start         = 2025-03-30 03:10:26
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=1615916033 -N 1 -F -d /mnt/hasanfs/io500/datafiles/mdtest-hard -x /mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-hard-stat.csv -a POSIX
+score           = 108.525259
+t_delta         = 122.0565
+t_end           = 2025-03-30 03:12:28
+
+[mdtest-easy-delete]
+t_start         = 2025-03-30 03:12:28
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 1615905345 -N 1 -d /mnt/hasanfs/io500/datafiles/mdtest-easy -x /mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-easy-delete.csv -a POSIX
+score           = 30.974213
+t_delta         = 860.5157
+t_end           = 2025-03-30 03:26:49
+
+[mdtest-hard-read]
+t_start         = 2025-03-30 03:26:49
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=1615916033 -N 1 -F -d /mnt/hasanfs/io500/datafiles/mdtest-hard -x /mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-hard-read.csv -a POSIX
+score           = 55.454835
+t_delta         = 237.9034
+t_end           = 2025-03-30 03:30:47
+
+[mdtest-hard-delete]
+t_start         = 2025-03-30 03:30:47
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -t -w 3901 -e 3901 -P -G=1615916033 -N 1 -F -d /mnt/hasanfs/io500/datafiles/mdtest-hard -x /mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/mdtest-hard-delete.csv -a POSIX
+score           = 19.732872
+t_delta         = 666.7266
+t_end           = 2025-03-30 03:41:53
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-03-30 03:41:53
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 729727551 -k -e -o /mnt/hasanfs/io500/datafiles/ior-easy/ior_file_easy -F -r -D 300 -z -z -a MPIIO -O saveRankPerformanceDetailsCSV=/mnt/hasanfs/io500_results/2025.03.30-02.10.30/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=1000000
+score           = 4.349500
+t_delta         = 14.3339
+t_end           = 2025-03-30 03:42:08
+
+[SCORE]
+MD              = 75.136639
+BW              = 6.486577
+SCORE           = 22.076675
+hash            = AD436794
+; END 2025-03-30 03:42:32

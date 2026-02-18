@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun May 14 20:12:48 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1385225542 -k -e -o //2023.05.14-20.12.14/ior-easy/ior_file_easy -O stoneWallingStatusFile=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.14-20.12.14/ior-easy.stonewall -t 1m -b 99000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=lrz_32srv --dfs.cont=cont01 --dfs.dir_oclass=S1 --dfs.oclass=SX -O saveRankPerformanceDetailsCSV=/install/benchmark/daosperfhome/io500/results-lrz-daos-2.3.105/2023.05.14-20.12.14/ior-easy-write.csv
+Machine             : Linux m02r01s01dao
+TestID              : 0
+StartTime           : Sun May 14 20:12:48 2023
+Path                : //2023.05.14-20.12.14/ior-easy/ior_file_easy
+FS                  : 727.6 TiB   Used FS: 0.5%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : //2023.05.14-20.12.14/ior-easy/ior_file_easy
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1120
+clients per node    : 112
+repetitions         : 1
+xfersize            : 1 MiB
+blocksize           : 94.41 TiB
+aggregate filesize  : 105743.41 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 118619 max: 119632 -- min data: 115.8 GiB mean data: 116.5 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 116266106880000000
+WARNING: Stat() of aggregate file size      = 116162423299244032
+WARNING: Using actual aggregate bytes moved = 140496433315840
+WARNING: Maybe caused by deadlineForStonewalling
+write     445178     445192     0.000003    101376000000 1024.00    0.009106   300.97     0.000284   300.98     0   

@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  3 17:10:57 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1386516275 -k -e -o /io500bm/hpcadmin/datafiles/2023.11.03-16.53.57/ior-hard/file -O stoneWallingStatusFile=/io500bm/hpcadmin/results/2023.11.03-16.53.57/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/io500bm/hpcadmin/results/2023.11.03-16.53.57/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux iscb001.mskcc.org
+TestID              : 0
+StartTime           : Fri Nov  3 17:10:57 2023
+Path                : /io500bm/hpcadmin/datafiles/2023.11.03-16.53.57/ior-hard/file
+FS                  : 363.8 TiB   Used FS: 29.8%   Inodes: 93132.3 Mi   Used Inodes: 0.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /io500bm/hpcadmin/datafiles/2023.11.03-16.53.57/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 36
+tasks               : 4248
+clients per node    : 118
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 1816.17 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4720 max: 555211 -- min data: 0.2 GiB mean data: 0.4 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 1996899840000000
+WARNING: Stat() of aggregate file size      = 110870075706624
+WARNING: Using actual aggregate bytes moved = 110870075706624
+WARNING: Maybe caused by deadlineForStonewalling
+write     45284      1010123    2308.12     45.91      45.91      0.017716   2334.90    0.006296   2334.92    0   

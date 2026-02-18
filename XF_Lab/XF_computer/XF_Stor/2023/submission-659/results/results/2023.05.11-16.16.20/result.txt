@@ -1,0 +1,111 @@
+[run]
+procs           = 128
+version         = 
+config-hash     = F2C989D4
+result-dir      = ./results/2023.05.11-16.16.20
+mode            = standard
+; START 2023-05-11 16:16:23
+
+
+[ior-easy-write]
+t_start         = 2023-05-11 16:16:23
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1386003526 -k -e -o /mnt/test/datafiles/2023.05.11-16.16.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.05.11-16.16.20/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.05.11-16.16.20/ior-easy-write.csv
+throughput-stonewall = 0.27
+score           = 0.273450
+t_delta         = 300.9307
+t_end           = 2023-05-11 16:21:24
+
+[mdtest-easy-write]
+t_start         = 2023-05-11 16:21:24
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -499825732 -N 1 -d /mnt/test/datafiles/2023.05.11-16.16.20/mdtest-easy -x ./results/2023.05.11-16.16.20/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2023.05.11-16.16.20/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 0.664006
+score           = 0.646964
+t_delta         = 333.9168
+t_end           = 2023-05-11 16:26:58
+
+[timestamp]
+t_start         = 2023-05-11 16:26:58
+t_delta         = 0.0001
+t_end           = 2023-05-11 16:26:58
+
+[ior-hard-write]
+t_start         = 2023-05-11 16:26:58
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385992838 -k -e -o /mnt/test/datafiles/2023.05.11-16.16.20/ior-hard/file -O stoneWallingStatusFile=./results/2023.05.11-16.16.20/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.05.11-16.16.20/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.12
+score           = 0.116569
+t_delta         = 338.1831
+t_end           = 2023-05-11 16:32:36
+
+[mdtest-hard-write]
+t_start         = 2023-05-11 16:32:36
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-499815044 -N 1 -F -d /mnt/test/datafiles/2023.05.11-16.16.20/mdtest-hard -x ./results/2023.05.11-16.16.20/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2023.05.11-16.16.20/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 0.571705
+score           = 0.567428
+t_delta         = 311.2015
+t_end           = 2023-05-11 16:37:47
+
+[find]
+t_start         = 2023-05-11 16:37:47
+exe             = ./pfind /mnt/test/datafiles/2023.05.11-16.16.20 -newer ./results/2023.05.11-16.16.20/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 128
+found           = 4296
+total-files     = 391297
+score           = 8.965588
+t_delta         = 43.6450
+t_end           = 2023-05-11 16:38:31
+
+[ior-easy-read]
+t_start         = 2023-05-11 16:38:31
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1386003526 -k -e -o /mnt/test/datafiles/2023.05.11-16.16.20/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2023.05.11-16.16.20/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.05.11-16.16.20/ior-easy-read.csv
+score           = 0.993029
+t_delta         = 82.9703
+t_end           = 2023-05-11 16:39:54
+
+[mdtest-easy-stat]
+t_start         = 2023-05-11 16:39:54
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -499825732 -N 1 -d /mnt/test/datafiles/2023.05.11-16.16.20/mdtest-easy -x ./results/2023.05.11-16.16.20/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2023.05.11-16.16.20/mdtest-easy-stat.csv -a POSIX
+score           = 0.893354
+t_delta         = 241.8601
+t_end           = 2023-05-11 16:43:56
+
+[ior-hard-read]
+t_start         = 2023-05-11 16:43:56
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385992838 -k -e -o /mnt/test/datafiles/2023.05.11-16.16.20/ior-hard/file -O stoneWallingStatusFile=./results/2023.05.11-16.16.20/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.05.11-16.16.20/ior-hard-read.csv
+score           = 0.385813
+t_delta         = 101.6977
+t_end           = 2023-05-11 16:45:38
+
+[mdtest-hard-stat]
+t_start         = 2023-05-11 16:45:38
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-499815044 -N 1 -F -d /mnt/test/datafiles/2023.05.11-16.16.20/mdtest-hard -x ./results/2023.05.11-16.16.20/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2023.05.11-16.16.20/mdtest-hard-stat.csv -a POSIX
+score           = 1.004594
+t_delta         = 176.1992
+t_end           = 2023-05-11 16:48:34
+
+[mdtest-easy-delete]
+t_start         = 2023-05-11 16:48:34
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -499825732 -N 1 -d /mnt/test/datafiles/2023.05.11-16.16.20/mdtest-easy -x ./results/2023.05.11-16.16.20/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2023.05.11-16.16.20/mdtest-easy-delete.csv -a POSIX
+score           = 0.866478
+t_delta         = 249.7759
+t_end           = 2023-05-11 16:52:44
+
+[mdtest-hard-read]
+t_start         = 2023-05-11 16:52:44
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-499815044 -N 1 -F -d /mnt/test/datafiles/2023.05.11-16.16.20/mdtest-hard -x ./results/2023.05.11-16.16.20/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2023.05.11-16.16.20/mdtest-hard-read.csv -a POSIX
+score           = 0.764742
+t_delta         = 231.4126
+t_end           = 2023-05-11 16:56:35
+
+[mdtest-hard-delete]
+t_start         = 2023-05-11 16:56:35
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-499815044 -N 1 -F -d /mnt/test/datafiles/2023.05.11-16.16.20/mdtest-hard -x ./results/2023.05.11-16.16.20/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2023.05.11-16.16.20/mdtest-hard-delete.csv -a POSIX
+score           = 0.640183
+t_delta         = 276.5632
+t_end           = 2023-05-11 17:01:12
+
+[SCORE]
+MD              = 1.028597
+BW              = 0.332430
+SCORE           = 0.584753
+hash            = C9766406
+; END 2023-05-11 17:01:20

@@ -1,0 +1,47 @@
+# see  https://www.vi4io.org/io500-info-creator/
+#
+# ZIB Lise ( https://nhr.zib.de/nhr-system/ ) - DAOS Storage System
+#
+# 4x Intel P4610 6.4TB NVMe disks per server
+# (sequential bandwidth: 3.2 GB/s read, 3.2 GB/s write)
+#
+#    3.20 GB/s
+#  = 2.98 GiB/s
+#  = 3052 MiB/s
+#
+
+io500_info_submitter="Steffen Christgau <christgau@zib.de>"
+io500_info_include-in-io500="true"
+io500_info_include-in-10node="true"
+
+io500_info_institution="ZIB"
+io500_info_system="NHR-System Lise"
+io500_info_system_classification="production"
+io500_info_storage_install_date="2019-12-06"
+io500_info_storage_vendor="Intel"
+io500_info_filesystem_name="daos"
+io500_info_filesystem_type="DAOS"
+io500_info_filesystem_version="2.4.1-2"
+
+io500_info_client_nodes="10"
+io500_info_client_procs_per_node="96"
+io500_info_client_operating_system="Rocky Linux 8"
+io500_info_client_operating_system_version="8.9"
+io500_info_client_kernel_version="4.18.0-513.18.1.el8_9.x86_64"
+
+io500_info_md_nodes="0"
+io500_info_md_storage_devices="0"
+
+io500_info_ds_nodes="20"
+io500_info_ds_storage_devices="12 + 4"
+io500_info_ds_storage_type="12x 128GB Optane PMem 100 + 4x 6.4TB U.2 P4610 NVMe"
+io500_info_ds_volatile_memory_capacity="192GiB (12x 16GiB)"
+io500_info_ds_storage_interface="DDR-T + U.2 NVMe"
+io500_info_ds_network="Omni-Path 100 (with libfabric tcp provider)"
+io500_info_filesystem_version="2.4.1-2"
+io500_info_ds_operating_system_version="Rocky Linux 8"
+io500_info_ds_overhead="0"
+
+io500_info_whatever="DAOS Server: Intel Wolf Pass with 2x Xeon 6240R, 12x 128GB Optane PMem 100, 4x 6.4TB U.2 P4610 NVMe, 2x Omni-Path 100"
+io500_info_comment="DAOS has no dedicated metadata servers"
+

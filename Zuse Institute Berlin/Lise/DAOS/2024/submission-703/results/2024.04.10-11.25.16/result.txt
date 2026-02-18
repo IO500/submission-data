@@ -1,0 +1,111 @@
+[run]
+procs           = 960
+version         = io500-isc24_v3
+config-hash     = 80874FD7
+result-dir      = /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16
+mode            = standard
+; START 2024-04-10 11:25:29
+
+
+[ior-easy-write]
+t_start         = 2024-04-10 11:25:29
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -329321348 -k -e -o /datafiles/2024.04.10-11.25.16/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-easy.stonewall -t 1m -b 99000000m -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_8P1GX -O saveRankPerformanceDetailsCSV=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-easy-write.csv
+throughput-stonewall = 91.80
+score           = 90.518305
+t_delta         = 322.4886
+t_end           = 2024-04-10 11:30:52
+
+[mdtest-easy-write]
+t_start         = 2024-04-10 11:30:52
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 556856447 -N 1 -d /datafiles/2024.04.10-11.25.16/mdtest-easy -x /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-easy-write.csv -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+rate-stonewall  = 1288.948800
+score           = 1283.701416
+t_delta         = 306.9481
+t_end           = 2024-04-10 11:35:59
+
+[timestamp]
+t_start         = 2024-04-10 11:35:59
+t_delta         = 0.0014
+t_end           = 2024-04-10 11:35:59
+
+[ior-hard-write]
+t_start         = 2024-04-10 11:35:59
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-329310660 -k -e -o /datafiles/2024.04.10-11.25.16/ior-hard/file -O stoneWallingStatusFile=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2G1 --dfs.oclass=RP_2GX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 49.06
+score           = 48.087384
+t_delta         = 314.4467
+t_end           = 2024-04-10 11:41:13
+
+[mdtest-hard-write]
+t_start         = 2024-04-10 11:41:13
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=556867135 -N 1 -F -d /datafiles/2024.04.10-11.25.16/mdtest-hard -x /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-hard-write.csv -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+rate-stonewall  = 448.211464
+score           = 450.497469
+t_delta         = 310.2023
+t_end           = 2024-04-10 11:46:23
+
+[find]
+t_start         = 2024-04-10 11:46:23
+exe             = ./pfind /datafiles/2024.04.10-11.25.16 -newer /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 960
+found           = 6313767
+total-files     = 531896642
+score           = 2881.264049
+t_delta         = 184.6831
+t_end           = 2024-04-10 11:49:28
+
+[ior-easy-read]
+t_start         = 2024-04-10 11:49:28
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -329321348 -k -e -o /datafiles/2024.04.10-11.25.16/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-easy.stonewall -t 1m -b 99000000m -r -R -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_8P1GX -O saveRankPerformanceDetailsCSV=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-easy-read.csv
+score           = 71.368873
+t_delta         = 408.9330
+t_end           = 2024-04-10 11:56:17
+
+[mdtest-easy-stat]
+t_start         = 2024-04-10 11:56:17
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 556856447 -N 1 -d /datafiles/2024.04.10-11.25.16/mdtest-easy -x /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-easy-stat.csv -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 3894.997663
+t_delta         = 101.8151
+t_end           = 2024-04-10 11:57:59
+
+[ior-hard-read]
+t_start         = 2024-04-10 11:57:59
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-329310660 -k -e -o /datafiles/2024.04.10-11.25.16/ior-hard/file -O stoneWallingStatusFile=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2G1 --dfs.oclass=RP_2GX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-hard-read.csv
+score           = 57.505494
+t_delta         = 262.9424
+t_end           = 2024-04-10 12:02:22
+
+[mdtest-hard-stat]
+t_start         = 2024-04-10 12:02:22
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=556867135 -N 1 -F -d /datafiles/2024.04.10-11.25.16/mdtest-hard -x /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-hard-stat.csv -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 3787.388936
+t_delta         = 37.7933
+t_end           = 2024-04-10 12:03:00
+
+[mdtest-easy-delete]
+t_start         = 2024-04-10 12:03:00
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 556856447 -N 1 -d /datafiles/2024.04.10-11.25.16/mdtest-easy -x /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-easy-delete.csv -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 736.179489
+t_delta         = 536.7221
+t_end           = 2024-04-10 12:11:56
+
+[mdtest-hard-read]
+t_start         = 2024-04-10 12:11:56
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=556867135 -N 1 -F -d /datafiles/2024.04.10-11.25.16/mdtest-hard -x /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-hard-read.csv -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 3190.894658
+t_delta         = 44.6680
+t_end           = 2024-04-10 12:12:41
+
+[mdtest-hard-delete]
+t_start         = 2024-04-10 12:12:41
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=556867135 -N 1 -F -d /datafiles/2024.04.10-11.25.16/mdtest-hard -x /home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/mdtest-hard-delete.csv -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2GX --dfs.oclass=RP_2G1
+score           = 822.070343
+t_delta         = 209.7616
+t_end           = 2024-04-10 12:16:11
+
+[SCORE]
+MD              = 1620.126639
+BW              = 65.012435
+SCORE           = 324.543338
+hash            = 94620B18
+; END 2024-04-10 12:16:11

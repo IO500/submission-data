@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Apr 10 11:35:59 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-329310660 -k -e -o /datafiles/2024.04.10-11.25.16/ior-hard/file -O stoneWallingStatusFile=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a DFS --dfs.pool=bzinthenne_36engine --dfs.cont=cont01_rf0 --dfs.dir_oclass=RP_2G1 --dfs.oclass=RP_2GX --dfs.chunk_size=470080 -O saveRankPerformanceDetailsCSV=/home/bzinthenne/bench/results-zib-daos-2.4.1-dfs/2024.04.10-11.25.16/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux bcn1163
+TestID              : 0
+StartTime           : Wed Apr 10 11:35:59 2024
+Path                : /datafiles/2024.04.10-11.25.16/ior-hard/file
+FS                  : 327.4 TiB   Used FS: 10.4%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /datafiles/2024.04.10-11.25.16/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 960
+clients per node    : 96
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 410.43 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 335186 max: 359742 -- min data: 14.7 GiB mean data: 15.3 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 451276800000000
+WARNING: Stat() of aggregate file size      = 16234321858560
+WARNING: Using actual aggregate bytes moved = 16234321858560
+WARNING: Maybe caused by deadlineForStonewalling
+write     49241      1098401    303.82      45.91      45.91      0.000944   314.41     0.000128   314.41     0   

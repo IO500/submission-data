@@ -1,0 +1,70 @@
+[run]
+procs           = 160
+version         = 
+config-hash     = 965222DB
+result-dir      = results
+mode            = standard
+
+
+[ior-easy-write]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -327986054 -k -e -o /panfs/panfs-wilson.pwus.us/io500/ior-easy/ior_file_easy -O stoneWallingStatusFile=results/ior-easy.stonewall -t 1m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=results/ior-easy-write.csv
+throughput-stonewall = 24.99
+score           = 24.251707
+
+[mdtest-easy-write]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 558191741 -N 1 -d /panfs/panfs-wilson.pwus.us/io500/mdtest-easy -x results/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=results/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 9.473501
+score           = 9.262330
+
+[timestamp]
+
+[ior-hard-write]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-327975366 -k -e -o /panfs/panfs-wilson.pwus.us/io500/ior-hard/file -O stoneWallingStatusFile=results/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=results/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.08
+score           = 0.075493
+
+[mdtest-hard-write]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=558202429 -N 1 -F -d /panfs/panfs-wilson.pwus.us/io500/mdtest-hard -x results/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=results/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 6.392463
+score           = 6.322278
+
+[find]
+exe             = ./pfind /panfs/panfs-wilson.pwus.us/io500 -newer results/timestampfile -size 3901c -name *01* -C -H 1 -q 10000
+nproc           = 160
+found           = 65982
+total-files     = 4866081
+score           = 369.901408
+
+[ior-easy-read]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -327986054 -k -e -o /panfs/panfs-wilson.pwus.us/io500/ior-easy/ior_file_easy -O stoneWallingStatusFile=results/ior-easy.stonewall -t 1m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=results/ior-easy-read.csv
+score           = 17.367960
+
+[mdtest-easy-stat]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 558191741 -N 1 -d /panfs/panfs-wilson.pwus.us/io500/mdtest-easy -x results/mdtest-easy.stonewall -T --saveRankPerformanceDetails=results/mdtest-easy-stat.csv -a POSIX
+score           = 52.005386
+
+[ior-hard-read]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-327975366 -k -e -o /panfs/panfs-wilson.pwus.us/io500/ior-hard/file -O stoneWallingStatusFile=results/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=results/ior-hard-read.csv
+score           = 0.699225
+
+[mdtest-hard-stat]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=558202429 -N 1 -F -d /panfs/panfs-wilson.pwus.us/io500/mdtest-hard -x results/mdtest-hard.stonewall -T --saveRankPerformanceDetails=results/mdtest-hard-stat.csv -a POSIX
+score           = 52.911462
+
+[mdtest-easy-delete]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G 558191741 -N 1 -d /panfs/panfs-wilson.pwus.us/io500/mdtest-easy -x results/mdtest-easy.stonewall -r --saveRankPerformanceDetails=results/mdtest-easy-delete.csv -a POSIX
+score           = 8.041792
+
+[mdtest-hard-read]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=558202429 -N 1 -F -d /panfs/panfs-wilson.pwus.us/io500/mdtest-hard -x results/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=results/mdtest-hard-read.csv -a POSIX
+score           = 35.565372
+
+[mdtest-hard-delete]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=558202429 -N 1 -F -d /panfs/panfs-wilson.pwus.us/io500/mdtest-hard -x results/mdtest-hard.stonewall -r --saveRankPerformanceDetails=results/mdtest-hard-delete.csv -a POSIX
+score           = 1.974028
+
+[SCORE]
+MD              = 20.695524
+BW              = 2.171468
+SCORE           = 6.703706
+hash            = EE8CA63F

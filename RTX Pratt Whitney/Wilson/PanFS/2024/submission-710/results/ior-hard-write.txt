@@ -1,0 +1,40 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Apr 15 17:36:55 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-327975366 -k -e -o /panfs/panfs-wilson.pwus.us/io500/ior-hard/file -O stoneWallingStatusFile=results/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=results/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux ln222081
+TestID              : 0
+StartTime           : Mon Apr 15 17:36:55 2024
+Path                : /panfs/panfs-wilson.pwus.us/io500/ior-hard/file
+FS                  : 1889.2 TiB   Used FS: 1.3%   Inodes: 236.2 Mi   Used Inodes: 1.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /panfs/panfs-wilson.pwus.us/io500/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 68.41 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+WARNING: The file "/panfs/panfs-wilson.pwus.us/io500/ior-hard/file" exists already and will be overwritten
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 87 max: 8219 -- min data: 0.0 GiB mean data: 0.1 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 75212800000000
+WARNING: Stat() of aggregate file size      = 61817400320
+WARNING: Using actual aggregate bytes moved = 61817400320
+WARNING: Maybe caused by deadlineForStonewalling
+write     77.30      1725.13    618.30      45.91      45.91      0.005359   762.28     0.327312   762.62     0   

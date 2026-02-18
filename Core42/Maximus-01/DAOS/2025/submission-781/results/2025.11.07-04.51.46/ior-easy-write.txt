@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov  7 04:51:46 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761980553 -k -e -o /IO500/results/2025.11.07-04.51.46/ior-easy/ior_file_easy -O stoneWallingStatusFile=/IO500/results/2025.11.07-04.51.46/ior-easy.stonewall -t 16m -b 99200000m -u -F -w -D 300 -O stoneWallingWearOut=1 -a DFS --dfs.pool=benchmark --dfs.cont=benchmark --dfs.chunk_size=16777216 --dfs.dir_oclass=RP_2G1 --dfs.oclass=EC_16P1GX -O saveRankPerformanceDetailsCSV=/IO500/results/2025.11.07-04.51.46/ior-easy-write.csv
+Machine             : Linux client1
+TestID              : 0
+StartTime           : Fri Nov  7 04:51:46 2025
+Path                : /IO500/results/2025.11.07-04.51.46/ior-easy/0/ior_file_easy.00000000
+FS                  : 4092.7 TiB   Used FS: 0.3%   Inodes: -0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : DFS
+apiVersion          : DAOS
+test filename       : /IO500/results/2025.11.07-04.51.46/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 960
+clients per node    : 96
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 16 MiB
+blocksize           : 94.60 TiB
+aggregate filesize  : 90820.31 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 16558 max: 26518 -- min data: 258.7 GiB mean data: 347.9 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 99857989632000000
+WARNING: Stat() of aggregate file size      = 427102285332480
+WARNING: Using actual aggregate bytes moved = 427102285332480
+WARNING: Maybe caused by deadlineForStonewalling
+write     1001199    62599      0.013631    101580800000 16384      1.22       406.67     1.21       406.83     0   

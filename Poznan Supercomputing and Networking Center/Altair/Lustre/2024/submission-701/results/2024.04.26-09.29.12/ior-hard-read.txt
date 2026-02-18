@@ -1,0 +1,35 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Apr 26 10:09:50 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-326672584 -k -e -o /kmdfs/datafiles/2024.04.26-09.29.12/ior-hard/file -O stoneWallingStatusFile=/kmdfs/results/2024.04.26-09.29.12/ior-hard.stonewall -t 47008 -b 47008 -s 70000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/kmdfs/results/2024.04.26-09.29.12/ior-hard-read.csv
+Machine             : Linux client02
+TestID              : 0
+StartTime           : Fri Apr 26 10:09:50 2024
+Path                : /kmdfs/datafiles/2024.04.26-09.29.12/ior-hard/file
+FS                  : 6568.5 TiB   Used FS: 2.4%   Inodes: 7694.1 Mi   Used Inodes: 13.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /kmdfs/datafiles/2024.04.26-09.29.12/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 70000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 200
+clients per node    : 20
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 612.91 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      7261       161967     86.43       45.91      45.91      0.003468   86.44      0.003161   86.44      0   

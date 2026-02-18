@@ -1,0 +1,111 @@
+[run]
+procs           = 200
+version         = io500-isc24_v3
+config-hash     = 399DF978
+result-dir      = /kmdfs/results/2024.04.26-09.29.12
+mode            = standard
+; START 2024-04-26 09:29:14
+
+
+[ior-easy-write]
+t_start         = 2024-04-26 09:29:14
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -326683272 -k -e -o /kmdfs/datafiles/2024.04.26-09.29.12/ior-easy/ior_file_easy -O stoneWallingStatusFile=/kmdfs/results/2024.04.26-09.29.12/ior-easy.stonewall -t 2m -b 99200m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/kmdfs/results/2024.04.26-09.29.12/ior-easy-write.csv
+throughput-stonewall = 61.77
+score           = 40.563456
+t_delta         = 477.6707
+t_end           = 2024-04-26 09:37:11
+
+[mdtest-easy-write]
+t_start         = 2024-04-26 09:37:11
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 559494523 -N 1 -d /kmdfs/datafiles/2024.04.26-09.29.12/mdtest-easy -x /kmdfs/results/2024.04.26-09.29.12/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/kmdfs/results/2024.04.26-09.29.12/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 373.368302
+score           = 366.550289
+t_delta         = 313.1272
+t_end           = 2024-04-26 09:42:24
+
+[timestamp]
+t_start         = 2024-04-26 09:42:24
+t_delta         = 0.0005
+t_end           = 2024-04-26 09:42:24
+
+[ior-hard-write]
+t_start         = 2024-04-26 09:42:24
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-326672584 -k -e -o /kmdfs/datafiles/2024.04.26-09.29.12/ior-hard/file -O stoneWallingStatusFile=/kmdfs/results/2024.04.26-09.29.12/ior-hard.stonewall -t 47008 -b 47008 -s 70000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/kmdfs/results/2024.04.26-09.29.12/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 2.03
+score           = 1.862771
+t_delta         = 329.6045
+t_end           = 2024-04-26 09:47:54
+
+[mdtest-hard-write]
+t_start         = 2024-04-26 09:47:54
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=559505211 -N 1 -F -d /kmdfs/datafiles/2024.04.26-09.29.12/mdtest-hard -x /kmdfs/results/2024.04.26-09.29.12/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/kmdfs/results/2024.04.26-09.29.12/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 59.099599
+score           = 51.708670
+t_delta         = 349.8860
+t_end           = 2024-04-26 09:53:44
+
+[find]
+t_start         = 2024-04-26 09:53:44
+exe             = ./pfind /kmdfs/datafiles/2024.04.26-09.29.12 -newer /kmdfs/results/2024.04.26-09.29.12/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 200
+found           = 605839
+total-files     = 132362002
+score           = 3012.638197
+t_delta         = 43.9400
+t_end           = 2024-04-26 09:54:28
+
+[ior-easy-read]
+t_start         = 2024-04-26 09:54:28
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -326683272 -k -e -o /kmdfs/datafiles/2024.04.26-09.29.12/ior-easy/ior_file_easy -O stoneWallingStatusFile=/kmdfs/results/2024.04.26-09.29.12/ior-easy.stonewall -t 2m -b 99200m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/kmdfs/results/2024.04.26-09.29.12/ior-easy-read.csv
+score           = 31.398658
+t_delta         = 617.1088
+t_end           = 2024-04-26 10:04:45
+
+[mdtest-easy-stat]
+t_start         = 2024-04-26 10:04:45
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 559494523 -N 1 -d /kmdfs/datafiles/2024.04.26-09.29.12/mdtest-easy -x /kmdfs/results/2024.04.26-09.29.12/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/kmdfs/results/2024.04.26-09.29.12/mdtest-easy-stat.csv -a POSIX
+score           = 376.634589
+t_delta         = 304.6509
+t_end           = 2024-04-26 10:09:50
+
+[ior-hard-read]
+t_start         = 2024-04-26 10:09:50
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-326672584 -k -e -o /kmdfs/datafiles/2024.04.26-09.29.12/ior-hard/file -O stoneWallingStatusFile=/kmdfs/results/2024.04.26-09.29.12/ior-hard.stonewall -t 47008 -b 47008 -s 70000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/kmdfs/results/2024.04.26-09.29.12/ior-hard-read.csv
+score           = 7.090599
+t_delta         = 86.4689
+t_end           = 2024-04-26 10:11:16
+
+[mdtest-hard-stat]
+t_start         = 2024-04-26 10:11:16
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=559505211 -N 1 -F -d /kmdfs/datafiles/2024.04.26-09.29.12/mdtest-hard -x /kmdfs/results/2024.04.26-09.29.12/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/kmdfs/results/2024.04.26-09.29.12/mdtest-hard-stat.csv -a POSIX
+score           = 388.304123
+t_delta         = 47.4016
+t_end           = 2024-04-26 10:12:04
+
+[mdtest-easy-delete]
+t_start         = 2024-04-26 10:12:04
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -u -L -F -P -G 559494523 -N 1 -d /kmdfs/datafiles/2024.04.26-09.29.12/mdtest-easy -x /kmdfs/results/2024.04.26-09.29.12/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/kmdfs/results/2024.04.26-09.29.12/mdtest-easy-delete.csv -a POSIX
+score           = 253.302114
+t_delta         = 452.8244
+t_end           = 2024-04-26 10:19:36
+
+[mdtest-hard-read]
+t_start         = 2024-04-26 10:19:36
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=559505211 -N 1 -F -d /kmdfs/datafiles/2024.04.26-09.29.12/mdtest-hard -x /kmdfs/results/2024.04.26-09.29.12/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/kmdfs/results/2024.04.26-09.29.12/mdtest-hard-read.csv -a POSIX
+score           = 322.247857
+t_delta         = 56.8851
+t_end           = 2024-04-26 10:20:33
+
+[mdtest-hard-delete]
+t_start         = 2024-04-26 10:20:33
+exe             = ./mdtest --dataPacketType=timestamp -n 10000000 -t -w 3901 -e 3901 -P -G=559505211 -N 1 -F -d /kmdfs/datafiles/2024.04.26-09.29.12/mdtest-hard -x /kmdfs/results/2024.04.26-09.29.12/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/kmdfs/results/2024.04.26-09.29.12/mdtest-hard-delete.csv -a POSIX
+score           = 27.367387
+t_delta         = 659.2387
+t_end           = 2024-04-26 10:31:33
+
+[SCORE]
+MD              = 256.359720
+BW              = 11.388646
+SCORE           = 54.033232
+hash            = ADCB0900
+; END 2024-04-26 10:31:53

@@ -1,0 +1,118 @@
+[run]
+procs           = 1280
+version         = io500-isc25_v2
+config-hash     = B8FFA261
+result-dir      = ./results/2025.05.31-06.57.07
+mode            = standard
+; START 2025-05-30 21:57:21
+
+
+[ior-easy-write]
+t_start         = 2025-05-30 21:57:21
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 763561978 -k -e -o /exafs/io500/2025.05.31-06.57.07/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.05.31-06.57.07/ior-easy.stonewall -t 4m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2025.05.31-06.57.07/ior-easy-write.csv
+throughput-stonewall = 64.48
+score           = 63.634524
+t_delta         = 302.6451
+t_end           = 2025-05-30 22:02:23
+
+[mdtest-easy-write]
+t_start         = 2025-05-30 22:02:23
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 1649739772 -N 1 -d /exafs/io500/2025.05.31-06.57.07/mdtest-easy -x ./results/2025.05.31-06.57.07/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2025.05.31-06.57.07/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 412.371887
+score           = 396.098422
+t_delta         = 325.5147
+t_end           = 2025-05-30 22:07:49
+
+[timestamp]
+t_start         = 2025-05-30 22:07:49
+t_delta         = 0.0012
+t_end           = 2025-05-30 22:07:49
+
+[ior-hard-write]
+t_start         = 2025-05-30 22:07:49
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=763572666 -k -e -o /exafs/io500/2025.05.31-06.57.07/ior-hard/file -O stoneWallingStatusFile=./results/2025.05.31-06.57.07/ior-hard.stonewall -t 47008 -b 47008 -s 50000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.05.31-06.57.07/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 7.90
+score           = 7.208364
+t_delta         = 386.6839
+t_end           = 2025-05-30 22:14:15
+
+[mdtest-hard-write]
+t_start         = 2025-05-30 22:14:15
+exe             = ./mdtest --dataPacketType=timestamp -n 500000 -t -w 3901 -e 3901 -P -G=1649750460 -N 1 -F -d /exafs/io500/2025.05.31-06.57.07/mdtest-hard -x ./results/2025.05.31-06.57.07/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=./results/2025.05.31-06.57.07/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 189.173169
+score           = 174.714357
+t_delta         = 352.2359
+t_end           = 2025-05-30 22:20:08
+
+[find]
+t_start         = 2025-05-30 22:20:08
+exe             = ./pfind /exafs/io500/2025.05.31-06.57.07 -newer ./results/2025.05.31-06.57.07/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 1280
+found           = 2744288
+total-files     = 189297921
+score           = 2000.110845
+t_delta         = 94.6534
+t_end           = 2025-05-30 22:21:42
+
+[ior-easy-read]
+t_start         = 2025-05-30 22:21:42
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 763561978 -k -e -o /exafs/io500/2025.05.31-06.57.07/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2025.05.31-06.57.07/ior-easy.stonewall -t 4m -b 9920000m -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2025.05.31-06.57.07/ior-easy-read.csv
+score           = 80.823367
+t_delta         = 237.4727
+t_end           = 2025-05-30 22:25:40
+
+[mdtest-easy-stat]
+t_start         = 2025-05-30 22:25:40
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 1649739772 -N 1 -d /exafs/io500/2025.05.31-06.57.07/mdtest-easy -x ./results/2025.05.31-06.57.07/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2025.05.31-06.57.07/mdtest-easy-stat.csv -a POSIX
+score           = 773.338811
+t_delta         = 166.5468
+t_end           = 2025-05-30 22:28:26
+
+[ior-hard-read]
+t_start         = 2025-05-30 22:28:26
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=763572666 -k -e -o /exafs/io500/2025.05.31-06.57.07/ior-hard/file -O stoneWallingStatusFile=./results/2025.05.31-06.57.07/ior-hard.stonewall -t 47008 -b 47008 -s 50000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.05.31-06.57.07/ior-hard-read.csv
+score           = 60.494816
+t_delta         = 43.9817
+t_end           = 2025-05-30 22:29:10
+
+[mdtest-hard-stat]
+t_start         = 2025-05-30 22:29:10
+exe             = ./mdtest --dataPacketType=timestamp -n 500000 -t -w 3901 -e 3901 -P -G=1649750460 -N 1 -F -d /exafs/io500/2025.05.31-06.57.07/mdtest-hard -x ./results/2025.05.31-06.57.07/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2025.05.31-06.57.07/mdtest-hard-stat.csv -a POSIX
+score           = 705.153679
+t_delta         = 87.9449
+t_end           = 2025-05-30 22:30:38
+
+[mdtest-easy-delete]
+t_start         = 2025-05-30 22:30:38
+exe             = ./mdtest --dataPacketType=timestamp -n 100000 -u -L -F -P -G 1649739772 -N 1 -d /exafs/io500/2025.05.31-06.57.07/mdtest-easy -x ./results/2025.05.31-06.57.07/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2025.05.31-06.57.07/mdtest-easy-delete.csv -a POSIX
+score           = 293.646428
+t_delta         = 440.9585
+t_end           = 2025-05-30 22:37:59
+
+[mdtest-hard-read]
+t_start         = 2025-05-30 22:37:59
+exe             = ./mdtest --dataPacketType=timestamp -n 500000 -t -w 3901 -e 3901 -P -G=1649750460 -N 1 -F -d /exafs/io500/2025.05.31-06.57.07/mdtest-hard -x ./results/2025.05.31-06.57.07/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2025.05.31-06.57.07/mdtest-hard-read.csv -a POSIX
+score           = 364.584554
+t_delta         = 169.1441
+t_end           = 2025-05-30 22:40:48
+
+[mdtest-hard-delete]
+t_start         = 2025-05-30 22:40:48
+exe             = ./mdtest --dataPacketType=timestamp -n 500000 -t -w 3901 -e 3901 -P -G=1649750460 -N 1 -F -d /exafs/io500/2025.05.31-06.57.07/mdtest-hard -x ./results/2025.05.31-06.57.07/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2025.05.31-06.57.07/mdtest-hard-delete.csv -a POSIX
+score           = 108.835250
+t_delta         = 565.4996
+t_end           = 2025-05-30 22:50:14
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-05-30 22:50:14
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 763561978 -k -e -o /exafs/io500/2025.05.31-06.57.07/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.05.31-06.57.07/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+score           = 9.980079
+t_delta         = 303.6728
+t_end           = 2025-05-30 22:55:18
+
+[SCORE]
+MD              = 414.981742
+BW              = 38.698681
+SCORE           = 126.725080
+hash            = AD1CF3B8
+; END 2025-05-30 22:55:18

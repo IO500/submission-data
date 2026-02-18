@@ -1,0 +1,43 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri May 30 22:50:14 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 763561978 -k -e -o /exafs/io500/2025.05.31-06.57.07/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX -O saveRankPerformanceDetailsCSV=./results/2025.05.31-06.57.07/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=10000000 -O stoneWallingWearOut=1
+Machine             : Linux src01-c0-n0
+TestID              : 0
+StartTime           : Fri May 30 22:50:14 2025
+Path                : /exafs/io500/2025.05.31-06.57.07/ior-easy/ior_file_easy.00000000
+FS                  : 47.4 TiB   Used FS: 45.8%   Inodes: 316.8 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /exafs/io500/2025.05.31-06.57.07/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1280
+clients per node    : 128
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 47.68 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 356767 max: 627059 -- min data: 1.4 GiB mean data: 1.8 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 52428800000000
+WARNING: Stat() of aggregate file size      = 20873541058560
+WARNING: Using actual aggregate bytes moved = 3287595089920
+WARNING: Maybe caused by deadlineForStonewalling
+read      10220      2619875    0.000484    4.00       4.00       3.17       306.36     3.17       306.79     0   
+Pairs deadlineForStonewallingaccessed: 0

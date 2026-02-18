@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sat Nov  9 19:48:03 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-311210885 -k -e -o /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file -O stoneWallingStatusFile=./results/2024.11.09-20.12.09/ior-hard.stonewall -t 47008 -b 47008 -s 130000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.11.09-20.12.09/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux dgx010
+TestID              : 0
+StartTime           : Sat Nov  9 19:48:03 2024
+Path                : /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file
+FS                  : 6308.9 TiB   Used FS: 3.1%   Inodes: 17694.8 Mi   Used Inodes: 3.6%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /lustre/gefion1/ddn/io500/datafiles/io500/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 130000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1280
+clients per node    : 128
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 7.11 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 116267 max: 130000 -- min data: 5.1 GiB mean data: 5.5 GiB time: 300.0s
+write     23186      517827     300.75      45.91      45.91      0.756104   321.34     0.750467   321.73     0   

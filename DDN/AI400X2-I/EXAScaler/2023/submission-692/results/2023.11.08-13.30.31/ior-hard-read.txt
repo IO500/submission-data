@@ -1,0 +1,35 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Nov  8 04:59:39 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1385218561 -k -e -o /exafs/io500/2023.11.08-13.30.31/ior-hard/file -O stoneWallingStatusFile=./results/2023.11.08-13.30.31/ior-hard.stonewall -t 47008 -b 47008 -s 119900 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2023.11.08-13.30.31/ior-hard-read.csv
+Machine             : Linux src01.maas
+TestID              : 0
+StartTime           : Wed Nov  8 04:59:39 2023
+Path                : /exafs/io500/2023.11.08-13.30.31/ior-hard/file
+FS                  : 47.4 TiB   Used FS: 49.6%   Inodes: 558.4 Mi   Used Inodes: 31.2%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /exafs/io500/2023.11.08-13.30.31/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 119900
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 640
+clients per node    : 64
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 3.28 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 3607205888000
+WARNING: Stat() of aggregate file size      = 2751916011520
+WARNING: Using actual aggregate bytes moved = 2751916011520
+read      57671      1422603    41.15       45.91      45.91      0.026331   41.15      4.33       45.51      0   

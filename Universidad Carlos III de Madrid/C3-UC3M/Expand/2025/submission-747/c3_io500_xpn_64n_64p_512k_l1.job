@@ -1,0 +1,58 @@
+#!/bin/bash
+#SBATCH --job-name=c3_io500
+
+#SBATCH --output=/home/tester005/dcamarma/RES/mpi_%j.out
+#SBATCH --error=/home/tester005/dcamarma/RES/mpi_%j.out
+
+### For exclusive usage ###
+#SBATCH --nodes=64
+#SBATCH --exclusive
+#SBATCH --partition=all
+#SBATCH --exclude=srvgpu[01-05]
+
+#SBATCH --time=04:00:00
+
+module load mpich/4.3.0-ofi
+
+XPN_SERVER_DATA="/scratch"
+
+scontrol show hostnames ${SLURM_JOB_NODELIST} > /home/tester005/dcamarma/tmp/machinefile.${SLURM_JOBID}
+head -n 64 /home/tester005/dcamarma/tmp/machinefile.${SLURM_JOBID} > /home/tester005/dcamarma/tmp/machinefile.${SLURM_JOBID}_1 #Servers
+head -n 10 /home/tester005/dcamarma/tmp/machinefile.${SLURM_JOBID} > /home/tester005/dcamarma/tmp/machinefile.${SLURM_JOBID}_2 #Clients
+
+
+echo "[partition]"           >  /home/tester005/dcamarma/tmp/config.${SLURM_JOBID}.xml
+echo "bsize = 512k"          >> /home/tester005/dcamarma/tmp/config.${SLURM_JOBID}.xml
+echo "replication_level = 0" >> /home/tester005/dcamarma/tmp/config.${SLURM_JOBID}.xml
+echo "partition_name = xpn"  >> /home/tester005/dcamarma/tmp/config.${SLURM_JOBID}.xml
+ITER=1
+while IFS= read -r line
+do
+   echo "server_url = mpi_server://$line/$XPN_SERVER_DATA" >> /home/tester005/dcamarma/tmp/config.${SLURM_JOBID}.xml
+   ITER=$((${ITER}+1))
+done < /home/tester005/dcamarma/tmp/machinefile.${SLURM_JOBID}_1
+
+sleep 10
+sync
+
+pkill mpiexec
+
+echo "---------------- SERVER ------------------"
+
+mpiexec -np 64 \
+        -f  $HOME/dcamarma/tmp/machinefile.${SLURM_JOBID}_1 \
+        $HOME/dcamarma/bin/xpn/bin/xpn_server -s mpi -t pool -d / &
+
+sleep 30
+
+echo "---------------- CLIENT ------------------"
+
+mpiexec -np 640 \
+        -f $HOME/dcamarma/tmp/machinefile.${SLURM_JOBID}_2 \
+        -genv XPN_CONF $HOME/dcamarma/tmp/config.${SLURM_JOBID}.xml \
+        -genv LD_PRELOAD $HOME/dcamarma/bin/xpn/lib/xpn_bypass.so \
+        /home/tester005/dcamarma/src/io500/io500 /home/tester005/dcamarma/jobs/XPN/mpi_server/config-all-xpn.ini
+
+sleep 5
+pkill mpiexec
+

@@ -1,0 +1,30 @@
+-- started at 05/27/2025 19:58:09 --
+
+mdtest-4.1.0+dev was launched with 640 total task(s) on 10 node(s)
+Command line used: ./mdtest '--dataPacketType=timestamp' '-n' '200000' '-u' '-L' '-F' '-P' '-G' '1650288779' '-N' '1' '-d' '/tmp/expand/xpn/2025.05.27-18.59.52/mdtest-easy' '-x' '/home/tester005/dcamarma/RES/io500_xpn/2025.05.27-18.59.52/mdtest-easy.stonewall' '-T' '--saveRankPerformanceDetails=/home/tester005/dcamarma/RES/io500_xpn/2025.05.27-18.59.52/mdtest-easy-stat.csv' '-a' 'POSIX'
+Nodemap: 1000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000100000000010000000001000000000
+WARNING: Backend returned error during statfs
+V-0: Rank   0 Line  2586 Shifting ranks by 1 for each phase.
+640 tasks, 128000000 files
+
+SUMMARY rate (in ops/sec): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                  389030.558     389030.558     389030.558          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time (in ms/op): (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                     329.023        329.023        329.023          0.000
+   File read                       0.000          0.000          0.000          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 05/27/2025 20:03:39 --
+

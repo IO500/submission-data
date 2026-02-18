@@ -1,0 +1,70 @@
+[run]
+procs           = 400
+version         = io500-isc23
+config-hash     = 426288EA
+result-dir      = /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53
+mode            = standard
+
+
+[ior-easy-write]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400691383 -k -e -o /work2/hpc/users/jbradley/io500/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/ior-easy.stonewall -t 16m -b 40000m -F -w -D 300 -O stoneWallingWearOut=1 -a mpiio -O saveRankPerformanceDetailsCSV=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/ior-easy-write.csv
+throughput-stonewall = 47.11
+score           = 42.633493
+
+[mdtest-easy-write]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -514513589 -N 1 -d /work2/hpc/users/jbradley/io500/mdtest-easy -x /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 113.287614
+score           = 103.179396
+
+[timestamp]
+
+[ior-hard-write]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1400680695 -k -e -o /work2/hpc/users/jbradley/io500/ior-hard/file -O stoneWallingStatusFile=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/ior-hard.stonewall -t 47008 -b 47008 -s 12000 -w -D 300 -a mpiio -O saveRankPerformanceDetailsCSV=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.25
+score           = 0.121642
+
+[mdtest-hard-write]
+exe             = ./mdtest --dataPacketType=timestamp -n 60000 -t -w 3901 -e 3901 -P -G=-514502901 -N 1 -F -d /work2/hpc/users/jbradley/io500/mdtest-hard -x /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 36.008188
+score           = 22.993512
+
+[find]
+exe             = ./pfind /work2/hpc/users/jbradley/io500 -newer /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/timestampfile -size 3901c -name *01* -C -q 225000
+nproc           = 400
+found           = 468133
+total-files     = 49334401
+score           = 2332.636983
+
+[ior-easy-read]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1400691383 -k -e -o /work2/hpc/users/jbradley/io500/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/ior-easy.stonewall -t 16m -b 40000m -F -r -R -a mpiio -O saveRankPerformanceDetailsCSV=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/ior-easy-read.csv
+score           = 46.570046
+
+[mdtest-easy-stat]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -514513589 -N 1 -d /work2/hpc/users/jbradley/io500/mdtest-easy -x /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-easy-stat.csv -a POSIX
+score           = 438.998111
+
+[ior-hard-read]
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1400680695 -k -e -o /work2/hpc/users/jbradley/io500/ior-hard/file -O stoneWallingStatusFile=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/ior-hard.stonewall -t 47008 -b 47008 -s 12000 -r -R -a mpiio -O saveRankPerformanceDetailsCSV=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/ior-hard-read.csv
+score           = 2.604677
+
+[mdtest-hard-stat]
+exe             = ./mdtest --dataPacketType=timestamp -n 60000 -t -w 3901 -e 3901 -P -G=-514502901 -N 1 -F -d /work2/hpc/users/jbradley/io500/mdtest-hard -x /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-hard-stat.csv -a POSIX
+score           = 41.911074
+
+[mdtest-easy-delete]
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -514513589 -N 1 -d /work2/hpc/users/jbradley/io500/mdtest-easy -x /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-easy-delete.csv -a POSIX
+score           = 71.009910
+
+[mdtest-hard-read]
+exe             = ./mdtest --dataPacketType=timestamp -n 60000 -t -w 3901 -e 3901 -P -G=-514502901 -N 1 -F -d /work2/hpc/users/jbradley/io500/mdtest-hard -x /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-hard-read.csv -a POSIX
+score           = 32.459095
+
+[mdtest-hard-delete]
+exe             = ./mdtest --dataPacketType=timestamp -n 60000 -t -w 3901 -e 3901 -P -G=-514502901 -N 1 -F -d /work2/hpc/users/jbradley/io500/mdtest-hard -x /home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/jbradley/io500/results/orion_data2/2023.10.31-08.28.53/mdtest-hard-delete.csv -a POSIX
+score           = 13.561861
+
+[SCORE]
+MD              = 86.666537
+BW              = 5.008112
+SCORE           = 20.833524
+hash            = B59892B6

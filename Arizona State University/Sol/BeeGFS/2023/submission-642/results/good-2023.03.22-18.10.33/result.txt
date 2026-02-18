@@ -1,0 +1,112 @@
+[run]
+procs           = 160
+version         = io500-isc22_v1
+config-hash     = 1B305AF6
+result-dir      = /home/ishaeffe/io500/results/2023.03.22-18.10.33
+mode            = standard
+; START 2023-03-22 18:10:35
+; ERROR INVALID stonewall-time < 30s
+
+
+[ior-easy-write]
+t_start         = 2023-03-22 18:10:35
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418239423 -k -e -o /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-easy-write.csv
+throughput-stonewall = 12.83
+score           = 12.490172
+t_delta         = 475.3823
+t_end           = 2023-03-22 18:18:31
+
+[mdtest-easy-write]
+t_start         = 2023-03-22 18:18:31
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532061629 -N 1 -d /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/mdtest-easy -x /home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 103.843074
+score           = 86.997539
+t_delta         = 503.9007
+t_end           = 2023-03-22 18:26:54
+
+[timestamp]
+t_start         = 2023-03-22 18:26:54
+t_delta         = 0.0012
+t_end           = 2023-03-22 18:26:54
+
+[ior-hard-write]
+t_start         = 2023-03-22 18:26:54
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418228735 -k -e -o /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-hard/file -O stoneWallingStatusFile=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 1.65
+score           = 1.029291
+t_delta         = 593.1336
+t_end           = 2023-03-22 18:36:48
+
+[mdtest-hard-write]
+t_start         = 2023-03-22 18:36:48
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532050941 -N 1 -F -d /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/mdtest-hard -x /home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 8.641998
+score           = 8.631220
+t_delta         = 307.3307
+t_end           = 2023-03-22 18:41:55
+
+[find]
+t_start         = 2023-03-22 18:41:55
+exe             = ./pfind /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33 -newer /home/ishaeffe/io500/results/2023.03.22-18.10.33/timestampfile -size 3901c -name *01* -C -q 10000
+nproc           = 160
+found           = 83937
+total-files     = 46390401
+score           = 1433.959342
+t_delta         = 32.3657
+t_end           = 2023-03-22 18:42:27
+
+[ior-easy-read]
+t_start         = 2023-03-22 18:42:27
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418239423 -k -e -o /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-easy-read.csv
+score           = 17.154349
+t_delta         = 346.1204
+t_end           = 2023-03-22 18:48:13
+
+[mdtest-easy-stat]
+t_start         = 2023-03-22 18:48:13
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532061629 -N 1 -d /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/mdtest-easy -x /home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-easy-stat.csv -a POSIX
+score           = 333.968912
+t_delta         = 132.0024
+t_end           = 2023-03-22 18:50:25
+
+[ior-hard-read]
+t_start         = 2023-03-22 18:50:25
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418228735 -k -e -o /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-hard/file -O stoneWallingStatusFile=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-hard-read.csv
+score           = 1.692253
+t_delta         = 295.8824
+t_end           = 2023-03-22 18:55:21
+
+[mdtest-hard-stat]
+t_start         = 2023-03-22 18:55:21
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532050941 -N 1 -F -d /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/mdtest-hard -x /home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-hard-stat.csv -a POSIX
+score           = 86.926162
+t_delta         = 31.4347
+t_end           = 2023-03-22 18:55:53
+
+[mdtest-easy-delete]
+t_start         = 2023-03-22 18:55:53
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -u -L -F -P -G -532061629 -N 1 -d /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/mdtest-easy -x /home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-easy-delete.csv -a POSIX
+score           = 58.250641
+t_delta         = 775.3334
+t_end           = 2023-03-22 19:08:48
+
+[mdtest-hard-read]
+t_start         = 2023-03-22 19:08:48
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532050941 -N 1 -F -d /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/mdtest-hard -x /home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-hard-read.csv -a POSIX
+score           = 11.378800
+t_delta         = 233.3484
+t_end           = 2023-03-22 19:12:41
+
+[mdtest-hard-delete]
+t_start         = 2023-03-22 19:12:41
+exe             = ./mdtest --dataPacketType=timestamp -n 1000000 -t -w 3901 -e 3901 -P -G=-532050941 -N 1 -F -d /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/mdtest-hard -x /home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/home/ishaeffe/io500/results/2023.03.22-18.10.33/mdtest-hard-delete.csv -a POSIX
+score           = 10.211891
+t_delta         = 370.7385
+t_end           = 2023-03-22 19:18:52
+
+[SCORE]
+MD              = 61.756757
+BW              = 4.395280
+SCORE           = 16.475382
+hash            = 484B9300
+; END 2023-03-22 19:18:56

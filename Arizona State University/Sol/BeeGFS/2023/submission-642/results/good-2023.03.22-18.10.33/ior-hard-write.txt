@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Mar 22 18:26:54 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1418228735 -k -e -o /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-hard/file -O stoneWallingStatusFile=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux c103.sol.rc.asu.edu
+TestID              : 0
+StartTime           : Wed Mar 22 18:26:54 2023
+Path                : /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-hard/file
+FS                  : 3722.1 TiB   Used FS: 15.9%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 68.41 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 68743 max: 71476 -- min data: 3.0 GiB mean data: 3.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 75212800000000
+WARNING: Stat() of aggregate file size      = 537591009280
+WARNING: Using actual aggregate bytes moved = 537591009280
+WARNING: Maybe caused by deadlineForStonewalling
+write     1053.99    23511      402.74      45.91      45.91      0.014716   486.41     0.004353   486.42     0   

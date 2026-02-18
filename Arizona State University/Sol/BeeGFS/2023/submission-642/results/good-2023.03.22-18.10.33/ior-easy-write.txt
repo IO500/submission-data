@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Wed Mar 22 18:10:35 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G -1418239423 -k -e -o /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-easy/ior_file_easy -O stoneWallingStatusFile=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=/home/ishaeffe/io500/results/2023.03.22-18.10.33/ior-easy-write.csv
+Machine             : Linux c103.sol.rc.asu.edu
+TestID              : 0
+StartTime           : Wed Mar 22 18:10:35 2023
+Path                : /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-easy/ior_file_easy.00000000
+FS                  : 3722.1 TiB   Used FS: 15.8%   Inodes: 0.0 Mi   Used Inodes: -nan%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /scratch/ishaeffe/io500/datafiles/2023.03.22-18.10.33/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 160
+clients per node    : 16
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 1513.67 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 5601 max: 18999 -- min data: 10.9 GiB mean data: 24.1 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 1664299827200000
+WARNING: Stat() of aggregate file size      = 6375006535680
+WARNING: Using actual aggregate bytes moved = 6375006535680
+WARNING: Maybe caused by deadlineForStonewalling
+write     12790      6396       0.000087    10158080000 2048.00    0.014954   475.27     0.065486   475.35     0   

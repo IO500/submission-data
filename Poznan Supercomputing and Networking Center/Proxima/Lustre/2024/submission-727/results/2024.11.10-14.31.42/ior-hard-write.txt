@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Nov 10 14:51:08 2024
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-312521148 -k -e -o ./datafiles/2024.11.10-14.31.42/ior-hard/file -O stoneWallingStatusFile=./results/2024.11.10-14.31.42/ior-hard.stonewall -t 47008 -b 47008 -s 1000000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2024.11.10-14.31.42/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux client1
+TestID              : 0
+StartTime           : Sun Nov 10 14:51:08 2024
+Path                : ./datafiles/2024.11.10-14.31.42/ior-hard/file
+FS                  : 831.3 TiB   Used FS: 3.7%   Inodes: 1027.0 Mi   Used Inodes: 18.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/2024.11.10-14.31.42/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 1000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 300
+clients per node    : 30
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 12.83 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 88325 max: 266706 -- min data: 3.9 GiB mean data: 4.6 GiB time: 300.1s
+WARNING: Expected aggregate file size       = 14102400000000
+WARNING: Stat() of aggregate file size      = 3761194694400
+WARNING: Using actual aggregate bytes moved = 3761194694400
+WARNING: Maybe caused by deadlineForStonewalling
+write     4347       97330      812.03      45.91      45.91      4.10       822.07     4.10       825.10     0   

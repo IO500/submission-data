@@ -1,0 +1,41 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri May 30 03:16:11 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 763279438 -k -e -o /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=1000000
+Machine             : Linux gpub200-chq3m2419
+TestID              : 0
+StartTime           : Fri May 30 03:16:11 2025
+Path                : /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-easy/ior_file_easy.00000000
+FS                  : 21191.2 TiB   Used FS: 22.9%   Inodes: 72991.1 Mi   Used Inodes: 9.7%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1000000
+ordering in a file  : random
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1600
+clients per node    : 160
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 5.96 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 0
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 137438953472
+WARNING: Stat() of aggregate file size      = 219902325555200
+WARNING: Using actual aggregate bytes moved = 6382729564160
+WARNING: Maybe caused by deadlineForStonewalling
+read      20276      5193191    0.000260    4.00       4.00       0.033048   300.06     0.082079   300.22     0   

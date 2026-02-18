@@ -1,0 +1,118 @@
+[run]
+procs           = 1600
+version         = io500-isc25_v1
+config-hash     = E22A88F7
+result-dir      = /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57
+mode            = standard
+; START 2025-05-30 01:59:31
+
+
+[ior-easy-write]
+t_start         = 2025-05-30 01:59:31
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 763279438 -k -e -o /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-easy.stonewall -t 16m -b 128g -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-easy-write.csv
+throughput-stonewall = 603.75
+score           = 548.232269
+t_delta         = 378.2399
+t_end           = 2025-05-30 02:05:49
+
+[mdtest-easy-write]
+t_start         = 2025-05-30 02:05:49
+exe             = ./mdtest --dataPacketType=timestamp -n 220000 -u -L -F -P -G 1649457232 -N 1 -d /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/mdtest-easy -x /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-easy.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 1002.224877
+score           = 809.181615
+t_delta         = 441.5333
+t_end           = 2025-05-30 02:13:11
+
+[timestamp]
+t_start         = 2025-05-30 02:13:11
+t_delta         = 0.0394
+t_end           = 2025-05-30 02:13:11
+
+[ior-hard-write]
+t_start         = 2025-05-30 02:13:11
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=763290126 -k -e -o /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-hard/file -O stoneWallingStatusFile=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-hard.stonewall -t 47008 -b 47008 -s 128000 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 23.90
+score           = 21.814221
+t_delta         = 416.1619
+t_end           = 2025-05-30 02:20:07
+
+[mdtest-hard-write]
+t_start         = 2025-05-30 02:20:07
+exe             = ./mdtest --dataPacketType=timestamp -n 300000 -t -w 3901 -e 3901 -P -G=1649467920 -N 1 -F -d /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/mdtest-hard -x /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-hard.stonewall -C -Y -W 300 --saveRankPerformanceDetails=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-hard-write.csv -a POSIX --posix.odirect
+rate-stonewall  = 689.125253
+score           = 608.846069
+t_delta         = 401.7816
+t_end           = 2025-05-30 02:26:49
+
+[find]
+t_start         = 2025-05-30 02:26:49
+exe             = ./pfind /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57 -newer /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/timestampfile -size 3901c -name *01* -C -H 1 -q 100000
+nproc           = 1600
+found           = 12370575
+total-files     = 592544001
+score           = 909.027760
+t_delta         = 652.1382
+t_end           = 2025-05-30 02:37:41
+
+[ior-easy-read]
+t_start         = 2025-05-30 02:37:41
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 763279438 -k -e -o /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-easy/ior_file_easy -O stoneWallingStatusFile=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-easy.stonewall -t 16m -b 128g -F -r -R -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-easy-read.csv
+score           = 460.873328
+t_delta         = 449.9741
+t_end           = 2025-05-30 02:45:11
+
+[mdtest-easy-stat]
+t_start         = 2025-05-30 02:45:11
+exe             = ./mdtest --dataPacketType=timestamp -n 220000 -u -L -F -P -G 1649457232 -N 1 -d /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/mdtest-easy -x /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-easy.stonewall -T --saveRankPerformanceDetails=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-easy-stat.csv -a POSIX --posix.odirect
+score           = 1743.086837
+t_delta         = 208.3562
+t_end           = 2025-05-30 02:48:40
+
+[ior-hard-read]
+t_start         = 2025-05-30 02:48:40
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G=763290126 -k -e -o /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-hard/file -O stoneWallingStatusFile=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-hard.stonewall -t 47008 -b 47008 -s 128000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-hard-read.csv
+score           = 62.168736
+t_delta         = 151.8883
+t_end           = 2025-05-30 02:51:12
+
+[mdtest-hard-stat]
+t_start         = 2025-05-30 02:51:12
+exe             = ./mdtest --dataPacketType=timestamp -n 300000 -t -w 3901 -e 3901 -P -G=1649467920 -N 1 -F -d /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/mdtest-hard -x /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-hard.stonewall -T --saveRankPerformanceDetails=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-hard-stat.csv -a POSIX --posix.odirect
+score           = 1729.248087
+t_delta         = 145.8957
+t_end           = 2025-05-30 02:53:37
+
+[mdtest-easy-delete]
+t_start         = 2025-05-30 02:53:38
+exe             = ./mdtest --dataPacketType=timestamp -n 220000 -u -L -F -P -G 1649457232 -N 1 -d /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/mdtest-easy -x /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-easy.stonewall -r --saveRankPerformanceDetails=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-easy-delete.csv -a POSIX --posix.odirect
+score           = 616.489775
+t_delta         = 579.2153
+t_end           = 2025-05-30 03:03:17
+
+[mdtest-hard-read]
+t_start         = 2025-05-30 03:03:17
+exe             = ./mdtest --dataPacketType=timestamp -n 300000 -t -w 3901 -e 3901 -P -G=1649467920 -N 1 -F -d /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/mdtest-hard -x /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-hard-read.csv -a POSIX --posix.odirect
+score           = 1020.489276
+t_delta         = 242.3094
+t_end           = 2025-05-30 03:07:19
+
+[mdtest-hard-delete]
+t_start         = 2025-05-30 03:07:19
+exe             = ./mdtest --dataPacketType=timestamp -n 300000 -t -w 3901 -e 3901 -P -G=1649467920 -N 1 -F -d /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/mdtest-hard -x /mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-hard.stonewall -r --saveRankPerformanceDetails=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/mdtest-hard-delete.csv -a POSIX --posix.odirect
+score           = 465.663356
+t_delta         = 526.9197
+t_end           = 2025-05-30 03:16:06
+
+[ior-rnd4K-easy-read]
+t_start         = 2025-05-30 03:16:06
+exe             = ./ior --dataPacketType=timestamp -C -Q 1 -g -G 763279438 -k -e -o /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-easy/ior_file_easy -F -r -D 300 -z -z -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-rnd4K-easy-read.csv -t=4096 -b=4096 -s=1000000
+score           = 19.800348
+t_delta         = 305.6414
+t_end           = 2025-05-30 03:21:12
+
+[SCORE]
+MD              = 890.510760
+BW              = 136.054991
+SCORE           = 348.078200
+hash            = 2967373B
+; END 2025-05-30 03:21:13

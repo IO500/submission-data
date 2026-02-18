@@ -1,0 +1,35 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri May 30 02:48:46 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=763290126 -k -e -o /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-hard/file -O stoneWallingStatusFile=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-hard.stonewall -t 47008 -b 47008 -s 128000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=/mnt/shapurefb04_scratcht/systems/iobenchmarking/io500/results/chqlustre1-dev/submit/2025.05.30-01.58.57/ior-hard-read.csv
+Machine             : Linux gpub200-chq3m2419
+TestID              : 0
+StartTime           : Fri May 30 02:48:46 2025
+Path                : /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-hard/file
+FS                  : 21191.2 TiB   Used FS: 22.9%   Inodes: 72991.1 Mi   Used Inodes: 10.4%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/chqlustre1/scratch/scrusan/scratch/io500/dev/2025.05.30-01.58.57/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 128000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1600
+clients per node    : 160
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 8.76 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+read      63661      1452110    0.000989    45.91      45.91      0.060193   141.04     2.19       144.22     0   

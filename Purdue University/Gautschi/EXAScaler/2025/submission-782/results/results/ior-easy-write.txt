@@ -1,0 +1,38 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  6 00:16:43 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G 761701318 -k -e -o ./datafiles/real-test/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/ior-easy.stonewall -t 96m -b 28800m -F -w -D 300 -O stoneWallingWearOut=1 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/ior-easy-write.csv
+Machine             : Linux a000.gautschi.rcac.purdue.edu
+TestID              : 0
+StartTime           : Thu Nov  6 00:16:43 2025
+Path                : ./datafiles/real-test/ior-easy/ior_file_easy.00000000
+FS                  : 6217.6 TiB   Used FS: 20.9%   Inodes: 21618.9 Mi   Used Inodes: 4.3%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/real-test/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1920
+clients per node    : 192
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 96 MiB
+blocksize           : 28.12 GiB
+aggregate filesize  : 52.73 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 153 max: 300 -- min data: 14.3 GiB mean data: 27.0 GiB time: 301.2s
+write     131845     1374.13    1.00        29491200   98304      0.202365   419.18     0.023813   419.40     0   

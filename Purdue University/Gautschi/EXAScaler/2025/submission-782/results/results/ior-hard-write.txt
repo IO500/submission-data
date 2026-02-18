@@ -1,0 +1,42 @@
+IOR-4.1.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Thu Nov  6 00:32:10 2025
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=761712006 -k -e -o ./datafiles/real-test/ior-hard/file -O stoneWallingStatusFile=./results/ior-hard.stonewall -t 47008 -b 47008 -s 46250 -w -D 300 -a POSIX -O saveRankPerformanceDetailsCSV=./results/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux a000.gautschi.rcac.purdue.edu
+TestID              : 0
+StartTime           : Thu Nov  6 00:32:10 2025
+Path                : ./datafiles/real-test/ior-hard/file
+FS                  : 6217.6 TiB   Used FS: 21.8%   Inodes: 21638.8 Mi   Used Inodes: 5.0%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : ./datafiles/real-test/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 46250
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 1920
+clients per node    : 192
+memoryBuffer        : CPU
+dataAccess          : CPU
+GPUDirect           : 0
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 3.80 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 5546 max: 7517 -- min data: 0.2 GiB mean data: 0.3 GiB time: 300.0s
+WARNING: Expected aggregate file size       = 4174310400000
+WARNING: Stat() of aggregate file size      = 678449541120
+WARNING: Using actual aggregate bytes moved = 678449541120
+WARNING: Maybe caused by deadlineForStonewalling
+write     1626.67    36293      0.048359    45.91      45.91      0.019695   397.67     0.067639   397.76     0   

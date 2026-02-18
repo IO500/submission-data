@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon Oct 16 11:47:06 2023
+Command line        : ./ior --dataPacketType=timestamp -C -Q 1 -g -G=-1401479603 -k -e -o /mnt/SPT_Raw_Data/testing/io500/2023.10.16-11.31.57/ior-hard/file -O stoneWallingStatusFile=./results/2023.10.16-11.31.57/ior-hard.stonewall -t 47008 -b 47008 -s 1000000 -w -D 300 -a POSIX --posix.odirect -O saveRankPerformanceDetailsCSV=./results/2023.10.16-11.31.57/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux spt-compute1
+TestID              : 0
+StartTime           : Mon Oct 16 11:47:06 2023
+Path                : /mnt/SPT_Raw_Data/testing/io500/2023.10.16-11.31.57/ior-hard/file
+FS                  : 16370.9 TiB   Used FS: 53.9%   Inodes: 4190951.6 Mi   Used Inodes: 53.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /mnt/SPT_Raw_Data/testing/io500/2023.10.16-11.31.57/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 1000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 10
+tasks               : 240
+clients per node    : 24
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 10.26 TiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 402 max: 403 -- min data: 0.0 GiB mean data: 0.0 GiB time: 300.9s
+WARNING: Expected aggregate file size       = 11281920000000
+WARNING: Stat() of aggregate file size      = 4546613760
+WARNING: Using actual aggregate bytes moved = 4546613760
+WARNING: Maybe caused by deadlineForStonewalling
+write     14.39      321.09     300.87      45.91      45.91      0.019778   301.22     0.001263   301.24     0   
